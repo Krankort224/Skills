@@ -6,22 +6,27 @@ Own execution of the currently dispatched cycle only.
 
 Work only when the Issue is in `codex-ready`.
 
+Determine the current execution unit:
+
+- for a simple Issue, the whole Issue;
+- for a multi-pass Issue, the first unaccepted major pass.
+
 Read:
 
 - the stable Issue body;
-- the current major pass;
-- the latest execution or correction instruction relevant to that pass;
-- the repository context required for the task.
+- the current execution unit;
+- the latest execution or correction instruction relevant to it;
+- repository context required for the task.
 
 Treat the Issue body as the stable contract and active comments as the working surface.
 
-Do not redesign the pass plan or silently broaden the task.
+Do not redesign the Issue structure, add passes, change the pass plan, or silently broaden the task.
 
 When execution begins, move the Issue from `codex-ready` to `codex-active`.
 
 ## 2. Execute only the current cycle
 
-Implement only what is required by the current instruction and pass boundary.
+Implement only what is required by the current instruction and execution-unit boundary.
 
 Preserve:
 
@@ -32,8 +37,8 @@ Preserve:
 
 Do not:
 
-- begin the next major pass;
-- rewrite the Issue body while the pass is active;
+- begin another major pass;
+- rewrite the Issue body while the current unit is active;
 - perform unrelated refactoring or cleanup;
 - change task meaning to fit implementation convenience;
 - introduce a new architectural or product decision without review.
@@ -45,13 +50,13 @@ Typical blockers include:
 - contradictory requirements;
 - missing information that would require invention;
 - a required architectural or product decision not present in the contract;
-- a necessary change outside the pass boundary;
+- a necessary change outside the current boundary;
 - inability to verify a critical result;
 - risk of violating an accepted invariant.
 
 ## 3. Verify the result
 
-Run evidence appropriate to the actual acceptance target.
+Run evidence appropriate to the actual acceptance target or Result boundary.
 
 Depending on the task, this may include:
 
@@ -76,7 +81,7 @@ If the implementation establishes or changes a durable project-wide fact, contra
 
 Do not move into canonical knowledge:
 
-- pass-by-pass chronology;
+- execution chronology;
 - temporary observations;
 - superseded hypotheses;
 - handoff prose;
@@ -86,6 +91,8 @@ Keep one canonical home for each durable claim.
 
 ## 5. Handoff
 
+Use `../templates/handoff-comment.md`.
+
 Before handoff:
 
 - inspect the final diff;
@@ -93,7 +100,7 @@ Before handoff:
 - ensure required repository changes are committed;
 - confirm reported verification matches what was actually run.
 
-Leave a concise Issue comment containing:
+Report:
 
 - what changed;
 - commits;
@@ -109,7 +116,7 @@ Then stop.
 
 ## 6. Correction cycles
 
-When the Issue returns to `codex-ready`, treat the latest correction instruction as a new execution cycle within the same major pass.
+When the Issue returns to `codex-ready`, treat the latest correction instruction as a new execution cycle within the same Issue or major pass.
 
 Preserve accepted work unless the correction requires changing it.
 
