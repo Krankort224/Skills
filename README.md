@@ -12,21 +12,28 @@ Skills/
 │   ├── SKILL.md
 │   └── references/
 │       └── repository.template.md
-└── workflow/
+├── workflow/
+│   ├── SKILL.md
+│   ├── references/
+│   │   ├── chatgpt.md
+│   │   └── codex.md
+│   └── templates/
+│       ├── issue.md
+│       ├── execution-comment.md
+│       ├── handoff-comment.md
+│       └── accepted-summary.md
+└── restructure/
     ├── SKILL.md
-    ├── references/
-    │   ├── chatgpt.md
-    │   └── codex.md
-    └── templates/
-        ├── issue.md
-        ├── execution-comment.md
-        ├── handoff-comment.md
-        └── accepted-summary.md
+    └── references/
+        ├── chatgpt.md
+        └── codex.md
 ```
 
 ## Skills
 
-### context
+### Level 1
+
+#### context
 
 Loads the minimum authoritative repository context required for the current task.
 
@@ -40,7 +47,7 @@ based on `repository.template.md`.
 
 The local map defines repository scopes, source authority, reading routes, and any non-obvious context boundaries.
 
-### workflow
+#### workflow
 
 Defines the shared GitHub Issue lifecycle for ChatGPT and Codex.
 
@@ -64,6 +71,28 @@ codex-ready → codex-active → codex-review
 
 Reusable Issue artifacts are kept in `workflow/templates/`.
 
+### Level 2
+
+#### restructure
+
+Restructures an existing repository or file accumulation without imposing a universal directory layout.
+
+The skill uses an alternating two-contour process:
+
+```text
+Codex inventory
+    ↓
+ChatGPT semantic analysis and target structure
+    ↓
+Codex migration and validation
+    ↓
+ChatGPT review
+```
+
+Codex owns direct filesystem discovery and mechanical migration. ChatGPT owns semantic classification, target-structure design, migration planning, and final structural review.
+
+Cloud-hosted file contents must not be downloaded, materialized, synchronized, exported, or copied into the local environment without separate, explicit, and unambiguous user authorization.
+
 ## Principles
 
 - Keep skills autonomous.
@@ -81,3 +110,5 @@ Shared skills may be copied into a repository-local skill directory when project
 For `context`, preserve the shared `SKILL.md` where possible and create a repository-specific `references/repository.md` from the provided template.
 
 For `workflow`, the intent is to keep one common workflow across repositories rather than maintain project-specific variants.
+
+For `restructure`, keep the shared process generic and express project-specific structure decisions in the task itself rather than creating a permanent project-specific fork unless repeated local rules justify one.
