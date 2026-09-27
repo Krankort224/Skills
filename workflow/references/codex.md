@@ -22,6 +22,10 @@ Treat the Issue body as the stable contract and active comments as the working s
 
 Do not redesign the Issue structure, add passes, change the pass plan, or silently broaden the task.
 
+By default, work in the repository's current branch and commit changes to that branch.
+
+Do not create a new branch, switch to another branch, or open a pull request unless the task or user explicitly requires it.
+
 When execution begins, move the Issue from `codex-ready` to `codex-active`.
 
 ## 2. Execute only the current cycle
