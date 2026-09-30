@@ -11,8 +11,8 @@ Own the **translation of Markdown semantics** into an editable DOCX. Keep the Ma
 
 ## Route and boundary
 
-- Use this skill for Markdown to DOCX conversion. For a polished visual deliverable, finish the semantic conversion first and then use `word-design`.
-- Apply an optional supplied Word template's existing styles; do not redesign them. For delicate OOXML, fields, numbering, or template mechanics, follow `word-technical` without transferring Markdown interpretation to it.
+- Use this skill for Markdown to DOCX conversion. For Word authoring, design, and final verification, follow `document-creation` while retaining ownership of Markdown interpretation.
+- Apply an optional supplied Word template's existing styles; do not redesign them. For delicate OOXML, fields, numbering, or template mechanics, follow `document-creation` without transferring Markdown interpretation to it.
 - Do not treat raw HTML or unsupported extensions as plain text silently. Do not rasterize formulas or replace missing images with placeholders without telling the user.
 
 ## Workflow
@@ -28,4 +28,4 @@ Own the **translation of Markdown semantics** into an editable DOCX. Keep the Ma
 
 - Document structure uses named Word styles and native elements where available, not only visual imitation.
 - Text, ordering, links, and local assets match the Markdown; conversion exceptions are visible and traceable to source positions.
-- A supplied template remains the style authority. Any later visual improvement belongs to `word-design`.
+- A supplied template remains the style authority. Any later visual improvement belongs to `document-creation`.

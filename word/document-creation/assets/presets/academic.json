@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "name": "academic",
+  "page": {
+    "width_mm": 210,
+    "height_mm": 297,
+    "margins_mm": {
+      "left": 25,
+      "right": 25,
+      "top": 25,
+      "bottom": 25
+    },
+    "header_mm": 10,
+    "footer_mm": 10
+  },
+  "fonts": {
+    "body": "Times New Roman",
+    "code": "Consolas",
+    "fallbacks": {
+      "Arial": "Liberation Sans",
+      "Calibri": "Carlito",
+      "Times New Roman": "Liberation Serif",
+      "Consolas": "Liberation Mono"
+    }
+  },
+  "palette": {
+    "ink": "000000",
+    "muted": "555555",
+    "accent": "000000",
+    "table_header": "EAEAEA",
+    "table_header_text": "000000",
+    "alternating_row": "F7F7F7",
+    "border": "D9D9D9",
+    "note_background": "F3F5F7"
+  },
+  "styles": {
+    "Normal": {
+      "font": "Times New Roman",
+      "size_pt": 12,
+      "line_spacing": 1.5,
+      "before_pt": 0,
+      "after_pt": 6,
+      "color": "000000"
+    },
+    "Title": {
+      "font": "Times New Roman",
+      "size_pt": 24,
+      "bold": true,
+      "before_pt": 0,
+      "after_pt": 12,
+      "color": "000000",
+      "keep_with_next": true
+    },
+    "Subtitle": {
+      "font": "Times New Roman",
+      "size_pt": 13,
+      "before_pt": 0,
+      "after_pt": 12,
+      "color": "555555",
+      "keep_with_next": true
+    },
+    "Caption": {
+      "font": "Times New Roman",
+      "size_pt": 11,
+      "before_pt": 4,
+      "after_pt": 8,
+      "color": "555555"
+    },
+    "Metadata": {
+      "font": "Times New Roman",
+      "size_pt": 11,
+      "before_pt": 0,
+      "after_pt": 4,
+      "color": "555555"
+    },
+    "Code Block": {
+      "font": "Consolas",
+      "size_pt": 11,
+      "line_spacing": 1.05,
+      "before_pt": 4,
+      "after_pt": 8,
+      "color": "000000"
+    },
+    "Table Text": {
+      "font": "Times New Roman",
+      "size_pt": 11,
+      "line_spacing": 1.1,
+      "before_pt": 0,
+      "after_pt": 3,
+      "color": "000000"
+    },
+    "Note": {
+      "font": "Times New Roman",
+      "size_pt": 11.5,
+      "before_pt": 4,
+      "after_pt": 8,
+      "color": "333333"
+    },
+    "Heading 1": {
+      "font": "Times New Roman",
+      "size_pt": 16,
+      "bold": true,
+      "before_pt": 16,
+      "after_pt": 8,
+      "color": "000000",
+      "keep_with_next": true
+    },
+    "Heading 2": {
+      "font": "Times New Roman",
+      "size_pt": 14,
+      "bold": true,
+      "before_pt": 14,
+      "after_pt": 7,
+      "color": "000000",
+      "keep_with_next": true
+    },
+    "Heading 3": {
+      "font": "Times New Roman",
+      "size_pt": 12,
+      "bold": true,
+      "before_pt": 12,
+      "after_pt": 6,
+      "color": "000000",
+      "keep_with_next": true
+    },
+    "Heading 4": {
+      "font": "Times New Roman",
+      "size_pt": 12,
+      "bold": true,
+      "before_pt": 10,
+      "after_pt": 5,
+      "color": "000000",
+      "keep_with_next": true
+    },
+    "Heading 5": {
+      "font": "Times New Roman",
+      "size_pt": 11.5,
+      "bold": true,
+      "before_pt": 8,
+      "after_pt": 4,
+      "color": "000000",
+      "keep_with_next": true
+    },
+    "Heading 6": {
+      "font": "Times New Roman",
+      "size_pt": 11,
+      "bold": true,
+      "before_pt": 6,
+      "after_pt": 3,
+      "color": "000000",
+      "keep_with_next": true
+    }
+  },
+  "table": {
+    "padding_mm": {
+      "top": 2,
+      "bottom": 2,
+      "left": 2.5,
+      "right": 2.5
+    },
+    "border_pt": 0.5,
+    "repeat_header": true
+  },
+  "list": {
+    "indent_mm": 8,
+    "hanging_mm": 5,
+    "level_step_mm": 6,
+    "after_pt": 4
+  },
+  "footer": {
+    "size_pt": 9,
+    "color": "666666"
+  }
+}

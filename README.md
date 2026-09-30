@@ -28,10 +28,11 @@ Skills/
 │       ├── chatgpt.md
 │       └── codex.md
 └── word/
-    ├── design/
-    │   └── SKILL.md
-    ├── technical/
-    │   └── SKILL.md
+    ├── document-creation/
+    │   ├── SKILL.md
+    │   ├── references/
+    │   ├── scripts/
+    │   └── assets/
     └── markdown-to-word/
         └── SKILL.md
 ```
@@ -102,13 +103,14 @@ Cloud-hosted file contents must not be downloaded, materialized, synchronized, e
 
 ### Word
 
-Three independent skills live under `word/`:
+Two skills live under `word/`:
 
-- `design` chooses and applies the visual system for a Word document;
-- `technical` inspects and changes DOCX structure while preserving unrelated content and formatting;
+- `document-creation` owns the complete Word lifecycle: source analysis, structure, visual design, template adaptation, deterministic creation/editing, package checks, rendering, and visual correction;
 - `markdown-to-word` converts Markdown semantics into an editable DOCX with minimal styling.
 
-For Markdown that also needs visual polish, use `markdown-to-word` first and `design` second. Either skill can follow `technical` for low-level DOCX operations without handing over its own design or conversion decisions.
+`document-creation` includes four machine-readable presets (technical, corporate, minimal, academic), component and layout guides, tested Python helpers, and reproducible visual examples. A user-selected template takes priority over presets.
+
+For Markdown input, `markdown-to-word` owns semantic interpretation; `document-creation` provides the Word authoring and verification lifecycle. The Markdown skill's capability redesign is deferred.
 
 ## Principles
 
