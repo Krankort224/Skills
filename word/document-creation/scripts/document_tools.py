@@ -167,7 +167,7 @@ def add_list(parent, text, level=0, ordered=False, num_id=None, config=None, sty
         doc = parent
     else:
         class Owner:
-            part = parent.part
+            part = parent.part.package.main_document_part
         doc = Owner()
     num_id = create_numbering(doc, ordered, config) if num_id is None else num_id
     p = add_text(parent, text, style)
@@ -342,22 +342,31 @@ def package_report(path):
                 if name.endswith("/") or name == "[Content_Types].xml": continue
                 if name not in overrides and name.rsplit(".", 1)[-1] not in defaults: errors.append("Missing content type: " + name)
         body = xmls.get("word/document.xml")
+        story_roots = {name: root for name, root in xmls.items()
+                       if re.match(r"word/(document|header\d+|footer\d+|footnotes|endnotes|comments)\.xml$", name)}
+        structure_paths = {"paragraphs":".//w:p", "tables":".//w:tbl", "drawings":".//w:drawing",
+                           "math":".//m:oMath", "fields":".//w:fldSimple | .//w:fldChar[@w:fldCharType='begin']",
+                           "text_boxes":".//w:txbxContent", "revisions":".//w:ins | .//w:del",
+                           "content_controls":".//w:sdt", "sections":".//w:sectPr"}
+        story_counts = {name: {label: len(root.xpath(xpath, namespaces=NS))
+                              for label, xpath in structure_paths.items()} for name, root in story_roots.items()}
         counts = {}
         if body is not None:
-            for label, xpath in {"paragraphs":".//w:p", "tables":".//w:tbl", "drawings":".//w:drawing", "math":".//m:oMath", "fields":".//w:instrText", "text_boxes":".//w:txbxContent", "revisions":".//w:ins | .//w:del", "content_controls":".//w:sdt", "sections":".//w:sectPr"}.items():
-                counts[label] = len(body.xpath(xpath, namespaces=NS))
+            for label in structure_paths:
+                counts[label] = sum(values[label] for values in story_counts.values())
             counts["media"] = sum(name.startswith("word/media/") for name in files)
             numroot = xmls.get("word/numbering.xml")
             nums = set(numroot.xpath("./w:num/@w:numId", namespaces=NS)) if numroot is not None else set()
             abstracts = set(numroot.xpath("./w:abstractNum/@w:abstractNumId", namespaces=NS)) if numroot is not None else set()
-            for val in body.xpath(".//w:numPr/w:numId/@w:val", namespaces=NS):
-                if val != "0" and val not in nums: errors.append("Missing numbering ID: " + val)
+            for name, root in story_roots.items():
+                for val in root.xpath(".//w:numPr/w:numId/@w:val", namespaces=NS):
+                    if val != "0" and val not in nums: errors.append(name + " missing numbering ID: " + val)
             if numroot is not None:
                 for val in numroot.xpath("./w:num/w:abstractNumId/@w:val", namespaces=NS):
                     if val not in abstracts: errors.append("Missing abstract numbering ID: " + val)
             if counts["revisions"] or counts["text_boxes"] or counts["content_controls"]:
                 warnings.append("Complex objects present; inspect before mutation")
-        stories = {name: _texts(root) for name, root in xmls.items() if re.match(r"word/(document|header\d+|footer\d+|footnotes|endnotes|comments)\.xml$", name)}
+        stories = {name: _texts(root) for name, root in story_roots.items()}
         geometry, styles = [], []
         try:
             doc = Document(path)
@@ -367,4 +376,4 @@ def package_report(path):
         except Exception as exc:
             errors.append("High-level reopen failed: " + str(exc))
     return {"errors": sorted(set(errors)), "warnings": warnings, "counts": counts,
-            "geometry": geometry, "stories": stories, "styles": styles}
+            "geometry": geometry, "stories": stories, "story_counts": story_counts, "styles": styles}

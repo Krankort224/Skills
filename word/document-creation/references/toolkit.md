@@ -24,6 +24,8 @@ Import document_tools from this directory using a task-local Python import path.
 
 Selected templates can be opened with Document(template); do not apply_preset unless a restyle is authorized. add_layout_table is deliberately available for portfolio designs but should not turn ordinary reports into cell-based prose.
 
+Package counts cover the main document, headers, footers, notes and comments; `story_counts` preserves each part's separate inventory. Both simple and complex fields are counted. Source coverage intentionally checks the main document only, so a duplicate fact in a footer cannot hide missing body content.
+
 The example generator resolves fonts from the local inventory when Fontconfig is available and prints substitutions. Other callers explicitly choose whether to use the requested settings or a resolved copy. Never silently resolve or replace fonts in a selected template.
 
 ## CLI

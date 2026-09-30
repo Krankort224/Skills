@@ -5,6 +5,8 @@ from pathlib import Path
 from docx import Document
 from lxml import etree
 from PIL import Image
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 from document_tools import (NS, add_data_table, add_field, add_figure, add_layout_table,
     add_list, add_omml, add_text, apply_preset, body_text, load_preset, package_report, source_coverage, resolve_fonts)
 
@@ -28,9 +30,13 @@ def run():
             assert abs(shape.width.mm - 40) < .02 and abs(shape.height.mm - 20) < .02
             p = doc.add_paragraph(); add_omml(p, '<m:oMath xmlns:m="' + NS["m"] + '"><m:r><m:t>x = 1</m:t></m:r></m:oMath>')
             add_field(doc.sections[0].footer.paragraphs[0], "PAGE", "1")
+            simple = OxmlElement("w:fldSimple"); simple.set(qn("w:instr"), "PAGE")
+            doc.sections[0].header.paragraphs[0]._p.append(simple)
             path = root / (name + ".docx"); doc.save(path)
             report = package_report(path); assert not report["errors"], report["errors"]
             assert report["counts"]["math"] == 1 and report["counts"]["drawings"] == 1
+            assert report["counts"]["fields"] == 2
+            assert report["story_counts"]["word/footer1.xml"]["fields"] == 1; checks += 2
             assert not source_coverage(path, ["Первый пункт", "Вложенный пункт", "Пункт в ячейке"])["missing"]
             assert source_coverage(path, ["Отсутствующий блок"])["missing"]
             assert source_coverage(path, ["Первый пункт", "Первый пункт"])["missing"]
@@ -51,6 +57,10 @@ def run():
                     data = etree.tostring(xml)
                 target.writestr(item, data)
         assert any("missing target" in error for error in package_report(broken)["errors"]); checks += 1
+        p, _ = add_list(doc.sections[0].footer, "Footer list")
+        p._p.xpath(".//w:numId")[0].set(qn("w:val"), "99999")
+        invalid_footer = root / "invalid-footer.docx"; doc.save(invalid_footer)
+        assert any("word/footer1.xml missing numbering ID" in error for error in package_report(invalid_footer)["errors"]); checks += 1
         print(f"Passed {checks} behavior checks across four presets")
 
 
