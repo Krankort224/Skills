@@ -22,11 +22,19 @@ Skills/
 │       ├── execution-comment.md
 │       ├── handoff-comment.md
 │       └── accepted-summary.md
-└── restructure/
-    ├── SKILL.md
-    └── references/
-        ├── chatgpt.md
-        └── codex.md
+├── restructure/
+│   ├── SKILL.md
+│   └── references/
+│       ├── chatgpt.md
+│       └── codex.md
+└── skills/
+    └── word/
+        ├── design/
+        │   └── SKILL.md
+        ├── technical/
+        │   └── SKILL.md
+        └── markdown-to-word/
+            └── SKILL.md
 ```
 
 ## Skills
@@ -92,6 +100,16 @@ ChatGPT review
 Codex owns direct filesystem discovery and mechanical migration. ChatGPT owns semantic classification, target-structure design, migration planning, and final structural review.
 
 Cloud-hosted file contents must not be downloaded, materialized, synchronized, exported, or copied into the local environment without separate, explicit, and unambiguous user authorization.
+
+### Word
+
+Three independent skills live under `skills/word/`:
+
+- `design` chooses and applies the visual system for a Word document;
+- `technical` inspects and changes DOCX structure while preserving unrelated content and formatting;
+- `markdown-to-word` converts Markdown semantics into an editable DOCX with minimal styling.
+
+For Markdown that also needs visual polish, use `markdown-to-word` first and `design` second. Either skill can follow `technical` for low-level DOCX operations without handing over its own design or conversion decisions.
 
 ## Principles
 
