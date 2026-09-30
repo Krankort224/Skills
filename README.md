@@ -27,14 +27,13 @@ Skills/
 │   └── references/
 │       ├── chatgpt.md
 │       └── codex.md
-└── skills/
-    └── word/
-        ├── design/
-        │   └── SKILL.md
-        ├── technical/
-        │   └── SKILL.md
-        └── markdown-to-word/
-            └── SKILL.md
+└── word/
+    ├── design/
+    │   └── SKILL.md
+    ├── technical/
+    │   └── SKILL.md
+    └── markdown-to-word/
+        └── SKILL.md
 ```
 
 ## Skills
@@ -103,7 +102,7 @@ Cloud-hosted file contents must not be downloaded, materialized, synchronized, e
 
 ### Word
 
-Three independent skills live under `skills/word/`:
+Three independent skills live under `word/`:
 
 - `design` chooses and applies the visual system for a Word document;
 - `technical` inspects and changes DOCX structure while preserving unrelated content and formatting;
