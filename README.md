@@ -70,7 +70,7 @@ level-1/context/references/repository.md
 
 based on `repository.template.md`.
 
-The local map defines repository scopes, source authority, reading routes, and any non-obvious context boundaries.
+The local map defines repository scopes, knowledge and contract owners, source authority, canonical update destinations, reading routes, and special-source access rules. Ownership boundaries belong in one shared table; contracts remain at their canonical sources. The shared skill resolves these roles and reports material gaps without modifying project knowledge.
 
 #### workflow
 
@@ -95,7 +95,7 @@ Status flow:
 codex-ready → codex-active → codex-review
 ```
 
-Reusable Issue artifacts are kept in `level-1/workflow/templates/`.
+Canonical Issue artifact schemas are kept in `level-1/workflow/templates/`; operation references define their use. Definition establishes inherited contracts and change boundaries; execution uses established canonical destinations; accepted summaries record task outcomes and point to project-wide knowledge at its owner.
 
 #### delegation
 

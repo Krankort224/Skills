@@ -9,7 +9,7 @@ metadata:
 
 Load the minimum context required to understand the current task correctly.
 
-For a repository-local installation, use `references/repository.md` as the context map. It defines repository scopes, source authority, and reading routes.
+For a repository-local installation, use `references/repository.md` as the context map. It defines repository scopes, knowledge ownership, source authority, canonical destinations, and reading routes.
 
 If `repository.md` is absent, do not treat `repository.template.md` as project context.
 
@@ -26,6 +26,18 @@ Do not expand the reading scope without a task-specific reason.
 Do not assume universal precedence for code, documentation, Issues, history, generated results, or newer files.
 
 Use the authority rules defined in `repository.md`.
+
+### Resolve ownership
+
+Distinguish:
+
+- knowledge owner — the canonical source responsible for a fact or durable contract;
+- source authority — which evidence prevails for a subject;
+- update destination — where a durable knowledge change belongs.
+
+Resolve task-relevant owners and, when knowledge changes are involved, update destinations from applicable repository sources. Evidence may come from a different source than the durable contract. Ownership does not grant permission to modify an immutable source or broaden the task.
+
+Maps, indexes, summaries, history, and derived output do not acquire ownership by repeating a claim. Follow their locally defined roles. If an owner or destination is materially unresolved, report the gap; do not invent one.
 
 ### Load progressively
 
@@ -88,6 +100,8 @@ Context is sufficient when the following are known:
 
 - the applicable repository scope;
 - authoritative sources for the current question;
+- owners of task-relevant facts and contracts, or material ownership gaps;
+- canonical destinations for knowledge changes under consideration, or unresolved destination gaps;
 - task-relevant current state and constraints;
 - required supporting evidence;
 - material unresolved conflicts, if any.

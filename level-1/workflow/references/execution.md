@@ -83,6 +83,8 @@ If a required check cannot be performed in the current environment, state that e
 
 If the implementation establishes or changes a durable project-wide fact, contract, accepted decision, or stable limitation, update its canonical repository location when the current task owns that change.
 
+Use the destination established by the task and applicable repository rules, not a convenient file. If a required contract or update destination is materially unresolved, report the blocker before the affected change.
+
 Do not move into canonical knowledge:
 
 - execution chronology;

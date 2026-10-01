@@ -6,9 +6,11 @@
 
 ### Boundary
 
+May change:
+
 - ...
 
-### Preserve
+Must preserve:
 
 - ...
 

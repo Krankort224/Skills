@@ -14,6 +14,18 @@ List only scopes whose context differs materially.
 
 Remove this section if the repository has no meaningful context partitions.
 
+## Knowledge and contract ownership
+
+Point to canonical owners, without restating their contracts.
+
+| Source | Owns | Must not own |
+|---|---|---|
+| `<canonical source / owner reference>` | `<facts / durable contracts; update destination when distinct or unclear>` | `<excluded responsibilities / knowledge>` |
+
+Record non-obvious ownership boundaries here. Distinguish canonical knowledge from navigation, evidence, history, examples, generated output, and runtime copies according to their actual roles.
+
+Mark immutable inputs and other write boundaries where relevant. Ownership does not grant write permission; do not invent missing update destinations.
+
 ## Source authority
 
 Define authority directly by subject.
@@ -53,24 +65,6 @@ Verify against `<fact-owning source>`.
 
 Add only stable, recurring routes.
 
-## Boundaries
-
-Record only non-obvious distinctions between data roles.
-
-- `<path>` — `<role and what it does not define>`;
-- `<path>` — `<role and what it does not define>`;
-- `<history/archive/generated/examples>` — `<usage boundary>`.
-
-Useful examples:
-
-- history explains provenance but does not define current state;
-- generated output proves a result but is not a project decision;
-- examples and references are not completed project work;
-- a runtime copy is not a source;
-- an immutable source owns input data but is not a modification target.
-
-Remove this section if the distinctions are already obvious from source authority.
-
 ## Special sources
 
 Use only for data that requires a non-trivial access pattern.
@@ -89,6 +83,7 @@ For this repository, reading can usually stop when:
 - its canonical source has been read;
 - task-relevant documents are loaded;
 - the fact-owning source has been checked when required;
+- task-relevant owners and required update destinations are identified, or material gaps are reported;
 - material conflicts have been identified.
 
 Additional conditions:

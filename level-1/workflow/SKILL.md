@@ -38,7 +38,7 @@ Select by the current requested operation, independently of interface or model. 
 - **Execution** — implementation, verification, handoff: [execution](references/execution.md).
 - **Acceptance** — result review, authorized acceptance, completion: [acceptance](references/acceptance.md).
 
-Use templates from `templates/` for Issue artifacts. Load other operation references only when the task moves to those operations or explicitly concerns inspecting or revising this workflow.
+Templates in `templates/` own Issue artifact schemas; operation references define when and how to use them. Load other operation references only when the task moves to those operations or explicitly concerns inspecting or revising this workflow.
 
 ## Continuation
 

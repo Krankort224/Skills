@@ -4,6 +4,8 @@ Own Issue definition and execution dispatch.
 
 ## 1. Define the Issue
 
+Before shaping the contract, identify applicable accepted repository contracts and their sources, affected canonical sources, allowed changes, preserved baseline, and sufficient acceptance evidence. Use supplied or retrieved repository information; resolve material gaps before dispatch.
+
 Make the Issue body a stable contract rather than a work log.
 
 Use `../templates/issue.md` as the default structure.

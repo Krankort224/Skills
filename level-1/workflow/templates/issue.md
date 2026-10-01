@@ -11,7 +11,7 @@
 
 ## Inherited baseline
 
-- <Accepted foundation that must not be silently redesigned>
+- <Accepted foundation or repository contract that must be preserved — canonical source>
 - ...
 
 ## Scope
