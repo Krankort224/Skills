@@ -20,6 +20,8 @@ Issue status flows through:
 
 `codex-ready → codex-active → codex-review`
 
+Designate one responsible owner per active contour and cycle. Apply dispatch, Issue-status, and cycle-level publication instructions only to that owner. Supporting participants execute assignments within the owner's dispatched cycle and return results to the owner.
+
 While the current execution unit is active, keep its contract stable. Implementation instructions, handoffs, review findings, and correction cycles belong in comments. Rewrite accepted contract material only after acceptance.
 
 Load only the instructions for the active contour:

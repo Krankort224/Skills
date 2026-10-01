@@ -49,6 +49,14 @@ Skill levels classify responsibility; they are independent of subagent nesting l
 
 ### Level 1
 
+These skills complement one another without requiring or invoking each other. Select them through the task and applicable instructions:
+
+- [context](level-1/context/SKILL.md) owns source authority and sufficient repository understanding;
+- [workflow](level-1/workflow/SKILL.md) owns the Issue contract, cycle lifecycle, and acceptance;
+- [delegation](level-1/delegation/SKILL.md) owns execution decomposition, agent assignments, recovery, and integration.
+
+They compose through data: source-backed inputs, task requirements and acceptance criteria, assignments, and results with evidence. The cycle owner turns participant results into the overall handoff. Pass plans define acceptance units; agent trees distribute work within the current task. No fixed skill-call sequence is required.
+
 #### context
 
 Loads the minimum authoritative repository context required for the current task.
@@ -93,9 +101,9 @@ Defines execution planning and subagent orchestration for Codex. It covers decid
 
 The model contract has one canonical home in [level-1/delegation/SKILL.md](level-1/delegation/SKILL.md). Root is selected by the user; subagents use the lightweight or main executor defined by that contract.
 
-Root applies `context` before planning. Subagents reuse their parent's task context and apply `context` only when additional repository context is needed; fully specified mechanical work does not require a separate context-loading cycle. The `context` contract remains unchanged.
+Root establishes sufficient inputs for decomposition; missing inputs may be gathered directly or through bounded exploration before dependent execution. Assignments carry requirements, decisions, source pointers/revision, and unresolved questions. Workers retrieve missing inputs under applicable project rules; fully specified mechanical work needs no separate context-loading cycle.
 
-The default maximum tree depth is two subagent levels below root; root may increase it for justified decomposition. At the deepest level, when depth is at least two, only lightweight agents and easy tasks are allowed. Intermediate levels may contain main executors. The skill also defines failure diagnosis, stalled-work recovery, and a compact report contract; it does not replace `workflow` or `context`.
+The default maximum tree depth is two subagent levels below root; root may increase it for justified decomposition. At the deepest level, when depth is at least two, only lightweight agents and easy tasks are allowed. Intermediate levels may contain main executors. The skill also defines failure diagnosis, stalled-work recovery, and a compact report contract.
 
 ### Level 2
 
