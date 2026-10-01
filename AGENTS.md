@@ -15,7 +15,8 @@
 
 ## Integration
 
-- Transfer selected skills with their required resources, preserving the level structure and relative links, subject to the template exception.
+- Do not transfer the `level-1/`, `level-2/`, or `level-3/` directory hierarchy to destination repositories. Place selected skills directly in the destination skills directory.
+- Transfer required resources, preserving each skill's internal structure and updating relative links affected by relocation, subject to the template exception.
 - Specify skill locations and level requirements in the destination `AGENTS.md`.
 - Record the source and revision of transferred skills.
 - Place project-specific instructions in supported adaptation points or project instructions, preserving shared contracts.
