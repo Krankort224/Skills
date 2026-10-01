@@ -16,8 +16,9 @@ Skills/
 │   ├── workflow/
 │   │   ├── SKILL.md
 │   │   ├── references/
-│   │   │   ├── chatgpt.md
-│   │   │   └── codex.md
+│   │   │   ├── definition.md
+│   │   │   ├── execution.md
+│   │   │   └── acceptance.md
 │   │   └── templates/
 │   │       ├── issue.md
 │   │       ├── execution-comment.md
@@ -73,7 +74,7 @@ The local map defines repository scopes, source authority, reading routes, and a
 
 #### workflow
 
-Defines the shared GitHub Issue lifecycle for ChatGPT and Codex.
+Defines the shared GitHub Issue lifecycle by operation, independently of Chat, Work, or Codex. Applies to work on a specific Issue or a direct request to create one; ordinary work without an Issue does not use this lifecycle.
 
 It supports:
 
@@ -82,10 +83,11 @@ It supports:
 
 The root skill acts as a lightweight router:
 
-- ChatGPT loads `references/chatgpt.md`;
-- Codex loads `references/codex.md`.
+- definition loads `references/definition.md`;
+- execution loads `references/execution.md`;
+- acceptance, including result review, loads `references/acceptance.md`.
 
-Issue bodies are stable contracts. Active implementation instructions, handoffs, review findings, and correction cycles live in comments.
+Issue bodies are stable contracts. Active implementation instructions, handoffs, review findings, and correction cycles live in comments. Creation, acceptance, and closure require direct, unambiguous user instruction; review alone does not authorize acceptance. Continuing in another interface preserves the task and prior authorizations without restarting an active cycle.
 
 Status flow:
 

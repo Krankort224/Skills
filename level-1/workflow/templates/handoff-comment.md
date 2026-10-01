@@ -1,4 +1,4 @@
-## Codex handoff — <Issue | Pass X>
+## Execution handoff — <Issue | Pass X>
 
 ### Changed
 

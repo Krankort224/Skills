@@ -1,10 +1,10 @@
-# Codex Contour
+# Execution
 
 Own execution of the currently dispatched cycle only.
 
-## 1. Accept the dispatched task
+## 1. Start or resume the dispatched cycle
 
-Work only when the Issue is in `codex-ready`.
+Start a new execution cycle only from `codex-ready`. Resume a `codex-active` cycle within its existing instruction and boundary; do not repeat dispatch or reset its status. Supporting participants execute their assigned portion of the owner's active cycle.
 
 Determine the current execution unit:
 
@@ -26,7 +26,7 @@ By default, work in the repository's current branch and commit changes to that b
 
 Do not create a new branch, switch to another branch, or open a pull request unless the task or user explicitly requires it.
 
-When execution begins, move the Issue from `codex-ready` to `codex-active`.
+When a new cycle begins, its owner moves the Issue from `codex-ready` to `codex-active`.
 
 ## 2. Execute only the current cycle
 
@@ -112,11 +112,11 @@ Report:
 - limitations or unverified parts;
 - blockers or risks relevant to review.
 
-Do not declare your own work accepted.
+Execution completion and handoff do not constitute acceptance.
 
-Move the Issue from `codex-active` to `codex-review`.
+The cycle owner publishes the combined handoff and moves the Issue from `codex-active` to `codex-review`. Supporting participants return results to the owner.
 
-Then stop.
+Then stop execution of this cycle.
 
 ## 6. Correction cycles
 
