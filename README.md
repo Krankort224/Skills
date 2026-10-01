@@ -24,9 +24,7 @@ Skills/
 │   │       ├── handoff-comment.md
 │   │       └── accepted-summary.md
 │   └── delegation/
-│       ├── SKILL.md
-│       └── agents/
-│           └── openai.yaml
+│       └── SKILL.md
 └── level-2/
     ├── restructure/
     │   ├── SKILL.md
@@ -97,7 +95,7 @@ The model contract has one canonical home in [level-1/delegation/SKILL.md](level
 
 Root applies `context` before planning. Subagents reuse their parent's task context and apply `context` only when additional repository context is needed; fully specified mechanical work does not require a separate context-loading cycle. The `context` contract remains unchanged.
 
-The tree permits two subagent levels below root. Only lightweight work may be delegated to the second level; failure recovery belongs to the parent. This skill governs execution inside the task and does not replace `workflow` or `context`.
+The default maximum tree depth is two subagent levels below root; root may increase it for justified decomposition. At the deepest level, when depth is at least two, only lightweight agents and easy tasks are allowed. Intermediate levels may contain main executors. The skill also defines failure diagnosis, stalled-work recovery, and a compact report contract; it does not replace `workflow` or `context`.
 
 ### Level 2
 

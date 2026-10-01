@@ -1,83 +1,70 @@
 ---
 name: delegation
-description: Планировать исполнение задачи в Codex, определять необходимость субагентов и управлять их деревом, контекстом, эскалацией и проверкой результатов. Применять при выборе между самостоятельным исполнением и делегированием, распределении подзадач и продолжении работы существующего дерева агентов.
+description: Plan Codex execution, choose whether to delegate, and manage agent trees, context, recovery, and verification.
 ---
 
-# Делегирование
+# Delegation
 
-Управлять исполнением внутри текущей задачи или execution cycle. Не изменять постановку и не заменять контракт работы с репозиторием из [context](../context/SKILL.md) или жизненный цикл задачи из [workflow](../workflow/SKILL.md).
+Stay within the current task/cycle. Preserve `context`, `workflow`, repository rules, accepted work, and unrelated changes.
 
-## Состав и модельный контракт
+## Models
 
-Считать root агентом, выбранным пользователем. Оставлять ему ответственность за планирование, координацию, интеграцию, проверку и итоговый результат. Не менять модель root самостоятельно.
+Subagent model registry; update models only here:
 
-Определять конкретные модели субагентов только по этой таблице. При замене модельного ряда обновлять таблицу; в остальных правилах использовать тип исполнителя.
+| Type | Model |
+|---|---|
+| light | gpt-6-luna |
+| main | gpt-6.1-sol |
 
-| Тип субагента | Модель | Идентификатор | Назначение |
-|---|---|---|---|
-| Лёгкий | GPT-6 Luna | `gpt-6-luna` | Узкие, однозначные задачи с легко проверяемым результатом |
-| Основной | GPT-6.1 Sol | `gpt-6.1-sol` | Реализация, отладка, исследование и review, требующие содержательных решений |
+Use only registry models for subagents; prevent incompatible inheritance. The light model never spawns agents, even as root. Select by task complexity, not role; use minimum reliable effort. If unavailable, let the parent execute or replan within this contract.
 
-Не использовать для субагентов другие модели, включая наследование модели root. Запретить создание субагентов агенту на модели лёгкого исполнителя, в том числе если он является root.
+## Planning
 
-Выбирать тип исполнителя по сложности подзадачи, а не по названию роли: исследователь, исполнитель или проверяющий. Выбирать минимальный reasoning effort, достаточный для надёжного результата.
+User selects root. Root owns planning, coordination, integration, verification, and final delivery.
 
-При отсутствии нужной модели или возможности безопасно назначить её не подменять модель произвольно и не обходить ограничения. Выполнять подзадачу допустимым родительским агентом; сообщать существенное изменение плана.
+Root reads Issue/prompt and current instructions, applies `context`, then plans execution. Delegate substantial independent work, context-heavy research, or independent verification when benefits exceed coordination costs. Handle trivial/sequential work directly.
 
-## Планирование дерева
+Root is level 0. Default maximum depth: 2. Root may increase depth for justified decomposition.
 
-Root: прочитать Issue/prompt и актуальные инструкции к задаче, применить `context`, затем в начале выполнения определить необходимость делегирования и дерево исполнителей.
+- Depth 1: light/main.
+- Depth D≥2: levels 1…D−1 allow light/main; level D allows only light agents and easy tasks.
+- Only main subagents may spawn descendants, within the root-approved tree.
 
-Делегировать существенные независимые подзадачи, объёмные исследования и независимые проверки, если ожидаемая польза превышает затраты на передачу контекста, координацию и проверку. Мелкие операции и простые последовательные шаги выполнять самостоятельно. Не создавать агента без конкретного задания; считать самостоятельное исполнение допустимым результатом планирования.
+Before spawning, define parents, tasks, models, dependencies, write scopes, and verification. Set concurrency by useful independent work and runtime limits. Announce assignments, models, and reasons. Root approves material tree changes, including depth; announce them without separate user approval within authorized scope.
 
-Ограничивать вложенность двумя уровнями субагентов, считая root уровнем 0:
+Check actual tree composition/depth; enforce runtime restrictions where available.
 
-- уровень 1 — основные и лёгкие субагенты, создаваемые root;
-- уровень 2 — только лёгкие субагенты для лёгких задач, создаваемые основными субагентами первого уровня согласно плану root;
-- не создавать уровень 3.
+## Context and execution
 
-До запуска определить для каждой подзадачи исполнителя, родителя, зависимости, область записи и способ проверки. Определять число исполнителей по полезным независимым подзадачам и доступным возможностям среды; не вводить дополнительный постоянный лимит параллелизма.
+Each assignment includes goal/scope, decisions, inputs/source pointers, relevant revision, permissions/write scope, constraints, expected result, verification, and any spawning rights. Include critical requirements directly.
 
-Кратко сообщить пользователю, что делегируется, каким моделям и почему. Корректировать дерево при новых обстоятельствах; существенные изменения согласовывать с root и сообщать пользователю. Не запрашивать отдельное подтверждение делегирования внутри уже разрешённой задачи.
+Default to task-specific context and `fork_turns=none` where supported. Inherit history only when needed and compatible with the model contract.
 
-## Передача контекста и исполнение
+Workers reuse supplied context, reading sources directly and applying `context` only for missing task-relevant information. Fully specified mechanical work skips separate context loading, never repository rules. Avoid redundant reading; parents need not pre-read every source.
 
-В каждом поручении передать:
+Never broaden scope. Keep concurrent writes disjoint; serialize shared-file edits. Do useful work while children run; avoid duplication/frequent polling. Reuse agents with matching context.
 
-- цель и границы подзадачи;
-- необходимые решения, исходные данные и ссылки на источники;
-- разрешённые изменения, область записи и ограничения;
-- ожидаемый результат и способ проверки;
-- предусмотренные планом права дальнейшего делегирования, если они есть.
+## Recovery
 
-Критические требования включать непосредственно в поручение. По умолчанию передавать адресный контекст подзадачи; полную историю наследовать только при зависимости от накопленного обсуждения.
+Diagnose first: context/specification, access/tools/permissions, size/complexity, execution/verification, or stalled progress. Resolve the cause or report a blocker; stronger models do not replace missing inputs/access.
 
-В среде с `fork_turns` обычно выбирать `none` и передавать сведения поручением и ссылками. Использовать ограниченную или полную историю по необходимости. Если полный fork наследует модель и effort, применять его только при соответствии модельному контракту; иначе передавать контекст способом, позволяющим явно выбрать допустимую модель.
+- Failed light at level 1: root stops it and assigns main, transferring requirements, context, usable progress, checks, and failure cause.
+- Failed light at level ≥2: parent awaits all other direct-child reports, then attempts completion itself; escalate upward if unsuccessful.
+- Failed main: parent replans or completes the work.
 
-Субагент: использовать полученные сведения и при необходимости применить `context`, добирая материалы в пределах подзадачи. Не повторять сбор уже достаточного контекста. Для строго определённой механической операции не применять `context` отдельно; соблюдать применимые правила репозитория.
+Replacements must obey depth/model rules; tree changes require root approval.
 
-Не требовать, чтобы родитель предварительно прочитал все первоисточники. Разрешать исполнителю читать необходимые материалы напрямую доступными инструментами. Передавать родителю выводы и доказательства, а не весь прочитанный материал.
+Do not wait indefinitely. Track expected duration, new results, and repetitive non-progress. On deadline breach or clear stall, request an interim report, then replan/cancel. Treat cancellation as a report with cause and preserved partial results. Cancel obsolete or dependency-invalidated work. Never retry unchanged conditions.
 
-Не расширять задачу самостоятельно. Выделять непересекающиеся области параллельной записи; общие файлы изменять последовательно. Не отменять чужие или уже принятые изменения.
+## Reporting and closure
 
-Пока исполнители работают, выполнять другие полезные части задачи, избегая дублирования и частого опроса статуса. Повторно использовать подходящего агента для следующего поручения; отменять ненужную работу. Фиксировать результаты так, чтобы другой исполнитель мог продолжить подзадачу.
+Return:
+`status: done|partial|blocked|error|cancelled; result; files; sources/revision; evidence; checks/results; remaining; cause; next_action`.
 
-## Обработка неудач
+Report conclusions and evidence pointers, not full transcripts. Never claim unperformed checks.
 
-Если лёгкий субагент первого уровня не справился, root должен прекратить его активное исполнение и назначить на его место основного субагента. Передать постановку, контекст, достигнутый прогресс, результаты проверок и причину неудачи. Сохранить пригодные результаты; не начинать всю задачу заново без причины.
+Parents verify direct-child scope compliance, material conclusions, changes, and checks without automatically repeating all research. Root verifies the combined result against the user task, including integration.
 
-Если субагент второго уровня не справился, его родитель первого уровня должен:
+Checkpoint tree state, accepted results, and pending work for context-loss recovery; do not duplicate canonical project sources.
 
-1. Дождаться отчётов остальных своих субагентов второго уровня, если они есть.
-2. Учесть полученные результаты и самостоятельно попытаться завершить проблемную подзадачу.
-3. При неудаче передать root достигнутые результаты и описание препятствия.
-
-Не заменять неудачный лёгкий субагент второго уровня основным субагентом и не создавать дополнительный уровень вложенности. Если основной субагент первого уровня не справился, передать вопрос root для корректировки плана или самостоятельного завершения.
-
-## Проверка и завершение
-
-Возвращать родителю результат, основания существенных выводов, изменённые файлы, выполненные проверки и незавершённые вопросы. Не выдавать непроведённую проверку за успешную.
-
-Каждому родителю проверять результаты непосредственных исполнителей: соответствие поручению, существенные выводы, изменения и проверки. Проверять доказательства в необходимом объёме, не повторяя автоматически всё исследование исполнителя. Root должен принять общий результат и проверить соответствие задаче пользователя.
-
-Перед итоговым ответом учесть статус каждого запущенного агента: работа завершена, завершилась ошибкой либо явно отменена. Не оставлять исполнителей работать над закрытой задачей. Сообщить пользователю общий результат и существенные ограничения.
+Before final delivery, account for every agent and finish/cancel outstanding execution. Report the overall result and material limitations.
