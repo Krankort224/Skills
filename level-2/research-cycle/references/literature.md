@@ -1,39 +1,39 @@
-# Аналоги и внешние свидетельства
+# Related work and external evidence
 
-## Задай цель поиска
+## Define the search purpose
 
-Определи, для чего нужны источники: понять механизм, найти метод, выбрать контроль, проверить утверждение, выявить известные ограничения или оценить новизну. Переводи внутренние термины проекта в общепринятые названия явлений и методов.
+Establish why sources are needed: understand a mechanism, find a method, choose a control, verify a claim, identify known limitations, or assess novelty. Translate internal project terms into established names for phenomena and methods.
 
-Выбери глубину: точечная проверка, обзор области или систематический обзор. Не превращай каждый виток исследования в полный literature review.
+Choose the depth: a targeted check, a landscape review, or a systematic review. Do not turn every research iteration into a full literature review.
 
-## Ищи по вопросу и механизму
+## Search by question and mechanism
 
-Используй запросы по явлению, механизму, геометрии, допущениям и наблюдаемому эффекту. Учитывай альтернативные термины, близкие дисциплины и работы, на которые ссылаются релевантные источники. Не ограничивайся совпадением названия проекта.
+Use queries about the phenomenon, mechanism, geometry, assumptions, and observable effect. Consider alternative terms, neighboring disciplines, and works cited by relevant sources. Do not rely only on a match to the project name.
 
-Выбирай базы и источники по области. Сохраняй для существенного поиска запросы, дату, охват и ограничения; число баз или результатов само по себе не доказывает полноту.
+Choose databases and sources for the field. For a material search, record queries, date, coverage, and limitations; the number of databases or results does not establish completeness.
 
-Поисковую выдачу и краткий пересказ используй для отбора. Для существенного утверждения проверяй соответствующий фрагмент исходной работы, документации или реализации. Различай наличие публикации, её библиографические сведения и фактическую поддержку утверждения.
+Use search results and short summaries for selection. For a material claim, verify the relevant passage in the original work, documentation, or implementation. Distinguish the existence of a publication, its bibliographic details, and actual support for the claim.
 
-## Сопоставляй, а не только пересказывай
+## Compare rather than merely summarize
 
-Для релевантного аналога установи проблему, механизм, условия, способ проверки, результат и ограничения. Определи отношение к текущему вопросу:
+For a relevant analogue, establish the problem, mechanism, conditions, evaluation method, result, and limitations. Determine its relationship to the current question:
 
-- поддерживает утверждение в сопоставимых условиях;
-- противоречит ему в сопоставимых условиях;
-- проверяет близкую идею, но имеет существенные различия;
-- предлагает метод или контроль без проверки нашей гипотезы;
-- не позволяет сделать вывод по имеющемуся доступу.
+- supports the claim under comparable conditions;
+- contradicts it under comparable conditions;
+- tests a related idea with material differences;
+- offers a method or control without testing our hypothesis;
+- does not allow a conclusion with the available access.
 
-Различай математическое доказательство, численную демонстрацию, физический эксперимент и утверждение автора. Оценивай, какие переходы между ними требуют дополнительной проверки.
+Distinguish mathematical proof, numerical demonstration, physical experiment, and an author's assertion. Assess which transitions among them require further testing.
 
-## Сохраняй неопределённость новизны
+## Preserve uncertainty about novelty
 
-Формулируй «не найдено в указанном охвате», а не «никто не исследовал». Отделяй новизну комбинации, постановки, механизма и реализации. Отсутствие кода, публикации или совпадения терминов не означает отсутствия предшествующего решения.
+Say “not found within the stated coverage,” not “nobody has studied this.” Separate novelty of a combination, problem formulation, mechanism, and implementation. Missing code, publication, or matching terminology does not imply the absence of prior work.
 
-Не решай патентоспособность или юридический статус по общему поиску аналогов; при таком отдельном запросе нужна соответствующая проверка.
+Do not determine patentability or legal status from a general search for analogues; a separate request for that requires the corresponding verification.
 
-## Зафиксируй результат
+## Record the outcome
 
-Сохрани только сведения, влияющие на исследование: поддержанные утверждения, противоречия, условия переносимости, методы проверки и пробелы. Для нескольких существенных утверждений используй форму evidence map из корневого навыка, адаптируя её к проекту; для одной проверки достаточно краткой записи со ссылкой и точным местом evidence.
+Preserve only information that affects the investigation: supported claims, contradictions, transfer conditions, evaluation methods, and gaps. For several material claims, use the evidence-map form from the root skill, adapting it to the project; for one check, a short record with a source link and precise evidence location is sufficient.
 
-Укажи, как найденное меняет ближайшую постановку или эксперимент. Не считай согласие источников или агентов самостоятельным доказательством проверяемого эффекта.
+State how the findings change the nearest definition or experiment. Do not treat agreement among sources or agents as independent proof of the effect under investigation.

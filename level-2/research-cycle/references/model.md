@@ -1,46 +1,46 @@
-# Формализация и проверка модели
+# Model formalization and verification
 
-## Определи роль модели
+## Establish the model's role
 
-Установи, что модель представляет и для какого вопроса используется. Различай абстрактную математическую модель, физическую модель, инженерный расчёт и модель поведения программы. Более подробная реализация не становится автоматически более достоверной.
+Determine what the model represents and which question it serves. Distinguish an abstract mathematical model, a physical model, an engineering calculation, and a model of software behavior. A more detailed implementation does not automatically become more credible.
 
-Используй действующий проектный baseline. Укажи proposed изменения отдельно; не заменяй принятую модель молча.
+Use the current project baseline. State proposed changes separately; do not silently replace the accepted model.
 
-## Сделай допущения явными
+## Make assumptions explicit
 
-Зафиксируй применимые элементы:
+Record applicable elements:
 
-- переменные, параметры, единицы и обозначения;
-- геометрию, топологию, области и связи;
-- уравнения, алгоритмы или правила перехода состояния;
-- начальные и граничные условия, входы и воздействия;
-- включённые и исключённые процессы;
-- диапазон применимости и недостающие сведения;
-- связь между внутренним состоянием и измеряемыми величинами.
+- variables, parameters, units, and notation;
+- geometry, topology, domains, and relationships;
+- equations, algorithms, or state-transition rules;
+- initial and boundary conditions, inputs, and excitations;
+- included and excluded processes;
+- applicability range and missing information;
+- the relationship between internal state and measured quantities.
 
-Для программы вместо физических уравнений могут требоваться состояния, входные контракты, переходы и наблюдаемые выходы. Пропускай неприменимое явно, не выдумывай физический смысл технических параметров.
+For software, states, input contracts, transitions, and observable outputs may replace physical equations. Explicitly omit what is not applicable; do not invent physical meanings for technical parameters.
 
-## Раздели уровни проверки
+## Separate verification levels
 
-| Уровень | Проверяемый вопрос | Возможные средства |
+| Level | Question being checked | Possible methods |
 | --- | --- | --- |
-| Формальная корректность | Согласованы ли определения, зависимости и ограничения | Размерности, диапазоны, предельные случаи, инварианты, аналитические следствия |
-| Корректность реализации | Исполняет ли код принятую модель | Контрольные примеры, сопоставление с аналитическим решением, проверки переходов и инвариантов |
-| Численная достоверность | Не определяет ли результат способ расчёта | Сходимость по шагу/сетке, допускам и горизонту, сравнение методов, диагностика устойчивости |
-| Соответствие системе | Достаточна ли модель для выводов об исследуемом объекте | Сопоставимые измерения, внешний benchmark, физически обоснованные параметры и ограничения |
+| Formal correctness | Are definitions, relationships, and constraints consistent? | Dimensions, ranges, limiting cases, invariants, analytical implications |
+| Implementation correctness | Does the code implement the accepted model? | Control cases, comparison with an analytical solution, transition and invariant checks |
+| Numerical credibility | Does the calculation method determine the result? | Convergence with step/mesh, tolerances and horizon, method comparisons, stability diagnostics |
+| Correspondence to the system | Is the model sufficient for conclusions about the investigated object? | Comparable measurements, an external benchmark, physically justified parameters and limitations |
 
-Выбирай проверки по риску конкретного вывода. Успешные тесты реализации не доказывают физический механизм; отсутствие внешних данных ограничивает выводы модельным уровнем.
+Choose checks according to the risk of the particular conclusion. Passing implementation tests does not prove a physical mechanism; missing external data limits conclusions to the model level.
 
-## Различай физическое и техническое
+## Distinguish physical and technical factors
 
-Отделяй параметры модели от solver settings, критериев остановки, floating-point эффектов и технических лимитов. Выясняй, не зависит ли заявленный эффект от дискретизации, порога, clamp или resampling.
+Separate model parameters from solver settings, stopping criteria, floating-point effects, and technical limits. Determine whether the claimed effect depends on discretization, a threshold, clamping, or resampling.
 
-Если стабилизация меняет уравнение или область допустимых состояний, оформляй её как изменение модели. Если это способ реализации неизменного контракта, объясни численный смысл и проверь влияние. Не вводи «исправление» только потому, что текущий результат неудобен.
+If stabilization changes an equation or the admissible state space, treat it as a model change. If it implements an unchanged contract, explain its numerical meaning and check its influence. Do not introduce a “fix” merely because the current result is inconvenient.
 
-## Выбери достаточную строгость
+## Choose sufficient rigor
 
-Применяй простую модель для доступного вопроса. Переходи к более строгому solver, большей детализации или физическому прототипу, когда определены проверяемый эффект, существенные параметры, наблюдаемый признак и основания считать прежний уровень недостаточным.
+Use a simple model for the accessible question. Move to a more rigorous solver, greater detail, or a physical prototype when the effect to test, material parameters, observable signature, and grounds for considering the previous level insufficient are defined.
 
-Не требуй физического подтверждения от абстрактного исследования, но и не переноси его результат на физическую систему без соответствующего основания.
+Do not demand physical confirmation of abstract research, but do not transfer its result to a physical system without the corresponding justification.
 
-Сохрани модель или её изменение у проектного владельца; в эксперименте фиксируй используемую версию и существенные отличия. Не создавай второе полное описание той же модели ради формы.
+Preserve the model or its change at the project-defined owner; record the version used and material differences in the experiment. Do not create a second full model description merely to satisfy a form.

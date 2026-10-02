@@ -1,38 +1,38 @@
-# Результат <ID>: <название>
+# Result <ID>: <name>
 
-> Адаптационная форма. Заполняй по фактическому evidence; для будущих данных указывай «не получено». Результат не означает принятие проектного решения. После адаптации убери подсказки и `.template.` из имени нового файла.
+> Adaptation form. Fill from actual evidence; label future data “not obtained.” A result does not imply acceptance of a project decision. After adaptation, remove guidance and `.template.` from the name of a new file.
 
-## Основание
+## Basis
 
-- Постановка, версия модели и критерии данной проверки:
-- Прогоны, конфигурации, версии среды и источники данных:
-- Статус исполнения, отсутствующие прогоны и отклонения:
+- Definition, model version, and criteria for this check:
+- Runs, configurations, environment versions, and data sources:
+- Execution status, missing runs, and deviations:
 
-## Наблюдения
+## Observations
 
-- Измеренные/рассчитанные величины с единицами и неопределённостью, когда применимо:
-- Сравнение с контролем и предсказанием:
-- Первичные данные и воспроизводимая обработка; ссылки на таблицы/графики/логи:
-- Отрицательные результаты и аномалии:
+- Measured/calculated quantities with units and uncertainty, when applicable:
+- Comparison with the control and prediction:
+- Primary data and reproducible processing; links to tables/plots/logs:
+- Negative results and anomalies:
 
-## Достоверность
+## Credibility
 
-- Проверенные условия сопоставимости, реализации и численной/статистической корректности:
-- Технические сбои, недостоверные данные и причины исключения:
-- Ограничения доступа и воспроизводимости:
+- Verified comparability conditions, implementation correctness, and numerical/statistical credibility:
+- Execution failures, unreliable data, and exclusion reasons:
+- Access and reproducibility limitations:
 
-## Вывод по вопросу
+## Conclusion on the question
 
-| Утверждение и условия | Состояние вопроса | Evidence | Ограничение и оставшиеся альтернативы |
+| Claim and conditions | State of the question | Evidence | Limitation and remaining alternatives |
 | --- | --- | --- | --- |
-| <утверждение> | <поддержано / частично / противоречит / неопределённо> | <конкретное место> | <границы> |
+| <claim> | <supported / partial / contradicts / inconclusive> | <specific location> | <bounds> |
 
-- Наблюдаемый эффект отдельно от предполагаемого объяснения:
-- Что этот результат позволяет и не позволяет утверждать:
+- Observed effect separately from its proposed explanation:
+- What this result does and does not permit claiming:
 
-## Дальнейшее действие
+## Further action
 
-- Следующая проверка и снимаемая неопределённость либо основание остановки:
-- Предлагаемые изменения модели/гипотезы, если требуются:
-- Отдельное проектное решение и следующая конфигурация, если они уже приняты:
-- Куда относится устойчивый вывод и где сохранена история:
+- Next check and uncertainty to resolve, or stopping grounds:
+- Proposed model/hypothesis changes, if needed:
+- Separate project decision and next configuration, if already accepted:
+- Destination for the durable conclusion and location of its history:

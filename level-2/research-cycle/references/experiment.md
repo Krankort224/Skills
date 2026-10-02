@@ -1,48 +1,48 @@
-# Эксперимент: проектирование, исполнение и evidence
+# Experiment: design, execution, and evidence
 
-## Определи текущую операцию
+## Establish the current operation
 
-Различай проектирование проверки, подготовку исполнителю, запуск и проверку полученных данных. Выполняй только порученную операцию; готовый план не является выполненным экспериментом.
+Distinguish designing a check, preparing instructions for an executor, running it, and verifying the resulting data. Perform only the assigned operation; a completed plan is not a completed experiment.
 
-## Спроектируй минимальную различающую проверку
+## Design the smallest discriminating check
 
-Свяжи проверку с вопросом, версией модели и предсказанием. Выбери контроль или baseline, наблюдаемые величины и необходимые сравнения. Для проверочной работы до доступа к целевому результату зафиксируй условия вывода, критерии и способ анализа; для поисковой обозначь цель разведки.
+Connect the check to the question, model version, and prediction. Choose a control or baseline, observable quantities, and necessary comparisons. For confirmatory work, record conditions for conclusions, criteria, and the analysis method before accessing the target result; for exploratory work, state the exploration goal.
 
-Определи, что меняется и что сохраняется, существенные смешивающие факторы, диапазон параметров и ограничения сравнения. Если важны взаимодействия факторов, предусмотри их проверку; не своди задачу автоматически к изменению одного параметра за раз.
+Define what varies and what remains fixed, material confounders, parameter ranges, and comparison limitations. If factor interactions matter, provide for testing them; do not automatically reduce the task to changing one parameter at a time.
 
-Число повторов выбирай по характеру неопределённости. Для стохастики учитывай независимые реализации и вариативность; повторные измерения одного прогона не считай независимыми репликами. Для детерминированного расчёта проверяй численные параметры и устойчивость выводов, а не требуй произвольного числа одинаковых запусков.
+Choose repetition counts according to the uncertainty involved. For stochastic work, consider independent realizations and variability; repeated measurements within one run are not independent replicates. For a deterministic calculation, check numerical parameters and conclusion stability rather than requiring an arbitrary number of identical runs.
 
-Задай вычислительный/временной бюджет и условия остановки. Для адаптивной серии объясни правило выбора следующей точки и границы вывода; не повторяй проверку до желаемого результата.
+Define the compute/time budget and stopping conditions. For an adaptive series, explain the rule for selecting the next point and the limits of inference; do not repeat a check until the desired result appears.
 
-## Подготовь воспроизводимое исполнение
+## Prepare reproducible execution
 
-Зафиксируй применимые версии кода и среды, входы, параметры, начальные/граничные условия, seed и порядок случайных выборок, solver settings, команду или иной точный порядок запуска и способ получения метрик.
+Record applicable code and environment versions, inputs, parameters, initial/boundary conditions, seed and order of random draws, solver settings, command or other precise execution procedure, and method of obtaining metrics.
 
-Для передачи внешнему расчётчику укажи конфигурацию, фиксированные и изменяемые параметры, требуемые данные, критерии и формат возврата. Не предполагая доступ к его среде, запроси сведения, необходимые для проверки сопоставимости.
+For handoff to an external analyst, specify the configuration, fixed and variable parameters, required data, criteria, and return format. Without assuming access to their environment, request the information needed to verify comparability.
 
-До большого прогона определи политику evidence: что хранить неизменно, какие агрегаты и контрольные прогоны нужны, что можно воспроизвести и как найти полный набор вне Git. Учитывай проектные правила хранения; не требуй сохранения всех крупных raw-файлов автоматически. После неудобного результата не меняй политику ради его сокрытия.
+Before a large run, define the evidence policy: what remains immutable, which aggregates and control runs are needed, what can be reproduced, and how to locate a complete dataset outside Git. Follow project storage rules; do not automatically require keeping all large raw files. Do not change the policy after an inconvenient result to conceal it.
 
-При изменении рабочего объекта соблюдай предусмотренные проектом dry-run, изоляцию и полномочия. Не заменяй диагностический запуск записью в рабочую модель.
+When modifying a working object, follow the project's required dry-run, isolation, and authorization rules. Do not replace a diagnostic run with a write to the working model.
 
-## Выполни или передай проверку
+## Execute or hand off the check
 
-Перед запуском проверь соответствие плану, доступность входов, условия среды и наличие релевантных прошлых попыток. Переиспользуй сопоставимый результат; повторяй его для воспроизведения, независимой проверки или изменённых условий с объяснённой целью.
+Before running, verify compliance with the plan, input availability, environment conditions, and the existence of relevant previous attempts. Reuse a comparable result; repeat it for reproduction, independent verification, or changed conditions with an explained purpose.
 
-Назначай устойчивый идентификатор каждому прогону; связывай его с конфигурацией, кодом и данными. Сохраняй существенные ошибки, отклонения и причины остановки. Исправленный повтор отделяй от первоначальной попытки.
+Assign a stable identifier to each run; connect it to configuration, code, and data. Preserve material errors, deviations, and stopping reasons. Separate a corrected rerun from the original attempt.
 
-Если запуска нет или он передан пользователю/внешнему исполнителю, обозначь это явно и перечисли ожидаемые evidence. Не заполняй будущие числа предположениями.
+If a run has not occurred or has been assigned to the user/an external executor, state this explicitly and list the expected evidence. Do not fill future numbers with assumptions.
 
-## Проверь данные до интерпретации
+## Verify data before interpretation
 
-Установи:
+Establish:
 
-- состоялась ли проверка с нужной конфигурацией;
-- полны ли требуемые результаты и понятны ли исключённые прогоны;
-- совпадают ли единицы, определения метрик, диапазоны и способы обработки;
-- сопоставимы ли контроль и исследуемый вариант;
-- не объясняется ли эффект техническим сбоем или численным артефактом;
-- воспроизводятся ли производные числа и графики из указанного evidence.
+- whether the check used the required configuration;
+- whether required results are complete and excluded runs are accounted for;
+- whether units, metric definitions, ranges, and processing methods agree;
+- whether the control and investigated option are comparable;
+- whether an execution failure or numerical artifact explains the effect;
+- whether derived numbers and plots can be reproduced from the stated evidence.
 
-Разделяй статус исполнения, достоверность данных и поддержку гипотезы. Отсутствующая метрика при сбое не является нулевым эффектом. Несопоставимые конфигурации не объединяй в одну оценку.
+Separate execution status, data credibility, and hypothesis support. A missing metric after failure is not a zero effect. Do not combine incomparable configurations into one estimate.
 
-Зафиксируй данные и ограничения; содержательный вывод выполняй по interpretation reference корневого навыка. Для устойчивой постановки и результата используй соответствующие формы корневого навыка в принятом проектном документе.
+Record data and limitations; use the interpretation reference in the root skill for substantive conclusions. For a durable definition and result, use the corresponding root-skill forms within the adopted project document.

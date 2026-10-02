@@ -1,39 +1,39 @@
-# Проверка <ID>: <название>
+# Check <ID>: <name>
 
-> Адаптационная форма постановки. Переиспользуй проектный документ; не дублируй принятую модель. Обозначай неизвестное и неприменимое отдельно. После адаптации убери подсказки и `.template.` из имени нового файла.
+> Adaptation form for a check definition. Reuse the project document; do not duplicate the accepted model. Mark unknown and not applicable separately. After adaptation, remove guidance and `.template.` from the name of a new file.
 
-## Вопрос и основания
+## Question and grounds
 
-- Вопрос; тип текущей работы: поисковая / проверочная / инженерная / диагностическая:
-- Проверяемое утверждение или критерии работоспособности:
-- Исходные наблюдения, существенные альтернативы и предшествующие проверки:
-- Версия модели; proposed отличия и допущения:
+- Question; current work type: exploratory / confirmatory / engineering / diagnostic:
+- Claim being tested or operational criteria:
+- Initial observations, material alternatives, and previous checks:
+- Model version; proposed differences and assumptions:
 
-## План проверки
+## Check plan
 
-- Контроль / baseline и основания сопоставимости:
-- Что меняется; что фиксировано; существенные смешивающие факторы:
-- Наблюдаемые величины, единицы и способ получения:
-- Параметры, диапазоны, повторы и основания их выбора:
+- Control / baseline and grounds for comparability:
+- What varies; what is fixed; material confounders:
+- Observable quantities, units, and how they are obtained:
+- Parameters, ranges, repetitions, and grounds for their selection:
 
-| Наблюдаемый исход | Допустимый вывод | Что останется неизвестным |
+| Observable outcome | Permissible conclusion | What remains unknown |
 | --- | --- | --- |
-| <исход> | <вывод в пределах вопроса> | <ограничение> |
+| <outcome> | <conclusion within the question's scope> | <limitation> |
 
-- Анализ, численные/статистические проверки и критерии:
-- Бюджет, правило адаптации серии и условия остановки:
+- Analysis, numerical/statistical checks, and criteria:
+- Budget, series-adaptation rule, and stopping conditions:
 
-## Воспроизведение и передача
+## Reproduction and handoff
 
-- Код/версия, среда и входы:
-- Начальные/граничные условия, seed, solver settings, если применимо:
-- Команда или точный порядок выполнения и обработки:
-- Исполнитель, доступные возможности и требуемый возврат evidence:
-- Политика хранения: неизменяемые данные, агрегаты, воспроизводимые производные, внешние наборы:
+- Code/version, environment, and inputs:
+- Initial/boundary conditions, seed, and solver settings, if applicable:
+- Command or precise execution and processing procedure:
+- Executor, available capabilities, and required return evidence:
+- Storage policy: immutable data, aggregates, reproducible derivatives, external datasets:
 
-## Выполнение и изменения
+## Execution and changes
 
-- Статус: запланировано / передано / выполнено / частично / остановлено:
-- Идентификаторы прогонов и ссылки на конфигурации и результаты:
-- Отклонения, изменения постановки и причины; связь с прежней версией:
-- Ссылка на результат/вывод в принятом проектном документе:
+- Status: planned / handed off / completed / partial / stopped:
+- Run identifiers and links to configurations and results:
+- Deviations, definition changes and reasons; relationship to the previous version:
+- Link to the result/conclusion in the adopted project document:

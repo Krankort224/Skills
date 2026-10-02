@@ -1,21 +1,21 @@
-# Evidence map: <вопрос>
+# Evidence map: <question>
 
-> Адаптационная форма. Заполняй применимые поля в существующем документе проекта; пустое поле не означает отсутствие свидетельств. После адаптации убери подсказки и `.template.` из имени нового файла.
+> Adaptation form. Fill applicable fields in an existing project document; an empty field does not mean there is no evidence. After adaptation, remove guidance and `.template.` from the name of a new file.
 
-## Область и охват
+## Scope and coverage
 
-- Вопрос и проверяемые утверждения:
-- Дата, запросы и охват существенного поиска:
-- Ограничения доступа и поиска:
+- Question and claims being tested:
+- Date, queries, and coverage of a material search:
+- Access and search limitations:
 
-## Связь утверждений и свидетельств
+## Claims and evidence
 
-| ID | Утверждение и условия | Источник / проверка; точное место | Тип свидетельства | Поддержка / противоречие / пробел | Ограничение переноса |
+| ID | Claim and conditions | Source / check; precise location | Evidence type | Support / contradiction / gap | Transfer limitation |
 | --- | --- | --- | --- | --- | --- |
-| <ID> | <утверждение> | <ссылка, версия, раздел/ключ> | <доказательство, расчёт, измерение, документация> | <оценка связи> | <границы> |
+| <ID> | <claim> | <link, version, section/key> | <proof, calculation, measurement, documentation> | <relationship assessment> | <bounds> |
 
-## Итог для исследования
+## Implications for the investigation
 
-- Что установлено и что осталось неизвестным:
-- Как это влияет на постановку или ближайшую проверку:
-- Формулировка новизны в пределах выполненного поиска, если она требуется:
+- What is established and what remains unknown:
+- How this affects the definition or nearest check:
+- Novelty statement within the completed search coverage, if needed:

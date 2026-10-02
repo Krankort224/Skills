@@ -1,65 +1,65 @@
 ---
 name: research-cycle
-description: Веди исследовательский цикл по явному запросу на research-cycle — от вопроса, гипотезы и анализа аналогов через формализацию и эксперимент до интерпретации и следующей итерации. Применяй к научным и инженерным исследованиям, численным моделям и проверяемым исследованиям поведения программ; можно начать с любой текущей фазы.
+description: Run a research cycle when explicitly asked to use research-cycle — from a question, hypothesis, and analysis of related work through formalization and experiments to interpretation and the next iteration. Apply to scientific and engineering investigations, numerical models, and testable investigations of software behavior; start at any current phase.
 ---
 
 # Research cycle
 
-Связывай исследовательский вопрос, проверку и вывод. Начинай с текущего состояния работы; не проходи заново завершённые фазы без причины.
+Connect a research question, a check, and a conclusion. Start from the current state of the work; do not repeat completed phases without a reason.
 
-## Вход и маршрутизация
+## Entry and routing
 
-Установи вопрос, область исследования, доступные материалы, текущую фазу и требуемый результат. Сохраняй предыдущие постановки и результаты; выясняй только пробелы, влияющие на текущую операцию.
+Establish the question, research scope, available materials, current phase, and required outcome. Preserve previous definitions and results; resolve only gaps that affect the current operation.
 
-Загружай reference по выполняемой операции:
+Load the reference for the operation being performed:
 
-| Операция | Reference |
+| Operation | Reference |
 | --- | --- |
-| Сформулировать вопрос, гипотезу, альтернативы или критерии работоспособности | [question](references/question.md) |
-| Найти аналоги, оценить prior art или сопоставить внешние свидетельства | [literature](references/literature.md) |
-| Формализовать модель и проверить её допущения и корректность | [model](references/model.md) |
-| Спроектировать, подготовить или выполнить проверку; проверить полученные данные | [experiment](references/experiment.md) |
-| Интерпретировать результат, уточнить гипотезу или выбрать следующую итерацию | [interpretation](references/interpretation.md) |
+| Frame a question, hypothesis, alternatives, or operational criteria | [question](references/question.md) |
+| Find related work, assess prior art, or compare external evidence | [literature](references/literature.md) |
+| Formalize a model and check its assumptions and correctness | [model](references/model.md) |
+| Design, prepare, or execute a check; verify the resulting data | [experiment](references/experiment.md) |
+| Interpret a result, refine a hypothesis, or choose the next iteration | [interpretation](references/interpretation.md) |
 
-Читай другие references при переходе к соответствующей операции или когда без них нельзя разрешить существенный пробел. Не запускай весь цикл ради одной локальной проверки.
+Read other references when moving to their operations or when they are needed to resolve a material gap. Do not run the entire cycle for one local check.
 
-## Общие инварианты
+## Shared invariants
 
-- Различай наблюдение, вопрос, гипотезу, механизм, допущение, предсказание и интерпретацию. Не представляй один объект как другой.
-- Разделяй поисковую работу и проверку заранее сформулированного предсказания. Отмечай гипотезы, возникшие после просмотра результатов; не оформляй их как предварительные.
-- Связывай каждый эксперимент с вопросом. До проверочного прогона фиксируй различимые исходы и границы допустимого вывода.
-- Не подменяй проверку гипотезы улучшением метрики, успешным запуском кода или убедительным объяснением.
-- Сохраняй отрицательные и неопределённые результаты, существенные отклонения от плана и причины изменений. Исправление не должно стирать первоначальную постановку и evidence.
-- Различай технический сбой, численно недостоверный результат и содержательный результат против гипотезы.
-- Выбирай минимальную достаточную проверку. Обосновывай глубину поиска, число прогонов и вычислительный бюджет; не вводи универсальные квоты.
-- Не меняй постановку, модель или критерии задним числом для получения удобного результата. Новую версию связывай с предыдущей и явно указывай причину.
+- Distinguish observations, questions, hypotheses, mechanisms, assumptions, predictions, and interpretations. Do not present one as another.
+- Separate exploratory work from testing a prespecified prediction. Identify hypotheses formed after inspecting results; do not present them as prespecified.
+- Connect each experiment to a question. Before a confirmatory run, record distinguishable outcomes and the limits of permissible conclusions.
+- Do not substitute metric improvement, successful code execution, or a persuasive explanation for testing a hypothesis.
+- Preserve negative and inconclusive results, material deviations from the plan, and reasons for changes. A correction must not erase the original definition or evidence.
+- Distinguish execution failure, numerically unreliable results, and substantive evidence against a hypothesis.
+- Choose the smallest sufficient check. Justify search depth, run counts, and compute budget; do not impose universal quotas.
+- Do not change the definition, model, or criteria retrospectively to obtain a convenient result. Link a new version to the previous one and state the reason.
 
-## Исполнение и границы
+## Execution and boundaries
 
-Распределяй работу по операциям и доступным возможностям, независимо от интерфейса или модели. При отсутствии доступа к локальной системе, симулятору или установке подготовь точное задание исполнителю и запроси необходимые результаты. Не утверждай, что невыполненная проверка состоялась.
+Assign work by operation and available capabilities, independently of interface or model. If access to the local system, simulator, or apparatus is unavailable, prepare precise instructions for an executor and request the necessary results. Do not claim that an unperformed check took place.
 
-Используй проектные правила для источников, владельцев знаний, хранения, полномочий и принятия изменений. Не навязывай структуру каталогов и не переписывай принятую проектную методологию из общего навыка. Существенные расхождения явно обозначай; сохраняй результат в пределах согласованной области.
+Use project rules for sources, knowledge owners, storage, authority, and acceptance of changes. Do not impose a directory layout or overwrite accepted project methodology with the generic skill. Surface material discrepancies explicitly; keep the result within the agreed scope.
 
-`research-cycle` описывает содержательную логику исследования. Авторитетность источников, Issue lifecycle и распределение агентов остаются ответственностью соответствующих Level 1 contracts. Навык не устанавливает собственные статусы Issue, модели агентов или правила публикации.
+`research-cycle` defines the substantive logic of research. Source authority, the Issue lifecycle, and agent assignments remain the responsibility of the corresponding Level 1 contracts. The skill does not establish its own Issue statuses, agent models, or publication rules.
 
-## Облачные файлы
+## Cloud files
 
-Не скачивай, не materialize, не синхронизируй, не экспортируй и не копируй содержимое облачных файлов в локальную среду без отдельного явного и однозначного разрешения пользователя. Поручение исследовать вопрос не является таким разрешением.
+Do not download, materialize, synchronize, export, or copy cloud-file contents into the local environment without separate, explicit, and unambiguous user authorization. A request to investigate a question is not that authorization.
 
-Без скачивания допустимы доступные listing и metadata. Чтение текста через коннектор или веб-инструмент выполняй в рамках разрешённого доступа; оно не разрешает локальную выгрузку, получение вложений или скрытое скачивание полного файла. Отмечай недоступные части evidence.
+Available listings and metadata may be inspected without downloading. Read text through a connector or web tool within the permitted access scope; this does not authorize local export, attachment retrieval, or hidden downloading of the full file. Identify inaccessible parts of the evidence.
 
-## Адаптация артефактов
+## Artifact adaptation
 
-Переиспользуй существующие документы проекта. Создавай отдельный артефакт только когда он нужен для воспроизведения, передачи или сохранения существенного результата; не дублируй ту же информацию в каждой форме.
+Reuse existing project documents. Create a separate artifact only when needed for reproduction, handoff, or preservation of a material result; do not duplicate the same information in every form.
 
-Шаблоны ниже — отправные формы, не обязательный набор файлов. Читай только нужную форму; заполняй применимые разделы, объясняй существенные пропуски и отличай неизвестное от неприменимого:
+The templates below are starting forms, not a mandatory set of files. Read only the needed form; fill applicable sections, explain material omissions, and distinguish unknown from not applicable:
 
-- [Evidence map](templates/evidence-map.template.md) — утверждения, источники и проверки.
-- [Experiment](templates/experiment.template.md) — постановка проверки или серии.
-- [Result](templates/result.template.md) — данные, достоверность, вывод и следующий шаг.
+- [Evidence map](templates/evidence-map.template.md) — claims, sources, and checks.
+- [Experiment](templates/experiment.template.md) — definition of a check or series.
+- [Result](templates/result.template.md) — data, credibility, conclusion, and next step.
 
-При интеграции в другой репозиторий адаптируй формы к его действующим документам. Оригинальные `*.template.*` остаются только в Skills. В локальной копии замени этот подраздел ссылками на заполненные проектные документы или кратким описанием принятых форм; не оставляй ссылки на отсутствующие шаблоны. Содержательные references и общие инварианты сохраняй.
+When integrating into another repository, adapt the forms to its existing documents. Original `*.template.*` files remain only in Skills. In the local copy, replace this subsection with links to completed project documents or a brief description of the adopted forms; do not leave links to absent templates. Preserve the substantive references and shared invariants.
 
-## Завершение операции
+## Operation completion
 
-Сообщи полученный результат, evidence и его ограничения, состояние вопроса и обоснованный следующий шаг. При достаточном ответе или исчерпании согласованного бюджета завершай текущую работу; новые серии выполняй только в пределах порученного исследования и доступного бюджета.
+Report the outcome, evidence and its limitations, the state of the question, and a justified next step. Finish the current work when the answer is sufficient or the agreed budget is exhausted; execute new series only within the assigned investigation and available budget.
