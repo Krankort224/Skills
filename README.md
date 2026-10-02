@@ -32,6 +32,18 @@ Skills/
     │   └── references/
     │       ├── chatgpt.md
     │       └── codex.md
+    ├── research-cycle/
+    │   ├── SKILL.md
+    │   ├── references/
+    │   │   ├── question.md
+    │   │   ├── literature.md
+    │   │   ├── model.md
+    │   │   ├── experiment.md
+    │   │   └── interpretation.md
+    │   └── templates/
+    │       ├── evidence-map.template.md
+    │       ├── experiment.template.md
+    │       └── result.template.md
     └── word/
         ├── document-creation/
         │   ├── SKILL.md
@@ -129,6 +141,16 @@ Codex owns direct filesystem discovery and mechanical migration. ChatGPT owns se
 
 Cloud-hosted file contents must not be downloaded, materialized, synchronized, exported, or copied into the local environment without separate, explicit, and unambiguous user authorization.
 
+#### research-cycle
+
+[research-cycle](level-2/research-cycle/SKILL.md) connects a research question, evidence-producing checks, interpretation, and the next iteration. Use it for scientific and engineering investigations, numerical models, and testable investigations of software behavior when explicitly requested.
+
+The lightweight root routes by operation: question framing, literature and prior art, model formalization, experiment design/execution, and interpretation. Start at the current phase and load only the relevant reference. Responsibilities follow operations and available capabilities across Chat, Work, and Codex.
+
+Keep exploratory and confirmatory work distinct. Separate implementation correctness, numerical credibility, and correspondence to the investigated system. Preserve negative/inconclusive results and plan deviations; distinguish execution failure from evidence against a hypothesis. Checks and run counts are proportional to the question and uncertainty, with explicit budget and stopping conditions.
+
+Three optional adaptation forms cover evidence mapping, experiment definition, and results. Reuse project documents and storage conventions rather than introducing another directory layout. Source authority, Issue lifecycle, and agent orchestration remain with Level 1 contracts.
+
 #### Word
 
 Two level-2 skills live under `level-2/word/`:
@@ -159,3 +181,6 @@ For `context`, preserve the shared `SKILL.md` where possible and create a reposi
 For `workflow`, the intent is to keep one common workflow across repositories rather than maintain project-specific variants.
 
 For `restructure`, keep the shared process generic and express project-specific structure decisions in the task itself rather than creating a permanent project-specific fork unless repeated local rules justify one.
+
+For `research-cycle`, preserve the shared methodological references and use the project's existing methodology and artifact locations. Adapt the optional forms into completed project documents; source `*.template.*` files stay in Skills. Replace the local skill's artifact-adaptation subsection with links to those documents or a description of the local forms, so integration does not leave broken template links.
+
