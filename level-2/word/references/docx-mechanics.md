@@ -34,3 +34,4 @@ Use an exact text inventory when all content should be retained. A no-loss compa
 ## Unsupported operations
 The bundled code is a reusable core, not a full Word replacement. It does not provide arbitrary tracked-change/comment editing, full style/template merging, LaTeX conversion, automatic layout balancing, authoritative field refresh or ECMA-schema validation. Use environment-specialized tools and revalidate if those operations are requested.
 
+

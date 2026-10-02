@@ -42,3 +42,4 @@ Rebuild: compare full source inventory, selected assets and template design cons
 
 Reopen, validate and render. Field refresh and page layout must be verified separately from ZIP/XML integrity.
 
+

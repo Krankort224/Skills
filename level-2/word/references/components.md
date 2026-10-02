@@ -38,3 +38,4 @@ Use PAGE/NUMPAGES for page numbers and TOC/SEQ/REF/PAGEREF for navigation where 
 ## Appendices and wide material
 Use explicit section changes for different page geometry; inspect linked headers/footers and page-number restart behavior. Do not rotate the whole document for one wide table. Keep appendix heading, identifier and cross-reference consistent.
 
+

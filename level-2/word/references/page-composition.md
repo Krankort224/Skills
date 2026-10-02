@@ -41,3 +41,4 @@ Inspect every page at full size. Use whitespace to separate groups, not to manuf
 ## Image quality
 Measure the effective printed size. Large plans may need full width; tiny interface text needs a more generous size. Keep real source graphics even if their aspect ratios differ from old placeholders. If a drawing contains illegible details at the permitted size, adjust composition or identify the limitation rather than claim it is readable.
 
+

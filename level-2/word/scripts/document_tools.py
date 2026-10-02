@@ -31,24 +31,20 @@ NS = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
 PARSER = etree.XMLParser(resolve_entities=False, no_network=True)
 
 
-def load_preset(name_or_path):
+def load_preset(name_or_path, allow_draft=False):
+    """Load one self-contained Markdown preset by built-in name or .md path."""
+    from preset_markdown import parse_markdown
     path = Path(name_or_path)
     if not path.is_file():
-        path = ROOT / "assets" / "presets" / (str(name_or_path) + ".json")
-    data = json.loads(path.read_text(encoding="utf-8"))
-    if data.get("version") != 1:
-        raise ValueError("Unsupported preset version")
-    for key in ("page", "styles", "palette", "table", "list"):
-        if key not in data:
-            raise ValueError("Missing preset key: " + key)
-    page = data["page"]
-    margins = page["margins_mm"]
-    if page["width_mm"] <= margins["left"] + margins["right"] or page["height_mm"] <= margins["top"] + margins["bottom"]:
-        raise ValueError("Preset has no usable page area")
-    for role, spec in data["styles"].items():
-        if spec["size_pt"] <= 0 or not re.fullmatch(r"[0-9A-Fa-f]{6}", spec["color"]):
-            raise ValueError("Invalid style: " + role)
-    return data
+        path = ROOT / "assets" / "presets" / (str(name_or_path) + ".md")
+    if path.suffix.lower() != ".md":
+        raise ValueError("Presets must be single Markdown files")
+    text = path.read_text(encoding="utf-8")
+    statuses = re.findall(r"^Status: (ready|draft)$", text, re.MULTILINE)
+    if len(statuses) != 1: raise ValueError("Preset requires exactly one Status: ready or Status: draft")
+    if statuses[0] == "draft" and not allow_draft:
+        raise ValueError("Draft preset: review unobserved defaults and render/compare the result before changing Status: draft to Status: ready")
+    return parse_markdown(text)
 
 
 def apply_preset(doc, config, geometry=True):
@@ -377,3 +373,4 @@ def package_report(path):
             errors.append("High-level reopen failed: " + str(exc))
     return {"errors": sorted(set(errors)), "warnings": warnings, "counts": counts,
             "geometry": geometry, "stories": stories, "story_counts": story_counts, "styles": styles}
+

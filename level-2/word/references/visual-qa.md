@@ -25,10 +25,10 @@ Compare canonical items and intended destination counts. Search for stale contac
 ## Structural gate
 Run document_tool.py validate; reopen with python-docx. Investigate relationship, numbering and media warnings. Compare source media hashes when images must remain unchanged. Check bookmarks, links and equations for requested preservation.
 
-## Four-preset smoke test
+## Library sample verification
 Generate examples with generate_examples.py, validate each, then render and inspect every page. The same semantic sample should exercise title, multiple headings, nested real lists, a data table, a figure/caption, local page fields, native math and a continuation page. Values are explicitly demo data, not source facts.
 
-These examples prove those supported components, not all possible Word features. Run focused tests when introducing new code, failures or unsupported structures.
+These examples exercise those supported components, not all possible Word features. Run focused tests when introducing new code, failures or unsupported structures. When borrowing a new design, add a neutral source-specific sample for every claimed component and section variant; a four-preset smoke test does not verify the new capture.
 
 ## Template application test
 Use a real selected template with its current authoritative content. Check all pages and source coverage, including structures not used by a generic demo. Record practical issues in the Issue and update reusable guidance/tools when a transferable defect is found.

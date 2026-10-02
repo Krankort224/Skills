@@ -45,16 +45,19 @@ Skills/
     │       ├── experiment.template.md
     │       └── result.template.md
     └── word/
-        ├── document-creation/
-        │   ├── SKILL.md
-        │   ├── references/
-        │   ├── scripts/
-        │   └── assets/
-        └── markdown-to-word/
-            └── SKILL.md
+        ├── SKILL.md
+        ├── operations/
+        │   ├── borrowing.md
+        │   ├── adaptation.md
+        │   └── creation.md
+        ├── references/
+        ├── scripts/
+        └── assets/
+            ├── examples/
+            └── presets/
 ```
 
-`level-1/` contains shared context and execution-management contracts. `level-2/` contains task-specific skills, with domain groups such as `word/` preserved where useful.
+`level-1/` contains shared context and execution-management contracts. `level-2/` contains task-specific skills; `word/` is the self-contained `style-transfer` skill.
 
 Skill levels classify responsibility; they are independent of subagent nesting levels. A level-2 skill may be used directly by root.
 
@@ -153,14 +156,11 @@ Three optional adaptation forms cover evidence mapping, experiment definition, a
 
 #### Word
 
-Two level-2 skills live under `level-2/word/`:
+[style-transfer](level-2/word/SKILL.md) combines the Word lifecycle and a reusable formatting library. Common principles live in `SKILL.md`; three procedures stay together in `operations/`: borrow formatting from a Word example, adapt an existing Word document, and create a new one. Detailed design, composition, DOCX mechanics, toolkit and validation materials remain in `references/` and load as needed.
 
-- `document-creation` owns the complete Word lifecycle: source analysis, structure, visual design, template adaptation, deterministic creation/editing, package checks, rendering, and visual correction;
-- `markdown-to-word` converts Markdown semantics into an editable DOCX with minimal styling.
+Each preset is one Markdown file in `assets/presets/` containing all exact parameters and reusable rules. The starting library preserves technical, corporate, minimal and academic designs with their visual examples in `assets/examples/`. There is no parallel JSON preset representation. The Python toolkit reads the typed Markdown table and can extract a bounded draft from a DOCX. Captured drafts identify observed properties and base defaults and require review and visual reproduction before application.
 
-`document-creation` includes four machine-readable presets (technical, corporate, minimal, academic), component and layout guides, tested Python helpers, and reproducible visual examples. A user-selected template takes priority over presets.
-
-For Markdown input, `markdown-to-word` owns semantic interpretation; `document-creation` provides the Word authoring and verification lifecycle. The Markdown skill's capability redesign is deferred.
+Markdown content interpretation is retained inside the creation operation. Tools provide supported building blocks; preserving arbitrary Word layouts, applying narrative composition rules and rendering still require the documented operation and environment capabilities. The former `document-creation` and `markdown-to-word` folders are consolidated into this one autonomous skill.
 
 ## Principles
 

@@ -1,4 +1,4 @@
-"""Command line entry points for the document-creation toolkit."""
+"""Command line entry points for the style-transfer toolkit."""
 import argparse
 import json
 from pathlib import Path
@@ -16,7 +16,19 @@ def main():
     p = sub.add_parser("new"); p.add_argument("--preset", required=True); p.add_argument("--out", type=Path, required=True)
     p = sub.add_parser("apply-preset"); p.add_argument("input", type=Path); p.add_argument("--preset", required=True)
     p.add_argument("--out", type=Path, required=True); p.add_argument("--restyle", action="store_true", required=True)
+    p = sub.add_parser("extract-preset"); p.add_argument("input", type=Path)
+    p.add_argument("--out", type=Path, required=True); p.add_argument("--base", required=True)
+    p.add_argument("--section", type=int, default=0)
     args = parser.parse_args()
+    if args.command == "extract-preset":
+        from extract_preset import extract_preset
+        if args.out.exists(): parser.error("Output already exists; choose a new path")
+        if args.out.suffix.lower() != ".md": parser.error("Draft output must be .md")
+        draft, report = extract_preset(args.input, args.base, args.section)
+        args.out.parent.mkdir(parents=True, exist_ok=True)
+        args.out.write_text(draft, encoding="utf-8")
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 0
     if args.command in ("new", "apply-preset"):
         if args.command == "apply-preset" and args.input.resolve() == args.out.resolve():
             parser.error("Refusing same-path input overwrite")
