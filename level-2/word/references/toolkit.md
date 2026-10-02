@@ -26,9 +26,14 @@ Selected templates can be opened with Document(template); do not apply_preset un
 
 Package counts cover the main document, headers, footers, notes and comments; `story_counts` preserves each part's separate inventory. Both simple and complex fields are counted. Source coverage intentionally checks the main document only, so a duplicate fact in a footer cannot hide missing body content.
 
-The example generator resolves fonts from the local inventory when Fontconfig is available and prints substitutions. Other callers explicitly choose whether to use the requested settings or a resolved copy. Never silently resolve or replace fonts in a selected template.
+## Data contracts
+
+The example generator resolves fonts from Fontconfig when available and reports substitutions. Other callers explicitly choose requested settings or a resolved copy; selected templates are never silently rewritten.
+
+`add_text` accepts strings or spans with `text`, `bold`, `italic`, `code` and `link`. List levels are zero-based (0–8); reuse returned concrete numbering IDs for continuation and request a new ID for restarts. Table row lengths must match headers and widths; callers own content and page-fit decisions. `add_figure` preserves raster aspect ratios; `add_omml` accepts native XML, without LaTeX conversion. Fields receive local instructions and optional cached text, with no calculation engine.
 
 ## CLI
+- show-preset NAME_OR_MD [--section HEADING] [--parameter PATH]: validate the complete MD, then print all narrative by default, excluding Parameters. Repeat either selector for exact sections or typed parameter rows; unknown/ambiguous selections fail. Draft viewing is allowed and visibly labeled; ordinary application still rejects drafts. No writes or asset downloads.
 - extract-preset INPUT --base NAME_OR_MD --section INDEX --out DRAFT.md: capture selected section geometry and explicitly defined paragraph-style properties for matching semantic roles. Section index is zero based. Require an explicit base for defaulted fields, write a draft MD, and print extraction diagnostics. Do not overwrite an existing output. Follow the borrowing operation before setting Status: ready.
 - inspect INPUT --out JSON: package inventory and validation report; no mutation.
 - validate INPUT [--expected-text FILE]: fail on structural errors or missing expected text. Inventory lines are literal text, not Markdown. Repeated equal lines specify required occurrence counts; extra occurrence counts are warnings unless --exact-counts is given.
@@ -36,13 +41,13 @@ The example generator resolves fonts from the local inventory when Fontconfig is
 - apply-preset INPUT --preset NAME_OR_MD --out DOCX --restyle: restyle a copy; refuse same-path overwrite and existing outputs; direct formatting remains. It changes named paragraph styles and shared section geometry only. It does not apply narrative rules, remap custom styles, or handle multiple section variants automatically.
 - generate_examples.py --out DIR: create four two-page semantic examples and a source chart. Does not render or approve them.
 - test_toolkit.py: exercise meaningful integrity and fidelity checks in temporary files, including broken relationship rejection and real list IDs.
+- test_preset_view.py: check narrative completeness, exact selections, drafts, invalid inputs and absence of mutation.
 
 ## Limits
 No renderer is bundled. No generic Markdown parser, full template copier, arbitrary OOXML repair engine or automatic page balancer is promised. SVG/native Office compatibility, complex revision handling and field refresh require specialized task code/tools. Strict shape preservation is not inferred from successful file reopening.
 
 The borrowing extractor does not resolve inherited/theme formatting, absolute line heights, arbitrary/custom style mappings, linked numbering, table styles, columns, header/footer bodies, media or direct overrides. Its observations identify these review needs without transferring source text. Defaults are explicitly listed in the same MD. Draft status remains until the supported capture has been reviewed and visually reproduced.
 
-The Markdown loader reads executable settings, not narrative composition. Read the whole preset in the operation and implement those rules separately. Parameter-key segments cannot contain dots, backslashes or line breaks; rename/map such roles explicitly. Table pipes are escaped as `\|`. Read [preset format](preset-format.md) for file ownership, status and schema.
+The loader reads executable settings; implement narrative composition separately after reviewing all narrative with `show-preset`. Parameter-key segments cannot contain dots, backslashes or line breaks; map incompatible roles explicitly. Table pipes are escaped as `\|`; [preset format](preset-format.md) owns serialization and review rules.
 
-## Output safety
-Write new paths by default. The CLI refuses replacing its input. Validate after authoring and after focused OOXML changes. Rebuilds require a source inventory and explicit task authority; tool convenience is not permission to discard existing bodies.
+Creation, restyling and extraction refuse existing outputs; restyling also refuses same-path overwrite. Inspection/validation reports may replace their specified report path. Verification and rebuild authority follow the root principles.

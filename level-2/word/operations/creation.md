@@ -1,31 +1,23 @@
-# Creating a Word document
+# Creation
 
-Input: canonical content and any chosen preset, reference or explicit design constraints. Output: an editable Word document with complete content, deliberate composition and verified pages.
+Input: canonical content and selected design. Output: an editable Word document. Apply the common principles in `../SKILL.md`.
 
-## 1. Ground and structure content
+## Structure and select
 
-Identify canonical source revisions, audience, intended use, required sections, graphics and factual metadata. Create a task-local source inventory and destination map. Resolve contradictions and missing required facts before drafting claims. Use source wording unless rewriting is authorized.
+Identify canonical revisions, audience, sections, assets and required metadata. Inventory content blocks and semantic roles; resolve factual gaps before authoring. For Markdown, read [Markdown input](../references/markdown-input.md) before conversion.
 
-For Markdown input, read [Markdown input](../references/markdown-input.md) and inventory its dialect and extensions before conversion. Preserve its semantic structure; format and verify the resulting DOCX within this operation.
+Read all selected preset narrative with `show-preset NAME_OR_MD`. If a live reference needs reusable capture, use borrowing first. Consult design, component or composition sections only for unresolved roles or actual layout structures. Plan reading order, title/cover, section variants, widths, graphics and breaks against the source inventory.
 
-## 2. Resolve design
+## Author
 
-Read a selected preset completely. If a live Word reference is the design authority, inspect it and use [borrowing](borrowing.md) when a reusable capture is required. Without a selected reference, choose an existing preset from the content's purpose or use deliberate task-local settings. Read [design system](../references/design-system.md) and [components](../references/components.md); load [composition](../references/page-composition.md) for dense, wide or editorial material.
+Read [CLI](../references/toolkit.md#cli) and [limits](../references/toolkit.md#limits):
 
-Plan semantic roles, reading order, cover/title choice, section variants, table widths, image sizes and genuine page transitions. Resolve fonts without editing shared settings. Template example text is not source content.
+```sh
+python scripts/document_tool.py new --preset NAME_OR_MD --out OUTPUT.docx
+```
 
-## 3. Author
+This creates a styled empty foundation. Use relevant [helper rows](../references/toolkit.md#importable-helpers) and [data contracts](../references/toolkit.md#data-contracts) to populate editable content; implement narrative composition and section variants explicitly. Open a native template directly when preserving its layout is required. Loading parameters alone does not implement the whole design.
 
-Read [toolkit](../references/toolkit.md). `document_tool.py new --preset NAME_OR_MD --out OUTPUT.docx` creates a styled foundation, not a finished document. Use importable helpers to insert actual text, native lists, editable tables, figures, fields and validated OMML. Use [DOCX mechanics](../references/docx-mechanics.md) where focused package changes are needed.
+## Verify and deliver
 
-Apply both the preset's executable parameters and its narrative composition/component rules. A generic helper cannot implement every saved layout. Build variants explicitly and account for every canonical content block. Open an existing template as a foundation only when retaining its native layout is part of the chosen route.
-
-## 4. Validate and compose final pages
-
-Reopen the DOCX, run package validation, and compare expected content/order/counts and selected assets. Update supported local fields using a capable application where necessary. Render and inspect every page using [visual QA](../references/visual-qa.md). Repair layout and repeat after changes.
-
-Check source coverage separately from appearance. Preserve the intended reading order, formula editability and internal navigation. Record unavailable checks and unsupported features as limitations.
-
-## 5. Deliver
-
-Save at the requested destination and return only requested formats. Report checks and limitations concisely. Keep neutral demonstrations, build scripts and inventories outside the final document and temporary unless persistence is required.
+Compare the complete content/asset inventory and reading order. Refresh local fields through a capable application. Complete the root verification gate and [visual QA](../references/visual-qa.md), repairing and rerendering as needed. Deliver requested formats with specific limitations; keep accounting and checks outside the final document.

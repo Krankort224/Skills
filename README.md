@@ -32,9 +32,9 @@ Skills/
     │   └── references/
     │       ├── chatgpt.md
     │       └── codex.md
-    ├── research-cycle/
+    ├── research/
     │   ├── SKILL.md
-    │   ├── references/
+    │   ├── operations/
     │   │   ├── question.md
     │   │   ├── literature.md
     │   │   ├── model.md
@@ -144,11 +144,11 @@ Codex owns direct filesystem discovery and mechanical migration. ChatGPT owns se
 
 Cloud-hosted file contents must not be downloaded, materialized, synchronized, exported, or copied into the local environment without separate, explicit, and unambiguous user authorization.
 
-#### research-cycle
+#### research
 
-[research-cycle](level-2/research-cycle/SKILL.md) connects a research question, evidence-producing checks, interpretation, and the next iteration. Use it for scientific and engineering investigations, numerical models, and testable investigations of software behavior when explicitly requested.
+[research](level-2/research/SKILL.md) connects a research question, evidence-producing checks, interpretation, and the next iteration. Use it for scientific and engineering investigations, numerical models, and testable investigations of software behavior when explicitly requested.
 
-The lightweight root routes by operation: question framing, literature and prior art, model formalization, experiment design/execution, and interpretation. Start at the current phase and load only the relevant reference. Responsibilities follow operations and available capabilities across Chat, Work, and Codex.
+The lightweight root routes to adjacent procedures in `operations/`: question framing, literature and prior art, model formalization, experiment design/execution, and interpretation. Start at the current phase and load only the required procedures/forms. Root definitions own the independent `execution_status`, `evidence_quality` and `claim_status` vocabularies. Responsibilities follow operations and available capabilities across Chat, Work, and Codex.
 
 Keep exploratory and confirmatory work distinct. Separate implementation correctness, numerical credibility, and correspondence to the investigated system. Preserve negative/inconclusive results and plan deviations; distinguish execution failure from evidence against a hypothesis. Checks and run counts are proportional to the question and uncertainty, with explicit budget and stopping conditions.
 
@@ -159,6 +159,8 @@ Three optional adaptation forms cover evidence mapping, experiment definition, a
 [style-transfer](level-2/word/SKILL.md) combines the Word lifecycle and a reusable formatting library. Common principles live in `SKILL.md`; three procedures stay together in `operations/`: borrow formatting from a Word example, adapt an existing Word document, and create a new one. Detailed design, composition, DOCX mechanics, toolkit and validation materials remain in `references/` and load as needed.
 
 Each preset is one Markdown file in `assets/presets/` containing all exact parameters and reusable rules. The starting library preserves technical, corporate, minimal and academic designs with their visual examples in `assets/examples/`. There is no parallel JSON preset representation. The Python toolkit reads the typed Markdown table and can extract a bounded draft from a DOCX. Captured drafts identify observed properties and base defaults and require review and visual reproduction before application.
+
+`document_tool.py show-preset` validates the complete preset and prints all narrative rules without the parameter table; repeatable `--section` and `--parameter` options provide exact views after initial review. Execution still loads all settings from the same MD. References load by applicable section, and script sources need reading only for debugging or modification.
 
 Markdown content interpretation is retained inside the creation operation. Tools provide supported building blocks; preserving arbitrary Word layouts, applying narrative composition rules and rendering still require the documented operation and environment capabilities. The former `document-creation` and `markdown-to-word` folders are consolidated into this one autonomous skill.
 
@@ -182,5 +184,4 @@ For `workflow`, the intent is to keep one common workflow across repositories ra
 
 For `restructure`, keep the shared process generic and express project-specific structure decisions in the task itself rather than creating a permanent project-specific fork unless repeated local rules justify one.
 
-For `research-cycle`, preserve the shared methodological references and use the project's existing methodology and artifact locations. Adapt the optional forms into completed project documents; source `*.template.*` files stay in Skills. Replace the local skill's artifact-adaptation subsection with links to those documents or a description of the local forms, so integration does not leave broken template links.
-
+For `research`, preserve shared principles and operation procedures, and use the project's existing methodology and artifact locations. Adapt optional forms into completed project documents; source `*.template.*` files stay in Skills. Replace the local skill's adopted-artifacts subsection with links to those documents or a description of the local forms, so integration does not leave broken template links.

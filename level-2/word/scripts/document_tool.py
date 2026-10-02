@@ -19,7 +19,20 @@ def main():
     p = sub.add_parser("extract-preset"); p.add_argument("input", type=Path)
     p.add_argument("--out", type=Path, required=True); p.add_argument("--base", required=True)
     p.add_argument("--section", type=int, default=0)
+    p = sub.add_parser("show-preset", help="Show preset narrative and/or selected canonical parameters")
+    p.add_argument("preset", help="Built-in preset name or path to a .md preset")
+    p.add_argument("--section", action="append", default=[], metavar="HEADING",
+                   help="Show exactly this narrative section; repeatable")
+    p.add_argument("--parameter", action="append", default=[], metavar="PATH",
+                   help="Show exactly this case-sensitive dotted parameter path; repeatable")
     args = parser.parse_args()
+    if args.command == "show-preset":
+        from preset_view import show_preset
+        try:
+            print(show_preset(args.preset, args.section, args.parameter), end="")
+        except (OSError, ValueError) as exc:
+            parser.error(str(exc))
+        return 0
     if args.command == "extract-preset":
         from extract_preset import extract_preset
         if args.out.exists(): parser.error("Output already exists; choose a new path")

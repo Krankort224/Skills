@@ -1,12 +1,12 @@
-# Result <ID>: <name>
+# Result <check_id>: <name>
 
-> Adaptation form. Fill from actual evidence; label future data “not obtained.” A result does not imply acceptance of a project decision. After adaptation, remove guidance and `.template.` from the name of a new file.
+> Adaptation form. Fill from actual evidence; use root status definitions for absent evidence. A result does not imply acceptance of a project decision. After adaptation, remove guidance and `.template.` from the name of a new file.
 
 ## Basis
 
 - Definition, model version, and criteria for this check:
-- Runs, configurations, environment versions, and data sources:
-- Execution status, missing runs, and deviations:
+- Check/run IDs, configurations, environment versions, and data sources:
+- `execution_status`; missing runs and deviations:
 
 ## Observations
 
@@ -17,15 +17,17 @@
 
 ## Credibility
 
+- `evidence_quality` (root definitions):
+
 - Verified comparability conditions, implementation correctness, and numerical/statistical credibility:
 - Execution failures, unreliable data, and exclusion reasons:
 - Access and reproducibility limitations:
 
 ## Conclusion on the question
 
-| Claim and conditions | State of the question | Evidence | Limitation and remaining alternatives |
+| Claim ID, claim and conditions | `claim_status` | Evidence / check and run IDs | Limitation and remaining alternatives |
 | --- | --- | --- | --- |
-| <claim> | <supported / partial / contradicts / inconclusive> | <specific location> | <bounds> |
+| <claim_id; claim> | <root value> | <IDs; specific location> | <bounds> |
 
 - Observed effect separately from its proposed explanation:
 - What this result does and does not permit claiming:

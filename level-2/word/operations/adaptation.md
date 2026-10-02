@@ -1,31 +1,23 @@
-# Adapting an existing Word document
+# Adaptation
 
-Input: a target Word DOCX and a selected ready preset or reference. Output: a restyled Word document with preserved content and verified pages. Borrow a supplied reference first when reusable formatting is requested or no saved preset exists.
+Input: an existing Word document and selected formatting. Output: a restyled editable document. Apply the common principles in `../SKILL.md`.
 
-## 1. Inventory the target and select formatting
+## Inspect and map
 
-Read the selected preset completely, [templates and editing](../references/templates-and-editing.md) and [toolkit](../references/toolkit.md). Inspect the target and render its original pages. Inventory content, styles, direct formatting, sections, tables, graphics, formulas, links, fields, revisions and non-body stories relevant to the change. Record protected regions and intended changes outside the output.
+Read all preset narrative with `show-preset NAME_OR_MD`. Inspect the relevant editing sections in [templates/editing](../references/templates-and-editing.md), then inventory/render the target, including objects, other stories, protected regions and direct formatting. Choose targeted editing, restyling or an authorized necessary rebuild; write a new output path.
 
-Use a new output path. Classify the work as targeted edit, restyle or authorized rebuild. Preserve content and objects unless their change is separately in scope.
+Map semantic roles, numbering, table types and sections by inspected definitions, not names alone. Separate intentional emphasis from conflicting overrides. Read component/composition sections only for actual elements, content-length constraints or wide objects requiring decisions.
 
-## 2. Map roles and resolve conflicts
+## Apply
 
-Map target headings, body, captions, list levels, table types and section variants to the preset's semantic roles. Resolve style names/IDs through inspected definitions rather than matching names blindly. Identify intentional run emphasis and direct formatting that overrides the selected design.
+Read [CLI](../references/toolkit.md#cli) and [limits](../references/toolkit.md#limits):
 
-Choose how the preset adapts to current content length, wide tables and graphics. Apply any task override in memory or a temporary MD copy. Load [design system](../references/design-system.md), [components](../references/components.md) and [page composition](../references/page-composition.md) for the affected design decisions.
+```sh
+python scripts/document_tool.py apply-preset INPUT.docx --preset NAME_OR_MD --out OUTPUT.docx --restyle
+```
 
-## 3. Apply supported settings and detailed rules
+This changes named paragraph styles and shared section geometry only. For differing section variants, apply geometry selectively instead. Implement narrative rules and custom style mappings explicitly with supported helpers or focused OOXML edits; read the corresponding mechanics sections. Preserve meaningful inline overrides and task-local configuration. A one-document adaptation does not update the library.
 
-Use `document_tool.py apply-preset INPUT.docx --preset NAME_OR_MD --out OUTPUT.docx --restyle` only for the helper's supported named styles and shared section geometry. It preserves direct formatting and does not remap arbitrary target styles or apply the preset's narrative composition automatically. Never overwrite all sections' geometry when distinct target/preset section roles need different treatment.
+## Verify and deliver
 
-Complete semantic remapping, selective override changes, tables, numbering, header/footer and composition rules with supported helpers or focused task-local OOXML code. Read [DOCX mechanics](../references/docx-mechanics.md) for fragile structures. Preserve existing equations, media and relationships. Report unsupported required transfers instead of silently flattening them.
-
-## 4. Verify and repair
-
-Compare content order and counts, meaningful inline formatting, media, links, bookmarks, equations and protected regions with the original. Explain expected changes such as pagination or selected header styling. Run package validation and source coverage checks, then render and inspect every page using [visual QA](../references/visual-qa.md).
-
-Fix style conflicts, broken navigation and page-fit defects, then rerender. A preserved text inventory alone does not prove safe restyling.
-
-## 5. Deliver
-
-Save the final Word at the requested destination. Report the preset used, any explicit overrides, structural and visual checks, and specific limitations. Do not update the library merely because one target required a local adaptation.
+Compare source order, coverage/counts, inline markup, media, links, anchors, equations and protected regions; explain material pagination changes. Complete the root verification gate and [visual QA](../references/visual-qa.md), repairing and rerendering as needed. Deliver requested formats and report the applied preset, overrides and specific limitations.

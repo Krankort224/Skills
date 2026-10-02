@@ -6,7 +6,7 @@ Use the available documents skill renderer when supplied by the environment. Sel
 A renderer may temporarily use PDF internally to produce PNGs. Do not deliver that intermediate or turn it into a separate requested format. If the user prohibits even temporary PDF conversion, select another permitted rendering route.
 
 ## Inspect all latest pages
-A contact sheet helps navigation but does not replace full-resolution review. After every layout-sensitive change, rerender and inspect the new pages. Record the final page count and what was reviewed outside the artifact.
+Follow the root render/review gate. Record final page count and reviewed scope outside the artifact.
 
 Check:
 - first-page purpose, title and metadata;
@@ -31,5 +31,4 @@ Generate examples with generate_examples.py, validate each, then render and insp
 These examples exercise those supported components, not all possible Word features. Run focused tests when introducing new code, failures or unsupported structures. When borrowing a new design, add a neutral source-specific sample for every claimed component and section variant; a four-preset smoke test does not verify the new capture.
 
 ## Template application test
-Use a real selected template with its current authoritative content. Check all pages and source coverage, including structures not used by a generic demo. Record practical issues in the Issue and update reusable guidance/tools when a transferable defect is found.
-
+Use a real selected template with current authoritative content. Check source coverage and structures absent from generic demos. Record transferable defects through the project's existing workflow and update reusable guidance/tools when appropriate.

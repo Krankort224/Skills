@@ -1,11 +1,11 @@
-# Check <ID>: <name>
+# Check <check_id>: <name>
 
 > Adaptation form for a check definition. Reuse the project document; do not duplicate the accepted model. Mark unknown and not applicable separately. After adaptation, remove guidance and `.template.` from the name of a new file.
 
 ## Question and grounds
 
 - Question; current work type: exploratory / confirmatory / engineering / diagnostic:
-- Claim being tested or operational criteria:
+- Claim ID; claim being tested or operational criteria:
 - Initial observations, material alternatives, and previous checks:
 - Model version; proposed differences and assumptions:
 
@@ -33,7 +33,7 @@
 
 ## Execution and changes
 
-- Status: planned / handed off / completed / partial / stopped:
-- Run identifiers and links to configurations and results:
+- `execution_status` (root definitions):
+- Run IDs and links to configurations and results:
 - Deviations, definition changes and reasons; relationship to the previous version:
 - Link to the result/conclusion in the adopted project document:

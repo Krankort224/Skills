@@ -3,7 +3,7 @@
 Use the common principles in `../SKILL.md`; this reference supplies role, font and library details.
 
 ## Four concrete systems
-Read the corresponding Markdown preset in `../assets/presets/` completely. Its parameter table owns exact settings and its prose owns composition and adaptation rules. Values are authored defaults, not GOST, institutional or publication compliance claims.
+Use `show-preset` to read all selected narrative; execution loads its complete parameter table. Preset values are authored defaults, not compliance claims.
 
 | Preset | Purpose | Character | Rendered example |
 | --- | --- | --- | --- |
@@ -26,9 +26,6 @@ Check requested fonts with the environment's font inventory or Word. Calibri →
 
 ## Color and printing
 Use palette roles rather than arbitrary RGB in each component: ink, muted, accent, table_header, table_header_text, alternating_row, border, note_background. Choose dark text on light fills or white text on sufficiently dark fills. Evaluate both color and grayscale; labels must carry meaning without color. Brand names/logos require user/source authority; a neutral preset accent does not imply a fabricated brand.
-
-## Direct formatting and themes
-Named styles form the baseline; direct run formatting can legitimately carry emphasis or template-specific treatment. Inspect overrides before restyling. Remove only overrides known to contradict the requested change. Avoid global clearing of run properties: it can erase emphasis, hyperlinks, symbols and special fonts.
 
 ## Page roles
 Choose a compact first-page title for short documents; a cover only when packaging earns its page. Keep headers and footers quiet. Number long reports with PAGE fields; do not add a TOC to a short portfolio automatically. Template-selected layouts outrank these defaults.

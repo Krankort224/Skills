@@ -31,14 +31,20 @@ NS = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
 PARSER = etree.XMLParser(resolve_entities=False, no_network=True)
 
 
-def load_preset(name_or_path, allow_draft=False):
-    """Load one self-contained Markdown preset by built-in name or .md path."""
-    from preset_markdown import parse_markdown
+def resolve_preset_path(name_or_path):
+    """Resolve one built-in preset name or explicit Markdown path."""
     path = Path(name_or_path)
     if not path.is_file():
         path = ROOT / "assets" / "presets" / (str(name_or_path) + ".md")
     if path.suffix.lower() != ".md":
         raise ValueError("Presets must be single Markdown files")
+    return path
+
+
+def load_preset(name_or_path, allow_draft=False):
+    """Load one self-contained Markdown preset by built-in name or .md path."""
+    from preset_markdown import parse_markdown
+    path = resolve_preset_path(name_or_path)
     text = path.read_text(encoding="utf-8")
     statuses = re.findall(r"^Status: (ready|draft)$", text, re.MULTILINE)
     if len(statuses) != 1: raise ValueError("Preset requires exactly one Status: ready or Status: draft")
@@ -373,4 +379,3 @@ def package_report(path):
             errors.append("High-level reopen failed: " + str(exc))
     return {"errors": sorted(set(errors)), "warnings": warnings, "counts": counts,
             "geometry": geometry, "stories": stories, "story_counts": story_counts, "styles": styles}
-

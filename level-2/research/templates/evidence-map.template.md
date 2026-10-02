@@ -10,9 +10,9 @@
 
 ## Claims and evidence
 
-| ID | Claim and conditions | Source / check; precise location | Evidence type | Support / contradiction / gap | Transfer limitation |
+| Claim ID | Claim and conditions | Source / check and run IDs; precise location | Evidence type | `claim_status`; relationship / gap | Transfer limitation |
 | --- | --- | --- | --- | --- | --- |
-| <ID> | <claim> | <link, version, section/key> | <proof, calculation, measurement, documentation> | <relationship assessment> | <bounds> |
+| <claim_id> | <claim> | <link, IDs, version, section/key> | <proof, calculation, measurement, documentation> | <root value; assessment> | <bounds> |
 
 ## Implications for the investigation
 

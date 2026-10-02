@@ -1,79 +1,69 @@
 ---
 name: style-transfer
-description: Borrow formatting from an existing Word DOCX into a reusable Markdown preset, apply a saved preset to another Word document, or create a new editable Word document. Use for capturing visual examples, extending the preset library, restyling existing documents, and creating reports, portfolios, proposals, or academic documents with verified layout.
+description: Capture Word DOCX formatting as a reusable Markdown preset, restyle an existing Word document, or create an editable Word document. Use for borrowing visual examples, extending the preset library, and producing verified reports, portfolios, proposals or academic documents.
 ---
 
 # Style transfer
 
-Own the complete Word lifecycle and the reusable formatting library. Capture a good Word example once, save its reusable design in one Markdown preset, and reproduce it in other documents. Keep shared layout principles here, operation procedures in `operations/`, implementation details in `references/`, and formatting data in `assets/presets/`.
+Common principles live here; procedures in `operations/`, implementation references in `references/`, and single-file presets in `assets/presets/`.
 
-## Select an operation
+## Route and load
 
-| Requested result | Operation | Read |
-| --- | --- | --- |
-| Save an existing Word document's formatting for reuse | Borrowing | [Borrowing](operations/borrowing.md) |
-| Apply saved formatting or a supplied visual reference to an existing Word document | Adaptation; borrow first if no reusable preset exists | [Adaptation](operations/adaptation.md) |
-| Build a new Word document from supplied content | Creation | [Creation](operations/creation.md) |
+| Result | Procedure |
+| --- | --- |
+| Save an existing Word document's formatting | [Borrowing](operations/borrowing.md) |
+| Restyle an existing Word document | [Adaptation](operations/adaptation.md); borrow first if no reusable preset exists |
+| Build Word from supplied content | [Creation](operations/creation.md) |
 
-Start at the requested operation. Chain operations only when the task needs it. Read the selected operation and only the supporting materials relevant to its objects and risks. Keep all operations within this skill.
+Read the selected procedure and applicable reference sections; chain operations only as needed. Reuse unchanged material already loaded. Keep operations within this skill.
+
+Choose [technical](assets/presets/technical.md), [corporate](assets/presets/corporate.md), [minimal](assets/presets/minimal.md), [academic](assets/presets/academic.md), or a captured preset. View candidate previews only when comparing appearance. Run `scripts/document_tool.py show-preset NAME_OR_MD` to read **all narrative rules**, including dependencies, provenance and limitations. It validates the entire MD but omits the parameter table from output. After reviewing those rules, use `--section HEADING` or `--parameter PATH` for exact details. Execution loads all parameters from that same MD; there is no second stored representation.
 
 ## Common principles
 
 ### Content and authority
 
-- Use canonical sources for facts and a reference document for design. Preserve wording, order, meaning, uncertainty, units and required repetitions during formatting. Rewrite or condense only when the task authorizes it. Do not copy sample facts, contacts or placeholder text from a design source into a target.
-- Inventory source content, assets and relevant objects before mutation. Keep the source-to-output map outside the final document. Formatting may change pagination; an example's page count is not a limit on current content.
-- Apply precedence: explicit user constraint → selected reference/preset → supplied brand → unselected library defaults → component defaults. A selected layout may legitimately omit a cover or TOC or use borderless layout tables.
-- Preserve unrelated content and package parts. Use a targeted edit, restyle or rebuild according to the requested change; rebuild only when required and authorized. Keep comments, revisions, fields, formulas, drawings and other stories intact unless their change is in scope.
+- Facts come from canonical sources; design comes from the selected reference. Preserve wording, order, meaning, uncertainty, units and required repetitions unless rewriting is authorized. Never import sample facts, contacts or placeholders.
+- Inventory content, assets, relevant stories and protected regions before mutation. Preserve unrelated parts, comments and revisions. Choose targeted editing, restyling or an authorized necessary rebuild; keep the source-to-output map outside the final document.
+- Precedence: explicit constraint → selected reference/preset → supplied brand → library defaults → component defaults. Covers, TOCs and layout tables depend on the selected design. Content determines page count.
 
-### Semantic and editable structure
+### Editable structure
 
-- Use real Title, Subtitle, Heading and named body/component styles. Match styles by semantic role and inspected definitions; a style's name or size alone does not prove its role. Keep heading depth consistent with the actual outline.
-- Use true Word numbering with deliberate nesting, continuation and restarts. Use editable tables, working hyperlink relationships, valid fields/bookmarks and native OMML formulas. The bundled OMML helper inserts supplied math; it does not parse LaTeX.
-- Treat named styles as the baseline. Preserve meaningful direct formatting such as emphasis and special glyphs; remove only overrides known to contradict the requested restyle. Do not replace whole paragraph/cell text when child markup must survive.
-- Keep unsupported content visible or preserve its native object and report the precise limitation. Never silently rasterize editable math, drop unsupported Markdown, or present a partial conversion as lossless.
+- Use semantic Title, Subtitle, Heading and body/component styles, genuine nested numbering with deliberate continuation/restarts, editable tables, valid hyperlinks/bookmarks/fields and native OMML. Inspect style definitions; names or sizes alone do not establish roles. Heading depth follows the outline.
+- Preserve meaningful direct formatting; clear only verified conflicts. Replacing paragraph/cell text can destroy child markup. Preserve unsupported native objects or visible content and report specific limitations; never silently flatten editable math or drop unsupported Markdown.
 
 ### Typography and composition
 
-- Check font availability and Cyrillic, mathematical and special glyphs. Apply substitutions in a task-local configuration and report material differences. Do not rewrite a shared preset to suit one environment.
-- Compute usable space from actual section geometry, margins, headers/footers and cell padding. Preserve image aspect ratios and legibility. Use source graphics and inspect cropping before any authorized crop.
-- Keep headings with following content and figures with captions. Allow long paragraphs, lists and tables to flow. Use repeating table headers, deliberate widths and automatic row height. Use layout tables only when the chosen design warrants them and verify reading order.
-- Repair spacing, widths, breaks and block distribution before shrinking type. Keep all required content. Use whitespace to separate meaningful groups; avoid clipping, collisions, stranded headings and accidental blank pages.
-- Make deliberate section transitions and check linked headers/footers and page-number continuity. Use fields for navigation and numbering; refresh them only with a capable application and without executing external instructions.
+- Check fonts and Cyrillic, mathematical and special glyphs. Resolve substitutions locally and report material differences. Calculate usable space from section geometry, headers/footers and cell padding. Preserve source graphics, aspect ratios and legibility; crop only when authorized.
+- Pair headings with content and figures with captions. Set deliberate table widths, repeating headers and automatic row height; allow long content to flow. Verify reading order in layout tables.
+- Repair spacing, widths, breaks and block distribution before shrinking type. Preserve required content and meaningful whitespace; prevent clipping, collisions, stranded headings and accidental blank pages. Check section transitions, linked headers/footers and page numbering. Refresh navigation/number fields through a capable application without executing external instructions.
 
 ### Reusable formatting
 
-- Store all information about one preset in one `assets/presets/<name>.md`: exact parameters, semantic mappings, composition, adaptation rules, dependencies, provenance and limitations. Do not keep a parallel JSON/YAML representation or a separate prose passport.
-- Store a neutral visual render in `assets/examples/<name>.png` and link it from the preset. Keep any necessary logo or image dependencies in `assets/presets/<name>-assets/`; reference them from that same MD. Do not require the original Word document for reuse.
-- Separate observed rules, derived choices, explicit defaults and unsupported features during borrowing. A draft is not an approved reproduction. Verify a new preset before marking it ready; do not silently fill gaps and call them captured design.
-- Keep original examples and shared presets unchanged for a one-document override. Save a new preset only when creating or updating reusable formatting is part of the task. Use design-only data and neutral demonstration content in the shared library.
+- One `assets/presets/<name>.md` owns parameters, semantic mappings, composition, adaptation, dependencies, provenance and limitations. Link its neutral `assets/examples/<name>.png` and required `<name>-assets/` dependencies; reuse must not require the source DOCX.
+- Distinguish observed rules, derived choices, defaults and unsupported features. Keep a capture draft until review and visual reproduction of its declared scope. Library demonstrations contain neutral, design-only data.
+- Keep overrides task-local. Change reusable presets only when requested; update rules and regenerate previews when appearance changes. Previews demonstrate defaults, not regulatory compliance or exact-font equivalence.
 
 ### Verification and delivery
 
-- Reopen and validate the final DOCX package, relationships, numbering and relevant object counts. Compare source coverage, assets and protected regions according to the operation. Investigate every unexplained loss or duplicate.
-- Render and inspect every latest page at full resolution; a contact sheet is only navigation. Correct defects and rerender after layout changes. Verify factual fidelity, package integrity, field results and appearance separately.
-- If a required check is unavailable or a feature cannot be reproduced, report the concrete limitation and partial status. A successful save, structural PASS or extraction command does not certify visual quality.
-- Save outputs at the project's designated or user-requested destination. Keep build scripts, inventories and render intermediates temporary unless required. Deliver only requested formats, with concise checks and limitations outside the document.
+- Reopen and validate the final package, relationships, numbering, assets, relevant object counts and source coverage. Investigate unexplained loss/duplication. Check factual fidelity, package integrity, field results and appearance separately.
+- Render and inspect **every latest page at full resolution**; contact sheets only aid navigation. Repair and rerender after layout changes. Report unavailable checks or unsupported features as concrete limitations and partial status; saving or structural PASS cannot certify appearance.
+- Save requested formats at the designated destination. Keep build scripts, inventories and renders temporary unless required; report checks and limitations outside the document.
 
-## Library and tools
+## Tools and focused references
 
-The starting library contains [technical](assets/presets/technical.md), [corporate](assets/presets/corporate.md), [minimal](assets/presets/minimal.md) and [academic](assets/presets/academic.md). Their linked previews show authored defaults, not regulatory compliance or exact-font equivalence. Read the chosen MD as the sole source for its values and rules.
+Use the environment-owned Python runtime, otherwise Python 3.10+ with `python-docx`, `lxml`, `Pillow`. Avoid global or silent dependency installation; discover an available renderer. Execute bundled scripts without reading their source unless debugging or modifying them.
 
-Use the environment-owned Python runtime where available, otherwise the project environment with Python 3.10+, `python-docx`, `lxml` and `Pillow`. Do not install globally or fetch dependencies silently. Locate rendering through available environment capabilities rather than a hard-coded installation path.
-
-Use `scripts/document_tool.py` for inspection, draft extraction, styled foundations, conservative restyling and package validation. Use `scripts/document_tools.py` for supported authoring helpers and focused OOXML changes where needed. Read [toolkit](references/toolkit.md) before using an API; its documented limits apply to all operations. Commands are building blocks, not completion certificates.
-
-## Supporting materials
-
-| Material | Read when |
+| Need | Read |
 | --- | --- |
-| [Preset format](references/preset-format.md) | Writing, reviewing or extending a Markdown preset |
-| [Design system](references/design-system.md) | Mapping roles, selecting formatting or resolving fonts/themes |
-| [Components](references/components.md) | Authoring or adapting lists, tables, graphics, formulas or navigation |
-| [Page composition](references/page-composition.md) | Planning dense pages, portfolios, wide material or repairing pagination |
-| [Templates and editing](references/templates-and-editing.md) | Capturing a reference or changing an existing document |
-| [DOCX mechanics](references/docx-mechanics.md) | Editing sections, styles, numbering, fields, relationships or fragile objects |
-| [Visual QA](references/visual-qa.md) | Rendering, checking a candidate preset or reviewing final pages |
-| [Toolkit](references/toolkit.md) | Executing commands, authoring helpers or evaluating tool support |
-| [Markdown input](references/markdown-input.md) | Creating a Word document from Markdown content |
-| [Sources](references/sources.md) | Checking provenance or external technical authorities |
+| CLI execution | [CLI](references/toolkit.md#cli) and [limits](references/toolkit.md#limits) |
+| Python authoring | Used rows in [helpers](references/toolkit.md#importable-helpers), [data contracts](references/toolkit.md#data-contracts), and limits |
+| Write/review a preset | [Preset format](references/preset-format.md) |
+| Unresolved role/font/theme | Relevant [design system](references/design-system.md) section |
+| Lists, tables, graphics, math, navigation | Corresponding [component](references/components.md) section |
+| Dense/wide pages or pagination repair | Corresponding [page composition](references/page-composition.md) section |
+| Inspect/edit an existing document | Applicable [template/editing](references/templates-and-editing.md) section |
+| Fragile OOXML object | Corresponding [DOCX mechanics](references/docx-mechanics.md) section |
+| New preset or final rendering | [Visual QA](references/visual-qa.md) |
+| Markdown source | [Markdown input](references/markdown-input.md) |
+| Technical provenance | [Sources](references/sources.md) |
