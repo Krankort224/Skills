@@ -18,6 +18,8 @@ Remove this section if the repository has no meaningful context partitions.
 
 Point to canonical owners, without restating their contracts.
 
+Record explicit language assignments for individual textual sources in their entries or notes when needed; no separate section or fixed map layout is required.
+
 | Source | Owns | Must not own |
 |---|---|---|
 | `<canonical source / owner reference>` | `<facts / durable contracts; update destination when distinct or unclear>` | `<excluded responsibilities / knowledge>` |

@@ -13,6 +13,12 @@ Apply only when the current task concerns a specific Issue or the user directly 
 
 Create an Issue, accept an Issue or major pass, or close an Issue only on direct, unambiguous user instruction. A review request, passing checks, or silence does not authorize acceptance or closure.
 
+## Language
+
+Write newly authored Issue titles, bodies, and comments in English, including dispatch, handoff, review, corrections, and accepted summaries. Preserve exact quotations and technical identifiers when needed.
+
+Issue language does not determine repository-artifact language; follow applicable project/source language rules. Do not translate existing Issue content as a separate cleanup task unless requested.
+
 ## Task contract
 
 Use GitHub Issues as stable task contracts and comments as the active work surface.

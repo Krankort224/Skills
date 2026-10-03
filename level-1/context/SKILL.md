@@ -27,6 +27,15 @@ Do not assume universal precedence for code, documentation, Issues, history, gen
 
 Use the authority rules defined in `repository.md`.
 
+### Language policy
+
+Choose text language by role, not directory:
+
+- Prefer English for agent/control instructions and machine-oriented protocols; preserve required formal syntax and native tool output.
+- Keep human-facing canonical knowledge in the established project language. Respect explicit language assignments for individual textual sources in the local context map, without prescribing its section layout.
+
+Do not translate canonical sources or create parallel translated summaries solely for token efficiency or agent convenience. Reduce context through routing and progressive loading.
+
 ### Resolve ownership
 
 Distinguish:
