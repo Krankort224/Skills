@@ -1,51 +1,42 @@
 ---
 name: restructure
-description: Restructure an existing repository or file accumulation by inventorying what exists, designing a minimal target structure, and migrating it without losing provenance, current state, or important data.
-metadata:
-  short-description: Restructure repository contents
+description: Use when explicitly asked for restructure. Inventory an existing repository or file accumulation, design its minimal target structure, migrate an agreed map, or review the result while preserving provenance, current state and important data.
 ---
 
 # Restructure
 
-Restructure an existing repository or file accumulation by reducing ambiguity and future work cost.
+Reduce ambiguity and future work cost. Derive organization from actual contents, ownership, lifecycle boundaries and project needs; do not impose a universal tree.
 
-Do not impose a universal directory tree. Derive the target structure from the actual contents, roles, lifecycle boundaries, and project needs.
+## Operation routing
 
-The work normally alternates between two execution contours:
+Start at the requested operation. Load only its procedure and prerequisites needed to resolve a material gap; reuse current evidence instead of repeating completed work.
 
-1. Codex discovers and inventories the physical file state.
-2. ChatGPT interprets the inventory and designs the target structure.
-3. Codex performs the approved migration and validates it.
-4. ChatGPT reviews the result and resolves remaining ambiguity.
+| Operation | Input | Result | Procedure |
+| --- | --- | --- | --- |
+| Inventory | Defined scope and accessible physical state | Observations, evidence and unresolved roles | [Inventory](operations/inventory.md) |
+| Design | Sufficient current inventory and project constraints | Minimal target, naming rules and migration map | [Design](operations/design.md) |
+| Migration | Agreed target/map and execution authority | Applied changes and before/after evidence | [Migration](operations/migration.md) |
+| Review | Baseline, agreed map and actual result | Findings, deviations and remaining decisions | [Review](operations/review.md) |
 
-Load only the instructions for the active contour:
+## Common principles
 
-- ChatGPT: read `references/chatgpt.md`.
-- Codex: read `references/codex.md`.
+- Inventory before changing organization. Separate observed facts, suspected relationships, structural decisions, execution and review.
+- Classify by lifecycle and ownership. Add categories only for practical differences; avoid symmetry, empty future architecture and arbitrary placement of uncertain items.
+- Change organization by default, not content or project architecture. Identify additional content changes separately; perform them only within authorized scope.
+- Preserve provenance, accepted history, immutable sources, external identifiers and unrelated user changes. Never delete potentially valuable material because its role is unclear.
+- Preserve explicit unresolved cases and prior decisions. A completed local operation need not resolve the whole accumulation.
+- Follow project source authority, storage and update destinations. Level 1 contracts retain responsibility for Issue lifecycle, assignments and publication; restructuring establishes no competing process.
 
-## Invariants
+## Capabilities and continuation
 
-- Inventory before restructuring.
-- Separate observation, design, migration, and review.
-- Preserve provenance.
-- Prefer the smallest structure that resolves real ambiguity.
-- Do not create categories only for symmetry or future possibility.
-- Do not force uncertain items into arbitrary categories.
-- Restructuring changes organization by default, not content or project architecture.
-- Preserve unrelated user changes.
-- Do not delete potentially valuable material merely because its role is unclear.
-- Keep unresolved cases explicit.
+Assign each operation by available access and capability, independently of interface or model. One executor may perform several operations. Without direct access, request a scoped inventory or execution report; do not assume remembered filenames describe current state or claim inaccessible checks occurred.
+
+Carry scope, source revision/inventory, agreed target/map, existing authorizations, evidence and unresolved items across handoffs. Interface changes do not restart the work or grant new authority. Do not silently redesign during migration; suspend affected work for material unresolved decisions. An agreed map may already supply execution authority; avoid asking again solely because the executor changed.
 
 ## Cloud-file boundary
 
-Cloud-hosted file contents must not be downloaded, materialized, synchronized, exported, or copied into the local environment without a separate, explicit, and unambiguous user authorization.
+Local download, materialization, synchronization, export or copying of cloud-file contents requires separate, explicit, unambiguous user authorization for that action. Restructuring or inventory requests do not provide it. Without authorization, inspect only listings and metadata exposed without downloading contents. Do not bypass this boundary through another tool or temporary directory; report content-access dependencies.
 
-Without that authorization, it is acceptable to inspect available listings and metadata such as names, paths, sizes, timestamps, identifiers, and relationships when the platform exposes them without downloading the file contents.
+## Completion
 
-Do not interpret repository restructuring as implicit permission to download cloud files.
-
-## Quality criterion
-
-A good restructuring is not defined by a neat directory tree.
-
-It is defined by lower ambiguity, clearer ownership of current state, preserved provenance, and lower cost of future work.
+Report the performed operation, evidence/checks, deviations, unresolved or blocked items, and justified next action. Use existing project records; retain concise before/after records for large or valuable accumulations without mandating extra files. Judge success by lower ambiguity, clearer current-state ownership, preserved provenance and lower future work cost, not visual neatness. Review does not itself authorize project acceptance.

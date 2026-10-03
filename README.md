@@ -29,9 +29,11 @@ Skills/
 └── level-2/
     ├── restructure/
     │   ├── SKILL.md
-    │   └── references/
-    │       ├── chatgpt.md
-    │       └── codex.md
+    │   └── operations/
+    │       ├── inventory.md
+    │       ├── design.md
+    │       ├── migration.md
+    │       └── review.md
     ├── research/
     │   ├── SKILL.md
     │   ├── operations/
@@ -128,19 +130,9 @@ The default maximum tree depth is two subagent levels below root; root may incre
 
 Restructures an existing repository or file accumulation without imposing a universal directory layout.
 
-The skill uses an alternating two-contour process:
+The root routes to four adjacent procedures in `operations/`: inventory, design and migration planning, migration, and review. Start at the requested operation and load only the procedure and missing prerequisites. Common principles and capability/access boundaries stay in `SKILL.md`.
 
-```text
-Codex inventory
-    ↓
-ChatGPT semantic analysis and target structure
-    ↓
-Codex migration and validation
-    ↓
-ChatGPT review
-```
-
-Codex owns direct filesystem discovery and mechanical migration. ChatGPT owns semantic classification, target-structure design, migration planning, and final structural review.
+Assign operations by available capabilities and access, independently of Chat, Work, Codex or model. One executor may perform several operations; handoffs preserve evidence, the agreed migration map and prior authorizations. Migration follows the agreed map; review checks both mechanical preservation and whether the structure resolves the stated problems.
 
 Cloud-hosted file contents must not be downloaded, materialized, synchronized, exported, or copied into the local environment without separate, explicit, and unambiguous user authorization.
 
