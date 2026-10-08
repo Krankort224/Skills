@@ -1,0 +1,143 @@
+{
+  "graphs": [
+    {
+      "connectors": [
+        {
+          "id": "wire-left",
+          "source": {
+            "direction": "outputs",
+            "node_id": "left",
+            "port_id": "left-out",
+            "port_index": 0,
+            "port_name": "value"
+          },
+          "target": {
+            "direction": "inputs",
+            "node_id": "python-contract",
+            "port_id": "python-in-0",
+            "port_index": 0,
+            "port_name": "IN[0]"
+          }
+        },
+        {
+          "id": "wire-right",
+          "source": {
+            "direction": "outputs",
+            "node_id": "right",
+            "port_id": "right-out",
+            "port_index": 0,
+            "port_name": "value"
+          },
+          "target": {
+            "direction": "inputs",
+            "node_id": "python-contract",
+            "port_id": "python-in-1",
+            "port_index": 1,
+            "port_name": "IN[1]"
+          }
+        },
+        {
+          "id": "wire-result",
+          "source": {
+            "direction": "outputs",
+            "node_id": "python-contract",
+            "port_id": "python-out",
+            "port_index": 0,
+            "port_name": "OUT"
+          },
+          "target": {
+            "direction": "inputs",
+            "node_id": "watch",
+            "port_id": "watch-in",
+            "port_index": 0,
+            "port_name": "value"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "dynamo_version": "2.12.1.8246",
+      "engines": [
+        "IronPython2"
+      ],
+      "graph_inputs": [],
+      "graph_outputs": [],
+      "name": "Original two-input Python contract fixture",
+      "nodes": [
+        {
+          "engine": null,
+          "id": "left",
+          "inputs": [],
+          "is_python": false,
+          "name": "Number",
+          "outputs": [
+            {
+              "id": "left-out",
+              "index": 0,
+              "name": "value"
+            }
+          ],
+          "type": "Number"
+        },
+        {
+          "engine": null,
+          "id": "right",
+          "inputs": [],
+          "is_python": false,
+          "name": "Number",
+          "outputs": [
+            {
+              "id": "right-out",
+              "index": 0,
+              "name": "value"
+            }
+          ],
+          "type": "Number"
+        },
+        {
+          "engine": "IronPython2",
+          "id": "python-contract",
+          "inputs": [
+            {
+              "id": "python-in-0",
+              "index": 0,
+              "name": "IN[0]"
+            },
+            {
+              "id": "python-in-1",
+              "index": 1,
+              "name": "IN[1]"
+            }
+          ],
+          "is_python": true,
+          "name": "PythonScriptNode",
+          "outputs": [
+            {
+              "id": "python-out",
+              "index": 0,
+              "name": "OUT"
+            }
+          ],
+          "type": "PythonNodeModels.PythonNode, PythonNodeModels"
+        },
+        {
+          "engine": null,
+          "id": "watch",
+          "inputs": [
+            {
+              "id": "watch-in",
+              "index": 0,
+              "name": "value"
+            }
+          ],
+          "is_python": false,
+          "name": "Watch",
+          "outputs": [],
+          "type": "Watch"
+        }
+      ],
+      "source": "graph-contract.dyn",
+      "unconnected_ports": [],
+      "uuid": "synthetic-contract-graph"
+    }
+  ]
+}

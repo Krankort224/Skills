@@ -46,17 +46,34 @@ Skills/
     │       ├── evidence-map.template.md
     │       ├── experiment.template.md
     │       └── result.template.md
-    └── word/
+    ├── word/
+    │   ├── SKILL.md
+    │   ├── operations/
+    │   │   ├── borrowing.md
+    │   │   ├── adaptation.md
+    │   │   └── creation.md
+    │   ├── references/
+    │   ├── scripts/
+    │   └── assets/
+    │       ├── examples/
+    │       └── presets/
+    └── revit-scripting/
         ├── SKILL.md
+        ├── agents/
         ├── operations/
-        │   ├── borrowing.md
+        │   ├── creation.md
         │   ├── adaptation.md
-        │   └── creation.md
+        │   ├── diagnostics.md
+        │   └── borrowing.md
         ├── references/
         ├── scripts/
         └── assets/
             ├── examples/
-            └── presets/
+            └── blocks/
+                ├── catalog.md
+                ├── core/
+                ├── mep/
+                └── views/
 ```
 
 `level-1/` contains shared context and execution-management contracts. `level-2/` contains task-specific skills; `word/` is the self-contained `style-transfer` skill.
@@ -156,6 +173,14 @@ Each preset is one Markdown file in `assets/presets/` containing all exact param
 
 Markdown content interpretation is retained inside the creation operation. Tools provide supported building blocks; preserving arbitrary Word layouts, applying narrative composition rules and rendering still require the documented operation and environment capabilities. The former `document-creation` and `markdown-to-word` folders are consolidated into this one autonomous skill.
 
+#### revit-scripting
+
+[revit-scripting](level-2/revit-scripting/SKILL.md) creates, adapts and diagnoses Revit/Dynamo scripts, and extracts reusable logical blocks from source examples. The root routes to four adjacent procedures in `operations/`; runtime, Dynamo, transactions, parameters/units, geometry/connectors, annotations/references and error patterns load from `references/` as needed.
+
+Each logical block has one canonical Markdown file containing its contract, Python implementation, limits, verification and pinned provenance. The derived catalog navigates core, MEP and view helpers. Offline tests load those implementation fences directly. The initial library is reviewed with offline checks; native Revit behavior remains a separate verification requirement.
+
+Two standard-library Python 3 tools inspect `.dyn`/ZIP metadata, ports and wires without executing embedded code, and validate block contracts, dependencies, syntax and local links. Script/graph creation and native document writes still require the documented runtime, transaction ownership and readback contract.
+
 ## Principles
 
 - Keep skills autonomous.
@@ -177,3 +202,5 @@ For `workflow`, the intent is to keep one common workflow across repositories ra
 For `restructure`, keep the shared process generic and express project-specific structure decisions in the task itself rather than creating a permanent project-specific fork unless repeated local rules justify one.
 
 For `research`, preserve shared principles and operation procedures, and use the project's existing methodology and artifact locations. Adapt optional forms into completed project documents; source `*.template.*` files stay in Skills. Replace the local skill's adopted-artifacts subsection with links to those documents or a description of the local forms, so integration does not leave broken template links.
+
+For `revit-scripting`, keep runtime profiles, project parameter/family bindings, paths, tolerances and native evidence locations in the project's existing configuration/instructions. Preserve shared block contracts and record the adopted source revision; project-specific pipeline state remains with its owner.

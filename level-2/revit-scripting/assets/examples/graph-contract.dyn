@@ -1,0 +1,90 @@
+{
+  "Uuid": "synthetic-contract-graph",
+  "Name": "Original two-input Python contract fixture",
+  "Description": "Original synthetic static fixture. Documented engine: IronPython2 (IronPython 2.7). Never runtime tested.",
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "Id": "left",
+      "NodeType": "Number",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "left-out",
+          "Name": "value"
+        }
+      ],
+      "Value": 2
+    },
+    {
+      "Id": "right",
+      "NodeType": "Number",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "right-out",
+          "Name": "value"
+        }
+      ],
+      "Value": 3
+    },
+    {
+      "Id": "python-contract",
+      "NodeType": "PythonScriptNode",
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Engine": "IronPython2",
+      "Inputs": [
+        {
+          "Id": "python-in-0",
+          "Name": "IN[0]"
+        },
+        {
+          "Id": "python-in-1",
+          "Name": "IN[1]"
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "python-out",
+          "Name": "OUT"
+        }
+      ],
+      "Code": "# Original fixture; shared Python 2.7 / 3 syntax.\n# Engine: IronPython2. One output port carries a two-item list.\nleft = IN[0]\nright = IN[1]\nOUT = [left + right, left * right]\n"
+    },
+    {
+      "Id": "watch",
+      "NodeType": "Watch",
+      "Inputs": [
+        {
+          "Id": "watch-in",
+          "Name": "value"
+        }
+      ],
+      "Outputs": []
+    }
+  ],
+  "Connectors": [
+    {
+      "Id": "wire-left",
+      "Start": "left-out",
+      "End": "python-in-0"
+    },
+    {
+      "Id": "wire-right",
+      "Start": "right-out",
+      "End": "python-in-1"
+    },
+    {
+      "Id": "wire-result",
+      "Start": "python-out",
+      "End": "watch-in"
+    }
+  ],
+  "View": {
+    "Dynamo": {
+      "Version": "2.12.1.8246",
+      "RunType": "Manual"
+    }
+  }
+}
