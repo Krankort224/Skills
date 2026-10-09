@@ -1,6 +1,0 @@
-interface:
-  display_name: "Revit Scripting"
-  short_description: "Create, adapt and diagnose Revit and Dynamo scripts"
-  default_prompt: "Use $revit-scripting to work on my Revit or Dynamo script."
-policy:
-  allow_implicit_invocation: false
