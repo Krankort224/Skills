@@ -20,6 +20,7 @@ Derived from block contracts by `scripts/check_library.py --catalog`.
 | --- | --- | --- | --- | --- | --- |
 | [connector-size-signature](mep/connector-size-signature.md) | reviewed | Revit 2022 / Dynamo 2.12 / IronPython 2.7; pure helpers Python 2.7 or 3 | offline | none | read-only |
 | [host-cover-map](mep/host-cover-map.md) | reviewed | Revit 2022 / Dynamo 2.12 / IronPython 2.7; pure helpers Python 2.7 or 3 | offline | none | read-only |
+| [insulation-workset](mep/insulation-workset.md) | reviewed | Revit 2022 / Dynamo / IronPython 2.7; Python 3 with compatible Revit host | offline | none | document-write |
 | [nested-hierarchy](mep/nested-hierarchy.md) | reviewed | Revit 2022 / Dynamo 2.12 / IronPython 2.7; pure helpers Python 2.7 or 3 | offline | none | read-only |
 | [positional-resolution](mep/positional-resolution.md) | reviewed | Python 2.7 or 3; Revit record extraction caller-owned | offline | none | read-only |
 | [reference-level](mep/reference-level.md) | reviewed | Revit 2022 / Dynamo 2.12 / IronPython 2.7; pure helpers Python 2.7 or 3 | offline | none | document-write |
