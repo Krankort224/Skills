@@ -59,6 +59,8 @@ Before dispatching execution:
 
 Use `../templates/execution-comment.md` for the execution or correction comment.
 
+When a preceding accepted pass has pending cleanup because its environment lacked a deletion tool, include it as stage 0 of the next pass's dispatch. Supply the accepted-summary reference, exact comment identifiers, and preservation requirements. Choose an execution environment with deletion capability. Bundle stage 0 cleanup and stage 1 substantive work in one cycle: execute them sequentially without a separate dispatch, handoff, or manual review between them. Stage 0 is part of the next pass, not a new major pass.
+
 If the task is contradictory, materially underspecified, or requires a new decision outside the accepted contract, resolve that with the user before dispatch rather than asking the executor to improvise.
 
 For correction cycles, use the latest review findings to specify concrete corrections. Keep the contract body unchanged and preserve accepted parts unless they need correction.

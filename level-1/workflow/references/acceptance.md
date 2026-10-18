@@ -89,7 +89,9 @@ For both simple and multi-pass Issues, complete consolidation in this order:
 
 Deletion is a required part of consolidation, not optional tidying. Do not leave intermediate comments in place merely because a summary now exists, hide or minimize them as a substitute, or create a parallel transcript/archive to preserve the same clutter. Git retains exact code changes; the summary retains the useful outcome.
 
-If deletion is unavailable or fails, keep the verified summary, report the remaining comment identifiers and blocker, and mark consolidation incomplete. Do not claim cleanup succeeded.
+If the current environment has no comment-deletion tool, keep the verified summary and record pending cleanup: the completed unit, summary reference, exact comment identifiers to delete, and references or information that must survive. Carry this work into stage 0 of the next pass through its execution dispatch. The pass may remain accepted while cleanup is pending; consolidation remains incomplete until deletion is verified. Bundle stages 0 and 1 in one execution cycle, with no intermediate manual review or separate dispatch.
+
+If deletion fails, report the failure and remaining identifiers rather than claiming success. If there is no next pass, report the outstanding cleanup; do not invent a pass or claim final consolidation is complete.
 
 ## 5. Complete the Issue
 

@@ -28,6 +28,12 @@ Do not create a new branch, switch to another branch, or open a pull request unl
 
 When a new cycle begins, its owner moves the Issue from `codex-ready` to `codex-active`.
 
+### Stage 0: deferred comment cleanup
+
+If the dispatch includes cleanup from a preceding accepted pass, run it before stage 1 substantive work. Verify the live accepted summary covers the comments selected for deletion and that required information and references will survive; delete only the specified intermediate comments, then fetch the remaining comments to verify deletion. Preserve accepted summaries and the current dispatch.
+
+Continue directly into stage 1 in the same execution cycle. Do not stop for manual review, repeat dispatch, publish a separate handoff, or request acceptance between stages. Include cleanup results in the combined handoff. If deletion capability is still absent, deletion fails, or preservation cannot be verified, report the blocker and stop before stage 1; do not silently defer cleanup again.
+
 ## 2. Execute only the current cycle
 
 Implement only what is required by the current instruction and execution-unit boundary.
