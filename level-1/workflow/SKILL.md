@@ -62,4 +62,6 @@ Use these roles without replacing repository-specific context:
 - accepted summary — compact durable record of an accepted Issue or pass;
 - Git history — exact change history.
 
+After publishing and verifying an accepted summary, delete the intermediate comments it replaces, following the acceptance procedure. The summary replaces the completed unit's working conversation to keep future Issue context compact.
+
 Do not turn the Issue body into a diary.

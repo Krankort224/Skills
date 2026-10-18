@@ -19,7 +19,7 @@
 
 ### Final verification
 
-- ...
+- <Checks and results; durable evidence references that remain available after intermediate comments are deleted>
 
 ### Result
 
@@ -27,4 +27,4 @@
 - final commit: `<sha>`
 - accepted baseline: <short statement>
 
-<!-- Remove empty or irrelevant fields and sections. Link to canonical project-wide knowledge rather than duplicating it. -->
+<!-- Remove empty or irrelevant fields and sections. Link to canonical project-wide knowledge rather than duplicating it. Preserve the useful outcome so this summary remains sufficient after the completed unit's intermediate comments are deleted. -->

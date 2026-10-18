@@ -2,6 +2,8 @@
 
 Own result review, authorized acceptance, and completion.
 
+Sections: [Review](#1-review-the-execution-handoff) · [Outcome](#2-review-outcome) · [Acceptance](#3-accept-the-current-execution-unit) · [Consolidation](#4-summarize-and-delete-intermediate-comments) · [Completion](#5-complete-the-issue).
+
 ## 1. Review the execution handoff
 
 When the Issue is in `codex-review`, review the result against the current execution unit.
@@ -38,6 +40,7 @@ When the whole Issue is accepted:
 
 - reconcile the body with the final accepted result if needed;
 - write one durable accepted summary comment;
+- verify the summary and delete the intermediate comments it replaces as specified below;
 - verify the overall Result boundary;
 - close the Issue only when closure is authorized.
 
@@ -50,15 +53,15 @@ When a major pass is accepted:
 3. replace provisional planned decomposition with the actual **Final decomposition**;
 4. replace provisional acceptance material with the **Accepted result**;
 5. record the **Boundary carried forward**;
-6. record the final commit and accepted-summary reference;
-7. write one durable accepted summary comment;
-8. clean up working-comment clutter only according to the repository's supported cleanup method.
+6. write one durable accepted summary comment;
+7. record the final commit and accepted-summary reference;
+8. verify the summary and delete the intermediate comments it replaces as specified below.
 
 The accepted pass section should describe what the pass finally became, not preserve obsolete forecasts.
 
 Do not begin the next major pass until the current one is accepted.
 
-## 4. Accepted summary
+## 4. Summarize and delete intermediate comments
 
 Preserve only information that remains useful after the implementation conversation is over.
 
@@ -76,6 +79,18 @@ Omit empty sections.
 
 Do not turn the summary into a chronological replay of active comments.
 
+For both simple and multi-pass Issues, complete consolidation in this order:
+
+1. Identify the completed unit's intermediate comments, including execution instructions, handoffs, review findings, and correction cycles.
+2. Publish the accepted summary, carrying forward all decisions, constraints, unresolved items, and verification evidence needed after consolidation. Use durable evidence references rather than links to comments scheduled for deletion.
+3. Read back the published summary and updated Issue body. Verify their coverage against the comments to be removed and repair references to those comments.
+4. Delete the intermediate comments replaced by the verified summary. Preserve accepted summaries from other units and comments still needed for active or future work; first carry forward any necessary information from mixed-purpose comments.
+5. Fetch the remaining comments and verify that the intended comments were deleted and retained summaries and active-work context remain intact.
+
+Deletion is a required part of consolidation, not optional tidying. Do not leave intermediate comments in place merely because a summary now exists, hide or minimize them as a substitute, or create a parallel transcript/archive to preserve the same clutter. Git retains exact code changes; the summary retains the useful outcome.
+
+If deletion is unavailable or fails, keep the verified summary, report the remaining comment identifiers and blocker, and mark consolidation incomplete. Do not claim cleanup succeeded.
+
 ## 5. Complete the Issue
 
 A simple Issue is eligible for closure when its Result boundary is accepted.
@@ -87,5 +102,6 @@ Before final completion, verify that:
 - the final Issue body matches the accepted work;
 - all required major-pass checkboxes are accepted, if passes exist;
 - durable project-wide knowledge established by the work has been folded into its canonical repository location when needed;
-- temporary implementation chronology remains in Issue/Git history rather than being copied into canonical knowledge;
+- completed units' intermediate comments have been deleted after verified summaries replaced them;
+- temporary implementation chronology has not been copied into canonical knowledge;
 - final commits and verification are identifiable.
