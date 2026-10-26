@@ -60,8 +60,12 @@ Skills/
     ├── project-space/
     │   ├── SKILL.md
     │   ├── agents/
+    │   ├── scripts/
     │   └── references/
-    │       └── configuration.md
+    │       ├── configuration.md
+    │       ├── publication.md
+    │       ├── workflow.md
+    │       └── materials.md
     └── revit-scripting/
         ├── SKILL.md
         ├── agents/
@@ -180,7 +184,7 @@ Markdown content interpretation is retained inside the creation operation. Tools
 
 #### project-space
 
-[project-space](level-2/project-space/SKILL.md) inspects Project-space stores and directly maintains supported configuration, employee profiles, membership and privileges through files. It uses Windows identity verification, the shared access lock, revision checks and atomic replacement; no MCP server or application CLI is required. Workflow events, materials, deployment records and local recovery state remain outside routine configuration edits. Level 2 invocation is explicit only; deployment paths and live employee data stay outside shared skill sources.
+[project-space](level-2/project-space/SKILL.md) manages supported Project-space operations through files: workspace inspection, employee/access configuration, project properties, topics, task agreement/execution/review, material import and UNC references, replacement/deletion and task links. References cover causal replay, immutable publication and coordinated task/material drafts; an importable Windows helper supplies file transport without an MCP server or new application CLI. Product authorization and unsupported-operation boundaries remain in force. Level 2 invocation is explicit only; live deployment and employee data stay outside skill sources.
 
 #### revit-scripting
 
