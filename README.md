@@ -57,6 +57,11 @@ Skills/
     │   └── assets/
     │       ├── examples/
     │       └── presets/
+    ├── project-space/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   └── references/
+    │       └── configuration.md
     └── revit-scripting/
         ├── SKILL.md
         ├── agents/
@@ -172,6 +177,10 @@ Each preset is one Markdown file in `assets/presets/` containing all exact param
 `document_tool.py show-preset` validates the complete preset and prints all narrative rules without the parameter table; repeatable `--section` and `--parameter` options provide exact views after initial review. Execution still loads all settings from the same MD. References load by applicable section, and script sources need reading only for debugging or modification.
 
 Markdown content interpretation is retained inside the creation operation. Tools provide supported building blocks; preserving arbitrary Word layouts, applying narrative composition rules and rendering still require the documented operation and environment capabilities. The former `document-creation` and `markdown-to-word` folders are consolidated into this one autonomous skill.
+
+#### project-space
+
+[project-space](level-2/project-space/SKILL.md) inspects Project-space stores and directly maintains supported configuration, employee profiles, membership and privileges through files. It uses Windows identity verification, the shared access lock, revision checks and atomic replacement; no MCP server or application CLI is required. Workflow events, materials, deployment records and local recovery state remain outside routine configuration edits. Level 2 invocation is explicit only; deployment paths and live employee data stay outside shared skill sources.
 
 #### revit-scripting
 
