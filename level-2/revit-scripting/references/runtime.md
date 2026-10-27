@@ -18,6 +18,26 @@ Legacy graph sources use Dynamo 2.12.1.8246 with `IronPython2` in Revit 2022 wor
 
 Use an explicit adapter for a real version difference. Check the target assembly rather than swallowing exceptions and returning valid-looking defaults. Native tests are needed where .NET collections, enum/overload selection and host wrappers affect behavior.
 
+### CLR property binding and inheritance
+
+Treat direct `obj.Property` as dynamic binding, not an authoritative API-contract query. A runtime subclass may hide/override a CLR property or expose a different set of accessors. IronPython/DLR can fail to expose the inherited getter even when that getter remains available on its declaring base type. `hasattr()` and `getattr()` use attribute access too; their failure alone does not prove that the property is absent.
+
+Distinguish confirmed absence in the selected contract, an unresolved direct-access failure, an unavailable getter, a successful null/empty result and a getter/API exception. Do not diagnose a binder failure solely from AttributeError or its message. Preserve stage, exception type/text and actual access path.
+
+Use the bounded [clr-property-access](../assets/blocks/core/clr-property-access.md) adapter. Without a declaring type it attempts direct access once. With a declaring type it selects that property's getter immediately, with no dynamic owner-property read and no fallback to direct access after failure. Confirm absence through the selected contract metadata; a metadata-resolution error is not absence. Do not scan arbitrary base classes or replace all property reads with reflection.
+
+The [IronPython descriptor documentation](https://ironpython.net/documentation/dotnet/dotnet.html) describes `DeclaringType.Property.GetValue(instance)`. For the observed Revit 2022 / Dynamo 2.12 / IronPython 2 case, use:
+
+```python
+name = Element.Name.GetValue(element)
+```
+
+rather than depending on runtime-class `element.Name` where that declaration conflicts with the inherited getter. [DEC-027 at e15c0cae](https://github.com/Krankort224/Revit-automatization/blob/e15c0caebe8e582119c984eba1cef95e9c736ab3/knowledge/06_DECISIONS.md#dec-027--metadata-имена-элемента-типа-и-семейства-разделяются), in `block0-diversified`, records the original runtime-validated type-name parameter/getter contract. It does not validate the new library adapter. Keep generalized blocks at their actual evidence level; Python 3 CLR descriptor behavior needs separate verification.
+
+Preserve successful None as null and retain its access path; empty text, 0 and False are values. Do not turn failed metadata into empty names and then report a definitive missing/unique type match. [element-identity](../assets/blocks/core/element-identity.md) loads the helper dependency and makes incomplete required candidate metadata indeterminate.
+
+### Version-specific APIs
+
 UnitTypeId/ForgeTypeId and legacy unit enums are not interchangeable values. Isolate ElementId representation differences. Parameter data type/specification is distinct from storage type.
 
 ## Evidence boundary

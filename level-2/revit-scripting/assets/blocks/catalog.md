@@ -7,8 +7,9 @@ Derived from block contracts by `scripts/check_library.py --catalog`.
 | Block | Status | Runtime | Verification | Dependencies | Mutation |
 | --- | --- | --- | --- | --- | --- |
 | [bounded-graph](core/bounded-graph.md) | reviewed | Python 2.7 or 3 | offline | none | read-only |
+| [clr-property-access](core/clr-property-access.md) | reviewed | Revit 2022 / Dynamo 2.12 / IronPython 2.7; Python 3 CLR requires separate verification | offline | none | read-only |
 | [coordinate-frames](core/coordinate-frames.md) | reviewed | Python 2.7 or 3; Revit 2022 for link adapter | offline | none | read-only |
-| [element-identity](core/element-identity.md) | reviewed | Revit 2022 / Dynamo 2.12 / IronPython 2.7; Python 3 with compatible Revit host | offline | none | read-only |
+| [element-identity](core/element-identity.md) | reviewed | Revit 2022 / Dynamo 2.12 / IronPython 2.7; Python 3 CLR requires separate verification | offline | clr-property-access | read-only |
 | [parameter-access](core/parameter-access.md) | reviewed | Revit 2022 / Dynamo 2.12 / IronPython 2.7; Python 3 with compatible Revit host | offline | none | document-write |
 | [physical-connectors](core/physical-connectors.md) | reviewed | Revit 2022 / Dynamo 2.12 / IronPython 2.7; Python 3 with compatible Revit host | offline | none | read-only |
 | [table-payload](core/table-payload.md) | reviewed | Python 2.7 or 3 | offline | none | read-only |

@@ -19,6 +19,7 @@ Select the requested operation and load only its procedure plus missing prerequi
 ## Shared contract
 
 - Establish the Revit version, host, Dynamo version, Python engine, document/view scope and available execution capabilities. Initial sources use Revit 2022, Dynamo 2.12 and IronPython 2.7; this is a source profile, not a universal compatibility guarantee.
+- Treat Python attribute access to Revit/.NET properties as a runtime binding operation, not proof of API availability. When inheritance hides, overrides or narrows a CLR accessor, distinguish dynamic-binder failure from a genuinely missing property and use an explicit declaring-type getter or a tested runtime adapter.
 - Define inputs, units, outputs, missing/ambiguous cases, ownership and mutation scope before implementation. Keep project family names, parameter maps, paths and tolerances in explicit task/project configuration.
 - Separate read-only discovery, planning and document writes. A preview must not invoke a write callback. Use the task's concrete mutation scope and existing authorization; resolve only genuinely missing decisions needed for execution.
 - Use supported Revit API context and a declared transaction owner. Record native statuses, readback, rollback and unexpected effects. An attempted write, setter return or subtransaction commit does not prove a verified document commit.

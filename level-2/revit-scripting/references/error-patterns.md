@@ -7,6 +7,7 @@ Select the first violated invariant and a discriminating check; do not apply eve
 | List/string instead of expected number/table | Wiring/schema | Actual port endpoints, producer shape, IN contract | Fix wire or explicit adapter |
 | Missing OUT member despite valid wire | Legacy positional schema | Producer indices/headers vs consumer | Synchronize named/versioned contract |
 | Works offline, fails in Dynamo | Runtime/wrapper/overload | Engine/build and native types | Tested host adapter and boundary unwrapping |
+| AttributeError / unreadable property despite an API getter | CLR/DLR property binding and inheritance | Runtime declaration vs declaring base accessor; direct access vs explicit getter | Separate unresolved access failure from confirmed absence; use the bounded [property adapter](../assets/blocks/core/clr-property-access.md) and preserve getter errors |
 | Plausible but wrong magnitude | Units/specification | Typed quantity and conversions end to end | Explicit conversion; reject failures |
 | Unpredictable parameter selection | Names/scope | All matches and instance/type owner | BIP/GUID/exact binding; reject ambiguity |
 | Huge/repeated network selection | Logical edges/unbounded scan | Domain/type/IsConnectedTo and trace | Physical snapshot, caps and boundaries |

@@ -2,6 +2,9 @@
 import os
 import re
 import unittest
+import sys
+import types
+from unittest.mock import patch
 
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                     'assets', 'blocks', 'core')
@@ -12,9 +15,51 @@ def load(name):
     code = re.findall(r'```python\n(.*?)\n```', content, re.S)
     if len(code) != 1:
         raise AssertionError('Exactly one implementation required: ' + name)
-    namespace = {}
+    namespace = load('clr-property-access') if name == 'element-identity' else {}
     exec(compile(code[0], name + '.md', 'exec'), namespace)
     return namespace
+
+class ReflectionFlags(object):
+    DeclaredOnly = 1
+    Public = 2
+    NonPublic = 4
+    Instance = 8
+    Static = 16
+
+
+class PropertyMetadata(object):
+    def __init__(self, readable): self.readable = readable
+    def GetGetMethod(self):
+        return Obj(IsStatic=False) if self.readable is True else None
+    def GetIndexParameters(self): return []
+
+
+class DeclaredMetadata(object):
+    def __init__(self, declaration): self.declaration = declaration
+    def GetProperty(self, name, flags):
+        expected = (ReflectionFlags.DeclaredOnly | ReflectionFlags.Public |
+                    ReflectionFlags.NonPublic | ReflectionFlags.Instance |
+                    ReflectionFlags.Static)
+        if flags != expected: raise AssertionError('Unexpected property flags')
+        metadata = self.declaration.__dict__.get('__clr_property_test_metadata__', {})
+        if name not in metadata: return None
+        value = metadata[name]
+        return value if isinstance(value, PropertyMetadata) else PropertyMetadata(value)
+
+
+def install_clr_mock(testcase):
+    """Scoped offline CLR metadata/descriptor protocol, not a native CLR claim."""
+    clr = types.ModuleType('clr')
+    clr.GetClrType = DeclaredMetadata
+    system = types.ModuleType('System')
+    reflection = types.ModuleType('System.Reflection')
+    reflection.BindingFlags = ReflectionFlags
+    system.Reflection = reflection
+    scoped = patch.dict(sys.modules, {'clr': clr, 'System': system,
+                                     'System.Reflection': reflection})
+    scoped.start()
+    testcase.addCleanup(scoped.stop)
+
 
 class Obj(object):
     def __init__(self, **values): self.__dict__.update(values)
@@ -22,9 +67,19 @@ class Obj(object):
 class Id(object):
     def __init__(self, value): self.IntegerValue = value
 
-class Type(object):
+class ElementNameDescriptor(object):
+    def __get__(self, owner, declaring_type):
+        return self if owner is None else owner._native_name
+    def GetValue(self, owner): return owner._native_name
+
+class Element(object):
+    __clr_property_test_metadata__ = {'Name': True}
+    Name = ElementNameDescriptor()
+
+class Type(Element):
     def __init__(self, value, family='Fan', name='A'):
         self.Id = Id(value); self.FamilyName = family; self.Name = name
+        self._native_name = name
     def get_Parameter(self, key): return Obj(AsString=lambda: self.Name)
 
 class Parameter(object):
@@ -43,8 +98,9 @@ class Parameter(object):
 
 class CoreTests(unittest.TestCase):
     def test_identity_unique_ambiguous_missing(self):
+        install_clr_mock(self)
         n = load('element-identity'); types = [Type(1), Type(2)]
-        api = Obj(ElementType=Type, BuiltInParameter=Obj(
+        api = Obj(Element=Element, ElementType=Type, BuiltInParameter=Obj(
             SYMBOL_NAME_PARAM=1, ALL_MODEL_TYPE_NAME=2))
         doc = Obj(GetElement=lambda value: types[0])
         for item in types: item.Document = doc
@@ -212,6 +268,7 @@ class CoreTests(unittest.TestCase):
         self.assertEqual(fn(doc,'test',lambda d:{'ok':False},write,verify,False,api)['status'],'preflight_failed')
 
     def test_document_identity_and_64bit_id(self):
+        install_clr_mock(self)
         class LargeId(object):
             Value = 2 ** 40
             @property
