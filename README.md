@@ -144,11 +144,11 @@ Canonical Issue artifact schemas are kept in `level-1/workflow/templates/`; oper
 
 Defines execution planning and subagent orchestration for Codex. It covers deciding whether to delegate, planning the agent tree, passing task-specific context, handling failures, and verifying results.
 
-The model contract has one canonical home in [level-1/delegation/SKILL.md](level-1/delegation/SKILL.md). Root is selected by the user; subagents use the lightweight or main executor defined by that contract.
+The model contract has one canonical home in [level-1/delegation/SKILL.md](level-1/delegation/SKILL.md). Root is selected by the user; subagent selection follows that contract's task-complexity criteria.
 
 Root establishes sufficient inputs for decomposition; missing inputs may be gathered directly or through bounded exploration before dependent execution. Assignments carry requirements, decisions, source pointers/revision, and unresolved questions. Workers retrieve missing inputs under applicable project rules; fully specified mechanical work needs no separate context-loading cycle.
 
-The default maximum tree depth is two subagent levels below root; root may increase it for justified decomposition. At the deepest level, when depth is at least two, only lightweight agents and easy tasks are allowed. Intermediate levels may contain main executors. The skill also defines failure diagnosis, stalled-work recovery, and a compact report contract.
+Tree depth, allowed model tiers at each level, and spawning rights are defined by the skill. It also defines failure diagnosis, stalled-work recovery, and a compact report contract.
 
 ### Level 2
 

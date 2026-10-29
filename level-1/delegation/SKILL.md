@@ -11,12 +11,13 @@ Stay within the current task/cycle and applicable instructions. Preserve accepte
 
 Subagent model registry; update models only here:
 
-| Type | Model |
-|---|---|
-| light | gpt-6-luna |
-| main | gpt-6.1-sol |
+| Type | Model | Task fit |
+|---|---|---|
+| light | gpt-6-luna | Precise, repeatable work with an unambiguous transformation and simple verification: extraction, classification, mechanical edits, checks against explicit rules. |
+| medium | gpt-6.1-terra | Bounded multi-step work requiring interpretation and local implementation choices: scoped code fixes, source synthesis, document preparation, visual or interface tasks. |
+| high | gpt-6.1-sol | Substantial uncertainty, coupled changes, conflicting evidence, architecture, complex diagnosis, or coordination of subagents. |
 
-Use only registry models for subagents; prevent incompatible inheritance. The light model never spawns agents, even as root. Select by task complexity, not role; use minimum reliable effort. If unavailable, let the parent execute or replan within this contract.
+Use only registry models for subagents; prevent incompatible inheritance. The light and medium models never spawn agents, even as root. Select directly by uncertainty, interdependence, and required judgment, not task size or role. Research, execution, and verification may use any tier at the appropriate complexity. Use minimum reliable effort. If unavailable, let the parent execute or replan within this contract.
 
 ## Planning
 
@@ -26,9 +27,9 @@ Root reads the task and applicable instructions, establishes sufficient inputs f
 
 Root is level 0. Default maximum depth: 2. Root may increase depth for justified decomposition.
 
-- Depth 1: light/main.
-- Depth D≥2: levels 1…D−1 allow light/main; level D allows only light agents and easy tasks.
-- Only main subagents may spawn descendants, within the root-approved tree.
+- Depth 1: light/medium/high.
+- Depth D≥2: levels 1…D−1 allow light/medium/high; level D allows light for simple tasks and medium for bounded tasks of moderate complexity.
+- Only high subagents may spawn descendants, within the root-approved tree.
 
 Before spawning, define parents, tasks, models, dependencies, write scopes, and verification. Set concurrency by useful independent work and runtime limits. Announce assignments, models, and reasons. Root approves material tree changes, including depth; announce them without separate user approval within authorized scope.
 
@@ -50,9 +51,12 @@ Diagnose first: context/specification, access/tools/permissions, size/complexity
 
 Recover within assignment scope and permissions. Return unresolved requirement conflicts or decisions beyond authority to the task owner; suspend affected execution.
 
-- Failed light at level 1: root stops it and assigns main, transferring requirements, context, usable progress, checks, and failure cause.
-- Failed light at level ≥2: parent awaits all other direct-child reports, then attempts completion itself; escalate upward if unsuccessful.
-- Failed main: parent replans or completes the work.
+- Failed light at level 1: root stops it and selects medium if the task remains bounded but needs more interpretation, or high if substantial uncertainty or coupled work requires it.
+- Failed medium at level 1: root stops it and assigns high, replans, or completes the work itself.
+- Failed light/medium at level ≥2: parent awaits all other direct-child reports, then attempts completion itself; escalate upward if unsuccessful.
+- Failed high: parent replans or completes the work.
+
+Transfer requirements, context, usable progress, checks, and failure cause to any replacement. Choose recovery by the diagnosed cause; do not require a light → medium → high progression.
 
 Replacements must obey depth/model rules; tree changes require root approval.
 
