@@ -1,0 +1,6 @@
+interface:
+  display_name: "Architecture"
+  short_description: "Develop architectural designs and SVG or raster concepts"
+  default_prompt: "Use $architecture to develop or review my architectural design."
+policy:
+  allow_implicit_invocation: false

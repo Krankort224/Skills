@@ -1,0 +1,128 @@
+#!/usr/bin/env python3
+"""Read-only structural/link checks; not architectural or compliance validation."""
+import ast
+import json
+import re
+import struct
+import sys
+import xml.etree.ElementTree as ET
+from pathlib import Path
+from urllib.parse import unquote, urlsplit
+
+
+ROOT = Path(__file__).resolve().parents[1]
+OPERATIONS = ('brief', 'concept', 'development', 'analysis', 'optimization',
+              'presentation', 'documentation', 'review')
+REFERENCES = ('program-and-space', 'composition-and-style',
+              'performance-and-coordination', 'requirements',
+              'computational-design', 'visual-delivery', 'calculators', 'sources')
+LINK = re.compile(r'!?\[[^\]\n]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)')
+DEFINITION = re.compile(r'^\s{0,3}\[[^\]\n]+\]:\s*<?([^\s>]+)>?', re.M)
+
+
+def anchors(text):
+    result, seen = set(), {}
+    prose = re.sub(r'(?ms)^```.*?^```\s*$', '', text)
+    for title in re.findall(r'^#{1,6}\s+(.+?)\s*#*$', prose, re.M):
+        slug = re.sub(r'[^\w\- ]', '', title.lower()).replace(' ', '-')
+        count = seen.get(slug, 0)
+        result.add(slug + ('-' + str(count) if count else ''))
+        seen[slug] = count + 1
+    return result
+
+
+def validate(root=ROOT):
+    root = Path(root).resolve()
+    errors = []
+
+    def error(path, message):
+        errors.append({'path': str(path), 'error': message})
+
+    required = ['SKILL.md', 'agents/openai.yaml', 'THIRD_PARTY_NOTICES.md',
+                'scripts/calculators.py', 'scripts/test_calculators.py',
+                'assets/examples/pavilion-brief.md',
+                'assets/examples/pavilion-concept.svg',
+                'assets/examples/pavilion-concept.png']
+    required += ['operations/' + name + '.md' for name in OPERATIONS]
+    required += ['references/' + name + '.md' for name in REFERENCES]
+    for name in required:
+        if not (root / name).is_file():
+            error(name, 'required file missing')
+    for path in sorted(root.rglob('*.md')):
+        text = path.read_text(encoding='utf-8')
+        if not text.strip():
+            error(path.relative_to(root), 'empty Markdown')
+        if re.search(r'\b(?:TODO|TBD|FIXME)\b', text):
+            error(path.relative_to(root), 'unfinished placeholder')
+        if len(text.splitlines()) > 100 and '## Contents' not in text:
+            error(path.relative_to(root), 'long reference needs Contents')
+        prose = re.sub(r'(?ms)^```.*?^```\s*$', '', text)
+        for target in LINK.findall(prose) + DEFINITION.findall(prose):
+            uri = urlsplit(target.strip('<>'))
+            if uri.scheme or uri.netloc:
+                continue
+            destination = ((path.parent / unquote(uri.path)).resolve()
+                           if uri.path else path)
+            if not destination.is_relative_to(root):
+                error(path.relative_to(root), 'local link escapes skill: ' + target)
+            elif not destination.exists():
+                error(path.relative_to(root), 'local link missing: ' + target)
+            elif uri.fragment and destination.suffix == '.md':
+                if unquote(uri.fragment) not in anchors(destination.read_text(encoding='utf-8')):
+                    error(path.relative_to(root), 'anchor missing: ' + target)
+    skill = root / 'SKILL.md'
+    if skill.exists():
+        text = skill.read_text(encoding='utf-8')
+        front = re.match(r'\A---\n(.*?)\n---\n', text, re.S)
+        if not front or not re.search(r'^name: architecture$', front.group(1), re.M):
+            error('SKILL.md', 'expected architecture frontmatter name')
+        if not front or not re.search(r'^description: .+', front.group(1), re.M):
+            error('SKILL.md', 'description missing')
+        if len(text.splitlines()) > 500:
+            error('SKILL.md', 'root exceeds 500 lines')
+        for operation in OPERATIONS:
+            if 'operations/' + operation + '.md' not in text:
+                error('SKILL.md', 'operation route missing: ' + operation)
+    interface = root / 'agents/openai.yaml'
+    if interface.exists() and not re.search(
+            r'^\s+allow_implicit_invocation:\s+false\s*$',
+            interface.read_text(encoding='utf-8'), re.M):
+        error('agents/openai.yaml', 'explicit invocation policy missing')
+    for path in sorted((root / 'scripts').glob('*.py')):
+        try:
+            compile(ast.parse(path.read_text(encoding='utf-8')), str(path), 'exec')
+        except SyntaxError as exc:
+            error(path.relative_to(root), 'Python syntax: ' + str(exc))
+    calculator_reference = root / 'references/calculators.md'
+    if calculator_reference.exists():
+        audited = re.findall(r'^\| [AB] `([a-z_]+\.py)` \|',
+                             calculator_reference.read_text(encoding='utf-8'), re.M)
+        if len(audited) != 14 or len(set(audited)) != 14:
+            error('references/calculators.md', 'expected 14 unique calculator audit rows')
+    svg_path = root / 'assets/examples/pavilion-concept.svg'
+    png_path = root / 'assets/examples/pavilion-concept.png'
+    if svg_path.exists() and png_path.exists():
+        try:
+            svg = ET.parse(svg_path).getroot()
+            box = [float(value) for value in svg.attrib['viewBox'].split()]
+            if len(box) != 4 or box[2] <= 0 or box[3] <= 0:
+                raise ValueError('invalid SVG viewBox')
+            raw = png_path.read_bytes()
+            if raw[:8] != b'\x89PNG\r\n\x1a\n' or raw[12:16] != b'IHDR':
+                raise ValueError('invalid PNG header')
+            width, height = struct.unpack('>II', raw[16:24])
+            if width <= 0 or height <= 0 or abs(width / height - box[2] / box[3]) > 1e-9:
+                raise ValueError('SVG/PNG aspect ratios differ')
+        except (ET.ParseError, KeyError, ValueError, struct.error) as exc:
+            error('assets/examples', str(exc))
+    return {'valid': not errors, 'operation_count': len(OPERATIONS),
+            'errors': errors}
+
+
+if __name__ == '__main__':
+    try:
+        result = validate()
+    except (OSError, UnicodeError, ValueError) as exc:
+        result = {'valid': False, 'errors': [{'error': str(exc)}]}
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    sys.exit(0 if result['valid'] else 1)
