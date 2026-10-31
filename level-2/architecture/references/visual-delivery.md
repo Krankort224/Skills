@@ -27,15 +27,3 @@ If a tool is unavailable, identify the actual missing capability. Do not claim t
 ## Inspect and correct
 
 Check overall proportions and numeric labels, functional relationships and routes, orientation/context assumptions, consistency between views and text, readable labels/dimensions/legends, contrast, clipping and collisions. Inspect the actual final version after any material edit. Reconcile a mismatch in the owning geometry/program before polishing its appearance.
-
-## Optional worked example
-
-The optional [pavilion brief](../assets/examples/pavilion-brief.md) defines a synthetic 24 × 18 m area diagram with 432 m² geometric footprint, including a fixed 216 m² hall. Its [SVG](../assets/examples/pavilion-concept.svg) and [PNG](../assets/examples/pavilion-concept.png) express the same constraints; this retained example pair is not an acceptance requirement. Plan geometry uses 30 SVG units per metre; wall allowances and legal-area definitions are unresolved. The elevation is illustrative and not a coordinated specification.
-
-From the repository root, the example can be rendered with an installed Inkscape:
-
-```bash
-inkscape level-2/architecture/assets/examples/pavilion-concept.svg --export-filename=level-2/architecture/assets/examples/pavilion-concept.png --export-width=1440
-```
-
-The rendering dependency is optional for numerical tools. Inspect the resulting image instead of inferring appearance from a successful command. See the brief for open decisions and the bounded local-revision example.

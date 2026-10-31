@@ -56,7 +56,7 @@ For a later explicit modeling task, hand off the accepted geometry/dimensions, p
 
 Read calculator source only for debugging/modification; its contract and help own normal use. Do not load all source packs or references merely to become familiar with architecture.
 
-## Tools and worked example
+## Tools
 
 From this skill directory:
 
@@ -67,8 +67,6 @@ python3 -m unittest discover -s scripts -p 'test_*.py'
 ```
 
 The standard-library Python 3 calculators provide explicit JSON-in/JSON-out preliminary area, solar-geometry, glazing-geometry and homogeneous-layer U-value calculations. Read [their contract](references/calculators.md) before selecting a method. No general daylight-factor prediction, thermal-bridge analysis, code compliance or full simulation is implied.
-
-The [synthetic pavilion brief](assets/examples/pavilion-brief.md), editable [SVG](assets/examples/pavilion-concept.svg) and rendered [PNG](assets/examples/pavilion-concept.png) are optional examples of visual techniques on the same constraints. They are not project facts, universal design prescriptions or a required sample pair. Their presence does not require a visual concept deliverable or limit the user's format choice. Rendering these examples requires an available SVG renderer; numerical tools and textual concept work do not.
 
 ## Completion and integration
 

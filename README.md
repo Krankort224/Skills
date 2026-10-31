@@ -89,9 +89,7 @@ Skills/
         ├── operations/
         ├── references/
         ├── scripts/
-        ├── THIRD_PARTY_NOTICES.md
-        └── assets/
-            └── examples/
+        └── THIRD_PARTY_NOTICES.md
 ```
 
 `level-1/` contains shared context and execution-management contracts. `level-2/` contains task-specific skills; `word/` is the self-contained `style-transfer` skill.
@@ -207,7 +205,7 @@ Two standard-library Python 3 tools inspect `.dyn`/ZIP metadata, ports and wires
 
 [architecture](level-2/architecture/SKILL.md) develops, revises, compares, presents and reviews architectural design. A compact root routes to eight selectable operations: brief, concept, development, analysis, optimization, presentation, documentation and review. References cover programming, composition/styles, conceptual performance, requirements, computational comparisons and visual delivery.
 
-The user chooses the deliverable and format for each task. A concept may be textual when no artifact is requested; any requested artifact is produced and inspected appropriately. The skill has no automatic SVG default or mandatory SVG/raster pair. A synthetic pavilion retains optional SVG/PNG technique examples. Building/BIM/3D/mesh authoring remains with a separately requested modeling workflow; the skill does not activate Revit/Dynamo or another Level-2 skill.
+The user chooses the deliverable and format for each task. A concept may be textual when no artifact is requested; any requested artifact is produced and inspected appropriately. The skill has no automatic SVG default or mandatory SVG/raster pair. Building/BIM/3D/mesh authoring remains with a separately requested modeling workflow; the skill does not activate Revit/Dynamo or another Level-2 skill.
 
 Four bounded Python tools support preliminary area, apparent-solar geometry, glazing-geometry and homogeneous-layer U-value comparisons. They use explicit inputs/units and make no compliance or full-simulation claim. The source map accounts for both pinned upstream packs, all fourteen calculator decisions and retained MIT notices. Jurisdiction/source applicability, assumptions, numerical results and design judgments stay distinguishable.
 

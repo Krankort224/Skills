@@ -3,9 +3,7 @@
 import ast
 import json
 import re
-import struct
 import sys
-import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
@@ -96,33 +94,6 @@ def validate(root=ROOT):
                              calculator_reference.read_text(encoding='utf-8'), re.M)
         if len(audited) != 14 or len(set(audited)) != 14:
             error('references/calculators.md', 'expected 14 unique calculator audit rows')
-    svg_path = root / 'assets/examples/pavilion-concept.svg'
-    png_path = root / 'assets/examples/pavilion-concept.png'
-    box = None
-    dimensions = None
-    if svg_path.exists():
-        try:
-            svg = ET.parse(svg_path).getroot()
-            box = [float(value) for value in svg.attrib['viewBox'].split()]
-            if len(box) != 4 or box[2] <= 0 or box[3] <= 0:
-                raise ValueError('invalid SVG viewBox')
-        except (ET.ParseError, KeyError, ValueError) as exc:
-            box = None
-            error(svg_path.relative_to(root), str(exc))
-    if png_path.exists():
-        try:
-            raw = png_path.read_bytes()
-            if raw[:8] != b'\x89PNG\r\n\x1a\n' or raw[12:16] != b'IHDR':
-                raise ValueError('invalid PNG header')
-            width, height = struct.unpack('>II', raw[16:24])
-            if width <= 0 or height <= 0:
-                raise ValueError('invalid PNG dimensions')
-            dimensions = (width, height)
-        except (ValueError, struct.error) as exc:
-            error(png_path.relative_to(root), str(exc))
-    if box is not None and dimensions is not None:
-        if abs(dimensions[0] / dimensions[1] - box[2] / box[3]) > 1e-9:
-            error('assets/examples', 'SVG/PNG aspect ratios differ')
     return {'valid': not errors, 'operation_count': len(OPERATIONS),
             'errors': errors}
 
