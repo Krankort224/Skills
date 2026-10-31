@@ -2,18 +2,18 @@
 
 ## Inputs
 
-Use the requested artifact format, audience, purpose/stage, accepted design facts, drawing/data sources and the precise architectural decisions to communicate.
+Use the requested deliverable and any selected format, audience, purpose/stage, accepted design facts, drawing/data sources and the precise architectural decisions to communicate.
 
 ## Procedure
 
-1. Read [visual delivery](../references/visual-delivery.md). Identify whether the task needs a measured/diagrammatic 2D drawing or an illustrative concept. Confirm the existing user format choice; when none exists, choose an editable SVG for precise diagrams and state that assumption.
-2. Select views that communicate function, relationships, circulation, spatial composition, facade/material intent or option differences. Use plans/sections/elevations and simple diagrams as appropriate.
-3. Author a real SVG or create/render a real raster using available tools. Do not substitute a prompt or prose. Do not create a building/BIM/3D/mesh model as an intermediate.
-4. Carry known dimensions, area definitions, orientation, legends, labels and assumptions consistently. Mark illustrative geometry and avoid a scale claim without an explicit coordinate relationship.
-5. Render the SVG for inspection; inspect the actual raster at delivery size. Check geometry/proportions, readability, label collisions/clipping, routes/relationships and agreement with the brief. Revise until the artifact communicates the decisions clearly.
-6. Separate successful export from design validation. An appealing image cannot verify measured geometry, performance or code compliance.
-7. Deliver the requested file and enough explanation to understand its precision/assumptions. Provide another format only when requested or needed for an agreed capability check.
+1. Identify what the user wants to receive and preserve any existing format choice. A concept may be discussed in text; do not infer an image/file requirement, choose SVG by default or restrict the choice to SVG/raster. Clarify an unspecified format only when it is necessary for the requested artifact.
+2. Select the information or views that communicate function, relationships, circulation, spatial composition, facade/material intent or option differences. Follow the requested presentation rather than imposing a drawing suite.
+3. Complete the requested deliverable using available appropriate tools. If a specific artifact is requested, a description or prompt alone is insufficient. Format choice does not authorize building/BIM/3D/mesh authoring, including as an intermediate.
+4. Keep known dimensions, area definitions, orientation and assumptions consistent with the brief. For drawings/images, distinguish controlled geometry from illustration and avoid unsupported scale claims.
+5. Inspect produced artifacts appropriately for their format and intended use. Read textual content for consistency; for requested drawings/images, check proportions, labels, clipping, routes and agreement with the brief. Optional SVG/raster techniques are described in [visual delivery](../references/visual-delivery.md); load them only when relevant.
+6. Separate successful formatting/export from design validation. A polished presentation cannot establish measured geometry, performance or code compliance.
+7. Deliver what was requested, with the precision/assumptions needed to interpret it. Do not add another format or require a pair of examples as a completion gate.
 
 ## Result
 
-An actual inspected SVG or raster artifact, consistent with the design brief and accompanied by material precision limits. If a required renderer/generator is unavailable, report that capability gap and provide only the work actually completed.
+The requested presentation, consistent with the design brief and accompanied by material precision limits. When an artifact is requested, deliver and inspect that artifact. If a required tool is unavailable, report the capability gap and the work actually completed; no renderer is needed for a textual concept.

@@ -74,7 +74,12 @@ def daylight(data):
     fields(data, keys)
     w, d, h, ww, wh = [number(data[k], k, positive=True) for k in keys[:5]]
     sill = number(data["window_sill_m"], "window_sill_m")
-    if ww > w or sill + wh > h:
+    head = sill + wh
+    # Allow only rounding at the scale of the binary floating-point inputs/sum.
+    exponent = math.frexp(h)[1]
+    ulp = math.ldexp(1.0, max(exponent - sys.float_info.mant_dig,
+                              sys.float_info.min_exp - sys.float_info.mant_dig))
+    if ww > w or not math.isfinite(head) or (head > h and head - h > 2 * ulp):
         raise ValueError("single rectangular window must fit the width-facing room wall")
     floor = w * d
     window = ww * wh

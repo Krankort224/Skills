@@ -39,10 +39,7 @@ def validate(root=ROOT):
         errors.append({'path': str(path), 'error': message})
 
     required = ['SKILL.md', 'agents/openai.yaml', 'THIRD_PARTY_NOTICES.md',
-                'scripts/calculators.py', 'scripts/test_calculators.py',
-                'assets/examples/pavilion-brief.md',
-                'assets/examples/pavilion-concept.svg',
-                'assets/examples/pavilion-concept.png']
+                'scripts/calculators.py', 'scripts/test_calculators.py']
     required += ['operations/' + name + '.md' for name in OPERATIONS]
     required += ['references/' + name + '.md' for name in REFERENCES]
     for name in required:
@@ -101,20 +98,31 @@ def validate(root=ROOT):
             error('references/calculators.md', 'expected 14 unique calculator audit rows')
     svg_path = root / 'assets/examples/pavilion-concept.svg'
     png_path = root / 'assets/examples/pavilion-concept.png'
-    if svg_path.exists() and png_path.exists():
+    box = None
+    dimensions = None
+    if svg_path.exists():
         try:
             svg = ET.parse(svg_path).getroot()
             box = [float(value) for value in svg.attrib['viewBox'].split()]
             if len(box) != 4 or box[2] <= 0 or box[3] <= 0:
                 raise ValueError('invalid SVG viewBox')
+        except (ET.ParseError, KeyError, ValueError) as exc:
+            box = None
+            error(svg_path.relative_to(root), str(exc))
+    if png_path.exists():
+        try:
             raw = png_path.read_bytes()
             if raw[:8] != b'\x89PNG\r\n\x1a\n' or raw[12:16] != b'IHDR':
                 raise ValueError('invalid PNG header')
             width, height = struct.unpack('>II', raw[16:24])
-            if width <= 0 or height <= 0 or abs(width / height - box[2] / box[3]) > 1e-9:
-                raise ValueError('SVG/PNG aspect ratios differ')
-        except (ET.ParseError, KeyError, ValueError, struct.error) as exc:
-            error('assets/examples', str(exc))
+            if width <= 0 or height <= 0:
+                raise ValueError('invalid PNG dimensions')
+            dimensions = (width, height)
+        except (ValueError, struct.error) as exc:
+            error(png_path.relative_to(root), str(exc))
+    if box is not None and dimensions is not None:
+        if abs(dimensions[0] / dimensions[1] - box[2] / box[3]) > 1e-9:
+            error('assets/examples', 'SVG/PNG aspect ratios differ')
     return {'valid': not errors, 'operation_count': len(OPERATIONS),
             'errors': errors}
 

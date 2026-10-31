@@ -2,7 +2,7 @@
 
 ## Inputs
 
-Use the design/visual artifacts, brief and accepted baseline, requested stage, requirement sources and calculation/execution evidence. Assess the actual artifact rather than only its creator's description.
+Use the design material, any requested artifacts, brief and accepted baseline, requested stage, requirement sources and calculation/execution evidence. Assess the actual result rather than only its creator's description; a textual concept needs no image unless the task requested one.
 
 ## Procedure
 

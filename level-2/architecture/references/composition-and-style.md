@@ -52,7 +52,9 @@ shading, glazing and climate. Avoid prescribing a fixed glass percentage as a
 universal answer. Explain conceptual judgments separately from sourced facts
 and from calculations, and identify the studies or specialist review needed.
 
-Use plans, simple elevations, annotated diagrams or 2D SVG/raster visuals to
-communicate intent. These are conceptual drawings unless measured and verified.
+Explain intent in the form requested by the user. A textual concept or comparison
+may stand alone. When drawings or visuals are requested, plans, elevations and
+annotated diagrams are possible techniques; the user's choice is not limited to
+SVG/raster. Drawings remain conceptual unless measured and verified.
 If a building model is later requested, hand over the brief, decisions, dimensions,
 assumptions and unresolved issues for a separate explicitly requested workflow.

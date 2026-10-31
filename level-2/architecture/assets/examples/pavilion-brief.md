@@ -1,6 +1,6 @@
 # Community pavilion — synthetic concept brief
 
-This fictional exhibition and community pavilion demonstrates an editable 2D concept diagram and a raster rendering of that same diagram. It is not an actual project. The SVG is the editable source; the PNG is an exported view. These are two example capabilities, not a requirement to deliver both formats for future tasks: use the format the user chooses.
+This optional fictional exhibition and community pavilion demonstrates an editable 2D concept diagram and a raster rendering of that same diagram. It is not an actual project. The SVG is the editable source; the PNG is an exported view. These retained illustrations are not prerequisites for using or validating the skill, and do not restrict the user's format choice. A concept may be textual when no artifact is requested.
 
 ## Fixed decisions
 

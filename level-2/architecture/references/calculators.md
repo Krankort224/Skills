@@ -92,6 +92,8 @@ The corrected relations were checked against [NOAA General Solar Position Calcul
 
 Required JSON numbers: `room_width_m`, `room_depth_m`, `room_height_m`, `window_width_m`, `window_height_m` all >0; `window_sill_m` ≥0. A single rectangular window must fit the wall of width `room_width_m` and height `room_height_m`: window width ≤room width and sill+height ≤room height. Inputs describe already known 2D dimensions, without creating a room/window model.
 
+For the sill-plus-height comparison only, an excess of at most two units in the last place (ULPs) of the floating-point room height is treated as equality to accommodate binary representation and addition rounding. This is a numerical tolerance, not a physical fitting allowance; width is compared directly. Inputs and outputs still use floating-point arithmetic.
+
 Outputs: `floor_area_m2 = width×depth`; `window_area_m2 = window width×height`; `room_total_internal_surface_area_m2 = 2(width×depth+width×height+depth×height)` including floor, ceiling and all wall surfaces with glazing counted once in the enclosing wall; `window_to_floor_ratio_pct`; `window_to_host_wall_ratio_pct`. Window area is the declared comparison aperture; state whether it includes frames and keep that convention fixed. **These are geometry proxies, not daylight factor, illuminance, daylight autonomy, glare, useful daylight or regulatory pass/fail.** No visibility/sky-angle, glass, reflection or obstruction simulation occurs. The source's unsupported DF formula has deliberately not been reproduced.
 
 ```json
@@ -110,4 +112,4 @@ Outputs: `layer_resistances_m2K_W` in input order, `total_resistance_m2K_W`, `u_
 
 ## Verification
 
-Run `python3 -B -m unittest discover -s level-2/architecture/scripts -p test_calculators.py -v` from the repository root (or `python3 -B -m unittest discover -s scripts -p test_calculators.py -v` from the skill directory). The local suite contains independently worked arithmetic/analytic answers, solar morning/afternoon and hemisphere directions, zero/zenith/horizon/polar boundaries, geometry fit, series resistance and CLI/schema/nonfinite/overflow failures. Seventeen tests passed during implementation. This validates the bounded arithmetic and interface; it does not validate a native simulation or any regulatory outcome.
+Run `python3 -B -m unittest discover -s level-2/architecture/scripts -p test_calculators.py -v` from the repository root (or `python3 -B -m unittest discover -s scripts -p test_calculators.py -v` from the skill directory). The local suite contains independently worked arithmetic/analytic answers, solar morning/afternoon and hemisphere directions, zero/zenith/horizon/polar boundaries, geometry fit, series resistance and CLI/schema/nonfinite/overflow failures. This validates the bounded arithmetic and interface; it does not validate a native simulation or any regulatory outcome.

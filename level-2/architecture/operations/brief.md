@@ -2,7 +2,7 @@
 
 ## Inputs
 
-Use the stated purpose/stage, users and activities, site/context, existing design, known areas/budget/schedule, selected output format and accepted requirements. Distinguish missing information from contradictory information.
+Use the stated purpose/stage, users and activities, site/context, existing design, known areas/budget/schedule, any requested deliverable/format and accepted requirements. Distinguish missing information from contradictory information.
 
 ## Procedure
 

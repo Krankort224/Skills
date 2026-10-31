@@ -1,6 +1,6 @@
 ---
 name: architecture
-description: Develop, revise, compare, present and review architectural designs through functional programs, spatial planning, composition, styles, materials and bounded analysis. Apply only when explicitly instructed to use architecture. Deliver initial concepts in the requested SVG or raster format; building/BIM/3D/mesh authoring belongs to a separate modeling task.
+description: Develop, revise, compare, present and review architectural designs through functional programs, spatial planning, composition, styles, materials and bounded analysis. Apply only when explicitly instructed to use architecture. Follow the user's chosen deliverable and format; concepts may be textual. Building/BIM/3D/mesh authoring belongs to a separate modeling task.
 ---
 
 # Architecture
@@ -16,7 +16,7 @@ Start at the requested operation. Read its procedure and only the reference sect
 | Refine a selected solution | [Development](operations/development.md) | Coordinated spatial, facade and material decisions |
 | Check a quantitative or qualitative question | [Analysis](operations/analysis.md) | Inputs, method, results, interpretation and limits |
 | Compare controllable alternatives | [Optimization](operations/optimization.md) | Feasible options and explicit trade-offs |
-| Produce the chosen visual deliverable | [Presentation](operations/presentation.md) | Actual inspected SVG or raster artifact |
+| Present the design in the requested form | [Presentation](operations/presentation.md) | Requested presentation, with appropriate inspection of any artifact |
 | Explain and hand off the design | [Documentation](operations/documentation.md) | Coordinated narrative, schedules and drawing/content requirements |
 | Assess a design against its brief/evidence | [Review](operations/review.md) | Prioritized findings and concrete corrections |
 
@@ -31,7 +31,7 @@ For a local revision, identify the accepted baseline, requested change and affec
 - Define area/occupancy/performance metrics before comparing them. Geometric area, GFA/GIA/NIA and local legal area definitions are not interchangeable. Record conversion assumptions and reject ambiguous units or incompatible definitions.
 - Describe styles by composition, proportion, spatial character, material/facade treatment and contextual fit. Use no biographies, historical surveys or person-centered routing.
 - Identify contradictions between fixed requirements before claiming a feasible solution. Show the incompatible constraints, continue independent work and identify the decision needed to proceed; do not silently relax a requirement.
-- Deliver the format requested for the current task. A visual request needs an actual SVG/raster file and inspection, not only prose or a prompt. Identify diagrammatic, dimensionally controlled and illustrative content honestly.
+- Follow the user's chosen deliverable and format for the current task. A concept request may be answered in text when no artifact is requested. Do not impose an image/file, a preset format or an automatic SVG default. Produce and appropriately inspect any requested artifact; clarify an unspecified format only when necessary to complete that deliverable. Identify diagrammatic, dimensionally controlled and illustrative content honestly.
 - Choose checks proportional to uncertainty and stage. Distinguish a prepared method, an attempted execution and usable results. Report unavailable tools, invalid inputs or failed runs without inventing results.
 
 ## Design and modeling boundary
@@ -49,7 +49,7 @@ For a later explicit modeling task, hand off the accepted geometry/dimensions, p
 | Envelope, material, daylight/solar/acoustic intent and engineering interfaces | [Performance and coordination](references/performance-and-coordination.md) |
 | Source applicability, accessibility, fire and Russian SP/GOST route | [Requirements](references/requirements.md) |
 | Parameters, constraints, data quality, alternatives and sensitivity | [Computational design](references/computational-design.md) |
-| Editable SVG, raster workflow, visual QA and precision | [Visual delivery](references/visual-delivery.md) |
+| Requested presentation, optional visual techniques, inspection and precision | [Visual delivery](references/visual-delivery.md) |
 | Supported calculators, exact schemas, units and all 14 adoption decisions | [Calculators](references/calculators.md) |
 | Pinned source-to-target map and exclusions | [Sources](references/sources.md) |
 | Borrowed-material permissions | [Third-party notices](THIRD_PARTY_NOTICES.md) |
@@ -68,7 +68,7 @@ python3 -m unittest discover -s scripts -p 'test_*.py'
 
 The standard-library Python 3 calculators provide explicit JSON-in/JSON-out preliminary area, solar-geometry, glazing-geometry and homogeneous-layer U-value calculations. Read [their contract](references/calculators.md) before selecting a method. No general daylight-factor prediction, thermal-bridge analysis, code compliance or full simulation is implied.
 
-The [synthetic pavilion brief](assets/examples/pavilion-brief.md), editable [SVG](assets/examples/pavilion-concept.svg) and rendered [PNG](assets/examples/pavilion-concept.png) demonstrate two presentation capabilities on the same constraints. They are examples, not project facts, universal design prescriptions or a requirement to deliver both formats each time. Rendering requires an available SVG renderer; numerical tools do not.
+The [synthetic pavilion brief](assets/examples/pavilion-brief.md), editable [SVG](assets/examples/pavilion-concept.svg) and rendered [PNG](assets/examples/pavilion-concept.png) are optional examples of visual techniques on the same constraints. They are not project facts, universal design prescriptions or a required sample pair. Their presence does not require a visual concept deliverable or limit the user's format choice. Rendering these examples requires an available SVG renderer; numerical tools and textual concept work do not.
 
 ## Completion and integration
 

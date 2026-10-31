@@ -77,6 +77,18 @@ class CalculatorTests(unittest.TestCase):
                 calculate("daylight", {**self.room, key: value})
         calculate("daylight", {**self.room, "window_width_m": 4, "window_height_m": 3, "window_sill_m": 0})
 
+    def test_daylight_decimal_fit_and_oversize(self):
+        room = {**self.room, "room_height_m": 2.4, "window_height_m": 1.6, "window_sill_m": 0.8}
+        result = calculate("daylight", room)
+        self.assertEqual(result["floor_area_m2"], 20)
+        self.assertAlmostEqual(result["window_area_m2"], 3.2)
+        self.assertAlmostEqual(result["room_total_internal_surface_area_m2"], 83.2)
+        self.assertAlmostEqual(result["window_to_floor_ratio_pct"], 16)
+        self.assertAlmostEqual(result["window_to_host_wall_ratio_pct"], 100 / 3)
+        for height in (1.601, 1.600000000001):
+            with self.subTest(height=height), self.assertRaises(ValueError):
+                calculate("daylight", {**room, "window_height_m": height})
+
     def test_series_resistance_known_answer(self):
         r = calculate("uvalue", self.wall)
         self.assertEqual(r["layer_resistances_m2K_W"], [2])
@@ -116,6 +128,13 @@ class CalculatorTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertTrue(json.loads(result.stdout)["preliminary"])
         self.assertEqual(json.loads(result.stdout)["inputs"], self.area)
+
+    def test_cli_daylight_decimal_fit(self):
+        room = {**self.room, "room_height_m": 2.4, "window_height_m": 1.6, "window_sill_m": 0.8}
+        result = self.run_cli("daylight", json.dumps(room))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stderr, "")
+        self.assertAlmostEqual(json.loads(result.stdout)["results"]["window_to_host_wall_ratio_pct"], 100 / 3)
 
     def test_cli_bad_json_duplicates_and_nonfinite(self):
         for raw in ["{", "[]", '{"site_area_m2":1,"site_area_m2":2}', json.dumps({**self.area, "site_area_m2": float("nan")}),
