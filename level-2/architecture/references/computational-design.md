@@ -1,62 +1,298 @@
 # Computational thinking for design decisions
 
-Use structured comparisons to make architectural choices inspectable. This is
-an aid to design judgment, not a modeling or optimization implementation. For
-eligible numerical estimates see [calculators](calculators.md); for design inputs
-see [program and space](program-and-space.md).
+Use these methods to make bounded architectural choices inspectable. Select the
+method needed by the decision; this is not a compulsory sequence or output format.
+Work with descriptions, supplied dimensions, schedules and 2D relationships.
+No solver, simulation, model or tool-specific parametric workflow is implied.
+
+## Contents
+
+- [Frame the question](#frame-the-question)
+- [Generate controllable alternatives](#generate-controllable-alternatives)
+- [Compare options consistently](#compare-options-consistently)
+- [Test sensitivity and reproducibility](#test-sensitivity-and-reproducibility)
+- [Screen data before translating it into design](#screen-data-before-translating-it-into-design)
+- [Check adjacency and access as separate relationships](#check-adjacency-and-access-as-separate-relationships)
+- [Boundary and handoff](#boundary-and-handoff)
+- [Pinned method sources and adaptation](#pinned-method-sources-and-adaptation)
 
 ## Frame the question
 
-State the decision and alternatives, for example whether two arrangements
-better balance required adjacency, usable area and daylight opportunity. Identify
-stakeholders and decisions the comparison must support. Keep the scope small
-enough for its inputs and evaluation methods to be explained and reviewed.
+**Decision and boundary.** Define what can change and what the comparison must
+decide. Entering a parameter in a table does not make it measured, legally binding
+or independently adjustable. Use [program and space](program-and-space.md) for the
+program and [requirements](requirements.md) for applicability. Sources: C1–C3, C11–C13.
 
-## Define inputs and relationships
+**Inputs.** Use the current brief, accepted baseline, site/program evidence and
+stakeholder priorities. Retain source, revision, units and uncertainty for each:
 
-- List fixed inputs with source and confidence: site, program, access and known
-  constraints. A fixed input may still be uncertain; record that uncertainty.
-- List independent choices that vary between options: for example plan
-  arrangement, orientation, entrance position or number of rooms.
-- List derived outputs and their calculation or judgment method: areas,
-  adjacency satisfaction, qualitative daylight exposure and estimated cost if
-  a defensible basis is supplied. Distinguish measured from inferred values.
-- Classify verified requirements as constraints, client preferences as goals,
-  and unresolved requirements as open questions. Do not turn an assumption
-  into a legal constraint merely by entering it in a table.
-- Set units, ranges and input provenance before comparing; reject inconsistent,
-  missing or out-of-date data, or flag the resulting limitation explicitly.
+| Role | Meaning | Example |
+| --- | --- | --- |
+| Fixed | Held constant in this comparison, possibly uncertain | Supplied enclosed area |
+| Variable | A controllable choice within a justified domain | East or west entry |
+| Derived | Recomputed or reassessed from other inputs | Circulation allowance |
+| Missing | Not established; never silently substituted | Service access requirement |
+
+**Procedure.** State the decision, affected interfaces and criteria that could
+change the choice. Trace dependencies: if usable area is derived from gross area
+and exclusions, do not vary all three independently. Separate verified hard
+constraints, unresolved prerequisites and preferences. Classify by actual authority
+and applicability, not topic: acoustic separation may be mandatory in one brief
+and preferred in another. For a conditional rule, record its trigger and the
+evidence needed to establish applicability. Evaluate known hard constraints before
+preferences; leave unknown prerequisites **unverified**, rather than passed/failed.
+Name the responsible source or decision-maker for each material unresolved input.
+
+**Alternatives and checks.** If fixed requirements conflict, identify the smallest
+known conflict and the decision needed to resolve it. Continue unaffected work or
+explicit conditional branches. Do not silently relax a requirement or apply a
+generic legal hierarchy. Check units, area definitions, valid domains and dependency
+direction. A plausible dimensional range does not establish engineering feasibility.
+A narrow revision may require only changed inputs and their affected interfaces.
+
+**Worked example.** A hypothetical brief fixes 600 m² enclosed area, 450 m² usable
+program and 90 m² services/walls on the same measurement basis. The derived
+circulation allowance is 600−450−90=60 m². Option A needs 70 m²: it exceeds the
+allowance by 10 m² and is infeasible under those fixed inputs. If 90 m² is only
+provisional, A remains conditional pending a defensible revision; an attractive
+entrance does not offset the unresolved area conflict.
+
+## Generate controllable alternatives
+
+**Decision and boundary.** Explore different organizing choices before refining
+small dimensions. Generate a bounded, explainable set manually; this does not
+implement a generator or guarantee complete design-space coverage.
+Sources: C1, C3–C5, C9–C10, C18–C20.
+
+**Inputs.** Use framed constraints, an accepted concept where applicable, controllable
+variables, justified domains, evaluation effort and a common comparison basis.
+Separate organizational choices (shared hall/distributed circulation), dimensional
+choices (bay depth) and presentation choices (color/rendering).
+
+**Procedure.** Select variables that materially affect the decision and explain
+their architectural mechanism. Define meaningful levels/categories and dependencies.
+Distinguish all combinations of choices from pairing corresponding list entries.
+Filter known hard-constraint failures, preserve prerequisite flags and retain
+rejection reasons. Give options stable identifiers/revisions and describe what
+actually differs. Include the baseline where useful. State which change is expected
+to help which criterion and what it might worsen. Reassess after revising an option;
+do not attach old results to its new revision.
+
+**Alternatives and checks.** Enumerate a small meaningful domain, or sample a larger
+one with explicit gaps and extremes/intermediate cases. Include different organizing
+ideas while the concept is open; cosmetic variants do not test spatial alternatives.
+Stop adding options when they repeat known trade-offs, or identify the unexplored
+area that could still change the decision. Stable scores or repeated similar
+options do not establish a global optimum.
+
+**Worked example.** Two permitted entrance sides combined with either a shared hall
+or perimeter corridor give four intended combinations, not two paired combinations.
+West-entry/shared-hall routes deliveries through public gathering space, failing a
+verified separation requirement; reject it. East-entry/shared-hall retains communal
+focus. The corridor options offer independent quiet-room access with more circulation.
+Keep those three to test communal-space/privacy trade-offs on the same program.
+
+**Optional facade reasoning.** From supplied 2D elevations/schedules, compare an
+unaltered rhythm, repeated nominal bays and repetition with explicit exceptions.
+Check entry emphasis, opening alignment and departures from composition as well as
+type counts. Eight bays at 1.20 m and four at 1.25 m total 14.60 m with two nominal
+widths. Twelve at 1.20 m total 14.40 m: the unexplained 0.20 m prevents calling this
+equivalent. Retain an exception or revise spacing explicitly. Nominal repetition
+alone proves neither shared fabrication tooling, fit, cost savings nor constructability.
+Do not import curvature formulas, engineering limits or fabrication tolerances.
 
 ## Compare options consistently
 
-Use the same boundary, program and assumptions across options. Name the option,
-its parameter values and revision, method, output units, missing information,
-and the criteria used. Include a simple table and drawings where useful. Avoid
-false numerical precision and do not combine unlike measurements into a score
-without explaining normalization, weights, stakeholders and omissions.
+**Decision and boundary.** Expose feasible trade-offs and why a direction is
+preferred. Scores support judgment; they establish neither overall architectural
+quality nor compliance. Sources: C5–C8, C10, C13–C17.
 
-Describe conflicts rather than hide them in one ranking: an option can improve
-adjacency while reducing privacy or increasing exposed facade. A calculation
-is conditional on its inputs and method; a qualitative judgment needs its
-rationale. Mark infeasible or unverified options and state why. The choice
-remains a design decision, with client and specialist involvement as needed.
+**Inputs.** Match program, measurement boundary, evidence date and evaluation method.
+Define criterion units or qualitative rubrics, preference direction, uncertainty
+and omissions. Name proxies honestly: exterior-wall contact is an opening
+opportunity, not daylight performance. Use [calculators](calculators.md) only within
+its exact schemas and limits.
+
+**Procedure.** Show constraint failures and unverified prerequisites first. Compare
+eligible options criterion by criterion with raw values and explanations. Define
+observable qualitative distinctions, such as quiet-room access through an event
+space versus independent access; do not invent precise distances between categories.
+One option dominates another only if at least as good on every comparable criterion
+and strictly better on one. Call an option **non-dominated within the evaluated
+set** when none dominates it; this says nothing about unexplored designs.
+Missing evidence cannot establish dominance; uncertain small differences may be ties.
+A recommendation of the only currently verified feasible option does not prove
+an optimum, even within the evaluated set: unresolved prerequisites or undecided
+preferences can change which option is eligible or preferred.
+
+If aggregation helps, disclose stakeholders, weights and normalization. For a
+minimizing metric, a declared range L to H gives penalty (x−L)/(H−L); for maximizing,
+use (H−x)/(H−L), so lower is consistently preferred. State whether bounds are project
+reference values or this set's extrema. Equal bounds have no discriminating scale:
+omit that criterion from aggregation and explain. Do not silently clip out-of-range
+results. A weighted sum permits compensation between preferences, never a failed
+hard constraint. Avoid counting the same benefit twice through correlated metrics.
+
+**Alternatives and checks.** Use raw comparisons, agreed priority order or aspiration
+filters when weights lack meaning. Retain raw values even with scores. Check
+plausible stakeholder weights and alternate normalization bounds: adding an option
+can change candidate-set extrema and the ranking. Preserve omitted qualitative
+considerations and unresolved prerequisite flags alongside any preferred direction.
+
+**Worked example.** A has 40 m² circulation and four of six preferred direct links;
+B has 50 m² and six links; C has 55 m² and four links, on one common boundary.
+A dominates C on these criteria; A and B trade area for links. Declared comparison
+bounds 40–60 m² and 0–6 links give penalties A=(0,1/3), B=(1/2,0).
+With circulation weight w, A scores (1−w)/3 and B scores w/2: tie at w=0.4.
+Above 0.4 A ranks first; below it B ranks first. This exposes preference sensitivity,
+but does not justify treating links of different importance as equivalent.
 
 ## Test sensitivity and reproducibility
 
-Change one uncertain input at a time over a plausible, explicitly stated range,
-recalculate or reassess consistently, and show whether the preference changes.
-Where interactions matter, also test meaningful combinations. Sensitivity is
-not a probability forecast and cannot compensate for missing evidence.
+**Decision and boundary.** Find uncertainties that could reverse the choice and
+the evidence worth obtaining next. Scenario testing is conditional reasoning,
+not a probability forecast or proof of robustness. Sources: C3, C6–C10.
 
-Keep the input data, source dates, definitions, formulas where applicable,
-assumptions, option identifiers and revisions, output table and limitations
-together so another person can repeat the comparison. Identify which results
-are approximate and which require simulation or specialist verification.
+**Inputs.** Retain option revisions, input provenance, formulas/rubrics and baseline.
+Choose ranges/categories from actual project uncertainty, not a generic percentage.
+Distinguish uncertain evidence, controllable choices and stakeholder preferences.
+
+**Procedure.** Change one uncertain independent input at a time, holding the others
+constant and recomputing dependent quantities. Record changes in feasibility,
+ranking and the qualitative reason for selection. Locate a switch point where
+the method supports one and state precision. Then test meaningful combinations
+when inputs interact: entry location plus operating hours, or circulation type
+plus event use. Avoid impossible combinations of correlated inputs. If new evidence
+changes the evaluation method itself, disclose that method revision separately.
+
+**Alternatives and checks.** Use conservative/central/expanded-program scenarios
+when evidence cannot justify a continuous range. Report known constraint margins
+and separate common risks from option-specific ones. State conditions under which
+a preference holds and the evidence needed to resolve it. If all options fail,
+revisit the conflict instead of lowering thresholds silently. Keep enough inputs,
+dates, definitions, arithmetic, judgments and limitations with the decision for
+another reader to repeat it in the project's existing format.
+
+**Worked example.** Hall A provides 120 m² activity space but passage crosses it;
+B provides 105 m² with independent access. A supplied event brief requires 100 m²
+clear activity space. Reserving 15 m² of A for passage leaves 105 m²: both meet
+that area requirement. Concurrent use requiring 25 m² passage leaves A with 95 m²,
+failing by 5 m²; B retains 105 m². The interaction is concurrency with access, not
+simply hall size. If passage and events never coincide, A remains a candidate;
+verify the operating schedule before rejecting it outright.
+
+## Screen data before translating it into design
+
+**Decision and boundary.** Determine what data can support before it changes
+program, access or layout. Evidence may support a design hypothesis without
+establishing demand, causation, legal boundaries or future behavior.
+Sources: C2, C14, C16–C17. This is not a sensor/GIS deployment.
+
+**Inputs.** Identify owner, collection period/date, location, coverage, sampling
+method, definitions, units, processing, permissions and omissions. Distinguish
+observations, estimates, inferred proxies and judgments. For spatial evidence,
+record CRS, reference/origin, scale and positional accuracy; do not measure
+design distances directly from unexamined longitude/latitude coordinates.
+
+**Procedure.** Inspect completeness, duplicates, impossible values, sensor flatlines,
+timestamp/time-zone alignment and gaps. Compare periods/locations before combining
+data. Check spatial alignment against known references and identify absent features
+or populations. Record exclusions/transformations. Preserve missing observations
+unless explicit justified imputation suits the question. Check representativeness,
+then state observation → interpretation → proposed design response. For each arrow,
+identify an alternative explanation and a check capable of refuting it. Use
+aggregation appropriate to actual permissions; adopt no generic bin sizes,
+retention periods or claimed anonymization guarantees from a design reference.
+
+**Alternatives and checks.** Triangulate with observations, a survey, another source
+or a conditional scenario. Obtain better evidence when accuracy is inadequate;
+use broader zones instead of false dimensional precision. Wi-Fi devices are not
+people, CO₂ alone is not occupancy, mapped paths are not verified access rights,
+and old footprints are not surveyed current boundaries. State bias/transfer limits.
+
+**Worked example.** A supplied counter records 80 east-entry and 20 west-entry
+passages during an ordinary weekday. Equal observation duration suggests an east
+emphasis, but the west gate was closed for half that period. Dividing west counts
+by open time assumes constant arrival rate; without hourly data this correction
+is unsupported. Retain east-led and west-linked options, obtain open-gate/event
+observations, and avoid sizing the west entry on a claim of one-fifth future use.
+
+## Check adjacency and access as separate relationships
+
+**Decision and boundary.** Expose spatial connections, segregation and route
+dependencies using a small graph/table. This is bounded topological reasoning
+informed by space-syntax concepts, not axial/visibility simulation, human-behavior
+prediction, accessible-route verification or egress assessment.
+Sources: C2, C11–C13, C15.
+
+**Inputs.** Name spaces/zones and the tested relationship: shared boundary, direct
+door access, visibility, preferred proximity or required separation. Record source
+and status. Keep desired relationships separate from each option's actual/proposed
+connections; unknown links stay unknown.
+
+**Procedure.** Use one row per unordered pair or a symmetric adjacency matrix,
+checking for double counts. Keep required/preferred links distinct; never interpret
+a separation instruction as a traversable edge. Build an access graph only from
+usable door/passage links under the stated operating condition. Declare direction,
+closed/restricted-door handling and vertical links. Count connections or minimum
+intervening links by inspection for a small graph; unreachable destinations have
+no finite link count. Match nodes, boundary and operating condition across options.
+Check the actual 2D arrangement: a graph does not establish dimensions, packing or fit.
+
+**Alternatives and checks.** Examine event/ordinary or staff/public access separately
+when links differ. Summarize preferred links with an explicit denominator only if
+useful; required failures remain visible. With no preferences the score is not
+applicable, not perfect. Degree/link counts alone establish neither privacy,
+distance, wayfinding success, congestion nor safety. A visibility graph would
+change the representation and evidence required.
+
+**Worked example.** Nodes entrance E, lobby L, hall H and quiet room Q have links
+E–L, L–H, H–Q in A and E–L, L–H, L–Q in B. E-to-Q needs three links in A and
+two in B. Closing the hall during events makes Q unreachable in A while B keeps
+access. That supports B for independent access under that condition. It does not
+prove B has a shorter measured route or is quieter: check dimensions, permissions
+and acoustic separation independently.
 
 ## Boundary and handoff
 
-Use descriptive parameters and 2D diagrams here. Do not author building, BIM,
-3D or mesh models, or implement a tool-specific parametric workflow. When a
-model is later explicitly requested, provide the selected concept, dimensions,
-coordinate and unit assumptions, source data, revision, unresolved issues and
-required checks as a handoff for the separately requested workflow.
+Use descriptive parameters and 2D diagrams here. Do not author building, BIM, 3D
+or mesh models, implement search/clustering algorithms, write tool scripts or
+activate modeling workflows. Eligible arithmetic follows the exact
+[calculator contract](calculators.md); no simulation, engineering sizing,
+fabrication validation or compliance conclusion follows from these methods.
+For a later explicitly requested modeling task, hand off the selected concept,
+dimensions, coordinates/units, source data/revisions, unresolved decisions and
+required checks. A prepared method is distinct from an executed result.
+
+## Pinned method sources and adaptation
+
+All C sources below were read in selected substantive sections at upstream revision
+`7a090c9ddc92e441b1419910673edbcfa7a962ed` of
+Abhinavbwj/Claude-skills-for-Computational-Designers. Links identify actual source
+sections, not adopted activation, routing or defaults. Methods above are bounded
+adaptations. No upstream code or engineering/compliance example is implemented.
+See [sources](sources.md) for the shared map and
+[third-party notices](../THIRD_PARTY_NOTICES.md) for permissions.
+
+| ID | Exact pinned file / representative selected section | Local treatment |
+| --- | --- | --- |
+| C1 | [cd-foundations/SKILL.md: 6.1 Over-Parametrization](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/cd-foundations/SKILL.md#61-over-parametrization) | Adapt question-first exploration and inspectable evaluation; no parameter quotas. |
+| C2 | [cd-foundations/references/core-concepts.md: 1.4 Graphs (Nodes and Edges)](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/cd-foundations/references/core-concepts.md#14-graphs-nodes-and-edges) | Adapt named properties, intervals and graph relationships; no model/engineering uses. |
+| C3 | [parametric-modeling/SKILL.md: 1.4 Parameter Identification: Independent vs. Dependent Variables](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/parametric-modeling/SKILL.md#14-parameter-identification-independent-vs-dependent-variables) | Adapt dependencies, ranges and sensitivity; replace generic constraint hierarchy with actual authority. |
+| C4 | [parametric-modeling/references/data-structures.md: 5.2 Panel Generation Example](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/parametric-modeling/references/data-structures.md#52-panel-generation-example) | Adapt deliberate combinations and option identity; exclude tree/tool operations. |
+| C5 | [generative-design/SKILL.md: 5.5 Design of Experiments (DOE)](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/generative-design/SKILL.md#55-design-of-experiments-doe) | Adapt generate/evaluate/revise, sampling and set-relative dominance; no global-front claim. |
+| C6 | [generative-design/references/fitness-functions.md: 2.1 Min-Max Normalization](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/generative-design/references/fitness-functions.md#21-min-max-normalization) | Adapt transparent scaling, priorities and proxy/uncertainty checks; no clipping or example thresholds. |
+| C7 | [generative-design/references/evolutionary-algorithms.md: 7.6 Deb's Feasibility Rules](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/generative-design/references/evolutionary-algorithms.md#76-debs-feasibility-rules) | Adapt feasibility before preference; convergence diagnostics reference-only, no robustness claim. |
+| C8 | [optimization-methods/SKILL.md: Result Validation](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/optimization-methods/SKILL.md#result-validation) | Adapt baseline/independent checks; exclude engineering optimization and generic perturbation defaults. |
+| C9 | [optimization-methods/references/algorithm-catalog.md: Strengths and Weaknesses](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/optimization-methods/references/algorithm-catalog.md#strengths-and-weaknesses) | Reference-only algorithm-limit screening; no solver selection, implementation or convergence guarantee. |
+| C10 | [optimization-methods/references/implementation-guide.md: Result Interpretation](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/optimization-methods/references/implementation-guide.md#result-interpretation) | Adapt reviewable trade-offs and bounded effort; exclude setup, exports, code and budget defaults. |
+| C11 | [design-automation/SKILL.md: 3.6 Soft vs. Hard Constraints](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/design-automation/SKILL.md#36-soft-vs-hard-constraints) | Adapt human selection and hard/preference separation; reject generic jurisdiction ordering. |
+| C12 | [design-automation/references/rule-systems.md: 5.5 Constraint Relaxation](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/design-automation/references/rule-systems.md#55-constraint-relaxation) | Adapt conditional rules, conflict exposure and metadata; exclude code tables, engine and automatic relaxation. |
+| C13 | [design-automation/references/space-planning.md: 1.1 Basic Adjacency Matrix](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/design-automation/references/space-planning.md#11-basic-adjacency-matrix) | Adapt typed relationships/counts; reject inferred daylight, efficiency targets and graph-as-fit proof. |
+| C14 | [data-driven-design/SKILL.md: 1.3 The Data-to-Design Pipeline](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/data-driven-design/SKILL.md#13-the-data-to-design-pipeline) | Adapt provenance and inference chain; exclude universal privacy/retention defaults and model integration. |
+| C15 | [data-driven-design/references/space-syntax.md: 11. Limitations and Criticisms](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/data-driven-design/references/space-syntax.md#11-limitations-and-criticisms) | Adapt link/depth reasoning and representation limits; no simulation or behavioral correlations adopted. |
+| C16 | [data-driven-design/references/sensor-data.md: 3.3 Data Quality Checks](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/data-driven-design/references/sensor-data.md#33-data-quality-checks) | Adapt representative sampling and gap checks; no automatic filling or sensor placement defaults. |
+| C17 | [data-driven-design/references/gis-integration.md: 6. Data Quality and Validation](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/data-driven-design/references/gis-integration.md#6-data-quality-and-validation) | Adapt spatial alignment/provenance checks; no GIS pipeline, preferred CRS or presumed survey accuracy. |
+| C18 | [facade-computation/SKILL.md: 2.4 Panel Optimization](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/facade-computation/SKILL.md#24-panel-optimization) | Adapt nominal repetition versus intent; reject universal fabrication targets/tolerances. |
+| C19 | [facade-computation/references/rationalization-techniques.md: 9.1 Cost Model](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/facade-computation/references/rationalization-techniques.md#91-cost-model) | Adapt whole-scope caution: type count alone is not cost; exclude curvature formula, prices and engineering limits. |
+| C20 | [facade-computation/references/panelization-methods.md: 3.1 Feature Vector Definition](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/facade-computation/references/panelization-methods.md#31-feature-vector-definition) | Adapt declared family attributes; exclude clustering, shared-template claims, BIM and fabrication schedules. |

@@ -7,7 +7,7 @@ Use the available brief, site/context, accepted decisions, requested result and 
 ## Procedure
 
 1. State a small set of architectural organizing ideas tied to function and context: arrangement, public/service relationship, arrival, circulation, enclosure, light and outward expression.
-2. Read [composition and style](../references/composition-and-style.md) and relevant [program](../references/program-and-space.md) sections. Give alternatives meaningful differences; avoid cosmetic variations presented as different concepts.
+2. Use [context and arrival](../references/composition-and-style.md#how-should-the-design-respond-to-site-and-arrival) and [parti comparison](../references/composition-and-style.md#how-can-different-partis-be-generated-and-compared), with the relevant program relationship. Change organizing relationships between options; test each against the same brief instead of presenting cosmetic variants.
 3. Explain zoning, adjacency, massing intent and facade rhythm in the form requested for the task. A textual concept or comparison is sufficient when no artifact is requested. Work within known geometry and identify any dimensions still provisional.
 4. Compare functional consequences, area/footprint implications, contextual fit, orientation/light opportunities, structure/services reservations and material expression. Distinguish verified constraints from aspirations.
 5. Explain stylistic direction through proportion, composition, material/facade decisions and spatial character. Do not route by architects, biographies or historical narratives.
