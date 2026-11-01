@@ -13,8 +13,7 @@ OPERATIONS = ('brief', 'concept', 'development', 'analysis', 'optimization',
               'presentation', 'documentation', 'review')
 REFERENCES = ('program-and-space', 'composition-and-style',
               'performance-and-coordination', 'requirements',
-              'computational-design', 'visual-delivery', 'calculators', 'sources',
-              'normative-catalog', 'normative-routes')
+              'computational-design', 'visual-delivery', 'calculators', 'sources')
 NORMATIVE_GROUPS = ('federal-framework', 'territory-and-special-conditions',
                     'building-typologies', 'fire-and-accessibility',
                     'environment-and-interfaces')
@@ -46,7 +45,10 @@ def validate(root=ROOT):
                 'scripts/calculators.py', 'scripts/test_calculators.py']
     required += ['operations/' + name + '.md' for name in OPERATIONS]
     required += ['references/' + name + '.md' for name in REFERENCES]
-    required += ['references/normative/' + name + '.md'
+    required += ['references/normative/index.md', 'references/normative/ru/index.md',
+                 'references/normative/ru/applicability.md',
+                 'references/normative/ru/routes.md']
+    required += ['references/normative/ru/' + name + '.md'
                  for name in NORMATIVE_GROUPS]
     for name in required:
         if not (root / name).is_file():
@@ -103,14 +105,20 @@ def validate(root=ROOT):
         if len(audited) != 14 or len(set(audited)) != 14:
             error('references/calculators.md', 'expected 14 unique calculator audit rows')
     record_count = 0
-    for name in NORMATIVE_GROUPS:
-        path = root / 'references/normative' / (name + '.md')
-        if not path.is_file():
+    normative = root / 'references/normative'
+    for path in sorted(normative.rglob('*.md')):
+        # These pages route or explain the catalogue, rather than hold records.
+        if path.name in ('index.md', 'routes.md', 'applicability.md'):
             continue
         records = 0
         for section in re.split(r'(?m)^## ', path.read_text(encoding='utf-8'))[1:]:
             title, _, body = section.partition('\n')
-            if not any('**' + field + ':**' in body for field in RECORD_FIELDS):
+            # Existing record headings are stable, hyphenated identifiers with
+            # a number. Recognize those even if every field has been removed;
+            # fields also identify records with a different heading convention.
+            has_field = any('**' + field + ':**' in body for field in RECORD_FIELDS)
+            record_heading = re.fullmatch(r'(?=[a-z0-9-]*\d)[a-z0-9]+(?:-[a-z0-9]+)+', title)
+            if not (has_field or record_heading):
                 continue
             records += 1
             for field in RECORD_FIELDS:
@@ -120,7 +128,7 @@ def validate(root=ROOT):
                 error(path.relative_to(root), title + ': source link missing')
             if not re.search(r'Checked \d{4}-\d{2}-\d{2}', body):
                 error(path.relative_to(root), title + ': verification date missing')
-        if not records:
+        if path.parent == normative / 'ru' and path.stem in NORMATIVE_GROUPS and not records:
             error(path.relative_to(root), 'no populated normative records')
         record_count += records
     return {'valid': not errors, 'operation_count': len(OPERATIONS),

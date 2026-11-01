@@ -47,15 +47,8 @@ For a later explicit modeling task, hand off the accepted geometry/dimensions, p
 | Program, typology, areas, adjacency, circulation | [Program and space](references/program-and-space.md) |
 | Organizing idea, proportion, styles and comparison | [Composition and style](references/composition-and-style.md) |
 | Envelope, material, daylight/solar/acoustic intent and engineering interfaces | [Performance and coordination](references/performance-and-coordination.md) |
-| Source applicability, accessibility, fire and Russian SP/GOST route | [Requirements](references/requirements.md) |
-| Confirmed Russian project: choose specific records from the actual task conditions | [Task-to-record routes](references/normative-routes.md) |
-| Russian work/stage and timing; alteration or common property | [Work and timing](references/normative-routes.md#work-and-timing); [existing premises](references/normative-routes.md#existing-premises) |
-| Russian parcel/planning, local and protected/special conditions | [Territory routes](references/normative-routes.md#territory-and-protection) |
-| Russian host/embedded-use typology or area definition | [Use and area routes](references/normative-routes.md#use-and-area) |
-| Russian escape, fire, inclusive access or security | [Safety/access routes](references/normative-routes.md#safety-and-access) |
-| Russian sanitary, light/noise/thermal/climate and engineering interfaces | [Environmental routes](references/normative-routes.md#environment-and-interfaces) |
-| Russian project/working-documentation composition | [Documentation routes](references/normative-routes.md#documentation) |
-| Russian normative coverage, discovery authorities and evidence gaps | [Normative catalog](references/normative-catalog.md) |
+| Source applicability, accessibility, fire and jurisdiction selection | [Requirements](references/requirements.md) |
+| Normative source selection for the project's actual jurisdiction | [Jurisdiction modules](references/normative/index.md), selected through [requirements](references/requirements.md#select-a-jurisdiction-module) |
 | Parameters, constraints, data quality, alternatives and sensitivity | [Computational design](references/computational-design.md) |
 | Requested presentation, optional visual techniques, inspection and precision | [Visual delivery](references/visual-delivery.md) |
 | Supported calculators, exact schemas, units and all 14 adoption decisions | [Calculators](references/calculators.md) |
@@ -64,8 +57,9 @@ For a later explicit modeling task, hand off the accepted geometry/dimensions, p
 
 Read calculator source only for debugging/modification; its contract and help own normal use. Do not load all source packs or references merely to become familiar with architecture.
 
-For Russian source work, use the matching route section to select individual
-record anchors. Apply [complete selective reading](references/requirements.md#complete-selective-reading): retrieve each selected record to its boundary and recover any truncated output before relying on it. Do not print entire thematic files as the default retrieval step.
+For normative source work, select the project's jurisdiction module through
+[requirements](references/requirements.md#select-a-jurisdiction-module), then use
+its matching task route to select individual record anchors. Apply [complete selective reading](references/requirements.md#complete-selective-reading): retrieve each selected record to its boundary and recover any truncated output before relying on it. Do not print entire thematic files as the default retrieval step.
 
 ## Tools
 

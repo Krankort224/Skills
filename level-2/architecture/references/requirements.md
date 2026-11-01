@@ -12,15 +12,17 @@ Eurocode or any other code as a default.
 - [Accessibility and inclusive use](#accessibility-and-inclusive-use)
 - [Fire and life safety](#fire-and-life-safety)
 - [Primary normative sources](#primary-normative-sources)
-- [Russia-specific source selection](#russia-specific-source-selection)
+- [Select a jurisdiction module](#select-a-jurisdiction-module)
+- [Selection outcomes](#selection-outcomes)
 - [Complete selective reading](#complete-selective-reading)
 - [Deliver the open issues](#deliver-the-open-issues)
 
 ## Establish applicability
 
-Ask for project location and authority, building use and occupancy, new build or
-alteration, scope, height and scale, project stage, and any client or authority
-requirements already supplied. Record what is known and what is assumed.
+Reuse supplied project location and authority, building use and occupancy, work
+type/scope, height and scale, stage and client/authority requirements. Ask only
+for missing facts that materially change selection. Record what is known and
+what is assumed.
 Confirm applicable law, adopted code edition, amendments, effective dates,
 transitional provisions, use classification and any approvals with the relevant
 authority and qualified local professionals. Private standards or client targets
@@ -82,6 +84,11 @@ and its precise evidence limit; do not replace it with a convenient mirror or
 silently preserve claims supported only by that mirror. Narrow or leave the
 affected field unresolved.
 
+Keep the shared catalog a current-document navigator, without revision
+timelines, amendment inventories or predecessor chains. If a project date
+requires an older edition or transition, inspect the external primary source
+for that decision and store the conclusion with the project owner.
+
 For a discovery record, check the claims actually retained: identity, source,
 subject, object/work/territorial conditions, important scope exclusions and
 supported edition/status observations. Missing critical identity or scope
@@ -92,51 +99,23 @@ edition/application basis when the design decision requires them. A supplied
 project brief can own project requirements; a supplied normative copy still
 requires source-authority assessment.
 
-## Russia-specific source selection
+## Select a jurisdiction module
 
-When Russia is confirmed, select the matching question/condition from
-[task-to-record routes](normative-routes.md), then use its specific record links.
-The [catalog](normative-catalog.md) owns coverage and discovery-source limits.
-The catalog's Russian adaptation target does
-not assign Russia to every future task. Do not read every record for a local
-decision.
+Reuse the project's supplied location and responsible authority. Select the
+matching implemented module from the [jurisdiction index](normative/index.md).
+Load that module's selection procedure and task routes only when its
+jurisdiction matches the project. Regional and municipal selection then follows
+the actual project location within that module.
 
-1. Establish the actual subject: address/municipality and parcel, host and
-   embedded uses, users, work classification, height/depth/scale, existing
-   conditions, design stage and relevant project dates. Distinguish premises
-   alteration, reconstruction and capital repair; a user's word “renovation”
-   alone does not settle the legal classification. Retain fixed project facts
-   and identify only missing conditions material to selection.
-2. Select the relevant [work/stage](normative-routes.md#work-and-timing) record;
-   then screen territory, typology, fire/accessibility, sanitary/environmental
-   and engineering-interface branches against the actual task. Include
-   adjacent documents where a changed entrance, use, envelope or route affects
-   them. Check both the host building and an embedded function.
-3. Read each candidate record completely using [selective reading](#complete-selective-reading), including its scope, exclusions and verification limits. Check normative links under [primary sources](#primary-normative-sources).
-   Follow the linked official text/register to the relevant provision and
-   necessary amendments, replacement and commencement evidence. A registry
-   abstract supports discovery, not every detailed rule. An active badge,
-   search excerpt or agency-hosted old commercial text cannot establish a
-   current provision. Keep inconsistent status/replacement fields unresolved.
-4. Establish the application basis for the selected provision and project
-   date: direct legal/sanitary/fire obligation, a documented technical safety
-   route, or a project/contract requirement. The post-2024 construction
-   requirements mechanism, fire mechanism and any historical transitions need
-   separate checks in the federal record. Do not classify a whole SP/GOST as
-   universally mandatory or voluntary from its title, registration or an old
-   list. Do not infer that a missing registry search result removes a statutory
-   duty. An alternative substantiation route needs an actual justified project
-   decision, not a shortcut around a constraint.
-5. Select the edition for the actual work/stage/date and scope of intervention.
-   Compare any transition provisions, approved baseline and establishing acts.
-   A newer edition does not automatically replace the project's justified
-   basis; an old supplied standard does not freeze the applicable requirements.
-   Retrieve the missing authoritative evidence before resolving a conflict.
-6. Assign a selection outcome below and identify the source fragment, factual
-   trigger, edition/date condition and remaining question. Store the result in
-   the existing project's requirements/source record, with its design response
-   and owner. Keep shared discovery metadata in the catalog; do not create a
-   parallel project-fact store.
+If jurisdiction is unknown, identify the missing location/authority and leave
+dependent normative conclusions open while independent design continues. If the
+jurisdiction is known but no module is implemented, report that coverage gap
+and use its actual primary sources or local expertise for the task. Never
+silently substitute another jurisdiction's catalog. Russia is currently the
+only implemented module; language, currency and architectural style do not
+select it.
+
+## Selection outcomes
 
 | Selection outcome | Required reasoning |
 | --- | --- |
@@ -151,27 +130,17 @@ application remains unresolved. Absence of an unknown height, fire class or site
 zone is not proof of absence of its requirements. Continue independent design
 work with explicit assumptions while retaining dependent conclusions as open.
 
-### Apply the route to a bounded change
-
-For a relocated entrance in an existing apartment building, first retain the
-accepted layout and identify whether the change affects common property,
-load-bearing elements, façade, access, evacuation or an embedded public use.
-Check the housing/work-classification route and local/heritage conditions;
-screen residential/public typology and fire/accessibility together. If the
-municipality, scope of intervention or approvals are unknown, select potential
-sources and leave their affected provisions unresolved. Do not silently treat
-the task as either new construction or harmless interior decoration.
-
 ## Complete selective reading
 
 Select the architectural question and material project conditions before
-retrieval. Use the [route index](normative-routes.md) to identify specific
-record anchors; use thematic contents only for unmatched questions. The route
-index is navigation, not a substitute for the owning record or selected law.
+retrieval. Use the selected [jurisdiction module](normative/index.md)'s task routes to
+identify specific record anchors; use thematic contents only for unmatched
+questions. A route index is navigation, not a substitute for the owning record
+or selected law.
 
 1. Locate the selected heading and the next heading of the same or higher
    level with the available heading/search tool. In a local checkout, for
-   example, `rg -n '^## ' references/normative/building-typologies.md` returns
+   example, `rg -n '^## ' <selected-thematic-file>` returns
    current record boundaries without printing the file. Do not reuse line
    numbers from an older revision.
 2. Retrieve from the selected heading through the line before the next

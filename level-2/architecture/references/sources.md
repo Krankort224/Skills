@@ -48,7 +48,8 @@ Further modeling work requires a later explicit request and a separate handoff.
 
 ## Russian normative evidence
 
-The [normative catalog](normative-catalog.md) contains discovery and applicability
+The [jurisdiction index](normative/index.md) exposes implemented modules only.
+The [Russian catalog](normative/ru/index.md) contains discovery and applicability
 metadata, checked at the record's stated boundary/date. It is not imported from
 upstream country digests or the Architecture coursework library. Normative links
 follow the [primary-source contract](requirements.md#primary-normative-sources):
@@ -57,4 +58,7 @@ Government-hosted third-party consolidations and other mirrors are not retained
 as normative links. Notices/explanations are identified for their own publishing
 role. Each thematic record owns its supported scope/status and access limits;
 secondary-only statements are narrowed rather than relabeled as primary checks.
-Detailed project provisions are checked when selected. Full texts stay external.
+The Russian [selection procedure](normative/ru/applicability.md) owns local
+mechanisms; shared rules and outcomes remain in requirements. This is a
+current-document navigator, without revision archives. Detailed project
+provisions are checked when selected. Full texts stay external.
