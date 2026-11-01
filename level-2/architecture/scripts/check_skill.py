@@ -13,7 +13,13 @@ OPERATIONS = ('brief', 'concept', 'development', 'analysis', 'optimization',
               'presentation', 'documentation', 'review')
 REFERENCES = ('program-and-space', 'composition-and-style',
               'performance-and-coordination', 'requirements',
-              'computational-design', 'visual-delivery', 'calculators', 'sources')
+              'computational-design', 'visual-delivery', 'calculators', 'sources',
+              'normative-catalog')
+NORMATIVE_GROUPS = ('federal-framework', 'territory-and-special-conditions',
+                    'building-typologies', 'fire-and-accessibility',
+                    'environment-and-interfaces')
+RECORD_FIELDS = ('Identity', 'Authority', 'Scope', 'Edition/status',
+                 'Application basis', 'Related', 'Verification')
 LINK = re.compile(r'!?\[[^\]\n]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)')
 DEFINITION = re.compile(r'^\s{0,3}\[[^\]\n]+\]:\s*<?([^\s>]+)>?', re.M)
 
@@ -40,6 +46,8 @@ def validate(root=ROOT):
                 'scripts/calculators.py', 'scripts/test_calculators.py']
     required += ['operations/' + name + '.md' for name in OPERATIONS]
     required += ['references/' + name + '.md' for name in REFERENCES]
+    required += ['references/normative/' + name + '.md'
+                 for name in NORMATIVE_GROUPS]
     for name in required:
         if not (root / name).is_file():
             error(name, 'required file missing')
@@ -94,8 +102,29 @@ def validate(root=ROOT):
                              calculator_reference.read_text(encoding='utf-8'), re.M)
         if len(audited) != 14 or len(set(audited)) != 14:
             error('references/calculators.md', 'expected 14 unique calculator audit rows')
+    record_count = 0
+    for name in NORMATIVE_GROUPS:
+        path = root / 'references/normative' / (name + '.md')
+        if not path.is_file():
+            continue
+        records = 0
+        for section in re.split(r'(?m)^## ', path.read_text(encoding='utf-8'))[1:]:
+            title, _, body = section.partition('\n')
+            if not any('**' + field + ':**' in body for field in RECORD_FIELDS):
+                continue
+            records += 1
+            for field in RECORD_FIELDS:
+                if not re.search(r'\*\*' + re.escape(field) + r':\*\*\s*\S', body):
+                    error(path.relative_to(root), title + ': record field missing: ' + field)
+            if not re.search(r'https?://[^\s)]+', body):
+                error(path.relative_to(root), title + ': source link missing')
+            if not re.search(r'Checked \d{4}-\d{2}-\d{2}', body):
+                error(path.relative_to(root), title + ': verification date missing')
+        if not records:
+            error(path.relative_to(root), 'no populated normative records')
+        record_count += records
     return {'valid': not errors, 'operation_count': len(OPERATIONS),
-            'errors': errors}
+            'normative_record_count': record_count, 'errors': errors}
 
 
 if __name__ == '__main__':

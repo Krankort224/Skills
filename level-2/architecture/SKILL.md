@@ -48,6 +48,12 @@ For a later explicit modeling task, hand off the accepted geometry/dimensions, p
 | Organizing idea, proportion, styles and comparison | [Composition and style](references/composition-and-style.md) |
 | Envelope, material, daylight/solar/acoustic intent and engineering interfaces | [Performance and coordination](references/performance-and-coordination.md) |
 | Source applicability, accessibility, fire and Russian SP/GOST route | [Requirements](references/requirements.md) |
+| Confirmed Russian project: thematic coverage, official discovery and source-evidence limits | [Russian normative catalog](references/normative-catalog.md) |
+| Russian work/stage, legal application mechanism, alteration and documentation sources | [Federal records](references/normative/federal-framework.md) |
+| Russian parcel/planning, local and protected/special-condition sources | [Territory records](references/normative/territory-and-special-conditions.md) |
+| Russian host/embedded-use typology and area-definition sources | [Typology records](references/normative/building-typologies.md) |
+| Russian escape, fire strategy and inclusive-access sources | [Fire/accessibility records](references/normative/fire-and-accessibility.md) |
+| Russian sanitary, light/noise/thermal/climate and engineering-interface sources | [Environmental records](references/normative/environment-and-interfaces.md) |
 | Parameters, constraints, data quality, alternatives and sensitivity | [Computational design](references/computational-design.md) |
 | Requested presentation, optional visual techniques, inspection and precision | [Visual delivery](references/visual-delivery.md) |
 | Supported calculators, exact schemas, units and all 14 adoption decisions | [Calculators](references/calculators.md) |

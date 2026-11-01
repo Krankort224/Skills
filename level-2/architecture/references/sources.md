@@ -45,3 +45,13 @@ The linked local references are newly written, selective adaptations, not full
 copies of either collection. The project has no imported external image assets;
 illustrations must use supplied, original or appropriately licensed assets.
 Further modeling work requires a later explicit request and a separate handoff.
+
+## Russian normative evidence
+
+The [normative catalog](normative-catalog.md) is newly researched discovery and
+applicability metadata from official records and explicitly identified source
+fragments, checked 2026-11-01. It is not imported from upstream country digests
+or the Architecture coursework library. Each thematic record owns its official
+links, edition/status observations, scope evidence and remaining uncertainties.
+Historical agency-hosted commercial copies and inaccessible sources are labeled
+as such; they do not establish current consolidated law. Full texts stay external.
