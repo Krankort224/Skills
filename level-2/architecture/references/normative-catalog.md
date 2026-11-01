@@ -14,6 +14,7 @@ the existing project owner.
 - [Official discovery sources](#official-discovery-sources)
 - [Read a record](#read-a-record)
 - [Coverage matrix](#coverage-matrix)
+- [Critical evidence dispositions](#critical-evidence-dispositions)
 - [Unresolved evidence and exclusions](#unresolved-evidence-and-exclusions)
 - [Maintain the catalog](#maintain-the-catalog)
 
@@ -34,6 +35,13 @@ into a verified current normative text. A last-checked date describes the
 retrieval, not a certification of completeness at that date.
 
 ## Select a thematic route
+
+Start with [task-to-record routes](normative-routes.md), which link architectural
+questions and material conditions to individual records. Use the thematic
+overview below when the question is not covered there; inspect its contents or
+headings, then retrieve the selected section rather than the whole group.
+Follow the canonical [complete selective reading](requirements.md#complete-selective-reading)
+procedure, including recovery of truncated output and every record's limits.
 
 | Architectural question | Read | Conditions that change the selection |
 | --- | --- | --- |
@@ -56,7 +64,7 @@ decision.
 | --- | --- |
 | [Official legal information portal](https://pravo.gov.ru/) and [official publication](https://publication.pravo.gov.ru/) | Find federal/regional acts, amendments, commencement and texts with incorporated changes. Original publication proves that act's publication, not that every later amendment is incorporated. Several live pages were inaccessible in this check. |
 | [Rosstandart standards portal](https://protect.gost.ru/) and [SP register](https://protect.gost.ru/sp) | Individual records expose identifier, issuer/order, scope, dates, replacement relationships and registered changes. Read the named card fields and, for a design requirement, the actual selected clause and applicable changes. A stale status badge can conflict with replacement fields. |
-| [FAU FCS registry explanation](https://faufcc.ru/deiatelnost/stu) and its linked [construction requirements registry](https://xn--e1ahdbdflckekkc.xn--p1ai/rntd) | Follow the current requirements mechanism, requirement entry and project dates. The explanation and original 653-ФЗ were read; the live registry could not be queried. This catalog has no verified export of its individual requirement entries. |
+| [FAU FCS registry explanation](https://faufcc.ru/deiatelnost/stu) and its linked [construction requirements registry](https://xn--e1ahdbdflckekkc.xn--p1ai/rntd) | Follow the current requirements mechanism, requirement entry and project dates. Two indexed primary-operator entry snapshots are now identified in the federal record, with provision/ID/version/date evidence. Live pages and a current export could not be verified; indexed content is not a live registry-state certificate. |
 | [Minstroy documents](https://minstroyrf.gov.ru/docs/) | Issuing orders, SP amendments, replacement and applicable explanations. Confirm the particular document and effective date; an unavailable page is not evidence of repeal. |
 | [MChS documents](https://mchs.gov.ru/dokumenty) | Fire laws, orders and fire-safety SP sources; use the distinct fire-safety application mechanism. Do not infer it from the construction registry alone. |
 | [Rospotrebnadzor](https://www.rospotrebnadzor.ru/) and its official territorial offices | Sanitary acts, original documents and replacement announcements. A regulator news notice is a discovery/status lead, not the full scope or current consolidated rule. |
@@ -72,6 +80,11 @@ HTTP success.
 Each record owns identity, authority links, scope, edition/status, application
 basis, related documents and verification limits. Its heading is the stable
 local identifier; external document identifiers retain their official spelling.
+
+An anchor selects the whole record, including its verification limitations.
+It does not authorize reading an arbitrary file prefix or assuming that content
+stored but not displayed was inspected. Retrieval rules and recovery are owned
+by [requirements](requirements.md#complete-selective-reading).
 
 - **Scope checked at registry level:** the official abstract was read; it is
   sufficient for a potential-source route, not every exception or provision.
@@ -90,18 +103,39 @@ being silently substituted or discarded.
 
 | Theme | Integrated records / source perimeter reviewed | Remaining boundary |
 | --- | --- | --- |
-| Federal framework and work/stage | GrK, 384-ФЗ/653-ФЗ, registry mechanism, housing alteration and documentation route in [federal framework](normative/federal-framework.md) | Current consolidation, transitions and live requirement entries must be established at the relevant project date; evidence limits are per record. |
+| Federal framework and work/stage | Bounded dated GrK/384-ФЗ bodies, 608-ФЗ housing changes, 507-ФЗ timing evidence, 653-ФЗ and indexed representative registry entries in [federal framework](normative/federal-framework.md) | Complete current consolidation/transition chain, current 1417 rules and live entry status remain unresolved; evidence levels are per record. |
 | Territory and urban planning | SP 42 successor, SP 82 and SP 396 official scope/status; local PZZ/GPZU discovery | Regional/local standards and parcel-specific restrictions have no exhaustive catalog; named site needed. |
 | Use and spatial organization | Housing, public, production/warehouse, welfare, education, medical, parking, selected culture/sports/retail/hotel and mixed-use registry records | Specialized subtypes and individual exclusions remain open; generic public-building scope is not their replacement. |
 | Areas and metrics | Selected initial SP 118 and SP 160 area appendices and residential cross-route | Current amended appendices, SP 54 direct area provisions and cadastral/statistical/legal purposes require separate verification; no GFA-to-local-area conversion is supplied. |
 | Fire and evacuation | Federal fire framework and SP 1/2/3/4/7/8/10/12 scope/status routes | Some high-rise/parking references have cancellation or successor conflicts; resolve before applying. No travel-distance or capacity table imported. |
 | Accessibility | 181-ФЗ scope lead, SP 59/136 and ГОСТ Р 59602 routes | Current provisions, exceptions and different user journeys require joint fire/accessibility review; no generic minimum dimension imported. |
-| Sanitary/environmental conditions | 52-ФЗ historical provisions, SanPiN 2.1.3684/1.2.3685 and 2026 replacement leads | Current sanitary consolidation and new 2026 scope/exclusions have critical unresolved evidence; see the environmental file. Do not certify a sanitary selection from these leads. |
+| Sanitary/environmental conditions | 52-ФЗ historical provisions, SanPiN 2.1.3684/1.2.3685 amendment leads; four partial 2026 workplace/operations/catering/education records | Regulator notices and bounded secondary texts improve the routes; original current scope/exclusion and amendment evidence remains critical and unresolved. Transport/food-retail branches remain discovery-only. |
 | Light, acoustics, thermal/envelope and climate | SP 50/51/52/131 official registry scope/status and replacement evidence | Specific methods, numeric values, current amendments and exclusions need actual selected text; glazing ratio is not daylight compliance. |
 | Structural/MEP interfaces | SP 20/22/30/60 registry scope/status | Architectural coordination only; specialist calculations, industrial process design and system sizing excluded. |
 | Heritage/environment/protected and hazardous conditions | Selected historical provisions of 73-ФЗ, 33-ФЗ, 7-ФЗ, Land/Water Codes; SP 14 scope and replacement evidence | Current legal texts, actual protected zones/regimes, seismicity and other site hazards must be resolved. Permafrost, flood, aviation and sanitary zones remain trigger-based discovery. |
-| Documentation and issue stage | Government 87 and SPDS records in federal framework | Statutory project documentation differs from a concept deliverable and from working documentation; full current compilation rules are not reproduced. |
+| Documentation and issue stage | Government 87 selected 21.10.2025 body compared with older reproduction; SPDS official records | Dated body review improves the composition route; exhaustive November 2026 currency and actual selected SPDS provisions/correction still need checking. |
 | Security and controlled access | SP 132 registry scope/status and historical Government 272 scope | Object/sector-specific regime, category and current legislation remain to be established; security controls need joint evacuation/accessibility review. |
+
+## Critical evidence dispositions
+
+Checked **2026-11-01**. These dispositions describe evidence, not permission to
+apply a provision. Exact links, fragments and source types remain at the owning
+record; do not treat a bounded resolution as certification of the whole law.
+
+| Gap / owning record | Disposition and remaining limit |
+| --- | --- |
+| [GrK classification, work/stage and expertise timing](normative/federal-framework.md#grk-190-design-and-expertise) | **Bounded text gap resolved:** actual dated post-2024 body sections replaced indexed-only evidence. **Current consolidation still blocking:** later amendments and complete affected timing/exception provisions require verification for the project date. |
+| [Housing definition/completion and transition](normative/federal-framework.md#zhk-188-alterations) | **Bounded amendment text gap resolved:** selected 608-ФЗ text read in an official-office-hosted commercial reproduction. **Current code still blocking:** other relevant housing provisions and later amendments are not certified. |
+| [653-ФЗ deferred change and legacy transition](normative/federal-framework.md#fz-653-building-safety-reform) | **Bounded date evidence improved:** indexed 507-ФЗ text identifies the revised deferral and displaces the stale note in a dated code copy. **Transition remainder still blocking:** complete current transition/amendment basis is not established. |
+| [384-ФЗ safety/application mechanism](normative/federal-framework.md#fz-384-building-safety) | **Bounded post-reform body gap resolved:** actual selected body read in a dated hosted reproduction. **Current consolidation/selection remains conditional:** check later changes and the actual justification route. |
+| [Government 87](normative/federal-framework.md#government-87-project-documentation) | **Dated body review resolved:** selected 21.10.2025 paragraphs read and compared, replacing cover-only evidence. This does not establish complete November 2026 currency. |
+| [Current 1417 rules](normative/federal-framework.md#government-1417-requirements-register) | **Still blocking:** amendment publication pointers and secondary consolidated provisions improve discovery; authoritative current rules/amendment body remains unavailable. |
+| [Representative registry entries](normative/federal-framework.md#government-1417-requirements-register) | **Examples identified, live status still blocking:** two actual operator-indexed residential entries have provision/identifier/version/date evidence. Accessible live entries/current export and a complete project-relevant selection remain unverified. |
+| [2026 sanitary rules and older amendments](normative/environment-and-interfaces.md#2026-sector-rule-discovery) | **Partial improvement, authoritative scope still blocking:** official regulator notices and bounded secondary scope/exclusion text are distinguished; enacted primary texts, complete current changes and relevant detailed provisions remain unresolved in the owning records. |
+
+Other conditional gaps, including direct residential area provisions, specialist
+subtypes, protected regimes and local acts, remain in the coverage matrix and
+records. Their visibility is not an exclusion invented to claim completion.
 
 ## Unresolved evidence and exclusions
 

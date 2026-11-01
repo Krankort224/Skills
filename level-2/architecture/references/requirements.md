@@ -12,6 +12,7 @@ Eurocode or any other code as a default.
 - [Accessibility and inclusive use](#accessibility-and-inclusive-use)
 - [Fire and life safety](#fire-and-life-safety)
 - [Russia-specific source selection](#russia-specific-source-selection)
+- [Complete selective reading](#complete-selective-reading)
 - [Deliver the open issues](#deliver-the-open-issues)
 
 ## Establish applicability
@@ -61,8 +62,10 @@ that a sketch is safe or compliant. Obtain authority and fire specialist review.
 
 ## Russia-specific source selection
 
-When Russia is confirmed, use the [normative catalog](normative-catalog.md)
-and the relevant thematic records. The catalog's Russian adaptation target does
+When Russia is confirmed, select the matching question/condition from
+[task-to-record routes](normative-routes.md), then use its specific record links.
+The [catalog](normative-catalog.md) owns coverage and discovery-source limits.
+The catalog's Russian adaptation target does
 not assign Russia to every future task. Do not read every record for a local
 decision.
 
@@ -72,12 +75,12 @@ decision.
    alteration, reconstruction and capital repair; a user's word “renovation”
    alone does not settle the legal classification. Retain fixed project facts
    and identify only missing conditions material to selection.
-2. Select the legal/work-stage route from the catalog's federal framework;
+2. Select the relevant [work/stage](normative-routes.md#work-and-timing) record;
    then screen territory, typology, fire/accessibility, sanitary/environmental
    and engineering-interface branches against the actual task. Include
    adjacent documents where a changed entrance, use, envelope or route affects
    them. Check both the host building and an embedded function.
-3. Read each candidate record's scope, exclusions and verification limits.
+3. Read each candidate record completely using [selective reading](#complete-selective-reading), including its scope, exclusions and verification limits.
    Follow the linked official text/register to the relevant provision and
    necessary amendments, replacement and commencement evidence. A registry
    abstract supports discovery, not every detailed rule. An active badge,
@@ -126,6 +129,47 @@ screen residential/public typology and fire/accessibility together. If the
 municipality, scope of intervention or approvals are unknown, select potential
 sources and leave their affected provisions unresolved. Do not silently treat
 the task as either new construction or harmless interior decoration.
+
+## Complete selective reading
+
+Select the architectural question and material project conditions before
+retrieval. Use the [route index](normative-routes.md) to identify specific
+record anchors; use thematic contents only for unmatched questions. The route
+index is navigation, not a substitute for the owning record or selected law.
+
+1. Locate the selected heading and the next heading of the same or higher
+   level with the available heading/search tool. In a local checkout, for
+   example, `rg -n '^## ' references/normative/building-typologies.md` returns
+   current record boundaries without printing the file. Do not reuse line
+   numbers from an older revision.
+2. Retrieve from the selected heading through the line before the next
+   peer/parent heading, or through EOF for the last section. Use bounded line
+   ranges/section reads supported by the tool. Batch only the complete selected
+   records that the tool can actually return. A link to a thematic file does
+   not mean to print the entire file or every related group.
+3. Inspect the returned content and truncation metadata. Each normative record
+   must be visible through its end, including **Identity**, **Authority**,
+   **Scope**, **Edition/status**, **Application basis**, **Related** and
+   **Verification**. Read all conditions/exceptions and any text after those
+   fields within the record. A successful fetch, stored tool variable, arbitrary
+   character prefix or output ending inside a field is not a complete read.
+4. If output is truncated or a boundary/field is missing, recover before using
+   the claim: request a smaller known section/range or increase the return
+   capacity enough for that complete extent. A long record can be read in
+   contiguous bounded parts with its start/end and every part accounted for.
+   Do not silently substitute the visible prefix or mark unread material as
+   reviewed. If retrieval cannot be completed, label that record unread or
+   partial and keep its dependent conclusion unresolved.
+5. Follow a related record or external provision when the actual decision or
+   a critical condition requires it. Inspect the selected authoritative scope,
+   provision, exclusions and changes at similarly known boundaries. Stop when
+   the decision has sufficient evidence; do not load the remaining corpus for
+   completeness alone.
+
+When reporting source selection, identify the records/provisions actually read
+and any incomplete retrieval that limits the result. Distinguish complete
+reading of a local catalog record from checking its cited external texts and
+from establishing its application to the project.
 
 ## Deliver the open issues
 

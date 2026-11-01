@@ -14,7 +14,7 @@ OPERATIONS = ('brief', 'concept', 'development', 'analysis', 'optimization',
 REFERENCES = ('program-and-space', 'composition-and-style',
               'performance-and-coordination', 'requirements',
               'computational-design', 'visual-delivery', 'calculators', 'sources',
-              'normative-catalog')
+              'normative-catalog', 'normative-routes')
 NORMATIVE_GROUPS = ('federal-framework', 'territory-and-special-conditions',
                     'building-typologies', 'fire-and-accessibility',
                     'environment-and-interfaces')
