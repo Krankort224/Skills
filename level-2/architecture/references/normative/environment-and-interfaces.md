@@ -129,7 +129,7 @@ Of the five additional sector leads, operations, catering and education now have
 - **Edition/status:** 2022-hosted resolution §§2–3 states initial entry 01.03.2021 and term until 01.03.2027; subsequent amendments and current term require checking. A [commercial consolidated index](https://www.consultant.ru/document/cons_doc_LAW_376166/d46bb4ace56674ca6db0882f108e864d328f231d/) identifies amendments through 10.09.2026 № 25; the [commercial copy of that act](https://www.garant.ru/products/ipo/prime/doc/414862682/) identifies the prior amendments through 12.02.2026 № 2. These are leads, not proof of all current effects; check official texts and effective dates.
 - **Application basis:** Sanitary legal act, subject to actual scope and current legal text; see [federal framework](federal-framework.md).
 - **Related:** 52-ФЗ; СанПиН 1.2.3685-21; water/waste and sector-specific sanitary rules.
-- **Verification:** Checked 2026-11-01; announcement and 2022-hosted resolution §§1–3, rules §§1–3 read; complete current scope and status not verified due to later amendments and access failures.
+- **Verification:** Checked 2026-11-01; announcement and 2022-hosted resolution §§1–3, rules §§1–3 read; complete current scope and status not verified due to later amendments and access failures. To close the waste-site and mixed-use ventilation questions, obtain the enacted base §§3 and 128 plus each amendment affecting them, including its commencement and any term change. The original [№ 25 publication](https://publication.pravo.gov.ru/document/0001202609240014), identified by a commercial publication index, was inaccessible through the retrieval service; its appendix and effective date remain unverified from the enacted text.
 
 ## sanpin-1-2-3685-21
 
@@ -139,7 +139,7 @@ Of the five additional sector leads, operations, catering and education now have
 - **Edition/status:** The hosted resolution §§2–3 states initial entry 01.03.2021 and term until 01.03.2027; a [commercial consolidated copy](https://meganorm.ru/mega_doc/dop1/81/postanovlenie_glavnogo_gosudarstvennogo_sanitarnogo_vracha_megainfo/0/postanovlenie_glavnogo_gosudarstvennogo_sanitarnogo_vracha.html) identifies changes effective 01.03.2026 and repeats the 01.03.2027 term. The [2026 catering act copy](https://www.garant.ru/products/ipo/prime/doc/414229257/) footnote 9 lists amendments through 24.12.2025 № 19. Neither establishes that no later amendments exist; verify the official current text.
 - **Application basis:** Sanitary legal act, subject to actual scope and current legal text; see [federal framework](federal-framework.md).
 - **Related:** СП 51, 52, 60; СанПиН 2.1.3684-21.
-- **Verification:** Checked 2026-11-01; official identity, registration, initial effective date and older section I heading read; dated commercial copy §§90, 143–144 and table headings read. Numerical values, full scope and later amendments remain open.
+- **Verification:** Checked 2026-11-01; official identity, registration, initial effective date and older section I heading read; dated commercial copy §§90, 143–144 and table headings read. Numerical values, full scope and later amendments remain open. For indoor light, insolation, noise and microclimate, obtain the enacted §90, §§143–144 and relevant section V tables with their conditions, plus the text and commencement of amendments affecting those fragments (including resolution 24.12.2025 № 19) and any later amendments or term changes. A secondary amendment list is a lead, not evidence that those fragments are current.
 
 ## sp-2-2-4285-26
 
@@ -149,7 +149,7 @@ Of the five additional sector leads, operations, catering and education now have
 - **Edition/status:** The federal notice identifies commencement 01.09.2026 and predecessor СП 2.2.3670-20. Verify the issuing act, term, transition and amendments.
 - **Application basis:** Sanitary legal act, not construction SP; confirm actual applicability under [federal framework](federal-framework.md).
 - **Related:** 52-ФЗ; СанПиН 1.2.3685-21; СП 60; facility-specific sanitary acts.
-- **Verification:** Checked 2026-11-01; federal notice and indexed item 13 read; enacted text and detailed provisions remain unverified.
+- **Verification:** Checked 2026-11-01; federal notice and indexed item 13 read; enacted text and detailed provisions remain unverified. A [municipal school PDF](https://irbit-5.uralschool.ru/file/download?id=17349) was retrieved as 60 image pages with no extractable text; the school-hosted copy has not been authenticated against [publication 0001202606020080](https://publication.pravo.gov.ru/document/0001202606020080), and page images were not available for a reliable provision read. Obtain the official publication or an authenticated scan, especially resolution §§2–3 and rules section I (covered actors and exclusions), the relevant workplace provision and any enacted amendments/effective dates.
 
 ## sp-2-1-4284-26
 
@@ -159,7 +159,7 @@ Of the five additional sector leads, operations, catering and education now have
 - **Edition/status:** Federal notice identifies 01.09.2026 commencement and СП 2.1.3678-20 as predecessor; the secondary copy's resolution §2 identifies 24.12.2020 № 44 and 20.03.2024 № 2 as repealed. Verify official publication, term, later amendments and activity-specific chapters.
 - **Application basis:** Sanitary act; assess actual service and object under [federal framework](federal-framework.md).
 - **Related:** 52-ФЗ; СанПиН 2.1.3684-21 and 1.2.3685-21; sector-specific sanitary acts.
-- **Verification:** Checked 2026-11-01; notice and bounded secondary text above read, original official text and complete exclusions not verified.
+- **Verification:** Checked 2026-11-01; notice and bounded secondary text above read, original official text and complete exclusions not verified. A [municipal school PDF](https://irbit-5.uralschool.ru/file/download?id=17350) was retrieved as 93 image pages with no extractable text; its provenance has not been authenticated against [publication 0001202606020088](https://publication.pravo.gov.ru/document/0001202606020088), which was inaccessible through the retrieval service. Obtain the official publication or authenticated scan: resolution §§2–4, rules section I and the laundry and social-service chapter exceptions, together with amendments affecting those fragments and their effective dates. Page images were not available for a reliable provision read.
 
 ## sanpin-2-3-2-4-4282-26
 
@@ -169,7 +169,7 @@ Of the five additional sector leads, operations, catering and education now have
 - **Edition/status:** The commercial reproduction states 01.09.2026–01.09.2032 and repeal of 27.10.2020 № 32 (СанПиН 2.3/2.4.3590-20) and its 22.08.2024 № 9 amendment. Verify official text and subsequent amendments.
 - **Application basis:** Sanitary act; select provisions according to the actual catering activity and [federal framework](federal-framework.md).
 - **Related:** 52-ФЗ; СанПиН 1.2.3685-21; food retail СП 2.3.6.4281-26; СП 30 and 60.
-- **Verification:** Checked 2026-11-01; bounded secondary text and official notice read; complete scope, exclusions and later changes remain open.
+- **Verification:** Checked 2026-11-01; bounded secondary text and official notice read; complete scope, exclusions and later changes remain open. A [municipal school PDF](https://irbit-5.uralschool.ru/file/download?id=17312) was retrieved as 55 image pages with no extractable text; its provenance has not been authenticated against [publication 0001202606020084](https://publication.pravo.gov.ru/document/0001202606020084), inaccessible through the retrieval service. Obtain the official publication or authenticated scan: resolution §§2–3 and rules §§1–2 and 18, applicable activity-specific exceptions and any amendments affecting those fragments and their effective dates. Page images were not available for a reliable provision read.
 
 ## sp-2-4-2-4283-26
 
@@ -179,7 +179,7 @@ Of the five additional sector leads, operations, catering and education now have
 - **Edition/status:** The regulator explanation identifies 01.09.2026–01.09.2032 and replacement of СП 2.4.3648-20; the commercial resolution §2 lists 28.09.2020 № 28 and amendments 30.08.2024 № 10 and 24.12.2025 № 19 as repealed. Verify actual effect of the latter act on other rules and subsequent amendments.
 - **Application basis:** Sanitary act; select provisions according to the actual activity and [federal framework](federal-framework.md).
 - **Related:** 52-ФЗ; СанПиН 1.2.3685-21 and 2.1.3684-21; catering СанПиН 2.3/2.4.4282-26.
-- **Verification:** Checked 2026-11-01; regulator activity list and bounded secondary provisions read; official enacted text and complete exclusions remain open.
+- **Verification:** Checked 2026-11-01; regulator activity list and bounded secondary provisions read; official enacted text and complete exclusions remain open. A [municipal kindergarten PDF](https://dg20.tvoysadik.ru/file/download?id=9753) was retrieved as 56 image pages with no extractable text; its provenance has not been authenticated against [publication 0001202606020083](https://publication.pravo.gov.ru/document/0001202606020083), inaccessible through the retrieval service. Obtain the official publication or authenticated scan: resolution §§2–3, rules section I including §2, and relevant activity/age/object provisions and exceptions, plus enacted amendments affecting those fragments and their effective dates. Page images were not available for a reliable provision read.
 
 ## sp-30-13330-2020
 
