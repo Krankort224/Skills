@@ -114,32 +114,32 @@ Of the five additional sector leads, operations, catering and education now have
 ## federal-law-52-fz
 
 - **Identity:** Федеральный закон от 30.03.1999 № 52-ФЗ «О санитарно-эпидемиологическом благополучии населения», federal law.
-- **Authority:** [Official legal information portal](https://publication.pravo.gov.ru/) is the route to official publications and amendments; a primary publication of the 1999 base act was not located in this pass. A [regulator notice](https://46.rospotrebnadzor.ru/content/proizvodstvennyy-kontrol-za-usloviyami-truda-rekomendacii-rabotodatelyam) identifies the law and cites article 32; only an indexed extract was available; it is an explanation, not the law text.
+- **Authority:** The [Prosecutor General’s individual law entry](https://epp.genproc.gov.ru/ru/gprf/activity/protecting_children/orders/zak/e81486/) identifies the date, number and title and links to the [Pravo legal-bank record](https://pravo.gov.ru/proxy/ips/?docbody=&nd=102058898). The bank record timed out, so its text and edition were not independently checked; it is not identified as the original publication.
 - **Scope:** Population sanitary and epidemiological welfare is the identified subject. Settlement planning, housing, operation and workplace conditions are review routes, but their precise current legal scope and exclusions are unresolved without primary act text.
 - **Edition/status:** Current wording, amendments and effective status were not established from an official text; check those relevant to the project date.
 - **Application basis:** Federal law and applicable sanitary acts; see [federal framework](federal-framework.md).
 - **Related:** СанПиН 2.1.3684-21, 1.2.3685-21, СП 2.2.4285-26.
-- **Verification:** Checked 2026-11-01; regulator explanation's law identifier and article 32 reference read. Locate the primary base publication and relevant current provisions before a legal decision; no consolidated-text review is claimed.
+- **Verification:** Checked 2026-11-01; Prosecutor General’s identity entry and outgoing legal-bank address checked; bank retrieval timed out. Verify the individual record and relevant current provisions before a legal decision; no act-text review is claimed.
 
 ## sanpin-2-1-3684-21
 
 - **Identity:** СанПиН 2.1.3684-21 «Санитарно-эпидемиологические требования к содержанию территорий городских и сельских поселений, к водным объектам, питьевой воде и питьевому водоснабжению, атмосферному воздуху, почвам, жилым помещениям, эксплуатации производственных, общественных помещений, организации и проведению санитарно-противоэпидемических (профилактических) мероприятий», approved by Главный государственный санитарный врач РФ, resolution 28.01.2021 № 3.
-- **Authority:** [Rospotrebnadzor announcement](https://06.rospotrebnadzor.ru/content/novye-sanitarnye-pravila-i-normativy), list of new rules; it is a notice, not the act text. The act-specific original approval was not located; use the [official publication portal](https://publication.pravo.gov.ru/) as a search route.
+- **Authority:** [Pravo legal-bank record](https://pravo.gov.ru/proxy/ips/?docbody=&nd=602024221): its indexed heading identifies the approval and rule title; the document itself timed out. The [regulator announcement](https://06.rospotrebnadzor.ru/content/novye-sanitarnye-pravila-i-normativy) identifies the title, date and number; it is a notice, not the act text.
 - **Scope:** The title identifies territory, water, air, soil, residential and public/industrial premises and preventive measures as routing subjects. Covered actors, conditions and material exclusions require primary text; waste-site and mixed-use ventilation provisions are project-review leads, not established requirements here.
 - **Edition/status:** The regulator announcement identifies initial commencement 01.03.2021. Current term and effect of subsequent amendments are unresolved.
 - **Application basis:** Sanitary act, subject to actual scope and current legal text; see [federal framework](federal-framework.md).
 - **Related:** 52-ФЗ; СанПиН 1.2.3685-21; water/waste and sector-specific sanitary rules.
-- **Verification:** Checked 2026-11-01; announcement's list and commencement read. Base act scope was not read from a primary publication. Resolve material scope from the primary text; check site-specific provisions and relevant changes when needed.
+- **Verification:** Checked 2026-11-01; indexed legal-bank heading and notice checked; bank retrieval timed out. Base act scope was not read. Resolve material scope from the primary text; check site-specific provisions and relevant changes when needed.
 
 ## sanpin-1-2-3685-21
 
 - **Identity:** СанПиН 1.2.3685-21 «Гигиенические нормативы и требования к обеспечению безопасности и (или) безвредности для человека факторов среды обитания», approved by Главный государственный санитарный врач РФ, resolution 28.01.2021 № 2.
-- **Authority:** [Rospotrebnadzor announcement](https://06.rospotrebnadzor.ru/content/novye-sanitarnye-pravila-i-normativy), list effective 1 March 2021; this notice is not the enacted text. The act-specific original approval was not located; use the [official publication portal](https://publication.pravo.gov.ru/) as a search route.
+- **Authority:** The [official publication address](https://publication.pravo.gov.ru/Document/View/0001202102030022) is linked for resolution № 2 by a [public health institution document entry](https://fbuz35.ru/Default.aspx?et=4&ig=965c87ebf9584525b542812490e2ab74&mnu=a04ee5d862f94b92be65da4cff81ee4b); publication retrieval timed out. The [Rospotrebnadzor announcement](https://06.rospotrebnadzor.ru/content/novye-sanitarnye-pravila-i-normativy) identifies the rule and approval; it is a notice, not the enacted text.
 - **Scope:** Environmental factors affecting human safety and harmlessness are identified by the title. Light, noise, insolation and microclimate are coordination leads; actual covered situations, exclusions, tables and thresholds are not verified from the primary act.
 - **Edition/status:** Announcement identifies initial commencement 01.03.2021; current term and later changes remain unresolved.
 - **Application basis:** Sanitary act, subject to actual scope and current text; see [federal framework](federal-framework.md).
 - **Related:** СП 51, 52, 60; СанПиН 2.1.3684-21.
-- **Verification:** Checked 2026-11-01; notice identity and initial commencement read. Obtain primary scope and relevant current tables for a decision.
+- **Verification:** Checked 2026-11-01; notice identity, publication-address provenance and initial commencement checked; publication retrieval timed out. Obtain primary scope and relevant current tables for a decision.
 
 ## sp-2-2-4285-26
 

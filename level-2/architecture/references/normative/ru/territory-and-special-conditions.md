@@ -51,52 +51,52 @@ Use this guide to select project-specific sources, not to infer a site's permiss
 ## federal-law-73-fz
 
 - **Identity:** Федеральный закон от 25.06.2002 № 73-ФЗ «Об объектах культурного наследия (памятниках истории и культуры) народов Российской Федерации», federal law, Федеральное Собрание РФ.
-- **Authority:** [Official legal information portal](https://pravo.gov.ru/), search route to the official legal bank; no individual act text was retrieved or verified here.
+- **Authority:** [Candidate Pravo individual record](https://pravo.gov.ru/proxy/ips/?docbody=&nd=102076756), located through secondary discovery; its identifier-to-act mapping was not corroborated in a primary page or official list. The [Tomsk heritage authority](https://heritage.tomsk.gov.ru/zony-ohrany-obektov-kulturnogo-nasledija) identifies the law but does not supply this individual URL. Primary retrieval timed out.
 - **Scope:** Heritage protection and proposed investigations, design, excavation, construction or alteration near a known or possible heritage object are candidate triggers. Identify the object, boundaries, protection zones and archaeological evidence, and check the applicable act and current law before drawing a legal conclusion.
 - **Edition/status:** Article 36 and current duties, exclusions and approval triggers have not been verified in a primary text. Find the applicable edition and effective dates in the official legal bank.
-- **Application basis:** The applicable federal legal text and relevant establishing acts must be verified against the site and work; no specific duty is established by the portal link.
+- **Application basis:** The applicable federal legal text and relevant establishing acts must be verified against the site and work; the candidate link does not establish a project-specific duty.
 - **Related:** Parcel restrictions, local heritage authority and its specific boundary/regime acts.
-- **Verification:** Checked 2026-11-01: official portal identified as a legal-bank search route; individual act text, detailed scope and operative status remain unresolved. Site-specific application requires separate verification.
+- **Verification:** Checked 2026-11-01: official heritage-authority identity read; individual legal-bank and Kremlin act URLs timed out. Official heritage lists offered search routes rather than the individual identifier. Primary URL identity validation, detailed scope, exclusions, current edition and operative status remain unresolved; do not treat this navigation gap as closed.
 
 ## federal-law-33-fz
 
 - **Identity:** Федеральный закон от 14.03.1995 № 33-ФЗ «Об особо охраняемых природных территориях», federal law, Федеральное Собрание РФ.
-- **Authority:** [Official legal information portal](https://pravo.gov.ru/), search route to the official legal bank; no individual act text was retrieved or verified here.
+- **Authority:** [Pravo official legal-bank record](https://pravo.gov.ru/proxy/ips/?docbody=&nd=102034651); individual URL identified by the [official Vladimir OOPT directorate list](https://edoopt.ru/about/nadzor-oopt/normativno-pravovye-akty-reguliruyushhie-osushhestvlenie-gosudarstvennogo-kontrolya-nadzora/), used only as link/identity evidence. The legal-bank text timed out.
 - **Scope:** A protected area or possible buffer is a candidate trigger: identify its category, actual boundaries, functional zones and individual regulation. National-park zoning and activity restrictions are questions to check in the applicable text; do not generalize them to every protected area or buffer.
 - **Edition/status:** Article 15 and current category-specific regimes, exclusions and status have not been verified in a primary text. Find the applicable edition and effective dates in the official legal bank.
-- **Application basis:** The applicable federal legal text and relevant establishing acts must be verified against the site and work; no specific duty is established by the portal link.
+- **Application basis:** The applicable federal legal text and relevant establishing acts must be verified against the site and work; the linked record alone does not establish a project-specific duty.
 - **Related:** Environmental law, water and heritage routes, regional protected-area authority.
-- **Verification:** Checked 2026-11-01: official portal identified as a legal-bank search route; individual act text, detailed scope and operative status remain unresolved. Site-specific application requires separate verification.
+- **Verification:** Checked 2026-11-01: official directorate list matched title, date, number and individual legal-bank link. Primary text retrieval timed out; detailed scope, exclusions, current edition and operative status remain unresolved. Site-specific application requires separate verification.
 
 ## federal-law-7-fz
 
 - **Identity:** Федеральный закон от 10.01.2002 № 7-ФЗ «Об охране окружающей среды», federal law, Федеральное Собрание РФ.
-- **Authority:** [Official legal information portal](https://pravo.gov.ru/), search route to the official legal bank; no individual act text was retrieved or verified here.
+- **Authority:** [Pravo official legal-bank record](https://pravo.gov.ru/proxy/ips/?docbody=&nd=102074303); individual URL identified by the [official municipal environmental-law list](https://bruhoveckaya.ru/mo/chepig/ohrana_okr_sredi/?ELEMENT_ID=61923), used only as link/identity evidence. The legal-bank text timed out.
 - **Scope:** Potential environmental effects of planning, design, construction, reconstruction or repair are candidate questions for the actual activity and site. Check the law and applicable subordinate rules for duties, exclusions and any required assessment; no particular review is established for every project.
 - **Edition/status:** Articles 34–36 and current scope, exclusions and status have not been verified in a primary text. Find the applicable edition and effective dates in the official legal bank.
-- **Application basis:** The applicable federal legal text and relevant establishing acts must be verified against the site and work; no specific duty is established by the portal link.
+- **Application basis:** The applicable federal legal text and relevant establishing acts must be verified against the site and work; the linked record alone does not establish a project-specific duty.
 - **Related:** Protected areas, water, ecological assessment and surveys.
-- **Verification:** Checked 2026-11-01: official portal identified as a legal-bank search route; individual act text, detailed scope and operative status remain unresolved. Site-specific application requires separate verification.
+- **Verification:** Checked 2026-11-01: official municipal list matched title, date, number and individual legal-bank URL. Primary text retrieval timed out; detailed scope, exclusions, current edition and operative status remain unresolved. Site-specific application requires separate verification.
 
 ## water-code-74-fz
 
 - **Identity:** Федеральный закон от 03.06.2006 № 74-ФЗ «Водный кодекс Российской Федерации», federal code, Федеральное Собрание РФ.
-- **Authority:** [Official legal information portal](https://pravo.gov.ru/), search route to the official legal bank; no individual act text was retrieved or verified here.
+- **Authority:** [Pravo official legal-bank record](https://pravo.gov.ru/proxy/ips/?docbody=&nd=102107048); individual URL identified by the [official Tolyatti environmental-control list](https://tgl.ru/structure/department/regionalnyy-gosudarstvennyy-ekologicheskiy-nadzor/26710/), used only as link/identity evidence. The legal-bank text timed out.
 - **Scope:** Proximity to water is a candidate trigger to investigate the water body, water-protection zone, coastal protective strip, boundaries, use regime and any water-use authorization. A map overlay alone does not establish the legal regime.
 - **Edition/status:** Article 65 and current scope, exclusions and status have not been verified in a primary text. Find the applicable edition and effective dates in the official legal bank.
-- **Application basis:** The applicable federal legal text and relevant establishing acts must be verified against the site and work; no specific duty is established by the portal link.
+- **Application basis:** The applicable federal legal text and relevant establishing acts must be verified against the site and work; the linked record alone does not establish a project-specific duty.
 - **Related:** Land restrictions, protected areas, drainage and environmental design.
-- **Verification:** Checked 2026-11-01: official portal identified as a legal-bank search route; individual act text, detailed scope and operative status remain unresolved. Site-specific application requires separate verification.
+- **Verification:** Checked 2026-11-01: official municipal list matched title, date, number and individual legal-bank URL. Primary text retrieval timed out; detailed scope, exclusions, current edition and operative status remain unresolved. Site-specific application requires separate verification.
 
 ## land-code-136-fz
 
 - **Identity:** Земельный кодекс Российской Федерации от 25.10.2001 № 136-ФЗ, federal code, Федеральное Собрание РФ.
-- **Authority:** [Official legal information portal](https://pravo.gov.ru/), search route to the official legal bank; no individual act text was retrieved or verified here.
+- **Authority:** [Pravo official legal-bank record](https://pravo.gov.ru/proxy/ips/?docbody=&nd=102073184); individual URL identified by the [official municipal land-control list](https://admstrj.ru/dokumenty/munitsipalnyj-kontrol/660-munitsipalnyj-kontrol-perechen-normativnykh-pravovykh-aktov/23682-munitsipalnyj-zemelnyj-kontrol-2.html), used only as link/identity evidence. The legal-bank text timed out.
 - **Scope:** Land category, permitted use, registered rights, restrictions and special-use zones are candidate questions for the site. Obtain current registry information and the acts establishing relevant restrictions; confirm their legal effect in the applicable law.
 - **Edition/status:** Article 56 and the current restrictions regime, exclusions and status have not been verified in a primary text. Find the applicable edition and effective dates in the official legal bank.
-- **Application basis:** The applicable federal legal text and relevant establishing acts must be verified against the site and work; no specific duty is established by the portal link.
+- **Application basis:** The applicable federal legal text and relevant establishing acts must be verified against the site and work; the linked record alone does not establish a project-specific duty.
 - **Related:** PZZ, GPZU, heritage, water, protection and sanitary zones.
-- **Verification:** Checked 2026-11-01: official portal identified as a legal-bank search route; individual act text, detailed scope and operative status remain unresolved. Site-specific application requires separate verification.
+- **Verification:** Checked 2026-11-01: official municipal list search excerpt matched title, date, number and individual legal-bank URL; opening that list returned 404. Primary text retrieval timed out; detailed scope, exclusions, current edition and operative status remain unresolved. Site-specific application requires separate verification.
 
 ## local-discovery-routes
 
@@ -112,4 +112,4 @@ Begin with cadastral number, boundary and intended use/work. Obtain an up-to-dat
 
 For climate inputs, use the canonical [SP 131 record](environment-and-interfaces.md#sp-131-13330-2025); site hazards and territorial triggers remain here.
 
-Register scope/status was reviewed for SP 42, 82, 396 and 14; full provisions and mandatory-list membership were not audited. The five federal-law records retain identity and candidate investigation triggers; their primary act texts, detailed scope, exclusions and operative status were not verified. The official portal is a search route, not evidence of those claims. Moscow and St Petersburg materials above are discovery routes, not verified current parcel rules. Permafrost, flood/landslide hazards, airfield restrictions, sanitary protection zones, individual regional/local norms and other protected-area categories remain discovery-only: identify them by actual site, object and survey and retrieve the current authoritative acts. Specialized structural, fire, sanitary and project-documentation topics belong to their respective references. No numeric design thresholds or exhaustive municipal coverage are asserted here.
+Register scope/status was reviewed for SP 42, 82, 396 and 14; full provisions and mandatory-list membership were not audited. The federal-law records retain candidate investigation triggers; their primary act texts, detailed scope, exclusions and operative status were not verified. Individual legal-bank URLs for 33-ФЗ, 7-ФЗ and the Water and Land Codes were matched through official lists; those lists support navigation/identity only, not current provisions. The 73-ФЗ individual URL remains a candidate whose primary identity validation is unresolved. Moscow and St Petersburg materials above are discovery routes, not verified current parcel rules. Permafrost, flood/landslide hazards, airfield restrictions, sanitary protection zones, individual regional/local norms and other protected-area categories remain discovery-only: identify them by actual site, object and survey and retrieve the current authoritative acts. Specialized structural, fire, sanitary and project-documentation topics belong to their respective references. No numeric design thresholds or exhaustive municipal coverage are asserted here.

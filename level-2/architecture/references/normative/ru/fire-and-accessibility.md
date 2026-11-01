@@ -190,13 +190,13 @@ The records below distinguish registry scope text from full normative text. The 
 
 ## government-decree-272-2015
 
-- **Identity:** Постановление Правительства Российской Федерации от 25.03.2015 № 272 «Об утверждении требований к антитеррористической защищенности мест массового пребывания людей и объектов (территорий), подлежащих обязательной охране войсками национальной гвардии Российской Федерации, и форм паспортов безопасности таких мест и объектов (территорий)»; постановление Правительства Российской Федерации. Current title requires confirmation in official text.
-- **Authority:** [Official legal-information publication search](https://publication.pravo.gov.ru/search); navigation only. The proposed original publication entry was inaccessible at the source check, so no decree text or detailed exclusions are claimed as primary-verified.
-- **Scope:** Conditional discovery route for mass-presence places and objects subject to special protection. Verify actual object, competent authority, classification, sector rules, territorial scope, work triggers and exclusions in the official decree and relevant instruments; avoid inferring category from name or occupancy.
-- **Edition/status:** Current consolidated text/status was not read in primary publication.
+- **Identity:** Постановление Правительства Российской Федерации от 25.03.2015 № 272 — requirements for anti-terrorism protection of mass-presence places and protected objects/territories, with security-passport forms; Government resolution. Exact current title wording was not read.
+- **Authority:** [Individual official publication 0001201504030004](http://publication.pravo.gov.ru/document/0001201504030004). The [Yugorsk municipal publication index](https://www.adm.ugorsk.ru/regulatory/zakon/7367/151876/) names the date, number and original publication subject and links this exact entry; it verifies the pointer, not the decree's provisions. Direct publication retrieval failed.
+- **Scope:** Architectural source-selection lead for security, access and site arrangements at mass-presence places and protected objects. The official index confirms the subject only. Establish the actual object, responsible authority, applicable security/sector regime, territory and work conditions before selection; operative coverage and exclusions were not read. Do not infer an object's category from its name or occupancy.
+- **Edition/status:** Individual promulgation identified; current operative wording/status not verified. An unavailable publication does not establish repeal or nonexistence.
 - **Application basis:** A government instrument potentially applicable in its actual scope; do not treat it as an automatic requirement for all buildings. See [federal-framework.md](federal-framework.md).
 - **Related:** SP 132, SP 1, SP 59, security brief, sector-specific requirements, accessible access and evacuation.
-- **Verification:** Checked 2026-11-01: official publication search available, particular publication endpoint inaccessible. Instrument-specific primary text, scope and current status remain discovery gaps.
+- **Verification:** Checked 2026-11-01: municipal index heading and exact outgoing publication link read; direct primary-page open and linked retrieval failed. Act-specific primary navigation is established; actual scope/exclusions and current wording/status remain unread.
 
 ## Special-object discovery and unresolved interfaces
 
