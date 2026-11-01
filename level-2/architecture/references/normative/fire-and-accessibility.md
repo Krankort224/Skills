@@ -1,6 +1,6 @@
 # Fire safety and accessibility: normative source records
 
-Use these records to identify sources for a particular Russian project, not as a compliance determination. Record currency, project applicability, and the legal status of an individual provision are separate questions. Check the federal application mechanism in [federal-framework.md](federal-framework.md), the project facts and dates, the official text and all changes before use. No numerical design requirement is reproduced here.
+Use these records to identify sources for a particular Russian project, not as a compliance determination. Record currency, project applicability, and the legal status of an individual provision are separate questions. Use [federal-framework.md](federal-framework.md) and project facts to select applicable sources; consult official text and relevant changes when applying provisions. No numerical design requirement is reproduced here.
 
 ## Contents
 
@@ -130,33 +130,33 @@ The records below distinguish registry scope text from full normative text. The 
 
 ## federal-law-123-fz
 
-- **Identity:** Федеральный закон от 22.07.2008 № 123-ФЗ «Технический регламент о требованиях пожарной безопасности»; federal law, Российская Федерация.
-- **Authority:** [МЧС text, edition 30.04.2021, article 1](https://mchs.gov.ru/uploads/document/2022-04-08/c907f456516c1f21009131cfdb944deb.pdf); [МЧС on 2022 amendment of article 1](https://87.mchs.gov.ru/deyatelnost/press-centr/vse_novosti/4809827); [Росстандарт list for the regulation](https://protect.gost.ru/TrList/84).
-- **Scope:** Article 1 in the 2021 text identifies protected objects including buildings, structures and production facilities and general fire safety requirements. Check current article 1, especially existing objects, work and transitional provisions, for the project; no automatic retrospective application is inferred here.
-- **Edition/status:** The read law text explicitly predates 2022 changes. Current consolidated text and transition rules are unresolved and must be checked in the official legal system.
-- **Application basis:** Federal technical regulation; distinguish its applicable legal requirements from SP/GOST provisions and routes to conformity; see [federal-framework.md](federal-framework.md).
-- **Related:** 69-ФЗ, SP 1, 2, 4, 7, 8, 10, 12 and relevant special-object rules.
-- **Verification:** Checked 2026-11-01: MЧС 2021 text article 1 and MЧС 2022 amendment notice read; current consolidated law and operative provisions not verified.
+- **Identity:** Федеральный закон от 22.07.2008 № 123-ФЗ «Технический регламент о требованиях пожарной безопасности»; федеральный закон Российской Федерации.
+- **Authority:** [Росстандарт list for this regulation](https://protect.gost.ru/TrList/84), heading and listed standards; [МЧС official fire-supervision requirements list, row 4](https://mchs.gov.ru/dokumenty/inye-normativnye-pravovye-akty/prochie-normativnye-pravovye-akty/perechen-obyazatelnyh-trebovaniy/federalnyy-gosudarstvennyy-pozharnyy-nadzor), an agency list identifying the law and legal-bank address, not the law text; [official legal-bank entry for 123-ФЗ](http://pravo.gov.ru/proxy/ips/?docbody=&nd=102123614), linked by that list but inaccessible during audit.
+- **Scope:** Fire-safety technical regulation; buildings, protected objects, existing work, relevant dates and transition conditions need confirmation from its official law text. The standards list supports its subject and identity, not a detailed statement of article 1.
+- **Edition/status:** МЧС list points to a historical edition; current consolidated law and transition rules unresolved. Official legal-bank address supplied by that list timed out during retrieval.
+- **Application basis:** Federal technical regulation; distinguish its legal provisions and applicable SP/GOST conformity route using [federal-framework.md](federal-framework.md).
+- **Related:** 69-ФЗ; SP 1, 2, 4, 7, 8, 10, 12; special objects.
+- **Verification:** Checked 2026-11-01: Rosstandart list heading and МЧС list row 4 read; primary law text was not accessible in the audit, so article-specific scope and current edition remain unresolved.
 
 ## federal-law-69-fz
 
-- **Identity:** Федеральный закон от 21.12.1994 № 69-ФЗ «О пожарной безопасности»; federal law, Российская Федерация.
-- **Authority:** [МЧС text, articles 1–2](https://06.mchs.gov.ru/deyatelnost/napravleniya-deyatelnosti/grazhdanskaya-zashchita/7-organizaciya-meropriyatiy-radiacionnoy-himicheskoy-i-biologicheskoy-zashchity-naseleniya-i-territoriy/7-1-normativno-pravovye-akty/zakony-rossiyskoy-federacii/fz-69-o-pozharnoy-bezopasnosti); [official publication of 2026 amendment № 110-ФЗ](https://publication.pravo.gov.ru/documents/block/president?index=1&pageSize=200).
-- **Scope:** General fire safety legislation and definitions in articles 1–2; it is broader than building design and interfaces with operation and duties. Check current relevant articles for the particular actors and project.
-- **Edition/status:** The MЧС text is historical; the official publication list identifies a 2026 amendment. Its effects and the consolidated current law have not been verified.
-- **Application basis:** Federal law; SP application is a separate issue; see [federal-framework.md](federal-framework.md).
-- **Related:** 123-ФЗ and project fire safety strategy and operation.
-- **Verification:** Checked 2026-11-01: historical MЧС articles 1–2 and official publication listing read; current consolidated text and 2026 amendment not read.
+- **Identity:** Федеральный закон от 21.12.1994 № 69-ФЗ «О пожарной безопасности»; федеральный закон Российской Федерации.
+- **Authority:** [МЧС official requirements list, row 1](https://mchs.gov.ru/dokumenty/inye-normativnye-pravovye-akty/prochie-normativnye-pravovye-akty/perechen-obyazatelnyh-trebovaniy/attestaciya-dolzhnostnyh-lic-osushchestvlyayushchih-deyatelnost-v-oblasti-nezavisimoy-ocenki-pozharnogo-riska-audita-pozharnoy-bezopasnosti) identifies the law and legal-bank address in a specific oversight context; [official legal-bank entry for 69-ФЗ](http://pravo.gov.ru/proxy/ips/?docbody=&nd=102033559), linked by that list but inaccessible during audit; [official publication listing](https://publication.pravo.gov.ru/documents/block/president?index=1&pageSize=200) identifies amendment № 110-ФЗ of 25.04.2026, item 59. Neither list is the consolidated law.
+- **Scope:** General fire safety law and its design, operation and responsibility interfaces; the official law text is needed to establish current relevant provisions, object and work conditions.
+- **Edition/status:** Official publication list identifies a 2026 amendment; its text and current consolidation were not retrieved. The legal-bank link identified by МЧС timed out.
+- **Application basis:** Federal law; SP status is separate; see [federal-framework.md](federal-framework.md).
+- **Related:** 123-ФЗ and fire safety strategy and operation.
+- **Verification:** Checked 2026-11-01: МЧС list row 1 and official publication list entry for 110-ФЗ read; primary law and amendment text not read in audit. Detailed scope unresolved.
 
 ## federal-law-181-fz
 
-- **Identity:** Федеральный закон от 24.11.1995 № 181-ФЗ «О социальной защите инвалидов в Российской Федерации»; federal law, Российская Федерация.
-- **Authority:** [Росгвардия hosted text, edition 29.10.2024, article 15](https://39.rosguard.gov.ru/uploads/2025/03/federalnyjj_zakon_ot_24111995_n_181fz.pdf); [Минтруд text of amendment № 419-ФЗ, article 15](https://mintrud.gov.ru/docs/laws/120).
-- **Scope:** Article 15 addresses access to social, engineering and transport infrastructure and related conditions. Check current text, transitional provisions, responsible entities and applicable sector-specific rules for new and existing objects and work, rather than equating legal scope with SP 59's narrower registry wording.
-- **Edition/status:** The official-hosted law text states edition 29.10.2024 with changes effective 01.03.2025. It is not verified as current on the project date.
-- **Application basis:** Federal legal accessibility obligations are distinct from whether particular SP or GOST clauses are selected or otherwise applicable; see [federal-framework.md](federal-framework.md).
+- **Identity:** Федеральный закон от 24.11.1995 № 181-ФЗ «О социальной защите инвалидов в Российской Федерации»; федеральный закон Российской Федерации.
+- **Authority:** [Росздравнадзор archived official oversight list, row 174](https://roszdravnadzor.gov.ru/pages/reform/npa-archive/10-11-2021) identifies the law and its [official legal-bank entry](http://pravo.gov.ru/proxy/ips/?docbody=&nd=102038362). This is an agency list, not the text of the law; the linked legal-bank entry timed out during audit.
+- **Scope:** Legal route for disability accessibility, including infrastructure; article 15, applicable objects, responsible parties, stages and transitional arrangements require verification from the primary law and amendments. Do not equate legal scope with SP 59 registry scope.
+- **Edition/status:** The archived agency list does not establish the current consolidated edition or amendments; unresolved.
+- **Application basis:** Federal legal obligations and SP/GOST provision status are distinct; see [federal-framework.md](federal-framework.md).
 - **Related:** SP 59, SP 136 and accessible wayfinding.
-- **Verification:** Checked 2026-11-01: official-hosted 2024 edition article 15 and 2014 amendment text identified; current consolidated law and transitions not verified.
+- **Verification:** Checked 2026-11-01: agency list row 174 and official legal-bank address identified; law text and current status could not be retrieved during primary audit. Detailed applicability is unresolved.
 
 ## sp-3-13130-2026
 
@@ -190,17 +190,17 @@ The records below distinguish registry scope text from full normative text. The 
 
 ## government-decree-272-2015
 
-- **Identity:** Постановление Правительства Российской Федерации от 25.03.2015 № 272 «Об утверждении требований к антитеррористической защищенности мест массового пребывания людей и объектов (территорий), подлежащих обязательной охране войсками национальной гвардии Российской Федерации, и форм паспортов безопасности таких мест и объектов (территорий)»; постановление Правительства Российской Федерации.
-- **Authority:** [Росгвардия hosted text: decree paragraph 1, first requirements sections I–II and second requirements section I](https://www.rosguard.gov.ru/document/article/postanovlenie-pravitelstva-rossijskoj-federacii-ot-25032015--272).
-- **Scope:** The text establishes distinct requirements for listed places of mass presence and for objects subject to mandatory National Guard protection. In the hosted text the first requirements provide for locally determined lists and identify exclusions; the second exclude transport infrastructure, vehicles and fuel-and-energy facilities. The first also addresses security equipment for planned or reconstructed places during building work. Determine the actual listing, responsible authority, category and current sector-specific rules; do not classify an object merely by its name or occupancy.
-- **Edition/status:** The hosted text identifies amendments through 2017 in the first requirements; it is historical, not proof of the current consolidated decree. Current amendments, exclusions and project transition are unresolved.
-- **Application basis:** A government legal instrument applicable only within its established scope; assess the actual object and current text separately from voluntary or otherwise selected SP provisions, using [federal-framework.md](federal-framework.md).
-- **Related:** SP 132, SP 1 and SP 59; security brief, sector-specific requirements, accessible access and evacuation.
-- **Verification:** Checked 2026-11-01: decree approval paragraph, first requirements paragraphs 1–4 and categorization paragraphs 6–8, second requirements paragraphs 1 and 3 read in Росгвардия text; current consolidated text, list membership, sector rules and project categorization not verified.
+- **Identity:** Постановление Правительства Российской Федерации от 25.03.2015 № 272 «Об утверждении требований к антитеррористической защищенности мест массового пребывания людей и объектов (территорий), подлежащих обязательной охране войсками национальной гвардии Российской Федерации, и форм паспортов безопасности таких мест и объектов (территорий)»; постановление Правительства Российской Федерации. This later title needs confirmation against the current official text.
+- **Authority:** [Official legal-information publication search](https://publication.pravo.gov.ru/search); navigation only. The proposed original publication entry was inaccessible during audit, so no decree text or detailed exclusions are claimed as primary-verified.
+- **Scope:** Conditional discovery route for mass-presence places and objects subject to special protection. Verify actual object, competent authority, classification, sector rules, territorial scope, work triggers and exclusions in the official decree and relevant instruments; avoid inferring category from name or occupancy.
+- **Edition/status:** Original and current consolidated text, amendments and status could not be verified from primary publication in this audit.
+- **Application basis:** A government instrument potentially applicable in its actual scope; do not treat it as an automatic requirement for all buildings. See [federal-framework.md](federal-framework.md).
+- **Related:** SP 132, SP 1, SP 59, security brief, sector-specific requirements, accessible access and evacuation.
+- **Verification:** Checked 2026-11-01: official publication portal search available, specific original publication endpoint inaccessible; previous agency-hosted reproduction was removed. Scope is discovery only, not primary-verified.
 
 ## Special-object discovery and unresolved interfaces
 
 - **High-rise:** [SP 267.1325800.2016 registry scope](https://protect.gost.ru/sp/details/e343722d-53fe-4dd1-955b-2e1946442f50) covers new high-rise building and complex design and construction, excludes capital repair, reconstruction, modernization and high-rise structures, and describes a conditional public/multifunctional use. Its change № 3 [record](https://protect.gost.ru/sp/changesdetails/f62e4140-c0e1-4685-8f54-d05ddad6314f) leaves the effective-date field blank. [SP 477.1325800.2020 registry](https://protect.gost.ru/sp/details/98f1ad5e-f762-413c-ac5c-3c5c8d36071d) says cancelled even though its historical scope covers certain high-rise fire-safety cases; identify the actual current successor and transition. Do not infer a gap in regulation from cancellation. Route the general building record to its typological owner.
 - **Multifunctional:** SP 456 above provides the fire-specific route; verify scope, boundaries and edition. [SP 160.1325800.2014](https://protect.gost.ru/sp/details/c71e37b2-43b8-4c82-8de2-1c6cf2826896) is a separate general building design route with explicit geometry and stage boundaries; use its full scope and coordinate with the typological owner.
 - **Parking:** [SP 506.1311500.2021 registry](https://protect.gost.ru/sp/details/eebc4773-8dd3-4196-a246-02c287feb6f4) says cancelled, and its [official change record](https://protect.gost.ru/sp/changesdetails/42da8dbe-5f80-4853-8268-0f82a0eaf045) identifies cancellation of its approval from 10.10.2023. The [SP 154.13130.2013 card](https://protect.gost.ru/sp/details/033908ec-5fa9-4532-95ac-1c9dc7b6c553) says replaced by SP 506. A new candidate is [SP 551.1311500.2026 «Системы противопожарной защиты. Стоянки автомобилей. Требования пожарной безопасности»](https://protect.gost.ru/sp/details/63480a25-98f4-40a3-9de1-22134cb06528): checked 2026-11-01, official card scope/status and replacement fields read; it reports commencement 01.06.2026 and covers parking spaces/facilities, including electric and rechargeable-hybrid vehicles, across the stated work types. It shows no formal replaced-document relationship. Full provisions/exclusions, amendment history, relationship to SP 4 and project-date applicability remain unverified. Do not infer a formal successor chain or revive cancelled SP 506 from these cards; consult the typological owner and actual current texts.
-- **Other interfaces:** Signalling, automatic detection/extinguishing, fire-service access, fire signs and special-use or special-purpose facilities require further source review; they are not covered comprehensively here. No full SP was read. Every record above is partial, not a verified current consolidated text; discovery entries are not records of applicability.
+- **Other interfaces:** Signalling, automatic detection/extinguishing, fire-service access, fire signs and special-use or special-purpose facilities require further source review; they are not covered comprehensively here. No full SP was read. Records are bounded catalog evidence, not determinations of project applicability; unverified full texts do not negate the scope evidence already read. Discovery entries are leads.

@@ -11,6 +11,7 @@ Eurocode or any other code as a default.
 - [Establish applicability](#establish-applicability)
 - [Accessibility and inclusive use](#accessibility-and-inclusive-use)
 - [Fire and life safety](#fire-and-life-safety)
+- [Primary normative sources](#primary-normative-sources)
 - [Russia-specific source selection](#russia-specific-source-selection)
 - [Complete selective reading](#complete-selective-reading)
 - [Deliver the open issues](#deliver-the-open-issues)
@@ -60,6 +61,37 @@ strategy. Travel distances, capacity, ratings, separation and systems depend on
 applicable rules and the project; do not assign generic thresholds or conclude
 that a sketch is safe or compliant. Obtain authority and fire specialist review.
 
+## Primary normative sources
+
+Keep normative-document links at the document's official promulgation, the
+issuing authority's own publication or its primary official register/operator
+record. Assess the publisher's role for that particular document. A government
+hostname does not turn a hosted commercial consolidation or another party's
+file into a primary publication. Do not retain school mirrors, association
+copies, commercial reproductions or arbitrary asset copies as normative links.
+
+An authority's own notice or explanation is primary for that notice only.
+Label it as context/discovery and distinguish its statements from the act's
+scope, exclusions and status. A primary register card can substantiate its
+displayed identity, scope and status metadata without a full-text import.
+
+Source authority and file format are separate. Prefer primary readable digital
+text when available. A scanned original can be primary, while searchable text
+from a mirror remains secondary. Preserve a correct unavailable primary URL
+and its precise evidence limit; do not replace it with a convenient mirror or
+silently preserve claims supported only by that mirror. Narrow or leave the
+affected field unresolved.
+
+For a discovery record, check the claims actually retained: identity, source,
+subject, object/work/territorial conditions, important scope exclusions and
+supported edition/status observations. Missing critical identity or scope
+evidence remains a catalog limitation. Reading every clause, collecting scans
+or independently reconstructing every amendment chain is not a universal
+catalog-completion gate. Check detailed provisions, values and the exact
+edition/application basis when the design decision requires them. A supplied
+project brief can own project requirements; a supplied normative copy still
+requires source-authority assessment.
+
 ## Russia-specific source selection
 
 When Russia is confirmed, select the matching question/condition from
@@ -80,7 +112,7 @@ decision.
    and engineering-interface branches against the actual task. Include
    adjacent documents where a changed entrance, use, envelope or route affects
    them. Check both the host building and an embedded function.
-3. Read each candidate record completely using [selective reading](#complete-selective-reading), including its scope, exclusions and verification limits.
+3. Read each candidate record completely using [selective reading](#complete-selective-reading), including its scope, exclusions and verification limits. Check normative links under [primary sources](#primary-normative-sources).
    Follow the linked official text/register to the relevant provision and
    necessary amendments, replacement and commencement evidence. A registry
    abstract supports discovery, not every detailed rule. An active badge,

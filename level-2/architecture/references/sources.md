@@ -48,10 +48,13 @@ Further modeling work requires a later explicit request and a separate handoff.
 
 ## Russian normative evidence
 
-The [normative catalog](normative-catalog.md) is newly researched discovery and
-applicability metadata from official records and explicitly identified source
-fragments, checked 2026-11-01. It is not imported from upstream country digests
-or the Architecture coursework library. Each thematic record owns its official
-links, edition/status observations, scope evidence and remaining uncertainties.
-Historical agency-hosted commercial copies and inaccessible sources are labeled
-as such; they do not establish current consolidated law. Full texts stay external.
+The [normative catalog](normative-catalog.md) contains discovery and applicability
+metadata, checked at the record's stated boundary/date. It is not imported from
+upstream country digests or the Architecture coursework library. Normative links
+follow the [primary-source contract](requirements.md#primary-normative-sources):
+official promulgation, issuer publication or primary official register/operator.
+Government-hosted third-party consolidations and other mirrors are not retained
+as normative links. Notices/explanations are identified for their own publishing
+role. Each thematic record owns its supported scope/status and access limits;
+secondary-only statements are narrowed rather than relabeled as primary checks.
+Detailed project provisions are checked when selected. Full texts stay external.

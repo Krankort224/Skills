@@ -20,19 +20,20 @@ the existing project owner.
 
 ## Coverage and date
 
-Evidence checked **2026-11-01**. This is a broad federal architectural discovery
-perimeter, with local discovery routes, not an inventory of every Russian act.
-The perimeter follows legal/technical, sanitary, environmental, heritage and
-object-use branches rather than a target document count. Core registry scope
-abstracts, amendment/replacement fields and selected legal provisions were read;
-this does not amount to full review of all consolidated documents.
+Primary-source roles and the supported record fields were audited on
+**2026-11-01**. This is a broad federal architectural discovery perimeter with
+conditional local/special-object routes, not an inventory of every Russian act
+or a legal-compliance determination. Its coverage follows architectural
+questions and authoritative discovery sources, not a document-count target.
 
-Record verification is intentionally granular: a checked registry scope can
-support candidate selection while current amendment content, transition rules
-or a particular design clause remain unresolved. Do not promote a historical
-agency-hosted commercial consolidation, search excerpt or issuer announcement
-into a verified current normative text. A last-checked date describes the
-retrieval, not a certification of completeness at that date.
+Use the [primary-source contract](requirements.md#primary-normative-sources).
+Records retain primary act/register links and separately labeled authority
+notices or official search routes. A notice is evidence for its own statement,
+not the underlying act; a portal is a search route, not an individual document.
+Where primary identity/scope evidence is missing, the record says so. An
+unread project provision or unperformed full amendment review is a different,
+decision-specific limitation. A checked date describes the stated evidence,
+not certification of every current legal provision.
 
 ## Select a thematic route
 
@@ -60,93 +61,78 @@ decision.
 
 ## Official discovery sources
 
-| Source | Use and evidence boundary |
+| Source | Publishing role and evidence boundary |
 | --- | --- |
-| [Official legal information portal](https://pravo.gov.ru/) and [official publication](https://publication.pravo.gov.ru/) | Find federal/regional acts, amendments, commencement and texts with incorporated changes. Original publication proves that act's publication, not that every later amendment is incorporated. Several live pages were inaccessible in this check. |
-| [Rosstandart standards portal](https://protect.gost.ru/) and [SP register](https://protect.gost.ru/sp) | Individual records expose identifier, issuer/order, scope, dates, replacement relationships and registered changes. Read the named card fields and, for a design requirement, the actual selected clause and applicable changes. A stale status badge can conflict with replacement fields. |
-| [FAU FCS registry explanation](https://faufcc.ru/deiatelnost/stu) and its linked [construction requirements registry](https://xn--e1ahdbdflckekkc.xn--p1ai/rntd) | Follow the current requirements mechanism, requirement entry and project dates. The federal record now includes one actual live page with provision/ID/current version/status/date, and a second indexed-only example. This is a bounded observation at retrieval, not verification of all registry entries or a current full export. |
-| [Minstroy documents](https://minstroyrf.gov.ru/docs/) | Issuing orders, SP amendments, replacement and applicable explanations. Confirm the particular document and effective date; an unavailable page is not evidence of repeal. |
-| [MChS documents](https://mchs.gov.ru/dokumenty) | Fire laws, orders and fire-safety SP sources; use the distinct fire-safety application mechanism. Do not infer it from the construction registry alone. |
-| [Rospotrebnadzor](https://www.rospotrebnadzor.ru/) and its official territorial offices | Sanitary acts, original documents and replacement announcements. A regulator news notice is a discovery/status lead, not the full scope or current consolidated rule. |
-| Responsible region/municipality, heritage and environmental authorities | Adopted PZZ text/map, regional/local standards, GPZU, protected-area and heritage acts. See the territorial route; a web-map layer or GPZU alone does not settle all restrictions. |
+| [Official legal information portal](https://pravo.gov.ru/) and [official publication](https://publication.pravo.gov.ru/) | Primary legal-bank/publication entry points. Prefer the individual act or official record identified in a thematic card; a portal landing page alone does not verify that card's scope or status. Original publication does not automatically include later amendments. |
+| [Rosstandart standards portal](https://protect.gost.ru/) and [SP register](https://protect.gost.ru/sp) | Primary official register for individual standards/SP metadata and registered changes. Named card fields can support identity, issuer, scope, status and replacement observations; inspect the actual selected provision when a project decision needs it. |
+| [Construction requirements registry](https://xn--e1ahdbdflckekkc.xn--p1ai/rntd) | Primary operator record for requirements and displayed versions. Exact observed entries and access boundaries are in the federal record. The [FAU FCS explanation](https://faufcc.ru/deiatelnost/stu) is primary for that operator explanation only, not a substitute for a law or the register's current full contents. |
+| [Minstroy documents](https://minstroyrf.gov.ru/docs/) and [MChS documents](https://mchs.gov.ru/dokumenty) | Use their own issued acts/publications or register pointers. A copy of another issuer's act or commercial consolidation does not become primary because it is on an agency site. |
+| [Rospotrebnadzor](https://www.rospotrebnadzor.ru/) and official territorial offices | Their own sanitary acts/publications and clearly identified notices. Verify the particular publication role; an explanatory notice does not establish unread normative scope/exclusions. |
+| Region/municipality and responsible heritage/environment authority | The authority's own adopted act/publication or primary register for local conditions. Government-hosted private compilations are excluded; a web-map layer or notice alone does not settle a parcel's legal restrictions. |
 
-These are discovery authorities, not claims that every entry in their holdings
-has been reviewed. Exact document links and the fragments actually read are in
-the thematic records. Check the source's edition date, not merely crawl date or
-HTTP success.
+Exact retained URLs and the fragments or metadata actually checked belong to
+the thematic records. Source quality depends on publishing role, not file
+format or HTTP success. No mirror is offered as a replacement for an unavailable
+primary normative page, and no full normative text is imported.
 
 ## Read a record
 
-Each record owns identity, authority links, scope, edition/status, application
-basis, related documents and verification limits. Its heading is the stable
-local identifier; external document identifiers retain their official spelling.
+Each record owns identity, authority, scope, edition/status, application basis,
+related routes and verification limits. Retrieve its whole heading extent using
+[complete selective reading](requirements.md#complete-selective-reading), not an
+arbitrary prefix or unseen stored tool content.
 
-An anchor selects the whole record, including its verification limitations.
-It does not authorize reading an arbitrary file prefix or assuming that content
-stored but not displayed was inspected. Retrieval rules and recovery are owned
-by [requirements](requirements.md#complete-selective-reading).
+- **Primary act/register evidence:** identify exactly which source and fields or
+  fragments support the retained catalog claims. A register abstract supports
+  metadata/scope screening, not all detailed exceptions or a project verdict.
+- **Primary notice/explanation:** evidence for the identified authority statement
+  only; distinguish it from the normative act's actual contents.
+- **Primary pointer only / unavailable:** keep the correct pointer, state what
+  was not read and narrow affected claims. A generic official search route is
+  not a verified act-specific link.
 
-- **Scope checked at registry level:** the official abstract was read; it is
-  sufficient for a potential-source route, not every exception or provision.
-- **Selected text checked:** identified articles/sections/pages were read at
-  the stated edition. Unread amendments and later changes remain open.
-- **Discovery only / inaccessible:** do not state operative scope, thresholds,
-  replacement effects or applicability beyond the evidence identified.
-
-These evidence levels are separate from the project's selection outcomes
-(`applicable`, `potential`, `not applicable`, `unresolved`) in requirements.md.
-A currently registered SP is not automatically applicable to the project;
-an older edition may need investigation under a project transition rather than
-being silently substituted or discarded.
+Record verification and project selection are separate axes. Project outcomes
+remain applicable, potential, not applicable or unresolved under requirements.md.
+Do not silently convert source availability, registration or currency into
+universal mandatory status or project applicability.
 
 ## Coverage matrix
 
-| Theme | Integrated records / source perimeter reviewed | Remaining boundary |
+| Theme | Integrated discovery coverage | Evidence boundary / next decision |
 | --- | --- | --- |
-| Federal framework and work/stage | Bounded dated GrK/384-ФЗ bodies, 608-ФЗ housing changes, 507-ФЗ timing evidence, 653-ФЗ and one live/one indexed registry example in [federal framework](normative/federal-framework.md) | Complete current consolidation/transition chain, current 1417 rules and the second entry's live state remain unresolved; evidence levels are per record. |
-| Territory and urban planning | SP 42 successor, SP 82 and SP 396 official scope/status; local PZZ/GPZU discovery | Regional/local standards and parcel-specific restrictions have no exhaustive catalog; named site needed. |
-| Use and spatial organization | Housing, public, production/warehouse, welfare, education, medical, parking, selected culture/sports/retail/hotel and mixed-use registry records | Specialized subtypes and individual exclusions remain open; generic public-building scope is not their replacement. |
-| Areas and metrics | Selected initial SP 118 and SP 160 area appendices and residential cross-route | Current amended appendices, SP 54 direct area provisions and cadastral/statistical/legal purposes require separate verification; no GFA-to-local-area conversion is supplied. |
-| Fire and evacuation | Federal fire framework and SP 1/2/3/4/7/8/10/12 scope/status routes; direct conditional high-rise/parking discovery, including SP 551's official card | Some high-rise/parking references have cancellation or successor conflicts; current SP 551 metadata is a candidate, not proof of a formal succession chain or project application. No travel-distance or capacity table imported. |
-| Accessibility | 181-ФЗ scope lead, SP 59/136 and ГОСТ Р 59602 routes | Current provisions, exceptions and different user journeys require joint fire/accessibility review; no generic minimum dimension imported. |
-| Sanitary/environmental conditions | 52-ФЗ historical provisions, SanPiN 2.1.3684/1.2.3685 amendment leads; four partial 2026 workplace/operations/catering/education records | Regulator notices and bounded secondary texts improve the routes; original current scope/exclusion and amendment evidence remains critical and unresolved. Transport/food-retail branches remain discovery-only. |
-| Light, acoustics, thermal/envelope and climate | SP 50/51/52/131 official registry scope/status and replacement evidence | Specific methods, numeric values, current amendments and exclusions need actual selected text; glazing ratio is not daylight compliance. |
-| Structural/MEP interfaces | SP 20/22/30/60 registry scope/status | Architectural coordination only; specialist calculations, industrial process design and system sizing excluded. |
-| Heritage/environment/protected and hazardous conditions | Selected historical provisions of 73-ФЗ, 33-ФЗ, 7-ФЗ, Land/Water Codes; SP 14 scope and replacement evidence | Current legal texts, actual protected zones/regimes, seismicity and other site hazards must be resolved. Permafrost, flood, aviation and sanitary zones remain trigger-based discovery. |
-| Documentation and issue stage | Government 87 selected 21.10.2025 body compared with older reproduction; SPDS official records | Dated body review improves the composition route; exhaustive November 2026 currency and actual selected SPDS provisions/correction still need checking. |
-| Security and controlled access | SP 132 registry scope/status and historical Government 272 scope | Object/sector-specific regime, category and current legislation remain to be established; security controls need joint evacuation/accessibility review. |
+| Federal framework and work/stage | GrK, housing, architectural activity, building safety, reform/register and documentation routes | Retain primary act/register pointers and only primary-supported subject/scope/status fields. Missing primary legal scope is a catalog gap; exact project timing/approval and selected provisions are separate checks. |
+| Territory and urban planning | SP 42/82/396, parcel instruments and local discovery | Primary SP cards support the identified metadata. Local acts need their actual issuer/primary register. A search route or agency notice is not a verified current municipal act. |
+| Use and spatial organization | Housing, public, industrial/warehouse, welfare, education, healthcare, parking, selected culture/sports/retail/hospitality and mixed-use | Primary register scope/status supports candidate routing. Uncovered specialist subtypes and important exclusions remain explicit; generic public-building scope is not their substitute. |
+| Areas and metrics | Typology records and measurement-purpose route | No area formula is retained from unproven asset copies or reporting aids. Read the selected primary area definition and changes when an actual measurement decision requires it. |
+| Fire, evacuation, access and security | Primary SP/GOST cards, legal entry points and conditional high-rise/parking discovery | Preserve cancellation/replacement and scope cautions. Legal records lacking primary scope remain limited. No general dimensions, system prescription or automatic successor chain is supplied. |
+| Sanitary/environmental conditions | Primary sanitary publication pointers, separately labeled regulator notices and conditional activity routes | Primary act scope/exclusions/status not accessed remain catalog uncertainties; notices and secondary-derived details are not promoted to normative evidence. Detailed selected provisions are checked at project use. |
+| Light, noise, thermal protection, climate and engineering interfaces | Relevant SP 50/51/52/131/20/22/30/60 primary metadata | Architectural coordination only; the actual calculation method, applicable value and detailed engineering requirement depend on the project decision and source. |
+| Heritage, protected territory, land/water and other special conditions | Conditional legal and site-source routes plus SP 14 metadata | Missing act-specific primary links or material scope are stated in records. Actual zone/parcel regimes and specialist conditions need their source acts; no complete municipal inventory is claimed. |
+| Documentation | Government 87 and SPDS routes | An official card or act pointer supports only the evidence stated in its record. Concept, project and working-documentation purposes remain distinct. |
 
 ## Critical evidence dispositions
 
-Checked **2026-11-01**. These dispositions describe evidence, not permission to
-apply a provision. Exact links, fragments and source types remain at the owning
-record; do not treat a bounded resolution as certification of the whole law.
+Assess limitations against the catalog's actual claims. The owning records
+separate two kinds of open work:
 
-| Gap / owning record | Disposition and remaining limit |
+| Kind | Effect |
 | --- | --- |
-| [GrK classification, work/stage and expertise timing](normative/federal-framework.md#grk-190-design-and-expertise) | **Bounded text gap resolved:** actual dated post-2024 body sections replaced indexed-only evidence. **Current consolidation still blocking:** later amendments and complete affected timing/exception provisions require verification for the project date. |
-| [Housing definition/completion and transition](normative/federal-framework.md#zhk-188-alterations) | **Bounded amendment text gap resolved:** selected 608-ФЗ text read in an official-office-hosted commercial reproduction. **Current code still blocking:** other relevant housing provisions and later amendments are not certified. |
-| [653-ФЗ deferred change and legacy transition](normative/federal-framework.md#fz-653-building-safety-reform) | **Bounded date evidence improved:** indexed 507-ФЗ text identifies the revised deferral and displaces the stale note in a dated code copy. **Transition remainder still blocking:** complete current transition/amendment basis is not established. |
-| [384-ФЗ safety/application mechanism](normative/federal-framework.md#fz-384-building-safety) | **Bounded post-reform body gap resolved:** actual selected body read in a dated hosted reproduction. **Current consolidation/selection remains conditional:** check later changes and the actual justification route. |
-| [Government 87](normative/federal-framework.md#government-87-project-documentation) | **Dated body review resolved:** selected 21.10.2025 paragraphs read and compared, replacing cover-only evidence. This does not establish complete November 2026 currency. |
-| [Current 1417 rules](normative/federal-framework.md#government-1417-requirements-register) | **Still blocking after original-download attempts:** obtain readable Rules 1–5 plus the necessary enacted 1047/432 operative and commencement clauses, or authoritative current text with that chain. Exact publication/download pointers and limits are in the record. |
-| [Representative registry entries](normative/federal-framework.md#government-1417-requirements-register) | **One live example resolved, second still blocking:** ID 152316 actual live clause 5.21/current version/status was read; ID 152314 retains indexed-only evidence. Obtain its current operator HTML/XML version/status/content. No whole-register or automatic project-applicability claim follows. |
-| [2026 sanitary rules and older amendments](normative/environment-and-interfaces.md#2026-sector-rule-discovery) | **Authoritative scope still blocking after alternate-host downloads:** new candidate PDF copies yielded no readable provision text and provenance was not authenticated. Obtain readable original publications or authenticated text/scans of each record's named scope/exclusion/effective provisions and affecting amendments. Exact per-act identifiers/fragments are retained there; secondary scope is not upgraded. |
+| Missing or unverified primary document identity, act-specific pointer, subject, important object/work/territorial scope or exclusions | A genuine catalog-evidence limitation. Retain it visibly and narrow the field; a mirror, notice, title guess or generic portal does not close it. Report affected records in the handoff. |
+| Unread detailed design provision/value, project-specific edition/transition/application, unperformed full-text review or exhaustive amendment reconstruction | A future decision-specific check unless that detail is necessary to substantiate a retained catalog claim. It is not a blanket condition to collect scans or block the entire discovery catalog. |
+| Correct primary URL temporarily unavailable | Preserve the source and exact checked/access boundary. Its availability does not change its authority, and does not justify replacing it with a mirror or claiming the unread scope verified. |
 
-Other conditional gaps, including direct residential area provisions, specialist
-subtypes, protected regimes and local acts, remain in the coverage matrix and
-records. Their visibility is not an exclusion invented to claim completion.
+No record count, full-text collection or file format determines completion.
+Coverage and usefulness must be assessed together with the remaining material
+catalog gaps. A complete discovery increment is not a fully verified legal base
+or a determination of project compliance.
 
 ## Unresolved evidence and exclusions
 
-Do not conceal critical source gaps by excluding the theme. In particular,
-current sanitary replacements, current legal consolidations/transitions and
-current 1417 rules remain incompletely available. One live registry entry has
-been read; the second selected entry and wider current state remain unresolved.
-These limits block claims of
-an entirely verified current normative base and any dependent project
-conclusion. The catalog remains useful for discovery, scope screening and
-identifying exactly what evidence is needed next.
+Do not hide primary identity/scope gaps, or turn every unread detailed project
+provision into a catalog blocker. Primary-source access and scope limitations
+remain at the affected records; known unsupported statements have been narrowed.
+Further checking is driven by the retained catalog claim or an actual project
+question, not a requirement to obtain mirrored scans or read every clause.
 
 Detailed nuclear, mining, radiological, offshore, military, civil-defence,
 hazardous-process, transport-infrastructure and specialist engineering design
