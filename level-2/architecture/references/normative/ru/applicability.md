@@ -16,6 +16,7 @@ remain canonical outside this module.
 - [Resolve entrances, routes and mixed uses](#resolve-entrances-routes-and-mixed-uses)
 - [Select climate, site and assembly inputs](#select-climate-site-and-assembly-inputs)
 - [Evidence limits for these adaptations](#evidence-limits-for-these-adaptations)
+- [Apply a verified seating provision](#apply-a-verified-seating-provision)
 
 ## Select Russian sources
 
@@ -190,3 +191,35 @@ not close detailed design checks. Where operative primary text is unavailable,
 retain the exact missing definition/provision and useful provisional design;
 do not promote a search excerpt, unestablished distributor or old base edition
 to a verified current rule.
+
+## Apply a verified seating provision
+
+For an actual auditorium, assembly or conference-hall seating decision, the
+[СП 1 owner](fire-and-accessibility.md#sp-1-13130-2020) identifies the complete
+replacement §7.3.3 published in Order 502, amendment 3, PDF p. 2. Its official
+developer-institute catalogue, publication role, register identity and
+03.07.2025 commencement were checked on 2026-11-02. This is operative text,
+unlike the earlier scope-only evidence. The selected fragment normally calls
+for floor-fixing devices; where its no-more-than-200-seat exception is used,
+seats must be connected together within rows. A small total alone does not
+justify loose chairs. Its balcony/box exception is not a blanket small-hall
+exemption, and splitting one hall's seats into blocks does not change its total.
+
+Establish the actual project basis before testing a layout. In the
+[worked transformable hall](../../planning-and-section.md#a-russian-transformable-hall-seating-rule-changes-the-layout),
+the brief explicitly adopts that current fragment as a project technical
+requirement for a new Russian public assembly hall on 2026-11-02. **Applicable**
+there means selected for this bounded seating decision under that brief;
+statutory application, full-SP compliance and unrelated requirements remain
+separate checks. A different jurisdiction or an undecided application basis
+cannot inherit this result.
+
+Test the chosen product's connected-row envelope, not the sum of loose seat
+widths. Refit seats, passages and reconfiguration/storage operation on the same
+fixed plan. A source-backed hardware condition can consume passage width even
+when seat count and floor area stay constant. The example preserves 160 seats
+by changing ten rows into twelve after the connected product fails the client's
+central-passage target. All product dimensions, pitches and passage targets in
+that study are hypothetical project inputs, not values from §7.3.3. Its selected
+provision supplies neither exit sizing nor proof of anchorage/link performance;
+keep those unresolved rather than report the whole hall compliant.

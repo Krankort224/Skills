@@ -3,9 +3,11 @@
 Use this knowledge to generate a spatial solution from the
 [program and relationships](program-and-space.md), or to repair a selected layout.
 The schemes are conditional design tools, not prescribed building types.
-[Sources](sources.md) records the upstream basis and exclusions. All worked
-dimensions, furniture and heights below are hypothetical design assumptions,
+[Sources](sources.md) records the upstream basis and exclusions. Worked plan
+dimensions, product envelopes and heights are hypothetical design inputs,
 not normative minima, engineering sizes or evidence of local compliance.
+A source-backed constraint is explicitly identified with its selected record
+and project application basis, as in the transformable-hall study below.
 
 ## Contents
 
@@ -460,6 +462,70 @@ workshop safe from its remaining area. If the technology requires a different
 boundary, opening or relationship under the selected fire/spread provisions,
 refit that west edge; if display capacity is fixed, this reduced-display option
 fails the brief and the mezzanine alternative needs its actual spatial solution.
+
+### A Russian transformable hall: seating rule changes the layout
+
+**Fixed brief and basis.** A hypothetical new one-storey public club in Tver,
+Russia, contains an assembly hall with a clear internal rectangle 12 × 16 m,
+160 chair positions, no balcony/boxes and daily changeover to an empty activity
+floor. No basement, special-purpose use or tall-building condition is proposed.
+For the 2026-11-02 study, its brief explicitly adopts current СП 1.13130.2020
+§7.3.3 as a project technical requirement. The source owner and full operative
+replacement are in [Russian seating selection](normative/ru/applicability.md#apply-a-verified-seating-provision).
+This stated project basis is distinct from a claim of universal statutory
+obligation or verified whole-hall fire compliance.
+
+The brief fixes an unperforated floor finish, a 1.50 m central passage target,
+1.20 m side passages, 0.90 m row pitch and a 2.00 m front speaking zone.
+These are study inputs, not dimensions supplied by §7.3.3. Each loose chair is
+assumed 0.50 m wide and 0.50 m deep. The proposed connectable product's outer
+row envelope is `0.50n + 0.08 m`, including its end hardware, for `n` chairs.
+This is a hypothetical product input requiring later confirmation. Do not
+assume that row connections have zero width or demonstrated stability.
+
+**Before and operative conflict.** Ten rows of sixteen loose chairs give 160.
+Across the hall, two groups of eight occupy 4.00 m each, leaving
+`12 − 2(1.20) − 2(4.00) = 1.60 m` centrally. Geometric fit alone would retain
+this sketch. The verified §7.3.3 normally requires floor-fixing devices; its
+exception allowing omission for a hall with at most 200 seats requires seats
+to be interconnected within rows. The proposed independent loose chairs do not
+meet that selected condition, despite the total being below 200. Floor fixing
+is a credible technical alternative, but conflicts with this brief's floor
+condition unless that condition is expressly changed.
+
+**Changed layout.** Select interconnected rows with releasable connections for
+closed-hall changeover. Keeping two eight-chair rows in each line would occupy
+4.08 m on each side and leave only `12 − 2.40 − 8.16 = 1.44 m` centrally,
+failing the client's 1.50 m target. Do not retain the old 1.60 m label.
+Instead use eight lines with fourteen seats and four lines with twelve:
+`8 × 14 + 4 × 12 = 160`. Connect each continuous row on its own side of the
+central passage; no connection crosses a passage. The widest connected row has
+seven chairs: `7 × 0.50 + 0.08 = 3.58 m`. Two such rows leave
+`12 − 2.40 − 7.16 = 2.44 m` centrally. The six-chair rows are narrower.
+
+Take x across the 12 m hall and y from the rear entrance toward the front.
+In the fourteen-seat lines, left rows occupy x = 1.20–4.78 and right rows
+x = 7.22–10.80. The continuous central passage is x = 4.78–7.22; both side
+passages remain 1.20 m. Twelve-seat lines use six chairs on each side, keeping
+those same outer aisle boundaries. Reserve y = 0–1.20 for rear cross-movement,
+y = 1.20–12.00 for the twelve 0.90 m pitches, and y = 14.00–16.00 for speaking;
+the intervening 2.00 m stays clear. With each seat 0.50 m deep, rows do not
+overlap at the assumed pitch; this does not establish a permissible row gap.
+A centered rear door reaches the central passage through the rear band. Side
+door approaches must join the side passages without chair/hardware or swing
+encroachment; their actual clearances and evacuation status remain to be checked.
+
+**Consequence and remaining work.** Hall area and chair count stay fixed, while
+connected-seat geometry changes ten lines into twelve and consumes another
+1.80 m of depth. The source drives a physical product/row decision, not merely
+a note beside the old plan. A rigid 4.08 m row cannot be assumed to pass an
+existing 1.20 m service doorway: confirm a release/stacking procedure with the
+hall closed and no audience, then test the actual chair store and handling.
+Keep occupied rows connected. Confirm product connections, stability, finishes,
+inclusive seating positions/sightlines, actual doors, travel and evacuation
+capacity separately; neither 160 chairs nor this clause verifies those matters.
+If a proposed seat count exceeds 200, this particular no-floor-fixing exception
+cannot be used merely by splitting the same hall into smaller chair blocks.
 
 ## Repair a bounded proposal without losing its logic
 
