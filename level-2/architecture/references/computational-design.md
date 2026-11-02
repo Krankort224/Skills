@@ -14,14 +14,13 @@ No solver, simulation, model or tool-specific parametric workflow is implied.
 - [Screen data before translating it into design](#screen-data-before-translating-it-into-design)
 - [Check adjacency and access as separate relationships](#check-adjacency-and-access-as-separate-relationships)
 - [Boundary and handoff](#boundary-and-handoff)
-- [Pinned method sources and adaptation](#pinned-method-sources-and-adaptation)
 
 ## Frame the question
 
 **Decision and boundary.** Define what can change and what the comparison must
 decide. Entering a parameter in a table does not make it measured, legally binding
 or independently adjustable. Use [program and space](program-and-space.md) for the
-program and [requirements](requirements.md) for applicability. Sources: C1–C3, C11–C13.
+program and [requirements](requirements.md) for applicability.
 
 **Inputs.** Use the current brief, accepted baseline, site/program evidence and
 stakeholder priorities. Retain source, revision, units and uncertainty for each:
@@ -62,7 +61,6 @@ entrance does not offset the unresolved area conflict.
 **Decision and boundary.** Explore different organizing choices before refining
 small dimensions. Generate a bounded, explainable set manually; this does not
 implement a generator or guarantee complete design-space coverage.
-Sources: C1, C3–C5, C9–C10, C18–C20.
 
 **Inputs.** Use framed constraints, an accepted concept where applicable, controllable
 variables, justified domains, evaluation effort and a common comparison basis.
@@ -105,7 +103,7 @@ Do not import curvature formulas, engineering limits or fabrication tolerances.
 
 **Decision and boundary.** Expose feasible trade-offs and why a direction is
 preferred. Scores support judgment; they establish neither overall architectural
-quality nor compliance. Sources: C5–C8, C10, C13–C17.
+quality nor compliance.
 
 **Inputs.** Match program, measurement boundary, evidence date and evaluation method.
 Define criterion units or qualitative rubrics, preference direction, uncertainty
@@ -151,7 +149,7 @@ but does not justify treating links of different importance as equivalent.
 
 **Decision and boundary.** Find uncertainties that could reverse the choice and
 the evidence worth obtaining next. Scenario testing is conditional reasoning,
-not a probability forecast or proof of robustness. Sources: C3, C6–C10.
+not a probability forecast or proof of robustness.
 
 **Inputs.** Retain option revisions, input provenance, formulas/rubrics and baseline.
 Choose ranges/categories from actual project uncertainty, not a generic percentage.
@@ -185,8 +183,7 @@ verify the operating schedule before rejecting it outright.
 
 **Decision and boundary.** Determine what data can support before it changes
 program, access or layout. Evidence may support a design hypothesis without
-establishing demand, causation, legal boundaries or future behavior.
-Sources: C2, C14, C16–C17. This is not a sensor/GIS deployment.
+establishing demand, causation, legal boundaries or future behavior. This is not a sensor/GIS deployment.
 
 **Inputs.** Identify owner, collection period/date, location, coverage, sampling
 method, definitions, units, processing, permissions and omissions. Distinguish
@@ -223,7 +220,6 @@ observations, and avoid sizing the west entry on a claim of one-fifth future use
 dependencies using a small graph/table. This is bounded topological reasoning
 informed by space-syntax concepts, not axial/visibility simulation, human-behavior
 prediction, accessible-route verification or egress assessment.
-Sources: C2, C11–C13, C15.
 
 **Inputs.** Name spaces/zones and the tested relationship: shared boundary, direct
 door access, visibility, preferred proximity or required separation. Record source
@@ -264,35 +260,5 @@ For a later explicitly requested modeling task, hand off the selected concept,
 dimensions, coordinates/units, source data/revisions, unresolved decisions and
 required checks. A prepared method is distinct from an executed result.
 
-## Pinned method sources and adaptation
 
-All C sources below were read in selected substantive sections at upstream revision
-`7a090c9ddc92e441b1419910673edbcfa7a962ed` of
-Abhinavbwj/Claude-skills-for-Computational-Designers. Links identify actual source
-sections, not adopted activation, routing or defaults. Methods above are bounded
-adaptations. No upstream code or engineering/compliance example is implemented.
-See [sources](sources.md) for the shared map and
-[third-party notices](../THIRD_PARTY_NOTICES.md) for permissions.
-
-| ID | Exact pinned file / representative selected section | Local treatment |
-| --- | --- | --- |
-| C1 | [cd-foundations/SKILL.md: 6.1 Over-Parametrization](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/cd-foundations/SKILL.md#61-over-parametrization) | Adapt question-first exploration and inspectable evaluation; no parameter quotas. |
-| C2 | [cd-foundations/references/core-concepts.md: 1.4 Graphs (Nodes and Edges)](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/cd-foundations/references/core-concepts.md#14-graphs-nodes-and-edges) | Adapt named properties, intervals and graph relationships; no model/engineering uses. |
-| C3 | [parametric-modeling/SKILL.md: 1.4 Parameter Identification: Independent vs. Dependent Variables](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/parametric-modeling/SKILL.md#14-parameter-identification-independent-vs-dependent-variables) | Adapt dependencies, ranges and sensitivity; replace generic constraint hierarchy with actual authority. |
-| C4 | [parametric-modeling/references/data-structures.md: 5.2 Panel Generation Example](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/parametric-modeling/references/data-structures.md#52-panel-generation-example) | Adapt deliberate combinations and option identity; exclude tree/tool operations. |
-| C5 | [generative-design/SKILL.md: 5.5 Design of Experiments (DOE)](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/generative-design/SKILL.md#55-design-of-experiments-doe) | Adapt generate/evaluate/revise, sampling and set-relative dominance; no global-front claim. |
-| C6 | [generative-design/references/fitness-functions.md: 2.1 Min-Max Normalization](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/generative-design/references/fitness-functions.md#21-min-max-normalization) | Adapt transparent scaling, priorities and proxy/uncertainty checks; no clipping or example thresholds. |
-| C7 | [generative-design/references/evolutionary-algorithms.md: 7.6 Deb's Feasibility Rules](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/generative-design/references/evolutionary-algorithms.md#76-debs-feasibility-rules) | Adapt feasibility before preference; convergence diagnostics reference-only, no robustness claim. |
-| C8 | [optimization-methods/SKILL.md: Result Validation](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/optimization-methods/SKILL.md#result-validation) | Adapt baseline/independent checks; exclude engineering optimization and generic perturbation defaults. |
-| C9 | [optimization-methods/references/algorithm-catalog.md: Strengths and Weaknesses](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/optimization-methods/references/algorithm-catalog.md#strengths-and-weaknesses) | Reference-only algorithm-limit screening; no solver selection, implementation or convergence guarantee. |
-| C10 | [optimization-methods/references/implementation-guide.md: Result Interpretation](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/optimization-methods/references/implementation-guide.md#result-interpretation) | Adapt reviewable trade-offs and bounded effort; exclude setup, exports, code and budget defaults. |
-| C11 | [design-automation/SKILL.md: 3.6 Soft vs. Hard Constraints](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/design-automation/SKILL.md#36-soft-vs-hard-constraints) | Adapt human selection and hard/preference separation; reject generic jurisdiction ordering. |
-| C12 | [design-automation/references/rule-systems.md: 5.5 Constraint Relaxation](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/design-automation/references/rule-systems.md#55-constraint-relaxation) | Adapt conditional rules, conflict exposure and metadata; exclude code tables, engine and automatic relaxation. |
-| C13 | [design-automation/references/space-planning.md: 1.1 Basic Adjacency Matrix](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/design-automation/references/space-planning.md#11-basic-adjacency-matrix) | Adapt typed relationships/counts; reject inferred daylight, efficiency targets and graph-as-fit proof. |
-| C14 | [data-driven-design/SKILL.md: 1.3 The Data-to-Design Pipeline](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/data-driven-design/SKILL.md#13-the-data-to-design-pipeline) | Adapt provenance and inference chain; exclude universal privacy/retention defaults and model integration. |
-| C15 | [data-driven-design/references/space-syntax.md: 11. Limitations and Criticisms](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/data-driven-design/references/space-syntax.md#11-limitations-and-criticisms) | Adapt link/depth reasoning and representation limits; no simulation or behavioral correlations adopted. |
-| C16 | [data-driven-design/references/sensor-data.md: 3.3 Data Quality Checks](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/data-driven-design/references/sensor-data.md#33-data-quality-checks) | Adapt representative sampling and gap checks; no automatic filling or sensor placement defaults. |
-| C17 | [data-driven-design/references/gis-integration.md: 6. Data Quality and Validation](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/data-driven-design/references/gis-integration.md#6-data-quality-and-validation) | Adapt spatial alignment/provenance checks; no GIS pipeline, preferred CRS or presumed survey accuracy. |
-| C18 | [facade-computation/SKILL.md: 2.4 Panel Optimization](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/facade-computation/SKILL.md#24-panel-optimization) | Adapt nominal repetition versus intent; reject universal fabrication targets/tolerances. |
-| C19 | [facade-computation/references/rationalization-techniques.md: 9.1 Cost Model](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/facade-computation/references/rationalization-techniques.md#91-cost-model) | Adapt whole-scope caution: type count alone is not cost; exclude curvature formula, prices and engineering limits. |
-| C20 | [facade-computation/references/panelization-methods.md: 3.1 Feature Vector Definition](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/skills/facade-computation/references/panelization-methods.md#31-feature-vector-definition) | Adapt declared family attributes; exclude clustering, shared-template claims, BIM and fabrication schedules. |
+Provenance and selective reading extents are recorded in [sources](sources.md#comparison-and-data); use the methods here without opening upstream collections.

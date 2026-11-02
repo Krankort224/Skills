@@ -1,10 +1,17 @@
 # Performance and coordination
 
-Use these methods to compare architectural choices at the scale of the current
-question. They produce design intent and questions for technical review, not
-engineering sizing, verified performance or regulatory approval. A sketch cannot
-establish comfort, weather resistance, acoustic performance, structural safety,
-accessibility or fire compliance.
+Use this reference to **generate a spatial solution**, test its consequences and
+revise it. Architecture owns room arrangement, section, facade intent, material
+selection and the space reserved for structure, services, access and maintenance.
+Engineers establish loads, member/equipment sizes, physical performance and
+technical safety; the applicable jurisdiction establishes requirements. A useful
+concept still shows where these systems and their interfaces can go.
+
+Read only the section needed for the decision. For envelope families and junction
+logic, continue to [envelope and assemblies](envelope-and-assemblies.md).
+All dimensions in the worked progressions are hypothetical project assumptions,
+not standard sizes, code limits, tested assemblies or engineering recommendations.
+No environmental simulation or certified performance is claimed.
 
 ## Contents
 
@@ -14,325 +21,409 @@ accessibility or fire compliance.
 - [Durability and maintenance of materials](#durability-and-maintenance-of-materials)
 - [Structure and services reservations](#structure-and-services-reservations)
 - [Inclusive use and fire spatial coordination](#inclusive-use-and-fire-spatial-coordination)
+- [Worked progression: street reading room](#worked-progression-street-reading-room)
+- [Worked progression: hall overlaid with services](#worked-progression-hall-overlaid-with-services)
 - [Communicate decisions and uncertainty](#communicate-decisions-and-uncertainty)
 - [Method sources](#method-sources)
 
 ## Daylight, view and occupied comfort
 
-**Decision and boundary.** Choose a promising arrangement of rooms, openings
-and shading for the activities and occupied periods. This is a qualitative
-comparison, not a predicted daylight level, glare probability or energy result.
-Consult [calculators](calculators.md) only for a supported calculation with its
-specified inputs and limits.
+Start with an occupied position and activity, rather than a glazing percentage.
+Record orientation and hemisphere, neighboring heights/distances, room depth,
+window sill/head, reveals, ceiling level, furniture and eye/task positions. Use
+actual occupied periods, climate and privacy needs. A tall neighbor may remove
+sky even where there is plenty of glass; a deep reveal can protect from sun and
+rain while further restricting that sky.
 
-**Inputs and unknowns.** Establish site and orientation, surrounding obstructions,
-room depth and section, uses and working positions, occupied times, desired views
-and privacy, climate and likely solar exposure. Note uncertain future neighbors,
-shading operation and glazing properties rather than assuming favorable values.
+### Generate room and section schemes
 
-**Procedure.**
+| Scheme | Spatial reason to try it | Consequence to test and possible revision |
+| --- | --- | --- |
+| Shallow perimeter room with punched windows | Direct view and sky access can serve a defined band of activity; opaque piers provide storage, support and privacy | Check rear positions separately. Move low-occupancy storage inward, raise the window head where the section permits, or shorten room depth; widening glass below the task does little to remove an obstruction above it |
+| Room lit from two sides | Different sky directions can reduce dependence on one bright facade and allow a quieter opening | Check glare from both directions, cross-views and supports at the corner. Retain a pier or column when removing it would create an unjustified transfer |
+| High daylight opening plus lower view opening | Separate access to sky from seated views/privacy; each band can have a different shade | High glass alone provides no seated view. Keep a usable view band, inspect overhead glare and make upper controls reachable or maintainable |
+| Roof monitor or clerestory over a deep/top-floor room | Brings sky to the interior without giving every activity street exposure | Select its orientation from actual sun paths, not a universal north-facing rule. A glowing roof opening, direct sun patch, rain noise, roof structure, drainage and cleaning may defeat the intent; use an opaque baffle or indirect ceiling wash where appropriate |
+| Courtyard or light slot with rooms around it | Adds a second edge to a deep building and can separate noisy street frontage from quieter use | Lower levels may still see little sky. Test opposing heights, court width, overlooking and sound reflection; enlarge/reposition the void or reduce depth instead of counting it as guaranteed daylight |
+| Reflecting shelf or bright upper ceiling | May redistribute admitted light while controlling the near-window band | A shelf also blocks sky/view and needs cleaning. A beam, bulkhead or dark ceiling can interrupt the route; coordinate the section before retaining it |
 
-1. Locate the activities needing light or views and those needing privacy or
-   visual control. Identify who can adjust shades and whether they can reach them.
-2. Trace visible sky and obstructions from the occupied positions, including the
-   back of the room. Compare changes in window head, opening position, room depth,
-   neighboring mass and interior obstruction; do not treat window area alone as
-   the result.
-3. Consider representative occupied periods and seasons, including low-angle sun
-   where relevant to the actual site. Distinguish direct sun at a task or eye
-   from diffuse sky light and note reflected glare from surroundings.
-4. Compare an opening with external shading, one with adjustable internal control,
-   and a more selectively placed opening. Ask how each changes view, usable light,
-   solar gain, cleaning access and operation when the shade is deployed.
-5. Check whether privacy, noise, security or rain will cause occupants to close
-   a window or blind. If so, reassess both the light and ventilation strategy in
-   the condition people are likely to use.
-6. Keep electric lighting and a specialist daylight or thermal assessment open
-   where use, context or performance targets make qualitative comparison
-   insufficient. State which assumptions would change the preferred option.
+A view must be tested from actual seated and standing positions, including users
+at different heights. A narrow high slot is not equivalent to an outward view.
+Place desks so the window is to the side where this suits the use: a window
+behind the screen can reflect in it; a bright window behind the subject can
+impair face recognition. Neither arrangement is universally preferable without
+the activity and sightline.
 
-**Trade-off and check.** A larger clear opening can improve view and admit more
-light yet increase direct sun, glare, heat exchange and privacy exposure. A deep
-fixed projection may reduce sun at some times but also obstruct useful sky light;
-adjustable shading offers choice but depends on operation and maintenance.
-Check the occupied view toward the opening and the view into the room with each
-control both open and closed. A single overcast or sunny condition cannot stand
-for the whole occupied year.
+### Separate sun, sky, view and control
 
-**Worked example.** A deep reading room faces a busy street and an opposing
-building. A continuous clear street facade offers a broad view but puts readers in
-sight of neighbors and may expose desks to sun during occupation. A second
-option combines higher daylight openings, selective views and adjustable shading;
-a quieter alternative places reading deeper and uses the street edge as a buffer.
-The second option is preferred provisionally because it offers privacy choices
-without closing every opening. Check the back of the room, actual sun and adjacent
-building before deciding; neither adequate light nor thermal comfort is established.
+In plan and section trace: (a) visible sky from front and rear positions,
+(b) sightlines out and in, and (c) representative sun rays at occupied times.
+For a simple geometric ray test, state the assumed sun direction/angle and the
+shading dimensions; account for oblique sun and finite device width in plan as
+well as section. This is a geometric test, not a daylight, glare or thermal
+prediction. Do not turn a window-head rule of thumb into proof of illumination.
+
+A horizontal overhang can intercept high sun while leaving some lower views;
+low sun near the facade normal may pass below it. A fin can intercept oblique
+sun yet block a desired oblique view and can do little against sun normal to the
+opening. Adjustable external shades intercept sun before it reaches the glass
+but require wind, ice, cleaning and repair provisions. Internal blinds can help
+with visual control but should not be credited with the same solar-heat control.
+Darker glass can reduce transmitted light along with glare and still leave a
+bright source; it does not replace examining the occupied view.
+
+Test controls both deployed and retracted. If one blind closes the entire facade
+for privacy, its nominal daylight/view benefit may disappear during occupation.
+Consider independently controlled upper/lower bands, selective translucent
+privacy areas, a screened retreat or relocating an activity. Preserve electric
+lighting provision for occupied periods and positions that daylight may not
+serve. Specify the next question precisely: for example, annual glare at the
+western reading desks with the chosen shade states, rather than “check daylight.”
+Use [calculators](calculators.md) only within their documented scope.
 
 ## Acoustic paths and ventilation choices
 
-**Decision and boundary.** Arrange sensitive spaces and select a plausible
-ventilation concept while preserving the ability to control noise. Distinguish
-sound travelling between spaces, sound behaviour within a room, and noise or
-vibration from services. An assembly label does not establish the performance
-of a completed junction or an open window.
+Treat **source → path → receiver** as a design relationship. Identify activity,
+time and location for each source: traffic, workshop, music, plant, footsteps or
+speech. Identify the receiver and consequence: disturbed reading, unintelligible
+speech, lost confidentiality or interrupted sleep. Distinguish airborne,
+impact/structure-borne and services paths. Establish actual exposure and targets
+separately; a material name or laboratory rating is not completed-room evidence.
 
-**Inputs and unknowns.** Identify sources and receivers, times of use, expected
-activities and privacy, street or plant exposure, possible impact or vibration,
-ventilation needs, outdoor air quality, weather and control by occupants. If
-source level or operating pattern is unknown, mark it for investigation.
+### Make a spatial response to each path
 
-**Procedure.**
+| Path | Architectural response | Failure to look for |
+| --- | --- | --- |
+| Street → open facade → quiet room | Put quiet use on a sheltered side; retain closed street glazing and reserve an alternative air path; introduce a usable buffer where needed | An “acoustic window” offers little isolation while open; a shallow screen with a direct opening is not a silencer |
+| Loud room → common wall/door → quiet room | Separate uses, interpose storage/service space, stagger doors, or form a vestibule with independently operable leaves | Absorptive finishes within the loud room do not provide the separating construction; two facing open doors short-circuit a buffer |
+| Floor impact/plant vibration → structure → receiver | Move impact/plant away from sensitive rooms; reserve isolated floor/plant support and ceiling zones as a system | A rigid fixing, pipe or screed edge can bridge isolation; thick carpet does not solve every low-frequency or structural path |
+| Room → ceiling void/duct/facade junction → neighboring room | Carry the intended separation through the void, coordinate facade junctions, and reserve treated duct routes/penetration details | A wall stopping at a suspended ceiling, shared return plenum, back-to-back boxes or continuous inner lining can bypass the wall |
+| Speech source → reflective room → listeners | Shape seating and speaker relationships; distribute suitable absorption on ceiling/walls and avoid dominant facing reflective surfaces | A fully glazed room with hard floor may remain reverberant; adding absorption cannot guarantee privacy across a weak door |
 
-1. Pair each sensitive receiver with its likely source and trace a direct path
-   and plausible indirect paths through floors, facade junctions, doors, shared
-   voids and service penetrations.
-2. Compare adjacency changes first: separate a loud space from a quiet one,
-   introduce a less sensitive buffer or move doors away from facing each other.
-   Check that the buffer remains usable and that circulation has not suffered.
-3. Consider room shape, volume and surface character for speech or other use;
-   absorption within a room and isolation between rooms solve different problems.
-4. For each ventilation option, test both operating states. An open window may
-   admit outdoor noise or polluted air; a closed window needs a credible alternate
-   supply strategy where ventilation is required. Weather and user security can
-   also prevent opening.
-5. If a mechanical or mixed strategy is considered, reserve routes and accessible
-   equipment space and consider plant noise, vibration and cross-talk between
-   rooms. Have services and acoustic specialists develop the solution.
-6. Review doors, edges and penetrations as part of the separating construction;
-   request project-specific targets and verification where the consequence of
-   failure matters. Do not infer an in-situ rating from an isolated component.
+For room acoustics, choose surface roles rather than applying “soft everywhere.”
+Reserve absorption where it intercepts repeated reflections and can be protected
+from impact/cleaning. Retain useful early reflection where the actual use needs
+it; large concave surfaces can concentrate reflections, while articulation can
+scatter them. A speech room and a music room may require different behavior.
+Product mounting, frequency response, occupancy and furnishings matter; do not
+infer reverberation time or speech intelligibility from a surface-area sketch.
 
-**Trade-off and check.** A quiet courtyard opening may make natural ventilation
-more plausible than a street opening but can reduce useful cross-flow or expose
-other rooms to noise. A buffer can reduce exposure yet consume facade access.
-A mechanical alternative can work with closed windows but adds equipment, noise,
-energy and maintenance dependencies. Compare occupied operation, including a
-night or peak-noise period when relevant, before choosing.
+### Choose a credible operating mode
 
-**Worked example.** Meeting rooms border a noisy workshop and a street. Moving a
-storage strip between workshop and meeting rooms breaks the direct adjacency;
-placing doors off the common boundary reduces another path. A courtyard opening
-is explored for ventilation, while a closed-window strategy is reserved for
-noisy hours. The shared ceiling void and plant routes remain possible flanking
-paths; a specialist must establish the target and detail the separation.
+| Mode | Spatial provisions | Test before retaining it |
+| --- | --- | --- |
+| Natural ventilation | Openable area and an actual inlet-to-outlet path, reachable controls, rain/security provision; where cross-flow is proposed, a second pressure zone and unobstructed transfer route | Can the openings remain usable during noisy/polluted, cold, windy or wet occupied periods? A closed internal door may end the proposed path. A window is not proof of air change or thermal comfort |
+| Closed-window mechanical ventilation | Outdoor intake/exhaust locations, distribution/return routes, plant and acoustic treatment space, power/control and maintenance access | Does the intake avoid the pollutant/noise source? Can equipment and duct sound be controlled? Heating/cooling or room-air recirculation alone is not outdoor-air supply |
+| Mixed mode | Both usable opening routes and a complete alternative ventilation path, with understandable changeover/control | Test the actual closed-window condition during peak noise, weather or poor air. Avoid assuming that a smaller backup suffices when the whole occupied load may depend on it; capacity and interlocks need engineering |
+
+Do not use a corridor or protected route as an unexamined air-transfer path.
+Any attenuator, louver or lined passage consumes space and creates pressure,
+cleaning and fire/smoke questions. Reserve that space before claiming a noise
+solution. A quiet court may improve opening conditions yet transmit conversation
+between rooms or provide little wind-driven flow. Test that alternative as a
+whole spatial system.
 
 ## Climate, exposure and envelope continuity
 
-**Decision and boundary.** Select an envelope concept and identify vulnerable
-interfaces for development. Treat roof, walls, openings and ground contact as
-connected assemblies, not independent material labels. Layer order, moisture
-behaviour and technical performance require project-specific design.
+Select a system family from [envelope and assemblies](envelope-and-assemblies.md)
+using exposure, support, construction and repair constraints. Identify roof,
+wall, opening, balcony and ground-contact transitions on a continuous section.
+A facade finish is not the whole wall; a rainscreen needs a drained backing
+assembly, and an opaque spandrel is not simply glass painted dark.
 
-**Inputs and unknowns.** Record actual climate, wind-driven rain and solar
-exposure, orientation, local topography, shelter, ground and drainage conditions,
-interior use and humidity, expected movement, and construction and maintenance
-constraints. Where site or climate is unknown, compare scenarios rather than
-claiming a climate-specific prescription.
+Trace four functions independently: bulk-water shedding/drainage, airtightness,
+thermal continuity and vapor/moisture control. They may share a product, but their
+paths and joints still need to work. Trace water from roof to an intentional
+outlet; trace air control from roof to wall to frame to base; trace insulation
+around the same interfaces and supports. At every penetration decide how it is
+supported, sealed, drained and accessible. If a line ends at a slab or window,
+leave a real design decision, not an implied sealant solution.
 
-**Procedure.**
+Use actual external climate and internal humidity, solar exposure, wind-driven
+rain, ground water, construction moisture and expected movement. Compare drying
+opportunities and drainage routes; no universal vapor-layer side or “breathable”
+material label establishes a safe moisture balance. Discuss cooling-season and
+heating-season reversals where relevant. Reserve material thickness and junction
+space architecturally; thermal bridges, condensation, water/air resistance and
+assembly fire behavior require project-specific verification.
 
-1. Map roof edges, exposed walls, openings, balconies, ground contact and
-   transitions between conditioned and unconditioned spaces. Identify where
-   water is likely to collect, be driven inward or leave the assembly.
-2. Choose a weather-shedding and drainage concept appropriate to the exposure.
-   Follow the intended water path over the roof edge, around an opening, across a
-   balcony threshold and down to a safe discharge. If a path stops at a junction,
-   leave the detail unresolved rather than assuming sealant will solve it.
-3. Trace the intended air-control and thermal-control layers across wall, roof,
-   floor, opening and structural connection. Mark discontinuities at slabs,
-   supports, penetrations and changes of assembly for technical resolution.
-4. Consider where moisture could enter, condense, dry or be trapped under both
-   interior and exterior conditions. Compare an assembly's capacity for drying and
-   inspection with its exposure; do not prescribe a universal vapor-layer side.
-5. Compare glazing and opaque areas alongside shading, ventilation, structural
-   support and usable daylight. A change to one control can shift heat, water,
-   sound or maintenance demands to another interface.
-6. Review critical junctions with envelope, structural and services specialists.
-   Identify the evidence needed for moisture, thermal bridge, air leakage and
-   weather resistance questions; a conceptual layer diagram is not verification.
-
-**Trade-off and check.** A sheltered recess can protect an opening from rain and
-sun but may reduce daylight and complicate drainage and cleaning. An exposed
-projection may create outdoor amenity yet interrupt thermal and water-control
-continuity. Follow each control layer and water path through the junction in both
-alternatives, including movement and access for repair.
-
-**Worked example.** A balcony interrupts an insulated facade above an occupied
-room. One option extends the floor structure through the wall; another separates
-the balcony support from the internal floor. The first may simplify support but
-creates a difficult thermal and water-control junction; the second may improve
-continuity but needs independent support and a coordinated threshold. No option
-is approved until structure, drainage, access and enclosure are resolved together.
+A projecting balcony connected through the wall may simplify gravity support
+but interrupt insulation and water control. Compare independent supports or a
+specialist connection with sufficient threshold/junction space. The revised
+choice still needs stability, movement, access and drainage resolution; keeping
+the insulation line visually continuous does not certify the connection.
 
 ## Durability and maintenance of materials
 
-**Decision and boundary.** Compare candidate assemblies for their actual exposure,
-expected service and practical upkeep. This method addresses durability and
-maintenance; architectural expression belongs to
+Compare **complete assemblies at the actual exposure**, including edges,
+fasteners and joints. Separate intended patina/appearance change from loss of
+function. Do not adopt generic service lives, maintenance intervals, carbon or
+cost figures from a material name.
+
+| Exposure / assembly | Mechanism and choice | Design consequence |
+| --- | --- | --- |
+| Wet base, splash or de-icing exposure | Persistent wetting, salts and impact can attack finishes, mortar and fixings | Use a compatible robust base, separate moisture-sensitive cladding from wet ground, and provide an inspectable drainage termination; check the transition to the upper facade |
+| Timber cladding | Water retained at end grain, concealed joints or horizontal ledges can promote decay; sun changes color and coatings | Shed water, provide intended drying behind/around boards and make damaged boards removable; protected timber and exposed timber are different applications |
+| Metal panels and fixings | Wet contact between dissimilar metals, salt exposure, cut edges and runoff can cause corrosion or staining | Separate incompatible contacts, control runoff, accommodate differential movement and use compatible fixings/coatings; confirm the actual product pair, not just a metal category |
+| Rendered insulation | Impact, movement, failed flashings or cracks may admit water into a system with limited local repair | Protect vulnerable base/corners and coordinate reinforcement, joints and flashing as a system; compare patchability with an independently replaceable rainscreen panel |
+| Glass/frame/seal | Seals, gaskets and insulating-glass units may need replacement before the frame/support | Reserve bead/pressure-plate access, lifting/removal route and suitable working space; an exterior-only repair may require site access unavailable after completion |
+| Roof membrane and concealed drain | Debris, puncture, seam or outlet failure can wet concealed construction | Make inspection, safe access, overflow and outlet cleaning possible; do not hide a critical outlet solely to simplify the elevation |
+
+Prefer separating components with different repair cycles where practicable.
+A screwed panel may be replaceable only after adjacent panels are removed; draw
+the actual sequence. A long-life stone panel can still be stranded by inaccessible
+shorter-life fixings or sealant. Provide movement at joints instead of assuming
+rigid continuity between unlike materials. Supplier confirmation must address
+substrate preparation, sealant/adhesive/membrane compatibility, corrosion,
+installation tolerances and repair access.
+
+For environmental or life-cycle comparisons establish product, source/date,
+functional unit, system boundary, installation waste, maintenance/replacement
+and end-of-life assumptions. Compare like functions and scope. Architecture can
+reduce area/complexity and enable reuse/repair without claiming that a generic
+material is automatically lower impact. Expression and composition belong to
 [composition and style](composition-and-style.md).
-
-**Inputs and unknowns.** Establish exposure to moisture, sun, pollutants, impact,
-wear and cleaning; intended service life, maintenance resources, access, available
-products and compatible adjacent materials. Record unknown product provenance,
-installation quality, replacement cycles and cost as unknown.
-
-**Procedure.**
-
-1. Define the application and the vulnerable parts: field, edges, joints,
-   fasteners, finishes and concealed components. Separate appearance change from
-   loss of protective or structural function.
-2. Compare candidates against the actual wetting, drying, impact and cleaning
-   conditions. Consider corrosion, decay, movement, abrasion and compatibility
-   between touching materials; no material is durable in every exposure.
-3. Trace a realistic inspection and repair route. Ask who can reach a drain,
-   clean a screen, replace a seal or remove a damaged panel without damaging
-   surrounding work or interrupting a critical route.
-4. Compare a robust accessible assembly with a lighter or more delicate option.
-   Record the space, initial cost and replacement implications alongside expected
-   maintenance; do not presume the least expensive initial option is least costly
-   over its life.
-5. For environmental comparisons, identify product, source, date, units and
-   system boundary. Only compare evidence with compatible scope; unsupported
-   impacts and service lives remain unknown.
-6. Ask the relevant designer or supplier to confirm product compatibility and
-   maintenance assumptions as the design develops. Do not infer a rating or a
-   warranty from the material name.
-
-**Trade-off and check.** A protected, replaceable screen can reduce weathering of
-an opening but adds fixings and cleaning work. An inaccessible durable finish
-can still fail at its joints. Check the weakest replaceable component and the
-access needed for it, not just the visible field material.
-
-**Worked example.** At an exposed entrance, a low-maintenance wall finish is
-paired with a concealed drainage outlet. Although the field is robust, the
-outlet cannot be inspected without removing adjacent work. Relocating the outlet
-to an accessible position and making its cover removable improves the maintenance
-concept; exposure and compatible fixings still need technical confirmation.
 
 ## Structure and services reservations
 
-**Decision and boundary.** Compare spatial consequences of a provisional grid,
-load path and service strategy. Reserve plausible routes and access without
-sizing members, plant, shafts or systems. Engineering determines stability,
-loads, spans, foundations, equipment and actual clearances.
+### Choose support logic with the plan
 
-**Inputs and unknowns.** Gather program, desired clear spaces and future change,
-levels and clear heights, proposed supports and cores, site and ground information,
-wet spaces, likely plant and distribution needs, maintenance and replacement
-access. Mark unknown loads, depths, equipment and approvals explicitly.
+| Provisional support concept | Architectural opportunity | Spatial cost / failure mode |
+| --- | --- | --- |
+| Bearing walls with floors spanning between them | Repetitive rooms can align with support; partitions and load paths can reinforce one another | Large openings and later plan changes may require lintels/transfers; walls must stack or the load path changes. Do not erase a support for an open lobby without revising the section |
+| Column frame with a flat soffit | Separates many partitions from supports and offers less interrupted horizontal routing | Columns still conflict with doors/furniture; drops, local support zones and permissible openings may restrict routes. A flat sketch is not proof of structural depth or stability |
+| Beam-and-slab or beam-and-deck frame | Can concentrate support along deliberate lines and preserve flexible infill | Downstands interrupt window heads and cross-routes; perimeter beams can reduce the intended daylight band. Arrange principal service routes alongside/between beams and reserve explicit crossings |
+| Longer span / truss over a clear room | Keeps columns out of assembly/activity space | More depth, concentrated reactions, stability, erection and vibration questions; an apparent truss opening is not automatic permission for a duct. Test room volume and adjacent support space |
+| Core/braced bays with surrounding frame | Concentrates some stability elements at planned service/circulation edges | Diagonals, core walls and connections may block doors, views or future change. Retain continuous stability space rather than allocating every bay to open frontage |
 
-**Procedure.**
+Trace a plausible gravity path from roof/floor through supports to ground, and
+reserve a connected stability system in plan/section. A transfer is a material
+change in support and depth, not a graphic convenience. Actual loads, spans,
+member depths, movement, vibration, foundation and stability design remain with
+the engineer. Do not import generic span tables as project sizing.
 
-1. Locate supports, a tentative grid and stability elements against room and
-   circulation needs. Trace a plausible gravity load path to foundations and ask
-   the structural engineer to resolve stability and ground assumptions.
-2. Compare a repetitive grid against a more open plan. Test columns at doors,
-   facades and partitions, and note where a transfer or unusual support would
-   be needed. Flexibility gained in one room can add structural depth or restrict
-   changes elsewhere.
-3. Stack wet rooms and tentative risers across levels where practical; trace
-   primary distribution from plant to risers, horizontal routes and terminals.
-   Preserve space for crossings, insulation, inspection, removal and replacement,
-   not just the visible equipment footprint. Identify gravity drainage early: its
-   required fall can constrain routing more than a service that can change level.
-4. At a representative section, compare structure, services, ceiling and required
-   clear height. If routes clash with beams or the ceiling cannot accommodate
-   them, branch: move a route, change a structural layout, alter the spatial
-   section or seek a different services strategy. Recheck cost and program.
-5. Identify penetrations through structure, acoustic and fire separations and
-   envelope layers. A reservation is not permission to cut a member or proof that
-   a penetration preserves any separating function.
-6. Coordinate roof and external equipment, access routes, drainage and facade
-   openings. Record the responsible discipline and required decision for each
-   unresolved interface; revisit affected architectural choices on revision.
+### Budget the section and routes
 
-**Trade-off and check.** Larger unobstructed areas can support changing uses but
-may require a different structural arrangement and compete with service routes
-and clear height. A compact riser may save plan area but make distribution or
-maintenance difficult. Follow one route from plant to occupied space and one
-load path from roof to ground, including their crossings.
+Use levels relative to a stated datum. For each critical location write:
 
-**Worked example.** A community room needs an open floor while a corridor carries
-services to smaller rooms. A regular column line crosses the activity area; moving
-it to the room edge preserves use but changes the load path and may introduce a
-deeper element over the corridor. The team reserves a crossing zone and asks
-structural and services designers to test the section before fixing floor height.
-The proposed adjustment is a coordination hypothesis, not a sized design.
+`clear height = upper finished-floor level − lower finished-floor level − upper floor build-up above structure − total structural depth below its top − non-overlapping services/crossing zone below structure − ceiling/support thickness`.
+
+State what each depth includes. If structure and services occupy the same vertical
+zone, draw where they overlap and where they cannot; do not subtract a whole
+beam twice or count an unapproved opening as overlap. Roof sections also need
+falls, roof build-up and plant/support zones; floor sections may need acoustic
+build-up or raised floors. An exposed soffit removes a ceiling plane but does not
+remove hanging equipment, absorption or sprinkler/lighting coordination.
+
+Organize primary distribution into service bands with secondary branches into
+rooms. Compare an overhead band, perimeter/high-level distribution and a floor
+zone where useful. A floor zone consumes section depth and affects thresholds,
+stairs and access; it is not free space. Keep daylight heads and important views
+outside deep bulkheads where possible. Provide terminals, absorption, lighting
+and access panels in the same ceiling composition, including the path to remove
+a fan/filter/valve rather than merely reach it.
+
+Stack wet rooms and risers where practical. Follow one actual route from source
+plant to riser to main to branch to terminal and return/exhaust; a riser area on
+plan does not connect itself. Reserve insulation, supports, bends, branches,
+access, enclosure and installation/replacement space. Check gravity drainage
+falls and outlet levels early because they constrain rerouting, while preserving
+project-specific fire, electrical and other segregation rules; no universal
+clash hierarchy overrides those constraints.
+
+At a beam crossing compare: move the main parallel to the beam; move its riser;
+use a dedicated service band; lower a local ceiling where the brief permits;
+change levels/support concept; or request an engineered opening/system change.
+A wider shallower duct changes pressure/noise and connection space and needs
+services design. A structure penetration needs structural approval. Every
+separating-wall/floor, acoustic and envelope penetration also needs a compatible
+continuity detail and later inspection access.
+
+Put riser/equipment access where maintenance can occur without entering private
+rooms unnecessarily or blocking the only route. Locate roof plant with intake /
+exhaust separation, acoustic impact, support, drainage, roof repair and replacement
+lifting routes in mind. A visual screen can obstruct airflow or create wind
+loads; reserve its geometry along with the plant.
 
 ## Inclusive use and fire spatial coordination
 
-**Decision and boundary.** Coordinate everyday use, wayfinding and emergency
-movement early enough to change the plan. Inclusive design is broader than
-minimum compliance; the actual jurisdiction and applicable requirements must be
-established through [requirements](requirements.md). Do not infer a compliant
-route, capacity or fire strategy from a conceptual plan.
+Develop an arrival-to-destination journey for differing mobility, sensory and
+cognitive needs. Common arrival, level change, door operation, rest, clear cues,
+glare, noise, toilets and reachable controls interact. A separate rear entrance
+may be geometrically possible but less legible, less convenient and dependent on
+staff; compare regrading or reorganizing the main arrival before accepting it.
+Use [requirements](requirements.md) to establish actual applicable dimensions and
+fire/accessibility requirements; no conceptual route proves compliance.
 
-**Inputs and unknowns.** Identify users and differing mobility, sensory and
-cognitive needs, activities, arrival modes, occupancy assumptions, level changes,
-normal and emergency operations, management and assistance arrangements. Treat
-unknown jurisdiction, occupant load, fire strategy and applicable requirements
-as open rather than filling them with external defaults.
+Check plan and section in ordinary, maintenance and emergency states:
 
-**Procedure.**
+- A ramp or regraded approach consumes length and changes drainage/thresholds.
+  Test shelter, landings, sightlines and discharge together rather than drawing
+  a ramp over an unresolved drain.
+- An acoustic vestibule uses door approach/maneuvering space. Draw both swings,
+  users waiting, reachable controls and the clear route; move leaves or enlarge
+  the vestibule instead of holding a separating door open to make it usable.
+- Deep facade shading may reduce glare yet hide the entrance/cues. Retain
+  legibility and inspect eye-level contrast without creating a dazzling source.
+- A service cupboard, changing furniture, trolley or filter-removal operation
+  can occupy the circulation strip. Put working/storage space outside that strip
+  and test it with the door open and components being carried.
+- A waiting/assistance space beside a stair must not consume the circulation
+  width being relied on. Reserve it as distinct usable space and coordinate its
+  protection, communication and management with the actual emergency strategy.
+- A daily lift route may not remain usable in an emergency. Reserve the spatial
+  consequences of the agreed alternative without assuming every lift is an
+  evacuation lift or every user can use a stair with assistance.
+- Open stairs, atria, courtyards, transfer-air paths and facade cavities can
+  connect spaces in ways that conflict with separation or smoke control. Revise
+  openings, lobbies and service routes together rather than adding a label.
 
-1. Follow an arrival-to-destination journey for people with different needs:
-   approach, entrance, reception, vertical movement, rooms, amenities and exit.
-   Look for changes in level, doors, resting opportunities, understandable cues,
-   glare, noise and places where independent use depends on assistance.
-2. Compare an integrated route with any separate route for dignity, convenience,
-   security and equivalent access to the same destinations. Check operation in
-   ordinary use and when doors, lifts or other equipment are unavailable.
-3. With the fire specialist, identify the intended escape or other safety strategy,
-   exits, protected spaces and discharge to a place of safety. Check whether the
-   proposed circulation concept could support that strategy without treating a
-   conceptual route as a verified evacuation solution.
-4. Follow a person through the route during an emergency, including decision
-   points, door swings, obstructions, assistance and communication needs. At
-   discharge, check for conflicts with incoming movement and ordinary storage.
-   Consider
-   that a route usable in daily life may depend on equipment unavailable in a fire;
-   agree the project-specific alternative with the responsible specialists.
-5. Coordinate compartments, doors and service penetrations with the structure,
-   envelope and distribution reservations. Daylight openings, acoustic separation
-   and open connections can affect the fire strategy and must be reviewed jointly.
-6. Verify applicable requirements and dimensions from current authoritative
-   sources for the actual project; resolve conflicts with the program and layout
-   before claiming feasibility. Engage users and relevant specialists as needed; consider how feedback and
-   maintenance will reveal or remove barriers after occupation.
+Follow exits through discharge, including convergence with other exits, incoming
+traffic, exterior level changes and a place of safety. Keep intended alternatives
+meaningfully distinct where the project strategy requires them. Confirm occupancy,
+capacity, travel, compartments, protection, equipment operation, assistance and
+approval through project-specific sources/specialists; architecture must retain
+space for the chosen solution before the plan is fixed.
 
-**Trade-off and check.** A direct open stair can make a building easy to navigate
-and connect floors socially, yet may complicate separation or the intended
-emergency strategy. A protected route may change the sense of openness and take
-space from rooms. Compare both against everyday access and the agreed fire
-strategy. Keep uncertain requirements visibly open; do not silently treat
-them as either established constraints or waived obligations.
+## Worked progression: street reading room
 
-**Worked example.** A public building places its main entrance above the street
-and offers a separate level entrance at the rear. A regraded shared approach may
-provide a more legible common arrival, but affects drainage, site levels and the
-exit discharge. The design team compares both routes and coordinates the site
-and fire strategy. Usability and compliance remain to be verified for the actual
-site and its requirements.
+**Starting assumptions.** A hypothetical upper-floor library has a 12.0 m wide ×
+8.0 m deep room facing a noisy, sun-exposed street; a rear access band already
+connects to an internal riser. Lower/upper finished-floor levels are +0.00/+3.70 m.
+The brief asks for 2.85 m clear over reading and 2.60 m over circulation. A
+provisional support reservation is 0.45 m total depth, with 0.12 m upper floor
+build-up, 0.40 m below-structure service zone and 0.05 m ceiling/support zone.
+These are unverified spatial envelopes, not sized components.
+
+**First scheme and test.** Full-height street glass, desks through the entire
+8.0 m depth, operable street windows and one continuous blind appear open and
+simple. Section arithmetic gives `3.70 − 0.12 − 0.45 − 0.40 − 0.05 = 2.68 m`:
+reading height fails the brief by 0.17 m. Street windows open during noisy hours
+also defeat the quiet-room intent; closing them leaves no defined air supply.
+The blind needed at the front can remove the view/daylight expected at the back.
+The opposing building and deep room remain a daylight uncertainty.
+
+Test a proposed 0.70 m canopy at a 3.00 m window head using an **assumed**,
+facade-normal sun ray at 20° altitude. Shadow drop at the glazing is
+`0.70 × tan(20°) ≈ 0.255 m`; this leaves most of the opening exposed. A ray from
+the head to a hypothetical 1.40 m task plane travels about
+`(3.00 − 1.40) / tan(20°) ≈ 4.40 m` into the room without other obstruction.
+This single hand-geometry condition rejects the claim that the canopy controls
+all occupied low sun. It predicts neither glare severity nor annual daylight.
+
+**Revised spatial/system choice.** Shorten the reading depth to 5.80 m and use
+the remaining 2.20 m as the rear circulation band; locate shafts/large equipment
+in end service spaces, outside its clear strip. Keep the frame/support reservation
+and move the main ventilation distribution to that band. Reserve only 0.20 m
+below structure over reading for branches/terminals; place the crossing at the
+rear with access there. Clear reading height becomes
+`3.70 − 0.12 − 0.45 − 0.20 − 0.05 = 2.88 m`, 0.03 m above the brief. The rear
+band remains 2.68 m with the deeper service reservation. The small reading margin
+is vulnerable to engineering revisions, so it is a conditional fit, not robustness.
+
+Use a mass backing wall with external insulation and a drained rainscreen, with
+punched openings: a high daylight band and a lower seated-view band, independently
+shaded. Retain the canopy for its limited geometric role and rain protection;
+reserve adjustable external control for low sun rather than just darkening all
+glass. Opaque piers can take support and local shelving without placing tall
+shelves across the upper light path. Test front/rear view and privacy with each
+shade state. Shallowing the occupied room improves the opportunity for sky access;
+it does not establish an illumination result.
+
+During peak street noise, close street openings and use the reserved mechanical
+outdoor-air/return path; reserve treatment/access in the rear band and riser.
+Opening operation is an optional suitable-weather mode, not the only ventilation
+method. Continue separating walls through the service zone and coordinate duct
+penetrations so the new route does not create cross-talk. Protect the window
+head drainage path from shade brackets and connect frame air seals/insulation to
+the backing wall; do not assume the outer rainscreen is the air barrier.
+
+**Why retain this revision / what remains.** It resolves the stated geometric
+height conflict without raising the fixed floors, gives separate light/view
+control, and supplies a spatial route for closed-window operation. It costs
+reading area and services space. Required next checks are measured street noise
+and occupied source pattern; acoustic facade and duct/junction design; actual
+ventilation/cooling loads, duct/terminal sizes and access; structural depth;
+site-specific annual daylight/glare/thermal assessment with neighbors and shade
+states; rain/air/thermal and moisture verification of window/shade junctions.
+Check the door approaches and rear-band clear width against actual access/fire
+requirements before calling the plan feasible. If services exceed 0.20 m over
+reading, reroute them further or revisit floor level/room height with the brief.
+
+## Worked progression: hall overlaid with services
+
+**Starting assumptions.** A hypothetical community building has a 12.0 × 18.0 m
+hall beside a 2.40 m service/circulation bar. Finished floors are +0.00/+4.20 m.
+The brief requires a column-free hall and 3.00 m clear height there; the side bar
+requires 2.70 m. A repetitive 6.0 m planning grid initially places a column line
+through the hall. Loud events share an edge with quiet meeting rooms. The section
+reserves 0.12 m upper floor build-up, 0.45 m structure, 0.50 m overhead services
+and 0.05 m ceiling/support: `4.20 − 0.12 − 0.45 − 0.50 − 0.05 = 3.08 m`.
+It fits height on paper but fails the column-free brief.
+
+**Support revision and coupled failure.** Move the interior hall supports to the
+hall edges and test a longer-span beam concept. Reserve 0.85 m total structural
+depth provisionally; engineering has not established its adequacy. Retaining
+services below it gives `4.20 − 0.12 − 0.85 − 0.50 − 0.05 = 2.68 m`, missing the
+hall brief by 0.32 m. A “duct through the beam” note is not a solution. Raising the
+floor would affect the rest of the fixed building levels; simply shrinking the
+beam or duct would invent engineering capacity.
+
+**Second revision and retest.** Keep the longer-span support hypothesis, but run
+primary supply/return along the side bar, parallel to its supports, with a riser
+at each chosen distribution end rather than a main across the hall. Use branches
+entering at coordinated edge locations; reserve 0.12 m below the lowest hall
+structure for terminals/local routes and 0.05 m ceiling/support. Hall clear height
+becomes `4.20 − 0.12 − 0.85 − 0.12 − 0.05 = 3.16 m`. In the side bar the original
+0.45/0.50/0.05 m reservations give 3.08 m, above its 2.70 m brief. Define the
+0.85 m from top of structural floor to lowest beam, including slab, so the slab
+has not been subtracted twice. This is a geometric fit only if branches can
+enter without an unresolved deep crossing; if not, compare a perimeter terminal
+strategy, a different structural arrangement or a brief/level change explicitly.
+
+Turn the meeting-room edge into a storage/vestibule buffer instead of a common
+thin partition with facing doors. Keep hall supply/return routes independent of
+the quiet rooms and reserve acoustic treatment and separating penetrations; do
+not use the vestibule as the ventilation transfer path. Reserve distributed
+absorptive ceiling/wall areas within the section so absorption does not reintroduce
+a full low ceiling. A longer-span vibrating floor and the continuous facade/roof
+remain possible structure-borne/flanking paths despite the buffer.
+
+**Spatial conflict found in operation.** The side bar has an assumed 1.80 m clear
+circulation strip. A 1.00 m leaf swinging into it leaves only 0.80 m at the swing
+location; a 0.60 m open service cabinet leaves 1.20 m. These arithmetic residuals
+expose conflicts; they are not access/egress limits. Recess the vestibule entrance
+so the full leaf swing sits outside the strip, and move service access to a
+separate maintenance recess/room. Check the two vestibule leaves and user
+maneuvering together, rather than letting one open leaf obstruct the other.
+An assistance/waiting bay initially drawn within that strip is moved alongside
+it, preserving its reserved footprint separately. Its protection and communication
+remain part of the actual fire strategy, not a generic label.
+
+**Why retain this revision / what remains.** It preserves the clear hall and
+fixed floor levels by changing distribution geometry, while protecting the quiet
+edge and circulation from normal door/maintenance use. It spends side-bar area
+and lengthens branches; it may add plant/riser complexity. Specific next checks:
+structural span/depth, reactions, stability and vibration; actual primary and
+branch route sizes/pressure/noise including the edge crossings; ventilation
+capacity and plant/duct acoustic treatment; airborne/impact/flanking isolation
+and hall speech/music behavior; ceiling/terminal/fire-device integration;
+actual door forces, clearances, occupancy, evacuation assistance, separation and
+exit discharge. No span capacity, sound rating, accessible route or evacuation
+capacity has been demonstrated.
 
 ## Communicate decisions and uncertainty
 
-Separate supplied requirements, provisional assumptions, calculated results and
-design judgments. For each material risk identify its consequence, evidence or
-specialist needed and decision point. Keep project facts and accepted decisions in
-the project's existing authoritative material. Link to
-[program and space](program-and-space.md) for adjacency and circulation decisions,
-[requirements](requirements.md) for applicability, and
-[calculators](calculators.md) for supported estimates and their limits.
+Keep supplied requirements, provisional dimensions/system envelopes, performed
+geometry/arithmetic and design judgments distinct. Show a retained solution and
+its rejected alternative, the conflict found, the revision made and the specific
+unknown capable of overturning it. Give each reservation a location and included
+components, not just an area total. Keep project facts and accepted decisions in
+the project's existing authoritative material; do not invent a parallel register.
+Use [program and space](program-and-space.md), [requirements](requirements.md)
+and [calculators](calculators.md) for their respective decisions and limits.
 
 ## Method sources
 
-These pinned references informed the conceptual methods; the adaptations and
-exclusions are recorded in [sources](sources.md). Project requirements and
-performance must be established independently.
-
-- Daylight: [daylight strategies, side-lighting](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/daylighting-design/references/daylight-strategies.md#1-side-lighting-strategies) and [solar geometry, fundamentals](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/daylighting-design/references/solar-geometry.md#1-fundamentals-of-solar-position).
-- Acoustics and ventilation: [flanking path analysis](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/acoustic-design/references/sound-insulation.md#4-flanking-path-analysis) and [natural ventilation](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-services/references/hvac-systems.md#1-natural-ventilation).
-- Envelope: [window installation details](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-envelope/references/glazing-systems.md#7-installation-details-for-common-window-types) and [rainscreen wall examples](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-envelope/references/wall-systems.md#112-rainscreen--terracotta-on-steel-frame).
-- Durability and maintenance: [window installation details](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-envelope/references/glazing-systems.md#7-installation-details-for-common-window-types) and [roof plant structural and access considerations](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-services/references/mep-coordination.md#structural-and-access-considerations).
-- Structure and services: [structural system selection](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/structural-systems/SKILL.md#section-1-structural-system-selection) and [service route hierarchies](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-services/references/mep-coordination.md#3-service-route-hierarchies).
-- Inclusive use and fire: [universal design process integration](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/accessibility-design/references/universal-design-principles.md#process-integration) and [egress design best practices](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/fire-life-safety/references/egress-design.md#section-8-egress-design-best-practices).
+Selected pinned readings, adaptations and exclusions are recorded in
+[sources](sources.md). This local reference contains the operative design reasoning;
+external sources are provenance, not runtime prerequisites or project requirements.

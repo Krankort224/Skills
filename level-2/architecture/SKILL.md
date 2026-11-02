@@ -9,6 +9,8 @@ description: Develop, revise, compare, present and review architectural designs 
 
 Start at the requested operation. Read its procedure and only the reference sections needed for that decision. Operations are selectable activities, not a compulsory sequence or executor roles. Reuse supplied project information and accepted decisions.
 
+Develop solutions with the local knowledge below. Upstream collections are provenance for skill maintenance, not runtime dependencies. When a brief asks for a whole design, synthesize program, plan and section, form/material intent and interfaces together; for a bounded request, work only on the affected decisions.
+
 | Request | Procedure | Result |
 | --- | --- | --- |
 | Establish or clarify the design task | [Brief](operations/brief.md) | Actionable program, relationships, constraints and open decisions |
@@ -45,19 +47,23 @@ For a later explicit modeling task, hand off the accepted geometry/dimensions, p
 | Question | Reference |
 | --- | --- |
 | Activities, concurrent demand and room program | [Program demand](references/program-and-space.md#what-activities-and-capacity-must-the-program-accommodate) |
+| Room fit, plan families, floors and cores | [Planning and section](references/planning-and-section.md) |
 | Area boundary, allowances and double counting | [Area accounting](references/program-and-space.md#how-can-areas-be-counted-once-and-compared) |
 | Adjacency, access and people/goods routes | [Relationships](references/program-and-space.md#which-relationships-must-the-plan-satisfy), [movement](references/program-and-space.md#how-do-people-and-goods-move-through-access-zones) |
 | Floors, adaptability or a bounded layout change | [Vertical organization](references/program-and-space.md#how-should-the-program-occupy-floors-and-adapt-over-time), [local revision](references/program-and-space.md#how-should-a-bounded-revision-or-comparison-be-judged) |
 | Site, arrival and meaningfully different concepts | [Context](references/composition-and-style.md#how-should-the-design-respond-to-site-and-arrival), [partis](references/composition-and-style.md#how-can-different-partis-be-generated-and-compared) |
+| Urban edges, outdoor rooms, approach or sloping ground | [Site and context](references/site-and-context.md) |
 | Mass/void, hierarchy, style or material expression | [Massing](references/composition-and-style.md#how-should-mass-and-void-organize-the-site-and-rooms), then the matching composition Contents question |
 | Light, view, noise and ventilation trade-offs | [Daylight](references/performance-and-coordination.md#daylight-view-and-occupied-comfort), [acoustic paths](references/performance-and-coordination.md#acoustic-paths-and-ventilation-choices) |
 | Envelope junctions, durability or engineering space | [Continuity](references/performance-and-coordination.md#climate-exposure-and-envelope-continuity), [maintenance](references/performance-and-coordination.md#durability-and-maintenance-of-materials), [reservations](references/performance-and-coordination.md#structure-and-services-reservations) |
+| Envelope system selection and assembly/junction intent | [Envelope and assemblies](references/envelope-and-assemblies.md) |
 | Inclusive journeys and everyday/emergency spatial conflicts | [Spatial coordination](references/performance-and-coordination.md#inclusive-use-and-fire-spatial-coordination) |
 | Source applicability, accessibility, fire and jurisdiction selection | [Requirements](references/requirements.md) |
 | Normative source selection for the project's actual jurisdiction | [Jurisdiction modules](references/normative/index.md), selected through [requirements](references/requirements.md#select-a-jurisdiction-module) |
 | Fixed/variable inputs, constraints and comparison | [Decision frame](references/computational-design.md#frame-the-question), [consistent comparison](references/computational-design.md#compare-options-consistently) |
 | Uncertainty, data or a misleading spatial proxy | [Sensitivity](references/computational-design.md#test-sensitivity-and-reproducibility), [data screening](references/computational-design.md#screen-data-before-translating-it-into-design), [access graph](references/computational-design.md#check-adjacency-and-access-as-separate-relationships) |
 | Reconcile a design decision across requested outputs | [Design issue coordination](operations/documentation.md#coordinate-a-design-issue) |
+| Develop plan/section/elevation, diagnose and redesign a weak proposal | [Design development](references/design-development.md) |
 | Requested presentation, optional visual techniques, inspection and precision | [Visual delivery](references/visual-delivery.md) |
 | Supported calculators, exact schemas, units and all 14 adoption decisions | [Calculators](references/calculators.md) |
 | Pinned source-to-target map and exclusions | [Sources](references/sources.md) |

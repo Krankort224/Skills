@@ -13,7 +13,9 @@ OPERATIONS = ('brief', 'concept', 'development', 'analysis', 'optimization',
               'presentation', 'documentation', 'review')
 REFERENCES = ('program-and-space', 'composition-and-style',
               'performance-and-coordination', 'requirements',
-              'computational-design', 'visual-delivery', 'calculators', 'sources')
+              'computational-design', 'visual-delivery', 'calculators', 'sources',
+              'planning-and-section', 'site-and-context',
+              'envelope-and-assemblies', 'design-development')
 NORMATIVE_GROUPS = ('federal-framework', 'territory-and-special-conditions',
                     'building-typologies', 'fire-and-accessibility',
                     'environment-and-interfaces')

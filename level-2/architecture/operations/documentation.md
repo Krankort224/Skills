@@ -6,7 +6,7 @@ Use accepted design decisions, intended design stage, audience, project conventi
 
 ## Procedure
 
-1. Select the requested document/drawing content: design explanation, program/area schedule, adjacency, option rationale, material/assembly intent, coordination issues or a deliverable index.
+1. Select the requested document/drawing content: design explanation, program/area schedule, adjacency, option rationale, material/assembly intent, coordination issues or a deliverable index. Use [design development](../references/design-development.md) to choose the plan/section/elevation information that demonstrates the actual decision; do not prescribe a full drawing suite for a small explanation.
 2. Read the relevant [program](../references/program-and-space.md), [performance/coordination](../references/performance-and-coordination.md) and [requirements](../references/requirements.md) sections.
 3. Use [design issue coordination](#coordinate-a-design-issue) to reconcile changed identifiers, dimension definitions, option/revision and material intent across the supplied outputs. Identify contradictions before issuing a coordinated explanation.
 4. Record applicable requirement sources and separate assumptions, calculated results and design judgments. Select jurisdiction through [requirements](../references/requirements.md#select-a-jurisdiction-module) and its implemented [module](../references/normative/index.md). Distinguish applicable project-documentation scope, working-documentation rules and the task's concept deliverable. Keep project-specific selections with their existing owner; a concept-stage package does not establish construction completeness.
@@ -62,14 +62,5 @@ fixed width. Check the changed approach and swing against the actual access and
 evacuation question before claiming the new arrangement works. Do not resize
 the opening or regenerate the entire drawing set to conceal the mismatch.
 
-**Source adaptation.** A, pinned at
-`30a0845dddcaebd765fc396059573d02e99c5b63`:
-[construction-documentation](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/construction-documentation/SKILL.md#5-schedule-production)
-§§4.2, 5 and 6.11;
-[drawing coordination](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/construction-documentation/references/drawing-standards.md#8-drawing-coordination-checks)
-§§8.1, 8.2 and 8.4;
-[specification coordination](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/construction-documentation/references/specification-systems.md#7-specification-coordination-with-drawings)
-§§5.1, 5.2, 5.4 and 7; drawing-checklist's Schedule Checklist and General Quality
-Checks. Adapted consistency/verification reasoning only. Foreign classifications,
-prescribed schedules, dimensions, title-block rules, legal precedence and BIM
-LOD prescriptions are not adopted; use the project's applicable requirements.
+
+Use [design development](../references/design-development.md) for the spatial content of the issue and [sources](../references/sources.md#documentation-coordination) only for provenance.

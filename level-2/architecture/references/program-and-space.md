@@ -5,6 +5,10 @@ are selectable by question, not a required sequence. Reuse accepted project fact
 and decisions. Pair it with [requirements](requirements.md),
 [composition and style](composition-and-style.md), and
 [performance and coordination](performance-and-coordination.md) as needed.
+For room geometry, plan families and coordinated worked designs, use
+[planning and section](planning-and-section.md). Source provenance and adaptation
+limits are in [sources](sources.md); external reading is not needed to use these
+design methods. Numerical examples here are hypothetical, not area standards.
 
 ## Contents
 
@@ -46,14 +50,60 @@ a period from the number present simultaneously.
    and a busy public route through the same room, for example, may require a
    different route, buffer or explicit compromise.
 
+### Infer the missing program from the use
+
+A label such as library, workplace or housing names only part of the activity
+system. Generate the supporting spaces from what users and materials do before,
+during and after the named activity. Select the relevant patterns; combine them
+at their interfaces rather than averaging their requirements.
+
+| Use pattern | Productive spatial arrangement | Failure mechanism and response |
+| --- | --- | --- |
+| Public, intermittent arrival: consultation, exhibition, civic meeting | An identifiable entrance leads to an arrival/waiting space, then a visible point of help and a choice of destinations. Put bookable rooms on the public side of the staff boundary when they operate independently. | Waiting in the only passage blocks through movement; a desk beyond a blind corner cannot supervise the entrance. Give waiting its own occupied pocket and place reception at the route choice. |
+| Working and collaborative: office, teaching, studio | Group work settings around shared resources; put visitor meetings near arrival, frequent team support near the teams, enclosed calls or confidential work off the busy route. | An entirely open room lets speech and movement spread to every desk; enclosing every perimeter room can leave shared work without exterior exposure. Use a deliberate mix of enclosed and open settings and reserve usable frontage for sustained occupation. |
+| Quiet or private: reading, concentration, sleeping | Reach the room through a progressively quieter or more private threshold. Use storage, circulation or a support room as a buffer where compatible; place quiet rooms away from repetitive door and delivery activity. | A nominal buffer fails if its doors open directly across each other or if a ceiling void bypasses it. Repair the sound path and route, not merely the adjacency label. |
+| Production and service: making, food preparation, collections processing | Follow receiving → unpacking/inspection → storage → preparation → use → cleaning/waste, with appropriate controlled links to the public activity. Place bulky deliveries near a viable external approach. | A generous main room still fails if equipment cannot turn into it, waste reverses through clean preparation, or stored chairs occupy its route. Reserve movement and temporary holding at each transfer. Specialist hazards need appropriate expertise. |
+| Residential and shared domestic life | Form an entry/storage threshold, a social living zone, a quieter sleeping zone and a legible service spine. Shared laundry, guest or gathering rooms supplement stated household activities rather than excuse untested private-room fit. | A bedroom used as the only route to another room loses privacy; an entrance opening onto a bed exposes private life. Change the sequence, door position or mix. Do not infer household size from a dwelling label. |
+| Mixed uses or separate operators | Give each operator a coherent address, hours, access boundary, support and service route; identify what is genuinely shared. Connect uses intentionally at a shared room, court or lobby with explicit controls. | A shared foyer may close the only access to another use after hours; a common riser may require maintenance through a private tenancy. Test each operator with the other closed, including independent service access. |
+
+For each pattern, derive storage from the objects and their changeover, not a
+generic percentage: count chairs/tables to be moved, coats and bags at arrival,
+equipment in use versus parked, incoming goods before unpacking, and waste before
+collection. A flexible meeting room needs space for displaced furniture and time
+for setup; otherwise simultaneous bookings require separate rooms.
+
+### Derive a provisional capacity and room envelope
+
+Use demand and physical fit together. A membership count is not a desk count;
+even an observed average can conceal a concentrated peak. For a scheduled use,
+divide the concurrent task population by the people each room setting can
+actually accommodate and round the room quantity up. Then test changeover and
+whether parallel sessions need acoustic separation. For unscheduled use, retain
+normal and credible peak scenarios rather than claiming a demand model from a
+single estimate.
+
+Construct a room from four layers: objects, their operating envelopes, local
+access to each object, and the uninterrupted route from door to destinations.
+Add instructor/display space, supervision, storage and equipment maintenance
+where the activity needs them. An envelope includes the person's actions: pulling
+a chair back, reaching a cabinet, assisting a user, approaching a bed or opening
+an appliance. Overlap envelopes only when those actions need not happen together;
+do not count a fixed cupboard or door swing as available route space.
+
+For example, suppose a project provisionally chooses four-person tables
+1.6 × 0.8 m and tests a 3.0 × 2.2 m working envelope per table, including occupied
+chairs. Six tables in three columns and two rows need a 9.0 × 4.4 m field for
+24 seats. Adding a separate 1.5 m side route, a 1.5 m presentation strip and a
+0.6 m rear storage strip yields a 10.5 × 6.5 m trial envelope. These are selected
+study dimensions, not clearances established for accessibility or safety. Test
+actual furniture, door approaches, sightlines and the users' actions before
+fixing them. Simply multiplying 24 by a per-person area would not establish the
+same fit. See [room geometry](planning-and-section.md#construct-a-room-that-can-be-used).
+
 **Small check.** Two groups of 20 people use a room at different times; a third
 of 10 overlaps each group. The observed peak is 30, not 50, if those time and
 sharing assumptions are confirmed. If the first two groups might overlap, test
 that scenario separately rather than selecting a convenient peak.
-
-Adapted from [programming methodology and validation](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-programming/SKILL.md#1-architectural-programming-methodology),
-[brief template: program and phasing](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-programming/templates/program-brief-template.md#3-space-program-required),
-and [typology selection as a prompt for mixed-use interfaces](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-typology/SKILL.md#7-hybrid-and-mixed-use-typologies).
 
 ## How can areas be counted once and compared?
 
@@ -86,16 +136,41 @@ version. Do not silently convert one into a statutory area.
    remainder does not prove the shape, access or structure works; test those
    spatially. See [calculators](calculators.md) for calculation scope.
 
+Cross-check the total independently by use and by assigned floor. Those two
+sums must agree before the remainder is used for a decision. Correct an arithmetic
+discrepancy rather than carrying one total in the introduction and another in
+the floor ledger. For required clear room areas use
+[clear-area construction](planning-and-section.md#construct-a-clear-area-fit-with-explicit-wall-reservations)
+to test walls and shared movement explicitly.
+
 **Small check.** Two rooms at 20 m² each plus one shared room at 30 m² total
 70 m² of listed rooms. If a 10 m² lobby is included in the core allowance, adding
 it again as circulation overstates the total by 10 m². If the core area is
 unknown, 70 m² is a partial subtotal, not the building total.
 
-Adapted from [area schedule construction](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-programming/SKILL.md#4-area-schedule-construction)
-and [area schedule and calculation fields](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-programming/templates/program-brief-template.md#3-space-program-required).
-Published benchmark tables in [area standards](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-programming/references/area-standards.md)
-are not adopted here as requirements; numerical standards and applicability
-are deferred to Pass 3 and the actual project's jurisdiction and sources.
+### Connect the ledger to geometry
+
+At early blocking stage use reservation polygons, not a falsely precise net
+schedule. A room block can contain its enclosing partitions and local furniture
+access; call it a reservation until those are drawn. Give every piece of floor
+one owner. Subtract voids at the level where there is no floor, not at every
+level beneath a roof opening. Count an open terrace or external gallery on its
+own stated basis, without mixing it into enclosed usable area. Sloping ceilings
+need both footprint and usable-height information; a rectangular footprint alone
+can conceal unusable occupation.
+
+For a rectangle, area = width × depth; for an L-shape, sum two nonoverlapping
+rectangles or subtract the missing corner from the enclosing rectangle. Track
+core, shared movement, room reservations, separately drawn structure/partitions
+and residual area so their sum equals the same measured floor boundary. A tiny
+triangular remainder beside a core may be geometrically real but unable to house
+any activity. Keep it residual instead of crediting it as a missing room.
+
+If a schedule is larger than the available plate, no rearrangement can fix that
+arithmetic. If it is smaller but still does not fit, look for deficient frontage,
+wrong proportions, disconnected remnants, excessive route depth or fixed
+obstructions. Revise the responsible variable rather than shrinking all rooms
+uniformly. See the [worked ledgers](planning-and-section.md#worked-design-progressions).
 
 ## Which relationships must the plan satisfy?
 
@@ -128,8 +203,25 @@ alone does not describe the required connection.
 work area, while visitors must not enter the latter. A glazed, controlled boundary
 can satisfy visibility and separation; a shared open doorway cannot satisfy both.
 
-Adapted from [relationship types and conflict resolution](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-programming/references/adjacency-methods.md#1-fundamentals-of-adjacency-analysis)
-and [matrix to spatial organization](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-programming/SKILL.md#3-adjacency-matrix-method).
+### Turn relationships into an organizing scheme
+
+A sequence suits activities whose order matters, such as receiving → preparation
+→ use; place a bypass route where others must reach the last room without passing
+through the process. A hub suits many destinations needing the same reception or
+shared resource; protect the hub from becoming a queue or noisy crossing. A
+cluster suits intense local relationships and weaker inter-group movement;
+connect clusters through a clear common route so one group does not become a
+passage for another. A ring suits repeated access to a shared court or collection;
+give it recognizable entries and destinations to avoid a disorienting circuit.
+
+Start by placing fixed connections and the most constrained large room. Then
+arrange the compatible rooms around their shared resource, put incompatible uses
+on different branches or across a real buffer, and connect clusters to arrival.
+Draw doors and movement through the proposed blocks before calling them a plan.
+Touching rectangles do not prove a direct connection: the shared wall may be
+occupied by storage or the only door may open into the wrong access zone. Compare
+[plan families](planning-and-section.md#choose-a-plan-family-from-the-relationships)
+when the same graph can be realized in different ways.
 
 ## How do people and goods move through access zones?
 
@@ -163,9 +255,40 @@ is not a capacity calculation or an egress approval.
    A courtyard or loop may aid orientation and outdoor connection while adding
    route length. Local climate, privacy, site and operation determine the trade.
 
-Adapted from [circulation patterns](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/spatial-planning/references/circulation-patterns.md#1-corridor-typologies),
-[plan archetypes and legibility](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/spatial-planning/SKILL.md#section-1-floor-plan-archetypes),
-and [residential plan and aspect strategies](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-typology/references/residential-typologies.md#1-plan-configurations-by-type).
+At a junction, show what a first-time visitor can see: the next destination,
+reception or an exterior landmark. In a teaching room test the view from the
+least favorable seat to the display, including heads, columns and furniture;
+in a reception test the observer's actual position rather than the desk outline.
+Keep queues beside the onward path, with a clear place to join and leave. A
+public route through a working or quiet room creates interruptions even if its
+width is generous. Move the route to an edge or give the room independent access.
+
+### Make a closed zone a complete boundary
+
+Independent hours need a spatial boundary, not merely a lock symbol at the
+principal door. Outline the area that closes, including its return edges, then
+identify every connection to the area that stays open: room doors, side paths,
+shared lobbies, galleries, stairs and any open continuation around a partition.
+A gate across one branch does not close a room reached from another branch.
+Choose a continuous separating edge with controlled portals, move the closing
+line to an existing complete enclosure, or change which support spaces remain
+shared. A visual change of floor finish cannot provide access control.
+
+For example, a public foyer reaches a shared passage which borders two sides of
+an exhibition area. Closing the foyer-to-exhibition door leaves the passage-side
+opening available. Either close that second connection as well, or put the
+exhibition behind one continuous edge while retaining the passage outside it.
+Trace the remaining evening visitor from entrance to activity, toilet and exit,
+and the staff/service journey separately. A toilet beyond a locked workshop is
+not shared evening support; reserve an independent approach or explicitly open
+the intervening territory with its supervision consequences. Time separation of
+deliveries does not by itself repair public access during the evening.
+
+Inspect the boundary in plan and section. A lockable gate is not automatically
+an acoustic or fire separation, and a daily closure must not disable the actual
+emergency strategy. Identify the required properties through requirements and
+specialist coordination; retain the spatially complete boundary while those
+properties are being established.
 
 ## How should the program occupy floors and adapt over time?
 
@@ -203,10 +326,11 @@ visible; coordinating an interface does not size an engineering system.
    Flexibility has costs and is not established by an open plan alone. For phased
    work, test each phase's access, services and functioning independently.
 
-Adapted from [stacking constraints and program testing](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-programming/references/adjacency-methods.md#4-stacking-analysis),
-[core location and flexibility](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/spatial-planning/references/core-design.md#1-core-design-principles),
-[residential aspect and unit mix](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-typology/references/residential-typologies.md#3-daylight-access-patterns),
-and [hybrid typology interfaces](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/architect-foundations/references/building-typology-taxonomy.md#using-this-reference).
+For the actual construction of levels, occupied heights, deep and shallow service
+bands, core discharge and future divisions, use
+[section and core logic](planning-and-section.md#organize-levels-cores-and-service-depth).
+The worked progressions there show why a satisfactory floor total can still fail
+in section or at a fixed facade.
 
 ## How should a bounded revision or comparison be judged?
 
@@ -225,5 +349,13 @@ trade-offs, the preferred option and who must confirm it. State what evidence
 would change the judgment and what remains unresolved; area or adjacency studies
 alone do not establish code compliance or structural feasibility.
 
-Adapted from [program testing and conflict resolution](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/building-programming/references/adjacency-methods.md#5-program-testing)
-and [functional quality and planning pitfalls](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/skills/architect-foundations/SKILL.md#4-design-quality-framework).
+Use a bounded repair in this order: locate the failure in plan and section; mark
+fixed elements (structure, core, facade openings, wet/service interfaces and
+accepted boundaries); change only the partitions, assignments, access or settings
+allowed by the request; then propagate the change to immediate neighbors and
+affected floors. Try a door relocation before a larger room, a mix change before
+moving a core, and a buffer or route change before assuming an engineered solution.
+These are low-disruption candidates, not a compulsory ranking: a door move cannot
+repair insufficient frontage or structure through an activity field. If the
+requested capacity needs a fixed element to move, report the conflict and offer
+explicit alternatives outside the permitted boundary rather than quietly moving it.
