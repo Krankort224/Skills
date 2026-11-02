@@ -50,6 +50,7 @@ For a later explicit modeling task, hand off the accepted geometry/dimensions, p
 | Room fit, plan families, floors and cores | [Planning and section](references/planning-and-section.md) |
 | Area boundary, allowances and double counting | [Area accounting](references/program-and-space.md#how-can-areas-be-counted-once-and-compared) |
 | Adjacency, access and people/goods routes | [Relationships](references/program-and-space.md#which-relationships-must-the-plan-satisfy), [movement](references/program-and-space.md#how-do-people-and-goods-move-through-access-zones) |
+| Spaces inside, overlapping, beside or linked to each other; a route that crosses an activity | [Spatial relationships](references/spatial-composition.md#choose-how-spaces-meet), [path relationship](references/spatial-composition.md#place-movement-beside-through-or-into-a-space) |
 | Floors, adaptability or a bounded layout change | [Vertical organization](references/program-and-space.md#how-should-the-program-occupy-floors-and-adapt-over-time), [local revision](references/program-and-space.md#how-should-a-bounded-revision-or-comparison-be-judged) |
 | Site, arrival and meaningfully different concepts | [Context](references/composition-and-style.md#how-should-the-design-respond-to-site-and-arrival), [partis](references/composition-and-style.md#how-can-different-partis-be-generated-and-compared) |
 | Urban edges, outdoor rooms, approach or sloping ground | [Site and context](references/site-and-context.md) |

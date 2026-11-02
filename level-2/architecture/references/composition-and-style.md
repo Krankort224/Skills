@@ -102,6 +102,14 @@ opening hours suggest separable wings and a common threshold; repeated private
 rooms suggest a repeatable band. A school, library or house can use several of
 these mechanisms. Program names alone cannot select one.
 
+For the relationship *within* a type, use [how spaces meet](spatial-composition.md#choose-how-spaces-meet):
+containment, an actual shared field, adjacency or an intermediate place. Choose
+[movement beside, through or into it](spatial-composition.md#place-movement-beside-through-or-into-a-space)
+separately; naming a central hall does not decide whether it can be occupied or
+closed while other rooms remain accessible. For a composition experienced along
+an approach rather than from a single facade view, use
+[approach and sequence](spatial-composition.md#compose-for-the-actual-approach-and-sequence).
+
 | Organization | Spatial mechanism and useful conditions | Conflicts, failures and a discriminating test |
 | --- | --- | --- |
 | Linear spine / bar | Rooms or groups repeat along a route; one continuous direction makes a sequence legible and can follow a site edge or contour. The bar is the volume; the spine is the movement relationship and need not occupy its center. Useful for repeated rooms, staged visits or a dominant long edge. | An end entrance puts the farthest use at the end of every journey. A central entrance shortens some journeys but interrupts a sequence. Single-loaded access gives rooms one side and the route the other; double-loaded access packs rooms on both sides but removes some external frontage. Test actual route-to-room depth and whether important journeys pass through another activity. |

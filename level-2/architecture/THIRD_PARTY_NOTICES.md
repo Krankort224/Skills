@@ -4,6 +4,22 @@ The architecture skill's newly written, selective adaptations draw on the
 following sources. See [source mapping](references/sources.md) for individual
 paths, changes and exclusions.
 
+## Selected Architecture library literature and course materials
+
+Francis D. K. Ching, *Архитектура: форма, пространство, композиция*, Russian
+edition, AST/Astrel, 2005, translated from the 1996 English edition of
+*Architecture: Form, Space, & Order*. The inspected copyright leaf retains the
+original publisher and Russian translation rights; no open-content license was
+established. The supplied composition-course PDF likewise has no verified
+redistribution license. Library possession is not a redistribution license.
+
+Only independently written explanations of selected design ideas and an
+original hypothetical spatial example are included. No source scans,
+illustrations, extensive quotations or full texts are redistributed. Source
+identities, exact inspected pages and rejected prescriptions are recorded in
+[the library source map](references/sources.md#architecture-library-selected-content).
+The two upstream MIT licenses below do not license these books/course materials.
+
 ## Skills-Architects
 
 Source: https://github.com/Abhinavbwj/Skills-Architects/tree/30a0845dddcaebd765fc396059573d02e99c5b63

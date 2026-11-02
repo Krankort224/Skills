@@ -13,6 +13,7 @@ skill, project brief or applicable requirements.
 - [Performance and coordination](#performance-and-coordination)
 - [Comparison and data](#comparison-and-data)
 - [Documentation coordination](#documentation-coordination)
+- [Architecture library selected content](#architecture-library-selected-content)
 - [Excluded and unresolved material](#excluded-and-unresolved-material)
 - [Russian normative evidence](#russian-normative-evidence)
 
@@ -163,11 +164,46 @@ This map does not certify exhaustive architectural-theory or legal coverage.
 - Remaining upstream sections are visible unreviewed content, not hidden
   completion evidence. Reopen one when a design question reveals a useful
   omission; do not import its values or instructions automatically. The
-  Architecture books/lecture library has not been analyzed in this pass.
+  Architecture library coverage is recorded separately below; unlisted content
+  remains unreviewed.
 
 No imported image assets are needed. The user chooses the deliverable and
 format; samples or diagrams are optional when useful. Any later model authoring
 requires a separate explicit modeling task and handoff.
+
+## Architecture library selected content
+
+The additional collection belongs to `Krankort224/Architecture`; its starting Git
+revision remains `5a0282b0d49792e7688dc2c1f26aca0a8bbcf54d`. The actual local
+knowledge tree has subsequent, uncommitted owner changes: the current library
+guide is `knowledge/library/readme.md`, methods are in `knowledge/methods/`, and
+`knowledge/sources/library-catalog.json` remains the inventory owner. Do not
+resolve current paths from the older pin alone. Its before-reading catalog
+SHA-256 is `03f9074b82dd0afd776424bd64247bdb55ae440b8eedbe9bb17f253e8cfeb190`.
+Detailed reading/adaptation evidence for this increment is in the separate,
+new Architecture note `knowledge/library/skills-pass4-spatial-composition.md`.
+That working-tree note is not represented as already published at the pinned
+Git revision. Existing owner files were not rewritten to add this evidence.
+
+| Identified source and actual inspected extent | Treatment and local method |
+| --- | --- |
+| **P15 / `ap9-p15`**, Francis D. K. Ching, *Архитектура: форма, пространство, композиция*, Russian 2005 edition; inspected title/copyright identifies the 1996 English source. Library path `literature/architecture/ap9-p15-form-space-order.pdf`; 75,503,101 bytes; SHA-256 `d6f0d6f417409a862e859028a6d2402731f33bf83132cd7a95ca1de3fcb9ce1c`; 418 PDF pages. Visually inspected file pages **3–8, 190–202, 279–282**. Operative selected content: file **194–202 = printed 179–187**, spatial relationships and illustrated examples; file **279–282 = printed 264–267**, path/space relationships and illustrations. File 190–193 supplies preceding context only. Pagination was checked on the rendered leaves; no file-wide offset is assumed. | Adapted four pairwise spatial mechanisms, ownership of a shared field, intermediate-space design and movement beside/through/into a room into [spatial composition](spatial-composition.md). The geometric progression is newly authored. No source project, illustration, dimensional table, historical narrative or approved structural solution is imported. All other P15 body pages remain unreviewed in this increment. |
+| **`study-composition-01`**, *Основные положения теории архитектурной композиции*, supplied course PDF; author/date not established. Path `lectures/architecture/materials/lecture-01-composition-basics.pdf`; 16,205,761 bytes; SHA-256 `369236969823da0ccc56dbe8c3cc3d9f9f5d63d5456cefa2a05ed009a8609d32`; 83 PDF pages. Visual inspection: file **1–5, 33–35, 40, 53**; complete extracted text: **11–14, 19, 33–35, 40, 53**. Remaining pages received only a first-text/heading preview, with image-only pages unresolved; no full-PDF review is claimed. No independent printed/slide number was verified, so locators are PDF file pages. | Adapted the observer/approach question and frontal, volumetric, vertical and depth-oriented readings into [actual approach and sequence](spatial-composition.md#compose-for-the-actual-approach-and-sequence). These are conditional lenses, not an exhaustive taxonomy or building-type rule. Rejected slide 33's deterministic shape/emotion and golden-section assertions, slide 35's universal all-around-view prescription and slide 53's identical-facade prescription. History/biographies and unsupported legal/technical prescriptions are not adopted. |
+
+Both source sizes and SHA-256 values were recomputed from actual local bytes on
+2026-11-02 and match the canonical records; page totals were checked with
+PDFinfo. Rendering and text extraction were local. Metadata and catalog checks
+of other books/slides do not count as content review. The current inventory has
+417 available unique source files / 418 available records and 98 missing records;
+the older 515/516 figures describe initial placement, not content coverage.
+
+**Latest owner scope excludes every video**, including the 13 long lecture
+recordings and seven AP-9 clips. Their disposition is **excluded by latest owner
+scope**, with no reviewed intervals in this work; no playback, audio extraction,
+transcription, video-frame inspection or copying was performed. Earlier video
+acceptance text does not make these excluded items a missing-review blocker.
+Do not use past frame observations as new lecture-content evidence. This
+selected increment does not complete Pass 4's remaining books and materials.
 
 ## Russian normative evidence
 
