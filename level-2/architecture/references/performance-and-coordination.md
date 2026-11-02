@@ -373,8 +373,11 @@ primary supply/return along the side bar, parallel to its supports, with a riser
 at each chosen distribution end rather than a main across the hall. Use branches
 entering at coordinated edge locations; reserve 0.12 m below the lowest hall
 structure for terminals/local routes and 0.05 m ceiling/support. Hall clear height
-becomes `4.20 − 0.12 − 0.85 − 0.12 − 0.05 = 3.16 m`. In the side bar the original
-0.45/0.50/0.05 m reservations give 3.08 m, above its 2.70 m brief. Define the
+becomes `4.20 − 0.12 − 0.85 − 0.12 − 0.05 = 3.06 m`: only 0.06 m above the
+3.00 m brief. This nominal margin can be consumed by unconfirmed structural
+depth, service crossings or terminal/ceiling details; it is not a robust
+engineered clearance. In the side bar the original 0.45/0.50/0.05 m reservations
+give 3.08 m, above its 2.70 m brief. Define the
 0.85 m from top of structural floor to lowest beam, including slab, so the slab
 has not been subtracted twice. This is a geometric fit only if branches can
 enter without an unresolved deep crossing; if not, compare a perimeter terminal
@@ -399,8 +402,9 @@ An assistance/waiting bay initially drawn within that strip is moved alongside
 it, preserving its reserved footprint separately. Its protection and communication
 remain part of the actual fire strategy, not a generic label.
 
-**Why retain this revision / what remains.** It preserves the clear hall and
-fixed floor levels by changing distribution geometry, while protecting the quiet
+**Why retain this revision / what remains.** At the assumed depths, it offers a
+conditional way to retain the clear hall and fixed floor levels by changing
+distribution geometry, while protecting the quiet
 edge and circulation from normal door/maintenance use. It spends side-bar area
 and lengthens branches; it may add plant/riser complexity. Specific next checks:
 structural span/depth, reactions, stability and vibration; actual primary and
