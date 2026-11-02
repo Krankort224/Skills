@@ -14,6 +14,8 @@ Use the design question, geometry/data, defined units/metrics, applicable source
 6. Interpret the actual result in architectural terms and develop the affected choice with the relevant local knowledge: [planning/section](../references/planning-and-section.md), [envelope systems](../references/envelope-and-assemblies.md) or the selected environmental section. Glazing ratios do not establish daylight performance; homogeneous U-value does not include junctions; apparent solar geometry does not supply climate/radiation or civil time.
 7. For a code-related conclusion, follow [requirements](../references/requirements.md#select-a-jurisdiction-module) and the matching implemented [module](../references/normative/index.md), then verify the selected external provisions for the decision. Document currency, source selection and design verification are separate questions. A calculator does not decide compliance; an unsupported jurisdiction does not default to Russia.
 
+For confirmed Russian area/population comparisons, establish the [measurement and capacity basis](../references/normative/ru/applicability.md#choose-the-area-and-capacity-basis) or mark it unresolved before scoring affected criteria. Continue independent comparisons, preserving geometric and formal results separately; if the definition changes, recompute affected alternatives and expose any reversed ranking or fixed-brief failure.
+
 ## Result
 
 Report question, method, inputs/units/assumptions, execution status, usable results, interpretation and limitations. If execution is unavailable, provide a prepared bounded check and exact missing capability/data.

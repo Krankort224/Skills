@@ -105,6 +105,36 @@ of 10 overlaps each group. The observed peak is 30, not 50, if those time and
 sharing assumptions are confirmed. If the first two groups might overlap, test
 that scenario separately rather than selecting a convenient peak.
 
+For a confirmed Russian project, retain that **operating-demand** result as its
+own input. Do not put 30 into a field called permitted occupancy or use it to
+size exits or sanitary provision until the relevant use, population and provision
+are selected through the [capacity basis](normative/ru/applicability.md#choose-the-area-and-capacity-basis).
+For example, 24 visitor seats plus two staff present at the same time means
+26 people in this operating scenario; a changeover queue of six makes the
+arrival scenario 32 if the outgoing visitors remain. Keep both scenarios and
+their locations. Reducing the chair count does not resolve a queue occupying
+the only passage or establish a statutory capacity.
+
+Also distinguish the host from the activity occupying the room. The checked
+[СП 118 scope](normative/ru/building-typologies.md#sp-118-13330-2022) includes
+public-use premises embedded in housing and other objects; the residential
+label alone cannot screen them out. A proposed public consultation room in an
+apartment building therefore needs its visitor waiting, staff/privacy boundary,
+toilet access and hours entered in the program. Before: a room marked merely
+“shared residential support” sends waiting visitors through the residents'
+private threshold. After: retain the room envelope, put a waiting pocket on the
+visitor side, and give the consultation room access from that side; test resident
+and visitor journeys separately. This is an operational correction, not a rule
+that every such room must have a new exterior entrance. Establish the actual
+use and [works classification](normative/ru/applicability.md#classify-use-and-works-before-applying-a-rule)
+before deciding whether that entrance is available.
+
+Likewise, “workshop” in a community-room brief does not establish production use.
+Identify the actual making process, equipment, goods and storage before selecting
+the [СП 56 scope and exclusions](normative/ru/building-typologies.md#sp-56-13330-2021).
+Its production/warehouse route can concern premises embedded in another building;
+neither the host label nor the English room name settles that classification.
+
 ## How can areas be counted once and compared?
 
 **Decision and boundary.** Establish a consistent area basis and expose missing
@@ -142,6 +172,33 @@ discrepancy rather than carrying one total in the introduction and another in
 the floor ledger. For required clear room areas use
 [clear-area construction](planning-and-section.md#construct-a-clear-area-fit-with-explicit-wall-reservations)
 to test walls and shared movement explicitly.
+
+For Russia, choose the measurement **purpose** before translating the ledger.
+Keep the study's room/plate boundary alongside the selected Russian metric;
+do not replace GFA/GIA/NIA labels with Russian words and preserve their totals.
+Use the [local measurement selection](normative/ru/applicability.md#choose-the-area-and-capacity-basis)
+and the relevant [СП 54](normative/ru/building-typologies.md#sp-54-13330-2022),
+[СП 55](normative/ru/building-typologies.md#sp-55-13330-2016) or
+[СП 118](normative/ru/building-typologies.md#sp-118-13330-2022) owner.
+
+| Decision being made | Preserve in the architectural ledger | Establish before a formal Russian total |
+| --- | --- | --- |
+| Fit furniture or an activity inside a room | Finished clear shape, obstructions and uninterrupted activity envelope | Selected room measurement rule and treatment of its special parts; a room reservation including walls is not that measurement |
+| Fit the program on a floor | Actual floor boundary, rooms, walls, shafts, shared routes and residual, each counted once | Applicable floor/building definition and treatment of voids, stairs and external parts; a plate remainder is not automatically usable room area |
+| Report a dwelling/apartment area | Each room and auxiliary space, with balconies/loggias/terraces identified separately | Purpose of the figure: design, housing-law area or cadastral measurement; use the selected definition rather than a generic net/gross factor |
+| Compare public-building totals | Room schedule and separate circulation, engineering and external-space components | Which of общая, полезная or расчетная площадь is actually requested and its current inclusions/exclusions; these labels are not synonyms |
+
+**Boundary correction.** A supplied 6.000 × 4.000 m room block is 24.000 m²
+between its stated unfinished faces. With a hypothetical 0.050 m finish on each
+face, its finished rectangle is 5.900 × 3.900 = 23.010 m². Before: 24.000 m² is
+credited against a client requirement for 24.000 m² finished room area. After:
+credit 23.010 m² and show the 0.990 m² shortfall. If the 4.000 m unfinished depth
+is fixed, a 24.000 m² finished rectangle would need unfinished width
+24/3.900 + 0.100 ≈ 6.254 m; retain that as a conditional enlargement or change
+the permitted arrangement. Do not take the extra width from an accepted route.
+The arithmetic is geometric, with hypothetical finishes. A formal Russian room
+area remains unresolved until its current measurement provision is selected;
+neither this example nor a successful area calculator supplies that provision.
 
 **Small check.** Two rooms at 20 m² each plus one shared room at 30 m² total
 70 m² of listed rooms. If a 10 m² lobby is included in the core allowance, adding

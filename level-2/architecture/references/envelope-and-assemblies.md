@@ -11,6 +11,7 @@ room comfort, acoustic operation, structure/services and inclusive-use conflicts
 
 - [Choose a system family](#choose-a-system-family)
 - [Assign control functions before drawing layer order](#assign-control-functions-before-drawing-layer-order)
+- [Adapt the family to climate, use and works](#adapt-the-family-to-climate-use-and-works)
 - [Develop four connected junctions](#develop-four-connected-junctions)
 - [Compatibility, movement and replaceability](#compatibility-movement-and-replaceability)
 - [Test an envelope choice before retaining it](#test-an-envelope-choice-before-retaining-it)
@@ -73,6 +74,45 @@ openings and geometry, not the label “ventilated.” Protect stored materials 
 close in only at suitable moisture conditions; an otherwise coherent assembly
 can trap rain or wet-trade moisture during construction. Consider temporary roof
 and opening protection and the sequence in which membranes become inaccessible.
+
+## Adapt the family to climate, use and works
+
+Make an exposure/use-specific section from the selected family. Record outdoor
+inputs separately from indoor temperature/humidity, occupancy and operating
+mode, including shutdown and construction drying. Heating and cooling seasons
+can both matter at one site. Keep unknown design temperatures, rain/wind/snow
+actions, ground water and material properties conditional; descriptive weather
+averages do not supply engineering design inputs. For confirmed Russia use
+[climate/site/assembly selection](normative/ru/applicability.md#select-climate-site-and-assembly-inputs)
+to select the affected records and provisions, rather than treat every listed
+SP as a universal specification.
+
+| Change in inputs or works | Change the architectural section/reservation | Evidence that can reverse the choice |
+| --- | --- | --- |
+| Frequent cold-season arrival is an explicit brief priority | Compare a protected lobby with a directly opening reading room; maintain the air/thermal boundary at both doors and reserve floor depth for threshold/drainage. Refit circulation after adding the lobby. | Actual operating schedule, accessible door/queue geometry, envelope and HVAC assessment; the lobby is no quantified energy claim. |
+| Sun-exposed occupied facade and warm-season outdoor reading are explicit priorities | Compare movable exterior shade, a fixed shaded porch and revised openings. Reserve brackets, controls, cleaning and glass-removal access independently of the water/air layers. | Orientation, occupied hours, obstructions, glare/solar assessment, wind/support and operation; an overhang is not effective at every sun direction. |
+| A cooler conditioned interior and a rain-wetted exterior can occur together | Compare drying paths and the location of impermeable finishes before fixing vapor control. Keep sill/head water exits visible and request a moisture assessment using the actual climate/use. | Material permeability, inward/outward drives, air leakage, indoor humidity and construction moisture; no universal membrane side is selected. |
+| Roof shape, plant, terrace or shade changes | Recheck high/low roofs, outlets/overflow, local collection areas, penetrations, maintenance and support zones. Compare aligned supports and a simpler roof before retaining a transfer or hidden gutter. | Structural/geotechnical and drainage input; no snow/wind value, outlet capacity, foundation or fixing size follows from the architectural sketch. |
+| Existing facade repair rather than a new envelope | Establish which layers/openings actually change and what survey reveals; preserve viable interfaces and develop the replacement sequence. | Existing construction, intervention classification, product/system evidence and any local/heritage conditions; do not assume new-build scope or force an all-new family onto the work. |
+
+A use change can alter source selection even when the elevation is unchanged.
+For example, suppose a **standalone hypothetical public pavilion** is heated only two
+days per week. The checked periodic-heating exclusion in the
+[SP 50 scope record](normative/ru/environment-and-interfaces.md#sp-50-13330-2024)
+excludes it from that document's thermal-protection scope; record **not applicable
+for that selection**, with the stated operating fact. This does not exempt the
+pavilion from other requirements or establish its alternative thermal basis. If it
+becomes heated every day, reopen selection and the assembly assessment. In an
+existing-room study explicitly limited to finish replacement, with no ground,
+basement, foundation or load changes, do not select foundation design merely
+because [SP 22](normative/ru/environment-and-interfaces.md#sp-22-13330-2016) is in
+the climate/interface route; reopen that branch if the works expand.
+
+Resolve these reservations with the four junctions below. Architecture owns
+the changed geometry and access; specialists confirm support/actions, system
+capacity, thermal bridges, moisture behavior and the applicable technical basis.
+If a required service zone blocks the intended clerestory or removes the usable
+shade-maintenance path, revise the facade/roof arrangement and recount space.
 
 ## Develop four connected junctions
 

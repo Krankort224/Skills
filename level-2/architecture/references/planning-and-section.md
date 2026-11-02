@@ -236,6 +236,42 @@ waste/delivery and maintenance of each use. For phasing, each occupied phase
 needs a functioning entrance, route, support and safe separation from the next
 phase; an unfinished corridor is not future flexibility.
 
+### Resolve a Russian mixed-use plan before fixing the core
+
+For a confirmed Russian project, use the [entrance, route and mixed-use
+selection](normative/ru/applicability.md#resolve-entrances-routes-and-mixed-uses)
+with the actual host and embedded activities. Keep three inputs separate:
+program use and operating hours; functional fire-hazard class for each relevant
+building/part/premise; and, where production/storage technology triggers it,
+explosion/fire-hazard category. A public showroom in a production host does not
+acquire the workshop's category simply by sharing its address. Conversely,
+calling a workshop a “studio” does not establish a low-hazard process. Obtain
+materials, quantities, process and storage information before freezing its
+neighbors or access. The [123-ФЗ](normative/ru/fire-and-accessibility.md#federal-law-123-fz)
+and [SP 12](normative/ru/fire-and-accessibility.md#sp-12-13130-2009) records identify
+the distinct source questions; unread classification provisions remain open.
+
+| Plan decision | Construct and compare | Consequence that can change the plan |
+| --- | --- | --- |
+| Public use inside a residential host | Draw the resident entrance/core/discharge and the embedded use's visitor, staff, delivery and waste paths on the same base | A café queue or goods holding at the resident core consumes a shared interface. Compare a direct public entrance and a separate service approach; retain the host's actual route while separation and opening requirements are checked |
+| Visitor room beside production/storage | Place the public waiting/display setting at arrival, with a controlled boundary to work and a delivery path to the process side | If process/category evidence changes the required separation or permitted connection, move the boundary, opening or public setting before adjusting finishes. A shared reception is a tested operational choice, not proof that the uses may share evacuation |
+| Destination above or below arrival | Compare a common step-free approach and vertical connection with moving the heavily used public destination to arrival level | The lift landing, waiting and door approaches take floor area. Moving the destination may free upper circulation or make independent opening hours possible; it does not settle stair, exit or lift fire requirements |
+| Future tenancy or phased operation | Trace each part from its own permissible entrance through occupied rooms, support and eventual exit discharge | A future boundary through the only lobby, lift landing or service approach defeats the split. Move the boundary or retain shared circulation with an actual access arrangement |
+
+First reserve entrances and level connections for ordinary use; then trace the
+actual evacuation proposal, its doors, stairs, lobbies and outdoor discharge.
+Keep these overlays distinct even where they share geometry. Use
+[SP 59](normative/ru/fire-and-accessibility.md#sp-59-13330-2020) and
+[181-ФЗ](normative/ru/fire-and-accessibility.md#federal-law-181-fz) for the selected
+accessibility question, and [SP 1](normative/ru/fire-and-accessibility.md#sp-1-13130-2020)
+with [SP 4](normative/ru/fire-and-accessibility.md#sp-4-13130-2013) for affected
+escape/spread questions. A door usable in ordinary operation still needs its
+own evacuation classification; an ordinary lift is not established as an escape
+route by drawing a step-free journey through it. Keep any waiting/rescue
+reservation beside, rather than silently within, the clear passage until its
+actual strategy is established. This sequence generates the core footprint
+before room areas make it impossible to change.
+
 ## Worked design progressions
 
 These are explanatory block studies, not complete proposals. The arithmetic
@@ -386,6 +422,44 @@ doors, support and facade exposure, rather than assuming an open studio is
 divisible. The selected revision changes only permitted partitions and use mix;
 it leaves facade feasibility, clear route/core geometry, detailed furniture,
 services, acoustic separation and jurisdiction requirements to be resolved.
+
+### A Russian production host with a public consultation room
+
+**Hypothetical starting plan.** Assume a confirmed Russian new low-rise
+production building with an 18 × 12 m ground plate, no basement and a public
+showroom in the west 6 × 12 m band. A 6 × 6 m consultation room is initially
+placed on a mezzanine at +3.60 m. Its daily approach uses a lift reached through
+the workshop; the proposed emergency diagram repeats that lift arrow. Goods
+arrive at the east edge. These dimensions and levels are project assumptions,
+not requirements, and no process/category, lift or escape provision is established.
+
+**Conflict and bounded choice.** The public journey crosses the working process,
+and its vertical alternative has no established fire strategy. Retaining the
+mezzanine would require a resolved public approach, vertical connection and
+emergency arrangement, each taking real floor/section space. If the operator
+permits reduced display area, compare moving consultation to grade: divide the
+west band into two 6 × 6 m reservations, showroom to the south and consultation
+to the north, each with a direct door onto a common west arrival path. Keep the
+east delivery approach and a controlled staff/process connection at the public
+boundary. The public allocation becomes 36 + 36 = 72 m² on grade; display loses
+36 m² and public use leaves the mezzanine. Walls, furniture and door approaches
+must be fitted within those reservations before they become clear room areas.
+
+**Russian source selection and result.** The
+[SP 59 record's checked scope](normative/ru/fire-and-accessibility.md#sp-59-13330-2020)
+identifies public buildings open to the population; its private single-family
+house exclusion cannot be used to omit this public-use question. This verifies
+a source-selection trigger, not an entrance dimension or a mezzanine prohibition.
+The two grade doors and common arrival path are a design response that removes
+the workshop crossing and the visitors' dependence on the lift. Their actual
+accessibility and evacuation status remain unresolved until selected primary
+provisions, the project-date basis and the actual use/fire classification are
+established under the [Russian procedure](normative/ru/applicability.md#resolve-entrances-routes-and-mixed-uses).
+Do not assign the public rooms the process hazard category or declare the
+workshop safe from its remaining area. If the technology requires a different
+boundary, opening or relationship under the selected fire/spread provisions,
+refit that west edge; if display capacity is fixed, this reduced-display option
+fails the brief and the mezzanine alternative needs its actual spatial solution.
 
 ## Repair a bounded proposal without losing its logic
 

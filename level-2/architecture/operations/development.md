@@ -14,6 +14,8 @@ Use the selected concept, requested design stage, accepted geometry/program, rel
 6. Recheck consequences of each change against fixed constraints and selected requirements. Resolve a known spatial conflict through a concrete alternative within the permitted scope; identify the exact decision needed if no allowed move resolves it. Trace changed boundaries, access, levels and assembly interfaces into affected outputs rather than broadening the redesign.
 7. Update requested 2D visuals and inspect them using [presentation](presentation.md). State remaining coordination and stage limits.
 
+For confirmed Russia, a changed entrance, level connection or tenancy boundary uses [entrance/routes/mixed-use selection](../references/normative/ru/applicability.md#resolve-entrances-routes-and-mixed-uses); a climate/use or envelope change uses [climate/site/assembly selection](../references/normative/ru/applicability.md#select-climate-site-and-assembly-inputs). Refit the affected space and section reservations, rather than attach a source list to an unchanged proposal.
+
 ## Result
 
 Provide the developed or revised solution, changed decisions, affected interfaces, evidence and unresolved work. Preserve unaffected baseline decisions; leave model authoring to a separate explicitly requested task.

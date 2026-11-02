@@ -14,6 +14,8 @@ Use the design material, any requested artifacts, brief and accepted baseline, r
 6. Inspect calculations against [their contract](../references/calculators.md). Verify data, method limits, actual run evidence and interpretation. Require an independent check where a material decision depends on uncertain output.
 7. Return prioritized actionable findings with location, cause/consequence, evidence and a concrete architectural correction. When the task requests redesign, develop the corrected arrangement and recheck its knock-on effects; a finding list alone is insufficient. Preserve fixed decisions and distinguish blockers from refinements.
 
+For a Russian revision, test [use/works](../references/normative/ru/applicability.md#classify-use-and-works-before-applying-a-rule) and the affected [route/level connections](../references/normative/ru/applicability.md#resolve-entrances-routes-and-mixed-uses). Check the actual drawing and source fragment independently: a scope trigger cannot pass an entrance or exit, and a coherent provisional plan cannot establish a legal work category or consent.
+
 ## Result
 
 A clear review outcome with supported findings, retained strengths, corrections and unresolved evidence. Review does not accept/close an Issue or authorize model changes; those actions follow their applicable task contracts.

@@ -59,7 +59,7 @@ For a later explicit modeling task, hand off the accepted geometry/dimensions, p
 | Envelope system selection and assembly/junction intent | [Envelope and assemblies](references/envelope-and-assemblies.md) |
 | Inclusive journeys and everyday/emergency spatial conflicts | [Spatial coordination](references/performance-and-coordination.md#inclusive-use-and-fire-spatial-coordination) |
 | Source applicability, accessibility, fire and jurisdiction selection | [Requirements](references/requirements.md) |
-| Normative source selection for the project's actual jurisdiction | [Jurisdiction modules](references/normative/index.md), selected through [requirements](references/requirements.md#select-a-jurisdiction-module) |
+| Normative source selection for the project's actual jurisdiction | [Jurisdiction modules](references/normative/index.md), selected through [requirements](references/requirements.md#select-a-jurisdiction-module); for confirmed Russia, [conditional design adaptations](references/normative/ru/applicability.md#choose-the-area-and-capacity-basis) |
 | Fixed/variable inputs, constraints and comparison | [Decision frame](references/computational-design.md#frame-the-question), [consistent comparison](references/computational-design.md#compare-options-consistently) |
 | Uncertainty, data or a misleading spatial proxy | [Sensitivity](references/computational-design.md#test-sensitivity-and-reproducibility), [data screening](references/computational-design.md#screen-data-before-translating-it-into-design), [access graph](references/computational-design.md#check-adjacency-and-access-as-separate-relationships) |
 | Reconcile a design decision across requested outputs | [Design issue coordination](operations/documentation.md#coordinate-a-design-issue) |

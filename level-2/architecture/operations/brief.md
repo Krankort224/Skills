@@ -13,6 +13,8 @@ Use the stated purpose/stage, users and activities, site/context, existing desig
 5. Check the program's internal consistency: area totals versus footprint/floors, contradictory adjacency, public/service conflicts and incompatible fixed constraints. Use [planning and section](../references/planning-and-section.md) to try an actual room/route/core arrangement, allowing for wall/support and vertical space. A room-area subtotal is not a packed building. Do not silently add area or relax a requirement.
 6. Ask only the missing questions that materially change the next decision. If useful work can proceed, deliver a bounded provisional brief and state assumptions instead of stopping at a questionnaire.
 
+For confirmed Russia, use [area and capacity selection](../references/normative/ru/applicability.md#choose-the-area-and-capacity-basis) when a formal metric is requested, and [use/works classification](../references/normative/ru/applicability.md#classify-use-and-works-before-applying-a-rule) when host, embedded activity or existing interventions change source selection. Retain the actual room/route proposal while dependent definitions remain unresolved.
+
 ## Result
 
 Produce an actionable brief containing purpose/stage, activity/space schedule with defined metrics, relationship priorities, fixed constraints, assumptions and open decisions. Use the project's existing format. For an existing design, add only the missing context needed for the requested revision.

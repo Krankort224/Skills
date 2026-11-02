@@ -13,6 +13,8 @@ Use accepted design decisions, intended design stage, audience, project conventi
 5. State missing specialist inputs and the concrete architectural interfaces to resolve. Use existing project owners and formats rather than introducing a separate process system.
 6. If a later explicit modeling task is requested, prepare the accepted design handoff: program, dimensions/coordinates, orientation, material intent, constraints and open issues. Do not invoke a modeling tool or another Level-2 skill automatically.
 
+For Russian project-documentation scope, select the [documentation route](../references/normative/ru/routes.md#documentation) for actual works, stage and dates. A concept narrative, project-documentation composition and working-drawing conventions are distinct decisions; verify the relevant primary provision before claiming a required section set. Carry each selected condition into the changed plan/section/schedule item and identify any unresolved basis.
+
 ## Result
 
 Deliver the requested coordinated explanation/schedules or drawing/content requirements, with revision, stage and unresolved interfaces. Use actual requested artifacts; the skill does not mandate a universal folder layout or document suite.

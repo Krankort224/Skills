@@ -56,6 +56,26 @@ allowance by 10 m² and is infeasible under those fixed inputs. If 90 m² is onl
 provisional, A remains conditional pending a defensible revision; an attractive
 entrance does not offset the unresolved area conflict.
 
+For a Russian task, include measurement purpose, host/embedded use, work type
+and relevant project date among the fixed selection inputs. Resolve them through
+[area and capacity selection](normative/ru/applicability.md#choose-the-area-and-capacity-basis)
+and [use and works selection](normative/ru/applicability.md#classify-use-and-works-before-applying-a-rule).
+Keep both the geometric result and any selected statutory metric with their
+own definitions. Changing from a room reservation to finished room area, from
+an apartment total to a building total, or from operating demand to a prescribed
+population is a change of evaluation basis. Recompute affected options under
+that basis; it is not an independently adjustable efficiency variable.
+
+For example, option A's “24 m² room” measured before finishes and option B's
+23.5 m² finished room cannot establish that A supplies more finished activity
+space. Under the hypothetical finishes in the
+[boundary correction](program-and-space.md#how-can-areas-be-counted-once-and-compared),
+A supplies 23.01 m² and B supplies 23.5 m² on that particular finished-rectangle
+basis. The ranking reverses without changing either plan. This supports B only
+on the stated geometric criterion; current Russian inclusions/exclusions, room
+fit and the actual applicable minimum remain separate inputs. Do not fabricate
+a conversion factor or let an unresolved statutory metric receive a passing score.
+
 ## Generate controllable alternatives
 
 **Decision and boundary.** Explore different organizing choices before refining

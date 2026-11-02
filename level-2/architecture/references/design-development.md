@@ -75,6 +75,25 @@ becomes 4.550 m. Keeping both original room widths would create a contradiction.
 If a 1.000 m leaf is specified, obtain its frame/hardware geometry before using
 it as evidence for a required clear passage.
 
+For a confirmed Russian project, name the height whose limit is being tested.
+A floor-to-ceiling dimension, floor-to-floor spacing and grade-to-roof dimension
+answer different questions. Preserve their actual start/end datums in the
+section; the applicable Russian definition must come from the selected
+[typology record](normative/ru/routes.md#use-and-area) and, for a fire question,
+the [fire route](normative/ru/routes.md#safety-and-access). The catalog's housing
+height boundary is not permission to insert a convenient geometric roof height
+without checking the definition. Architectural height also does not establish
+the height used for fire requirements.
+
+For example, with finished floor 0.000, structure underside +3.600 m and a
+suspended ceiling +3.000 m, the room is 3.000 m clear beneath that ceiling.
+Before: label it “3.600 m high” and place an activity requiring a supplied
+3.200 m clear envelope below the ceiling. After: record the 0.200 m conflict;
+trial raising the ceiling to +3.200 m leaves 0.400 m below structure for a
+coordinated services reservation. If that reservation cannot work, relocate the
+activity or revise an authorized datum. These are hypothetical project-fit
+dimensions, not Russian minimum heights, and do not resolve building/fire height.
+
 ## Fit rooms and operations inside the floor
 
 A room-area total is a demand, not a packing solution. First remove or reserve
@@ -191,6 +210,33 @@ specialist advice. Aesthetic intent, a performance target and a selected
 product are separate claims; reconcile them against the actual drawn condition.
 
 ## Turn critique into a spatial correction
+
+For an existing Russian object, describe the physical works before assigning
+the word “renovation” a legal meaning. Retain the before/after room and premises
+boundaries, moved equipment and services, load-bearing interventions, facade
+openings and connections to shared land or circulation. Use the
+[GrK work-type owner](normative/ru/federal-framework.md#grk-190-design-and-expertise)
+for construction/reconstruction/capital-repair classification and, for premises
+in an apartment building, the [ЖК owner](normative/ru/federal-framework.md#zhk-188-alterations)
+for переустройство, перепланировка and common-property questions. These are
+separate checks: an unchanged external envelope or total floor area does not
+answer whether an internal premises change falls under the selected procedure.
+The current operative legal fields remain open where the owning record lacks
+primary text; do not turn a plausible work label into an approval or exemption.
+
+**Changed-entrance correction.** Suppose a consultation-room option gains an
+attractive external entrance by absorbing a strip of the building's shared lobby.
+Before: the plan calls this unused surplus and counts it within the operator's
+room; residents can reach the stair only through the operator's locked boundary.
+After: retain the shared lobby and continuous resident route in the base option,
+move the waiting pocket inside the operator's established premises, and put its
+door on that boundary. Keep an exterior-opening option conditional on the actual
+wall/land/property intervention and selected legal procedure. Investigate
+common-property effects rather than assuming either that every facade change
+needs the same consent or that a door drawing settles the question. Follow
+[use and works selection](normative/ru/applicability.md#classify-use-and-works-before-applying-a-rule)
+for the affected host, embedded use and local conditions. This preserves a usable
+spatial proposal while the distinct authorization question is resolved.
 
 Locate the failure and explain its mechanism. “The plan lacks clarity” becomes
 actionable when the entrance faces an opaque store and the destination door is
@@ -350,6 +396,13 @@ independent consultation rooms. Each needs a supplied, accepted clear activity
 envelope of 2.100 × 4.000 m. Keep the workshop, fixed band, shared route, north
 openings, structural/roof levels and perimeter unchanged. This is a changed
 room requirement, not permission to reduce workshop capacity or move the core.
+
+If this hypothetical revision is applied to premises in a Russian apartment
+building, record the new fixed partition and two-room arrangement as actual
+works for classification, even though the enclosing 108 m² rectangle stays
+fixed. Confirm the consultation activity: a public service, private household
+use and a clinical service are different source-selection hypotheses. The
+geometry below establishes none of those uses or their legal work category.
 
 Divide the former meeting width with a 0.150 m partition occupying
 x = 2.175–2.325, y = 4.650–9.000. The two resulting finished rooms are each

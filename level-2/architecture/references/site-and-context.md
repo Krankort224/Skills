@@ -10,6 +10,7 @@ locally; provenance is in [sources](sources.md).
 ## Contents
 
 - [Read the site as relationships](#read-the-site-as-relationships)
+- [Translate climate and parcel inputs into site moves](#translate-climate-and-parcel-inputs-into-site-moves)
 - [Choose how the building meets its edges](#choose-how-the-building-meets-its-edges)
 - [Compose entrance, threshold and outdoor room](#compose-entrance-threshold-and-outdoor-room)
 - [Let topography and servicing shape the section](#let-topography-and-servicing-shape-the-section)
@@ -31,6 +32,44 @@ depth. Continue a consequential relationship rather than copy a neighbor's
 ornament. A large program can keep one internal room while dividing its frontage
 into smaller bays; it need not become several buildings. Conversely, cosmetic
 vertical strips cannot make an uninterrupted service wall an active frontage.
+
+## Translate climate and parcel inputs into site moves
+
+Select the actual location, use and work before transferring an exposed porch,
+court or roof from a reference. General relationships above remain useful across
+jurisdictions; a locality's climate inputs and a parcel's legal envelope require
+their own evidence. A hypothetical input is a test condition, not an observed
+site fact. For confirmed Russia use the bounded
+[climate/site/assembly selection](normative/ru/applicability.md#select-climate-site-and-assembly-inputs);
+retain other jurisdictions under [requirements](requirements.md).
+
+| Input to establish | Architectural consequence to test |
+| --- | --- |
+| Location-specific seasonal exposure, sun direction/times, wind/rain exposure and periods of intended outdoor use | Compare an enclosed waiting place with an open shaded threshold; locate outdoor activity where the relevant exposure can be tested. A city name or a national climate label cannot choose either. |
+| Surveyed levels, water routes, ground and groundwater evidence | Keep an entrance and its waiting area out of a proposed discharge/overflow path; compare one public level with stepped parts using the whole ground section. Do not infer foundation or drainage feasibility from slope alone. |
+| Indoor use, humidity, opening hours and heating/cooling mode | Distinguish a continuously conditioned reading room from an occasionally heated pavilion or moisture-producing use. A shared garden does not make their enclosure or service requirements identical. |
+| Maintenance method, storage and seasonal operating decisions | Reserve access to roof outlets, shade controls, facade cleaning and equipment replacement; show where cleared material can be held if clearing is part of the assumed operation. Do not put temporary storage in the inclusive route. |
+| Actual parcel, permitted use, intervention and protection regimes | Limit the study footprint only with parcel-relevant evidence; record which boundary or parameter changes an option. A city-wide document title is not a confirmed setback, height or heritage restriction. |
+
+For a Russian parcel, match the cadastral boundary to the adopted PZZ text and
+zoning sheet, relevant GPZU information and any intersecting zone-establishing
+acts through the [local source route](normative/ru/territory-and-special-conditions.md#local-discovery-routes).
+Identify the act, applicable parcel fragment and date behind a drawn constraint;
+compare heritage-object/protection boundaries with the actual works, rather than
+assuming that every old building or every parcel in a city has the same regime.
+When no parcel is supplied, retain alternative footprints as hypothetical and
+leave these selections unresolved. Climate evidence for a city supplies no
+parcel rights or protection-zone clearance.
+
+Trace one ordinary arrival and one maintenance operation through each option in
+the intended operating season. If weather protection adds a lobby, recount its
+area and show door/queue positions; if shading adds an external screen, reserve
+its support and cleaning reach. If ground evidence puts the preferred terrace
+in a water route, move it or revise the levels/discharge concept before keeping
+its claimed use. Carry these physical changes into the room program, facade and
+section, rather than merely adding an exposure note to an unchanged plan. The
+[two-location study](composition-and-style.md#two-russian-reading-pavilions-climate-and-use-change-the-edge)
+shows this translation with explicit limits.
 
 ## Choose how the building meets its edges
 
