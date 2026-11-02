@@ -228,6 +228,13 @@ change in support and depth, not a graphic convenience. Actual loads, spans,
 member depths, movement, vibration, foundation and stability design remain with
 the engineer. Do not import generic span tables as project sizing.
 
+For a clear-span roof or an unclear arch/tie/ridge mechanism, use
+[roof and span](roof-and-span.md#choose-a-spanning-mechanism-and-its-boundaries).
+It develops reaction/support alternatives, the distinction between a ridge board
+and a supported ridge, and the [three-dimensional restraint paths](roof-and-span.md#keep-the-support-system-connected-in-three-dimensions)
+that can conflict with glazing and openings. Use those mechanisms to revise the
+architecture rather than assign capacities from this provisional family table.
+
 ### Budget the section and routes
 
 Use levels relative to a stated datum. For each critical location write:

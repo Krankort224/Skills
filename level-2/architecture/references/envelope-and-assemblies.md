@@ -137,8 +137,11 @@ blocked outlet and retain water; leaving out the overflow because it disturbs
 the elevation changes the failure consequence. Make outlet inspection and roof
 repair accessible and coordinate guard/plant fixings without casually puncturing
 the membrane. Roof movement and wall/roof differential movement need compatible
-transitions. An inverted roof or ventilated pitched roof needs its own layer and
-edge logic; do not transplant the warm-roof sequence unchanged.
+transitions. Select the actual [roof thermal-boundary arrangement](roof-and-span.md#choose-where-the-thermal-boundary-follows-the-roof)
+for an unconditioned attic, occupied slope, compact or protected-membrane roof;
+do not transplant the warm-roof sequence unchanged. Coordinate
+[water-plane geometry and interruptions](roof-and-span.md#resolve-roof-water-in-plan-and-at-the-junction)
+with the same plan, support and opening arrangement.
 
 For a rooflight/monitor, continue insulation at the curb, weatherproof the raised
 edge and drain the surrounding roof away from vulnerable joints. Reserve safe

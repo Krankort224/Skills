@@ -20,6 +20,15 @@ identities, exact inspected pages and rejected prescriptions are recorded in
 [the library source map](references/sources.md#architecture-library-selected-content).
 The two upstream MIT licenses below do not license these books/course materials.
 
+Additional selected readings: Francis D. K. Ching, *Building Construction
+Illustrated*, fifth edition, John Wiley & Sons, 2014 (copyright leaf: all rights
+reserved); Heino Engel, *Несущие системы*, AST/Astrel, 2007, translated from the
+1997 German *Tragsysteme* (Russian translation copyright2006); and Margarita A.
+Guryeva, SPbGASU supplied course PDF *Крыши, кровли, покрытия*, date unverified.
+No open redistribution license was established for these materials. The same
+original-paraphrase/no-source-images boundary above applies; selected pages and
+rejected prescriptions are recorded in the library source map.
+
 ## Skills-Architects
 
 Source: https://github.com/Abhinavbwj/Skills-Architects/tree/30a0845dddcaebd765fc396059573d02e99c5b63

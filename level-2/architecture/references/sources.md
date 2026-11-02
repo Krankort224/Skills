@@ -205,6 +205,31 @@ acceptance text does not make these excluded items a missing-review blocker.
 Do not use past frame observations as new lecture-content evidence. This
 selected increment does not complete Pass 4's remaining books and materials.
 
+### Roof structure and enclosure selections
+
+The next bounded reading addresses missing arch/tie/cable/surface reaction logic,
+ridge-board versus supported-ridge mechanisms, three-dimensional restraint and
+specific roof thermal-boundary alternatives. Existing beam/frame/room and
+four-junction knowledge is retained. The detailed source analysis, fresh
+approach/sequence probe and construction-task evidence are in the new local
+Architecture note `knowledge/library/skills-pass4-roof-and-span.md`, without
+editing the owner's dirty inventory or earlier note. Source files and the
+before-reading knowledge snapshot were hash-checked on 2026-11-02.
+
+| Source identity and actual visual inspection | Adaptation and limits |
+| --- | --- |
+| **P05 / `ap9-p05`**, Francis D. K. Ching, *Building Construction Illustrated*, fifth edition, Wiley, 2014. Path `literature/architecture/ap9-p05-building-construction-illustrated.pdf`; 41,001,591 bytes; SHA-256 `b20e27278dba82cd665303de2f111e0cc90e0453634007c047536991d399bc54`; 482 file pages. Visually read **5–6,64–65,70–71,73–76,195–197,202–203,210–211,227,230–231,235–237,240–243,245**. Printed locators: file64/2.16,65/2.17,70–71/2.22–2.23,73–76/2.25–2.28;195/chapter-6 contents,196–197/6.02–6.03,202–203/6.08–6.09,210–211/6.16–6.17;227/7.03,230–231/7.06–7.07,235–237/7.11–7.13,240–243/7.16–7.19,245/7.21. | Adapted physical force/support distinctions, ideal truss versus bending frame, lateral collection paths, rafter/ridge mechanisms, roof-function placement and drainage/flashing relationships into [roof and span](roof-and-span.md). Shingle/slate pages were reference-only for water-shedding and material/system specificity. Excluded numerical slopes, dimensions, span/depth/capacity tables, code/LEED/CSI prescriptions, fixed material/ventilation recipes, structural efficiency rankings and universal symmetry. Text starts/contents used elsewhere for discovery do not count as full page review. |
+| **`study-engel-structure-systems`**, Heino Engel, *Несущие системы*, Russian AST/Astrel edition 2007; copyright leaf identifies 1997 German source and 2006 Russian translation. Path `literature/construction/study-engel-structure-systems.pdf`; 183,510,266 bytes; SHA-256 `bbc7c1bb7eac246eb900574c008c10b073ad782e704451d65b670e895edeada9`; 342 file pages. Visual inspection **1–10,28–30,102–105,129–130**. Content locators: file28–30/printed30–32; file102–105/printed105–108; file129–130/printed132–133. Mappings were read on leaves, not inferred from one offset. | Adapted mechanism-based comparison, thrust boundaries, tie/abutment alternatives, changed-load sensitivity and truss depth/node consequences; introductory history and authorial assertions about professional responsibility are not runtime instructions. File129 has a cropped right edge; no quantitative result was inferred from the incomplete column. No ratios, reaction magnitudes, member sizing or force diagrams imported. Bibliographic344 pages does not establish completeness of this342-page scan. Unlisted body pages remain unread. |
+| **`study-ask-07`**, *Архитектурно-строительные конструкции, тема7: Крыши, кровли, покрытия*, supplied SPbGASU course material, title identifies Margarita A. Guryeva; date unverified. Path `lectures/construction/materials/ask-07-roofs.pdf`; 26,547,935 bytes; SHA-256 `3fa0e6207c319a98b8d7ed5b9c8712e166a72b2986edded59bf0c67507c63f4c`; 258 file pages. Full-page visual reading **1–5,36–37,40–41,57,59,61,110,133,145,147,149–150,162,180**. No separate printed/slide numbering verified. | Adapted supported versus tied rafters and the real space for their posts/ties; plan-level collection and outlet/curb interfaces. Page133's warm communal attic is a distinct example, not a generic cold-attic ventilation recipe. Terrace/roof photographs are figure-only evidence, not verified assemblies. **Rejected page180's shear-based explanation of arch thrust**, checking compression/support logic against P05 and Engel. Page149's branded drain, 5% local slope and fixing details, other dimensions/spacings and classifications are not adopted prescriptions. Sampled contact sheets locate topics only; they do not establish full258-page review or a video/PDF correspondence. |
+
+All three actual byte sizes/hashes match the canonical records. `study-ask-04`
+was additionally hash-checked for access but its content was not read in this
+increment. No regulatory source or calculator contract changed. No scan,
+photograph, source detail or full course/book text enters the installed skill.
+The new worked pavilion is original and uses explicitly hypothetical vertical
+reservations and a project trial fall, not borrowed legal minima. Source review
+does not complete structural, moisture, thermal, drainage or fire design.
+
 ## Russian normative evidence
 
 The [jurisdiction index](normative/index.md) exposes implemented modules only.
