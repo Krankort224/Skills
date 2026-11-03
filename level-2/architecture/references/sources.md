@@ -260,6 +260,33 @@ scope. None of those statuses implies an obligation to read417 files. Regulatory
 records/calculator contracts remain unchanged. Both new worked revisions are
 original hypothetical geometry; no source plan, scan or full text is installed.
 
+### Furnished dwellings and stair-section continuation
+
+The next bounded selection turns the family/compact reservations into actual
+furnished plans and tests the previously conditional stairB through section.
+The local Architecture note
+`knowledge/library/skills-pass4-dwelling-fit-and-stair-section.md` owns the
+derived source analysis and exact verification limits. Actual P10/P05 hashes
+were checked before processing; twelve source/knowledge hashes were recorded
+and preserved. No extra session was created for a context-isolation test.
+
+| Selected source, same identity/bytes/hash as above | Actual new reading and adaptation |
+| --- | --- |
+| **P10 / `ap9-p10`**, Russian2011 Neufert,39th revised edition | Full visual reading **file18/printed158,20/160,22/162,26/166,29/169,30/170,31/171,33/173**. Adapted entry/door operation, kitchen inventory/working relationships, dining installation versus chair-use zones, bedroom study/storage and fixed/transforming states, wardrobe operation and a physical wet-service reservation. File26's table footnote excludes chair pull-out from one installation measure; that distinction supports rejecting a footprint-only fit. Numeric furniture/corridor/fixture rules, foreign norms, dated household stereotypes and legal area classifications are not adopted. File18–33 screening did not establish full-page reading of19,21,23–25,27–28,32. |
+| **P05 / `ap9-p05`**, Ching fifth edition | Full visual reading **315/9.03,316/9.04,318/9.06**: riser/run reconciliation and actual landing/door/headroom relationships in paired plans/sections. Text-heading discovery309–349 is not full review of that range. No US/ADA stair/ramp formula, minimum, guard/handrail threshold, general width or exit rule is adopted. The20-riser and2.55m headroom case uses declared original study inputs. |
+
+[Dwelling fit](dwelling-fit.md) and its separate original2D family/compact case
+data are self-contained examples, not source drawings or measured models.
+The family version was physically revised when its internal study lacked
+exterior frontage: desks moved to the living facade, sofa and support door
+moved, inventory and wall ledger retained. This trades a separate study for
+shared living/work and an explicitly narrow cross-strip. Compact dining was
+physically moved away from the private route without changing its two-seat
+inventory. [Stair section](stair-section.md) now develops a required walking
+envelope and raised transfer/roof alternatives without claiming unknown roof,
+capacity or stair acceptance. Regulatory records and calculator contracts are
+unchanged. All videos remain excluded; whole-book/course review is not claimed.
+
 ## Russian normative evidence
 
 The [jurisdiction index](normative/index.md) exposes implemented modules only.

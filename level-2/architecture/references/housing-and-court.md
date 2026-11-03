@@ -46,6 +46,10 @@ student project's count. Select applicable requirements separately.
 
 ## Give the dwelling an internal life
 
+For a furnished family or narrow compact plan, develop the
+[actual use, doors and deductions](dwelling-fit.md#test-a-dwelling-through-its-actual-use)
+as well as the family/access choice below.
+
 Place furniture and real paths before celebrating a corridor-free diagram.
 Separate arrival, shared daily activity and sleeping/private rooms deliberately.
 An internal corridor can give independent bedroom access; a grouped day/night
@@ -155,8 +159,10 @@ same level. Fit an offset entry and privacy treatment beside any street-facing
 living/sleeping room; test the screen/setback against actual light, furniture,
 handle reach and passing views. If the whole gallery edge is instead made an
 opaque wet/support strip, the desired two **occupied** aspects may be lost.
-The4×12 compact zones need a furnished narrow/deep-room test; area alone proves
-no quality. Gallery width, core fit and actual routes require their own project
+The [furnished family and4×12 compact studies](dwelling-fit.md#worked-family-fit-and-the-cost-of-a-study-place)
+develop walls, deductions, furniture and operating routes within these gross
+reservations, with explicit limitations; area alone proves no quality.
+Gallery width, core fit and actual routes require their own project
 checks. If they need more area, rerun this ledger rather than consume a flat.
 
 A maisonette/interlocking version of B might release frontage on another level,

@@ -57,7 +57,9 @@ For a later explicit modeling task, hand off the accepted geometry/dimensions, p
 | --- | --- |
 | Activities, concurrent demand and room program | [Program demand](references/program-and-space.md#what-activities-and-capacity-must-the-program-accommodate) |
 | Room fit, plan families, floors and cores | [Planning and section](references/planning-and-section.md) |
+| Furnished family/compact dwelling, door use or gross-to-clear deductions | [Dwelling fit](references/dwelling-fit.md#test-a-dwelling-through-its-actual-use) |
 | Bearing walls, floor direction, stair/shaft voids or window operation | [Wall/floor organization](references/wall-floor-and-opening.md#make-wall-roles-and-floor-direction-agree), [floor openings](references/wall-floor-and-opening.md#place-a-floor-opening-without-erasing-its-support), [wall openings](references/wall-floor-and-opening.md#develop-a-wall-opening-as-support-and-use) |
+| Stair opening fits in plan but headroom or upper arrival is unresolved | [Walking profile and section](references/stair-section.md#build-and-test-the-walking-profile) |
 | Area boundary, allowances and double counting | [Area accounting](references/program-and-space.md#how-can-areas-be-counted-once-and-compared) |
 | Adjacency, access and people/goods routes | [Relationships](references/program-and-space.md#which-relationships-must-the-plan-satisfy), [movement](references/program-and-space.md#how-do-people-and-goods-move-through-access-zones) |
 | Spaces inside, overlapping, beside or linked to each other; a route that crosses an activity | [Spatial relationships](references/spatial-composition.md#choose-how-spaces-meet), [path relationship](references/spatial-composition.md#place-movement-beside-through-or-into-a-space) |

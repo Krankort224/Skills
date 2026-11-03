@@ -73,6 +73,8 @@ actual flight/landing geometry and applicable requirements independently of
 the structural opening.
 On each level, check the landing-to-door route against retained walls/supports;
 an upper landing can be blocked by a wall that does not obstruct the lower route.
+For a stair, test its [walking profile and overhead section](stair-section.md#build-and-test-the-walking-profile)
+as well as that plan connection; moving the hole alone cannot raise a fixed roof.
 
 ## Develop a wall opening as support and use
 
