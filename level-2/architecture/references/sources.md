@@ -287,6 +287,33 @@ envelope and raised transfer/roof alternatives without claiming unknown roof,
 capacity or stair acceptance. Regulatory records and calculator contracts are
 unchanged. All videos remain excluded; whole-book/course review is not claimed.
 
+### Timber joints and house interfaces
+
+The next bounded reading addresses the previously metadata-only timber atlas:
+joint topology changes roof depth, assembly access, visible expression and
+replacement obligations. P05 supplies directional timber/moisture and exposed
+support distinctions; a selected house example tests the boundary between a
+material image, a structural diagram and an actual junction. The new local
+Architecture note `knowledge/library/skills-pass4-timber-and-joints.md` owns
+the derived research. Four source files and eleven existing instruction/knowledge
+files were hash-snapshotted before processing; all fifteen still matched before
+that new note. Existing owner files/indexes were not rewritten.
+
+| Identified source and actual reading | Adaptation and rejection |
+| --- | --- |
+| **`study-timber-atlas`**, A. B. Shmidt / P. A. Dmitriev, *Атлас строительных конструкций из клееной древесины и водостойкой фанеры*, Moscow, ASV: title/copyright **2002**, ISBN5-274-00419-9. Imprint citation and drawing stamps say **2001**; preserve this unresolved internal discrepancy. `literature/construction/study-timber-construction-atlas.djvu`,8,188,030 bytes,SHA-256 `6e00b3f8c366e6a85728d2fc25af4073d1ba9fdf17231384b7c15175fe4f269c`. Actual decoded file has277 pages; imprint292 is not proof of scan completeness. Full visual reading: **file2 title,3 imprint,4/printed3 preface,6/5 scheme index;37/37 leaf28 scheme11147;56/57 leaf47 scheme11183;60/61 leaf51 scheme11187;80/82 leaf71 scheme111106;87/90 leaf78 scheme11221;88/91 leaf79 scheme11222;94/97 leaf85 scheme11228;272/287 author commentaries1–15**. Each locator was read on its leaf; no constant offset is used. | Adapted above-beam timber blocking versus overstraps versus a face-hung shoe into [support topology](timber-and-joints.md#choose-support-topology-and-visible-expression-together) and [assembly/removal access](timber-and-joints.md#reserve-assembly-and-replacement-access). Access sequences are original inferences from depicted components, not documented atlas construction procedures. Commentary item10's acute-angle fixing problem is about **111111**, not111106; item12 criticizes base11222's section loss; item13 includes11221's deficient assumed restraint, not11228. These defeat automatic endorsement of an attractive scheme or a “rigid” category. Movable bearing11147 is a structural degree-of-freedom example, not a moisture joint. Thin membrane at the base does not establish a weather-safe exterior detail. No source drawing, fixing layout, hole oversize, adhesive/asbestos/treatment recipe, capacity or historical fire prescription is adopted. Other screened/decoded pages remain discovery or unread. |
+| **P05 / `ap9-p05`**, same fifth-edition bytes/hash identified above. New full visual pages **140/4.36,141/4.37,193/5.49,194/5.50,429/12.11,430/12.12,439/12.21,440/12.22**. | Adapted timber beam support/cap distinctions, directional grain/moisture change, accessible raised interfaces and the difference between finish appearance/protection and an actual water/drying strategy into [timber and joints](timber-and-joints.md). Rejected generic splice locations, bolt efficiency/spacing/sizing, US base clearances, species strength/durability rankings, a universal decay/moisture threshold, preservative/chemical cleaning recipes and finish-as-fire-rating. Heading discovery over other ranges is not body-page review. |
+| **P30 / `ap9-p30`**, I. Yu. Anikin, individual-house coursework2, SPbGASU professional-training AP860, Saint Petersburg2026 as shown on the title. `references/coursework-examples/kp2/anikin.pdf`,73,088,284 bytes,SHA-256 `c58122732e5545ca5d681d610122a9fde5f62b20a381d27f2d19a00c9fd7880b`,16 file pages. Full visual reading **1 title,2/sheet1 general data,6/sheet5 base/floor plan,8/sheet7 section1-1,9/sheet8 sections2-2/3-3 with roof axon,10/sheet9 elevation1-5**. Other pages received contact-sheet discovery only. | Narrative and sections show a mixed masonry/RC house with timber attic/roof elements, not a whole timber structural system. Sheet5 notes a timber veranda on RC supports; selected drawings do not establish its complete wood/concrete weathering/connection design. Sheet8's generic roof assembly image does not establish the actual junction capacity or construction sequence; facade timber on sheet9 is not proven to be a load-bearing truss. Those distinctions inform joint review and the independent-frame/ledger alternatives, without copying the house. No project dimension, product/layer recipe, household stereotype, regulatory claim or imposed drawing package is transferred. |
+
+The atlas was decoded locally with official DjVu.js0.5.4 in temporary files;
+source and decoder hashes were checked, with no source upload or source edit.
+Only selected pages were visually read; the local decoder does not convert277
+pages into a full-book review claim. P22 was additionally hash/access checked,
+with no content reading this increment. The original terrace supplies its own
+explicit trial dimensions and negative variations, not a source-derived member
+size or tested joint. No regulatory record, calculator, modeling or deliverable
+contract changed. Videos remain **excluded by latest owner scope**.
+
 ## Russian normative evidence
 
 The [jurisdiction index](normative/index.md) exposes implemented modules only.

@@ -44,6 +44,16 @@ critical observations and bibliographic/page evidence are included; no source
 plan, scan, photograph or course/book text is redistributed. The hypothetical
 worked studies are original, not reproductions of those projects.
 
+Additional timber/interface reading: A. B. Shmidt and P. A. Dmitriev,
+*Атлас строительных конструкций из клееной древесины и водостойкой фанеры*,
+ASV, title/copyright2002 (internal2001 references unresolved), and I. Yu. Anikin's
+SPbGASU individual-house coursework2026. No open redistribution license was
+established. The installed timber method and terrace study are original
+paraphrase/geometry; no atlas scheme, source drawing, scan, photograph or book
+text is redistributed. Exact inspected pages and source limits are in
+[the timber source map](references/sources.md#timber-joints-and-house-interfaces).
+The temporary DjVu decoder and source rasters are not part of this skill.
+
 ## Skills-Architects
 
 Source: https://github.com/Abhinavbwj/Skills-Architects/tree/30a0845dddcaebd765fc396059573d02e99c5b63

@@ -207,6 +207,11 @@ drainage and actual discipline evidence; neither is a certified span solution.
 
 ## Source boundary
 
+For timber support topology, the depth of stacked versus face-hung secondaries
+and actual fixing/removal access, use the affected [timber joint question](timber-and-joints.md#choose-support-topology-and-visible-expression-together).
+Its bearing/rotation examples do not replace the complete restraint mechanism
+above.
+
 The selected P05, Engel and ASK material and exact file/printed-page mappings
 are recorded in [sources](sources.md#architecture-library-selected-content).
 Drawings, force diagrams, code values, product details and span tables were not
