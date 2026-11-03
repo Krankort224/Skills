@@ -109,6 +109,11 @@ construction.
 
 ## Choose a plan family from the relationships
 
+For dwellings, couple the family below to the actual
+[household mix, occupied aspects and shared access](housing-and-court.md#choose-a-dwelling-and-access-family-together).
+The typical floor must also connect to its ground entrance and court/service
+arrangement; a generic corridor/court label does not resolve those interfaces.
+
 Generate families by changing how movement meets occupied rooms, not merely by
 changing the outline. Sketch a section alongside each family: the same floor
 diagram can imply an open gallery, an enclosed corridor or an atrium, with very
@@ -149,6 +154,11 @@ to repair it are explicit. Spend detail on the discriminating interface rather
 than repeating every unchanged material or legal limitation.
 
 ## Organize levels, cores and service depth
+
+For repeated bearing walls, a different upper/lower layout or a stair/shaft void,
+develop the [wall roles and floor direction](wall-floor-and-opening.md#make-wall-roles-and-floor-direction-agree)
+and the [support around a floor opening](wall-floor-and-opening.md#place-a-floor-opening-without-erasing-its-support).
+Use that physical organization with the level/core decisions below.
 
 Start section with the ground relation: street and service access, finished
 entrance level, outdoor thresholds, and the level of each principal destination.

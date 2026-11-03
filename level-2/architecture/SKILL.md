@@ -5,6 +5,15 @@ description: Develop, revise, compare, present and review architectural designs 
 
 # Architecture
 
+## Contents
+
+- [Choose the operation](#choose-the-operation)
+- [Shared design contract](#shared-design-contract)
+- [Design and modeling boundary](#design-and-modeling-boundary)
+- [Load knowledge by question](#load-knowledge-by-question)
+- [Tools](#tools)
+- [Completion and integration](#completion-and-integration)
+
 ## Choose the operation
 
 Start at the requested operation. Read its procedure and only the reference sections needed for that decision. Operations are selectable activities, not a compulsory sequence or executor roles. Reuse supplied project information and accepted decisions.
@@ -48,17 +57,20 @@ For a later explicit modeling task, hand off the accepted geometry/dimensions, p
 | --- | --- |
 | Activities, concurrent demand and room program | [Program demand](references/program-and-space.md#what-activities-and-capacity-must-the-program-accommodate) |
 | Room fit, plan families, floors and cores | [Planning and section](references/planning-and-section.md) |
+| Bearing walls, floor direction, stair/shaft voids or window operation | [Wall/floor organization](references/wall-floor-and-opening.md#make-wall-roles-and-floor-direction-agree), [floor openings](references/wall-floor-and-opening.md#place-a-floor-opening-without-erasing-its-support), [wall openings](references/wall-floor-and-opening.md#develop-a-wall-opening-as-support-and-use) |
 | Area boundary, allowances and double counting | [Area accounting](references/program-and-space.md#how-can-areas-be-counted-once-and-compared) |
 | Adjacency, access and people/goods routes | [Relationships](references/program-and-space.md#which-relationships-must-the-plan-satisfy), [movement](references/program-and-space.md#how-do-people-and-goods-move-through-access-zones) |
 | Spaces inside, overlapping, beside or linked to each other; a route that crosses an activity | [Spatial relationships](references/spatial-composition.md#choose-how-spaces-meet), [path relationship](references/spatial-composition.md#place-movement-beside-through-or-into-a-space) |
 | Floors, adaptability or a bounded layout change | [Vertical organization](references/program-and-space.md#how-should-the-program-occupy-floors-and-adapt-over-time), [local revision](references/program-and-space.md#how-should-a-bounded-revision-or-comparison-be-judged) |
 | Site, arrival and meaningfully different concepts | [Context](references/composition-and-style.md#how-should-the-design-respond-to-site-and-arrival), [partis](references/composition-and-style.md#how-can-different-partis-be-generated-and-compared) |
 | Urban edges, outdoor rooms, approach or sloping ground | [Site and context](references/site-and-context.md) |
+| Housing mix, apartment aspects, gallery/landing choice or home-to-court journeys | [Dwelling/access family](references/housing-and-court.md#choose-a-dwelling-and-access-family-together), [court and servicing](references/housing-and-court.md#connect-home-court-and-servicing) |
 | Mass/void, hierarchy, style or material expression | [Massing](references/composition-and-style.md#how-should-mass-and-void-organize-the-site-and-rooms), then the matching composition Contents question |
 | Light, view, noise and ventilation trade-offs | [Daylight](references/performance-and-coordination.md#daylight-view-and-occupied-comfort), [acoustic paths](references/performance-and-coordination.md#acoustic-paths-and-ventilation-choices) |
 | Envelope junctions, durability or engineering space | [Continuity](references/performance-and-coordination.md#climate-exposure-and-envelope-continuity), [maintenance](references/performance-and-coordination.md#durability-and-maintenance-of-materials), [reservations](references/performance-and-coordination.md#structure-and-services-reservations) |
 | Envelope system selection and assembly/junction intent | [Envelope and assemblies](references/envelope-and-assemblies.md) |
-| Clear-span roof, arch/tie/ridge choices, roof thermal boundary or drainage conflicts | [Spanning mechanism](references/roof-and-span.md#choose-a-spanning-mechanism-and-its-boundaries), then the affected roof question |
+| Clear-span roof or arch/tie/ridge choices | [Spanning mechanism](references/roof-and-span.md#choose-a-spanning-mechanism-and-its-boundaries), [ridge support](references/roof-and-span.md#distinguish-a-ridge-board-from-a-supported-ridge) |
+| Roof insulation boundary or drainage conflicts | [Thermal boundary](references/roof-and-span.md#choose-where-the-thermal-boundary-follows-the-roof), [roof water](references/roof-and-span.md#resolve-roof-water-in-plan-and-at-the-junction) |
 | Inclusive journeys and everyday/emergency spatial conflicts | [Spatial coordination](references/performance-and-coordination.md#inclusive-use-and-fire-spatial-coordination) |
 | Source applicability, accessibility, fire and jurisdiction selection | [Requirements](references/requirements.md) |
 | Normative source selection for the project's actual jurisdiction | [Jurisdiction modules](references/normative/index.md), selected through [requirements](references/requirements.md#select-a-jurisdiction-module); for confirmed Russia, [conditional design adaptations](references/normative/ru/applicability.md#choose-the-area-and-capacity-basis) |

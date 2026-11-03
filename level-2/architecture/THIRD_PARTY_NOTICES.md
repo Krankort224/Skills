@@ -1,5 +1,11 @@
 # Third-party notices
 
+## Contents
+
+- [Selected library materials](#selected-architecture-library-literature-and-course-materials)
+- [Skills-Architects](#skills-architects)
+- [Computational Designers](#claude-skills-for-computational-designers)
+
 The architecture skill's newly written, selective adaptations draw on the
 following sources. See [source mapping](references/sources.md) for individual
 paths, changes and exclusions.
@@ -28,6 +34,15 @@ Guryeva, SPbGASU supplied course PDF *Крыши, кровли, покрытия
 No open redistribution license was established for these materials. The same
 original-paraphrase/no-source-images boundary above applies; selected pages and
 rejected prescriptions are recorded in the library source map.
+
+Additional housing/construction readings: Neufert, Russian 2011 translation of
+the 39th revised edition; Guryeva/SPbGASU supplied course PDFs on bearing walls,
+floors, balconies and transparent enclosures (dates unverified); and the Turukin
+apartment-house and Rogozina quarter coursework PDFs identified in the source
+map. No open redistribution license was established. Only original methods,
+critical observations and bibliographic/page evidence are included; no source
+plan, scan, photograph or course/book text is redistributed. The hypothetical
+worked studies are original, not reproductions of those projects.
 
 ## Skills-Architects
 

@@ -151,6 +151,9 @@ not supplied by this concept.
 
 ### Opening head, jamb and sill
 
+Before developing the perimeter, distinguish the rough/frame/light/clear opening
+and its [support and operation](wall-floor-and-opening.md#develop-a-wall-opening-as-support-and-use).
+
 Choose the frame position relative to insulation and support deliberately.
 Position near the insulation plane can simplify thermal continuity, but the frame
 must transfer loads to a designed support, not rest on soft insulation. Return
