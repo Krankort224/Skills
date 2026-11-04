@@ -185,6 +185,12 @@ a private room and that ground-floor commercial space does not block discharge.
 The number, size, protection and separation of stairs/lifts remain project and
 applicability questions, not deductions from these generic diagrams.
 
+For a shaft/cabin/landing distinction, pit/head/machinery profile or independent
+maintenance journey, develop the affected [equipment envelope](frame-and-core.md#fit-vertical-equipment-and-maintenance-with-the-core)
+and [core through every level](frame-and-core.md#carry-core-routes-and-support-through-every-level).
+For a buried volume or nearby excavation, coordinate the [ground section](ground-and-basement.md#decide-what-actually-needs-to-be-below-ground)
+before counting it as available program.
+
 - A central core can give shorter routes in several directions and free much of
   the facade, but its surrounding ring may be awkward to subdivide without
   circulation through another tenancy.

@@ -54,6 +54,15 @@ text is redistributed. Exact inspected pages and source limits are in
 [the timber source map](references/sources.md#timber-joints-and-house-interfaces).
 The temporary DjVu decoder and source rasters are not part of this skill.
 
+Additional selected course readings: Gurieva/SPbGASU ASK01 introduction and
+construction fundamentals, ASK02 bases/foundations, ASK04 walls/volumetric
+blocks/frames and ASK06 lift-stair core. No publication date or open redistribution
+license was established. Only original synthesis, source/page evidence and
+hypothetical worked geometry are installed; no source slide, photograph,
+historical detail, extensive quotation or full course text is redistributed.
+Exact inspected file pages and exclusions are in
+[the ground/frame/core source map](references/sources.md#ground-frame-and-core-selections).
+
 ## Skills-Architects
 
 Source: https://github.com/Abhinavbwj/Skills-Architects/tree/30a0845dddcaebd765fc396059573d02e99c5b63

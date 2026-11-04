@@ -314,6 +314,52 @@ explicit trial dimensions and negative variations, not a source-derived member
 size or tested joint. No regulatory record, calculator, modeling or deliverable
 contract changed. Videos remain **excluded by latest owner scope**.
 
+### Ground, frame and core selections
+
+The remaining four ASK construction PDFs were selected for specific omissions:
+neighboring-ground/subgrade dependencies, coordination pitch versus physical
+components, directional frame action and a lift/core profile extending beyond
+the passenger-floor plan. Full visual reading is selective, not completion of
+the courses. Seventeen source/instruction/knowledge hashes matched after the
+interrupted connection; no source or existing owner knowledge file was edited.
+Detailed analysis belongs to the new local Architecture note
+`knowledge/library/skills-pass4-ground-frame-and-core.md`; cross-iteration
+coverage is reconciled in `knowledge/library/skills-pass4-coverage.md` against
+the existing canonical catalog, without replacing it.
+
+All four title slides name **Гуриева Маргарита Александровна**, senior lecturer,
+SPbGASU Department of Architectural Construction. No publication/lecture date
+was established. December2025 PDF metadata dates are export/file dates, not a
+confirmed edition. The PDFs are raster slides; empty text extraction did not
+establish unreadable content. Actual evidence is individually viewed full-page
+renders. No distinct printed folios were verified: locators below are **file
+pages** only; ASK06's “12.09” is a drawing identifier, not a page number.
+
+| Canonical source, actual bytes/hash and full visual extent | Adaptation and limits |
+| --- | --- |
+| **`study-ask-01`**, *Тема1: Введение. Основы конструирования*, `lectures/construction/materials/ask-01-construction.pdf`,20,647,968bytes,SHA-256 `be4833628f0891e3618ff0e1ab2e59fa06ffb1c2090ad3dd40770d2dcbb32bb3`,194pages. Fully read **1,82,84,88,96,100,156,159**. | Wall/frame/combined roles and nominal/component/interval distinctions inform [physical coordination](frame-and-core.md#separate-coordination-pitch-component-and-occupied-clearance) and the trace into ground support. The construction photos do not prove joint stiffness or erection safety; file96's unnamed images do not establish the whole load-role split. Product/type-size discussion is not current product availability. Original6.00/5.98/0.02 trials are not slide dimensions or prescribed joints. |
+| **`study-ask-02`**, *Тема2: Основания и фундаменты*, `lectures/construction/materials/ask-02-foundations.pdf`,17,801,441bytes,SHA-256 `1ef08b2238a8230d0e4ffa7f9b37af0052ad2b9984c5b7c7ea72b342ceb81072`,189pages. Fully read **1,12,132,144,162,170,171,174,188**. | Varying ground sections, coupled piled-building/slab-extension behavior, settlement-joint continuity and actual exterior-work/discharge interfaces inform [ground and basement](ground-and-basement.md). No safe influence angle/setback, frost depth, excavation/support, soil capacity, drain slope/filter recipe or groundwater guarantee is imported. File162's installation photo is not a safe-work procedure. File170's numbered lines lack a reviewed legend, so exact assembly identification is unresolved. File188's no-basement examples support an alternative, not a copied layer recipe. |
+| **`study-ask-04`**, *Тема4: Стены ч.2. Объёмные блоки. Каркасы*, `lectures/construction/materials/ask-04-walls-and-frames.pdf`,16,842,278bytes,SHA-256 `9d88b8972309ae71b557253d78e5daa0f937fac09f7fd41199778058a55bad17`,182pages. Fully read **1,68,73,92,94,103,110,130,182**. | Rigid, mixed and braced action; actual resisting planes and beam direction inform [frame/core action](frame-and-core.md#choose-frame-and-stability-action-with-the-plan). File68's broken-axis/combined-member definition is not a claim that every curved or photographed structure is rigid. File94 depicts wall lines/diaphragm/bracing, not a developed closed lift core; continuous-core/open-ground reasoning is our coordination inference from94/103. File130 is facade-wall support and supplies no core-action evidence. No actual joint stiffness, transfer capacity or member size follows. |
+| **`study-ask-06`**, *Тема6: Лифто-лестничный узел*, `lectures/construction/materials/ask-06-llu.pdf`,25,322,580bytes,SHA-256 `63a3f503b86a01976250d322f204165f68af5bd5248c2692bdf0a6510a45bcd9`,252pages. Fully read **1,66,162,176,180,181,182**. | Core/landing plans, five lift plans and upper/lower machinery relationships inform [equipment envelopes](frame-and-core.md#fit-vertical-equipment-and-maintenance-with-the-core) and [continuous journeys](frame-and-core.md#carry-core-routes-and-support-through-every-level). File180 is a historical upper-shaft/machine-room section, with support/handling provision; it is not the whole modern installation or a supplier profile. Pit/head values, cabin capacity, floor-count classifications, old standards, slab/material/hatch recipes and fire/access conclusions are not adopted. Lower machinery does not automatically eliminate overhead. |
+
+All eight ASK PDFs now have **selected content read** in this Pass4 execution;
+the statement does not mean all their pages were read or matched to videos.
+Across the canonical516records, this execution records17 sources with selected
+substantive content,1 with identity/frontmatter-only reading,381 locally listed
+records with no new content-review claim,97 missing nonvideo records and20 videos
+**excluded by latest owner scope**. Of those excluded videos,19 are catalogued
+locally present and1 absent; it is not counted again as an eligible missing source.
+The owner's417unique-present-file/418present-record figures remain dated inventory
+facts, not fresh full-library verification or reading counts. Earlier catalog
+review claims are not erased or relabeled as new work. The P28 mixedKP3/KP4
+title/stamp caveat remains; no new P28 content review is claimed.
+
+No source figures/full texts, regulatory/calculator changes or mandatory output
+package are added. Worked ground/frame/core studies use original hypothetical
+inputs and explicit completion limits. Baseline/candidate probes reuse existing
+agents and are not isolated-context experiments; prepared clean-context material
+does not establish an executed test or a context-reduction result.
+
 ## Russian normative evidence
 
 The [jurisdiction index](normative/index.md) exposes implemented modules only.

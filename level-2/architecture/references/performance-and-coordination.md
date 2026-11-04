@@ -228,6 +228,10 @@ change in support and depth, not a graphic convenience. Actual loads, spans,
 member depths, movement, vibration, foundation and stability design remain with
 the engineer. Do not import generic span tables as project sizing.
 
+For a directional rigid/braced/core choice or an open ground story, develop
+the [actual action and continuous recipients](frame-and-core.md#choose-frame-and-stability-action-with-the-plan).
+For physical products on a nominal grid, reconcile [pitch, component and clearance](frame-and-core.md#separate-coordination-pitch-component-and-occupied-clearance).
+
 For a clear-span roof or an unclear arch/tie/ridge mechanism, use
 [roof and span](roof-and-span.md#choose-a-spanning-mechanism-and-its-boundaries).
 It develops reaction/support alternatives, the distinction between a ridge board
