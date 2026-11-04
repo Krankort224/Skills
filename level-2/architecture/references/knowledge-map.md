@@ -130,9 +130,10 @@ identify it and continue independent decisions without counting it as verified.
 Use the bounded method named in a row, not the row's subject as a completion
 claim. Quarter, program and the declared building families now have bounded
 operational methods; they do not establish every urban-design or building-type
-competency. Unexamined specialist typologies remain partial. Existing-building,
-environmental/inclusive-operation and architectural cost
-methods; verified style/precedent cases; and requested-scope completion methods.
+competency. Unexamined specialist typologies remain partial. Deeper methods are
+still needed for existing buildings, environmental/inclusive operation and
+architectural cost, alongside verified style/precedent cases and requested-scope
+completion methods.
 Those gaps are specific knowledge work, not reasons to read every library file
 or execute a whole project as a test. An absent coursework brief is not a gate.
 

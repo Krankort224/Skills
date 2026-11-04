@@ -388,7 +388,7 @@ The methods remain usable from local references without reopening the library.
 Selected nonvideo source sizes and hashes were rechecked against the catalog on
 2026-11-04; actual reading and exclusions remain bounded by the records above.
 Download inventories, access failures and temporary-workspace evidence are
-reported in [Issue #7](https://github.com/Krankort224/Skills/issues/7#issuecomment-6638290009),
+reported in [Issue #7](https://github.com/Krankort224/Skills/issues/7),
 not treated as runtime prerequisites or competency counts.
 
 ## Russian normative evidence
