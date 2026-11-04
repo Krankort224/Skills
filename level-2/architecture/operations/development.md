@@ -4,10 +4,21 @@
 
 Use the selected concept, requested design stage, accepted geometry/program, relevant project sources and the bounded change or refinement. Identify the baseline before editing.
 
+## Select the refinement
+
+- Room/activity revision: use [room fit](../references/planning-and-section.md#construct-a-room-that-can-be-used)
+  and only the affected door, frontage or neighbor; add dwelling use if relevant.
+- Section/system/junction revision: select the actual physical interface through
+  its direct method or the matching [subject section](../references/knowledge-map.md#systems-and-assemblies).
+  A roof-water question need not load the entire support-family method.
+- Cross-output agreement: use [design issue coordination](documentation.md#coordinate-a-design-issue)
+  when the changed decision must be reconciled across supplied outputs. It is
+  distinct from correcting the spatial cause and is not a mandatory package.
+
 ## Procedure
 
 1. Define what may change and which accepted decisions remain fixed. For a local revision, trace only affected adjacencies, routes, dimensions, facade interfaces and performance assumptions.
-2. Use [design development](../references/design-development.md) to refine actual room/door/route fit, level/dimension chains and the sections/elevations that explain the solution. For a changed room arrangement read [room construction](../references/planning-and-section.md#construct-a-room-that-can-be-used), including its clear-area/wall method when the brief gives clear targets. Use [envelope and assemblies](../references/envelope-and-assemblies.md) for a system/junction decision. Keep area definitions and drawing precision consistent.
+2. Select the [floor integration](../references/design-development.md#fit-rooms-and-operations-inside-the-floor), [dimension](../references/design-development.md#establish-datums-and-dimension-meanings), [section](../references/design-development.md#choose-sections-that-test-the-solution) or [elevation](../references/design-development.md#coordinate-elevations-without-copying-partitions) method for the requested refinement, rather than loading the whole reference by default. For a changed room arrangement read [room construction](../references/planning-and-section.md#construct-a-room-that-can-be-used), including its clear-area/wall method when the brief gives clear targets. Use [envelope and assemblies](../references/envelope-and-assemblies.md) for a system/junction decision. Keep area definitions and drawing precision consistent.
 3. For a local revision use the [bounded-change method](../references/program-and-space.md#how-should-a-bounded-revision-or-comparison-be-judged). Select the affected composition question and [envelope continuity](../references/performance-and-coordination.md#climate-exposure-and-envelope-continuity) or [structure/services reservation](../references/performance-and-coordination.md#structure-and-services-reservations) where that interface changes.
 4. Reserve architectural interfaces with structural and building-services work: zones, shafts, access/maintenance, plant, ceiling/roof depths and facade junctions. State who must confirm them; do not perform unsupported sizing.
 5. Reconcile plans, sections/elevations, schedules and written decisions. An illustrative image cannot silently establish dimensions or a construction assembly.

@@ -276,9 +276,10 @@ or mesh models, implement search/clustering algorithms, write tool scripts or
 activate modeling workflows. Eligible arithmetic follows the exact
 [calculator contract](calculators.md); no simulation, engineering sizing,
 fabrication validation or compliance conclusion follows from these methods.
-For a later explicitly requested modeling task, hand off the selected concept,
-dimensions, coordinates/units, source data/revisions, unresolved decisions and
-required checks. A prepared method is distinct from an executed result.
+Separate model authoring, BIM/CAD-skill interaction, exchange/handoff protocols
+and returned-model verification are outside these methods. A separately requested
+task owns that work; no modeling tool or skill is invoked here. A prepared
+method is distinct from an executed result.
 
 
 Provenance and selective reading extents are recorded in [sources](sources.md#comparison-and-data); use the methods here without opening upstream collections.

@@ -72,6 +72,33 @@ plan an intelligible assembly rule. Keep interior clear dimensions separate from
 reservation dimensions containing walls; revise the schedule when walls, columns
 and doors are resolved.
 
+### Check occupied states before retaining the room
+
+Fit shapes as well as areas. A 24 m² room 2 m wide is not equivalent to a 4 × 6 m
+room for a table, bed or workbench. Test the activity's real dimensions and
+access side, including chair pullback, cupboard opening, equipment movement,
+door swing and the space occupied by a person using each item. An L-shaped
+remainder may be valuable storage or a route but cannot be credited as an
+uninterrupted rectangular activity zone. A diagram filling every square metre
+with rooms has probably omitted walls or circulation.
+
+Check the occupied plan in credible simultaneous states:
+
+- Arrivals wait while others pass; a queue must not consume the only route.
+- Doors open while furniture is in use; opposing swings and a door against a
+  chair, landing or cupboard need an actual geometric correction.
+- Deliveries and replacement equipment turn corners and cross thresholds; a
+  straight corridor width alone does not demonstrate the whole journey.
+- Staff supervise entrances while privacy is maintained; plot the sightline
+  from the actual seated or standing position around opaque obstructions.
+- A room remains accessible when the neighboring room is locked or occupied;
+  touching rooms and a route through another activity are different relations.
+
+Plot narrow points and turns, rather than checking a single representative
+width. State which operating envelopes are supplied, assumed or still unknown.
+Architecture can reject an overlap or improve a route from this evidence while
+leaving source-dependent clearance requirements open.
+
 ### Construct a clear-area fit with explicit wall reservations
 
 When the brief gives finished room areas, build the dimensions outward from

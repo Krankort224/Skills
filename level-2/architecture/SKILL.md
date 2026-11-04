@@ -40,7 +40,7 @@ For a local revision, identify the accepted baseline, requested change and affec
 - Keep project facts, dimensions, site/software profiles, source selections and accepted decisions in the project's existing authoritative material. Reuse its structure; do not create a second project/process framework.
 - Establish jurisdiction and applicable source versions explicitly. Unknown jurisdiction allows independent design exploration, with normative conclusions left open. Do not infer location from language/currency or apply foreign-code defaults. Use [requirements](references/requirements.md) for applicability checks.
 - Define area/occupancy/performance metrics before comparing them. Geometric area, GFA/GIA/NIA and local legal area definitions are not interchangeable. Record conversion assumptions and reject ambiguous units or incompatible definitions.
-- Describe styles by composition, proportion, spatial character, material/facade treatment and contextual fit. Use no biographies, historical surveys or person-centered routing.
+- Describe styles through composition, proportion, spatial character, material/facade treatment and contextual fit. Verified named architects, identified buildings and relevant history may explain those mechanisms and their adaptation. Do not substitute biography/name lists, unsupported classifications or copied designs for architectural reasoning.
 - Identify contradictions between fixed requirements before claiming a feasible solution. Show the incompatible constraints, continue independent work and identify the decision needed to proceed; do not silently relax a requirement.
 - Follow the user's chosen deliverable and format for the current task. A concept request may be answered in text when no artifact is requested. Do not impose an image/file, a preset format or an automatic SVG default. Produce and appropriately inspect any requested artifact; clarify an unspecified format only when necessary to complete that deliverable. Identify diagrammatic, dimensionally controlled and illustrative content honestly.
 - Choose checks proportional to uncertainty and stage. Distinguish a prepared method, an attempted execution and usable results. Report unavailable tools, invalid inputs or failed runs without inventing results.
@@ -49,9 +49,21 @@ For a local revision, identify the accepted baseline, requested change and affec
 
 Do not create/edit a building, BIM, 3D or mesh model, implement Revit/Dynamo/Grasshopper workflows, or activate a modeling MCP through this skill. Architectural coordination may reserve spaces, state interfaces and compare design intent in 2D. It does not size engineering systems or establish a building model.
 
-For a later explicit modeling task, hand off the accepted geometry/dimensions, program, coordinate/orientation assumptions, materials, decisions and unresolved interfaces. Modeling belongs to `revit-scripting` under its own explicit invocation and execution contract; do not automatically invoke another Level-2 skill. A raster illustration is not a measured model.
+Building-model authoring and any separately requested modeling work remain outside this skill. Do not invoke another Level-2 skill or develop BIM/CAD-skill interaction, exchange/handoff protocols or returned-model verification here. Architectural decisions and their requested 2D/text coordination remain in scope. A raster illustration is not a measured model.
 
 ## Load knowledge by question
+
+Use the direct common-question routes below when the method is known. If the
+request spans domains or its home is unclear, select only the relevant section
+of the [knowledge/coverage map](references/knowledge-map.md):
+[quarter/urban context](references/knowledge-map.md#quarter-and-urban-context),
+[site](references/knowledge-map.md#site), [building](references/knowledge-map.md#building),
+[spaces](references/knowledge-map.md#spaces), [systems/assemblies](references/knowledge-map.md#systems-and-assemblies)
+or [cross-cutting methods](references/knowledge-map.md#cross-cutting-methods).
+The map declares bounded methods, partial coverage and shared owners; it is not
+a required whole-file read or a second design entry point. Typologies and styles
+connect to those homes rather than duplicating their procedures. A route alone
+does not establish complete competency in its subject.
 
 | Question | Reference |
 | --- | --- |

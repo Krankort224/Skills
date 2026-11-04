@@ -139,6 +139,13 @@ This map does not certify exhaustive architectural-theory or legal coverage.
 
 ## Excluded and unresolved material
 
+Structural maintenance does not constitute fresh source review. General occupied
+room-fit checks now share [planning's room method](planning-and-section.md#construct-a-room-that-can-be-used);
+design-development consumes that result at floor scale. Generic component
+compatibility/removal now shares [the envelope method](envelope-and-assemblies.md#compatibility-movement-and-replaceability);
+performance retains exposure mechanisms and life-cycle comparison boundaries.
+Their original source/adaptation decisions and worked examples remain applicable.
+
 - Numerical area/occupancy benchmarks, foreign code classifications, dimensions,
   travel distances, acoustic/thermal ratings, structural span tables and
   certification credit thresholds are not operative requirements in these
@@ -148,9 +155,12 @@ This map does not certify exhaustive architectural-theory or legal coverage.
 - Material, environmental and cost comparisons need actual product/site,
   climate, life-cycle boundary, units and operating evidence. Narrative
   continuity or a graph metric does not establish physical performance.
-- Biography, person-centered routing and historical surveys remain excluded.
-  A design tension sampled from movements/manifests is not adoption of that
-  historical narrative. Upstream country/code digests are not fallback law.
+- Biography/name-only or historical material unrelated to architectural decisions
+  remains unsuitable. Verified named architects, identified buildings and relevant
+  history may support mechanisms and practical adaptation under the current
+  scope. Earlier table rows record what was actually inspected/adapted/rejected;
+  this permission does not turn their unadopted examples into reviewed cases.
+  Upstream country/code digests are not fallback law.
 - Modeling, BIM/mesh geometry, Grasshopper/Dynamo/Revit implementation, solver,
   simulation, fabrication and deployment workflows remain outside architecture.
   Only the selected manual reasoning in C design-automation, space syntax and
@@ -169,7 +179,8 @@ This map does not certify exhaustive architectural-theory or legal coverage.
 
 No imported image assets are needed. The user chooses the deliverable and
 format; samples or diagrams are optional when useful. Any later model authoring
-requires a separate explicit modeling task and handoff.
+requires a separate explicitly authorized task; BIM/CAD-skill interaction,
+exchange/handoff protocols and returned-model checking are not developed here.
 
 ## Architecture library selected content
 

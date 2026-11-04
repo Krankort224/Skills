@@ -96,37 +96,26 @@ dimensions, not Russian minimum heights, and do not resolve building/fire height
 
 ## Fit rooms and operations inside the floor
 
-A room-area total is a demand, not a packing solution. First remove or reserve
-the actual envelope build-up, support, core, shafts and shared movement from the
-same floor boundary used for the comparison. Distinguish a whole floor, an
-internal planning envelope, finished room area and an operational furniture
-envelope. Formal area metrics require their governing measurement method; see
-[area accounting](program-and-space.md#how-can-areas-be-counted-once-and-compared).
+A room-area total is a demand, not a packing solution. Remove or reserve the
+actual envelope build-up, support, core, shafts and shared movement from the
+same floor boundary used for comparison. Distinguish whole floor, internal
+planning envelope, finished room area and operational furniture envelope;
+formal metrics use their governing [area method](program-and-space.md#how-can-areas-be-counted-once-and-compared).
 
-Fit shapes as well as areas. A 24 m² room 2 m wide is not equivalent to a 4 × 6 m
-room for a table, bed or workbench. Test the activity's real dimensions and
-access side, including chair pullback, cupboard opening, equipment movement,
-door swing and the space occupied by a person using each item. An L-shaped
-remainder may be valuable storage or a route but cannot be credited as an
-uninterrupted rectangular activity zone. A diagram filling every square metre
-with rooms has probably omitted walls or circulation.
+Use the canonical [room-fit method](planning-and-section.md#construct-a-room-that-can-be-used),
+including its occupied-state checks and nested clear-area/wall-reservation
+example, to construct each affected room. A dwelling uses its additional
+[actual household-use test](dwelling-fit.md#test-a-dwelling-through-its-actual-use).
+Do not maintain a second general furnishing/door/turning procedure here.
 
-Check the occupied plan in credible simultaneous states:
-
-- Arrivals wait while others pass; a queue must not consume the only route.
-- Doors open while furniture is in use; opposing swings and a door against a
-  chair, landing or cupboard need an actual geometric correction.
-- Deliveries and replacement equipment turn corners and cross thresholds; a
-  straight corridor width alone does not demonstrate the whole journey.
-- Staff supervise entrances while privacy is maintained; plot the sightline
-  from the actual seated or standing position around opaque obstructions.
-- A room remains accessible when the neighboring room is locked or occupied;
-  touching rooms and a route through another activity are different relations.
-
-Plot narrow points and turns, rather than checking a single representative
-width. State which operating envelopes are supplied, assumed or still unknown.
-Architecture can reject an overlap or improve a route from this evidence while
-leaving source-dependent clearance requirements open.
+At floor scale, place those checked room envelopes against the same frontage,
+support and common-route reservations. Reconcile the dimension chain and area
+ledger, test the connections to neighbors, and carry changed edges into the
+affected section/elevation or schedule. A room that fits alone may still block
+the common route or consume another room's frontage. Change an allowed boundary
+or report the fixed incompatibility; a label or area subtotal cannot resolve it.
+Keep assumed operating envelopes and unresolved source-dependent clearances
+explicit when using the fit result. Preserve unaffected accepted decisions.
 
 ## Choose sections that test the solution
 

@@ -1,0 +1,139 @@
+# Architectural questions, owners and coverage
+
+This map selects existing local knowledge; it does not replace its methods or
+require reading every subject. Start with the requested operation. If the
+question's method is already known, use its direct link without opening this
+map. Otherwise read only the matching subject section below, then the selected
+method through its next peer heading, including its conditions and example.
+An interface can require a second method; that is a reasoned dependency, not a
+mandatory operation-by-scale matrix. Project facts remain with their owner.
+
+## Contents
+
+- [Quarter and urban context](#quarter-and-urban-context)
+- [Site](#site)
+- [Building](#building)
+- [Spaces](#spaces)
+- [Systems and assemblies](#systems-and-assemblies)
+- [Cross-cutting methods](#cross-cutting-methods)
+- [Shared ownership and interfaces](#shared-ownership-and-interfaces)
+- [Interpret coverage and open gaps](#interpret-coverage-and-open-gaps)
+
+**Coverage terms:** **Method** means a locally usable procedure for the named
+bounded question, with conditions/checks; it is not completion of the domain.
+**Partial** means useful knowledge exists but the named breadth or decision
+procedure is missing. **Source-only** is a locator without a local method; it
+cannot support a design conclusion on its own. **Boundary** is excluded work or
+an external confirmation, not knowledge silently promised by this skill.
+
+## Quarter and urban context
+
+| Decision | Primary method home | Coverage and connection |
+| --- | --- | --- |
+| Relate a building edge to neighbors, public movement and outdoor rooms | [Site relationships](site-and-context.md#read-the-site-as-relationships), then [edge choice](site-and-context.md#choose-how-the-building-meets-its-edges) | Method for edge/permeability alternatives. Partial quarter knowledge: multiple plots/buildings, street/open-space hierarchy, activity mix and independently usable phases need deeper methods; a street-edge label is not a quarter plan. |
+| Connect home, shared court and service movement | [Court and servicing](housing-and-court.md#connect-home-court-and-servicing) | Method for housing-edge journeys and conflicts. Housing is an overlay on the common movement method, not a general urban-engineering or all-quarter typology. |
+| Distinguish public/private/service boundaries and independent hours | [Access zones and closure](program-and-space.md#how-do-people-and-goods-move-through-access-zones) | Method for actors, hours, full closure boundaries and shared support. Site/spatial methods add the exterior setting and the experience of the path. |
+| Discover territorial constraints | [Requirements selection](requirements.md#select-a-jurisdiction-module) | Method for selecting the actual jurisdiction and primary records. Regulatory source routes do not supply an urban-design method or certify municipal/legal completeness. |
+
+## Site
+
+| Decision | Primary method home | Coverage and connection |
+| --- | --- | --- |
+| Turn parcel, exposure and observed climate inputs into placement hypotheses | [Climate and parcel inputs](site-and-context.md#translate-climate-and-parcel-inputs-into-site-moves) | Method for comparing conditional site moves. Historical observations are not design loads; current project/survey/source inputs remain necessary. |
+| Compose arrival, threshold and occupied outdoor space | [Entrance and outdoor room](site-and-context.md#compose-entrance-threshold-and-outdoor-room), with [actual approach/sequence](spatial-composition.md#compose-for-the-actual-approach-and-sequence) when perception changes the decision | Method at the building/site edge. Partial breadth for site-wide landscape/activity allocation, seasonal operations and occupied-work phasing; no complete landscape or access certification. |
+| Fit grade, service access and an occupied section together | [Topography and servicing](site-and-context.md#let-topography-and-servicing-shape-the-section) | Method for a declared local section/route. Surveyed terrain, civil drainage and vehicle turning/engineering are not established by a diagram. |
+| Decide on below-ground use beside existing support | [Underground program](ground-and-basement.md#decide-what-actually-needs-to-be-below-ground), [neighbor dependencies](ground-and-basement.md#map-neighboring-ground-and-construction-dependencies) | Method for program/neighbor/construction choices. Geotechnical conditions and temporary/permanent engineering remain external confirmations. |
+
+## Building
+
+| Decision | Primary method home | Coverage and connection |
+| --- | --- | --- |
+| Choose a plan family from actual relationships | [Plan family](planning-and-section.md#choose-a-plan-family-from-the-relationships) | Method for organizing rooms, common routes, frontage and services. Add a typology only when it supplies a real activity/support relationship. |
+| Distribute activities across levels and preserve future change | [Program by floor/adaptation](program-and-space.md#how-should-the-program-occupy-floors-and-adapt-over-time), then [levels/cores/service depth](planning-and-section.md#organize-levels-cores-and-service-depth) | Program owns demand/distribution; planning owns physical floor/section fit. A room-area subtotal is not a packed building. |
+| Choose a housing access family and apartment aspects together | [Housing/access family](housing-and-court.md#choose-a-dwelling-and-access-family-together) | Method for the stated housing decisions; use furnished dwelling methods only when internal household use is affected. Partial typology breadth beyond the selected housing/public/mixed-use fragments. |
+| Keep directional support, core recipients and occupied levels coherent | [Frame action](frame-and-core.md#choose-frame-and-stability-action-with-the-plan), [continuous core](frame-and-core.md#carry-core-routes-and-support-through-every-level) | Method for architectural support/core organization. Equipment profiles, capacity, member/MEP sizing and approval are not implied. |
+| Coordinate program, mass, section and facade | [Partis](composition-and-style.md#how-can-different-partis-be-generated-and-compared), [section-led form](composition-and-style.md#how-can-section-generate-form), [elevation coordination](design-development.md#coordinate-elevations-without-copying-partitions) | Methods for coupled decisions. Use only the affected relationship for a local task; do not generate a whole building to explain one opening. |
+| Develop broader building types | [Activity demand](program-and-space.md#what-activities-and-capacity-must-the-program-accommodate) and the common plan/space methods | Partial: specific public/staff/service sequences, capacities, supporting inventories and operating modes beyond current examples need development. A normative typology record or coursework title is source/discovery information, not a complete typological method. |
+
+## Spaces
+
+| Decision | Primary method home | Coverage and connection |
+| --- | --- | --- |
+| Establish activities, concurrency and demand | [Activity and capacity program](program-and-space.md#what-activities-and-capacity-must-the-program-accommodate) | Method for declared scenarios and demand. Broader room/activity families and changeover/storage cases remain partial; source benchmark areas are not project requirements. |
+| Define once-only area accounting | [Area boundary and ledger](program-and-space.md#how-can-areas-be-counted-once-and-compared) | Shared method for the metric/boundary. Planning adds explicit wall/door/clear-fit construction; a formal legal metric requires its actual governing source. |
+| Construct a usable room and test occupied states | [Room and action envelopes](planning-and-section.md#construct-a-room-that-can-be-used) | Canonical general room-fit method, including its nested wall-reservation example and occupied-state checks. Development consumes the fit result at floor scale; it does not define a second room procedure. |
+| Furnish and operate a dwelling | [Actual dwelling use](dwelling-fit.md#test-a-dwelling-through-its-actual-use), with its [operating/source boundary](dwelling-fit.md#operating-conditions-and-source-boundary) | Specialized method and intact family/compact cases. Do not infer independently accessible furniture from occupied endpoints or turn illustrative dimensions into legal minima. |
+| Choose containment, overlap, adjacency or a linking space | [Spatial relationship](spatial-composition.md#choose-how-spaces-meet), [linking-space program/boundary](spatial-composition.md#give-the-linking-space-a-program-and-a-boundary) | Methods for a physical spatial relationship. Shared access/closure logic remains in program-and-space; adjacency does not establish an independently usable route. |
+| Decide whether movement bypasses, crosses or ends in an activity | [Path and occupied field](spatial-composition.md#place-movement-beside-through-or-into-a-space) | Method for path/space relationship and closed mode; use the complete shared-support journey, not a single gate. |
+| Test stair headroom and upper arrival | [Walking profile](stair-section.md#build-and-test-the-walking-profile) | Conditional section method. A plan opening or nominal rise/run is not a verified completed stair; preserve its actual section/arrival and source limits. |
+
+## Systems and assemblies
+
+| Decision | Primary method home | Coverage and connection |
+| --- | --- | --- |
+| Choose an envelope family and assign control functions | [System family](envelope-and-assemblies.md#choose-a-system-family), [function assignment](envelope-and-assemblies.md#assign-control-functions-before-drawing-layer-order) | Methods for architectural assembly intent. Use [connected junctions](envelope-and-assemblies.md#develop-four-connected-junctions) when a head/sill/base/roof transition matters; do not load every material method. |
+| Coordinate generic compatibility, movement and removal | [Compatibility and replaceability](envelope-and-assemblies.md#compatibility-movement-and-replaceability) | Canonical general assembly/removal procedure. Exposure mechanisms and life-cycle comparison boundaries remain in performance; timber/core retain their distinct tool, temporary-support and equipment journeys. |
+| Select roof support, insulation boundary or water path | [Spanning mechanism](roof-and-span.md#choose-a-spanning-mechanism-and-its-boundaries), [thermal boundary](roof-and-span.md#choose-where-the-thermal-boundary-follows-the-roof), [roof water](roof-and-span.md#resolve-roof-water-in-plan-and-at-the-junction) | Distinct methods: a drainage question does not require the entire support-family table. Roof capacity, loads, climate-dependent layer design and tested assemblies need separate evidence. |
+| Make wall roles, floor direction and openings agree | [Wall/floor organization](wall-floor-and-opening.md#make-wall-roles-and-floor-direction-agree), [floor void](wall-floor-and-opening.md#place-a-floor-opening-without-erasing-its-support), [wall opening](wall-floor-and-opening.md#develop-a-wall-opening-as-support-and-use) | Methods for support/use topology and distinct rough/frame/light/clear envelopes. No invented lintel/slab capacity. |
+| Develop a timber support/joint and its future access | [Support topology](timber-and-joints.md#choose-support-topology-and-visible-expression-together), [assembly/replacement](timber-and-joints.md#reserve-assembly-and-replacement-access) | Specialized methods with worked alternatives and negative cases; tool/fastener access and temporary support cannot be replaced by a generic maintenance pointer. |
+| Separate buried support, retention and water control | [Buried control functions](ground-and-basement.md#keep-support-soil-retention-and-water-control-distinct) | Method for architectural function separation and interfaces. Groundwater, excavation/support design and waterproofing performance are unverified without project/discipline evidence. |
+| Fit physical components, services and vertical equipment | [Pitch/component/clearance](frame-and-core.md#separate-coordination-pitch-component-and-occupied-clearance), [equipment/maintenance envelope](frame-and-core.md#fit-vertical-equipment-and-maintenance-with-the-core), [service reservations](performance-and-coordination.md#structure-and-services-reservations) | Methods for location/depth/continuous access reservations; supplier profiles and engineering properties remain external. |
+| Compare light/view/noise/ventilation and inclusive journeys | [Occupied daylight](performance-and-coordination.md#daylight-view-and-occupied-comfort), [acoustic/ventilation paths](performance-and-coordination.md#acoustic-paths-and-ventilation-choices), [inclusive/safety coordination](performance-and-coordination.md#inclusive-use-and-fire-spatial-coordination) | Qualitative spatial methods, not tested performance or compliance. Partial breadth for integrated operating modes and inclusive-use/adaptation scenarios; calculator ratios alone do not close those gaps. |
+| Adapt existing construction and compare cost over time | [Exposure/maintenance](performance-and-coordination.md#durability-and-maintenance-of-materials), [assembly compatibility](envelope-and-assemblies.md#compatibility-movement-and-replaceability), [consistent comparison](computational-design.md#compare-options-consistently) | Partial: a complete evidence-led retain/repair/replace and occupied-work strategy, and equivalent-function architectural quantity/operation/replacement comparison need deeper methods. Do not invent survey conclusions, prices, service lives or carbon factors. |
+
+## Cross-cutting methods
+
+| Decision | Primary home | Coverage and connection |
+| --- | --- | --- |
+| Define fixed, variable, derived and unknown inputs | [Decision frame](computational-design.md#frame-the-question) | Method; preserve project ownership and units. |
+| Compare options or test sensitivity | [Comparison](computational-design.md#compare-options-consistently), [sensitivity](computational-design.md#test-sensitivity-and-reproducibility) | Methods with consistent scenarios and hard-failure/unknown checks before preferences. An illustrative score is not a global optimum or empirical performance result. |
+| Bound a requested revision | [Baseline and affected neighbors](program-and-space.md#how-should-a-bounded-revision-or-comparison-be-judged), then [spatial correction](design-development.md#turn-critique-into-a-spatial-correction) | Scope discipline and physical correction are distinct connected methods; preserve the existing worked R0/R1/R2 reasoning. |
+| Reconcile dimensions and outputs | [Datums and dimension meanings](design-development.md#establish-datums-and-dimension-meanings), [coordinate a design issue](../operations/documentation.md#coordinate-a-design-issue) | Generic dimensions have one owner. Documentation is a selective suboperation for an already changed decision across supplied outputs, distinct from redesign. Completion breadth remains partial: requested-stage criteria, unresolved-item priority and broader schedules/specifications need development; no universal project package is implied. |
+| Translate a character/style or an identified reference | [Style into decisions](composition-and-style.md#how-can-a-requested-style-become-design-decisions), [material expression](composition-and-style.md#how-should-materials-express-and-support-the-design) | Method for traits/transfer; **partial** style/direction knowledge. A verified named-case corpus, classifications, variants and mechanism comparisons are not yet established. Listed/excluded source examples are source-only until actually inspected and adapted. |
+| Select jurisdiction and normative evidence | [Requirements](requirements.md#select-a-jurisdiction-module), then the selected [module](normative/index.md) and individual records | Method plus current Russian discovery profile. Unknown/unsupported jurisdiction never defaults to Russia. Records are source navigators, not full-text law or compliance findings. |
+| Use a supported calculator | [Exact calculator contracts](calculators.md) | Method only for the four supported preliminary calculations and stated schemas; 14 source adoption decisions stay there. No full simulation or engineering sizing. Read source only for debugging/modification. |
+| Present the requested result | [Presentation operation](../operations/presentation.md), [representation/inspection](visual-delivery.md#choose-a-useful-representation) | Method for user-selected text/artifact and honest precision. Export does not validate the design, and no preset format/drawing suite is required. |
+| Verify source identity or permissions | [Source/adaptation map](sources.md), [notices](../THIRD_PARTY_NOTICES.md) | Provenance owners, not substitute runtime methods. Moving an existing method does not imply a new chapter/figure review. |
+
+## Shared ownership and interfaces
+
+Ownership attaches to a question/section, not a directory name. Do not copy a
+general room procedure into every typology, a requirements procedure into every
+scale or an assembly sequence into every material. Local methods retain the
+critical conditions needed to use them; a short reminder is not a competing
+source of rules. Project brief, dimensions and accepted choices remain external
+project-owned facts, not entries in this map.
+
+- Activity/area/access/closure: program-and-space. Physical clear-room and wall
+  fit: planning-and-section. Furnished household application: dwelling-fit.
+- Envelope control functions/compatibility/replacement: envelope-and-assemblies.
+  Exposure/comfort and comparison boundaries: performance-and-coordination.
+  Material/support-specific causal reasoning stays in its actual leaf method.
+- Bounded-change scope: program-and-space. Design correction/propagation:
+  design-development. Issued-decision reconciliation: Documentation's suboperation.
+- Common option comparison: computational-design. Normative applicability:
+  requirements and the selected jurisdiction profile. Source facts/attribution:
+  sources and notices. Calculation schemas/method limits: calculators.
+
+For an interface, follow the changed physical dependency: an opening-head
+revision may require envelope control paths plus the wall-opening envelope;
+it does not automatically require stair, timber, basement and lift modules.
+Trace the actual location/datum and recipients. If a dependency is unknown,
+identify it and continue independent decisions without counting it as verified.
+
+## Interpret coverage and open gaps
+
+Use the bounded method named in a row, not the row's subject as a completion
+claim. Useful coverage still needs deeper quarter/program/typology breadth;
+existing-building, environmental/inclusive-operation and architectural cost
+methods; verified style/precedent cases; and requested-scope completion methods.
+Those gaps are specific knowledge work, not reasons to read every library file
+or execute a whole project as a test. An absent coursework brief is not a gate.
+
+Source-only, unreviewed and inaccessible material must remain distinguishable
+at the provenance owner. Missing critical evidence blocks its dependent claim;
+do not call it out of scope merely to declare completion. Conversely member/MEP
+sizing, legal certification, building/BIM/3D authoring, separate BIM/CAD-skill
+interaction/exchange protocols and returned-model checking are boundaries of
+this skill, not gaps to fill here. Full project use and its outcomes are separate
+work; small method/route checks establish only the behavior actually observed.

@@ -195,13 +195,11 @@ cost figures from a material name.
 | Glass/frame/seal | Seals, gaskets and insulating-glass units may need replacement before the frame/support | Reserve bead/pressure-plate access, lifting/removal route and suitable working space; an exterior-only repair may require site access unavailable after completion |
 | Roof membrane and concealed drain | Debris, puncture, seam or outlet failure can wet concealed construction | Make inspection, safe access, overflow and outlet cleaning possible; do not hide a critical outlet solely to simplify the elevation |
 
-Prefer separating components with different repair cycles where practicable.
-A screwed panel may be replaceable only after adjacent panels are removed; draw
-the actual sequence. A long-life stone panel can still be stranded by inaccessible
-shorter-life fixings or sealant. Provide movement at joints instead of assuming
-rigid continuity between unlike materials. Supplier confirmation must address
-substrate preparation, sealant/adhesive/membrane compatibility, corrosion,
-installation tolerances and repair access.
+Use [compatibility, movement and replaceability](envelope-and-assemblies.md#compatibility-movement-and-replaceability)
+for the shared component-interface and removal sequence. The exposure mechanisms
+above choose what must be protected; the assembly method tests whether its
+components and repair access actually work together. Material-specific tool,
+temporary-support and equipment journeys remain in their selected methods.
 
 For environmental or life-cycle comparisons establish product, source/date,
 functional unit, system boundary, installation waste, maintenance/replacement

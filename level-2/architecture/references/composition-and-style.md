@@ -353,6 +353,14 @@ would change the decision; otherwise state the working interpretation.
    assumptions about climate, scale and use; do not copy its dimensions or claim
    that its success automatically transfers.
 
+For an identified building or architect, distinguish supplied reference facts
+from verified source observations. Name what plan, section, image or text was
+actually inspected and what mechanism it supports; leave uncertain attribution
+or classification open. Relevant history can explain a spatial/material choice,
+but a name or resemblance does not establish its performance or transferability.
+The present trait/translation method is not a verified named-case corpus; see
+the [style coverage limit](knowledge-map.md#cross-cutting-methods).
+
 **Check:** Replace vague labels with observable decisions. A style direction is
 successful only if its spatial and practical consequences remain compatible with
 the brief, not merely because the facade resembles a reference.

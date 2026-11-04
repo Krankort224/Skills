@@ -237,6 +237,14 @@ access route. Where access depends on lifting equipment or exterior staging,
 reserve a real future route/standing location rather than assuming the original
 construction crane remains available.
 
+Prefer separating components with different repair cycles where practicable.
+A screwed panel may be replaceable only after adjacent panels are removed; draw
+the actual sequence. A long-life stone panel can still be stranded by inaccessible
+shorter-life fixings or sealant. Provide movement at joints instead of assuming
+rigid continuity between unlike materials. Supplier confirmation must address
+substrate preparation, sealant/adhesive/membrane compatibility, corrosion,
+installation tolerances and repair access.
+
 ## Test an envelope choice before retaining it
 
 For example, a hypothetical library considers a rendered insulated mass wall and
