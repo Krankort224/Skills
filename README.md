@@ -8,6 +8,12 @@ This repository is the source of truth for shared skills. Repository-local copie
 
 ```text
 Skills/
+├── level-0/
+│   └── arbitration/
+│       ├── SKILL.md
+│       └── references/
+│           ├── adjudication.md
+│           └── coordination.md
 ├── level-1/
 │   ├── context/
 │   │   ├── SKILL.md
@@ -92,11 +98,15 @@ Skills/
         └── THIRD_PARTY_NOTICES.md
 ```
 
-`level-1/` contains shared context and execution-management contracts. `level-2/` contains task-specific skills; `word/` is the self-contained `style-transfer` skill.
+`level-0/` contains arbitration for explicitly assigned dot coordination. `level-1/` contains shared context and execution-management contracts. `level-2/` contains task-specific skills; `word/` is the self-contained `style-transfer` skill.
 
 Skill levels classify responsibility; they are independent of subagent nesting levels. A level-2 skill may be used directly by root.
 
 ## Skills
+
+### Level 0
+
+[arbitration](level-0/arbitration/SKILL.md) supports dot's arbitration role between the user, execution, and independent review. Apply it when explicitly invoked or assigned. Supporting references cover adjudication and coordination; published availability does not guarantee automatic loading.
 
 ### Level 1
 
