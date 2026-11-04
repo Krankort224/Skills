@@ -10,6 +10,7 @@ Select the first violated invariant and a discriminating check; do not apply eve
 | AttributeError / unreadable property despite an API getter | CLR/DLR property binding and inheritance | Runtime declaration vs declaring base accessor; direct access vs explicit getter | Separate unresolved access failure from confirmed absence; use the bounded [property adapter](../assets/blocks/core/clr-property-access.md) and preserve getter errors |
 | Plausible but wrong magnitude | Units/specification | Typed quantity and conversions end to end | Explicit conversion; reject failures |
 | Unpredictable parameter selection | Names/scope | All matches and instance/type owner | BIP/GUID/exact binding; reject ambiguity |
+| Insulation workset differs from host; insulation parameter is read-only | Dependent workset propagation | Actual HostElementId, host/cover worksets, host editability and postcommit readback | [insulation-workset](../assets/blocks/mep/insulation-workset.md): batch temporary host switch, one regeneration, restore hosts, verify after outer Commit |
 | Huge/repeated network selection | Logical edges/unbounded scan | Domain/type/IsConnectedTo and trace | Physical snapshot, caps and boundaries |
 | Connectivity changes after regeneration | Stale handles | Reacquire owners/connectors | New handles for native readback |
 | Rotated link/view shifts coordinates | Wrong frame | Known points and all bbox corners | Explicit point/vector transforms |
