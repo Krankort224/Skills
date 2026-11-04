@@ -16,6 +16,13 @@ Use the design question, geometry/data, defined units/metrics, applicable source
 
 For confirmed Russian area/population comparisons, establish the [measurement and capacity basis](../references/normative/ru/applicability.md#choose-the-area-and-capacity-basis) or mark it unresolved before scoring affected criteria. Continue independent comparisons, preserving geometric and formal results separately; if the definition changes, recompute affected alternatives and expose any reversed ranking or fixed-brief failure.
 
+For an occupied environmental question, test the relevant [combined state and
+dependencies](../references/environmental-operating-modes.md#define-the-occupied-condition-and-its-dependencies)
+before crediting separate light, air, noise or control sketches together. For
+existing fabric, distinguish [observed evidence and conditional commitments](../references/existing-building-adaptation.md#turn-partial-survey-into-conditional-commitments).
+These are bounded spatial/evidence checks, not environmental simulation or a
+condition/capacity diagnosis.
+
 ## Result
 
 Report question, method, inputs/units/assumptions, execution status, usable results, interpretation and limitations. If execution is unavailable, provide a prepared bounded check and exact missing capability/data.

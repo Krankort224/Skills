@@ -14,6 +14,12 @@ Use the accepted baseline, controllable variables, fixed constraints, candidate 
 6. Use [sensitivity and reproducibility](../references/computational-design.md#test-sensitivity-and-reproducibility) when uncertainty or weights can change the recommendation. Check meaningful interacting assumptions; a few alternatives do not prove a global optimum.
 7. Recommend the feasible direction that best matches the stated priorities. Keep unaccepted changes as proposals and preserve the accepted baseline.
 
+For repair, replacement or cost-over-time choices, use [equivalent function and
+dated events](../references/operation-and-lifecycle.md#compare-equivalent-function-over-time)
+to supply comparable quantities and operating consequences to the common
+comparison method. Missing condition, event or price evidence may prevent a
+ranking while still allowing a supported spatial or quantity improvement.
+
 ## Result
 
 Return variables/constraints, comparable options, feasibility findings, trade-offs and a justified recommendation with uncertainty. Make the decision reversible and traceable to the project brief.

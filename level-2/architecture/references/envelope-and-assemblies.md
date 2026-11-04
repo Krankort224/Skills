@@ -247,6 +247,11 @@ installation tolerances and repair access.
 
 ## Test an envelope choice before retaining it
 
+When new work meets uncertain retained fabric, use the [actual retained-substrate
+method](existing-building-adaptation.md#connect-replacement-work-to-the-actual-retained-substrate)
+for evidence, intervention boundary and old/new transition. The shared control
+functions and generic compatibility/removal procedure remain above.
+
 For example, a hypothetical library considers a rendered insulated mass wall and
 a panel rainscreen on the same backing. The rendered option gives a continuous
 surface and less panel-joint articulation, but an exposed entrance base is prone

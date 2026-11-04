@@ -149,6 +149,11 @@ solution. A quiet court may improve opening conditions yet transmit conversation
 between rooms or provide little wind-driven flow. Test that alternative as a
 whole spatial system.
 
+When opening, shade, privacy, noise and air assumptions must hold simultaneously,
+use [coexisting occupied states](environmental-operating-modes.md#develop-states-that-can-actually-coexist).
+That method adds actual control/changeover/failure conditions to these causal
+paths; the table alone does not establish an operable combined state.
+
 ## Climate, exposure and envelope continuity
 
 Select a system family from [envelope and assemblies](envelope-and-assemblies.md)
@@ -207,6 +212,13 @@ and end-of-life assumptions. Compare like functions and scope. Architecture can
 reduce area/complexity and enable reuse/repair without claiming that a generic
 material is automatically lower impact. Expression and composition belong to
 [composition and style](composition-and-style.md).
+
+For the complete work/handling and temporary-use journey, select [maintenance
+operation](operation-and-lifecycle.md#trace-a-complete-maintenance-journey).
+For takeoff or cost decisions, use the relevant [quantity](operation-and-lifecycle.md#count-the-architectural-work)
+or [dated event](operation-and-lifecycle.md#compare-equivalent-function-over-time)
+method; exposure mechanisms remain here and generic component removal remains
+with the assembly owner.
 
 ## Structure and services reservations
 

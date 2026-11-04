@@ -12,6 +12,13 @@ Use the selected concept, requested design stage, accepted geometry/program, rel
   and, when sharing changes, the [resource timeline](../references/program-and-space.md#test-shared-use-as-an-occupancy-and-resource-timeline).
   Carry the resulting storage, access and room demand through the existing
   floor/section/elevation methods below; a different label is not a physical revision.
+- Existing fabric: use [conditional commitments](../references/existing-building-adaptation.md#turn-partial-survey-into-conditional-commitments)
+  and the affected intervention or old/new-interface method. Keep fabrication,
+  removal and occupation promises conditional on their actual evidence; do not
+  restart an unrelated whole-building survey for a bounded known change.
+- Coupled occupied conditions: use [coexisting states](../references/environmental-operating-modes.md#develop-states-that-can-actually-coexist)
+  when light/air/privacy/control or closure assumptions conflict. Refit the
+  physical interface and actual user operation, not only its nominal device label.
 - Section/system/junction revision: select the actual physical interface through
   its direct method or the matching [subject section](../references/knowledge-map.md#systems-and-assemblies).
   A roof-water question need not load the entire support-family method.

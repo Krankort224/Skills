@@ -82,8 +82,12 @@ an external confirmation, not knowledge silently promised by this skill.
 | Develop a timber support/joint and its future access | [Support topology](timber-and-joints.md#choose-support-topology-and-visible-expression-together), [assembly/replacement](timber-and-joints.md#reserve-assembly-and-replacement-access) | Specialized methods with worked alternatives and negative cases; tool/fastener access and temporary support cannot be replaced by a generic maintenance pointer. |
 | Separate buried support, retention and water control | [Buried control functions](ground-and-basement.md#keep-support-soil-retention-and-water-control-distinct) | Method for architectural function separation and interfaces. Groundwater, excavation/support design and waterproofing performance are unverified without project/discipline evidence. |
 | Fit physical components, services and vertical equipment | [Pitch/component/clearance](frame-and-core.md#separate-coordination-pitch-component-and-occupied-clearance), [equipment/maintenance envelope](frame-and-core.md#fit-vertical-equipment-and-maintenance-with-the-core), [service reservations](performance-and-coordination.md#structure-and-services-reservations) | Methods for location/depth/continuous access reservations; supplier profiles and engineering properties remain external. |
-| Compare light/view/noise/ventilation and inclusive journeys | [Occupied daylight](performance-and-coordination.md#daylight-view-and-occupied-comfort), [acoustic/ventilation paths](performance-and-coordination.md#acoustic-paths-and-ventilation-choices), [inclusive/safety coordination](performance-and-coordination.md#inclusive-use-and-fire-spatial-coordination) | Qualitative spatial methods, not tested performance or compliance. Partial breadth for integrated operating modes and inclusive-use/adaptation scenarios; calculator ratios alone do not close those gaps. |
-| Adapt existing construction and compare cost over time | [Exposure/maintenance](performance-and-coordination.md#durability-and-maintenance-of-materials), [assembly compatibility](envelope-and-assemblies.md#compatibility-movement-and-replaceability), [consistent comparison](computational-design.md#compare-options-consistently) | Partial: a complete evidence-led retain/repair/replace and occupied-work strategy, and equivalent-function architectural quantity/operation/replacement comparison need deeper methods. Do not invent survey conclusions, prices, service lives or carbon factors. |
+| Compare light/view/noise/ventilation and inclusive journeys | [Occupied daylight](performance-and-coordination.md#daylight-view-and-occupied-comfort), [acoustic/ventilation paths](performance-and-coordination.md#acoustic-paths-and-ventilation-choices), [inclusive/safety coordination](performance-and-coordination.md#inclusive-use-and-fire-spatial-coordination) | Causal spatial methods; add the integrated-state method only when the selected provisions must work together. Calculated geometry is not tested environmental performance or compliance. |
+| Make simultaneous occupied conditions, controls and failure modes coherent | [Occupied dependencies](environmental-operating-modes.md#define-the-occupied-condition-and-its-dependencies), [coexisting states](environmental-operating-modes.md#develop-states-that-can-actually-coexist), [usable changeover/failure](environmental-operating-modes.md#make-changeover-usable-and-failure-explicit) | Methods for deployment, closure, actual users, control authority/feedback and unavailable functions. Actual climate, air/acoustic/thermal properties, user trials and safety strategy remain project-specific evidence. |
+| Adapt existing construction with incomplete condition information | [Conditional commitments](existing-building-adaptation.md#turn-partial-survey-into-conditional-commitments), [retain/repair/replace](existing-building-adaptation.md#choose-retain-repair-or-replace-against-the-changed-use) | Methods connect observed/reported/inferred/unknown fabric to changed use and support/control functions. No survey diagnosis, capacity, hazard clearance or permission to cut is inferred. |
+| Connect new work to retained fabric and keep occupied stages credible | [Retained substrate](existing-building-adaptation.md#connect-replacement-work-to-the-actual-retained-substrate), [occupied intervention states](existing-building-adaptation.md#test-occupied-work-as-a-succession-of-usable-states) | Methods for old/new support/movement/control transitions and opening-up/removal/inspection/reoccupation dependencies. Generic layer/removal mechanisms stay with envelope; actual temporary works and occupation evidence remain external. |
+| Maintain, repair and replace without losing the continuing use | [Whole maintenance journey](operation-and-lifecycle.md#trace-a-complete-maintenance-journey), [intervention over time](operation-and-lifecycle.md#design-for-intervention-over-time) | Methods for worker/piece/waste journeys, disturbed neighbors, shared support and temporary operation. Exposure mechanisms remain in performance and removal sequence in envelope/material leaves. |
+| Quantify work and compare equivalent function over time | [Architectural takeoff](operation-and-lifecycle.md#count-the-architectural-work), [dated event comparison](operation-and-lifecycle.md#compare-equivalent-function-over-time) | Methods for area/length/piece/event scope, repeated access/disruption and uncertainty/break-even. Unknown prices, service lives, performance and carbon cannot become a ranking or generic material winner. Common eligibility/sensitivity remains computational-design. |
 
 ## Cross-cutting methods
 
@@ -113,6 +117,11 @@ project-owned facts, not entries in this map.
 - Envelope control functions/compatibility/replacement: envelope-and-assemblies.
   Exposure/comfort and comparison boundaries: performance-and-coordination.
   Material/support-specific causal reasoning stays in its actual leaf method.
+- Existing-fabric evidence/intervention commitments and old/new occupied work:
+  existing-building-adaptation. Simultaneous occupied states/control/fallback:
+  environmental-operating-modes. Whole maintenance journeys and architectural
+  quantity/event scope: operation-and-lifecycle. Each consumes the common
+  mechanisms above rather than replacing them.
 - Bounded-change scope: program-and-space. Design correction/propagation:
   design-development. Issued-decision reconciliation: Documentation's suboperation.
 - Common option comparison: computational-design. Normative applicability:
@@ -130,10 +139,12 @@ identify it and continue independent decisions without counting it as verified.
 Use the bounded method named in a row, not the row's subject as a completion
 claim. Quarter, program and the declared building families now have bounded
 operational methods; they do not establish every urban-design or building-type
-competency. Unexamined specialist typologies remain partial. Deeper methods are
-still needed for existing buildings, environmental/inclusive operation and
-architectural cost, alongside verified style/precedent cases and requested-scope
-completion methods.
+competency. Unexamined specialist typologies remain partial. Bounded methods now
+address existing-fabric evidence/intervention, integrated occupied environmental
+states, maintenance journeys and equivalent-function quantity/cost reasoning.
+Their actual condition, environmental, user, product and specialist inputs still
+need project-specific evidence. Verified style/precedent cases and deeper
+requested-scope completion methods remain future knowledge work.
 Those gaps are specific knowledge work, not reasons to read every library file
 or execute a whole project as a test. An absent coursework brief is not a gate.
 
