@@ -184,18 +184,15 @@ exchange/handoff protocols and returned-model checking are not developed here.
 
 ## Architecture library selected content
 
-The additional collection belongs to `Krankort224/Architecture`; its starting Git
-revision remains `5a0282b0d49792e7688dc2c1f26aca0a8bbcf54d`. Pass 4 recorded
-subsequent uncommitted owner changes on the original machine: the library guide
-at `knowledge/library/readme.md` and methods in `knowledge/methods/`, with
-`knowledge/sources/library-catalog.json` retaining inventory ownership. Those
-unpublished notes are unavailable in the Pass 6 cloud checkout at the pin;
-neither the older tree nor a new cloud note supersedes that owner work. Its before-reading catalog
+The additional collection's published repository snapshot is
+`Krankort224/Architecture` at `5a0282b0d49792e7688dc2c1f26aca0a8bbcf54d`;
+its source catalog is `knowledge/sources/library-catalog.json`. Its before-reading
 SHA-256 is `03f9074b82dd0afd776424bd64247bdb55ae440b8eedbe9bb17f253e8cfeb190`.
-Detailed reading/adaptation evidence for this increment is in the separate,
-new Architecture note `knowledge/library/skills-pass4-spatial-composition.md`.
-That working-tree note is not represented as already published at the pinned
-Git revision. Existing owner files were not rewritten to add this evidence.
+The records below retain source identity, actual reading extent, adaptation and
+exclusions. Working notes belong in the execution environment or
+[Skills Issue #7](https://github.com/Krankort224/Skills/issues/7), which records
+the reasons for the skill changes. No unpublished Architecture note is a required
+skill resource; the architectural methods remain in the local references.
 
 | Identified source and actual inspected extent | Treatment and local method |
 | --- | --- |
@@ -222,10 +219,7 @@ selected increment does not complete Pass 4's remaining books and materials.
 The next bounded reading addresses missing arch/tie/cable/surface reaction logic,
 ridge-board versus supported-ridge mechanisms, three-dimensional restraint and
 specific roof thermal-boundary alternatives. Existing beam/frame/room and
-four-junction knowledge is retained. The detailed source analysis, fresh
-approach/sequence probe and construction-task evidence are in the new local
-Architecture note `knowledge/library/skills-pass4-roof-and-span.md`, without
-editing the owner's dirty inventory or earlier note. Source files and the
+four-junction knowledge is retained. Source files and the
 before-reading knowledge snapshot were hash-checked on 2026-11-02.
 
 | Source identity and actual visual inspection | Adaptation and limits |
@@ -246,9 +240,7 @@ does not complete structural, moisture, thermal, drainage or fire design.
 
 This increment fills the remaining wall/floor/opening organization and
 dwelling/access/court coupling gaps, rather than repeating the general envelope,
-core or urban-edge methods. Before-reading snapshot and derived analysis are
-recorded in the new local Architecture note
-`knowledge/library/skills-pass4-walls-floors-and-housing.md`. Eleven candidate
+core or urban-edge methods. Eleven candidate
 PDFs and nine existing instruction/knowledge files were hash-checked before
 reading; all twenty snapshot hashes still matched after laptop reconnection on
 2026-11-03. Exact selected byte/hash identities follow the current canonical
@@ -276,11 +268,9 @@ original hypothetical geometry; no source plan, scan or full text is installed.
 
 The next bounded selection turns the family/compact reservations into actual
 furnished plans and tests the previously conditional stairB through section.
-The local Architecture note
-`knowledge/library/skills-pass4-dwelling-fit-and-stair-section.md` owns the
-derived source analysis and exact verification limits. Actual P10/P05 hashes
-were checked before processing; twelve source/knowledge hashes were recorded
-and preserved. No extra session was created for a context-isolation test.
+Actual P10/P05 hashes were checked before processing; twelve source/knowledge
+hashes were recorded and preserved. No extra session was created for a
+context-isolation test.
 
 | Selected source, same identity/bytes/hash as above | Actual new reading and adaptation |
 | --- | --- |
@@ -305,11 +295,10 @@ The next bounded reading addresses the previously metadata-only timber atlas:
 joint topology changes roof depth, assembly access, visible expression and
 replacement obligations. P05 supplies directional timber/moisture and exposed
 support distinctions; a selected house example tests the boundary between a
-material image, a structural diagram and an actual junction. The new local
-Architecture note `knowledge/library/skills-pass4-timber-and-joints.md` owns
-the derived research. Four source files and eleven existing instruction/knowledge
-files were hash-snapshotted before processing; all fifteen still matched before
-that new note. Existing owner files/indexes were not rewritten.
+material image, a structural diagram and an actual junction. Four source files
+and eleven existing instruction/knowledge files were hash-snapshotted before
+processing; all fifteen matched at the reported Pass 4 check. Existing owner
+files/indexes were not rewritten.
 
 | Identified source and actual reading | Adaptation and rejection |
 | --- | --- |
@@ -334,10 +323,8 @@ components, directional frame action and a lift/core profile extending beyond
 the passenger-floor plan. Full visual reading is selective, not completion of
 the courses. Seventeen source/instruction/knowledge hashes matched after the
 interrupted connection; no source or existing owner knowledge file was edited.
-Detailed analysis belongs to the new local Architecture note
-`knowledge/library/skills-pass4-ground-frame-and-core.md`; cross-iteration
-coverage is reconciled in `knowledge/library/skills-pass4-coverage.md` against
-the existing canonical catalog, without replacing it.
+The source records below retain the selected reading and coverage against the
+existing catalog without replacing it.
 
 All four title slides name **Гуриева Маргарита Александровна**, senior lecturer,
 SPbGASU Department of Architectural Construction. No publication/lecture date
@@ -375,13 +362,10 @@ does not establish an executed test or a context-reduction result.
 ### Programming and spatial-design continuation
 
 Pass 6 uses the accepted methods above as its baseline, not a claim of fresh
-reading of every earlier source. New detailed analyses belong to the separate
-Architecture notes `knowledge/library/skills-pass6-programming.md`,
-`skills-pass6-quarter.md` and `skills-pass6-typologies.md`. These are new local
-notes in the cloud checkout, not files published at the older pin or substitutes
-for the original machine's unpublished Pass 4 notes. The following records extend
-actual reading only at their stated pages; earlier frontmatter-only/unreviewed
-descriptions remain historical boundaries of their increments.
+reading of every earlier source. The following records extend actual reading
+only at their stated pages and retain the source-to-method adaptations and
+exclusions. Earlier frontmatter-only/unreviewed descriptions remain historical
+boundaries of their increments.
 
 | Source identity and newly inspected extent | Adaptation, local owner and exclusions |
 | --- | --- |
@@ -401,26 +385,11 @@ no source scan, plan, photograph, extensive quotation, full book or normative
 text is installed. Retain the [third-party notices](../THIRD_PARTY_NOTICES.md).
 The methods remain usable from local references without reopening the library.
 
-**Cloud source access, 2026-11-04.** Authorized public API inventory covered 43
-directories / 424 files without listing errors. Its 417 unique source paths
-represent 418 catalog records, plus 7 metadata files; 98 historical records
-are absent (97 nonvideo and one video). Of 405 nonvideo files / 1,761,229,053
-bytes eligible for copying, 403 / 1,760,665,688 bytes downloaded and matched API
-size/SHA-256. Independent local rehashing confirmed the successful copies.
-Two KP1 JPEGs, `ivanova/011-sheet-07.jpg` and `nezhilova/007-sheet-05.jpg`,
-remain unavailable with repeated HTTP 500, including refreshed API download
-links; together 563,365 bytes. Neither was used for these methods. All 19
-currently listed videos / 13,450,402,656 bytes were excluded before download;
-no video, audio or transcript content was analyzed. The historical 20-video
-boundary remains distinct from current availability. No library originals or
-catalog were modified. Detailed access/verification metadata belongs in the new
-Architecture note `knowledge/library/skills-pass6-source-access.md`.
-
-Full sources and raw evidence stay outside Git in the current cloud environment;
-their survival after environment termination/recreation is not guaranteed.
-Availability and hashes must be checked before future selective source work.
-This is a verified temporary copy, not a synchronization or durable-hosting claim.
-These observed source-access counts are not reviewed-content or competency counts.
+Selected nonvideo source sizes and hashes were rechecked against the catalog on
+2026-11-04; actual reading and exclusions remain bounded by the records above.
+Download inventories, access failures and temporary-workspace evidence are
+reported in [Issue #7](https://github.com/Krankort224/Skills/issues/7#issuecomment-6638290009),
+not treated as runtime prerequisites or competency counts.
 
 ## Russian normative evidence
 
