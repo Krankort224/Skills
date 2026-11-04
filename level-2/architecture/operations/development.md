@@ -8,6 +8,10 @@ Use the selected concept, requested design stage, accepted geometry/program, rel
 
 - Room/activity revision: use [room fit](../references/planning-and-section.md#construct-a-room-that-can-be-used)
   and only the affected door, frontage or neighbor; add dwelling use if relevant.
+- Changed use or shared support: select the affected [family relationship](../references/building-use-families.md#select-a-family-by-its-operating-commitments)
+  and, when sharing changes, the [resource timeline](../references/program-and-space.md#test-shared-use-as-an-occupancy-and-resource-timeline).
+  Carry the resulting storage, access and room demand through the existing
+  floor/section/elevation methods below; a different label is not a physical revision.
 - Section/system/junction revision: select the actual physical interface through
   its direct method or the matching [subject section](../references/knowledge-map.md#systems-and-assemblies).
   A roof-water question need not load the entire support-family method.

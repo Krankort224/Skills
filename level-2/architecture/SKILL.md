@@ -68,6 +68,7 @@ does not establish complete competency in its subject.
 | Question | Reference |
 | --- | --- |
 | Activities, concurrent demand and room program | [Program demand](references/program-and-space.md#what-activities-and-capacity-must-the-program-accommodate) |
+| Conflicting brief statements, shared staff or changeover between bookings | [Conditional demand](references/program-and-space.md#turn-an-incomplete-brief-into-testable-demand), [resource timeline](references/program-and-space.md#test-shared-use-as-an-occupancy-and-resource-timeline) |
 | Room fit, plan families, floors and cores | [Planning and section](references/planning-and-section.md) |
 | Furnished family/compact dwelling, door use or gross-to-clear deductions | [Dwelling fit](references/dwelling-fit.md#test-a-dwelling-through-its-actual-use) |
 | Bearing walls, floor direction, stair/shaft voids or window operation | [Wall/floor organization](references/wall-floor-and-opening.md#make-wall-roles-and-floor-direction-agree), [floor openings](references/wall-floor-and-opening.md#place-a-floor-opening-without-erasing-its-support), [wall openings](references/wall-floor-and-opening.md#develop-a-wall-opening-as-support-and-use) |
@@ -78,7 +79,9 @@ does not establish complete competency in its subject.
 | Floors, adaptability or a bounded layout change | [Vertical organization](references/program-and-space.md#how-should-the-program-occupy-floors-and-adapt-over-time), [local revision](references/program-and-space.md#how-should-a-bounded-revision-or-comparison-be-judged) |
 | Site, arrival and meaningfully different concepts | [Context](references/composition-and-style.md#how-should-the-design-respond-to-site-and-arrival), [partis](references/composition-and-style.md#how-can-different-partis-be-generated-and-compared) |
 | Urban edges, outdoor rooms, approach or sloping ground | [Site and context](references/site-and-context.md) |
+| Several plots/buildings, public-space hierarchy, independent phases or seasonal ground use | [Quarter and public space](references/quarter-and-public-space.md) |
 | Housing mix, apartment aspects, gallery/landing choice or home-to-court journeys | [Dwelling/access family](references/housing-and-court.md#choose-a-dwelling-and-access-family-together), [court and servicing](references/housing-and-court.md#connect-home-court-and-servicing) |
+| Learning clusters, public libraries, short-stay accommodation or mixed operators | [Use-family selection](references/building-use-families.md#select-a-family-by-its-operating-commitments), then the matching Contents method; [shared interface](references/building-use-families.md#combine-families-at-an-explicit-interface) when uses meet |
 | Mass/void, hierarchy, style or material expression | [Massing](references/composition-and-style.md#how-should-mass-and-void-organize-the-site-and-rooms), then the matching composition Contents question |
 | Light, view, noise and ventilation trade-offs | [Daylight](references/performance-and-coordination.md#daylight-view-and-occupied-comfort), [acoustic paths](references/performance-and-coordination.md#acoustic-paths-and-ventilation-choices) |
 | Envelope junctions, durability or engineering space | [Continuity](references/performance-and-coordination.md#climate-exposure-and-envelope-continuity), [maintenance](references/performance-and-coordination.md#durability-and-maintenance-of-materials), [reservations](references/performance-and-coordination.md#structure-and-services-reservations) |

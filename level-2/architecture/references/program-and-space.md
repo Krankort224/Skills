@@ -50,6 +50,66 @@ a period from the number present simultaneously.
    and a busy public route through the same room, for example, may require a
    different route, buffer or explicit compromise.
 
+### Turn an incomplete brief into testable demand
+
+Extract each consequential statement with its author, date and intended scope:
+who uses what, when, for which activity, and whether a number means people,
+places, sessions or rooms. Record an explicit requirement separately from a
+preference and a working assumption. A room name or a total membership does not
+answer these questions. Identify the person who can supply missing operating
+information and the person authorized to settle a conflict; they may differ.
+
+For competing statements, first check whether they describe different periods,
+user groups, boundaries or versions. If they still conflict, retain both with
+their sources and consequences; do not resolve them by averaging or treating the
+latest statement as automatically authoritative. Frame a decision as competing
+scenarios, naming what remains fixed and what each would change. Ask the decision
+owner to confirm the applicable brief; meanwhile develop only consequences that
+do not depend on that answer. If the missing input controls room quantity, access
+or a support space, mark that output conditional rather than omitting the demand.
+
+### Test shared use as an occupancy and resource timeline
+
+For a representative operating day and any materially different peak, place
+each activity on a common timeline. Include arrival, occupation, setup, clearing,
+cleaning and departure, and distinguish the room's unavailable interval from the
+period people are seated. At each overlap list people by location and the rooms,
+staff, equipment and support facilities they need. A group moving from a room to
+a foyer changes location; it is not a second group. Conversely, a single shared
+resource cannot serve simultaneous tasks unless its actual capacity and operation
+support both. Unknown durations, attendance or resource availability require
+alternative stated scenarios, not an assumed gap.
+
+At every transition identify what is displaced, its quantity and size, where it
+is held, who moves it, the route and time for moving it, and whether users can
+arrive while that work occurs. Storage needed during a session must be available
+then, not occupied by another use. Trace peak waiting, toilets, cleaning, waste,
+deliveries and staff support to accessible locations during each relevant period.
+Sharing is a conditional operational decision: record the booking interval,
+access arrangements and responsible operator, and test what happens if the
+assumed changeover or staff availability fails. Use the room-envelope method below
+to test the physical arrangement and the area ledger to count each reservation once.
+
+**Worked decision.** A brief asks for two groups of 20 in one meeting room, A
+from 09:00–10:00 and B from 10:00–11:00. The operator provisionally estimates
+15 minutes to clear A's tables and set up B; a separate activity also needs the
+same sole facilitator from 09:30–10:30. Before: one room and one facilitator
+are listed as shared because the sessions themselves do not overlap. After:
+the room is occupied for changeover until 10:15 and the facilitator is already
+committed. Hypothesis 1 moves B to 10:15 and assigns another qualified facilitator
+to one overlapping activity; hypothesis 2 keeps both advertised times and tests
+a second room and facilitator. Neither is accepted until the operator confirms
+the timing, staffing and authority to change bookings.
+
+For either hypothesis, identify where B waits while A leaves, where A's displaced
+tables are stored during B, and whether both groups need the same support at the
+transition. As a purely illustrative ledger, one 40 m² room plus one 12 m²
+storage room gives 52 m² of listed room area; a second 40 m² room would make
+92 m² on that same basis. These assumed areas exclude walls and shared routes;
+they are neither benchmarks nor complete floor totals. Test the actual table
+envelopes, storage access, door and waiting pocket, then add uncovered components
+on a common floor boundary. The room count and arithmetic do not prove a plan fits.
+
 ### Infer the missing program from the use
 
 A label such as library, workplace or housing names only part of the activity

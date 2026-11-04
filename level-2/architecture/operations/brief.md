@@ -13,6 +13,20 @@ Use the stated purpose/stage, users and activities, site/context, existing desig
 5. Check the program's internal consistency: area totals versus footprint/floors, contradictory adjacency, public/service conflicts and incompatible fixed constraints. Use [planning and section](../references/planning-and-section.md) to try an actual room/route/core arrangement, allowing for wall/support and vertical space. A room-area subtotal is not a packed building. Do not silently add area or relax a requirement.
 6. Ask only the missing questions that materially change the next decision. If useful work can proceed, deliver a bounded provisional brief and state assumptions instead of stopping at a questionnaire.
 
+When conflicting statements or missing operating inputs control the result, use
+[conditional demand](../references/program-and-space.md#turn-an-incomplete-brief-into-testable-demand)
+to retain their sources and conditional consequences. For shared rooms, staff or
+equipment, select the [resource timeline](../references/program-and-space.md#test-shared-use-as-an-occupancy-and-resource-timeline),
+including setup, departure and displaced storage; nonoverlapping bookings alone
+do not establish shared capacity. These deepen the relevant brief question;
+they do not require a complete new intake for a local revision.
+
+When an activity label hides support, use [family selection](../references/building-use-families.md#select-a-family-by-its-operating-commitments)
+and only the matching learning, library, short-stay or shared-domestic method.
+For several plots, use the affected [quarter method](../references/quarter-and-public-space.md)
+to connect demand to addresses, common ground and operating phases. Keep
+unexamined types and unresolved operator/site evidence explicit.
+
 For confirmed Russia, use [area and capacity selection](../references/normative/ru/applicability.md#choose-the-area-and-capacity-basis) when a formal metric is requested, and [use/works classification](../references/normative/ru/applicability.md#classify-use-and-works-before-applying-a-rule) when host, embedded activity or existing interventions change source selection. Retain the actual room/route proposal while dependent definitions remain unresolved.
 
 ## Result

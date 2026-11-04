@@ -185,11 +185,12 @@ exchange/handoff protocols and returned-model checking are not developed here.
 ## Architecture library selected content
 
 The additional collection belongs to `Krankort224/Architecture`; its starting Git
-revision remains `5a0282b0d49792e7688dc2c1f26aca0a8bbcf54d`. The actual local
-knowledge tree has subsequent, uncommitted owner changes: the current library
-guide is `knowledge/library/readme.md`, methods are in `knowledge/methods/`, and
-`knowledge/sources/library-catalog.json` remains the inventory owner. Do not
-resolve current paths from the older pin alone. Its before-reading catalog
+revision remains `5a0282b0d49792e7688dc2c1f26aca0a8bbcf54d`. Pass 4 recorded
+subsequent uncommitted owner changes on the original machine: the library guide
+at `knowledge/library/readme.md` and methods in `knowledge/methods/`, with
+`knowledge/sources/library-catalog.json` retaining inventory ownership. Those
+unpublished notes are unavailable in the Pass 6 cloud checkout at the pin;
+neither the older tree nor a new cloud note supersedes that owner work. Its before-reading catalog
 SHA-256 is `03f9074b82dd0afd776424bd64247bdb55ae440b8eedbe9bb17f253e8cfeb190`.
 Detailed reading/adaptation evidence for this increment is in the separate,
 new Architecture note `knowledge/library/skills-pass4-spatial-composition.md`.
@@ -370,6 +371,56 @@ package are added. Worked ground/frame/core studies use original hypothetical
 inputs and explicit completion limits. Baseline/candidate probes reuse existing
 agents and are not isolated-context experiments; prepared clean-context material
 does not establish an executed test or a context-reduction result.
+
+### Programming and spatial-design continuation
+
+Pass 6 uses the accepted methods above as its baseline, not a claim of fresh
+reading of every earlier source. New detailed analyses belong to the separate
+Architecture notes `knowledge/library/skills-pass6-programming.md`,
+`skills-pass6-quarter.md` and `skills-pass6-typologies.md`. These are new local
+notes in the cloud checkout, not files published at the older pin or substitutes
+for the original machine's unpublished Pass 4 notes. The following records extend
+actual reading only at their stated pages; earlier frontmatter-only/unreviewed
+descriptions remain historical boundaries of their increments.
+
+| Source identity and newly inspected extent | Adaptation, local owner and exclusions |
+| --- | --- |
+| **P09 / `ap9-p09`**, Neufert, Russian 2011 translation of the 39th revised edition. Path `literature/architecture/ap9-p09-neufert-part-01.pdf`; 206,430,178 bytes; SHA-256 `954f2ea8d822350f506c8aa53c4fd17be79f333027b566d12b805d146ab3d985`. File **4–6** inspected for edition/title/copyright; file **66–68 = printed 54–56** visually read, with each footer checked. Printed 54 discusses program/relationship development; 55 concerns architectural elements; 56 identifies program authorship, incompleteness, supplementation and approval. Later information-sheet pages were not read. | Develop [conditional demand](program-and-space.md#turn-an-incomplete-brief-into-testable-demand) and identify input/decision owners. The [resource timeline](program-and-space.md#test-shared-use-as-an-occupancy-and-resource-timeline), staffing/changeover counterexample and partial area ledger are original bounded synthesis, not a schedule or dimensions from the book. Existing Architecture `knowledge/design-process.md` and `area-calculations.md` inform iterative geometry/metric checks; their disputed coursework values are not adopted. No prescribed approval process, fees, dates or foreign technical rules are imported. |
+| **P10 / `ap9-p10`**, same identified Neufert edition. Path `literature/architecture/ap9-p10-neufert-part-02.pdf`; 199,594,174 bytes; SHA-256 `fcd65964e852dcebb9d912e297fe9c93dddbc0a83a7cd25bf48e531b797de388`. Content: file **43–45 = printed 183–185** (hotels), **63–67 = 203–207** (schools), **119–123 = 259–263** (libraries). Also visually screened **60–62 = 200–202** (childcare/play) and **124 = 264** (archives), excluded from the developed family perimeter. Each listed footer was checked. File 46–48 and 68–75 were rendered only, not read. | New [use families](building-use-families.md): ordinary learning/preparation, reader/collection cycle, short-stay/service and their [explicit mixed-use interfaces](building-use-families.md#combine-families-at-an-explicit-interface). Housing/shared amenities consume existing housing/dwelling methods. Original shelf-length loss and evening library/class/residential-entry corrections demonstrate support consequences; no source plan, shelf spacing, occupancy ratio, load, environmental value, DIN rule, hotel classification or specialist childcare/archive procedure is adopted. Named buildings on these leaves were not independently researched as precedent cases. |
+| **P11 / `ap9-p11`**, Neufert, part 3. Path `literature/architecture/ap9-p11-neufert-part-03.pdf`; 203,787,875 bytes; SHA-256 `0403dd9af384d906f6a411930f7c5d023cb8af3a00017c2a5d08c0d63cf722ab`. File **146–147 = printed 436–437** visually read: landscape composition and ground/earthwork interfaces. | Develop the relationship between built/open ground and level/working-territory dependencies in [quarter/public-space hierarchy](quarter-and-public-space.md#organize-several-plots-around-an-open-space-hierarchy), [operable phases](quarter-and-public-space.md#make-each-phase-an-operable-place) and [site season/section](quarter-and-public-space.md#test-the-whole-site-in-season-and-section). Soil tables, construction prescriptions, gradients and dimensions are not transferred. Phasing procedure is original architectural synthesis, not a book's technical commissioning method. |
+| **P12 / `ap9-p12`**, Neufert, part 4. Path `literature/architecture/ap9-p12-neufert-part-04.pdf`; 176,547,182 bytes; SHA-256 `ec52bf167ecef5154a4ef67c5b97054be5cdeadd05f1c87ef7bd4c616a118a0b`. File **3/printed 443, 4/444, 9/449, 11/451** visually read: changing planted edges, paths/ground sections, slopes/banks and seasonal water interfaces. Context **10/450 and 12/452** inspected but not used as independent method evidence. File 5,6,8,13,14 were rendered only. | [Season and section](quarter-and-public-space.md#test-the-whole-site-in-season-and-section) connects growth/establishment, maintenance/holding, continuous ground and seasonal closure. The original +100.00/+101.20 over 30 m illustration gives a 4% average rise/run diagnostic only. No species/soil prescription, ramp acceptance, hydrology, retaining/drainage solution, pond specification or microclimate prediction is adopted. |
+| **P15 / `ap9-p15`**, identified Ching source above; same 75,503,101 bytes and SHA-256 `d6f0d6f417409a862e859028a6d2402731f33bf83132cd7a95ca1de3fcb9ce1c`. New selected content: file **203/printed 188, 205/190, 213/198, 229/214, 235/220, 353/338**, each visually checked: organizing families and hierarchy. Additional visual context: file 6–8,190–191,202,218,224,230,342. File 206,214,219,225,231,236,343,354 were rendered only. | Compare center, spine, linked clusters and repeated framework as conditional [multi-plot organizations](quarter-and-public-space.md#organize-several-plots-around-an-open-space-hierarchy); distinguish common/local hierarchy and actual addresses. Ground balance, closure, phases and operating scenarios are original applications, not prescriptions proved by the book's examples. No source geometry, illustration, historical case claim or structural grid dimension is copied. |
+| **P23 / `ap9-p23`**, Gridnev quarter coursework example. Path `references/coursework-examples/kp3/gridnev.pdf`; 17,685,692 bytes; SHA-256 `aa1070217d70f0dd78ed43444459227ac5c63b1381b39d5eb8b05a208e395a0c`; 13 PDF pages. Visually inspected file **3–7 = sheets 2–6**: study boundary/base, proposal, ground use, illustrative catchment and movement layers. P18 file **4–8 / sheets 04–08** was additional visual context for the existing housing/court interface only; no new quantitative/performance claim from it. | Keep observed drawing layers separate from verified land/access rights. Adapt [ground balance](quarter-and-public-space.md#reconcile-ground-use-without-double-counting) and [continuous journeys](quarter-and-public-space.md#keep-public-private-and-service-journeys-continuous): a catchment circle is not an actual available route. Original 10,000 m² balance and 200 m² service transfer expose concurrent ground-use conflict. No example project, density, radius, capacity, vehicle turning or compliance result is transferred; the coursework is not a completed design by this skill. |
+
+Source footers were checked on selected rendered pages without assuming one
+offset across a book. All selected source sizes/hashes were checked against
+actual bytes and the catalog; rendering a candidate alone is not content review.
+New methods are original paraphrase/decision procedures with hypothetical
+examples. Books and coursework have no established open redistribution license;
+no source scan, plan, photograph, extensive quotation, full book or normative
+text is installed. Retain the [third-party notices](../THIRD_PARTY_NOTICES.md).
+The methods remain usable from local references without reopening the library.
+
+**Cloud source access, 2026-11-04.** Authorized public API inventory covered 43
+directories / 424 files without listing errors. Its 417 unique source paths
+represent 418 catalog records, plus 7 metadata files; 98 historical records
+are absent (97 nonvideo and one video). Of 405 nonvideo files / 1,761,229,053
+bytes eligible for copying, 403 / 1,760,665,688 bytes downloaded and matched API
+size/SHA-256. Independent local rehashing confirmed the successful copies.
+Two KP1 JPEGs, `ivanova/011-sheet-07.jpg` and `nezhilova/007-sheet-05.jpg`,
+remain unavailable with repeated HTTP 500, including refreshed API download
+links; together 563,365 bytes. Neither was used for these methods. All 19
+currently listed videos / 13,450,402,656 bytes were excluded before download;
+no video, audio or transcript content was analyzed. The historical 20-video
+boundary remains distinct from current availability. No library originals or
+catalog were modified. Detailed access/verification metadata belongs in the new
+Architecture note `knowledge/library/skills-pass6-source-access.md`.
+
+Full sources and raw evidence stay outside Git in the current cloud environment;
+their survival after environment termination/recreation is not guaranteed.
+Availability and hashes must be checked before future selective source work.
+This is a verified temporary copy, not a synchronization or durable-hosting claim.
+These observed source-access counts are not reviewed-content or competency counts.
 
 ## Russian normative evidence
 

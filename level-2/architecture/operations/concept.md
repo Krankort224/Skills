@@ -23,6 +23,13 @@ Use the available brief, site/context, accepted decisions, requested result and 
 6. Recommend a direction with explicit trade-offs. Preserve accepted decisions; label an unselected idea as an option, not a new baseline.
 7. When a specific presentation or artifact is requested, use [presentation](presentation.md) to complete that deliverable and inspect any produced artifact appropriately. Do not add a compulsory presentation step, image or file to an ordinary concept discussion.
 
+For a multi-building concept, select the relevant [quarter/public-space
+method](../references/quarter-and-public-space.md) for hierarchy, addresses,
+continuous journeys or independently usable phases. Preserve the actual parcel
+and ownership assumptions and test a proposed public link in its closed mode;
+a composed void or drawn connection does not establish public access. Add only
+the affected method for a local edge or entrance revision.
+
 ## Result
 
 Deliver a compact concept comparison, the reason for the preferred direction, a visual where requested, assumptions and the next design decisions. Do not claim feasibility or compliance that has not been checked.
