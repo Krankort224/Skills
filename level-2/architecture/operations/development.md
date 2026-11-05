@@ -19,6 +19,10 @@ Use the selected concept, requested design stage, accepted geometry/program, rel
 - Coupled occupied conditions: use [coexisting states](../references/environmental-operating-modes.md#develop-states-that-can-actually-coexist)
   when light/air/privacy/control or closure assumptions conflict. Refit the
   physical interface and actual user operation, not only its nominal device label.
+- Named style/reference revision: select the relevant [direction/case](../references/style-directions.md#select-by-the-design-question)
+  and [mechanism transfer](../references/style-and-precedent-methods.md#transfer-a-mechanism-into-a-changed-brief).
+  Carry the changed use/site/climate/scale/making into the affected plan, section
+  or interface; copying the source facade does not resolve those dependencies.
 - Section/system/junction revision: select the actual physical interface through
   its direct method or the matching [subject section](../references/knowledge-map.md#systems-and-assemblies).
   A roof-water question need not load the entire support-family method.

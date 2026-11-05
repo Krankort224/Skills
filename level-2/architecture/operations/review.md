@@ -16,6 +16,13 @@ Use the design material, any requested artifacts, brief and accepted baseline, r
 
 For a Russian revision, test [use/works](../references/normative/ru/applicability.md#classify-use-and-works-before-applying-a-rule) and the affected [route/level connections](../references/normative/ru/applicability.md#resolve-entrances-routes-and-mixed-uses). Check the actual drawing and source fragment independently: a scope trigger cannot pass an entrance or exit, and a coherent provisional plan cannot establish a legal work category or consent.
 
+When a style or named precedent supports the proposal, use
+[evidence before classification](../references/style-and-precedent-methods.md#read-an-object-before-classifying-it)
+to check attribution, actual inspected media and observation versus inference.
+Test the [transferred relationship](../references/style-and-precedent-methods.md#transfer-a-mechanism-into-a-changed-brief)
+against the new brief and its physical consequences; resemblance alone does not
+establish use, performance, source authenticity or image-reproduction permission.
+
 ## Result
 
 A clear review outcome with supported findings, retained strengths, corrections and unresolved evidence. Review does not accept/close an Issue or authorize model changes; those actions follow their applicable task contracts.

@@ -92,6 +92,7 @@ Skills/
     └── architecture/
         ├── SKILL.md
         ├── agents/
+        ├── assets/
         ├── operations/
         ├── references/
         ├── scripts/
@@ -214,6 +215,8 @@ Two standard-library Python 3 tools inspect `.dyn`/ZIP metadata, ports and wires
 #### architecture
 
 [architecture](level-2/architecture/SKILL.md) develops, revises, compares, presents and reviews architectural design. A compact root routes to eight selectable operations: brief, concept, development, analysis, optimization, presentation, documentation and review. Local knowledge covers activity-based programming and shared-resource timelines, room/plan/section families, multi-building public-space/phase relationships, selected learning/library/short-stay and shared-domestic methods, site and outdoor relationships, massing and facade composition, envelope systems/junctions, environmental and structural/services interfaces, and critique through concrete spatial revision. Conditional strategies and worked progressions support design without retrieving the upstream skill collections; their exact provenance stays in the source map. Comparison methods and visual delivery support those architectural decisions. An optional question/coverage map groups quarter/urban context, site, building, spaces and systems/assemblies, with shared owners and explicit partial knowledge; direct common-question routes remain available without reading the whole map. A selectively loaded Russian normative catalog adds federal/work-stage, territory/local/special-condition, typology, fire/accessibility and sanitary/environmental/interface routes. Records retain official evidence, applicability triggers, edition/status observations and explicit verification gaps; document discovery does not establish design compliance.
+
+Selected style profiles and authored building analyses add evidence-led classification and adaptation to another brief; general methods stay in references, while examples live in `assets/styles/<style>/<building>/` with inspected-source and reproduction limits.
 
 The user chooses the deliverable and format for each task. A concept may be textual when no artifact is requested; any requested artifact is produced and inspected appropriately. The skill has no automatic SVG default or mandatory SVG/raster pair. Building/BIM/3D/mesh authoring remains with a separately requested modeling workflow; the skill does not activate Revit/Dynamo or another Level-2 skill.
 

@@ -63,6 +63,23 @@ historical detail, extensive quotation or full course text is redistributed.
 Exact inspected file pages and exclusions are in
 [the ground/frame/core source map](references/sources.md#ground-frame-and-core-selections).
 
+Additional style/precedent work uses selected pages of the same Ching composition
+book and primary building-operator, museum, architect/archive, heritage and
+professional-institution sources identified in the individual case analyses and
+[source map](references/sources.md). P14's Russian2016 title/copyright/contents
+were inspected to identify *European Building Construction Illustrated*, Francis
+D. K. Ching and Mark Mulville, Wiley2014/RIPOL2016; it is not used as a style-history
+survey. Its copyright leaf reserves reproduction rights.
+
+No open reproduction license for book illustrations, website photographs, plans
+or sections is inferred from access, attribution or the software licenses below.
+Installed style assets are original authored analyses with precise source links,
+not redistributed source media or traced source drawings. Each case states what
+was actually inspected and its rights disposition. A later requested image use
+requires checking that particular asset's permission and credit. Original
+hypothetical transfer fragments are not reproductions or proven performance of
+the source buildings.
+
 ## Skills-Architects
 
 Source: https://github.com/Abhinavbwj/Skills-Architects/tree/30a0845dddcaebd765fc396059573d02e99c5b63
