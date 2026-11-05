@@ -295,17 +295,19 @@ This method evaluates their final consequences; it does not replace either owner
    the dependency nor what the architecture currently reserves.
 
 **Worked closed-revision failure and correction.** In R2, the two room envelopes
-fit and both doors reach the shared route. A final explanation still says the
-new separation provides acoustic privacy, while its only junction information
+fit and each room has a proposed direct door to the shared route. Independent
+access remains conditional on checking door operation, furniture and approaches.
+A final explanation still says the new separation provides acoustic privacy,
+while its only junction information
 ends at a common suspended ceiling. Matching room tags and a reconciled area
 total cannot close that physical dependency. Correct the architectural intent
 by continuing the separating boundary through the ceiling zone to its stated
 termination and identifying penetrations and access closures. Revise the affected
 ceiling/access arrangement if the new wall interrupts it. Then remove the
 unsupported performance conclusion: the boundary continuity is developed, but
-the actual assembly/junction property remains unverified. The completed spatial
-study can explain the two independent arrangements; a requested verification
-of acoustic performance is still incomplete.
+the actual assembly/junction property remains unverified. The spatial study can
+explain the proposed two-room arrangement with that access condition explicit;
+a requested verification of acoustic performance is still incomplete.
 
 If obtaining the relevant assembly evidence requires a thicker partition,
 recheck both rooms, the window-pier termination and door approaches before
