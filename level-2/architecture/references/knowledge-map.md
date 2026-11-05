@@ -96,7 +96,8 @@ an external confirmation, not knowledge silently promised by this skill.
 | Define fixed, variable, derived and unknown inputs | [Decision frame](computational-design.md#frame-the-question) | Method; preserve project ownership and units. |
 | Compare options or test sensitivity | [Comparison](computational-design.md#compare-options-consistently), [sensitivity](computational-design.md#test-sensitivity-and-reproducibility) | Methods with consistent scenarios and hard-failure/unknown checks before preferences. An illustrative score is not a global optimum or empirical performance result. |
 | Bound a requested revision | [Baseline and affected neighbors](program-and-space.md#how-should-a-bounded-revision-or-comparison-be-judged), then [spatial correction](design-development.md#turn-critique-into-a-spatial-correction) | Scope discipline and physical correction are distinct connected methods; preserve the existing worked R0/R1/R2 reasoning. |
-| Reconcile dimensions and outputs | [Datums and dimension meanings](design-development.md#establish-datums-and-dimension-meanings), [coordinate a design issue](../operations/documentation.md#coordinate-a-design-issue) | Generic dimensions have one owner. Documentation is a selective suboperation for an already changed decision across supplied outputs, distinct from redesign. Completion breadth remains partial: requested-stage criteria, unresolved-item priority and broader schedules/specifications need development; no universal project package is implied. |
+| Reconcile dimensions and outputs | [Datums and dimension meanings](design-development.md#establish-datums-and-dimension-meanings), [coordinate a design issue](../operations/documentation.md#coordinate-a-design-issue) | Dimension semantics and physical correction remain in design-development; Documentation owns issued-item reconciliation. Their results support completion, but matching identifiers alone does not establish a finished issue or product performance. |
+| Decide sufficient content, schedule consistency and readiness for a requested issue | [Requested-use evidence](design-completion.md#derive-evidence-for-the-requested-use), [schedule membership/meaning](design-completion.md#reconcile-schedule-membership-and-field-meaning), [precision](design-completion.md#match-precision-to-the-decision), [revision closure](design-completion.md#close-the-revision-and-state-remaining-conditions) | Bounded methods for actual intended use, type/occurrence and retired/split recipients, derived values, representation accuracy and consequence-based open items. No universal stage package, construction-ready claim or regulatory approval follows. |
 | Translate a character/style or an identified reference | [Style into decisions](composition-and-style.md#how-can-a-requested-style-become-design-decisions), [direction/case selector](style-directions.md#select-by-the-design-question), [mechanism transfer](style-and-precedent-methods.md#transfer-a-mechanism-into-a-changed-brief) | General trait method plus substantive profiles and authored cases within the explicitly declared Roman classical/Gothic/Renaissance/Baroque/Modernisme/modernist/organic/Brutalist perimeter. Actual attribution, inspected views and classification limits stay with each case; unrepresented traditions and uninspected drawings are not silently covered. |
 | Select jurisdiction and normative evidence | [Requirements](requirements.md#select-a-jurisdiction-module), then the selected [module](normative/index.md) and individual records | Method plus current Russian discovery profile. Unknown/unsupported jurisdiction never defaults to Russia. Records are source navigators, not full-text law or compliance findings. |
 | Use a supported calculator | [Exact calculator contracts](calculators.md) | Method only for the four supported preliminary calculations and stated schemas; 14 source adoption decisions stay there. No full simulation or engineering sizing. Read source only for debugging/modification. |
@@ -124,6 +125,10 @@ project-owned facts, not entries in this map.
   mechanisms above rather than replacing them.
 - Bounded-change scope: program-and-space. Design correction/propagation:
   design-development. Issued-decision reconciliation: Documentation's suboperation.
+- Requested-use sufficiency, schedule meaning, precision/readiness and final
+  revision closure: design-completion. Information/view construction and actual
+  representation inspection: visual-delivery. These consume the physical and
+  issued-item methods rather than duplicating their operative rules.
 - Common option comparison: computational-design. Normative applicability:
   requirements and the selected jurisdiction profile. Source facts/attribution:
   sources and notices. Calculation schemas/method limits: calculators.
@@ -145,8 +150,10 @@ states, maintenance journeys and equivalent-function quantity/cost reasoning.
 Their actual condition, environmental, user, product and specialist inputs still
 need project-specific evidence. The style selector declares the selected
 direction/object perimeter rather than world-history completeness; unrepresented
-traditions need new evidence. Deeper requested-scope completion methods remain
-future knowledge work.
+traditions need new evidence. Requested-scope completion methods now connect
+evidence sufficiency, schedules, precision and final revision closure. Their
+readiness judgment applies to the stated use and actual evidence, not every
+possible project stage, specialist typology or construction decision.
 Those gaps are specific knowledge work, not reasons to read every library file
 or execute a whole project as a test. An absent coursework brief is not a gate.
 

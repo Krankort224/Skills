@@ -14,6 +14,13 @@ Use the design material, any requested artifacts, brief and accepted baseline, r
 6. When supplied/performed calculations support the reviewed claim, inspect them against [their contract](../references/calculators.md). A qualitative local critique does not need the calculator contract merely to complete Review. Verify data, method limits, actual run evidence and interpretation. Require an independent check where a material decision depends on uncertain output.
 7. Return prioritized actionable findings with location, cause/consequence, evidence and a concrete architectural correction. When the task requests redesign, develop the corrected arrangement and recheck its knock-on effects; a finding list alone is insufficient. Preserve fixed decisions and distinguish blockers from refinements.
 
+For a requested final issue or completed revision, test [evidence adequacy](../references/design-completion.md#derive-evidence-for-the-requested-use)
+and [revision closure](../references/design-completion.md#close-the-revision-and-state-remaining-conditions)
+against its intended use. Reconstruct schedule membership and dimension/property
+meaning when those support the result; a stale retired row or unsupported rating
+can survive matching identifiers. State the consequence of each open item rather
+than treating all unknowns as either harmless or a reason to halt independent work.
+
 For a Russian revision, test [use/works](../references/normative/ru/applicability.md#classify-use-and-works-before-applying-a-rule) and the affected [route/level connections](../references/normative/ru/applicability.md#resolve-entrances-routes-and-mixed-uses). Check the actual drawing and source fragment independently: a scope trigger cannot pass an entrance or exit, and a coherent provisional plan cannot establish a legal work category or consent.
 
 When a style or named precedent supports the proposal, use

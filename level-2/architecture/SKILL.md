@@ -104,6 +104,7 @@ does not establish complete competency in its subject.
 | Fixed/variable inputs, constraints and comparison | [Decision frame](references/computational-design.md#frame-the-question), [consistent comparison](references/computational-design.md#compare-options-consistently) |
 | Uncertainty, data or a misleading spatial proxy | [Sensitivity](references/computational-design.md#test-sensitivity-and-reproducibility), [data screening](references/computational-design.md#screen-data-before-translating-it-into-design), [access graph](references/computational-design.md#check-adjacency-and-access-as-separate-relationships) |
 | Reconcile a design decision across requested outputs | [Design issue coordination](operations/documentation.md#coordinate-a-design-issue) |
+| Sufficient evidence for the requested issue, schedule changes, precision or final readiness | [Requested-use adequacy](references/design-completion.md#derive-evidence-for-the-requested-use), [schedule meaning](references/design-completion.md#reconcile-schedule-membership-and-field-meaning), [precision](references/design-completion.md#match-precision-to-the-decision), [revision closure](references/design-completion.md#close-the-revision-and-state-remaining-conditions) |
 | Develop plan/section/elevation, diagnose and redesign a weak proposal | [Design development](references/design-development.md) |
 | Requested presentation, optional visual techniques, inspection and precision | [Visual delivery](references/visual-delivery.md) |
 | Supported calculators, exact schemas, units and all 14 adoption decisions | [Calculators](references/calculators.md) |
@@ -132,8 +133,18 @@ python3 -m unittest discover -s scripts -p 'test_*.py'
 
 The standard-library Python 3 calculators provide explicit JSON-in/JSON-out preliminary area, solar-geometry, glazing-geometry and homogeneous-layer U-value calculations. Read [their contract](references/calculators.md) before selecting a method. No general daylight-factor prediction, thermal-bridge analysis, code compliance or full simulation is implied.
 
+The skill checker guards structure, links and bounded top-level table continuity;
+it is not a complete Markdown renderer or an architectural correctness check.
+Inspect a requested artifact in its actual delivered form through Presentation.
+
 ## Completion and integration
 
 Deliver the design decision, its reason, requested artifacts, relevant checks and unresolved limits. For revisions, identify changed decisions and their consequences. For comparisons, expose hard-constraint failures before preference rankings.
+
+When sufficiency for an intended issue or a completed revision is the question,
+select the relevant [completion method](references/design-completion.md#derive-evidence-for-the-requested-use).
+Deliverability for that stated use does not establish construction readiness,
+regulatory approval or reliability for every project. Preserve conditional
+conclusions and the exact remaining evidence needed by dependent decisions.
 
 On repository integration, retain internal resources, source revision and notices. Put project adaptations in existing project instructions/data while preserving shared contracts. Source authority, Issue lifecycle and delegation remain with their applicable Level-1 owners.

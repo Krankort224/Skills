@@ -36,6 +36,73 @@ def anchors(text):
     return result
 
 
+def orphan_table_rows(text):
+    """Find outer-pipe rows immediately following a blank-broken table.
+
+    This deliberately covers top-level tables and fenced code, not nested
+    Markdown containers or every legal GFM table spelling. A new header and
+    delimiter after the blank starts another table; ordinary prose ends the
+    inspection. Lines are reported one-based.
+    """
+    lines = text.splitlines()
+
+    def cells(line):
+        # Split on pipes preceded by an even number of backslashes.
+        parts, start = [], 0
+        for match in re.finditer(r'\|', line):
+            prefix = line[:match.start()]
+            if (len(prefix) - len(prefix.rstrip('\\'))) % 2 == 0:
+                parts.append(line[start:match.start()].strip())
+                start = match.end()
+        parts.append(line[start:].strip())
+        if parts and not parts[0]:
+            parts.pop(0)
+        if parts and not parts[-1]:
+            parts.pop()
+        return parts
+
+    def header_at(index):
+        if (index + 1 >= len(lines) or '|' not in lines[index]
+                or re.match(r'^(?: {4}|\s*>)', lines[index])):
+            return False
+        header, delimiter = cells(lines[index]), cells(lines[index + 1])
+        return (len(header) >= 2 and len(header) == len(delimiter)
+                and all(re.fullmatch(r':?-+:?', cell) for cell in delimiter))
+
+    def outer_row(line):
+        return bool(re.match(r'^ {0,3}\|', line) and re.search(r'(?<!\\)\|\s*$', line)
+                    and len(cells(line)) >= 2)
+
+    result, state, fence = [], 'outside', None
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        opening = re.match(r'^ {0,3}(`{3,}|~{3,})(.*)$', line)
+        if fence:
+            if re.fullmatch(r' {0,3}' + re.escape(fence[0]) +
+                            r'{' + str(len(fence)) + r',}\s*', line):
+                fence = None
+            index += 1
+            continue
+        if opening and (opening.group(1)[0] != '`' or '`' not in opening.group(2)):
+            fence, state = opening.group(1), 'outside'
+        elif header_at(index):
+            state = 'table'
+            index += 1  # delimiter
+        elif not line.strip():
+            if state == 'table':
+                state = 'after_blank'
+        elif (state == 'table' and '|' in line
+              and not re.match(r'^ {0,3}#{1,6}(?:\s|$)', line)):
+            pass
+        elif state == 'after_blank' and outer_row(line):
+            result.append(index + 1)
+        else:
+            state = 'outside'
+        index += 1
+    return result
+
+
 def validate(root=ROOT):
     root = Path(root).resolve()
     errors = []
@@ -63,6 +130,10 @@ def validate(root=ROOT):
             error(path.relative_to(root), 'unfinished placeholder')
         if len(text.splitlines()) > 100 and '## Contents' not in text:
             error(path.relative_to(root), 'long reference needs Contents')
+        for line in orphan_table_rows(text):
+            error(path.relative_to(root),
+                  f'line {line}: pipe row follows a blank-broken table; '
+                  'restore continuity or add a table header and delimiter')
         prose = re.sub(r'(?ms)^```.*?^```\s*$', '', text)
         for target in LINK.findall(prose) + DEFINITION.findall(prose):
             uri = urlsplit(target.strip('<>'))

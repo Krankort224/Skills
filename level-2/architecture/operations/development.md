@@ -29,6 +29,8 @@ Use the selected concept, requested design stage, accepted geometry/program, rel
 - Cross-output agreement: use [design issue coordination](documentation.md#coordinate-a-design-issue)
   when the changed decision must be reconciled across supplied outputs. It is
   distinct from correcting the spatial cause and is not a mandatory package.
+  When the request includes a completed issue, use [revision closure](../references/design-completion.md#close-the-revision-and-state-remaining-conditions)
+  to verify final recipients and remaining conditions after that correction.
 
 ## Procedure
 
