@@ -8,6 +8,12 @@
 - Read the `SKILL.md` files of the skills being applied; load supporting resources according to their instructions.
 - Keep contracts in the skills themselves; do not duplicate them in user or project instructions.
 
+## Skill composition
+
+- Skills describe reusable expertise, methods, and evidence requirements; their subject coverage does not restrict the agent's actions, tools, deliverables, or use of other compatible skills.
+- Apply the usage rules above when selecting skills. Once selected, combine their knowledge as appropriate to the user's task and the available tools, without treating missing material in one skill as a prohibition on the agent.
+- Distinguish limitations of a particular method or bundled tool from permissions and capabilities of the agent as a whole.
+
 ## Templates
 
 - Treat `*.template.*` files as adaptation starting points, not active project instructions or factual context.
