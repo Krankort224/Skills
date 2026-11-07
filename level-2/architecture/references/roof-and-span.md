@@ -217,5 +217,5 @@ are recorded in [sources](sources.md#architecture-library-selected-content).
 Drawings, force diagrams, code values, product details and span tables were not
 copied into this reference. ASK's erroneous shear-based explanation of arch
 thrust is not adopted; compression/force-path reasoning was checked against the
-two books. Source classifications aid judgment and do not override architecture's
-engineering/model-authoring boundary or the user's deliverable choice.
+two books. Source classifications aid judgment but cannot prove engineering
+capacity or override the user's deliverable choice.
