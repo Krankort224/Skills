@@ -1,6 +1,6 @@
 ---
 name: architecture
-description: Develop, revise, compare, present and review architectural designs through functional programs, spatial planning, composition, styles, materials and bounded analysis. Apply only when explicitly instructed to use architecture. Follow the user's chosen deliverable and format; concepts may be textual. Building/BIM/3D/mesh authoring belongs to a separate modeling task.
+description: Architectural design knowledge and methods for developing, revising, comparing, presenting and reviewing spaces and buildings through programs, spatial planning, composition, styles, materials, and evidence-based analysis. Apply these methods to the user's chosen task, format and available workflow.
 ---
 
 # Architecture
@@ -9,7 +9,6 @@ description: Develop, revise, compare, present and review architectural designs 
 
 - [Choose the operation](#choose-the-operation)
 - [Shared design contract](#shared-design-contract)
-- [Design and modeling boundary](#design-and-modeling-boundary)
 - [Load knowledge by question](#load-knowledge-by-question)
 - [Tools](#tools)
 - [Completion and integration](#completion-and-integration)
@@ -35,7 +34,7 @@ For a local revision, identify the accepted baseline, requested change and affec
 
 ## Shared design contract
 
-- Architecture owns purpose, program, composition, spatial organization, stylistic direction, facade/material intent and evaluation of design alternatives. Use numbers and 2D representations to support those decisions.
+- Architecture contributes methods for purpose, program, composition, spatial organization, stylistic direction, facade/material intent and evaluation of design alternatives. Apply them through the representations, models, data and tools relevant to the task.
 - Separate source-backed normative requirements, project requirements, provisional assumptions, performed calculation results and design judgments. Retain their source, units, applicability and uncertainty. An attractive image or successful tool exit does not prove a design decision correct.
 - Keep project facts, dimensions, site/software profiles, source selections and accepted decisions in the project's existing authoritative material. Reuse its structure; do not create a second project/process framework.
 - Establish jurisdiction and applicable source versions explicitly. Unknown jurisdiction allows independent design exploration, with normative conclusions left open. Do not infer location from language/currency or apply foreign-code defaults. Use [requirements](references/requirements.md) for applicability checks.
@@ -44,12 +43,6 @@ For a local revision, identify the accepted baseline, requested change and affec
 - Identify contradictions between fixed requirements before claiming a feasible solution. Show the incompatible constraints, continue independent work and identify the decision needed to proceed; do not silently relax a requirement.
 - Follow the user's chosen deliverable and format for the current task. A concept request may be answered in text when no artifact is requested. Do not impose an image/file, a preset format or an automatic SVG default. Produce and appropriately inspect any requested artifact; clarify an unspecified format only when necessary to complete that deliverable. Identify diagrammatic, dimensionally controlled and illustrative content honestly.
 - Choose checks proportional to uncertainty and stage. Distinguish a prepared method, an attempted execution and usable results. Report unavailable tools, invalid inputs or failed runs without inventing results.
-
-## Design and modeling boundary
-
-Do not create/edit a building, BIM, 3D or mesh model, implement Revit/Dynamo/Grasshopper workflows, or activate a modeling MCP through this skill. Architectural coordination may reserve spaces, state interfaces and compare design intent in 2D. It does not size engineering systems or establish a building model.
-
-Building-model authoring and any separately requested modeling work remain outside this skill. Do not invoke another Level-2 skill or develop BIM/CAD-skill interaction, exchange/handoff protocols or returned-model verification here. Architectural decisions and their requested 2D/text coordination remain in scope. A raster illustration is not a measured model.
 
 ## Load knowledge by question
 
