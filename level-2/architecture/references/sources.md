@@ -164,11 +164,11 @@ Their original source/adaptation decisions and worked examples remain applicable
   scope. Earlier table rows record what was actually inspected/adapted/rejected;
   this permission does not turn their unadopted examples into reviewed cases.
   Upstream country/code digests are not fallback law.
-- Modeling, BIM/mesh geometry, Grasshopper/Dynamo/Revit implementation, solver,
-  simulation, fabrication and deployment workflows remain outside architecture.
-  Only the selected manual reasoning in C design-automation, space syntax and
-  facade rationalization above is adapted; the remaining implementation is
-  excluded. No full review of every excluded software file is claimed.
+- This skill's local adaptation retains the selected reasoning in C design-automation,
+  space syntax and facade rationalization, without importing their software
+  implementations, modeling scripts or solver workflows. This inventory records
+  material adopted from upstream sources, not a limit on tools or competencies
+  the agent may use. No full review of unadopted software files is claimed.
 - Previously assessed calculator adoption remains owned by the
   [14 calculator decisions](calculators.md), including their exact methods,
   schemas, units and exclusions. No calculator implementation was added or
@@ -181,9 +181,10 @@ Their original source/adaptation decisions and worked examples remain applicable
   remains unreviewed.
 
 No imported image assets are needed. The user chooses the deliverable and
-format; samples or diagrams are optional when useful. Any later model authoring
-requires a separate explicitly authorized task; BIM/CAD-skill interaction,
-exchange/handoff protocols and returned-model checking are not developed here.
+format; samples or diagrams are optional when useful. Architectural reasoning
+can inform work in models, drawings and coordinated artifacts. This source map
+tracks what was incorporated into the skill, without prescribing other parts
+of the agent's workflow.
 
 ## Architecture library selected content
 
