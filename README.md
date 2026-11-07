@@ -218,12 +218,14 @@ Two standard-library Python 3 tools inspect `.dyn`/ZIP metadata, ports and wires
 
 Selected style profiles and authored building analyses add evidence-led classification and adaptation to another brief; general methods stay in references, while examples live in `assets/styles/<style>/<building>/` with inspected-source and reproduction limits. Requested-use completion methods add evidence sufficiency, schedule membership/meaning, decision precision and final revision closure; expanded representation methods connect each selected view to the decision and inspection it supports.
 
-The user chooses the deliverable and format for each task. A concept may be textual when no artifact is requested; any requested artifact is produced and inspected appropriately. The skill has no automatic SVG default or mandatory SVG/raster pair. Building/BIM/3D/mesh authoring remains with a separately requested modeling workflow; the skill does not activate Revit/Dynamo or another Level-2 skill.
+The user chooses the deliverable and format for each task. A concept may be textual when no artifact is requested; any requested artifact is produced and inspected appropriately. The skill has no automatic SVG default or mandatory SVG/raster pair. Its architectural reasoning can inform drawings, 3D and BIM work alongside other skills and tools when relevant to the task; it does not limit the agent's available workflows.
 
 Four bounded Python tools support preliminary area, apparent-solar geometry, glazing-geometry and homogeneous-layer U-value comparisons. They use explicit inputs/units and make no compliance or full-simulation claim. The source map accounts for both pinned upstream packs, all fourteen calculator decisions and retained MIT notices. Jurisdiction/source applicability, assumptions, numerical results and design judgments stay distinguishable.
 
 ## Principles
 
+- Describe each skill by the knowledge and methods it supplies, not by actions, formats, tools or other skills that it forbids an agent to use.
+- Combine compatible skill knowledge within the user's task, subject to applicable activation, authorization and tool contracts. A method's evidence limits are not general prohibitions on the agent.
 - Keep skills autonomous.
 - Keep shared instructions compact.
 - Load only the instructions relevant to the active task and execution contour.
