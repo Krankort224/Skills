@@ -125,7 +125,7 @@ for every task.
 
 For a proportioned drawing, an existing controlled SVG can be exported with an available renderer. Use a workflow appropriate to the requested output; SVG is not a required intermediate. For a requested illustrative image, use an appropriate available image-generation/rendering workflow and inspect the actual image. Keep fixed architectural facts in the workflow inputs and check the result against them.
 
-Label an illustration honestly; it cannot establish measured dimensions, performance or regulatory compliance. Do not turn an illustration into an authoritative plan by reading pixel distances. Do not construct a building/BIM/3D/mesh model as an intermediate under this skill.
+Label an illustration honestly; it cannot establish measured dimensions, performance or regulatory compliance. Do not turn an illustration into an authoritative plan by reading pixel distances. Check architectural facts against the actual geometry and evidence of whichever representations or models are used.
 
 If a tool is unavailable, identify the actual missing capability. Do not claim the image was created or viewed. Deliver completed independent work and a precise remaining action.
 
