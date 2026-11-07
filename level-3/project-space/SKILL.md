@@ -1,6 +1,6 @@
 ---
 name: project-space
-description: Use when explicitly asked to use project-space to manage projects, topics, task workflow, employees, access and materials in a Project-space shared store through filesystem and terminal tools.
+description: Manage projects, topics, task workflow, employees, access and materials in a Project-space shared store through filesystem and terminal tools. Use when Project-space is the established application context and the task concerns its supported operations.
 ---
 
 # Project-space

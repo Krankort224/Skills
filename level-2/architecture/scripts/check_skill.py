@@ -163,9 +163,9 @@ def validate(root=ROOT):
                 error('SKILL.md', 'operation route missing: ' + operation)
     interface = root / 'agents/openai.yaml'
     if interface.exists() and not re.search(
-            r'^\s+allow_implicit_invocation:\s+false\s*$',
+            r'^\s+allow_implicit_invocation:\s+true\s*$',
             interface.read_text(encoding='utf-8'), re.M):
-        error('agents/openai.yaml', 'explicit invocation policy missing')
+        error('agents/openai.yaml', 'semantic invocation policy missing')
     for path in sorted((root / 'scripts').glob('*.py')):
         try:
             compile(ast.parse(path.read_text(encoding='utf-8')), str(path), 'exec')

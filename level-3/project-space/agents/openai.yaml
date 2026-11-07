@@ -3,4 +3,4 @@ interface:
   short_description: "Manage Project-space tasks, topics, access and materials"
   default_prompt: "Use $project-space to manage the selected project's topics, tasks, participants and materials through files."
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

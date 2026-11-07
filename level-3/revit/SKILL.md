@@ -1,9 +1,9 @@
 ---
-name: revit-scripting
-description: Create, adapt and diagnose Revit API and Dynamo Python scripts, and borrow reusable logical blocks from code or .dyn graphs. Apply when explicitly instructed to use revit-scripting for Revit automation, MEP processing, parameters, geometry, views or annotations.
+name: revit
+description: Revit knowledge for creating, adapting and diagnosing Revit API and Dynamo Python scripts, and borrowing reusable logical blocks from code or .dyn graphs. Use when the task establishes Revit as the software context and concerns automation, MEP processing, parameters, geometry, views or annotations.
 ---
 
-# Revit Scripting
+# Revit
 
 ## Operations
 

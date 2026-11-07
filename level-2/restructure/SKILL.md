@@ -1,6 +1,6 @@
 ---
 name: restructure
-description: Use when explicitly asked for restructure. Inventory an existing repository or file accumulation, design its minimal target structure, migrate an agreed map, or review the result while preserving provenance, current state and important data.
+description: Inventory an existing repository or file accumulation, design its minimal target structure, migrate an agreed map, or review the result while preserving provenance, current state and important data. Use when the task concerns organizing or restructuring existing material, starting at the requested operation.
 ---
 
 # Restructure

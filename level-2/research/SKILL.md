@@ -1,6 +1,6 @@
 ---
 name: research
-description: Use when explicitly asked for research. Investigate scientific, engineering, numerical-model, and software-behavior questions; connect framing, related work, models, checks, and interpretation, starting at the current phase.
+description: Investigate scientific, engineering, numerical-model, and software-behavior questions; connect framing, related work, models, checks, and interpretation, starting at the current phase. Use when the task calls for evidence-producing investigation, hypothesis testing, or interpretation of research results.
 ---
 
 # Research

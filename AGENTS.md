@@ -2,10 +2,12 @@
 
 ## Usage
 
-- Read and follow the skills in `level-1/`.
-- Apply `level-0/arbitration/` when explicitly invoked or when dot is assigned the arbitration role.
-- Apply skills in `level-2/` and `level-3/` only when explicitly instructed to use a specific skill. Do not treat topical relevance as authorization to invoke it.
-- Read the `SKILL.md` files of the skills being applied; load supporting resources according to their instructions.
+- Level 0 is for dot or an explicitly assigned equivalent arbitration/coordinating role. Apply `level-0/arbitration/` within that assignment; being an ordinary root agent does not assign this role.
+- Every agent, including root and workers, reads and follows the `SKILL.md` contracts in `level-1/`. Load their operation references progressively; always-applicable contracts do not automatically start an Issue lifecycle, spawn agents, or execute unrelated procedures.
+- Select general and domain skills in `level-2/` when the requested task is semantically identifiable with their expertise. The user need not name the skill. Incidental vocabulary alone is not sufficient evidence of applicability.
+- Select software-specific skills in `level-3/` when the program/format context and requested operation are established by the task or authoritative project sources. Mere presence of a program in a project does not make every task a software operation.
+- Combine compatible skills when the task benefits from them. For material ambiguity, establish the missing scope rather than guessing; continue independently defined work.
+- Read selected `SKILL.md` files and load supporting resources according to their instructions. Selection supplies knowledge, not new authorization to install tools, modify data, publish, or broaden the task.
 - Keep contracts in the skills themselves; do not duplicate them in user or project instructions.
 
 ## Skill composition
@@ -27,4 +29,4 @@
 - Specify skill locations and level requirements in the destination `AGENTS.md`.
 - Record the source and revision of transferred skills.
 - Place project-specific instructions in supported adaptation points or project instructions, preserving shared contracts.
-- Preserve local adaptations when updating.
+- Preserve local adaptations when updating. Use the [migration map](docs/level-migration.md) when adopting changed source paths; do not bulk-update other repositories implicitly.

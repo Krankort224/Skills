@@ -10,108 +10,33 @@ This repository is the source of truth for shared skills. Repository-local copie
 Skills/
 ├── level-0/
 │   └── arbitration/
-│       ├── SKILL.md
-│       └── references/
-│           ├── adjudication.md
-│           └── coordination.md
 ├── level-1/
 │   ├── context/
-│   │   ├── SKILL.md
-│   │   └── references/
-│   │       └── repository.template.md
 │   ├── workflow/
-│   │   ├── SKILL.md
-│   │   ├── references/
-│   │   │   ├── definition.md
-│   │   │   ├── execution.md
-│   │   │   └── acceptance.md
-│   │   └── templates/
-│   │       ├── issue.md
-│   │       ├── execution-comment.md
-│   │       ├── handoff-comment.md
-│   │       └── accepted-summary.md
 │   └── delegation/
-│       └── SKILL.md
-└── level-2/
-    ├── restructure/
-    │   ├── SKILL.md
-    │   └── operations/
-    │       ├── inventory.md
-    │       ├── design.md
-    │       ├── migration.md
-    │       └── review.md
-    ├── research/
-    │   ├── SKILL.md
-    │   ├── operations/
-    │   │   ├── question.md
-    │   │   ├── literature.md
-    │   │   ├── model.md
-    │   │   ├── experiment.md
-    │   │   └── interpretation.md
-    │   └── templates/
-    │       ├── evidence-map.template.md
-    │       ├── experiment.template.md
-    │       └── result.template.md
+├── level-2/
+│   ├── architecture/
+│   ├── research/
+│   └── restructure/
+└── level-3/
+    ├── revit/
     ├── word/
-    │   ├── SKILL.md
-    │   ├── operations/
-    │   │   ├── borrowing.md
-    │   │   ├── adaptation.md
-    │   │   └── creation.md
-    │   ├── references/
-    │   ├── scripts/
-    │   └── assets/
-    │       ├── examples/
-    │       └── presets/
-    ├── project-space/
-    │   ├── SKILL.md
-    │   ├── agents/
-    │   ├── scripts/
-    │   └── references/
-    │       ├── configuration.md
-    │       ├── publication.md
-    │       ├── workflow.md
-    │       └── materials.md
-    ├── revit-scripting/
-    │   ├── SKILL.md
-    │   ├── agents/
-    │   ├── operations/
-    │   │   ├── creation.md
-    │   │   ├── adaptation.md
-    │   │   ├── diagnostics.md
-    │   │   └── borrowing.md
-    │   ├── references/
-    │   ├── scripts/
-    │   └── assets/
-    │       ├── examples/
-    │       └── blocks/
-    │           ├── catalog.md
-    │           ├── core/
-    │           ├── mep/
-    │           └── views/
-    └── architecture/
-        ├── SKILL.md
-        ├── agents/
-        ├── assets/
-        ├── operations/
-        ├── references/
-        ├── scripts/
-        └── THIRD_PARTY_NOTICES.md
+    └── project-space/
 ```
 
-`level-0/` contains arbitration for explicitly assigned dot coordination. `level-1/` contains shared context and execution-management contracts. `level-2/` contains task-specific skills; `word/` is the self-contained `style-transfer` skill.
+Each skill owns its `SKILL.md` and supporting resources. [AGENTS.md](AGENTS.md#usage) owns selection rules: Level 0 is for dot or an assigned equivalent; Level 1 applies to every agent; Level 2 supplies semantically selected general/domain expertise; Level 3 supplies expertise for an established software context and operation. `word/` retains the `style-transfer` skill identifier.
 
-Skill levels classify responsibility; they are independent of subagent nesting levels. A level-2 skill may be used directly by root.
+Skill levels classify responsibility, not complexity, instruction priority or subagent depth. Level 2 and Level 3 may be used directly by root or workers and may compose. Operation-specific loading remains progressive. The [migration map](docs/level-migration.md) records changed paths, preserved identities and adoption checks. The prospective `mep` skill is not created by this migration.
 
 ## Skills
 
 ### Level 0
 
-[arbitration](level-0/arbitration/SKILL.md) supports dot's arbitration role between the user, execution, and independent review. Apply it when explicitly invoked or assigned. Supporting references cover adjudication and coordination; published availability does not guarantee automatic loading.
+[arbitration](level-0/arbitration/SKILL.md) supports dot's arbitration role, or an explicitly assigned equivalent, between the user, execution, and independent review. Supporting references cover adjudication and coordination; published availability does not guarantee automatic loading. An ordinary root agent does not acquire this role from its tree position.
 
 ### Level 1
 
-These skills complement one another without requiring or invoking each other. Select them through the task and applicable instructions:
+Every agent reads these root contracts. They complement one another without requiring or invoking each other; load their supporting procedures only for applicable operations:
 
 - [context](level-1/context/SKILL.md) owns source authority and sufficient repository understanding;
 - [workflow](level-1/workflow/SKILL.md) owns the Issue contract, cycle lifecycle, and acceptance;
@@ -126,12 +51,14 @@ Loads the minimum authoritative repository context required for the current task
 The shared skill contains only general context-loading invariants. A repository-local installation may add:
 
 ```text
-level-1/context/references/repository.md
+skills/context/references/repository.md
 ```
 
 based on `repository.template.md`.
 
-The local map defines repository scopes, knowledge and contract owners, source authority, canonical update destinations, reading routes, and special-source access rules. Ownership boundaries belong in one shared table; contracts remain at their canonical sources. The shared skill resolves these roles and reports material gaps without modifying project knowledge.
+The local map defines repository scopes, knowledge ownership, source authority, canonical destinations, and reading routes. Ownership boundaries belong in one shared table; contracts remain at their canonical sources. The shared skill resolves these roles and reports material gaps without modifying project knowledge.
+
+Graph-aware context is planned in Issue #9 Pass B, after the Operations-hub pilot/publication contract is accepted; it is not implemented by the hierarchy migration.
 
 #### workflow
 
@@ -182,35 +109,13 @@ Cloud-hosted file contents must not be downloaded, materialized, synchronized, e
 
 #### research
 
-[research](level-2/research/SKILL.md) connects a research question, evidence-producing checks, interpretation, and the next iteration. Use it for scientific and engineering investigations, numerical models, and testable investigations of software behavior when explicitly requested.
+[research](level-2/research/SKILL.md) connects a research question, evidence-producing checks, interpretation, and the next iteration. Use it when the task calls for scientific and engineering investigations, numerical models, or testable investigations of software behavior.
 
 The lightweight root routes to adjacent procedures in `operations/`: question framing, literature and prior art, model formalization, experiment design/execution, and interpretation. Start at the current phase and load only the required procedures/forms. Root definitions own the independent `execution_status`, `evidence_quality` and `claim_status` vocabularies. Responsibilities follow operations and available capabilities across Chat, Work, and Codex.
 
 Keep exploratory and confirmatory work distinct. Separate implementation correctness, numerical credibility, and correspondence to the investigated system. Preserve negative/inconclusive results and plan deviations; distinguish execution failure from evidence against a hypothesis. Checks and run counts are proportional to the question and uncertainty, with explicit budget and stopping conditions.
 
 Three optional adaptation forms cover evidence mapping, experiment definition, and results. Reuse project documents and storage conventions rather than introducing another directory layout. Source authority, Issue lifecycle, and agent orchestration remain with Level 1 contracts.
-
-#### Word
-
-[style-transfer](level-2/word/SKILL.md) combines the Word lifecycle and a reusable formatting library. Common principles live in `SKILL.md`; three procedures stay together in `operations/`: borrow formatting from a Word example, adapt an existing Word document, and create a new one. Detailed design, composition, DOCX mechanics, toolkit and validation materials remain in `references/` and load as needed.
-
-Each preset is one Markdown file in `assets/presets/` containing all exact parameters and reusable rules. The starting library preserves technical, corporate, minimal and academic designs with their visual examples in `assets/examples/`. There is no parallel JSON preset representation. The Python toolkit reads the typed Markdown table and can extract a bounded draft from a DOCX. Captured drafts identify observed properties and base defaults and require review and visual reproduction before application.
-
-`document_tool.py show-preset` validates the complete preset and prints all narrative rules without the parameter table; repeatable `--section` and `--parameter` options provide exact views after initial review. Execution still loads all settings from the same MD. References load by applicable section, and script sources need reading only for debugging or modification.
-
-Markdown content interpretation is retained inside the creation operation. Tools provide supported building blocks; preserving arbitrary Word layouts, applying narrative composition rules and rendering still require the documented operation and environment capabilities. The former `document-creation` and `markdown-to-word` folders are consolidated into this one autonomous skill.
-
-#### project-space
-
-[project-space](level-2/project-space/SKILL.md) manages supported Project-space operations through files: workspace inspection, employee/access configuration, project properties, topics, task agreement/execution/review, material import and UNC references, replacement/deletion and task links. References cover causal replay, immutable publication and coordinated task/material drafts; an importable Windows helper supplies file transport without an MCP server or new application CLI. Product authorization and unsupported-operation boundaries remain in force. Level 2 invocation is explicit only; live deployment and employee data stay outside skill sources.
-
-#### revit-scripting
-
-[revit-scripting](level-2/revit-scripting/SKILL.md) creates, adapts and diagnoses Revit/Dynamo scripts, and extracts reusable logical blocks from source examples. The root routes to four adjacent procedures in `operations/`; runtime, Dynamo, transactions, parameters/units, geometry/connectors, annotations/references and error patterns load from `references/` as needed.
-
-Each logical block has one canonical Markdown file containing its contract, Python implementation, limits, verification and pinned provenance. The derived catalog navigates core, MEP and view helpers. Offline tests load those implementation fences directly. The initial library is reviewed with offline checks; native Revit behavior remains a separate verification requirement.
-
-Two standard-library Python 3 tools inspect `.dyn`/ZIP metadata, ports and wires without executing embedded code, and validate block contracts, dependencies, syntax and local links. Script/graph creation and native document writes still require the documented runtime, transaction ownership and readback contract.
 
 #### architecture
 
@@ -221,6 +126,34 @@ Selected style profiles and authored building analyses add evidence-led classifi
 The user chooses the deliverable and format for each task. A concept may be textual when no artifact is requested; any requested artifact is produced and inspected appropriately. The skill has no automatic SVG default or mandatory SVG/raster pair. Its architectural reasoning can inform drawings, 3D and BIM work alongside other skills and tools when relevant to the task; it does not limit the agent's available workflows.
 
 Four bounded Python tools support preliminary area, apparent-solar geometry, glazing-geometry and homogeneous-layer U-value comparisons. They use explicit inputs/units and make no compliance or full-simulation claim. The source map accounts for both pinned upstream packs, all fourteen calculator decisions and retained MIT notices. Jurisdiction/source applicability, assumptions, numerical results and design judgments stay distinguishable.
+
+### Level 3
+
+#### Word
+
+[style-transfer](level-3/word/SKILL.md) combines the Word lifecycle and a reusable formatting library. Common principles live in `SKILL.md`; three procedures stay together in `operations/`: borrow formatting from a Word example, adapt an existing Word document, and create a new one. Detailed design, composition, DOCX mechanics, toolkit and validation materials remain in `references/` and load as needed.
+
+Each preset is one Markdown file in `assets/presets/` containing all exact parameters and reusable rules. The starting library preserves technical, corporate, minimal and academic designs with their visual examples in `assets/examples/`. There is no parallel JSON preset representation. The Python toolkit reads the typed Markdown table and can extract a bounded draft from a DOCX. Captured drafts identify observed properties and base defaults and require review and visual reproduction before application.
+
+`document_tool.py show-preset` validates the complete preset and prints all narrative rules without the parameter table; repeatable `--section` and `--parameter` options provide exact views after initial review. Execution loads all parameters from the same MD. References load by applicable section, and script sources need reading only for debugging or modification.
+
+Markdown content interpretation is retained inside the creation operation. Tools provide supported building blocks; preserving arbitrary Word layouts, applying narrative composition rules and rendering still require the documented operation and environment capabilities. The former `document-creation` and `markdown-to-word` folders are consolidated into this one autonomous skill.
+
+#### project-space
+
+[project-space](level-3/project-space/SKILL.md) manages supported Project-space operations through files: workspace inspection, employee/access configuration, project properties, topics, task agreement/execution/review, material import and UNC references, replacement/deletion and task links. References cover causal replay, immutable publication and coordinated task/material drafts; an importable Windows helper supplies file transport without an MCP server or new application CLI. Product authorization and unsupported-operation boundaries remain in force. Select it for an established Project-space operation; live deployment and employee data stay outside skill sources.
+
+#### revit
+
+[revit](level-3/revit/SKILL.md) creates, adapts and diagnoses Revit/Dynamo scripts, and extracts reusable logical blocks from source examples. The root routes to four adjacent procedures in `operations/`; runtime, Dynamo, transactions, parameters/units, geometry/connectors, annotations/references and error patterns load from `references/` as needed. The rename preserves current coverage; it does not claim newly implemented Revit capabilities.
+
+Each logical block has one canonical Markdown file containing its contract, Python implementation, limits, verification and pinned provenance. The derived catalog navigates core, MEP and view helpers. Offline tests load those implementation fences directly. The initial library is reviewed with offline checks; native Revit behavior remains a separate verification requirement.
+
+Two standard-library Python 3 tools inspect `.dyn`/ZIP metadata, ports and wires without executing embedded code, and validate block contracts, dependencies, syntax and local links. Script/graph creation and native document writes still require the documented runtime, transaction ownership and readback contract.
+
+## External references
+
+[Ponytail](https://github.com/DietrichGebert/ponytail) is an external reference for reusing existing solutions and avoiding unnecessary implementation. This entry is a link, not an installed skill or plugin. It does not vendor upstream instructions, enable lifecycle hooks, import a personality, or change mandatory project rules.
 
 ## Principles
 
@@ -236,7 +169,7 @@ Four bounded Python tools support preliminary area, apparent-solar geometry, gla
 
 ## Repository-local adaptation
 
-Shared skills may be copied into a repository-local skill directory when project-specific adaptation is useful.
+Shared skills may be copied into a repository-local skill directory when project-specific adaptation is useful. Keep them directly under the destination `skills/`, without the source level hierarchy; retain provenance and local adaptations.
 
 For `context`, preserve the shared `SKILL.md` where possible and create a repository-specific `references/repository.md` from the provided template.
 
@@ -246,6 +179,6 @@ For `restructure`, keep the shared process generic and express project-specific 
 
 For `research`, preserve shared principles and operation procedures, and use the project's existing methodology and artifact locations. Adapt optional forms into completed project documents; source `*.template.*` files stay in Skills. Replace the local skill's adopted-artifacts subsection with links to those documents or a description of the local forms, so integration does not leave broken template links.
 
-For `revit-scripting`, keep runtime profiles, project parameter/family bindings, paths, tolerances and native evidence locations in the project's existing configuration/instructions. Preserve shared block contracts and record the adopted source revision; project-specific pipeline state remains with its owner.
+For `revit`, keep runtime profiles, project parameter/family bindings, paths, tolerances and native evidence locations in the project's existing configuration/instructions. Preserve shared block contracts and record the adopted source revision; project-specific pipeline state remains with its owner.
 
-For `architecture`, preserve shared operation and modeling boundaries. Keep the project brief, source applicability, area definitions, dimensions, accepted decisions and requested deliverable/format in existing project-owned material; retain source revision and license notices when transferring the skill.
+For `architecture`, preserve shared operations and evidence requirements. Keep the project brief, source applicability, area definitions, dimensions, accepted decisions and requested deliverable/format in existing project-owned material; retain source revision and license notices when transferring the skill.
