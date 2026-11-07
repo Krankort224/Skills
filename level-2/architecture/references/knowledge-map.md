@@ -23,8 +23,9 @@ mandatory operation-by-scale matrix. Project facts remain with their owner.
 bounded question, with conditions/checks; it is not completion of the domain.
 **Partial** means useful knowledge exists but the named breadth or decision
 procedure is missing. **Source-only** is a locator without a local method; it
-cannot support a design conclusion on its own. **Boundary** is excluded work or
-an external confirmation, not knowledge silently promised by this skill.
+cannot support a design conclusion on its own. **Boundary** identifies an
+additional evidence or validation dependency not supplied by the named method;
+it is not a restriction on the agent's actions.
 
 ## Quarter and urban context
 
@@ -159,8 +160,8 @@ or execute a whole project as a test. An absent coursework brief is not a gate.
 
 Source-only, unreviewed and inaccessible material must remain distinguishable
 at the provenance owner. Missing critical evidence blocks its dependent claim;
-do not call it out of scope merely to declare completion. Conversely member/MEP
-sizing, legal certification, building/BIM/3D authoring, separate BIM/CAD-skill
-interaction/exchange protocols and returned-model checking are boundaries of
-this skill, not gaps to fill here. Full project use and its outcomes are separate
-work; small method/route checks establish only the behavior actually observed.
+do not call it out of scope merely to declare completion. Architectural methods
+can inform engineering coordination, model authoring and model-based reviews,
+but they do not themselves prove member/MEP sizing, certification, model fidelity
+or exchange correctness. Support each such claim with its own evidence and checks;
+small method/route checks establish only the behavior actually observed.
