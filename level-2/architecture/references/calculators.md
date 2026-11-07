@@ -8,7 +8,7 @@
 - [Schemas, definitions and limitations](#schemas-definitions-and-limitations)
 - [Verification](#verification)
 
-These tools make preliminary numeric comparisons for architectural design. They do not certify compliance, predict occupied-building performance, size structure, or author a building, BIM, 3D, mesh, or fabrication model. Python 3 with the standard library is sufficient. No native daylight, thermal, structural, or solar simulation has been run.
+These bundled tools make preliminary numeric comparisons for architectural design. Their results do not certify compliance, predict occupied-building performance or establish structural sizing; they provide numeric outputs rather than geometric models. Python 3 with the standard library is sufficient. No native daylight, thermal, structural, or solar simulation has been run.
 
 ## Pinned sources and license
 
