@@ -2,8 +2,7 @@
 
 Use these methods to make bounded architectural choices inspectable. Select the
 method needed by the decision; this is not a compulsory sequence or output format.
-Work with descriptions, supplied dimensions, schedules and 2D relationships.
-No solver, simulation, model or tool-specific parametric workflow is implied.
+Apply the decision methods to the available architectural information, whether expressed as descriptions, dimensions, schedules, drawings, models or data. This reference supplies comparison methods, not a bundled solver or a required modeling environment.
 
 ## Contents
 
@@ -13,7 +12,7 @@ No solver, simulation, model or tool-specific parametric workflow is implied.
 - [Test sensitivity and reproducibility](#test-sensitivity-and-reproducibility)
 - [Screen data before translating it into design](#screen-data-before-translating-it-into-design)
 - [Check adjacency and access as separate relationships](#check-adjacency-and-access-as-separate-relationships)
-- [Boundary and handoff](#boundary-and-handoff)
+- [Evidence and implementation](#evidence-and-implementation)
 
 ## Frame the question
 
@@ -269,17 +268,15 @@ access. That supports B for independent access under that condition. It does not
 prove B has a shorter measured route or is quieter: check dimensions, permissions
 and acoustic separation independently.
 
-## Boundary and handoff
+## Evidence and implementation
 
-Use descriptive parameters and 2D diagrams here. Do not author building, BIM, 3D
-or mesh models, implement search/clustering algorithms, write tool scripts or
-activate modeling workflows. Eligible arithmetic follows the exact
-[calculator contract](calculators.md); no simulation, engineering sizing,
-fabrication validation or compliance conclusion follows from these methods.
-Separate model authoring, BIM/CAD-skill interaction, exchange/handoff protocols
-and returned-model verification are outside these methods. A separately requested
-task owns that work; no modeling tool or skill is invoked here. A prepared
-method is distinct from an executed result.
+These methods provide a decision frame, alternative generation and reviewable
+comparisons. Use them with the representations and computational workflows
+available for the task. For calculations using this skill's bundled tools, follow
+the exact [calculator contract](calculators.md). A numerical result, algorithm or
+model alone does not establish engineering sizing, fabrication feasibility or
+regulatory compliance; those claims require appropriate inputs and validation.
+Distinguish a prepared method, an attempted execution and a verified result.
 
 
 Provenance and selective reading extents are recorded in [sources](sources.md#comparison-and-data); use the methods here without opening upstream collections.
