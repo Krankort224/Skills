@@ -103,15 +103,10 @@ print(json.dumps({"profile": profile_status, "platform": sys.platform, "python":
 
 Re-run the bounded native probes after an environment/profile change; imports alone do not verify source locations or direction. Keep a failing candidate unchanged. `graphify install`, global upgrades, instruction/hook installation and ambient-provider use are not part of these recipes. In a Windows venv the corresponding executables are `Scripts/python.exe` and `Scripts/graphify.exe`.
 
-A standalone isolated installation and basic compatibility-probe invocation is:
+After the profile check, run the bounded compatibility probe with that same candidate and tool directory:
 
 ```sh
-uv venv /absolute/task-directory/graphify-venv --python 3.12
-uv pip install --python /absolute/task-directory/graphify-venv/bin/python \
-  -r /absolute/context/tools/graphify-requirements.txt
-/absolute/task-directory/graphify-venv/bin/graphify --version
-/absolute/task-directory/graphify-venv/bin/python \
-  /absolute/context/tools/probe_graphify.py
+"$CONTEXT_PY" "$CONTEXT_TOOLS/probe_graphify.py"
 ```
 
 ## Qualify an actual Windows host

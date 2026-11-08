@@ -1,4 +1,4 @@
-"""Exercise G native investigation/views with recorded F inputs, not new inference.
+"""Exercise native investigation/views with recorded maintenance inputs, not new inference.
 
 Builds fresh baseline/versioned mixed fixtures using the accepted maintenance
 probe, publishes only to local bare fixtures, and leaves shared artifacts alone.

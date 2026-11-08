@@ -27,9 +27,11 @@ Review dependency ownership rather than trusting declarations. Default dependenc
 
 Changed bytes invalidate ownership/dependencies for the whole source, even if another range changed. Follow referenced semantic-owner invalidation through to completion. Added, removed, excluded or renamed inputs and changed scope/configuration/tool/schema/prompt conservatively require full semantic reconsideration under the technical assessment. Rename is deletion plus addition with source-based identities re-read and re-keyed.
 
-Plan complete current source/range coverage before new extraction. Use the [build operation's semantic method](build.md#semantic-reading-and-reconciliation) for every new or invalidated range, through EOF for changed long sources. Preserve retained readers, receipts and original provenance as actual prior reading; do not fabricate a new read. Keep original payload identity distinct from newly serialized fragment bytes and record the verified prior commit/input/generation.
+Prepare one fresh structural-only baseline using the [build method](build.md#build-and-inspect-the-structural-baseline) before planning or dispatching semantic reading. Keep its exact artifact bytes fixed through planning, validation and mixed assembly.
 
-Build a fresh structural-only baseline using [build](build.md), then validate the complete retained/new semantic set against it and use its mixed assembly/interpretation steps. Do not mutate an old mixed graph as an invalidation shortcut: edge-only and zero-findings replacements must clear stale semantic claims. Reconsider community labels when evidence changes, even if members match.
+Plan complete current source/range coverage against that baseline before new extraction. Use the [build operation's semantic method](build.md#semantic-reading-and-reconciliation) for every new or invalidated range, through EOF for changed long sources. Preserve retained readers, receipts and original provenance as actual prior reading; do not fabricate a new read. Keep original payload identity distinct from newly serialized fragment bytes and record the verified prior commit/input/generation.
+
+Validate the complete retained/new semantic set against that same baseline and use the build method's mixed assembly/interpretation steps. Do not mutate an old mixed graph as an invalidation shortcut: edge-only and zero-findings replacements must clear stale semantic claims. Reconsider community labels when evidence changes, even if members match.
 
 ## Seal, publish and recover
 

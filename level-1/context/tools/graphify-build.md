@@ -242,7 +242,7 @@ assert source_identity() == inputs, "Sources changed while exporting; discard th
 print(json.dumps({"stage": str(stage), "selected_files": len(paths), "nodes": G.number_of_nodes(), "edges": G.number_of_edges(), "raw_edges": len(extraction["edges"]), "dangling_raw_edges": diagnostics["dangling_endpoint_edges"], "input_identity": identity, "semantic_extraction": "not performed"}, ensure_ascii=False))
 ```
 
-Output: a fresh structural trio under `CONTEXT_STAGE/artifacts`, source/exclusion/omission evidence and explicit origin/direction. Zero native model-token counters describe this structural recipe, not any agent reading elsewhere. File/node presence does not establish complete source or semantic coverage. The recipe checks exact known source/direction oracles and reload behavior; browser rendering remains separate.
+Output: a fresh structural trio under `CONTEXT_STAGE/artifacts`, source/exclusion/omission evidence and explicit origin/direction. Zero native model-token counters describe this structural recipe, not any agent reading elsewhere. File/node presence does not establish complete source or semantic coverage. The recipe checks serialization, endpoint/evidence and direction retention, counts and input identities. Inspect known caller/document relationships at their sources through the [build method](../operations/graphify/build.md#build-and-inspect-the-structural-baseline); corpus-specific oracles belong to that inspection and the fixture probes. Browser rendering remains separate.
 
 ## Bounded structural-stage query
 
@@ -314,7 +314,7 @@ Inputs: the same verified interpreter, root/tools and no-provider environment as
 
 With no `CONTEXT_LABELS`, the recipe validates/builds in memory and prints exact community members plus input/evidence identity without artifacts. Its second invocation accepts `CONTEXT_LABELS` pointing to `{input_identity, evidence_identity, communities:{"<id>":{members:["<sorted IDs>"],label:"<short source-backed name>",rationale:"<interpretation>"}}}`. Identity and exact member mismatch refuses reuse. Actual reading and naming of communities belongs to the [build operation](../operations/graphify/build.md); the recipe does not infer those names.
 
-The block embeds coverage, interpretation and portable maintenance state, annotates native HTML before sealing, and writes final sibling hashes into JSON last. Run without Python optimization so assertions remain active.
+The block embeds coverage, interpretation and portable maintenance state, annotates native HTML before sealing, and writes final sibling hashes into JSON last. Run without Python optimization so assertions remain active. Legacy serialized labels containing `D` denote the structural-only staging observation; their names are retained for report/metadata compatibility.
 
 ```python
 # context-semantic-assemble

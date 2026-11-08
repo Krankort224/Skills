@@ -112,9 +112,9 @@ def validate(root, plan_path, structural_path, fragment_paths):
     require(plan.get("structural_sha256") == structural_identity["sha256"], "Structural artifact identity mismatch")
     require(structural.get("directed") is True, "Structural graph must be directed")
     context = structural.get("graph", {}).get("context", {})
-    require(context.get("graphify_revision") == REVISION and context.get("semantic_extraction") == "not performed", "Expected verified D structural baseline")
+    require(context.get("graphify_revision") == REVISION and context.get("semantic_extraction") == "not performed", "Expected verified structural-only baseline")
     require(context.get("sources") == {n: s["sha256"] for n, s in sources.items()}, "Plan must cover the complete structural baseline source set")
-    # Fresh initial assembly: verify all D inputs/configuration, not just successful semantic returns.
+    # Fresh initial assembly: verify all structural inputs/configuration, not just successful semantic returns.
     ignored = ignored_predicate(root, extra_excludes=context["excludes"], gitignore=False)
     inventory, configs = set(), {}
     def walk_failure(error):
@@ -533,7 +533,7 @@ def assess_reuse(previous, current_snapshot, current_profile, *, confirmed_remov
     confirmation is {path:{kind:'coordinator'|'git', evidence:nonempty text,
     previous_sha256:...}}. A git label is not proof; the coordinator must verify it.
     Returned reusable payloads retain ORIGINAL reader/receipt provenance; they
-    must be revalidated by E against a new plan/native D baseline before assembly.
+    must pass semantic evidence validation against a new plan/fresh structural baseline before assembly.
     """
     confirmed_removals = confirmed_removals or {}
     def result(status, reasons, invalidated=(), reusable=None, required=()):

@@ -12,6 +12,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import sys
 import tempfile
 
@@ -27,6 +28,74 @@ code = matches[0]
 def dump(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+
+
+def check_profile_contracts(base, state):
+    """Both canonical semantic owners must independently govern valid reuse."""
+    spec = importlib.util.spec_from_file_location("profile_validator", TOOLS / "validate_context_fragments.py")
+    validator = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(validator)
+    tools = base / "profile-controls/context/tools"
+    tools.mkdir(parents=True)
+    owners = (tools.parent / "operations/graphify/build.md", tools / "graphify-build.md")
+    for source, target in ((TOOLS.parent / "operations/graphify/build.md", owners[0]),
+                           (TOOLS / "graphify-build.md", owners[1]),
+                           (TOOLS / "graphify-requirements.txt", tools / "graphify-requirements.txt"),
+                           (TOOLS / "validate_context_fragments.py", tools / "validate_context_fragments.py")):
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
+    expected = validator.profile(TOOLS)
+    assert validator.profile(tools) == validator.profile(tools) == expected == state["profile"]
+    def assessment(profile):
+        return validator.assess_reuse(state, state["snapshot"], profile)
+    assert assessment(expected)["status"] == "noop"
+    start, end = validator.CONTRACT_START, validator.CONTRACT_END
+    bodies = [path.read_bytes().decode("utf-8").split(start)[1].split(end)[0] for path in owners]
+    assert expected["extraction_contract_sha256"] == hashlib.sha256(validator._canonical(bodies)).hexdigest()
+    assert expected["extraction_contract_sha256"] != hashlib.sha256(validator._canonical(bodies[::-1])).hexdigest()
+    refusals = []
+    for index, path in enumerate(owners):
+        original = path.read_bytes()
+        text = original.decode("utf-8")
+        path.write_text(text.replace(end, "\nTest-only substantive semantic instruction.\n" + end), encoding="utf-8", newline="\n")
+        changed = validator.profile(tools)
+        assert {key for key in expected if expected[key] != changed[key]} == {"extraction_contract_sha256"}
+        result = assessment(changed)
+        assert result["status"] == "reextract_all" and result["reasons"] == ["Profile/scope/configuration/inventory policy changed"]
+        path.write_text(text + "\n<!-- presentation-only test note -->\n", encoding="utf-8", newline="\n")
+        assert validator.profile(tools) == expected and assessment(validator.profile(tools))["status"] == "noop"
+        damaged = {
+            "missing-start": text.replace(start, ""),
+            "missing-end": text.replace(end, ""),
+            "duplicate-start": text.replace(start, start + start),
+            "duplicate-end": text.replace(end, end + end),
+            "reversed": text.replace(start, "CONTRACT_SWAP").replace(end, start).replace("CONTRACT_SWAP", end),
+            "empty": text[:text.index(start) + len(start)] + "\n" + text[text.index(end):],
+            "missing-owner": None,
+        }
+        for name, replacement in damaged.items():
+            try:
+                if replacement is None:
+                    path.unlink()
+                else:
+                    path.write_text(replacement, encoding="utf-8", newline="\n")
+                try:
+                    validator.profile(tools)
+                except (ValueError, OSError) as error:
+                    assert replacement is None or "extraction contract" in str(error).lower(), str(error)
+                else:
+                    raise AssertionError((index, name, "Damaged contract accepted"))
+                refusals.append(f"owner-{index + 1}:{name}")
+            finally:
+                path.write_bytes(original)
+    implementation = tools / "validate_context_fragments.py"
+    implementation.write_bytes(implementation.read_bytes() + b"\n# Test-only validator identity change.\n")
+    changed = validator.profile(tools)
+    assert {key for key in expected if expected[key] != changed[key]} == {"validator_sha256"}
+    assert assessment(changed)["status"] == "reextract_all"
+    return {"unchanged_noop": True, "order": ["operational-method", "technical-protocol"],
+            "each_contract_independently_invalidates": True, "validator_independently_invalidates": True,
+            "outside_marker_edit_preserves_noop": True, "refusals": refusals}
 
 
 def main():
@@ -192,7 +261,9 @@ for edge in original["links"]:
         dump(fragment_path, empty)
         probe.execute(check_code, dict(env,CHECK_PLAN=str(plan_path),CHECK_FRAGMENT=str(fragment_path)))
         assert probe.snapshot(root) == initial_sources
-        print(json.dumps({"status":"PASS","recorded_model_replay_only":True,"trials":totals,"negative_checks":checks,"complete_empty_accounting":"accepted, not claimed as source truth","unknown_usage_preserved":True,"unchanged_AST_refresh_preserves_semantics":True,"network_or_provider_attempts":len(probe.ATTEMPTS)},ensure_ascii=False,indent=2))
+        state = json.loads((Path(totals["parallel"]["stage"]) / "graph.json").read_text(encoding="utf-8"))["graph"]["context"]["maintenance"]
+        profile_checks = check_profile_contracts(base, state)
+        print(json.dumps({"status":"PASS","recorded_model_replay_only":True,"trials":totals,"negative_checks":checks,"profile_contract_checks":profile_checks,"complete_empty_accounting":"accepted, not claimed as source truth","unknown_usage_preserved":True,"unchanged_AST_refresh_preserves_semantics":True,"network_or_provider_attempts":len(probe.ATTEMPTS)},ensure_ascii=False,indent=2))
 
 
 if __name__ == "__main__":
