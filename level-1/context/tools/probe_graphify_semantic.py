@@ -18,32 +18,32 @@ TOOLS = Path(__file__).resolve().parent
 spec = importlib.util.spec_from_file_location("structural_probe", TOOLS / "probe_graphify_structure.py")
 probe = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(probe)
-code = re.search(r"```python\n(# context-semantic-assemble\n.*?)\n```", (TOOLS / "graphify.md").read_text(), re.S).group(1)
+code = re.search(r"```python\n(# context-semantic-assemble\n.*?)\n```", (TOOLS / "graphify.md").read_text(encoding="utf-8"), re.S).group(1)
 
 
 def dump(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 
 def main():
     if not __debug__:
         raise SystemExit("Run without -O")
-    data = json.loads((TOOLS / "graphify-semantic-cases.json").read_text())
+    data = json.loads((TOOLS / "graphify-semantic-cases.json").read_text(encoding="utf-8"))
     with tempfile.TemporaryDirectory(prefix="context-semantic-") as temporary:
         base = Path(temporary)
         root = base / "corpus"
         for name, body in data["files"].items():
             path = root / name
             path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text(body, encoding="utf-8")
+            path.write_text(body, encoding="utf-8", newline="\n")
         initial_sources = probe.snapshot(root)
         env = {k: v for k, v in os.environ.items() if not any(word in k.upper() for word in ("API_KEY", "TOKEN", "SECRET", "PASSWORD", "PROVIDER", "AWS_", "GOOGLE_", "GEMINI_", "OPENAI_", "ANTHROPIC_"))}
         env.update(CONTEXT_ROOT=str(root), CONTEXT_TOOLS=str(TOOLS), CONTEXT_STAGE=str(base / "structural"), CONTEXT_EXCLUDES="[]", GRAPHIFY_OUT=str(base / "structural/native-cache"), GRAPHIFY_BACKEND="none", GRAPHIFY_QUERY_LOG_DISABLE="1", PYTHONDONTWRITEBYTECODE="1", OPENAI_API_KEY="forbidden-synthetic", GEMINI_API_KEY="forbidden-synthetic")
         probe.run("profile-check", env)
         probe.run("structural-build", env)
         baseline = base / "structural/artifacts/graph.json"
-        structural = json.loads(baseline.read_text())
+        structural = json.loads(baseline.read_text(encoding="utf-8"))
         env["CONTEXT_STRUCTURAL"] = str(baseline)
         totals = {}
         for mode, trial in data["recorded_trials"].items():
@@ -72,7 +72,7 @@ def main():
             e["CONTEXT_LABELS"] = str(label_path)
             built = json.loads(probe.execute(code, e).stdout)
             output = Path(e["CONTEXT_MIXED_STAGE"])
-            graph = json.loads((output / "graph.json").read_text())
+            graph = json.loads((output / "graph.json").read_text(encoding="utf-8"))
             ledger = graph["graph"]["context"]["semantic"]
             assert ledger["usage"] is None and all(r["usage"] is None for r in ledger["readers"].values())
             assert all(n["_origin"] == "semantic" for n in graph["nodes"] if n["id"] not in {n["id"] for n in structural["nodes"]})
@@ -81,7 +81,7 @@ def main():
             assert ledger["open_questions"] and any(n.get("claim_status") == "superseded" for n in graph["nodes"])
             assert any(edge["source"] == "docs_журнал_boundary_observations" and edge["target"] == "docs_журнал_north_grant" and edge["source_location"] == "L2205-L2206" for edge in graph["links"])
             assert any(r["outcome"] == "zero-findings" and r["source_file"] == "docs/unrelated.md" for rs in ledger["coverage"].values() for r in rs)
-            report = (output / "GRAPH_REPORT.md").read_text()
+            report = (output / "GRAPH_REPORT.md").read_text(encoding="utf-8")
             assert report.count("Subscription-agent token usage: unknown") == 1 and "- Token cost:" not in report and "0 input" not in report
             # The exact call+semantic relation sites remain queryable without CLI stamps.
             query_code = 'from graphify.serve import _read_graph, _query_graph_text\nG=_read_graph(' + repr(str(output / "graph.json")) + ')\nG.graph["_learning_overlay"]={}\nprint(_query_graph_text(G,"Which rule does usable implement?",seeds=["src_gate_usable"],seed_root=Path(os.environ["CONTEXT_ROOT"]),depth=1,token_budget=1600))'
@@ -127,7 +127,7 @@ for edge in original["links"]:
             dump(plan_path, plan)
             dump(fragment_path, fragment)
             if raw is not None:
-                fragment_path.write_text(raw, encoding="utf-8")
+                fragment_path.write_text(raw, encoding="utf-8", newline="\n")
             before = probe.snapshot(base)
             probe.execute(check_code, dict(env, CHECK_PLAN=str(plan_path), CHECK_FRAGMENT=str(fragment_path)), success=False, reason=reason)
             assert probe.snapshot(base) == before
@@ -163,15 +163,15 @@ for edge in original["links"]:
         refusal("oversized JSON", "Oversized JSON/source", raw=" " * (2*1024*1024+1))
         # Changes after D must invalidate even without a new semantic finding.
         changed = root / "src/gate.py"
-        changed.write_text(data["files"]["src/gate.py"].replace("168", "169"))
+        changed.write_text(data["files"]["src/gate.py"].replace("168", "169"), encoding="utf-8", newline="\n")
         refusal("changed baseline bytes", "Source identity mismatch")
-        changed.write_text(data["files"]["src/gate.py"])
+        changed.write_text(data["files"]["src/gate.py"], encoding="utf-8", newline="\n")
         added = root / "added.py"
-        added.write_text("def added(): pass\n")
+        added.write_text("def added(): pass\n", encoding="utf-8", newline="\n")
         refusal("added baseline source", "Structural source inventory changed")
         added.unlink()
         config = root / ".graphifyrc"
-        config.write_text("# new config\n")
+        config.write_text("# new config\n", encoding="utf-8", newline="\n")
         refusal("changed baseline configuration", "Structural configuration changed")
         config.unlink()
         # Cross-source hyperedge needs all inferred member evidence, not just valid IDs.

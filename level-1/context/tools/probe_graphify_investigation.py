@@ -37,19 +37,19 @@ def module(name, path):
     return result
 
 def block(name):
-    match=re.search(r'```python\n(# context-'+name+r'\n.*?)\n```',(TOOLS/'graphify.md').read_text(),re.S)
+    match=re.search(r'```python\n(# context-'+name+r'\n.*?)\n```',(TOOLS/'graphify.md').read_text(encoding="utf-8"),re.S)
     assert match,name
     return match.group(1)
 
 def dump(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding='utf-8')
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding='utf-8', newline="\n")
 
 def graph_data(g):
     return nx.node_link_data(g, edges='links')
 
 def mixed():
-    raw=json.loads(SOURCE.read_text())
+    raw=json.loads(SOURCE.read_text(encoding="utf-8"))
     g=load_node_link_graph(raw)
     cs={}
     labels={}
@@ -112,32 +112,32 @@ class ExportTests(unittest.TestCase):
         self.assertFalse(r.is_directed()); self.assertNotIn('_src',r['a']['b']); self.assertNotIn('_tgt',r['a']['b'])
     def test_05_obsidian_mixed_and_ownership(self):
         g,cs,labels=mixed(); vault=OUT/'obsidian'; vault.mkdir(exist_ok=True)
-        (vault/'handwritten.md').write_text('LOCAL KEEP',encoding='utf-8')
+        (vault/'handwritten.md').write_text('LOCAL KEEP',encoding='utf-8', newline="\n")
         (vault/'.obsidian').mkdir(exist_ok=True)
-        (vault/'.obsidian/graph.json').write_text('{"local":true}',encoding='utf-8')
+        (vault/'.obsidian/graph.json').write_text('{"local":true}',encoding='utf-8', newline="\n")
         warnings=io.StringIO()
         with contextlib.redirect_stderr(warnings): n=to_obsidian(g,cs,str(vault),community_labels=labels)
-        self.assertEqual(n,len(g)+len(cs)); self.assertEqual((vault/'handwritten.md').read_text(),'LOCAL KEEP')
-        self.assertEqual(json.loads((vault/'.obsidian/graph.json').read_text()),{'local':True})
-        manifest=json.loads((vault/'.graphify_obsidian_manifest.json').read_text())['files']
+        self.assertEqual(n,len(g)+len(cs)); self.assertEqual((vault/'handwritten.md').read_text(encoding="utf-8"),'LOCAL KEEP')
+        self.assertEqual(json.loads((vault/'.obsidian/graph.json').read_text(encoding="utf-8")),{'local':True})
+        manifest=json.loads((vault/'.graphify_obsidian_manifest.json').read_text(encoding="utf-8"))['files']
         notes=[x for x in manifest if x.endswith('.md') and not x.startswith('_COMMUNITY_')]
         self.assertEqual(len(notes),len(g))
         sem=[n for n,d in g.nodes(data=True) if d.get('_origin')=='semantic']
         self.assertTrue(sem)
-        self.assertTrue(any(g.nodes[sem[0]]['label'] in (vault/n).read_text() for n in notes))
-        edited=vault/notes[0]; edited.write_text(edited.read_text()+'\nLOCAL EDIT TO GENERATED\n')
+        self.assertTrue(any(g.nodes[sem[0]]['label'] in (vault/n).read_text(encoding="utf-8") for n in notes))
+        edited=vault/notes[0]; edited.write_text(edited.read_text(encoding="utf-8")+'\nLOCAL EDIT TO GENERATED\n', encoding="utf-8", newline="\n")
         with contextlib.redirect_stderr(io.StringIO()): to_obsidian(g,cs,str(vault),community_labels=labels)
-        self.assertNotIn('LOCAL EDIT TO GENERATED',edited.read_text())
-        stale=vault/'owned-stale.md'; stale.write_text('OLD',encoding='utf-8')
+        self.assertNotIn('LOCAL EDIT TO GENERATED',edited.read_text(encoding="utf-8"))
+        stale=vault/'owned-stale.md'; stale.write_text('OLD',encoding='utf-8', newline="\n")
         dump(vault/'.graphify_obsidian_manifest.json',{'files':manifest+['owned-stale.md']})
         with contextlib.redirect_stderr(io.StringIO()): to_obsidian(g,cs,str(vault),community_labels=labels)
         self.assertFalse(stale.exists()); self.assertTrue((vault/'handwritten.md').exists())
     def test_06_wiki_mixed_and_owned_directory(self):
         g,cs,labels=mixed(); wiki=OUT/'wiki'; wiki.mkdir(exist_ok=True)
-        (wiki/'handwritten.md').write_text('EXPECTED DELETED',encoding='utf-8')
+        (wiki/'handwritten.md').write_text('EXPECTED DELETED',encoding='utf-8', newline="\n")
         n=to_wiki(g,cs,wiki,community_labels=labels,god_nodes_data=[{'id':next(iter(g)),'label':g.nodes[next(iter(g))]['label'],'degree':g.degree(next(iter(g)))}])
         self.assertEqual(n,len(cs)+1); self.assertTrue((wiki/'index.md').exists()); self.assertFalse((wiki/'handwritten.md').exists())
-        articles='\n'.join(p.read_text() for p in wiki.glob('*.md'))
+        articles='\n'.join(p.read_text(encoding="utf-8") for p in wiki.glob('*.md'))
         self.assertIn('docs/policy.md',articles); self.assertIn('Current 24-hour original-issue grant',articles); self.assertIn('INFERRED',articles)
     def test_07_native_prefix_exact_composition(self):
         a=collision_graph(); b=collision_graph(True)
@@ -186,11 +186,11 @@ finally:
         env={k:v for k,v in os.environ.items() if not any(w in k.upper() for w in ('API_KEY','TOKEN','SECRET','PASSWORD','PROVIDER'))}
         env.update(GRAPHIFY_OUT=str(OUT/'native-out'),GRAPHIFY_BACKEND='none',PYTHONDONTWRITEBYTECODE='1')
         p=subprocess.run([sys.executable,'-B','-c',runner,'merge-graphs',*(str(x) for x in paths),'--out',str(target)],env=env,cwd=OUT,capture_output=True,text=True,timeout=30)
-        self.assertEqual(p.returncode,0,p.stderr); self.assertEqual(json.loads(Path(str(target)+'.attempts.json').read_text()),[])
-        raw=json.loads(target.read_text()); self.assertFalse(raw['directed']); self.assertFalse(raw['multigraph'])
+        self.assertEqual(p.returncode,0,p.stderr); self.assertEqual(json.loads(Path(str(target)+'.attempts.json').read_text(encoding="utf-8")),[])
+        raw=json.loads(target.read_text(encoding="utf-8")); self.assertFalse(raw['directed']); self.assertFalse(raw['multigraph'])
         self.assertEqual(len(raw['nodes']),5); self.assertEqual(len(raw['links']),4) # 8 arcs -> 4 unordered pairs
         self.assertEqual(len(raw['hyperedges']),2)
-        (OUT/'native-cli.log').write_text(p.stdout+p.stderr,encoding='utf-8')
+        (OUT/'native-cli.log').write_text(p.stdout+p.stderr,encoding='utf-8', newline="\n")
     def test_09_svg_optional_dependency_gate(self):
         if importlib.util.find_spec('matplotlib') is None:
             with self.assertRaisesRegex(ImportError,'matplotlib not installed'):
@@ -202,7 +202,7 @@ finally:
         paths=[SOURCE,SOURCE.parents[2]/'branch-build/mixed/graph.json']
         merged=nx.MultiDiGraph(); inputs=[]; hes=[]
         for index,(tag,path) in enumerate(zip(('baseline','branch'),paths)):
-            raw=json.loads(path.read_text()); g=load_node_link_graph(raw)
+            raw=json.loads(path.read_text(encoding="utf-8")); g=load_node_link_graph(raw)
             self.assertTrue(g.is_directed())
             h=prefix_graph_for_global(nx.MultiDiGraph(g),tag,community_offset=100*index)
             merged=nx.compose(merged,h); hes.extend(h.graph.get('hyperedges',[]))
@@ -215,7 +215,7 @@ finally:
         merged.graph['cross_repository_view']={'schema':'context-cross-repository-view-v1','inputs':inputs,
            'limits':['two recorded F versions used as independent namespace controls; no fresh model inference']}
         self.assertNotEqual(inputs[0]['graph_sha256'],inputs[1]['graph_sha256'])
-        self.assertEqual(len(merged),sum(len(json.loads(p.read_text())['nodes']) for p in paths))
+        self.assertEqual(len(merged),sum(len(json.loads(p.read_text(encoding="utf-8"))['nodes']) for p in paths))
         self.assertFalse(merged.has_edge('baseline::src_guard_accepts','branch::src_guard_accepts'))
         dump(OUT/'actual-versioned-view.json',graph_data(merged))
         to_graphml(merged,{d['community']:[n for n,a in merged.nodes(data=True) if a['community']==d['community']] for _,d in merged.nodes(data=True)},str(OUT/'actual-versioned-view.graphml'))
@@ -225,17 +225,17 @@ finally:
         g=nx.DiGraph(); g.add_node('a',label='same',source_file='a.md'); g.add_node('b',label='other',source_file='b.md')
         g.add_edge('a','b',relation='depends_on',confidence='INFERRED')
         out=OUT/'obsidian-foreign-collision'; out.mkdir(exist_ok=True)
-        (out/'same.md').write_text('LOCAL COLLISION')
+        (out/'same.md').write_text('LOCAL COLLISION', encoding="utf-8", newline="\n")
         errors=io.StringIO()
         with contextlib.redirect_stderr(errors): count=to_obsidian(g,{0:list(g)},str(out),community_labels={0:'Test'})
-        self.assertEqual((out/'same.md').read_text(),'LOCAL COLLISION'); self.assertEqual(count,2)
+        self.assertEqual((out/'same.md').read_text(encoding="utf-8"),'LOCAL COLLISION'); self.assertEqual(count,2)
         self.assertIn('skipped 1 pre-existing',errors.getvalue())
     def test_12_obsidian_frontmatter_adoption(self):
         g=nx.Graph(); g.add_node('a',label='current')
         out=OUT/'obsidian-adoption'; out.mkdir(exist_ok=True)
         (out/'.graphify_obsidian_manifest.json').unlink(missing_ok=True)
         tagged=out/'local-but-graphify-tagged.md'
-        tagged.write_text('---\ntags:\n  - graphify/document\n---\nLOCAL\n')
+        tagged.write_text('---\ntags:\n  - graphify/document\n---\nLOCAL\n', encoding="utf-8", newline="\n")
         with contextlib.redirect_stderr(io.StringIO()): to_obsidian(g,{0:['a']},str(out))
         self.assertFalse(tagged.exists()) # tag heuristic adopted and pruned an otherwise local note
     @classmethod
@@ -264,9 +264,9 @@ def check_investigation(root, stage):
     assert not err and seed == 'src_guard_accepts'
     node = G.nodes[seed]
     assert node['source_file'] == 'src/guard.py' and node['source_location'] == 'L1'
-    assert '0 <= now - issued <= 24' in (ROOT/'src/guard.py').read_text()
-    assert '24 elapsed hours from original issuance' in (ROOT/'docs/policy.md').read_text()
-    assert 'does not extend the grant window' in (ROOT/'docs/note.md').read_text()
+    assert '0 <= now - issued <= 24' in (ROOT/'src/guard.py').read_text(encoding="utf-8")
+    assert '24 elapsed hours from original issuance' in (ROOT/'docs/policy.md').read_text(encoding="utf-8")
+    assert 'does not extend the grant window' in (ROOT/'docs/note.md').read_text(encoding="utf-8")
 
     queries = {}
     for mode in ('bfs', 'dfs'):
@@ -317,7 +317,7 @@ def check_investigation(root, stage):
     conflict = nx.DiGraph()
     conflict.add_node('stale', label=conflicting_graph_claim, source_file='docs/note.md', source_location='L1')
     conflict_view = _query_graph_text(conflict, 'grant', seeds=['stale'], depth=1, token_budget=100)
-    assert conflicting_graph_claim in conflict_view and conflicting_graph_claim not in (ROOT/'docs/policy.md').read_text()
+    assert conflicting_graph_claim in conflict_view and conflicting_graph_claim not in (ROOT/'docs/policy.md').read_text(encoding="utf-8")
     missing = _resolve_single_node(S, 'not-present')[1]
     assert missing and 'No node matching' in missing
     T = nx.DiGraph()
@@ -382,13 +382,13 @@ def check_cross_guards():
 def check_presentation(stage):
     from graphify.exporters.html import to_html
     output=BASE/'presentation';output.mkdir()
-    g=load_node_link_graph(json.loads((stage/'graph.json').read_text()))
+    g=load_node_link_graph(json.loads((stage/'graph.json').read_text(encoding="utf-8")))
     cs={}
     for n,d in g.nodes(data=True):cs.setdefault(d['community'],[]).append(n)
     labels={int(c):d['label'] for c,d in g.graph['context']['community_interpretation'].items()}
     assert to_html(g,cs,str(output/'aggregated.html'),community_labels=labels,node_limit=3,learning_overlay={})
     def embedded(path,name):
-        return json.JSONDecoder().raw_decode(path.read_text().split('const '+name+' = ',1)[1])[0]
+        return json.JSONDecoder().raw_decode(path.read_text(encoding="utf-8").split('const '+name+' = ',1)[1])[0]
     assert len(embedded(output/'aggregated.html','RAW_NODES'))==3
     s=nx.DiGraph()
     for i in range(6):s.add_node(str(i),label='synthetic-'+str(i),source_file='synthetic.py')
@@ -432,7 +432,7 @@ def main():
         from graphify.paths import load_node_link_graph
         from graphify.wiki import to_wiki
         f=module('context_maintenance_probe',TOOLS/'probe_graphify_maintenance.py')
-        cases=json.loads((TOOLS/'graphify-maintenance-cases.json').read_text())['cases']
+        cases=json.loads((TOOLS/'graphify-maintenance-cases.json').read_text(encoding="utf-8"))['cases']
         checked_inputs=[];cross_records=[];built=[]
         for tag,name in [('baseline','baseline'),('branch','branch-48-zero')]:
             root=BASE/(tag+'-repo');f.init_repo(root,cases[name]['files'])
@@ -479,7 +479,7 @@ def main():
         assert missing_before==f.d.snapshot(partial/'.git/objects')
         merged=check_guide_cross(checked_inputs,sum(len(c[2]['graph']['links']) for c in checked_inputs))
         dump(BASE/'cross-guide-view.json',graph_data(merged))
-        reopened=load_node_link_graph(json.loads((BASE/'cross-guide-view.json').read_text()))
+        reopened=load_node_link_graph(json.loads((BASE/'cross-guide-view.json').read_text(encoding="utf-8")))
         assert dict(reopened.nodes(data=True))==dict(merged.nodes(data=True))
         assert {(u,v,k):d for u,v,k,d in reopened.edges(keys=True,data=True)}=={(u,v,k):d for u,v,k,d in merged.edges(keys=True,data=True)}
         assert reopened.graph==merged.graph

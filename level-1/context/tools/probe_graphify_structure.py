@@ -50,7 +50,7 @@ ATTEMPTS = []
 def execute(code, environment, *, before="", success=True, reason=None):
     guarded = before + "\n" + GUARD + "\nimport json\ntry:\n" + textwrap.indent(code, "    ") + "\nfinally:\n    print('CONTEXT_ATTEMPTS=' + json.dumps(observed_attempts))\n"
     result = subprocess.run([sys.executable, "-c", guarded], env=environment,
-                            capture_output=True, text=True, timeout=60)
+                            capture_output=True, text=True, encoding="utf-8", timeout=60)
     lines = result.stdout.splitlines()
     markers = [line for line in lines if line.startswith("CONTEXT_ATTEMPTS=")]
     assert len(markers) == 1, (result.stdout, result.stderr)
@@ -74,15 +74,18 @@ def main():
     data = json.loads((TOOLS / "graphify-structural-cases.json").read_text(encoding="utf-8"))
     with tempfile.TemporaryDirectory(prefix="context-structural-") as temporary:
         base = Path(temporary)
-        root = base / 'corpus "Связи"'
+        root = base / ('corpus Связи' if os.name == 'nt' else 'corpus "Связи"')
         root.mkdir()
         for relative, text in data["files"].items():
             path = root / relative
             path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text(text, encoding="utf-8")
+            path.write_text(text, encoding="utf-8", newline="\n")
         outside = base / "external.py"
-        outside.write_text("def out_of_scope_marker(): pass\n", encoding="utf-8")
-        (root / "escaped.py").symlink_to(outside)
+        outside.write_text("def out_of_scope_marker(): pass\n", encoding="utf-8", newline="\n")
+        try:
+            (root / "escaped.py").symlink_to(outside)
+        except OSError as error:
+            raise RuntimeError("The unsafe-symlink control requires host symlink permission; Windows Developer Mode or an authorized privileged test host is needed") from error
         environment = {k: v for k, v in os.environ.items()
                        if not any(word in k.upper() for word in ("API_KEY", "TOKEN", "SECRET", "PASSWORD", "PROVIDER", "AWS_", "GOOGLE_", "GEMINI_", "OPENAI_", "ANTHROPIC_"))}
         environment.update(CONTEXT_ROOT=str(root), CONTEXT_TOOLS=str(TOOLS),
@@ -97,6 +100,10 @@ def main():
         env = stage_environment("first")
         original = snapshot(root)
         profile = run("profile-check", env)
+        # Explicit qualification must never relabel this actual host as another.
+        run("profile-check", dict(env, CONTEXT_QUALIFY_HOST="unknown"), success=False, reason="Unknown qualification lane")
+        if sys.platform != "win32":
+            run("profile-check", dict(env, CONTEXT_QUALIFY_HOST="windows-cpython-3.13"), success=False, reason="Qualification requires actual Windows CPython 3.13")
         # The same check is used to reuse a compatible installation, with no installer.
         reused = run("profile-check", env)
         assert profile.stdout == reused.stdout
@@ -146,17 +153,17 @@ def main():
         second = stage_environment("second")
         run("structural-build", second)
         assert snapshot(root) == after_publication
-        second_raw = json.loads((Path(second["CONTEXT_STAGE"]) / "artifacts/graph.json").read_text())
+        second_raw = json.loads((Path(second["CONTEXT_STAGE"]) / "artifacts/graph.json").read_text(encoding="utf-8"))
         assert second_raw["graph"]["context"]["input_identity"] == metadata["input_identity"]
 
         # Simulated incompatible distribution metadata; installed package files are untouched.
         fake = base / "mismatch" / "graphifyy-0.0.dist-info"
         fake.mkdir(parents=True)
-        (fake / "METADATA").write_text("Metadata-Version: 2.1\nName: graphifyy\nVersion: 0.0\n")
+        (fake / "METADATA").write_text("Metadata-Version: 2.1\nName: graphifyy\nVersion: 0.0\n", encoding="utf-8", newline="\n")
         mismatch = run("profile-check", env, before="import sys; sys.path.insert(0," + repr(str(fake.parent)) + ")", success=False, reason="Graphify version mismatch")
         assert "Graphify version mismatch" in mismatch.stderr
         # Simulated absent CLI in this check only; do not rename an installed executable.
-        absent = run("profile-check", env, before="from pathlib import Path\n_real_is_file=Path.is_file\nPath.is_file=lambda p: False if p.name=='graphify' else _real_is_file(p)", success=False, reason="Candidate CLI is missing")
+        absent = run("profile-check", env, before="from pathlib import Path\n_real_is_file=Path.is_file\nPath.is_file=lambda p: False if p.name in ('graphify', 'graphify.exe') else _real_is_file(p)", success=False, reason="Candidate CLI is missing")
         assert "Candidate CLI is missing" in absent.stderr
 
         # Native optional grammar really is absent in the base profile.
@@ -173,7 +180,7 @@ assert r["failed_sources"] and not r["nodes"]
             if name == "encoding":
                 path.write_bytes(b"\xff")
             else:
-                path.write_text(content, encoding="utf-8")
+                path.write_text(content, encoding="utf-8", newline="\n")
             failed = run("structural-build", stage_environment(name), success=False, reason=reason)
             assert not (base / name / "artifacts").exists(), failed.stderr
             path.unlink()
@@ -187,32 +194,32 @@ assert r["failed_sources"] and not r["nodes"]
             hook = 'import graphify.extract as module\n_original_extract = module.extract\ndef changed(*a, **kw):\n    result = _original_extract(*a, **kw)\n    root = kw["root"]\n    ' + mutation + '\n    return result\nmodule.extract = changed\n'
             run("structural-build", stage_environment(name), before=hook, success=False, reason=reason)
             (root / "added.md").unlink(missing_ok=True)
-            (root / "docs/.graphifyignore").write_text(data["files"]["docs/.graphifyignore"], encoding="utf-8")
-            (root / "src/lease.py").write_text(data["files"]["src/lease.py"], encoding="utf-8")
-        (root / "docs/.graphifyignore").write_text("!UPPER.DOCX\n")
+            (root / "docs/.graphifyignore").write_text(data["files"]["docs/.graphifyignore"], encoding="utf-8", newline="\n")
+            (root / "src/lease.py").write_text(data["files"]["src/lease.py"], encoding="utf-8", newline="\n")
+        (root / "docs/.graphifyignore").write_text("!UPPER.DOCX\n", encoding="utf-8", newline="\n")
         run("structural-build", stage_environment("conversion-reinclude"), success=False, reason="Conversion-capable input was re-included")
-        (root / "docs/.graphifyignore").write_text(data["files"]["docs/.graphifyignore"], encoding="utf-8")
+        (root / "docs/.graphifyignore").write_text(data["files"]["docs/.graphifyignore"], encoding="utf-8", newline="\n")
         # A file allowlist still consumes a nested ignore file even when a made-up
         # descendant filename would be ignored. Verify the real directory semantics.
         allowlist = root / ".graphifyignore"
-        allowlist.write_text("*\n!docs/\n!docs/policy.md\n")
+        allowlist.write_text("*\n!docs/\n!docs/policy.md\n", encoding="utf-8", newline="\n")
         allowed_env = stage_environment("allowlist")
         run("structural-build", allowed_env)
-        allowed = json.loads((Path(allowed_env["CONTEXT_STAGE"]) / "artifacts/graph.json").read_text())
+        allowed = json.loads((Path(allowed_env["CONTEXT_STAGE"]) / "artifacts/graph.json").read_text(encoding="utf-8"))
         assert "docs/.graphifyignore" in allowed["graph"]["context"]["configuration_hashes"]
         hook = 'import graphify.extract as module\n_original_extract=module.extract\ndef changed(*a, **kw):\n    result=_original_extract(*a, **kw)\n    (kw["root"] / "docs/.graphifyignore").write_text("# Mutated\\n")\n    return result\nmodule.extract=changed\n'
         run("structural-build", stage_environment("allowlist-mutation"), before=hook, success=False, reason="Configuration changed during build")
         allowlist.unlink()
-        (root / "docs/.graphifyignore").write_text(data["files"]["docs/.graphifyignore"], encoding="utf-8")
+        (root / "docs/.graphifyignore").write_text(data["files"]["docs/.graphifyignore"], encoding="utf-8", newline="\n")
         modules = root / ".gitmodules"
-        modules.write_text('[submodule "unsafe"]\n path = !module\n')
+        modules.write_text('[submodule "unsafe"]\n path = !module\n', encoding="utf-8", newline="\n")
         run("structural-build", stage_environment("submodule-pattern"), success=False, reason="Unsupported submodule spelling")
-        modules.write_text(data["files"][".gitmodules"].replace("unselected/module", "./unselected//module"), encoding="utf-8")
+        modules.write_text(data["files"][".gitmodules"].replace("unselected/module", "./unselected//module"), encoding="utf-8", newline="\n")
         normalized_env = stage_environment("normalized-submodule")
         run("structural-build", normalized_env)
-        normalized = json.loads((Path(normalized_env["CONTEXT_STAGE"]) / "artifacts/graph.json").read_text())
+        normalized = json.loads((Path(normalized_env["CONTEXT_STAGE"]) / "artifacts/graph.json").read_text(encoding="utf-8"))
         assert set(normalized["graph"]["context"]["sources"]) == set(data["selected"])
-        modules.write_text(data["files"][".gitmodules"], encoding="utf-8")
+        modules.write_text(data["files"][".gitmodules"], encoding="utf-8", newline="\n")
         assert snapshot(root) == after_publication
         print(json.dumps({"status": "PASS", "profile": json.loads(profile.stdout),
                           "selected_files": len(metadata["sources"]), "nodes": len(nodes), "edges": len(links),

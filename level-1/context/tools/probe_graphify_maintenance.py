@@ -13,6 +13,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 
 TOOLS = Path(__file__).resolve().parent
 TARGET = 'skills/context/references/graphify'
@@ -38,7 +39,8 @@ def clean_env():
     env = {k: val for k, val in os.environ.items() if not any(
         word in k.upper() for word in ('API_KEY', 'TOKEN', 'SECRET', 'PASSWORD', 'PROVIDER', 'AWS_', 'GOOGLE_', 'GEMINI_', 'OPENAI_', 'ANTHROPIC_', 'GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_COMMON_DIR', 'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES', 'GIT_REPLACE_REF_BASE'))}
     env.update(GRAPHIFY_BACKEND='none', GRAPHIFY_QUERY_LOG_DISABLE='1',
-               PYTHONDONTWRITEBYTECODE='1', GIT_AUTHOR_NAME='Probe', GIT_AUTHOR_EMAIL='probe@example.invalid',
+               PYTHONDONTWRITEBYTECODE='1', PYTHONUTF8='1', GIT_CONFIG_GLOBAL=os.devnull,
+               GIT_CONFIG_COUNT='1', GIT_CONFIG_KEY_0='core.autocrlf', GIT_CONFIG_VALUE_0='false', GIT_AUTHOR_NAME='Probe', GIT_AUTHOR_EMAIL='probe@example.invalid',
                GIT_COMMITTER_NAME='Probe', GIT_COMMITTER_EMAIL='probe@example.invalid',
                GIT_CONFIG_NOSYSTEM='1', GIT_TERMINAL_PROMPT='0', GIT_OPTIONAL_LOCKS='0',
                OPENAI_API_KEY='forbidden-synthetic', GEMINI_API_KEY='forbidden-synthetic')
@@ -62,7 +64,7 @@ def materialize(repo, commit, path):
 
 def dump(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline="\n")
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -83,7 +85,7 @@ def annotate(oldStage, newStage, text):
     from graphify.paths import write_json_atomic
     shutil.copytree(oldStage, newStage)
     report = newStage / 'GRAPH_REPORT.md'
-    report.write_text(report.read_text(encoding='utf-8') + '\n' + text + '\n', encoding='utf-8')
+    report.write_text(report.read_text(encoding='utf-8') + '\n' + text + '\n', encoding='utf-8', newline="\n")
     path = newStage / 'graph.json'
     graph = json.loads(path.read_text(encoding='utf-8'))
     graph['graph']['context']['artifacts']['GRAPH_REPORT.md'] = sha(report)
@@ -152,9 +154,9 @@ def init_repo(root, files):
     for name, contents in files.items():
         path = root / name
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(contents, encoding='utf-8')
-    (root / '.gitignore').write_text('.env\ngraphify-out/\n', encoding='utf-8')
-    (root / '.env').write_text('SECRET=fixture-only-never-publish\n', encoding='utf-8')
+        path.write_text(contents, encoding='utf-8', newline="\n")
+    (root / '.gitignore').write_text('.env\ngraphify-out/\n', encoding='utf-8', newline="\n")
+    (root / '.env').write_text('SECRET=fixture-only-never-publish\n', encoding='utf-8', newline="\n")
     placeholder = root / TARGET / '.gitkeep'
     placeholder.parent.mkdir(parents=True, exist_ok=True)
     placeholder.write_bytes(b'')
@@ -209,8 +211,8 @@ def check_order_and_labels(base, results):
     root = base / 'ordered-rules'
     root.mkdir()
     git(root, 'init', '-q', '-b', 'main')
-    (root / 'a.md').write_text('# A\n')
-    (root / 'code.py').write_text('value = 1\n')
+    (root / 'a.md').write_text('# A\n', encoding="utf-8", newline="\n")
+    (root / 'code.py').write_text('value = 1\n', encoding="utf-8", newline="\n")
     left = v.snapshot(root, ['*.md', '!a.md'], scope='Ordered native exclusion control')
     right = v.snapshot(root, ['!a.md', '*.md'], scope='Ordered native exclusion control')
     assert 'a.md' in left['sources'] and 'a.md' not in right['sources'] and left['identity'] != right['identity']
@@ -219,9 +221,9 @@ def check_order_and_labels(base, results):
     duplicate = v.snapshot(root, ['*.md', '!a.md', '*.md'], scope=right['scope'])
     assert duplicate['identity'] == right['identity']
     before = left['identity']
-    (root / '.env').write_text('SECRET=never-export-this-value\n')
+    (root / '.env').write_text('SECRET=never-export-this-value\n', encoding="utf-8", newline="\n")
     assert v.snapshot(root, left['exclusions'], scope=left['scope'])['identity'] == before
-    (root / '.env').write_text('SECRET=another-private-value\n')
+    (root / '.env').write_text('SECRET=another-private-value\n', encoding="utf-8", newline="\n")
     assert v.snapshot(root, left['exclusions'], scope=left['scope'])['identity'] == before
     # Same sources/profile and IDs but changed valid semantic rationale must not
     # silently reuse the old community interpretation file.
@@ -230,7 +232,7 @@ def check_order_and_labels(base, results):
     work.mkdir()
     altered = []
     for source in paths:
-        payload = json.loads(source.read_text())
+        payload = json.loads(source.read_text(encoding="utf-8"))
         if payload['shard_id'] == 'grant':
             payload['edges'][0]['rationale'] += ' Source-backed wording reviewed again.'
         target = work / source.name
@@ -240,7 +242,7 @@ def check_order_and_labels(base, results):
     env = env_for(repo, original_work / 'structural')
     env.update(CONTEXT_PLAN=str(original_work / 'plan.json'), CONTEXT_STRUCTURAL=str(original_work / 'structural/artifacts/graph.json'), CONTEXT_FRAGMENTS=json.dumps(list(map(str, altered))), CONTEXT_MIXED_STAGE=str(work / 'rejected-stage'))
     members = json.loads(d.execute(ASSEMBLE, env).stdout)
-    old = json.loads((original_work / 'labels.json').read_text())
+    old = json.loads((original_work / 'labels.json').read_text(encoding="utf-8"))
     assert members['input_identity'] == old['input_identity'] and members['evidence_identity'] != old['evidence_identity']
     assert {cid:sorted(n['id'] for n in nodes) for cid,nodes in members['communities'].items()} == {cid:item['members'] for cid,item in old['communities'].items()}
     d.execute(ASSEMBLE, dict(env, CONTEXT_LABELS=str(original_work / 'labels.json')), success=False, reason='Interpretation must match actual semantic evidence')
@@ -257,7 +259,7 @@ def check_worktrees_and_export(base, remote, stage, cases, old_build):
     git(owner, 'worktree', 'add', '--quiet', str(tree), 'trial-48')
     branch_case = cases['branch-48-zero']
     for name in ('docs/policy.md','src/guard.py'):
-        (tree / name).write_text(branch_case['files'][name])
+        (tree / name).write_text(branch_case['files'][name], encoding="utf-8", newline="\n")
     git(tree,'add','docs/policy.md','src/guard.py')
     git(tree,'commit','-qm','Change scoped 48-hour branch inputs')
     branch_source = gt(tree,'rev-parse','HEAD')
@@ -389,7 +391,7 @@ def run_more(base, remote, current_commit, stage, api):
         _real_run(["git", "-C", repo, "push", {str(remote)!r}, actor + ":{ref}"], capture_output=True, check=True)
         Path({str(actor_path)!r}).write_text(actor)''')
     publish(moving, move_stage, remote, expected=winner, before=race_hook, success=False)
-    actor = actor_path.read_text()
+    actor = actor_path.read_text(encoding="utf-8")
     assert tip(moving) == actor and gt(moving, "rev-parse", actor + "^") == winner
     check_commit(moving, winner, current_commit, expected_stage)
     assert index(moving) == moving_index and gt(moving, "rev-parse", "HEAD") == winner
@@ -440,6 +442,51 @@ def run_more(base, remote, current_commit, stage, api):
             "rollback_fast_forward": True, "real_validator": True}
 
 
+def check_native_lock(base):
+    """Real subprocess exclusion/recovery on the actual host/filesystem."""
+    lock = base / 'native-lock-control'
+    ready, release = base / 'lock-ready', base / 'lock-release'
+    prefix = ("import contextlib, io, sys, time\nfrom pathlib import Path\n"
+              "from graphify.watch import _rebuild_lock\n" +
+              ("import msvcrt\n" if sys.platform == 'win32' else "import fcntl\n"))
+    holder_code = prefix + f"""
+with contextlib.ExitStack() as stack:
+    with contextlib.redirect_stderr(io.StringIO()) as messages:
+        acquired = stack.enter_context(_rebuild_lock(Path({str(lock)!r}), blocking=True))
+    assert acquired and not messages.getvalue(), messages.getvalue()
+    Path({str(ready)!r}).write_bytes(b'ready')
+    deadline = time.monotonic() + 20
+    while not Path({str(release)!r}).exists():
+        assert time.monotonic() < deadline, 'Lock release timeout'
+        time.sleep(.01)
+"""
+    contender = prefix + f"""
+with contextlib.redirect_stderr(io.StringIO()) as messages:
+    with _rebuild_lock(Path({str(lock)!r}), blocking=False) as acquired:
+        assert acquired == EXPECTED, (acquired, EXPECTED)
+assert not messages.getvalue(), messages.getvalue()
+"""
+    for killed in (False, True):
+        ready.unlink(missing_ok=True); release.unlink(missing_ok=True)
+        process = subprocess.Popen([sys.executable, '-c', holder_code], env=clean_env(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        try:
+            deadline = time.monotonic() + 15
+            while not ready.exists() and process.poll() is None and time.monotonic() < deadline:
+                time.sleep(.01)
+            assert ready.exists(), process.communicate(timeout=2)
+            d.execute(contender.replace('EXPECTED', 'False'), clean_env())
+            if killed:
+                process.kill()
+            else:
+                release.write_bytes(b'release')
+            stdout, stderr = process.communicate(timeout=10)
+            assert killed or process.returncode == 0, (stdout, stderr)
+            d.execute(contender.replace('EXPECTED', 'True'), clean_env())
+        finally:
+            if process.poll() is None:
+                process.kill(); process.communicate(timeout=5)
+    return {'actual_platform': sys.platform, 'exclusion': True, 'release_reacquire': True, 'killed_holder_reacquire': True}
+
 def main():
     assert __debug__
     cases = json.loads((TOOLS / 'graphify-maintenance-cases.json').read_text(encoding='utf-8'))['cases']
@@ -453,6 +500,7 @@ def main():
         workspace = tempfile.TemporaryDirectory(prefix='context-maintenance-proof-')
     with workspace as tmp:
         base = Path(tmp)
+        locking = check_native_lock(base)
         results = {}
         for name, case in cases.items():
             root = base / (name + '-repo')
@@ -467,7 +515,7 @@ def main():
             for p in stage.iterdir():
                 assert b'fixture-only-never-publish' not in p.read_bytes()
             func = {}
-            exec(compile((root / 'src/guard.py').read_text(), str(root / 'src/guard.py'), 'exec'), func)
+            exec(compile((root / 'src/guard.py').read_text(encoding="utf-8"), str(root / 'src/guard.py'), 'exec'), func)
             accepts = func['accepts']
             limit = 48 if name in ('mixed-edit','branch-48-zero') else 24
             assert accepts(0, limit, False) and not accepts(0, limit + 1, False)
@@ -482,6 +530,18 @@ def main():
         remote = base / 'remote.git'
         subprocess.run(['git', 'init', '--bare', '-q', str(remote)], env=clean_env(), check=True)
         git(seed, 'push', '-q', str(remote), 'HEAD:refs/heads/main')
+        # Simulate only native unsupported-lock diagnostics, never the platform.
+        unsupported_lock = '''import contextlib, sys
+import graphify.watch
+@contextlib.contextmanager
+def warn_lock(*args, **kwargs):
+    print("filesystem does not support byte-range locks", file=sys.stderr)
+    yield True
+graphify.watch._rebuild_lock = warn_lock
+'''
+        publish(seed, stage, remote, before=unsupported_lock, success=False, reason='Publication lock unavailable')
+        assert gt(seed, 'ls-remote', '--refs', str(remote), 'refs/heads/main').split()[0] == expected
+
         git(remote, 'symbolic-ref', 'HEAD', 'refs/heads/main')
         source = clone(remote, base / 'publish-clone')
         index = (source / '.git/index').read_bytes()
@@ -516,14 +576,14 @@ subprocess.run = _intercept
         publish(no_op_race, stage, remote, before=hook, success=False)
         assert gt(current, 'ls-remote', '--refs', str(remote), 'refs/heads/main').split()[0] == commit
         publish(current, stage, seed, success=False, reason='Local destination must be bare')
-        (current / 'dirty.txt').write_text('dirty')
+        (current / 'dirty.txt').write_text('dirty', encoding="utf-8", newline="\n")
         publish(current, stage, remote, success=False, reason='Task clone is not clean')
         (current / 'dirty.txt').unlink()
         for defect in ('corrupt', 'truncated', 'incomplete'):
             broken = base / ('bad-' + defect)
             shutil.copytree(stage, broken)
-            if defect == 'corrupt': (broken / 'graph.html').write_text('corrupt')
-            elif defect == 'truncated': (broken / 'graph.json').write_text('{')
+            if defect == 'corrupt': (broken / 'graph.html').write_text('corrupt', encoding="utf-8", newline="\n")
+            elif defect == 'truncated': (broken / 'graph.json').write_text('{', encoding="utf-8", newline="\n")
             else: (broken / 'GRAPH_REPORT.md').unlink()
             publish(current, broken, remote, success=False)
             assert gt(current, 'ls-remote', '--refs', str(remote), 'refs/heads/main').split()[0] == commit
@@ -537,7 +597,7 @@ subprocess.run = _intercept
                           previous_sources=state['snapshot']['sources'], scope=state['snapshot']['scope'])
         assert v.assess_reuse(state, snap, v.profile(TOOLS))['status'] == 'noop'
         # Change only the note; use old portable policy and reviewed dependencies.
-        (cold / 'docs/note.md').write_text(cases['isolated-zero']['files']['docs/note.md'])
+        (cold / 'docs/note.md').write_text(cases['isolated-zero']['files']['docs/note.md'], encoding="utf-8", newline="\n")
         git(cold, 'add', 'docs/note.md'); git(cold, 'commit', '-qm', 'Update note')
         changed_commit = gt(cold, 'rev-parse', 'HEAD')
         git(cold, 'push', '-q', str(remote), 'HEAD:refs/heads/main')
@@ -566,7 +626,7 @@ subprocess.run = _intercept
         isolation = check_worktrees_and_export(base, remote, fresh, cases, results["baseline"])
         assert not d.ATTEMPTS
         print(json.dumps({'status':'PASS','recorded_model_replay_only':True,'cases':assessments,
-                          'publication':True,'no_op_mutation_refused':True,'cold_changed_only_reuse':True,'race':more,'controls':controls,'isolation':isolation,
+                          'publication':True,'native_locking':locking,'unsupported_lock_refused':True,'no_op_mutation_refused':True,'cold_changed_only_reuse':True,'race':more,'controls':controls,'isolation':isolation,
                           'network_or_provider_attempts':len(d.ATTEMPTS)}, ensure_ascii=False))
 
 if __name__ == '__main__':

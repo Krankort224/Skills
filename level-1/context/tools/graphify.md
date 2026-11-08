@@ -43,7 +43,7 @@ uv pip install --python /absolute/task-directory/graphify-venv/bin/python \
   /absolute/context/tools/probe_graphify.py
 ```
 
-Use `Scripts/python.exe` and `Scripts/graphify.exe` in a Windows venv; that path is source-reviewed, not runtime-verified here. Reuse an existing environment only after checking interpreter, distribution source/revision and dependency compatibility. A version string alone cannot distinguish a locally modified package. An installation needs filesystem access, package/source retrieval and appropriate wheels/build tools. Offline or denied setup leaves direct source reading available and tool-dependent maintenance unperformed. Do not invoke `graphify install`, upgrade a global environment, change agent instructions/hooks or reuse ambient provider credentials.
+Use `Scripts/python.exe` and `Scripts/graphify.exe` in a Windows venv. Windows CPython 3.13 has an explicit qualification route below; it remains unverified until the actual host passes its required scenarios. Reuse an existing environment only after checking interpreter, distribution source/revision and dependency compatibility. A version string alone cannot distinguish a locally modified package. An installation needs filesystem access, package/source retrieval and appropriate wheels/build tools. Offline or denied setup leaves direct source reading available and tool-dependent maintenance unperformed. Do not invoke `graphify install`, upgrade a global environment, change agent instructions/hooks or reuse ambient provider credentials.
 
 The source is pinned by commit and runtime dependencies by versions; build-isolation dependencies remain selected by upstream's build-system requirement (`setuptools>=83.0.0`). This profile is not a hash-locked wheel supply chain or a promise of identical binaries on other hosts.
 
@@ -81,8 +81,15 @@ from pathlib import Path
 import subprocess
 import sys
 
-if sys.implementation.name != "cpython" or sys.version_info[:2] != (3, 12) or sys.platform != "linux":
-    raise RuntimeError("This recorded profile requires Linux CPython 3.12; verify another lane separately")
+qualification = os.environ.get("CONTEXT_QUALIFY_HOST", "")
+if qualification:
+    assert qualification == "windows-cpython-3.13", "Unknown qualification lane"
+    assert sys.implementation.name == "cpython" and sys.platform == "win32" and sys.version_info[:2] == (3, 13), "Qualification requires actual Windows CPython 3.13"
+    assert sys.flags.utf8_mode, "Windows qualification requires PYTHONUTF8=1 before interpreter startup"
+    profile_status = "qualification-only-unverified"
+else:
+    assert sys.implementation.name == "cpython" and sys.version_info[:2] == (3, 12) and sys.platform == "linux", "This recorded profile requires Linux CPython 3.12; qualify another lane explicitly"
+    profile_status = "verified-linux-runtime"
 assert metadata.version("graphifyy") == "0.9.103", "Graphify version mismatch"
 origin = json.loads(metadata.distribution("graphifyy").read_text("direct_url.json") or "{}")
 assert origin.get("url") == "https://github.com/Graphify-Labs/graphify.git", "Unknown package source"
@@ -94,17 +101,63 @@ for line in requirements.read_text(encoding="utf-8").splitlines():
         assert metadata.version(name) == expected, f"Dependency mismatch: {name}"
 import graphify
 assert Path(graphify.__file__).resolve().is_relative_to(Path(sys.prefix).resolve()), "Import escaped candidate environment"
-cli = Path(sys.executable).parent / "graphify"
+cli = Path(sys.executable).parent / ("graphify.exe" if sys.platform == "win32" else "graphify")
 assert cli.is_file(), "Candidate CLI is missing; do not fall through to a global executable"
 assert cli.resolve().is_relative_to(Path(sys.prefix).resolve()), "CLI escaped candidate environment"
-assert cli.read_text(encoding="utf-8").splitlines()[0] == "#!" + sys.executable, "Verify a nonstandard CLI launcher separately"
+if sys.platform == "win32":
+    assert cli.read_bytes().startswith(b"MZ"), "Expected a Windows console launcher"
+else:
+    assert cli.read_text(encoding="utf-8").splitlines()[0] == "#!" + sys.executable, "Verify a nonstandard CLI launcher separately"
 assert any(e.name == "graphify" and e.value == "graphify.__main__:main" for e in metadata.distribution("graphifyy").entry_points), "Unexpected CLI entry point"
 version = subprocess.run([str(cli), "--version"], check=True, capture_output=True, text=True, timeout=30)
 assert version.stdout.strip() == "graphify 0.9.103", version.stdout
-print(json.dumps({"profile": "verified", "python": sys.version.split()[0], "graphify": metadata.version("graphifyy"), "commit": origin["vcs_info"]["commit_id"]}))
+print(json.dumps({"profile": profile_status, "platform": sys.platform, "python": sys.version.split()[0], "graphify": metadata.version("graphifyy"), "commit": origin["vcs_info"]["commit_id"]}))
 ```
 
 Version checks establish the recorded source/dependency profile, not integrity against local tampering. On an upgraded/different environment repeat the bounded probes, including exact source/direction oracles; do not infer compatibility from successful imports alone. The source is external; no upstream helper/specification is copied by this slice.
+
+### Qualify an actual Windows host
+
+The accepted runtime lane remains Linux CPython 3.12. Windows CPython 3.13 is a **qualification candidate**, not an accepted compatibility claim. Set `CONTEXT_QUALIFY_HOST=windows-cpython-3.13` only for that real host; the profile check rejects other platforms/interpreters, prints the actual version/platform and labels the result `qualification-only-unverified`. Successful metadata/CLI checks alone cannot qualify D–H or a Work host. The portable profile records the real interpreter patch/platform, so a Linux trio is not silently reused as a Windows generation.
+
+Run the following in a new PowerShell process. Supply `$SkillsRevision` as the exact reviewed Skills commit from the handoff. Use a NEW short task directory on a local filesystem (long paths and network/WSL shares are not covered). This does not change global Python/Git settings or enable Windows Developer Mode. D's unsafe-symlink control needs already-authorized symlink permission; if unavailable it stops with a prerequisite error rather than skipping the control. Git must support `--no-lazy-fetch` for G (tested Linux Git 2.52.0); record the actual Windows Git version. E/F/G are recorded-model replay, not fresh semantic extraction. A real independent subscription-agent pilot, browser rendering and separate Work-host execution remain additional H gates.
+
+```powershell
+# Set to the full reviewed Skills commit supplied by the owner/handoff:
+$SkillsRevision = '<reviewed-Skills-commit>'
+$ContextTask = Join-Path $env:TEMP ('context-win-' + [guid]::NewGuid().ToString('N'))
+New-Item -ItemType Directory -Path $ContextTask -ErrorAction Stop | Out-Null
+$ContextSource = Join-Path $ContextTask 'skills'
+$env:PYTHONUTF8 = '1'
+$env:PYTHONIOENCODING = 'utf-8'
+$env:PYTHONDONTWRITEBYTECODE = '1'
+$env:CONTEXT_QUALIFY_HOST = 'windows-cpython-3.13'
+$env:GRAPHIFY_BACKEND = 'none'
+$env:GRAPHIFY_QUERY_LOG_DISABLE = '1'
+git -c core.autocrlf=false clone --no-checkout https://github.com/Krankort224/Skills.git $ContextSource
+if ($LASTEXITCODE -ne 0) { throw 'Skills clone failed' }
+git -C $ContextSource -c core.autocrlf=false checkout --detach $SkillsRevision
+if ($LASTEXITCODE -ne 0) { throw 'Exact Skills checkout failed' }
+$env:CONTEXT_TOOLS = Join-Path $ContextSource 'level-1/context/tools'
+$ContextVenv = Join-Path $ContextTask 'venv'
+py -3.13 -m venv $ContextVenv
+if ($LASTEXITCODE -ne 0) { throw 'CPython 3.13 environment unavailable' }
+$ContextPython = Join-Path $ContextVenv 'Scripts/python.exe'
+& $ContextPython -c "import sys; assert sys.platform == 'win32' and sys.version_info[:3] == (3,13,7), sys.version; print(sys.version)"
+if ($LASTEXITCODE -ne 0) { throw 'This rerun targets the reported actual Python 3.13.7 host' }
+& $ContextPython -m pip install -r (Join-Path $env:CONTEXT_TOOLS 'graphify-requirements.txt')
+if ($LASTEXITCODE -ne 0) { throw 'Pinned candidate installation failed; do not relax requirements' }
+git --version
+$env:CONTEXT_MAINTENANCE_EVIDENCE = Join-Path $ContextTask 'f-evidence'
+$env:CONTEXT_INVESTIGATION_EVIDENCE = Join-Path $ContextTask 'g-evidence'
+foreach ($Probe in @('probe_graphify.py', 'probe_graphify_structure.py', 'probe_graphify_semantic.py', 'probe_graphify_maintenance.py', 'probe_graphify_investigation.py')) {
+    & $ContextPython -B (Join-Path $env:CONTEXT_TOOLS $Probe)
+    if ($LASTEXITCODE -ne 0) { throw ('Qualification stopped: ' + $Probe + '; preserve ' + $ContextTask) }
+}
+Write-Output ('Candidate replay finished; retain actual outputs/evidence in ' + $ContextTask)
+```
+
+A verified existing isolated candidate may be reused by supplying its actual `Scripts/python.exe` instead of the venv/install lines; still run every check against this exact Skills revision. Never alter `sys.platform`, interpreter version, provenance or dependency pins to bypass a failure. Record each failed/blocked stage and its exact exception; earlier successful stages retain only their own scope. F includes real local-bare publication, cooperative locking, killed-holder recovery and independent-clone leases. A pass certifies only the filesystem/host actually exercised, not hosted transport or all Windows filesystems. SVG remains an optional separate environment with its own dependency resolution; base HTML file creation does not prove browser rendering.
 
 ## Build and inspect structural evidence
 
@@ -631,7 +684,7 @@ Publication below is commit-atomic, not an atomic live-directory replacement. Re
 
 ## Publish a validated trio from an isolated clone
 
-Use an explicitly authorized remote URL and existing full branch ref, a clean task-owned clone at the expected source commit, and a fresh external stage. Publication updates only the remote ref, never the source clone's branch, index or worktree. A local destination must be bare; remote-side policy must prevent a nonlocal destination from updating a checked-out working tree. Native `_rebuild_lock(out_dir: Path, *, blocking: bool = False)` is advisory and only coordinates callers using the same clone/common-directory and ref convention; it does not automatically coordinate Graphify watch/update or other clones. The explicit Git lease arbitrates the latter.
+Use an explicitly authorized remote URL and existing full branch ref, a clean task-owned clone at the expected source commit, and a fresh external stage. Publication updates only the remote ref, never the source clone's branch, index or worktree. A local destination must be bare; remote-side policy must prevent a nonlocal destination from updating a checked-out working tree. The Windows qualification route requires a local filesystem that supports actual native byte-range locks; network/WSL shares are not qualified. The recipe refuses native lock diagnostics before validation/publication and requires the actual platform locking API. Native `_rebuild_lock(out_dir: Path, *, blocking: bool = False)` is advisory and only coordinates callers using the same clone/common-directory and ref convention; it does not automatically coordinate Graphify watch/update or other clones. The explicit Git lease arbitrates the latter.
 
 The reviewed `validate_context_fragments.validate_trio(stage, root=root, require_current=True)` must return the final exact `blobs`, `digests`, `graph`, `input_identity`, `generation_identity`, `profile` and `snapshot` with `sources`, `configuration`, `exclusions` and `authority_sources`. It must validate current complete scoped source inventory, generation markers, source/profile identity, JSON sibling digests, provenance, embedded HTML/report counts, and all three files. The publisher consumes exactly those bytes, revalidates before push, and compares all tracked selected source/config bytes against the expected commit. This procedure requires every scoped source/config to be tracked. A failed validation, concurrent source change or failed lease refuses publication; unknown push outcome must be resolved by inspecting the remote before retry.
 
@@ -639,7 +692,8 @@ Set `CONTEXT_ROOT` to the isolated clone, `CONTEXT_STAGE` to the fresh stage out
 
 ```python
 # context-publish-trio
-import fcntl
+import contextlib
+import io
 import hashlib
 import importlib.util
 import json
@@ -648,10 +702,19 @@ from pathlib import Path, PurePosixPath
 import subprocess
 import sys
 import tempfile
-from urllib.parse import unquote, urlsplit
+from urllib.parse import urlsplit
+from urllib.request import url2pathname
 from graphify.watch import _rebuild_lock
 
-assert __debug__ and sys.platform.startswith("linux")
+assert __debug__
+qualification = os.environ.get("CONTEXT_QUALIFY_HOST", "")
+if qualification:
+    assert qualification == "windows-cpython-3.13" and sys.platform == "win32" and sys.implementation.name == "cpython" and sys.version_info[:2] == (3, 13), "Qualification requires actual Windows CPython 3.13"
+    assert sys.flags.utf8_mode, "Windows qualification requires PYTHONUTF8=1"
+    import msvcrt  # Fail closed if the actual host has no native locking API.
+else:
+    assert sys.platform == "linux" and sys.implementation.name == "cpython" and sys.version_info[:2] == (3, 12), "Publication requires the verified Linux lane or explicit Windows qualification"
+    import fcntl
 assert not any(os.environ.get(k) for k in ("GIT_DIR", "GIT_WORK_TREE", "GIT_INDEX_FILE", "GIT_COMMON_DIR", "GIT_OBJECT_DIRECTORY", "GIT_ALTERNATE_OBJECT_DIRECTORIES", "GIT_REPLACE_REF_BASE"))
 os.environ["GIT_NO_REPLACE_OBJECTS"] = "1"
 os.environ["GIT_OPTIONAL_LOCKS"] = "0"
@@ -670,15 +733,16 @@ def text(*args):
     return git(*args).stdout.decode().strip()
 
 git("check-ref-format", ref)
-assert text("rev-parse", "--show-toplevel") == str(root)
+assert Path(text("rev-parse", "--show-toplevel")).resolve(strict=True) == root
 assert expected == text("rev-parse", "--verify", expected + "^{commit}") == text("rev-parse", "HEAD")
 assert not git("status", "--porcelain=v1", "--untracked-files=all").stdout, "Task clone is not clean"
+assert not Path(remote).drive or Path(remote).is_absolute(), "Drive-relative local remote is unsupported"
 parts = urlsplit(remote)
-if not parts.scheme and ":" not in remote:
+if Path(remote).is_absolute() or (not parts.scheme and ":" not in remote):
     local = (root / remote).resolve(strict=True)
 elif parts.scheme == "file":
     assert parts.netloc in ("", "localhost") and not parts.query and not parts.fragment
-    local = Path(unquote(parts.path)).resolve(strict=True)
+    local = Path(url2pathname(parts.path)).resolve(strict=True)
 else:
     local = None
 if local is not None:
@@ -729,8 +793,12 @@ def remote_tip():
     assert name.decode() == ref
     return oid.decode()
 
-with _rebuild_lock(lock, blocking=True) as acquired:
-    assert acquired, "Publication lock unavailable"
+with contextlib.ExitStack() as locks:
+    # Native Windows locking can deliberately continue unlocked on unsupported
+    # filesystems. Refuse its diagnostic before any publication work instead.
+    with contextlib.redirect_stderr(io.StringIO()) as lock_messages:
+        acquired = locks.enter_context(_rebuild_lock(lock, blocking=True))
+    assert acquired and not lock_messages.getvalue(), "Publication lock unavailable: " + lock_messages.getvalue()
     first = validate()
     verify_sources(first)
     assert remote_tip() == expected, "Remote moved; rebuild/review against new tip"
@@ -906,7 +974,7 @@ for item in cross_records:
     artifact_commit = item["artifact_commit"]
     source_commit = checked["graph"]["graph"]["context"].get("source_commit")
     assert commit_id(artifact_commit) and commit_id(source_commit), "Missing/invalid version provenance"
-    assert object_read(repository, "rev-parse", "--show-toplevel").decode().strip() == str(repository)
+    assert Path(object_read(repository, "rev-parse", "--show-toplevel").decode("utf-8").strip()).resolve(strict=True) == repository
     for commit in (artifact_commit, source_commit):
         assert object_read(repository, "cat-file", "-t", commit).strip() == b"commit"
     object_read(repository, "merge-base", "--is-ancestor", source_commit, artifact_commit)
