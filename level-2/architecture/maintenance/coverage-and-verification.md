@@ -5,9 +5,11 @@ its [accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomm
 records independent review and dot's reconciliation of the original report.
 The recovered 35-row report below remains historical; navigation does not upgrade
 its coverage judgments.
-Pass B's bounded methods and verification candidate are recorded in
-[vehicle and territorial service evidence](#pass-b-vehicle-and-territorial-service-evidence);
-independent review is pending and the historical matrix is not rescored.
+Pass B is accepted at `b3d323e76392c6b8e00337998726320082f753cd`; its
+[accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6727882038)
+records independent review and dot's acceptance. The bounded method evidence
+remains in [vehicle and territorial service evidence](#pass-b-vehicle-and-territorial-service-evidence);
+the historical matrix is not rescored.
 The accepted Issue #10 result is
 [`39394ad06476952c17792022613648002a6000ee`](https://github.com/Krankort224/Skills/commit/39394ad06476952c17792022613648002a6000ee),
 as recorded in its [accepted F summary](https://github.com/Krankort224/Skills/issues/10#issuecomment-6716639914).
