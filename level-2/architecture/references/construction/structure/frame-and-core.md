@@ -248,3 +248,5 @@ core details. Historical upper-machine drawings do not provide current pit/head,
 slab, access, protection or product specifications. Source classifications and
 floor-count examples do not override the shared jurisdiction, engineering,
 modeling or user-deliverable contracts.
+
+- Affects — [Residential section transformations](../../typologies/housing/section-variants.md#transform-reconnect-and-test): when moving/adding a core or changing its landing/shaft, refit whole apartment portals, repeated floor/front relationships and actual ground/roof routes, then reconcile the common/private ledger.

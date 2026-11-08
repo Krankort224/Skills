@@ -14,6 +14,7 @@ Use these records for provenance, source coverage, permissions or a specific mai
 | Required attribution and permissions | [Third-party notices](../THIRD_PARTY_NOTICES.md) | Full MIT permissions remain installed; they do not license book/web imagery |
 | Selected vehicle, school-parcel and network-capacity mechanisms | [Applied site methods](applied-site-methods.md) | Dated primary design/technical guidance, inspected extents and exclusions; original local geometry/allocation, not universal dimensions or law |
 | Ray/solid occlusion and geometric direct-sun intervals | [Solar occlusion](solar-occlusion.md) and [NOAA](#noaa-solar-equations) | Selected primary mechanism/time evidence and original event/interval construction, not an annual engine or normative-insolation approval |
+| Housing fronts/core interfaces and natural-exhaust paths | [Housing and exhaust](housing-and-exhaust.md) | Selected primary design/technical reading and original geometry/topology; draft/territorial status, rights and exclusions remain explicit |
 
 ## Locality and necessary external evidence
 
@@ -34,6 +35,9 @@ rescan of the older collections or a new normative-source claim.
 The selected PBRT reading in [solar occlusion](solar-occlusion.md) is a further
 primary source; NOAA is a reinspection of the existing record, not a new
 calculator contract or additional normative module.
+The later [housing/exhaust selections](housing-and-exhaust.md) separately record
+a primary draft design page and two dated issuer-hosted ventilation PDFs; their
+selected reading is not an expansion of the current normative catalogue.
 
 ## NOAA solar equations
 

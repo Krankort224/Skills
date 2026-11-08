@@ -53,6 +53,7 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 - Requires — [Support concepts with the plan](../../construction/structure/support-concepts.md): when support is not established: retain alternative topology/depth assumptions.
 - Affects — [Acoustic paths and air modes](../../performance/comfort/acoustics-and-air.md): routing services through a quiet buffer can defeat its separation.
+- Verified by — [Natural-exhaust channels](../../performance/comfort/natural-exhaust-topology.md#reserve-shafts-top-floor-and-roof-interfaces): when housing uses a passive stack, check actual owners, floor/roof continuity, enclosing/channel dimensions and maintenance; a riser area alone does not connect rooms or prove flow.
 - Verified by — [Envelope and assemblies](../../construction/envelope/assemblies.md#develop-four-connected-junctions): check service/head crossings against actual enclosure functions.
 - Verified by — [Operation and lifecycle](../../performance/lifecycle/intervention-and-cost.md#trace-a-complete-maintenance-journey): reach, remove and replace parts while required uses continue.
 - Illustrated by — [Street reading room](../../../assets/studies/street-reading-room.md): inspect the full included-component height equation.

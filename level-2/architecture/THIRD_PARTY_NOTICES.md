@@ -5,6 +5,7 @@
 - [Selected library materials](#selected-architecture-library-literature-and-course-materials)
 - [Applied site guidance](#applied-site-guidance)
 - [Solar occlusion sources](#solar-occlusion-sources)
+- [Housing and exhaust sources](#housing-and-exhaust-sources)
 - [Skills-Architects](#skills-architects)
 - [Computational Designers](#claude-skills-for-computational-designers)
 
@@ -110,6 +111,19 @@ Only original mathematics, prose, examples and verification code are installed;
 no renderer code, adapted book text, images, diagrams or PDF is redistributed.
 No general permission for source media is inferred, and existing MIT notices
 remain unchanged.
+
+## Housing and exhaust sources
+
+Selected primary reading: Greater London Authority's *Housing Design* web text
+(explicitly Draft; edition date unestablished); MHCLG *Approved Document F*,
+Volume1,2026 edition for England; and Volume2,2021 edition, selected PSV definition
+only. [Exact sources, hashes and inspected extents](sources/housing-and-exhaust.md)
+retain draft/territorial status, exclusions and rights. No licence for GLA media
+was established. The PDFs retain Crown copyright and their stated Open Government
+Licence terms excluding logos/other identified rights. Only original explanatory
+synthesis, geometry/topology, study values and bibliographic links are installed;
+no source plan, diagram, scan, code-value table or extensive text is redistributed.
+The new examples do not claim to be prescribed compliant English systems.
 
 ## Skills-Architects
 

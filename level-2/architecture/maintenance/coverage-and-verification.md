@@ -10,6 +10,9 @@ Pass B is accepted at `b3d323e76392c6b8e00337998726320082f753cd`; its
 records independent review and dot's acceptance. The bounded method evidence
 remains in [vehicle and territorial service evidence](#pass-b-vehicle-and-territorial-service-evidence);
 the historical matrix is not rescored.
+Pass D's section/air-interface candidate is recorded in
+[housing and natural-exhaust evidence](#pass-d-housing-and-natural-exhaust-evidence),
+pending independent review; this does not rescore historical M3/D5/M6.
 The accepted Issue #10 result is
 [`39394ad06476952c17792022613648002a6000ee`](https://github.com/Krankort224/Skills/commit/39394ad06476952c17792022613648002a6000ee),
 as recorded in its [accepted F summary](https://github.com/Krankort224/Skills/issues/10#issuecomment-6716639914).
@@ -35,6 +38,7 @@ the accepted organization and preservation plan. Task outputs belong in the issu
 - [Six task-route probes](#six-task-route-probes)
 - [Pass A semantic-link audit](#pass-a-semantic-link-audit)
 - [Pass C multi-building sun evidence](#pass-c-multi-building-sun-evidence)
+- [Pass D housing and natural-exhaust evidence](#pass-d-housing-and-natural-exhaust-evidence)
 - [Pass B vehicle and territorial service evidence](#pass-b-vehicle-and-territorial-service-evidence)
 
 ## Selected depth increments
@@ -485,10 +489,103 @@ performance; selected legal test date, receiver, exclusions and fragmented-credi
 rules. A point's fixed-δ geometric result establishes none of those automatically.
 Near-coincident events or uncertain geometry need a justified enclosure or an
 explicit nominal/borderline result, not a universal time/angle tolerance.
-Passes D–F remain unstarted.
+At the accepted Pass C boundary, Passes D–F were unstarted.
 
 From the skill root run `PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_skill.py`
 and `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts -p 'test_*.py'`.
 The four new mathematical checks supplement the35 retained regressions. Use
 GFM/link/anchor, selected task-route and exact diff/preservation checks as well;
 the Issue handoff owns final revision and actual final command results.
+
+## Pass D housing and natural-exhaust evidence
+
+Accepted baseline: `375e0b2e533c19ebf2a6c152ce02be493202d7f7`.
+Acceptance-only housekeeping `426e045` records C's accepted status and
+[durable summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6728150751).
+The D candidate below requires independent review and dot's acceptance; the
+original 35-row benchmark and accepted A/B/C evidence retain their dated scope.
+
+### Canonical owners and demonstrations
+
+| Historical gap | New local owner | Demonstrated result / explicit limit |
+| --- | --- | --- |
+| M3 regular-to-turning/end geometry | [Section transformations](../references/typologies/housing/section-variants.md) | Same two-household/two-bedroom program, actual room/wall/shaft deductions, fitted objects/actions, connected/external fronts, whole portals and common core through regular/turning/end variants. Original naive rotation fails by12 m² private and24 m² core overlap; corrected turn needs48 m² more common/footprint and a46 m² external ground approach. Inner-corner point-outlook tests and end-wall deductions expose further failures. Actual core/equipment, daylight/privacy/solar, structural and statutory performance remain separate. |
+| D5/M6 natural-exhaust topology | [Natural-exhaust paths](../references/performance/comfort/natural-exhaust-topology.md) | Four owners across two floors, real supply/closed-door transfer/extract/branch/dedicated-channel/roof paths, shared-shaft versus shared-air distinctions, potential reverse connections, top-floor drive and maintainability. Broken transfer and unintended cross-dwelling join are diagnosed/corrected. More floors force a real shaft/door/bath revision. A graph, pressure diagnostic or outside duct envelope is not sized/proven ventilation or rated construction. |
+
+The housing example uses a common120 m² unit reservation with104.32 m² clear
+polygons before shaft deduction,8.64 perimeter and7.04 internal walls. Its1.1025
+m² shaft makes clear usable floor103.2175. Regular/end gross section area is288;
+the corrected turning arrangement is336 at the same household count. The end
+wall0.20→0.45 m changes clear polygons to101.52 and requires bed/action refit;
+at0.65 m the fixed living room falls below its supplied24 m² requirement until
+an authorized nonbearing partition/room/window arrangement changes. These are
+original study metrics/inputs, not adopted area or space standards.
+
+Room solids/actions, entire shared portals, nonoverlap, core/equipment reservations,
+front normals and wet/channel coordinates are explicit. Moving an actual channel
+from(15.875,10.025) to(20.025,−1.875) reopens below-floor and roof continuity;
+rotating a label or changing one floor is insufficient. The3 m±45° point-view
+fan is deliberately a project diagnostic, not whole-window daylight/insolation
+or privacy approval. Its nominal0.10 m gap is not a survey-robust margin.
+
+The air case distinguishes intended-flow and potential bidirectional interior
+connections, with outdoor terminals excluded only from the interior-isolation
+check. Supply and extract reachability are tested separately. It reserves four
+outside channel envelopes per unit stack, not four labels in one air plenum.
+At supplied densities the lower/top columns give2.4525/0.981 Pa ideal static
+drive; an adverse supplied−3 Pa wind term changes both signs. No flow/adequacy
+is computed. The third-floor correction reserves six actual channels in1.05×1.45
+m, refits a4.004 m² bathroom, changes its door and leaves4.1535 m² utility after
+shaft deduction; branch/support/rated construction and actual fixtures still
+need their technical evidence.
+
+### Changed-input checks and routes
+
+`scripts/test_housing_air_interfaces.py` contains four focused geometric/graph
+tests alongside the39 retained regressions. A fresh condition increases the
+point-view depth3→3.5 m with the1.20 m opening unchanged. The fixed bedroom
+frontage requires centre≥6.6 while a clear fan requires centre<6.5: conflict.
+A permitted0.25 m partition shift and centre6.4 recover that diagnostic while
+living24.61 and bedroom18.63 m² retain the supplied program and furniture/actions.
+This different case tests connected constraints, not a copied worked answer.
+
+A fresh air failure closes B1's bedroom1 supply while its exhaust remains reachable:
+the graph now fails its outdoor-to-room requirement even though a room-to-roof
+check alone would pass. A five-floor variant needs ten channels per unit stack;
+a two-column layout requires2.25 m height, greater than the old utility's2.20 m
+before door/maintenance checks. A separate negative density difference gives
+negative static drive despite topological continuity. These are independent
+executor calculations, not the separate reviewer's unseen tests or Pass F.
+
+N4 now follows Typologies→section transformations, using housing/dwelling/core
+owners only for their actual inputs/checks. N2 follows Space or air-mode/services
+to natural-exhaust topology when the shaft carries dwelling air. Housing, occupied
+fit, air, vertical/services, core and roof contain conditional consequence/check
+links, without duplicating the general procedures or adding a dispatcher.
+N1/N3/N5/N6 and accepted C's shadow branch remain available.
+
+### Sources, preservation and unresolved evidence
+
+[Selected primary records](../sources/housing-and-exhaust.md) retain actual read
+extents/rights and PDF SHA-256 values: GLA's explicitly Draft design web text,
+England's2026 dwelling ventilation document (supply/transfer/extract, hood,
+fire/combustion and maintenance interfaces), and the2021 non-domestic volume's
+PSV mechanism definition only. The draft is not adopted current authority;
+non-domestic prescriptions, English numeric requirements and media are not
+imported. Current adopted LPG PDF details were not read after direct403.
+Existing book/page records retain their old inspection limits, not a new scan.
+
+The original housing/access, dwelling fit, air-mode, section/services, core and
+roof procedures/examples remain intact; additions are conditional links or new
+owners. Eight operations, all four runtime calculator contracts/implementations,
+39 previous tests, normative content, accepted cases and historic35-row matrix
+are preserved. No BIM/CAD or engineering system is authored or certified.
+
+Run `PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_skill.py` and
+`PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts -p 'test_*.py'`
+from the skill root, supplemented by GFM/anchor/route and exact preservation
+checks. The final Issue handoff owns exact revision, actual command results and
+review limits. Actual household/door/fixture/vehicle/site conditions, sized
+channels/free areas, pressure losses and flow, wind/thermal models, terminal
+geometry, fire/acoustic/combustion and statutory approval remain evidence gates.
+Passes E/F are unstarted; graph or coordinate fit does not accept this pass.
