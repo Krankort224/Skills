@@ -207,13 +207,13 @@ def assess_cases(cases, results):
         assert v.assess_reuse(previous, old, current_profile)['status'] == 'reextract_all'
     return assessments
 
-def check_order_and_labels(base, results):
+def check_order_and_labels(base, results, cases):
     # Native ordered last-match policy, including idempotent exact duplicates.
     root = base / 'ordered-rules'
     root.mkdir()
     git(root, 'init', '-q', '-b', 'main')
     (root / 'a.md').write_text('# A\n', encoding="utf-8", newline="\n")
-    (root / 'code.py').write_text('value = 1\n', encoding="utf-8", newline="\n")
+    (root / 'code.py').write_text('def ordered_control():\n    return 1\n', encoding="utf-8", newline="\n")
     left = v.snapshot(root, ['*.md', '!a.md'], scope='Ordered native exclusion control')
     right = v.snapshot(root, ['!a.md', '*.md'], scope='Ordered native exclusion control')
     assert 'a.md' in left['sources'] and 'a.md' not in right['sources'] and left['identity'] != right['identity']
@@ -221,6 +221,60 @@ def check_order_and_labels(base, results):
     assert again['identity'] == left['identity']
     duplicate = v.snapshot(root, ['*.md', '!a.md', '*.md'], scope=right['scope'])
     assert duplicate['identity'] == right['identity']
+    # Detection, serialized policy and snapshots must retain actual rule order.
+    for index, rules in enumerate((['*.md', '!a.md'], ['!a.md', '*.md'], ['*.md', '!a.md', '*.md'])):
+        stage = base / f'ordered-build-{index}'
+        env = dict(env_for(root, stage), CONTEXT_EXCLUDES=json.dumps(rules))
+        d.run('structural-build', env)
+        context = json.loads((stage / 'artifacts/graph.json').read_text(encoding='utf-8'))['graph']['context']
+        snapshot = v.snapshot(root, rules, scope=left['scope'])
+        assert context['excludes'] == snapshot['exclusions'] == v.exclusion_policy(root, rules)
+        assert context['sources'] == snapshot['sources']
+        assert ('a.md' in context['sources']) == (index == 0)
+    # Every genuine freshly assembled case must accept its ORIGINAL raw input.
+    current_profile = v.profile(TOOLS)
+    for name, case in cases.items():
+        repo, checked, _, _, _ = results[name]
+        state = checked['graph']['graph']['context']['maintenance']
+        stored = state['snapshot']
+        fresh = v.snapshot(repo, case['exclusions'], stored['authority_sources'], scope=stored['scope'])
+        assert fresh['identity'] == stored['identity'], name
+        assert v.exclusion_policy(repo, fresh['exclusions']) == fresh['exclusions']
+        assert v.assess_reuse(state, fresh, current_profile)['status'] == 'noop', name
+    repo, checked, stage, _, _ = results['baseline']
+    stored = checked['graph']['graph']['context']['maintenance']['snapshot']
+    policy = {k:stored[k] for k in ('scope','authority_sources')}
+    policy['exclusions'] = cases['baseline']['exclusions']
+    policy_path = base / 'raw-refresh-policy.json'
+    dump(policy_path, policy)
+    env = dict(env_for(repo, base / 'raw-assessment'), CONTEXT_PREVIOUS_TRIO=str(stage), CONTEXT_REFRESH_POLICY=str(policy_path))
+    intact = d.snapshot(repo), d.snapshot(stage)
+    assert json.loads(d.execute(block('assess-refresh', 'graphify-maintenance.md'), env).stdout)['status'] == 'noop'
+    assert intact == (d.snapshot(repo), d.snapshot(stage))
+    # Mandatory module expansion is shared too; real manifest changes invalidate.
+    module_case = copy.deepcopy(cases['baseline'])
+    module_case['files'].update({'.gitmodules':'[submodule "sdk"]\n path = ./unselected//module\n',
+                                 'unselected/module/sdk.py':'def foreign_sdk(): pass\n'})
+    module_root = base / 'module-policy-repo'
+    init_repo(module_root, module_case['files'])
+    _, module_checked, _, _ = build(module_root, module_case, base / 'module-policy-build')
+    state = module_checked['graph']['graph']['context']['maintenance']
+    stored = state['snapshot']
+    fresh = v.snapshot(module_root, module_case['exclusions'], stored['authority_sources'], scope=stored['scope'])
+    assert 'unselected/module/' in fresh['exclusions'] and 'unselected/module/sdk.py' not in fresh['sources']
+    assert fresh['identity'] == stored['identity'] and v.assess_reuse(state, fresh, current_profile)['status'] == 'noop'
+    manifest = module_root / '.gitmodules'
+    original = manifest.read_bytes()
+    manifest.write_text('[submodule "sdk"]\n path = other/module\n', encoding='utf-8', newline='\n')
+    changed = v.snapshot(module_root, module_case['exclusions'], stored['authority_sources'], scope=stored['scope'])
+    assert changed['configuration'] != stored['configuration'] and 'unselected/module/sdk.py' in changed['sources']
+    assert v.assess_reuse(state, changed, current_profile)['status'] == 'reextract_all'
+    manifest.write_bytes(original)
+    # A mandatory module may coincide with a derived clamp; deduplicate it too.
+    manifest.write_text('[submodule "output"]\n path = graphify-out\n', encoding='utf-8', newline='\n')
+    expanded = v.exclusion_policy(module_root, module_case['exclusions'])
+    assert expanded.count('graphify-out/') == 1 and v.exclusion_policy(module_root, expanded) == expanded
+    manifest.write_bytes(original)
     before = left['identity']
     (root / '.env').write_text('SECRET=never-export-this-value\n', encoding="utf-8", newline="\n")
     assert v.snapshot(root, left['exclusions'], scope=left['scope'])['identity'] == before
@@ -248,7 +302,7 @@ def check_order_and_labels(base, results):
     assert {cid:sorted(n['id'] for n in nodes) for cid,nodes in members['communities'].items()} == {cid:item['members'] for cid,item in old['communities'].items()}
     d.execute(ASSEMBLE, dict(env, CONTEXT_LABELS=str(original_work / 'labels.json')), success=False, reason='Interpretation must match actual semantic evidence')
     assert not (work / 'rejected-stage').exists()
-    return {'ordered_native_rules':True,'duplicate_policy_idempotent':True,'secret_presence_excluded':True,'stale_labels_same_input_ids_refused':True}
+    return {'ordered_native_rules':True,'duplicate_policy_idempotent':True,'secret_presence_excluded':True,'stale_labels_same_input_ids_refused':True,'raw_effective_policy_noop_all_cases':True,'actual_raw_refresh_recipe_noop':True,'ordered_policy_serialized':True,'submodule_policy_roundtrip_and_change':True}
 
 
 def check_worktrees_and_export(base, remote, stage, cases, old_build):
@@ -525,7 +579,7 @@ def main():
                 assert any('48' in str(n) for n in graph['nodes'] if n.get('_origin') == 'semantic')
             results[name] = (root, checked, stage, plan, paths)
         assessments = assess_cases(cases, results)
-        controls = check_order_and_labels(base, results)
+        controls = check_order_and_labels(base, results, cases)
         seed, baseline, stage, _, _ = results['baseline']
         expected = gt(seed, 'rev-parse', 'HEAD')
         remote = base / 'remote.git'

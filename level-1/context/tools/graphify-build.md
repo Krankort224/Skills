@@ -23,7 +23,7 @@ Raw edges and built edges need not have equal counts: missing targets can be omi
 
 ## Build and inspect structural evidence
 
-Inputs: `CONTEXT_ROOT` is a quiescent source tree; `CONTEXT_TOOLS` is this reviewed directory; `CONTEXT_STAGE` is a NEW external staging directory. Set `GRAPHIFY_OUT` before native imports and retain the no-provider environment from [preparation](graphify.md#prepare-and-verify-the-structural-environment). Adapt exclusions to the actual installed graph/output, cache/staging and third-party paths; an omitted path is not automatically excluded.
+Inputs: `CONTEXT_ROOT` is a quiescent source tree; `CONTEXT_TOOLS` is this reviewed directory; `CONTEXT_STAGE` is a NEW external staging directory. Set `GRAPHIFY_OUT` before native imports and retain the no-provider environment from [preparation](graphify.md#prepare-and-verify-the-structural-environment). Adapt exclusions to the actual installed graph/output, cache/staging and third-party paths. The shared `exclusion_policy` expands raw or already-effective rules identically, appending the required conversion/submodule exclusions and reserved derived paths without sorting user rules; other omitted paths are not automatically excluded.
 
 Example exclusion input:
 
@@ -61,24 +61,12 @@ assert metadata.version("graphifyy") == "0.9.103"
 if shutil.which("git"):
     vcs_root = subprocess.run(["git", "-C", str(root), "rev-parse", "--show-toplevel"], capture_output=True, text=True, timeout=30)
     assert vcs_root.returncode != 0 or Path(vcs_root.stdout.strip()).resolve() == root, "Select the canonical repository root; ancestor ignore rules need separate review"
-excludes = json.loads(os.environ["CONTEXT_EXCLUDES"])
-assert isinstance(excludes, list) and all(isinstance(x, str) for x in excludes)
-# Native detection can convert Office inputs; exclude every casing before it runs.
-for extension in ("pdf", "docx", "xlsx", "xlsm", "gdoc", "gsheet", "gslides"):
-    excludes.append("**/*." + "".join("[" + c.lower() + c.upper() + "]" for c in extension))
-# Record declared, unselected submodules; a native scan does not exclude them automatically.
-modules = root / ".gitmodules"
-if modules.exists():
-    assert modules.resolve().is_relative_to(root)
-    listing = subprocess.run(["git", "config", "--file", str(modules), "--get-regexp", r"^submodule\..*\.path$"], capture_output=True, text=True, timeout=30)
-    assert listing.returncode in (0, 1), listing.stderr
-    for line in listing.stdout.splitlines():
-        path = line.split(None, 1)[1]
-        assert path and path == path.strip() and not Path(path).is_absolute() and ".." not in Path(path).parts
-        assert not any(c in path for c in "!*?[]#\\\n\r\t"), "Unsupported submodule spelling; do not reinterpret it as an ignore pattern"
-        path = Path(path).as_posix()
-        assert path != ".", "Submodule path must identify a strict subtree"
-        excludes.append(path.rstrip("/") + "/")
+# Share raw/effective policy expansion with refresh snapshots before detection.
+module = Path(os.environ["CONTEXT_TOOLS"]) / "validate_context_fragments.py"
+spec = importlib.util.spec_from_file_location("context_structural_policy", module)
+validator = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(validator)
+excludes = validator.exclusion_policy(root, json.loads(os.environ["CONTEXT_EXCLUDES"]))
 from graphify.detect import detect, ignored_predicate, _is_noise_dir
 from graphify.extract import extract, _get_extractor
 from graphify.cache import load_cached
@@ -182,7 +170,7 @@ omissions = {
     "ignored": [relative(p) for p in detection["ignored"]],
     "pruned_noise_dirs": [relative(p) for p in detection["pruned_noise_dirs"]],
 }
-identity_material = {"sources": inputs, "configuration_hashes": config_hashes, "excludes": sorted(set(excludes)), "gitignore": False, "graphify_revision": "16218bfc80d4ca2799734d045039f7ed1a5fa9fb", "mode": "utf8-python-markdown-structural-v1"}
+identity_material = {"sources": inputs, "configuration_hashes": config_hashes, "excludes": excludes, "gitignore": False, "graphify_revision": "16218bfc80d4ca2799734d045039f7ed1a5fa9fb", "mode": "utf8-python-markdown-structural-v1"}
 identity = hashlib.sha256(json.dumps(identity_material, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
 G.graph["context"] = {
     "input_identity": identity, **identity_material, "source_commit": commit or None,

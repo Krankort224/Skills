@@ -16,6 +16,7 @@ import os
 from pathlib import Path
 import re
 import stat
+import subprocess
 import sys
 
 from graphify.ids import make_id, normalize_id
@@ -332,12 +333,47 @@ def profile(tools):
     return result
 
 
+def exclusion_policy(root, exclusions, *, derived_paths=("skills/context/references/graphify", "graphify-out")):
+    """Expand raw/effective rules identically; retain last-match user ordering."""
+    root = Path(root).resolve(strict=True)
+    require(root.is_dir(), "Source root is not a directory")
+    require(isinstance(exclusions, (list, tuple)) and
+            all(isinstance(x, str) for x in exclusions), "Invalid exclusion policy")
+    mandatory = ["**/*." + "".join("[" + c.lower() + c.upper() + "]" for c in extension)
+                 for extension in ("pdf", "docx", "xlsx", "xlsm", "gdoc", "gsheet", "gslides")]
+    modules = root / ".gitmodules"
+    require(not modules.is_symlink(), "Symlinked configuration requires separate review")
+    if modules.exists():
+        require(modules.resolve().is_relative_to(root), "Configuration escaped source root")
+        read_bounded(modules)
+        listing = subprocess.run(["git", "config", "--file", str(modules), "--get-regexp",
+                                  r"^submodule\..*\.path$"], capture_output=True, text=True,
+                                 encoding="utf-8", timeout=30)
+        require(listing.returncode in (0, 1), "Invalid submodule configuration")
+        for line in listing.stdout.splitlines():
+            path = line.split(None, 1)[1]
+            require(path and path == path.strip() and not Path(path).is_absolute()
+                    and ".." not in Path(path).parts, "Unsafe submodule path")
+            require(not any(c in path for c in "!*?[]#\\\n\r\t"),
+                    "Unsupported submodule spelling; do not reinterpret it as an ignore pattern")
+            path = Path(path).as_posix()
+            require(path != ".", "Submodule path must identify a strict subtree")
+            mandatory.append(path.rstrip("/") + "/")
+    hard = [p + "/" for p in sorted({_relative(p.rstrip("/")) for p in derived_paths})]
+    seen, reversed_policy = set(), []
+    for pattern in reversed([*exclusions, *mandatory, *hard]):
+        if pattern not in seen:
+            seen.add(pattern)
+            reversed_policy.append(pattern)
+    return list(reversed(reversed_policy))
+
+
 def snapshot(root, exclusions, authority_sources=(), *, previous_sources=(),
              scope="", derived_paths=("skills/context/references/graphify", "graphify-out")):
     """Read-only source/policy snapshot; failures raise and block refresh.
 
-    gitignore=False is the accepted D lane. Explicit graph/submodule/output
-    exclusions must be carried from D. Known derived subtrees are clamped
+    Uses the same gitignore=False policy expansion as structural staging. Raw
+    or effective rules are accepted. Known derived subtrees are clamped
     lexically as well as with native ignore rules, including when absent.
     previous_status is evidence for assessment, not part of the input identity.
     Sensitive-file contents AND presence are outside portable input identity.
@@ -347,18 +383,8 @@ def snapshot(root, exclusions, authority_sources=(), *, previous_sources=(),
     vcs_root = _find_vcs_root(root)
     require(vcs_root is None or vcs_root.resolve() == root, "Select canonical VCS root")
     require(isinstance(scope, str) and scope.strip(), "Explicit extraction scope required")
-    require(isinstance(exclusions, (list, tuple)) and
-          all(isinstance(x, str) for x in exclusions), "Invalid exclusion policy")
     derived = sorted({_relative(p.rstrip("/")) for p in derived_paths})
-    hard = [p + "/" for p in derived]
-    # Native rules are last-match-wins. Drop only earlier IDENTICAL duplicates;
-    # preserve every other ordering decision, then clamp known derived outputs.
-    seen, reversed_policy = set(), []
-    for pattern in reversed(exclusions):
-        if pattern not in seen and pattern not in hard:
-            seen.add(pattern)
-            reversed_policy.append(pattern)
-    policy = list(reversed(reversed_policy)) + hard
+    policy = exclusion_policy(root, exclusions, derived_paths=derived)
     ignored = ignored_predicate(root, extra_excludes=policy, gitignore=False)
 
     def derived_path(path):
