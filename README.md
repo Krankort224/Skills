@@ -17,8 +17,7 @@ Skills/
 ├── level-2/
 │   ├── architecture/
 │   ├── research/
-│   ├── restructure/
-│   └── ponytail/   # pinned upstream gitlink; reference only
+│   └── restructure/
 └── level-3/
     ├── revit/
     ├── word/
@@ -29,7 +28,7 @@ Each skill owns its `SKILL.md` and supporting resources. [AGENTS.md](AGENTS.md#u
 
 Skill levels classify responsibility, not complexity, instruction priority or subagent depth. Level 2 and Level 3 may be used directly by root or workers and may compose. Operation-specific loading remains progressive. The [migration and adoption map](#migration-and-adoption) records changed paths, preserved identities and adoption checks. The prospective `mep` skill is not created by this migration.
 
-## Skills
+## Repository skills
 
 ### Level 0
 
@@ -92,10 +91,6 @@ Tree depth, allowed model tiers at each level, and spawning rights are defined b
 
 ### Level 2
 
-#### ponytail — external reference
-
-[ponytail](level-2/ponytail) is a pinned Git submodule linking to [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail), not an adopted skill. Its source is available for deliberate inspection; no installation, hooks, agent policy or personality is enabled through this link.
-
 #### restructure
 
 Restructures an existing repository or file accumulation without imposing a universal directory layout.
@@ -150,9 +145,15 @@ Each logical block has one canonical Markdown file containing its contract, Pyth
 
 Two standard-library Python 3 tools inspect `.dyn`/ZIP metadata, ports and wires without executing embedded code, and validate block contracts, dependencies, syntax and local links. Script/graph creation and native document writes still require the documented runtime, transaction ownership and readback contract.
 
-## External references
+## Third-party skills
 
-The [Ponytail gitlink](level-2/ponytail) on Level 2 points to the official upstream repository at the pinned revision `96608e078b2d5ea607c5c3b8b5a54d1c1fba6846`. It is a reference for deliberate consultation, not an installed skill or plugin; its instructions and hooks are not adopted automatically.
+The [repository skills](#repository-skills) above are maintained in this Git tree. The following external skills are part of the broader working toolset but are installed separately; the connection method is documented here instead of copying or linking upstream source code.
+
+| Skill | Source | Connection method | Coverage |
+| --- | --- | --- | --- |
+| **Ponytail** | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | **ChatGPT plugin** (`engineering-suite-ponytail`): install and enable Ponytail through **Settings → Plugins** or the chat sidebar. No Git submodule or repository-local skill installation is required. | Minimal implementation and simplification; code review and repository audits for over-engineering; technical-debt ledger and impact/help views. |
+
+The Ponytail plugin bundles `ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-debt`, `ponytail-gain`, `ponytail-help`, and `code-simplification`. Its entry point and bundled instructions are supplied by the plugin. Availability is specific to the connected environment and must be checked independently for ChatGPT, Codex, or other agents; cloning this repository does not install or activate the plugin.
 
 ## Principles
 
