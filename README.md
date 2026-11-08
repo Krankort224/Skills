@@ -47,19 +47,11 @@ They compose through data: source-backed inputs, task requirements and acceptanc
 
 #### context
 
-Loads the minimum authoritative repository context required for the current task.
+Reads project purpose, component relationships and authoritative sources, and maintains or reviews project context references when requested. The sole [context entry point](level-1/context/SKILL.md) routes to read, maintain and review; ordinary loading/reading/review does not change files or install tools.
 
-The shared skill contains only general context-loading invariants. A repository-local installation may add:
+An adopted project uses a completed `skills/context/references/repository.md` explaining its purpose, scopes, component roles/interactions, knowledge owners, constraints and reading routes. Create it from the shared source template when available; preserve local adaptations and keep source templates in Skills. The map routes to canonical owners without duplicating their whole documents. Missing maps/graphs allow direct-source investigation.
 
-```text
-skills/context/references/repository.md
-```
-
-based on `repository.template.md`.
-
-The local map defines repository scopes, knowledge ownership, source authority, canonical destinations, and reading routes. Ownership boundaries belong in one shared table; contracts remain at their canonical sources. The shared skill resolves these roles and reports material gaps without modifying project knowledge.
-
-Project-reference maintenance and native Graphify CLI integration are planned in [Issue #9](https://github.com/Krankort224/Skills/issues/9) Pass B; they are not implemented by the hierarchy migration and have no Operations-hub dependency.
+Map-based initialization/refresh and read-only review are supported. The artifact-only `references/graphify/` skeleton reserves the derived JSON/HTML/report location without fabricated output. [Graphify's audited profile](level-1/context/tools/graphify.md) records B's source/feasibility evidence; graph construction, genuine subscription semantic extraction, portable graph maintenance/publication and host pilots remain later [Issue #9](https://github.com/Krankort224/Skills/issues/9) gates. There is no Operations-hub dependency.
 
 #### workflow
 

@@ -1,0 +1,78 @@
+{
+  "purpose": "Pass-C map workflow fixtures; materialize only files and task for a worker, keep oracles outside its fixture directory. No Graphify or provider is required.",
+  "cases": {
+    "documentary": {
+      "files": {
+        "AGENTS.md": "# Маяк\n\nЗнания проекта и карта контекста ведутся по-русски. Применяй установленный skills/context/SKILL.md.\nПроект: пилотная музейная экспозиция. Текущую утверждённую программу и вместимость определяет program.md; README — навигация. decisions/current.md определяет компоненты и поток работы. archive/ — неизменяемые исторические входы. notes/ — неутверждённые гипотезы. Исторические/экспериментальные решения не определяют пилот.\n",
+        "README.md": "# Маяк\n\nПилот небольшого музея устной истории. Для назначения и текущей вместимости см. program.md, для устройства — decisions/current.md.\nИсторический эскиз: archive/2019.md. Черновые идеи: notes/audio.md.\n",
+        "program.md": "# Утверждённая программа\n\nМаяк сохраняет устную историю района и даёт школьным группам работать с проверенными материалами.\n## Пилот\nОдновременно допускается одна группа из 12 посетителей. Пилот включает каталог источников и одну экспозицию, без публичного вещания. Изменять программу может куратор в рамках отдельно утверждённого задания.\n",
+        "decisions/current.md": "# Текущее устройство\n\n## Архив\nХранитель принимает записи и первичные расшифровки в неизменяемый архив. Архив не определяет опубликованную интерпретацию.\n## Каталог\nРедактор сверяет карточки с архивными записями и фиксирует происхождение; каталог направляет исследователя к первоисточнику.\n## Экспозиция\nКуратор выбирает проверенные карточки из каталога и создаёт сценарий экспозиции. Каталог получает обратные замечания к карточкам; исправление первичных записей не входит в этот процесс.\n",
+        "archive/2019.md": "# Эскиз 2019\n\nИсторическая программа: две группы по 20 человек и публичное вещание. Этот эскиз оставлен как неизменяемое свидетельство предыдущей идеи.\n",
+        "notes/audio.md": "# Возможный аудиогид\n\nПредложение: воспроизведение аудио через личные телефоны. Решение о включении, владелец аудио-политики и бюджет не назначены. Статус: идея, не утверждённая часть пилота.\n"
+      },
+      "task": "Use skills/context to initialize the project context map at skills/context/references/repository.md. Keep the established project language. Then explain the purpose, how the main parts interact, the current group capacity, whether public broadcasting/audio is approved, and which sources own these answers. Only the map may be changed. Do not install tools, construct graphs, change canonical sources, or create an Issue. Report material unresolved ownership. The source template is intentionally not installed.",
+      "oracle": {
+        "language": "Russian",
+        "capacity": 12,
+        "flow": "immutable archive -> checked catalogue -> curated exhibition; feedback targets catalogue",
+        "broadcast": "excluded in current pilot",
+        "audio": "unapproved idea; owner/budget unresolved",
+        "editable": [
+          "skills/context/references/repository.md"
+        ],
+        "immutable": [
+          "archive/2019.md"
+        ],
+        "required_sources": [
+          "program.md",
+          "decisions/current.md",
+          "notes/audio.md"
+        ]
+      },
+      "read_task": "Use skills/context to answer what this project does, how its main parts interact, its current capacity and whether audio/public broadcasting is approved. Identify the authoritative sources and material unknowns. This is a read-only question; do not create or edit references or other files, install/build tools, or create an Issue. The local context map and source template are absent."
+    },
+    "mixed": {
+      "files": {
+        "AGENTS.md": "# Parcel\n\nUse skills/context/SKILL.md. Project knowledge is in English. ADRs own accepted design; docs/contract.md owns intended public constraints; current src/ implementation and focused tests own evidence about actual behavior. README routes reading. experiments/ and archive/ do not define supported main behavior. A reference-map task may change only skills/context/references/repository.md. Product policy changes require their separate owner/task; do not invent missing owners.\n",
+        "README.md": "# Parcel\n\nLocal document-composition job queue. Read adr/active.md for accepted design, docs/contract.md for interface constraints and src/ for implementation. Run the existing focused checks using Python unittest.\n",
+        "adr/active.md": "# Accepted design\n\nParcel composes documents locally. An API accepts a bounded batch and appends it to a local queue; a worker removes one job and passes it to the renderer. The renderer returns a local document. No hosted service or streaming mode is approved on main.\n",
+        "docs/contract.md": "# Public contract\n\n## Batch\nThe supported maximum is 16 items per job. Jobs are validated before entering the queue.\n## Retention\nA durable retention policy and its owner are not yet assigned. Do not present current in-memory behavior as an approved retention guarantee.\n",
+        "docs/ops.md": "# Operator notes\n\nOperators consult these notes for manual queue inspection. Proposal: discard completed results after 48 hours; this proposal has not been assigned a policy owner or approved.\n",
+        "src/policy.py": "MAX_BATCH = 16\n\ndef validate(items):\n    if len(items) > MAX_BATCH:\n        raise ValueError(\"batch too large\")\n    return list(items)\n",
+        "src/store.py": "pending = []\n\ndef append(job):\n    pending.append(job)\n    return len(pending)\n\ndef take():\n    return pending.pop(0)\n",
+        "src/api.py": "from .policy import validate\nfrom . import store\n\ndef enqueue(items):\n    return store.append(validate(items))\n",
+        "src/worker.py": "from . import store, renderer\n\ndef run():\n    return renderer.render(store.take())\n",
+        "src/renderer.py": "def render(items):\n    return \"\\n\".join(items)\n",
+        "src/__init__.py": "",
+        "tests/test_queue.py": "import unittest\nfrom src.policy import validate\n\nclass BatchTest(unittest.TestCase):\n    def test_bound(self):\n        self.assertEqual(len(validate([\"a\"] * 16)), 16)\n        with self.assertRaises(ValueError): validate([\"a\"] * 17)\n",
+        "archive/migration.md": "# Retired proposal\n\nThe earlier hosted aggregator accepted up to 8 items and planned public streaming. This proposal was superseded by adr/active.md.\n",
+        "experiments/streaming/README.md": "# Prototype only\n\nA streaming prototype for an experimental branch. Not supported or approved for main.\n",
+        "skills/context/references/repository.md": "# Parcel context\n\nPurpose: hosted aggregator with public streaming. Maximum batch: 8.\nSources: archive/migration.md and experiments/streaming/README.md.\n\n## Local reading preferences\n\nOperator instructions stay in docs/ops.md; keep their commands out of this map.\n\n## Route\n\nStart all questions at deleted-design.md.\n",
+        "skills/context/references/graphify/GRAPH_REPORT.md": "# Old graph report\n\nDerived report of the retired hosted prototype: batches of 8; streaming is central. Input identity and complete extraction coverage are unavailable.\n"
+      },
+      "task": "Use skills/context to review and fix the stale project context map at skills/context/references/repository.md, preserving useful local adaptations. Then answer what Parcel does on main, how an item moves through its components, the actual/intended batch bound and who owns it, whether streaming is supported, and what can be said about retention policy. Change only the map. Do not install/build graph tools, edit the old graph report or canonical sources, implement policy, or create an Issue.",
+      "oracle": {
+        "language": "English",
+        "capacity": 16,
+        "flow": "enqueue -> validate -> append queue -> worker take -> renderer local document",
+        "streaming": "prototype only, excluded main",
+        "retention": "no approved policy or owner; in-memory behavior/proposal are not guarantees",
+        "preserved": "Operator instructions stay in docs/ops.md; keep their commands out of this map.",
+        "editable": [
+          "skills/context/references/repository.md"
+        ],
+        "required_sources": [
+          "adr/active.md",
+          "docs/contract.md",
+          "src/policy.py",
+          "src/api.py",
+          "src/store.py",
+          "src/worker.py",
+          "src/renderer.py",
+          "docs/ops.md"
+        ]
+      },
+      "review_task": "Use skills/context to review the existing project context map for accuracy and usefulness on main. Report material findings with evidence, correction destinations and limits. This is review only; do not apply fixes or change any file, install/build graph tools, or create an Issue."
+    }
+  }
+}
