@@ -9,6 +9,7 @@
 - [Capability and reuse decisions](#capability-and-reuse-decisions)
 - [Construction route](#construction-route)
 - [Semantic evidence contract](#semantic-evidence-contract)
+- [Subscription fragments and mixed assembly](#plan-read-and-reconcile-subscription-fragments)
 - [Freshness, portability and publication](#freshness-portability-and-publication)
 - [Verification corpus and oracles](#verification-corpus-and-oracles)
 - [Source ledger](#source-ledger)
@@ -17,7 +18,7 @@
 
 Project understanding starts with the task, applicable scope and authoritative sources. The populated `references/repository.md` explains project purpose, component roles and interactions, constraints, knowledge owners and routes to detail. Graphs supply derived relationship evidence; neither connectivity nor a model's confidence overrides the owner of a fact. Missing, stale, incompatible or incomplete graphs leave ordinary source investigation available. A narrow question needs only relevant sources and bounded graph results.
 
-This guide records the inspected native interfaces and the verified compatibility profile. The current shared `context/SKILL.md` routes to complete project-map read, maintain and review methods without graph prerequisites. The structural procedure below prepares and verifies a fresh staged trio for the tested Linux Python/Markdown lane. Subscription semantic extraction, the mixed-graph maintenance/publication transaction, broader investigation and two-host pilot require their own implementation and validation; structural evidence does not establish those capabilities. Issue execution, publication and acceptance remain with `workflow`; delegation remains with `delegation`.
+This guide records the inspected native interfaces and the verified compatibility profile. The current shared `context/SKILL.md` routes to complete project-map read, maintain and review methods without graph prerequisites. The structural procedure below prepares and verifies a fresh staged trio for the tested Linux Python/Markdown lane. The semantic procedure below adds actual current-agent reading, strict range/evidence validation and fresh native mixed assembly in the same tested lane. Portable mixed maintenance/publication, broader investigation and the two-host pilot retain their separate implementation/validation gates. Issue execution, publication and acceptance remain with `workflow`; delegation remains with `delegation`.
 
 ## Immutable source and dependencies
 
@@ -381,11 +382,11 @@ The selected route is CLI-first for supported commands, with direct native calls
 5. Validate each expected chunk, source identity, source locations, coverage and confidence; reconcile cross-chunk endpoints against known IDs. Keep coverage separately before `graphify merge-chunks <explicit files> --out <staged semantic JSON>`. Do not glob stale results from an earlier run. Reuse native `build_from_json`/`build_merge(root=..., directed=True, dedup=False)` with structural `extracted_sources` and explicit semantic origin. Build merge returns a graph without writing; mutable input dictionaries need copies when reused.
 6. Native cluster/cohesion/analysis helpers produce structural evidence; the current agent may name communities from actual members. Use native `to_json`, `to_html` and report generation against the same graph/inventory/labels, at explicit staging paths. Check actual return values and all three artifacts. Native report expects numeric usage; preserve unknown subscription usage explicitly in the report/graph metadata instead of presenting default zero counters as measurement.
 7. For strict read-only investigation, use native loaders and traversal functions directly. CLI `query`, `path` and `explain` call `_touch_query_stamp` and attempt to create `cache/last_query_stamp` beside the queried graph; query logging is separately opt-in and can be disabled with process-local `GRAPHIFY_QUERY_LOG_DISABLE=1`. `serve._read_graph` plus `_query_graph_text` supplies bounded source-backed context without the CLI stamp (probe checks fixture bytes/inventory unchanged). The native loader also opportunistically reads a neighboring learning sidecar and may hash its referenced sources; that optional derived evidence is absent in this probe. Do not silently activate work-memory annotations: audit them within scope or use the native raw JSON/path loader and omit the in-memory learning overlay. Directional path/explain read alternatives and a present sidecar still need their own operation-specific no-write/scope checks; do not claim all CLI reads are inert.
-8. Publication uses the project's existing workflow and a checked input identity. No second Graphify skill, router, service or package-vendoring layer is selected. The probe exercises the interface slice; its graph-dependent D–H slices still require complete operational implementation and tests before downstream graph adoption.
+8. Publication uses the project's existing workflow and a checked input identity. No second Graphify skill, router, service or package-vendoring layer is selected. The procedures above implement bounded initial structural and active-agent mixed staging. General maintenance/publication, broader investigation and host adoption still require their remaining gates before downstream deployment.
 
 ### Selected flat-helper boundary
 
-Reuse native commands/libraries unchanged for parsing, IDs, graph assembly, cache, queries, analysis and export. Select **one future flat validation helper**, `tools/validate_context_fragments.py`, for the demonstrated native gap: validate the explicit expected shard set and each source's completed ranges/hash, provenance, origin and schema **before** any cache/merge/publication write. It should call native fragment/schema validation, reject a missing/invalid/unexpected shard or unsafe source path, and return failure without altering last-good data. It must not implement extraction, traversal, provider access, installation or a second pipeline/dispatcher. Its implementation belongs to the semantic slice; no runtime helper or copied upstream specification is installed by this audit. The existing `probe_graphify.py` is only a reproducible compatibility check.
+Reuse native commands/libraries unchanged for parsing, IDs, graph assembly, cache, queries, analysis and export. Use **one flat validation helper**, [validate_context_fragments.py](validate_context_fragments.py), for the demonstrated native gap: validate the explicit expected shard set and each source's completed ranges/hash, provenance, origin and schema **before** any cache/merge/publication write. It calls native fragment/schema validation, rejects missing/invalid/unexpected shards and unsafe paths, and fails without changing last-good data. It validates file inventory/configuration with native ignore facilities; it does not implement extraction, graph traversal, provider access, installation or a second pipeline/dispatcher. Native code remains external; no upstream extraction specification is copied. The existing `probe_graphify.py` is only a reproducible compatibility check.
 
 ## Semantic evidence contract
 
@@ -396,6 +397,131 @@ Use EXTRACTED/1.0 for explicit evidence, INFERRED for a supported inference with
 Stamp semantic nodes **and edges** `_origin="semantic"`, including line-located documentary evidence; native legacy fallback otherwise interprets `L<number>` as AST. Keep independent semantic records when they must survive AST refresh. Metadata added solely to an AST-origin node can be replaced with that node. Preserve documentary links, code structure and model-derived relations as distinct evidence even when endpoints coincide; inspect native edge/evidence folding before claiming all parallel facts survived.
 
 Bound both source count and content size. Upstream suggests <=20–25 files and about 6000 lines per chunk, with >2000-line text isolated. Treat these as upper bounds to reduce for dense material or actual host limits. For long documents, enumerate ordered line/byte ranges through EOF and attach source hashes and completed ranges; do not rely on one capped tool result. Keep one source identity across slices and reconcile cross-slice concepts after all slices complete. Missing, short, failed or malformed chunks leave coverage incomplete and cannot replace a complete prior semantic source group. Record the zero-concept/negative result explicitly in coverage: native semantic cache treats zero-node/zero-hyperedge output as a miss.
+
+### Plan, read and reconcile subscription fragments
+
+This semantic slice uses the active subscription agent's actual reading and reasoning. It has no inference command or provider client. In Codex use permitted agent tools under `delegation`; on a host without subagents the current agent processes the same bounded plan serially. Actual Windows/Work integration is still unverified. Do not infer concepts from filenames, use `graphify.llm`/headless provider extraction, require an invented Agent tool, restart clients, edit credentials or fall back to ambient keys.
+
+1. Run the verified D preparation and fresh structural procedure. Keep its source root, source inventory and baseline JSON fixed. Select the semantic scope/formats explicitly; this lane covers UTF-8 Python/Markdown, not unread/unsupported binary/conversion inputs. Exclude outputs and secrets as in D. Prepare the independent plan **before** collecting results; do not infer expected work from successful returns.
+2. This initial mixed profile plans **every source in the D baseline**, including explicit zero findings for irrelevant sources; a semantic subset cannot conceal stale structural input. It rechecks that complete baseline source set, bytes and in-scope configuration before/after assembly, conservatively refusing an inventory mismatch and requiring fresh D staging. This is initial-build coherence, not F incremental reuse. Plan JSON uses `schema` and `prompt_version` = `context-semantic-v1`, the pinned `graphify_revision`, nonempty `scope`, `structural_sha256` (full baseline artifact bytes), `sources` mapping root-relative POSIX paths to `{sha256, line_count}`, and `shards` = `[{id, ranges:[{source_file,start,end,sha256}]}]`. Hash source bytes unchanged. Decode UTF-8 with an optional BOM; count `splitlines(keepends=True)`; range hashes cover the decoded inclusive lines re-encoded as UTF-8, preserving line endings. Nonempty ranges are 1-based inclusive; an empty file has one `0..0` range/hash of empty bytes and can yield only a zero-findings receipt. Assigned ranges across all shards cover every planned source through EOF exactly once, without gaps/overlaps. Keep plans/results in task-owned storage, outside graph artifacts.
+3. Bound actual source bytes as well as lines/files. The validator profile caps JSON/source files at 2 MiB, sources at100, shards at64, aggregate fragments at32 MiB and hyperedges at3 per shard; these are ceilings, not suggested agent workloads. Begin with a few short files and smaller ranges; isolate long text. Read each assigned range entirely using output limits that do not truncate it, paging until EOF. A hash, receipt, range total or successful tool call does not establish that the model understood the source. Inspect the actual output and pause/re-read a truncated/missing part. Do not emit complete coverage for partial reads.
+4. Give a worker only the scope, assigned ranges, source/authority instructions, exact structural IDs it needs and this schema/rubric. Keep truth-set answers outside its view. Worker results can be returned as JSON in conversation; worker file writes are optional, never required by the model pipeline. The coordinator can save an exact response to an explicit task-owned file. Serial/no-subagent execution follows the identical schema, bounded reading and validation, without fabricating worker activity.
+5. Each returned fragment has `schema`, `shard_id`, `status:"complete"`, `reader:{surface,model,usage:null}`, `receipts`, `nodes`, `edges`, `hyperedges` and `open_questions`. Record actual assigned/observable model provenance; use null when runtime identity or usage is not exposed. Each receipt repeats its assigned `{source_file,start,end,sha256}` exactly, then adds a meaningful reading `summary`, `outcome:"findings"|"zero-findings"` and `reason`. A zero-concept/unrelated source is a completed negative result, not a fabricated node or cache hit. A findings receipt must own an emitted record/question; empty graph arrays alone cannot substantiate it. Missing/failed/partial work stays incomplete; retry only the failed ranges, then revalidate the full explicit result set.
+6. New nodes include `entity_key`, native `make_id(Path(source_file).with_suffix("").as_posix(), entity_key)`, short `label`, an allowed `file_type`, primary `source_file`, `source_location:"L3"|"L3-L7"`, `_origin:"semantic"` and `evidence`. A stable entity key describes the entity, never its chunk/sequence. Use full root-relative source identity and native Unicode normalization; don't duplicate an AST symbol as a semantic node. Link to its exact verified AST ID. Keep rationale/authority/claim status on the record where relevant. Retain current, superseded, observed and unresolved claims distinctly; a historical conflict does not override its current owner.
+7. Evidence is a list of `{source_file,start,end,quote}` with exact complete decoded source lines (omit only final CR/LF). Primary evidence must be within the shard's assigned range and bounded record location. Other supporting sources must also be actually read and globally planned; additional reading does not claim ownership/complete coverage of their tier. Edges add `source`, `target`, a precise directed `relation`, `confidence`, `confidence_score` and a nonempty `rationale` for inference/ambiguity. INFERRED/AMBIGUOUS cross-source relations require anchors for both endpoint sources. EXTRACTED references may be stated in the referring source alone, with a separately verified target ID. Uncertain referents may be evidence-bearing `open_questions` (`question` plus primary source/location/origin/evidence) rather than speculative links. Do not turn unrelated text into ambiguity.
+8. Reconcile all ranges and source-owned identities after reading. A relation from a later range may reference a real concept introduced earlier. Validate against the aggregate semantic+structural ID universe, not one shard in isolation. Preserve a unique explicit owner for each node; conflicting/duplicate definitions require source review and a reconciled response, not first-writer wins, automatic renaming or a chunk suffix. Re-read material sources when deciding cross-chunk equivalence; retain original returns privately for execution review and record meaningful corrections, without copying a transcript into project knowledge.
+9. Optional hyperedges use the same evidence/confidence/origin fields plus `entity_key`, source-owned `id`, `label`, `nodes` (at least three distinct resolved members) and `relation`; use only if it captures a useful group beyond pairwise edges. Inferred/ambiguous groups need evidence for every member-source identity. The recorded semantic trials use pairwise edges; optional hyperedges still face the explicit native normalization/preservation check and may be refused. Every graph node, edge and hyperedge is explicitly semantic; line-like locations must not trigger AST-origin fallback. Existing structural evidence remains independently owned.
+
+Use [validate_context_fragments.py](validate_context_fragments.py) with the verified interpreter before native assembly. It reads/parses/hashes the same bounded JSON buffer, rejects duplicate keys/nonfinite numbers/partial markers, calls native security/schema/ID facilities and rejects missing/unexpected/duplicate shards, planned/returned range defects, changed bytes, unsafe paths, bad anchors, origin/confidence errors, duplicate/AST IDs and unknown endpoints. It is read-only and returns validated semantic data plus its coverage ledger on stdout. It does **not** establish semantic relevance/understanding; source-backed trial answers and reviewer judgment remain necessary. It does not infer, repair, merge, cache or publish. This profile records subscription usage as null; adding measured-counter support requires actual host observations and a reviewed extension.
+
+```sh
+"$CONTEXT_PY" "$CONTEXT_TOOLS/validate_context_fragments.py" \
+  --root "$CONTEXT_ROOT" --plan /absolute/task/plan.json \
+  --structural /absolute/task/structural/artifacts/graph.json \
+  --fragments /absolute/task/chunk-a.json /absolute/task/chunk-b.json
+```
+
+Native `validate_semantic_fragment` checks shape/security, not full coverage. Do not use `sanitize_semantic_fragment` in this route: the pinned implementation drops `concept`/`rationale` nodes and can filter cross-fragment hyperedges. Native `merge-chunks` skips invalid siblings, first-wins duplicate IDs, drops coverage and substitutes zero usage. This selected direct native assembly avoids that lossy boundary; a future command route must prove no partial/drop occurred rather than trust exit0.
+
+The pinned native graph is simple directed storage: same-endpoint evidence can coalesce or lose distinct relations/origin. This slice **refuses semantic pairs already occupied by another semantic or structural edge** instead of silently losing independent facts. Rephrase/reify only when source meaning justifies a distinct entity, or report the unsupported collision; do not alter truth to make validation pass. Full mixed update/empty-result replacement remains F: source ownership inferred solely from nodes is insufficient for edge-only or zero-finding replacement.
+
+### Assemble, interpret and verify a fresh mixed trio
+
+Selected Python/Markdown bytes, paths and scoped configuration are checked against the full D baseline. D's unsupported/omitted-file inventory is retained as a labeled observation at structural staging; this semantic phase does not recertify every omitted-file change. Redo D staging when current whole-inventory evidence is needed.
+
+Set `CONTEXT_PLAN`, `CONTEXT_STRUCTURAL` and `CONTEXT_FRAGMENTS` (a JSON array of explicit result paths) in a process with the same verified interpreter, root/tools and no-provider environment as D. `GRAPHIFY_OUT` must still point outside the source tree before imports. Set `CONTEXT_MIXED_STAGE` to a fresh external directory; do not select published output.
+
+Run this block once without `CONTEXT_LABELS`: it validates and builds the graph natively in memory, then prints exact community members and identity without writing artifacts. The current agent reads those members, relevant source evidence and uncertainties and authors a task-local labels JSON: `{input_identity, communities:{"<id>":{members:["<sorted IDs>"],label:"<short source-backed name>",rationale:"<why these members form this theme>"}}}`. Labels interpret the actual membership; they do not create project facts. Set `CONTEXT_LABELS` to that file and rerun the same block. Mismatched identity/membership forces inspection/relabeling, not guessed reuse.
+
+```python
+# context-semantic-assemble
+if not __debug__:
+    raise RuntimeError("Run without Python optimization: assembly validation must remain enabled")
+import copy
+import hashlib
+import importlib.util
+import json
+import os
+from pathlib import Path
+import re
+from graphify.build import build_merge
+from graphify.cluster import cluster, score_all
+from graphify.analyze import god_nodes, surprising_connections
+from graphify.export import to_json
+from graphify.exporters.html import to_html
+from graphify.paths import load_node_link_graph, write_text_atomic
+from graphify.report import generate
+
+root = Path(os.environ["CONTEXT_ROOT"]).resolve(strict=True)
+assert os.environ.get("GRAPHIFY_BACKEND") == "none"
+assert not Path(os.environ["GRAPHIFY_OUT"]).resolve().is_relative_to(root)
+module = Path(os.environ["CONTEXT_TOOLS"]) / "validate_context_fragments.py"
+spec = importlib.util.spec_from_file_location("context_fragments", module)
+validator = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(validator)
+plan, baseline = Path(os.environ["CONTEXT_PLAN"]), Path(os.environ["CONTEXT_STRUCTURAL"])
+fragments = [Path(p) for p in json.loads(os.environ["CONTEXT_FRAGMENTS"])]
+validated = validator.validate(root, plan, baseline, fragments)
+structural = validator.strict_json(baseline)
+G = build_merge([copy.deepcopy({k: validated[k] for k in ("nodes", "edges", "hyperedges")})], graph_path=baseline, root=root, directed=True, dedup=False)
+assert G.is_directed() and 0 < G.number_of_nodes() <= 5000
+assert set(G) == {n["id"] for n in structural["nodes"] + validated["nodes"]}, "Native identity reconciliation changed the intended node set"
+for node in structural["nodes"] + validated["nodes"]:
+    for field in ("source_file", "source_location", "_origin", "evidence", "claim_status"):
+        assert G.nodes[node["id"]].get(field) == node.get(field), (node["id"], field)
+expected_edges = structural["links"] + validated["edges"]
+assert set(G.edges) == {(e["source"], e["target"]) for e in expected_edges}
+for edge in expected_edges:
+    for field in ("relation", "confidence", "confidence_score", "source_file", "source_location", "_origin", "evidence", "rationale"):
+        assert G.edges[edge["source"], edge["target"]].get(field) == edge.get(field), field
+assert G.graph.get("hyperedges", []) == structural.get("graph", {}).get("hyperedges", []) + validated["hyperedges"], "Inspect native hyperedge normalization before claiming preservation"
+communities = cluster(G)
+ledger = validated["context_semantic"]
+identity = hashlib.sha256(json.dumps(ledger, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+members = {str(cid): sorted(nodes) for cid, nodes in communities.items()}
+if not os.environ.get("CONTEXT_LABELS"):
+    print(json.dumps({"input_identity": identity, "communities": {cid: [{"id": n, "label": G.nodes[n].get("label"), "source_file": G.nodes[n].get("source_file"), "origin": G.nodes[n].get("_origin")} for n in nodes] for cid, nodes in members.items()}}, ensure_ascii=False))
+    raise SystemExit(0)
+interpretation = validator.strict_json(os.environ["CONTEXT_LABELS"])
+assert interpretation["input_identity"] == identity and set(interpretation["communities"]) == set(members)
+labels = {}
+for cid, nodes in members.items():
+    item = interpretation["communities"][cid]
+    assert item["members"] == nodes and item["label"].strip() and item["rationale"].strip()
+    labels[int(cid)] = item["label"]
+G.graph["context"] = {**structural["graph"]["context"], "input_identity": identity, "structural_input_identity": structural["graph"]["context"]["input_identity"], "semantic_extraction": "performed by active subscription agents for explicitly planned ranges", "coverage": "structural baseline plus validated semantic planned ranges; omissions snapshot observed at D staging", "omissions_observed_at": structural["graph"]["context"]["input_identity"], "semantic": ledger, "community_interpretation": interpretation["communities"]}
+stage = Path(os.environ["CONTEXT_MIXED_STAGE"]).resolve()
+assert not stage.exists() and not stage.is_relative_to(root) and not root.is_relative_to(stage), "Use a fresh external mixed stage"
+stage.mkdir(parents=True)
+assert to_json(G, communities, str(stage / "graph.json"), community_labels=labels)
+assert to_html(G, communities, str(stage / "graph.html"), community_labels=labels, node_limit=5000, learning_overlay={})
+detection = {"total_files": len(ledger["sources"]), "total_words": sum(len((root / p).read_text(encoding="utf-8-sig").split()) for p in ledger["sources"]), "warning": "PLANNED-RANGE SEMANTIC: active-agent extraction was performed; coverage is limited to the explicit validated scope, not universal understanding."}
+report = generate(G, communities, score_all(G, communities), labels, god_nodes(G), surprising_connections(G, communities), detection, {"input": 0, "output": 0}, root.name)
+report = re.sub(r"^- Token cost:.*$", "- Subscription-agent token usage: unknown (host did not expose counters).", report, flags=re.M)
+report = report.replace("- None detected - all connections are within the same source files.", "- No top-ranked surprising connection reported; this does not establish absence of cross-file relationships.")
+report += "\n## Semantic scope, evidence and interpretation\n\nInput identity: `" + identity + "`. Unknown usage is not zero. Scores are annotations, not calibrated probabilities. Omitted/unsupported input inventory is the D-staging observation; this phase rechecks selected Python/Markdown sources and configuration, not every omitted-file change. Current policy, historical proposals, observations and unresolved claims retain their source roles.\n\n```json\n" + json.dumps({"semantic": ledger, "community_interpretation": interpretation["communities"], "structural_omissions_observed_at_D_staging": structural["graph"]["context"]["omissions"]}, ensure_ascii=False, indent=2) + "\n```\n\nHTML needs JavaScript and its pinned CDN; rendering was not verified by data export. No portable incremental update or publication transaction is claimed.\n"
+write_text_atomic(stage / "GRAPH_REPORT.md", report)
+serialized = validator.strict_json(stage / "graph.json")
+reopened = load_node_link_graph(serialized)
+assert set(reopened) == set(G) and set(reopened.edges) == set(G.edges) and reopened.is_directed()
+for edge in expected_edges:
+    for field in ("relation", "confidence", "confidence_score", "source_file", "source_location", "_origin", "evidence", "rationale"):
+        assert reopened.edges[edge["source"], edge["target"]].get(field) == edge.get(field), field
+html = (stage / "graph.html").read_text(encoding="utf-8")
+def embedded(name):
+    return json.JSONDecoder().raw_decode(html.split("const " + name + " = ", 1)[1])[0]
+assert {n["id"] for n in embedded("RAW_NODES")} == set(G)
+assert sorted((e["from"], e["to"], e["label"], e["confidence"]) for e in embedded("RAW_EDGES")) == sorted((e["source"], e["target"], e["relation"], e["confidence"]) for e in expected_edges)
+assert f'{G.number_of_nodes()} nodes · {G.number_of_edges()} edges' in report and "- Token cost:" not in report
+assert validator.validate(root, plan, baseline, fragments) == validated, "Inputs changed while assembling; discard this stage"
+assert {p.name for p in stage.iterdir()} == {"graph.json", "graph.html", "GRAPH_REPORT.md"}
+for path in stage.iterdir():
+    body = path.read_text(encoding="utf-8")
+    assert body and str(root) not in body and str(stage) not in body
+print(json.dumps({"stage": str(stage), "nodes": G.number_of_nodes(), "edges": G.number_of_edges(), "semantic_nodes": len(validated["nodes"]), "semantic_edges": len(validated["edges"]), "input_identity": identity, "usage": None}, ensure_ascii=False))
+```
+
+Run without Python optimization so assembly assertions remain enabled. On any validator/build/export/evidence failure, discard this new stage, retain diagnostics and leave prior references untouched. The validated coverage ledger and interpretation are embedded in JSON/report; transient plans/results/caches stay task-local. Review actual semantic answers against source truth and bounded native queries before any authorized publication. Replaying recorded model fragments tests integration/accounting; only a real current-agent read constitutes a new semantic pass. Fresh-model inference is not byte-deterministic, and this initial assembly does not establish F's invalidation, changed-only reuse or publication transaction.
 
 ## Freshness, portability and publication
 
@@ -414,6 +540,8 @@ A valid trio has matching corpus/profile/coverage identity, sources/confidence/d
 ## Verification corpus and oracles
 
 [probe_graphify.py](probe_graphify.py) uses temporary, authored fixtures. It verifies isolated package identity; code/Markdown inventory and explicit exclusions; exact directed calls; path-qualified code mentions; document links with collapsed anchor fragments; skipped ordinary code hyperlinks; a Cyrillic heading; the tail after 2100 body lines; native agent-fragment validation/merge; staged JSON/HTML/report generation; no temporary absolute paths in the trio; directed reload; explicit semantic L1 origin retained after same-source AST refresh; prompt/source invalidation; a bounded native read query with unchanged fixture files; and an empty cache in a fresh process. Network and provider extraction are forbidden in the native in-process route; the merge subprocess also blocks socket connections. This is an ingestion feasibility test with an authored semantic fragment, not evidence of a completed agent-powered semantic pass or end-user browser rendering.
+
+[probe_graphify_semantic.py](probe_graphify_semantic.py) replays explicitly recorded genuine active-model results from [graphify-semantic-cases.json](graphify-semantic-cases.json) through the strict validator and documented native assembly. It checks serial/parallel accounting, EOF/cross-range evidence, negative/uncertain/historical source roles, unknown usage, native tier retention, CLI failure and integrity controls. Replay is integration evidence, not a fresh model run or an independent semantic benchmark. For new extraction, give a current agent only the raw files, scope and method; keep recorded answers/truth controls outside its view.
 
 The continuing truth set must cover at least:
 

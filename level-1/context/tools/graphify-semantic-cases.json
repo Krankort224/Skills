@@ -1,0 +1,1742 @@
+{
+  "purpose": "Raw authored semantic corpus. Extract current archive-grant behavior, code-document meaning and unresolved/superseded claims; exclude unrelated kitchen knowledge from this scope. This is not an expected graph.",
+  "files": {
+    "docs/authority.md": "# Pilot authority\nThe current pilot rules are owned by policy.md.\nops.md records the operator procedure, not additional authorization.\ndraft.md is archived and cannot override the current pilot.\nThe journal is observational evidence; it does not amend policy.\n",
+    "docs/policy.md": "# Маяк: доступ к архиву\n## Current pilot\nA grant permits archive access for no more than 168 elapsed hours after original issuance.\nFuture-dated grants are invalid.\nA revoked grant is invalid even inside that interval.\nChanging a physical wristband does not restart the validity clock.\nAn expired grant requires a new approval; the old grant cannot be renewed in place.\nThis policy does not authorize public broadcasting.\n",
+    "docs/ops.md": "# Operator notes\nFor a lost wristband, issue a replacement carrying the original issuance time.\nWhen a custodian revokes access, set the grant revoked flag before the next admission.\nAfter expiry, ask the program owner for new approval.\nA fresh bracelet alone is not approval.\nOffline door controllers have not been authorized for this pilot.\n",
+    "docs/draft.md": "# Archived design sketch\nStatus: superseded, not current pilot policy.\nThe proposed window was 336 hours.\nThe sketch proposed that replacing a bracelet would restart the timer.\nNeither proposal was approved for the current pilot.\n",
+    "docs/неясно.md": "# Неясная запись\nThe operator wrote: \"Gate should remember it for twelve hours.\"\nThe note does not identify whether Gate means the garden entrance or an application component.\nIt does not identify what is remembered or who approved the duration.\nTreat this as unresolved; no controller setting is specified.\n",
+    "docs/unrelated.md": "# Kitchen record\nRefresh a sourdough starter every twelve hours.\nThe word renewal here concerns flour and water, not archive access.\nNo archive grant or controller is discussed.\n",
+    "src/gate.py": "def usable(issued_hour, now_hour, revoked):\n    elapsed = now_hour - issued_hour\n    return not revoked and 0 <= elapsed <= 168\n\ndef admit(grant, now_hour):\n    return usable(grant[\"issued_hour\"], now_hour, grant[\"revoked\"])\n",
+    "src/ledger.py": "def revoke(grant):\n    grant[\"revoked\"] = True\n    return grant\n",
+    "docs/Журнал.md": "# Журнал наблюдений\nСеверный жетон is the field nickname for one archive grant; it is not a separate approval.\nAll times below are elapsed hours from the original issue.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nNo new grant.\nAt elapsed hour 168, the Северный жетон was accepted while not revoked.\nAt elapsed hour 169, it was refused; replacing its bracelet had not changed the original issue time.\n"
+  },
+  "questions": [
+    "Which implementation enforces current grant validity and revocation?",
+    "Does bracelet replacement extend access? Which source owns that answer?",
+    "How do the journal tail and the archived sketch relate to current pilot rules?",
+    "What can be concluded about the twelve-hour Gate note and the kitchen record?"
+  ],
+  "recorded_trials": {
+    "parallel": {
+      "plan": {
+        "schema": "context-semantic-v1",
+        "graphify_revision": "16218bfc80d4ca2799734d045039f7ed1a5fa9fb",
+        "prompt_version": "context-semantic-v1",
+        "scope": "Raw authored semantic corpus. Extract current archive-grant behavior, code-document meaning and unresolved/superseded claims; exclude unrelated kitchen knowledge from this scope. This is not an expected graph.",
+        "sources": {
+          "docs/authority.md": {
+            "sha256": "59cf5b17ff528c7a7fe41ad894733b92b77ebfe293ae8274d7e66e96660e40cd",
+            "line_count": 5
+          },
+          "docs/policy.md": {
+            "sha256": "491a5fc0521b4eda44493331bb9cf75b5a1625ef8e59010731cc0cbb2c90c9a3",
+            "line_count": 8
+          },
+          "docs/ops.md": {
+            "sha256": "1a983771b3bcdb3d2d62690e28e64acdc478d952049f5f697a28e3f1c5aac6ad",
+            "line_count": 6
+          },
+          "docs/draft.md": {
+            "sha256": "ea549962e1a58fdd2f0800dd78b30b47905db52263f4039c7ee789b279846406",
+            "line_count": 5
+          },
+          "docs/неясно.md": {
+            "sha256": "1f8a2822cdf2ad23146c5e14c330742d917a1a30e60a06c9fcf91249f54757d8",
+            "line_count": 5
+          },
+          "docs/unrelated.md": {
+            "sha256": "0dea86d5a901a6b1d213efe160833082a0e81fea162f889eb72cf5f767c569f1",
+            "line_count": 4
+          },
+          "src/gate.py": {
+            "sha256": "c61ec491af7b03d53ad72ffa1458f403e0a3dbce2a59f6010bb48448cf74176a",
+            "line_count": 6
+          },
+          "src/ledger.py": {
+            "sha256": "4ccab45364d32f5eb31ab19210da15024d49e9c1f2a669772b4b15faa9306f86",
+            "line_count": 3
+          },
+          "docs/Журнал.md": {
+            "sha256": "927106bc5b27e4b4b875f484c2affb01c8f679b8c1858dae6ac0dec156b4faaf",
+            "line_count": 2206
+          }
+        },
+        "shards": [
+          {
+            "id": "policy",
+            "ranges": [
+              {
+                "source_file": "docs/authority.md",
+                "start": 1,
+                "end": 5,
+                "sha256": "59cf5b17ff528c7a7fe41ad894733b92b77ebfe293ae8274d7e66e96660e40cd"
+              },
+              {
+                "source_file": "docs/policy.md",
+                "start": 1,
+                "end": 8,
+                "sha256": "491a5fc0521b4eda44493331bb9cf75b5a1625ef8e59010731cc0cbb2c90c9a3"
+              },
+              {
+                "source_file": "docs/ops.md",
+                "start": 1,
+                "end": 6,
+                "sha256": "1a983771b3bcdb3d2d62690e28e64acdc478d952049f5f697a28e3f1c5aac6ad"
+              },
+              {
+                "source_file": "docs/draft.md",
+                "start": 1,
+                "end": 5,
+                "sha256": "ea549962e1a58fdd2f0800dd78b30b47905db52263f4039c7ee789b279846406"
+              }
+            ]
+          },
+          {
+            "id": "code",
+            "ranges": [
+              {
+                "source_file": "src/gate.py",
+                "start": 1,
+                "end": 6,
+                "sha256": "c61ec491af7b03d53ad72ffa1458f403e0a3dbce2a59f6010bb48448cf74176a"
+              },
+              {
+                "source_file": "src/ledger.py",
+                "start": 1,
+                "end": 3,
+                "sha256": "4ccab45364d32f5eb31ab19210da15024d49e9c1f2a669772b4b15faa9306f86"
+              },
+              {
+                "source_file": "docs/неясно.md",
+                "start": 1,
+                "end": 5,
+                "sha256": "1f8a2822cdf2ad23146c5e14c330742d917a1a30e60a06c9fcf91249f54757d8"
+              },
+              {
+                "source_file": "docs/unrelated.md",
+                "start": 1,
+                "end": 4,
+                "sha256": "0dea86d5a901a6b1d213efe160833082a0e81fea162f889eb72cf5f767c569f1"
+              }
+            ]
+          },
+          {
+            "id": "journal-start",
+            "ranges": [
+              {
+                "source_file": "docs/Журнал.md",
+                "start": 1,
+                "end": 1100,
+                "sha256": "798eef05f87f17d9f3e4ef4189a33064c774fdf89a3235dffe7f5ee930eddd75"
+              }
+            ]
+          },
+          {
+            "id": "journal-end",
+            "ranges": [
+              {
+                "source_file": "docs/Журнал.md",
+                "start": 1101,
+                "end": 2206,
+                "sha256": "e2cffd834e8dd3329d0dddc57f8ac6362700a9ffde81cc5e11562198abb7e7cb"
+              }
+            ]
+          }
+        ]
+      },
+      "fragments": [
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "code",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex subscription subagent",
+            "model": "gpt-6.1-terra",
+            "usage": null,
+            "model_identity_source": "coordinator assignment"
+          },
+          "receipts": [
+            {
+              "source_file": "src/gate.py",
+              "start": 1,
+              "end": 6,
+              "sha256": "c61ec491af7b03d53ad72ffa1458f403e0a3dbce2a59f6010bb48448cf74176a",
+              "summary": "Read both functions and their elapsed-time, revocation and admission behavior.",
+              "outcome": "findings",
+              "reason": "Code implements validity checks related to current policy."
+            },
+            {
+              "source_file": "src/ledger.py",
+              "start": 1,
+              "end": 3,
+              "sha256": "4ccab45364d32f5eb31ab19210da15024d49e9c1f2a669772b4b15faa9306f86",
+              "summary": "Read the mutation and return of the revoked grant.",
+              "outcome": "findings",
+              "reason": "Code sets the revoked flag described in operator procedure."
+            },
+            {
+              "source_file": "docs/неясно.md",
+              "start": 1,
+              "end": 5,
+              "sha256": "1f8a2822cdf2ad23146c5e14c330742d917a1a30e60a06c9fcf91249f54757d8",
+              "summary": "Read the entire unresolved operator note including its uncertain referents and approval.",
+              "outcome": "findings",
+              "reason": "The note explicitly leaves its subject and authorization unresolved."
+            },
+            {
+              "source_file": "docs/unrelated.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "0dea86d5a901a6b1d213efe160833082a0e81fea162f889eb72cf5f767c569f1",
+              "summary": "Read the entire kitchen record.",
+              "outcome": "zero-findings",
+              "reason": "The record explicitly concerns sourdough and excludes archive access."
+            }
+          ],
+          "nodes": [
+            {
+              "id": "docs_неясно_unresolved_twelve_hour_note",
+              "entity_key": "unresolved_twelve_hour_note",
+              "label": "Unresolved twelve-hour note",
+              "file_type": "concept",
+              "source_file": "docs/неясно.md",
+              "source_location": "L2-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/неясно.md",
+                  "start": 2,
+                  "end": 5,
+                  "quote": "The operator wrote: \"Gate should remember it for twelve hours.\"\nThe note does not identify whether Gate means the garden entrance or an application component.\nIt does not identify what is remembered or who approved the duration.\nTreat this as unresolved; no controller setting is specified."
+                }
+              ],
+              "claim_status": "unresolved"
+            }
+          ],
+          "edges": [
+            {
+              "source": "src_gate_usable",
+              "target": "docs_policy",
+              "relation": "implements_grant_validity_checks_from",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "source_file": "src/gate.py",
+              "source_location": "L1-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/gate.py",
+                  "start": 1,
+                  "end": 3,
+                  "quote": "def usable(issued_hour, now_hour, revoked):\n    elapsed = now_hour - issued_hour\n    return not revoked and 0 <= elapsed <= 168"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 5,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance.\nFuture-dated grants are invalid.\nA revoked grant is invalid even inside that interval."
+                }
+              ],
+              "rationale": "Elapsed time, future dating, and revocation checks correspond to the current pilot rules; the policy also covers matters beyond this function."
+            },
+            {
+              "source": "src_gate_admit",
+              "target": "docs_ops",
+              "relation": "uses_original_issuance_and_revocation_fields_for_admission",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "source_file": "src/gate.py",
+              "source_location": "L5-L6",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/gate.py",
+                  "start": 5,
+                  "end": 6,
+                  "quote": "def admit(grant, now_hour):\n    return usable(grant[\"issued_hour\"], now_hour, grant[\"revoked\"])"
+                },
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 2,
+                  "end": 3,
+                  "quote": "For a lost wristband, issue a replacement carrying the original issuance time.\nWhen a custodian revokes access, set the grant revoked flag before the next admission."
+                }
+              ],
+              "rationale": "Admission passes the grant issuance and revoked fields into the validity check; operator procedure preserves original issuance and sets revocation before admission."
+            },
+            {
+              "source": "src_ledger_revoke",
+              "target": "docs_ops",
+              "relation": "implements_revoked_flag_mutation_described_by",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "source_file": "src/ledger.py",
+              "source_location": "L1-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/ledger.py",
+                  "start": 1,
+                  "end": 3,
+                  "quote": "def revoke(grant):\n    grant[\"revoked\"] = True\n    return grant"
+                },
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 3,
+                  "end": 3,
+                  "quote": "When a custodian revokes access, set the grant revoked flag before the next admission."
+                }
+              ],
+              "rationale": "The function sets the grant revoked flag, matching the operator procedure; the function does not itself establish timing or custodian authority."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": [
+            {
+              "source_file": "docs/неясно.md",
+              "source_location": "L2-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/неясно.md",
+                  "start": 2,
+                  "end": 5,
+                  "quote": "The operator wrote: \"Gate should remember it for twelve hours.\"\nThe note does not identify whether Gate means the garden entrance or an application component.\nIt does not identify what is remembered or who approved the duration.\nTreat this as unresolved; no controller setting is specified."
+                }
+              ],
+              "question": "What does Gate refer to, what is remembered, and who approved the twelve-hour duration?"
+            }
+          ]
+        },
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "journal-end",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; serial source reading",
+            "model": null,
+            "model_identity_source": "runtime model identifier not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/Журнал.md",
+              "start": 1101,
+              "end": 2206,
+              "sha256": "e2cffd834e8dd3329d0dddc57f8ac6362700a9ffde81cc5e11562198abb7e7cb",
+              "summary": "Read ranges1-1100 and1101-2206 through EOF: original grant nickname, no-new-grant records and final168acceptance/169refusal despite physical replacement.",
+              "outcome": "findings",
+              "reason": "Source-backed facts or uncertainty in the declared scope, with authority/observation distinctions preserved."
+            }
+          ],
+          "nodes": [
+            {
+              "id": "docs_журнал_boundary_observations",
+              "entity_key": "boundary_observations",
+              "label": "168/169-hour admission observations",
+              "file_type": "concept",
+              "claim_status": "observation; not policy amendment",
+              "source_file": "docs/Журнал.md",
+              "source_location": "L2205-L2206",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2205,
+                  "end": 2206,
+                  "quote": "At elapsed hour 168, the Северный жетон was accepted while not revoked.\nAt elapsed hour 169, it was refused; replacing its bracelet had not changed the original issue time."
+                }
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "docs_журнал_boundary_observations",
+              "target": "docs_журнал_north_grant",
+              "relation": "observes_later_state",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "rationale": "The tail names the same grant introduced in the first range; this reconciles the two distant chunks.",
+              "source_file": "docs/Журнал.md",
+              "source_location": "L2205-L2206",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2205,
+                  "end": 2206,
+                  "quote": "At elapsed hour 168, the Северный жетон was accepted while not revoked.\nAt elapsed hour 169, it was refused; replacing its bracelet had not changed the original issue time."
+                },
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2,
+                  "end": 2,
+                  "quote": "Северный жетон is the field nickname for one archive grant; it is not a separate approval."
+                }
+              ]
+            },
+            {
+              "source": "docs_журнал_boundary_observations",
+              "target": "src_gate_usable",
+              "relation": "consistent_with",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "Hour168 acceptance and169 refusal without resetting original issuance agree with the predicate; two observations do not prove every runtime case.",
+              "source_file": "docs/Журнал.md",
+              "source_location": "L2205-L2206",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2205,
+                  "end": 2206,
+                  "quote": "At elapsed hour 168, the Северный жетон was accepted while not revoked.\nAt elapsed hour 169, it was refused; replacing its bracelet had not changed the original issue time."
+                },
+                {
+                  "source_file": "src/gate.py",
+                  "start": 1,
+                  "end": 3,
+                  "quote": "def usable(issued_hour, now_hour, revoked):\n    elapsed = now_hour - issued_hour\n    return not revoked and 0 <= elapsed <= 168"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 6,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance.\nFuture-dated grants are invalid.\nA revoked grant is invalid even inside that interval.\nChanging a physical wristband does not restart the validity clock."
+                }
+              ]
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        },
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "journal-start",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; serial source reading",
+            "model": null,
+            "model_identity_source": "runtime model identifier not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/Журнал.md",
+              "start": 1,
+              "end": 1100,
+              "sha256": "798eef05f87f17d9f3e4ef4189a33064c774fdf89a3235dffe7f5ee930eddd75",
+              "summary": "Read ranges1-1100 and1101-2206 through EOF: original grant nickname, no-new-grant records and final168acceptance/169refusal despite physical replacement.",
+              "outcome": "findings",
+              "reason": "Source-backed facts or uncertainty in the declared scope, with authority/observation distinctions preserved."
+            }
+          ],
+          "nodes": [
+            {
+              "id": "docs_журнал_north_grant",
+              "entity_key": "north_grant",
+              "label": "Северный жетон",
+              "file_type": "concept",
+              "claim_status": "observed nickname; no separate approval",
+              "source_file": "docs/Журнал.md",
+              "source_location": "L2-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2,
+                  "end": 3,
+                  "quote": "Северный жетон is the field nickname for one archive grant; it is not a separate approval.\nAll times below are elapsed hours from the original issue."
+                }
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "docs_журнал_north_grant",
+              "target": "docs_policy",
+              "relation": "instance_of",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The field nickname denotes an archive grant without separate approval, so the current grant rules apply.",
+              "source_file": "docs/Журнал.md",
+              "source_location": "L2-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2,
+                  "end": 3,
+                  "quote": "Северный жетон is the field nickname for one archive grant; it is not a separate approval.\nAll times below are elapsed hours from the original issue."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 3,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance."
+                }
+              ]
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        },
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "policy",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex subscription subagent",
+            "model": "gpt-6.1-terra",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/authority.md",
+              "start": 1,
+              "end": 5,
+              "sha256": "59cf5b17ff528c7a7fe41ad894733b92b77ebfe293ae8274d7e66e96660e40cd",
+              "summary": "Read ownership and hierarchy of policy, operations, archived sketch, and observational journal.",
+              "outcome": "findings",
+              "reason": "Source provides material evidence for archive-access rules or authority."
+            },
+            {
+              "source_file": "docs/policy.md",
+              "start": 1,
+              "end": 8,
+              "sha256": "491a5fc0521b4eda44493331bb9cf75b5a1625ef8e59010731cc0cbb2c90c9a3",
+              "summary": "Read current grant timing, invalidity conditions, replacement, expiry and broadcasting limits.",
+              "outcome": "findings",
+              "reason": "Source provides material evidence for archive-access rules or authority."
+            },
+            {
+              "source_file": "docs/ops.md",
+              "start": 1,
+              "end": 6,
+              "sha256": "1a983771b3bcdb3d2d62690e28e64acdc478d952049f5f697a28e3f1c5aac6ad",
+              "summary": "Read replacement, revocation, approval and offline controller procedures and boundaries.",
+              "outcome": "findings",
+              "reason": "Source provides material evidence for archive-access rules or authority."
+            },
+            {
+              "source_file": "docs/draft.md",
+              "start": 1,
+              "end": 5,
+              "sha256": "ea549962e1a58fdd2f0800dd78b30b47905db52263f4039c7ee789b279846406",
+              "summary": "Read superseded 336-hour and timer-restart proposals and their unapproved status.",
+              "outcome": "findings",
+              "reason": "Source provides material evidence for archive-access rules or authority."
+            }
+          ],
+          "nodes": [
+            {
+              "id": "docs_policy_archive_grant_validity",
+              "entity_key": "archive_grant_validity",
+              "label": "Archive grant validity",
+              "file_type": "concept",
+              "source_file": "docs/policy.md",
+              "source_location": "L3-L6",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 6,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance.\nFuture-dated grants are invalid.\nA revoked grant is invalid even inside that interval.\nChanging a physical wristband does not restart the validity clock."
+                }
+              ],
+              "claim_status": "current"
+            },
+            {
+              "id": "docs_policy_expired_grant_new_approval",
+              "entity_key": "expired_grant_new_approval",
+              "label": "New approval after expiry",
+              "file_type": "concept",
+              "source_file": "docs/policy.md",
+              "source_location": "L7",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 7,
+                  "end": 7,
+                  "quote": "An expired grant requires a new approval; the old grant cannot be renewed in place."
+                }
+              ],
+              "claim_status": "current"
+            },
+            {
+              "id": "docs_policy_public_broadcasting_authorization",
+              "entity_key": "public_broadcasting_authorization",
+              "label": "Public broadcasting authorization",
+              "file_type": "concept",
+              "source_file": "docs/policy.md",
+              "source_location": "L8",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 8,
+                  "end": 8,
+                  "quote": "This policy does not authorize public broadcasting."
+                }
+              ],
+              "claim_status": "not authorized"
+            },
+            {
+              "id": "docs_ops_lost_wristband_replacement",
+              "entity_key": "lost_wristband_replacement",
+              "label": "Lost wristband replacement procedure",
+              "file_type": "concept",
+              "source_file": "docs/ops.md",
+              "source_location": "L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 2,
+                  "end": 2,
+                  "quote": "For a lost wristband, issue a replacement carrying the original issuance time."
+                }
+              ],
+              "claim_status": "operator procedure"
+            },
+            {
+              "id": "docs_ops_revocation_before_admission",
+              "entity_key": "revocation_before_admission",
+              "label": "Revocation before admission",
+              "file_type": "concept",
+              "source_file": "docs/ops.md",
+              "source_location": "L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 3,
+                  "end": 3,
+                  "quote": "When a custodian revokes access, set the grant revoked flag before the next admission."
+                }
+              ],
+              "claim_status": "operator procedure"
+            },
+            {
+              "id": "docs_ops_offline_door_controllers",
+              "entity_key": "offline_door_controllers",
+              "label": "Offline door controllers",
+              "file_type": "concept",
+              "source_file": "docs/ops.md",
+              "source_location": "L6",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 6,
+                  "end": 6,
+                  "quote": "Offline door controllers have not been authorized for this pilot."
+                }
+              ],
+              "claim_status": "not authorized"
+            },
+            {
+              "id": "docs_draft_proposed_336_hour_window",
+              "entity_key": "proposed_336_hour_window",
+              "label": "Proposed 336-hour window",
+              "file_type": "concept",
+              "source_file": "docs/draft.md",
+              "source_location": "L2-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/draft.md",
+                  "start": 2,
+                  "end": 3,
+                  "quote": "Status: superseded, not current pilot policy.\nThe proposed window was 336 hours."
+                }
+              ],
+              "claim_status": "superseded"
+            },
+            {
+              "id": "docs_draft_proposed_bracelet_timer_restart",
+              "entity_key": "proposed_bracelet_timer_restart",
+              "label": "Proposed bracelet timer restart",
+              "file_type": "concept",
+              "source_file": "docs/draft.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/draft.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "Status: superseded, not current pilot policy.\nThe proposed window was 336 hours.\nThe sketch proposed that replacing a bracelet would restart the timer."
+                }
+              ],
+              "claim_status": "superseded"
+            }
+          ],
+          "edges": [
+            {
+              "source": "docs_authority",
+              "target": "docs_policy",
+              "relation": "designates_as_current_pilot_rule_owner",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "source_file": "docs/authority.md",
+              "source_location": "L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/authority.md",
+                  "start": 2,
+                  "end": 2,
+                  "quote": "The current pilot rules are owned by policy.md."
+                }
+              ]
+            },
+            {
+              "source": "docs_authority",
+              "target": "docs_ops",
+              "relation": "classifies_as_operator_procedure_not_additional_authorization",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "source_file": "docs/authority.md",
+              "source_location": "L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/authority.md",
+                  "start": 3,
+                  "end": 3,
+                  "quote": "ops.md records the operator procedure, not additional authorization."
+                }
+              ]
+            },
+            {
+              "source": "docs_authority",
+              "target": "docs_draft",
+              "relation": "states_cannot_override_current_pilot",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "source_file": "docs/authority.md",
+              "source_location": "L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/authority.md",
+                  "start": 4,
+                  "end": 4,
+                  "quote": "draft.md is archived and cannot override the current pilot."
+                }
+              ]
+            },
+            {
+              "source": "docs_policy",
+              "target": "docs_policy_archive_grant_validity",
+              "relation": "defines_current_rule",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "source_file": "docs/policy.md",
+              "source_location": "L3-L6",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 6,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance.\nFuture-dated grants are invalid.\nA revoked grant is invalid even inside that interval.\nChanging a physical wristband does not restart the validity clock."
+                }
+              ]
+            },
+            {
+              "source": "docs_policy",
+              "target": "docs_policy_expired_grant_new_approval",
+              "relation": "requires",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "source_file": "docs/policy.md",
+              "source_location": "L7",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 7,
+                  "end": 7,
+                  "quote": "An expired grant requires a new approval; the old grant cannot be renewed in place."
+                }
+              ]
+            },
+            {
+              "source": "docs_policy",
+              "target": "docs_policy_public_broadcasting_authorization",
+              "relation": "does_not_authorize",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "source_file": "docs/policy.md",
+              "source_location": "L8",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 8,
+                  "end": 8,
+                  "quote": "This policy does not authorize public broadcasting."
+                }
+              ]
+            },
+            {
+              "source": "docs_ops",
+              "target": "docs_ops_lost_wristband_replacement",
+              "relation": "specifies_procedure",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "source_file": "docs/ops.md",
+              "source_location": "L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 2,
+                  "end": 2,
+                  "quote": "For a lost wristband, issue a replacement carrying the original issuance time."
+                }
+              ]
+            },
+            {
+              "source": "docs_ops",
+              "target": "docs_ops_revocation_before_admission",
+              "relation": "specifies_procedure",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "source_file": "docs/ops.md",
+              "source_location": "L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 3,
+                  "end": 3,
+                  "quote": "When a custodian revokes access, set the grant revoked flag before the next admission."
+                }
+              ]
+            },
+            {
+              "source": "docs_ops",
+              "target": "docs_ops_offline_door_controllers",
+              "relation": "states_not_authorized_for_pilot",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "source_file": "docs/ops.md",
+              "source_location": "L6",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 6,
+                  "end": 6,
+                  "quote": "Offline door controllers have not been authorized for this pilot."
+                }
+              ]
+            },
+            {
+              "source": "docs_ops_lost_wristband_replacement",
+              "target": "docs_policy_archive_grant_validity",
+              "relation": "preserves_original_issuance_time_for_validity",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "source_file": "docs/ops.md",
+              "source_location": "L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 2,
+                  "end": 2,
+                  "quote": "For a lost wristband, issue a replacement carrying the original issuance time."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 6,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance.\nFuture-dated grants are invalid.\nA revoked grant is invalid even inside that interval.\nChanging a physical wristband does not restart the validity clock."
+                }
+              ],
+              "rationale": "The replacement carries the original issuance time, and the policy measures validity from that time without restarting for a wristband change."
+            },
+            {
+              "source": "docs_ops_revocation_before_admission",
+              "target": "docs_policy_archive_grant_validity",
+              "relation": "implements_revocation_before_next_admission",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "source_file": "docs/ops.md",
+              "source_location": "L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 3,
+                  "end": 3,
+                  "quote": "When a custodian revokes access, set the grant revoked flag before the next admission."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 5,
+                  "end": 5,
+                  "quote": "A revoked grant is invalid even inside that interval."
+                }
+              ],
+              "rationale": "The operator flag procedure applies the rule that a revoked grant is invalid."
+            },
+            {
+              "source": "docs_ops",
+              "target": "docs_policy_expired_grant_new_approval",
+              "relation": "instructs_asking_program_owner_for_new_approval",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "source_file": "docs/ops.md",
+              "source_location": "L4-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 4,
+                  "end": 5,
+                  "quote": "After expiry, ask the program owner for new approval.\nA fresh bracelet alone is not approval."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 7,
+                  "end": 7,
+                  "quote": "An expired grant requires a new approval; the old grant cannot be renewed in place."
+                }
+              ],
+              "rationale": "Both sources address a new approval after expiry; the operator note identifies whom to ask."
+            },
+            {
+              "source": "docs_draft",
+              "target": "docs_draft_proposed_336_hour_window",
+              "relation": "contains_superseded_proposal",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "source_file": "docs/draft.md",
+              "source_location": "L2-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/draft.md",
+                  "start": 2,
+                  "end": 3,
+                  "quote": "Status: superseded, not current pilot policy.\nThe proposed window was 336 hours."
+                }
+              ]
+            },
+            {
+              "source": "docs_draft",
+              "target": "docs_draft_proposed_bracelet_timer_restart",
+              "relation": "contains_superseded_proposal",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "source_file": "docs/draft.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/draft.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "Status: superseded, not current pilot policy.\nThe proposed window was 336 hours.\nThe sketch proposed that replacing a bracelet would restart the timer."
+                }
+              ]
+            },
+            {
+              "source": "docs_draft_proposed_336_hour_window",
+              "target": "docs_policy_archive_grant_validity",
+              "relation": "proposes_a_different_window_than_current_rule",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "source_file": "docs/draft.md",
+              "source_location": "L3-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/draft.md",
+                  "start": 3,
+                  "end": 5,
+                  "quote": "The proposed window was 336 hours.\nThe sketch proposed that replacing a bracelet would restart the timer.\nNeither proposal was approved for the current pilot."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 3,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance."
+                }
+              ],
+              "rationale": "The archived 336-hour proposal differs from the current 168-hour limit and was not approved."
+            },
+            {
+              "source": "docs_draft_proposed_bracelet_timer_restart",
+              "target": "docs_policy_archive_grant_validity",
+              "relation": "proposes_timer_restart_contrary_to_current_rule",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "source_file": "docs/draft.md",
+              "source_location": "L4-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/draft.md",
+                  "start": 4,
+                  "end": 5,
+                  "quote": "The sketch proposed that replacing a bracelet would restart the timer.\nNeither proposal was approved for the current pilot."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 6,
+                  "end": 6,
+                  "quote": "Changing a physical wristband does not restart the validity clock."
+                }
+              ],
+              "rationale": "The unapproved proposal would restart the timer whereas current policy says a wristband change does not."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        }
+      ],
+      "community_interpretation": {
+        "0": {
+          "members": [
+            "docs_authority",
+            "docs_authority_pilot_authority",
+            "docs_ops",
+            "docs_ops_offline_door_controllers",
+            "docs_ops_operator_notes",
+            "src_ledger",
+            "src_ledger_revoke"
+          ],
+          "label": "Pilot authority and revocation operations",
+          "rationale": "Authority and operator documents connect to the actual revocation setter; offline-controller nonauthorization remains a boundary, not an implemented feature."
+        },
+        "1": {
+          "members": [
+            "docs_draft",
+            "docs_draft_archived_design_sketch",
+            "docs_draft_proposed_336_hour_window",
+            "docs_draft_proposed_bracelet_timer_restart",
+            "docs_ops_lost_wristband_replacement",
+            "docs_ops_revocation_before_admission",
+            "docs_policy_archive_grant_validity"
+          ],
+          "label": "Grant validity, replacement and superseded alternatives",
+          "rationale": "Current validity connects operator replacement/revocation to explicitly superseded336-hour/reset proposals; membership does not promote those proposals."
+        },
+        "2": {
+          "members": [
+            "docs_policy",
+            "docs_policy_current_pilot",
+            "docs_policy_expired_grant_new_approval",
+            "docs_policy_public_broadcasting_authorization",
+            "docs_policy_маяк_доступ_к_архиву"
+          ],
+          "label": "Current pilot approval and broadcasting boundaries",
+          "rationale": "The policy document and its new-approval/no-broadcast concepts remain the current rule owner."
+        },
+        "3": {
+          "members": [
+            "docs_журнал_boundary_observations",
+            "docs_журнал_north_grant",
+            "src_gate",
+            "src_gate_admit",
+            "src_gate_usable"
+          ],
+          "label": "Admission predicate and boundary observations",
+          "rationale": "The gate call chain connects to the named grant and observed168/169-hour boundary; observation is not universal runtime proof."
+        },
+        "4": {
+          "members": [
+            "docs_unrelated",
+            "docs_unrelated_kitchen_record"
+          ],
+          "label": "Unrelated kitchen source structure",
+          "rationale": "Only structural kitchen-file/heading evidence is present; no archive semantic relation is asserted."
+        },
+        "5": {
+          "members": [
+            "docs_журнал",
+            "docs_журнал_журнал_наблюдений"
+          ],
+          "label": "Journal document structure",
+          "rationale": "Native file and heading nodes locate the journal; semantic observations are represented separately."
+        },
+        "6": {
+          "members": [
+            "docs_неясно",
+            "docs_неясно_неясная_запись"
+          ],
+          "label": "Unresolved note source structure",
+          "rationale": "The file and heading locate the ambiguous note without identifying its Gate referent."
+        },
+        "7": {
+          "members": [
+            "docs_неясно_unresolved_twelve_hour_note"
+          ],
+          "label": "Unresolved twelve-hour claim",
+          "rationale": "The semantic note is deliberately unlinked to code because its referent/object/approval remain unknown."
+        }
+      }
+    },
+    "serial": {
+      "plan": {
+        "schema": "context-semantic-v1",
+        "graphify_revision": "16218bfc80d4ca2799734d045039f7ed1a5fa9fb",
+        "prompt_version": "context-semantic-v1",
+        "scope": "Raw authored semantic corpus. Extract current archive-grant behavior, code-document meaning and unresolved/superseded claims; exclude unrelated kitchen knowledge from this scope. This is not an expected graph.",
+        "sources": {
+          "docs/authority.md": {
+            "sha256": "59cf5b17ff528c7a7fe41ad894733b92b77ebfe293ae8274d7e66e96660e40cd",
+            "line_count": 5
+          },
+          "docs/policy.md": {
+            "sha256": "491a5fc0521b4eda44493331bb9cf75b5a1625ef8e59010731cc0cbb2c90c9a3",
+            "line_count": 8
+          },
+          "docs/ops.md": {
+            "sha256": "1a983771b3bcdb3d2d62690e28e64acdc478d952049f5f697a28e3f1c5aac6ad",
+            "line_count": 6
+          },
+          "docs/draft.md": {
+            "sha256": "ea549962e1a58fdd2f0800dd78b30b47905db52263f4039c7ee789b279846406",
+            "line_count": 5
+          },
+          "docs/неясно.md": {
+            "sha256": "1f8a2822cdf2ad23146c5e14c330742d917a1a30e60a06c9fcf91249f54757d8",
+            "line_count": 5
+          },
+          "docs/unrelated.md": {
+            "sha256": "0dea86d5a901a6b1d213efe160833082a0e81fea162f889eb72cf5f767c569f1",
+            "line_count": 4
+          },
+          "src/gate.py": {
+            "sha256": "c61ec491af7b03d53ad72ffa1458f403e0a3dbce2a59f6010bb48448cf74176a",
+            "line_count": 6
+          },
+          "src/ledger.py": {
+            "sha256": "4ccab45364d32f5eb31ab19210da15024d49e9c1f2a669772b4b15faa9306f86",
+            "line_count": 3
+          },
+          "docs/Журнал.md": {
+            "sha256": "927106bc5b27e4b4b875f484c2affb01c8f679b8c1858dae6ac0dec156b4faaf",
+            "line_count": 2206
+          }
+        },
+        "shards": [
+          {
+            "id": "serial",
+            "ranges": [
+              {
+                "source_file": "docs/authority.md",
+                "start": 1,
+                "end": 5,
+                "sha256": "59cf5b17ff528c7a7fe41ad894733b92b77ebfe293ae8274d7e66e96660e40cd"
+              },
+              {
+                "source_file": "docs/policy.md",
+                "start": 1,
+                "end": 8,
+                "sha256": "491a5fc0521b4eda44493331bb9cf75b5a1625ef8e59010731cc0cbb2c90c9a3"
+              },
+              {
+                "source_file": "docs/ops.md",
+                "start": 1,
+                "end": 6,
+                "sha256": "1a983771b3bcdb3d2d62690e28e64acdc478d952049f5f697a28e3f1c5aac6ad"
+              },
+              {
+                "source_file": "docs/draft.md",
+                "start": 1,
+                "end": 5,
+                "sha256": "ea549962e1a58fdd2f0800dd78b30b47905db52263f4039c7ee789b279846406"
+              },
+              {
+                "source_file": "docs/неясно.md",
+                "start": 1,
+                "end": 5,
+                "sha256": "1f8a2822cdf2ad23146c5e14c330742d917a1a30e60a06c9fcf91249f54757d8"
+              },
+              {
+                "source_file": "docs/unrelated.md",
+                "start": 1,
+                "end": 4,
+                "sha256": "0dea86d5a901a6b1d213efe160833082a0e81fea162f889eb72cf5f767c569f1"
+              },
+              {
+                "source_file": "src/gate.py",
+                "start": 1,
+                "end": 6,
+                "sha256": "c61ec491af7b03d53ad72ffa1458f403e0a3dbce2a59f6010bb48448cf74176a"
+              },
+              {
+                "source_file": "src/ledger.py",
+                "start": 1,
+                "end": 3,
+                "sha256": "4ccab45364d32f5eb31ab19210da15024d49e9c1f2a669772b4b15faa9306f86"
+              },
+              {
+                "source_file": "docs/Журнал.md",
+                "start": 1,
+                "end": 2206,
+                "sha256": "927106bc5b27e4b4b875f484c2affb01c8f679b8c1858dae6ac0dec156b4faaf"
+              }
+            ]
+          }
+        ]
+      },
+      "fragments": [
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "serial",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; serial source reading",
+            "model": null,
+            "model_identity_source": "runtime model identifier not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/authority.md",
+              "start": 1,
+              "end": 5,
+              "sha256": "59cf5b17ff528c7a7fe41ad894733b92b77ebfe293ae8274d7e66e96660e40cd",
+              "summary": "Read ownership rules: current policy owns pilot rules; operations, archived draft and observational journal do not override it.",
+              "outcome": "findings",
+              "reason": "Source-backed facts or uncertainty in the declared scope, with authority/observation distinctions preserved."
+            },
+            {
+              "source_file": "docs/policy.md",
+              "start": 1,
+              "end": 8,
+              "sha256": "491a5fc0521b4eda44493331bb9cf75b5a1625ef8e59010731cc0cbb2c90c9a3",
+              "summary": "Read inclusive168-hour original-issuance window, future/revoked rejection, replacement clock, new approval and no broadcasting.",
+              "outcome": "findings",
+              "reason": "Source-backed facts or uncertainty in the declared scope, with authority/observation distinctions preserved."
+            },
+            {
+              "source_file": "docs/ops.md",
+              "start": 1,
+              "end": 6,
+              "sha256": "1a983771b3bcdb3d2d62690e28e64acdc478d952049f5f697a28e3f1c5aac6ad",
+              "summary": "Read original-time replacement, revocation flag, owner approval and unauthorized offline controllers.",
+              "outcome": "findings",
+              "reason": "Source-backed facts or uncertainty in the declared scope, with authority/observation distinctions preserved."
+            },
+            {
+              "source_file": "docs/draft.md",
+              "start": 1,
+              "end": 5,
+              "sha256": "ea549962e1a58fdd2f0800dd78b30b47905db52263f4039c7ee789b279846406",
+              "summary": "Read superseded336-hour and replacement-reset proposals and explicit current nonapproval.",
+              "outcome": "findings",
+              "reason": "Source-backed facts or uncertainty in the declared scope, with authority/observation distinctions preserved."
+            },
+            {
+              "source_file": "docs/неясно.md",
+              "start": 1,
+              "end": 5,
+              "sha256": "1f8a2822cdf2ad23146c5e14c330742d917a1a30e60a06c9fcf91249f54757d8",
+              "summary": "Read all referent, remembered-object and approval gaps; no link to a code symbol or controller setting is justified.",
+              "outcome": "findings",
+              "reason": "Source-backed facts or uncertainty in the declared scope, with authority/observation distinctions preserved."
+            },
+            {
+              "source_file": "docs/unrelated.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "0dea86d5a901a6b1d213efe160833082a0e81fea162f889eb72cf5f767c569f1",
+              "summary": "Read complete kitchen record: sourdough renewal and twelve hours explicitly concern no archive grant.",
+              "outcome": "zero-findings",
+              "reason": "Explicitly unrelated to the defined archive-access scope."
+            },
+            {
+              "source_file": "src/gate.py",
+              "start": 1,
+              "end": 6,
+              "sha256": "c61ec491af7b03d53ad72ffa1458f403e0a3dbce2a59f6010bb48448cf74176a",
+              "summary": "Read elapsed-hour/revocation predicate and admit call; policy correspondence is semantic inference.",
+              "outcome": "findings",
+              "reason": "Source-backed facts or uncertainty in the declared scope, with authority/observation distinctions preserved."
+            },
+            {
+              "source_file": "src/ledger.py",
+              "start": 1,
+              "end": 3,
+              "sha256": "4ccab45364d32f5eb31ab19210da15024d49e9c1f2a669772b4b15faa9306f86",
+              "summary": "Read the revoke setter and return; the flag mutation corresponds to the operator step.",
+              "outcome": "findings",
+              "reason": "Source-backed facts or uncertainty in the declared scope, with authority/observation distinctions preserved."
+            },
+            {
+              "source_file": "docs/Журнал.md",
+              "start": 1,
+              "end": 2206,
+              "sha256": "927106bc5b27e4b4b875f484c2affb01c8f679b8c1858dae6ac0dec156b4faaf",
+              "summary": "Read ranges1-1100 and1101-2206 through EOF: original grant nickname, no-new-grant records and final168acceptance/169refusal despite physical replacement.",
+              "outcome": "findings",
+              "reason": "Source-backed facts or uncertainty in the declared scope, with authority/observation distinctions preserved."
+            }
+          ],
+          "nodes": [
+            {
+              "id": "docs_policy_access_window",
+              "entity_key": "access_window",
+              "label": "Original-issue archive grant window",
+              "file_type": "concept",
+              "claim_status": "current",
+              "source_file": "docs/policy.md",
+              "source_location": "L3-L7",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 7,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance.\nFuture-dated grants are invalid.\nA revoked grant is invalid even inside that interval.\nChanging a physical wristband does not restart the validity clock.\nAn expired grant requires a new approval; the old grant cannot be renewed in place."
+                }
+              ]
+            },
+            {
+              "id": "docs_ops_wristband_replacement",
+              "entity_key": "wristband_replacement",
+              "label": "Replacement preserves original grant",
+              "file_type": "concept",
+              "claim_status": "operator procedure",
+              "source_file": "docs/ops.md",
+              "source_location": "L2-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 2,
+                  "end": 5,
+                  "quote": "For a lost wristband, issue a replacement carrying the original issuance time.\nWhen a custodian revokes access, set the grant revoked flag before the next admission.\nAfter expiry, ask the program owner for new approval.\nA fresh bracelet alone is not approval."
+                }
+              ]
+            },
+            {
+              "id": "docs_draft_superseded_window",
+              "entity_key": "superseded_window",
+              "label": "Unapproved 336-hour timer reset",
+              "file_type": "concept",
+              "claim_status": "superseded",
+              "source_file": "docs/draft.md",
+              "source_location": "L2-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/draft.md",
+                  "start": 2,
+                  "end": 5,
+                  "quote": "Status: superseded, not current pilot policy.\nThe proposed window was 336 hours.\nThe sketch proposed that replacing a bracelet would restart the timer.\nNeither proposal was approved for the current pilot."
+                }
+              ]
+            },
+            {
+              "id": "docs_authority_policy_ownership",
+              "entity_key": "policy_ownership",
+              "label": "Current pilot policy ownership",
+              "file_type": "concept",
+              "claim_status": "current authority",
+              "source_file": "docs/authority.md",
+              "source_location": "L2-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/authority.md",
+                  "start": 2,
+                  "end": 5,
+                  "quote": "The current pilot rules are owned by policy.md.\nops.md records the operator procedure, not additional authorization.\ndraft.md is archived and cannot override the current pilot.\nThe journal is observational evidence; it does not amend policy."
+                }
+              ]
+            },
+            {
+              "id": "docs_неясно_unresolved_gate_note",
+              "entity_key": "unresolved_gate_note",
+              "label": "Unresolved twelve-hour Gate note",
+              "file_type": "concept",
+              "claim_status": "unresolved",
+              "source_file": "docs/неясно.md",
+              "source_location": "L2-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/неясно.md",
+                  "start": 2,
+                  "end": 5,
+                  "quote": "The operator wrote: \"Gate should remember it for twelve hours.\"\nThe note does not identify whether Gate means the garden entrance or an application component.\nIt does not identify what is remembered or who approved the duration.\nTreat this as unresolved; no controller setting is specified."
+                }
+              ]
+            },
+            {
+              "id": "docs_журнал_north_grant",
+              "entity_key": "north_grant",
+              "label": "Северный жетон",
+              "file_type": "concept",
+              "claim_status": "observed nickname; no separate approval",
+              "source_file": "docs/Журнал.md",
+              "source_location": "L2-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2,
+                  "end": 3,
+                  "quote": "Северный жетон is the field nickname for one archive grant; it is not a separate approval.\nAll times below are elapsed hours from the original issue."
+                }
+              ]
+            },
+            {
+              "id": "docs_журнал_boundary_observations",
+              "entity_key": "boundary_observations",
+              "label": "168/169-hour admission observations",
+              "file_type": "concept",
+              "claim_status": "observation; not policy amendment",
+              "source_file": "docs/Журнал.md",
+              "source_location": "L2205-L2206",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2205,
+                  "end": 2206,
+                  "quote": "At elapsed hour 168, the Северный жетон was accepted while not revoked.\nAt elapsed hour 169, it was refused; replacing its bracelet had not changed the original issue time."
+                }
+              ]
+            }
+          ],
+          "edges": [
+            {
+              "source": "src_gate_usable",
+              "target": "docs_policy_access_window",
+              "relation": "implements",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The inclusive original elapsed-hour bound and revoked/future checks match current policy; this semantic correspondence is not a syntactic link.",
+              "source_file": "src/gate.py",
+              "source_location": "L1-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/gate.py",
+                  "start": 1,
+                  "end": 3,
+                  "quote": "def usable(issued_hour, now_hour, revoked):\n    elapsed = now_hour - issued_hour\n    return not revoked and 0 <= elapsed <= 168"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 5,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance.\nFuture-dated grants are invalid.\nA revoked grant is invalid even inside that interval."
+                }
+              ]
+            },
+            {
+              "source": "src_ledger_revoke",
+              "target": "docs_ops",
+              "relation": "implements_revocation_step",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "Setting revoked matches the operator procedure; the gate predicate separately enforces admission.",
+              "source_file": "src/ledger.py",
+              "source_location": "L1-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/ledger.py",
+                  "start": 1,
+                  "end": 3,
+                  "quote": "def revoke(grant):\n    grant[\"revoked\"] = True\n    return grant"
+                },
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 3,
+                  "end": 3,
+                  "quote": "When a custodian revokes access, set the grant revoked flag before the next admission."
+                }
+              ]
+            },
+            {
+              "source": "docs_ops_wristband_replacement",
+              "target": "docs_policy_access_window",
+              "relation": "preserves_original_clock",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "rationale": "Both explicitly retain the original clock after physical replacement.",
+              "source_file": "docs/ops.md",
+              "source_location": "L2-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/ops.md",
+                  "start": 2,
+                  "end": 5,
+                  "quote": "For a lost wristband, issue a replacement carrying the original issuance time.\nWhen a custodian revokes access, set the grant revoked flag before the next admission.\nAfter expiry, ask the program owner for new approval.\nA fresh bracelet alone is not approval."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 6,
+                  "end": 6,
+                  "quote": "Changing a physical wristband does not restart the validity clock."
+                }
+              ]
+            },
+            {
+              "source": "docs_draft_superseded_window",
+              "target": "docs_policy_access_window",
+              "relation": "superseded_by",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "rationale": "Archived proposals explicitly lack approval and cannot override current policy.",
+              "source_file": "docs/draft.md",
+              "source_location": "L2-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/draft.md",
+                  "start": 2,
+                  "end": 5,
+                  "quote": "Status: superseded, not current pilot policy.\nThe proposed window was 336 hours.\nThe sketch proposed that replacing a bracelet would restart the timer.\nNeither proposal was approved for the current pilot."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 3,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance."
+                },
+                {
+                  "source_file": "docs/authority.md",
+                  "start": 4,
+                  "end": 4,
+                  "quote": "draft.md is archived and cannot override the current pilot."
+                }
+              ]
+            },
+            {
+              "source": "docs_authority_policy_ownership",
+              "target": "docs_policy_access_window",
+              "relation": "designates_current_owner",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "rationale": "The authority note assigns current rules to policy; observations/procedures are subordinate.",
+              "source_file": "docs/authority.md",
+              "source_location": "L2-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/authority.md",
+                  "start": 2,
+                  "end": 5,
+                  "quote": "The current pilot rules are owned by policy.md.\nops.md records the operator procedure, not additional authorization.\ndraft.md is archived and cannot override the current pilot.\nThe journal is observational evidence; it does not amend policy."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 3,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance."
+                }
+              ]
+            },
+            {
+              "source": "docs_журнал_north_grant",
+              "target": "docs_policy_access_window",
+              "relation": "instance_of",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The field nickname denotes an archive grant without separate approval, so the current grant rules apply.",
+              "source_file": "docs/Журнал.md",
+              "source_location": "L2-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2,
+                  "end": 3,
+                  "quote": "Северный жетон is the field nickname for one archive grant; it is not a separate approval.\nAll times below are elapsed hours from the original issue."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 3,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance."
+                }
+              ]
+            },
+            {
+              "source": "docs_журнал_boundary_observations",
+              "target": "docs_журнал_north_grant",
+              "relation": "observes_later_state",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "rationale": "The tail names the same grant introduced in the first range; this reconciles the two distant chunks.",
+              "source_file": "docs/Журнал.md",
+              "source_location": "L2205-L2206",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2205,
+                  "end": 2206,
+                  "quote": "At elapsed hour 168, the Северный жетон was accepted while not revoked.\nAt elapsed hour 169, it was refused; replacing its bracelet had not changed the original issue time."
+                },
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2,
+                  "end": 2,
+                  "quote": "Северный жетон is the field nickname for one archive grant; it is not a separate approval."
+                }
+              ]
+            },
+            {
+              "source": "docs_журнал_boundary_observations",
+              "target": "src_gate_usable",
+              "relation": "consistent_with",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "Hour168 acceptance and169 refusal without resetting original issuance agree with the predicate; two observations do not prove every runtime case.",
+              "source_file": "docs/Журнал.md",
+              "source_location": "L2205-L2206",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/Журнал.md",
+                  "start": 2205,
+                  "end": 2206,
+                  "quote": "At elapsed hour 168, the Северный жетон was accepted while not revoked.\nAt elapsed hour 169, it was refused; replacing its bracelet had not changed the original issue time."
+                },
+                {
+                  "source_file": "src/gate.py",
+                  "start": 1,
+                  "end": 3,
+                  "quote": "def usable(issued_hour, now_hour, revoked):\n    elapsed = now_hour - issued_hour\n    return not revoked and 0 <= elapsed <= 168"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 3,
+                  "end": 6,
+                  "quote": "A grant permits archive access for no more than 168 elapsed hours after original issuance.\nFuture-dated grants are invalid.\nA revoked grant is invalid even inside that interval.\nChanging a physical wristband does not restart the validity clock."
+                }
+              ]
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": [
+            {
+              "question": "Who or what is Gate, what is remembered, and who approved twelve hours? This note establishes no application cache/controller setting.",
+              "source_file": "docs/неясно.md",
+              "source_location": "L2-L5",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/неясно.md",
+                  "start": 2,
+                  "end": 5,
+                  "quote": "The operator wrote: \"Gate should remember it for twelve hours.\"\nThe note does not identify whether Gate means the garden entrance or an application component.\nIt does not identify what is remembered or who approved the duration.\nTreat this as unresolved; no controller setting is specified."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "community_interpretation": {
+        "0": {
+          "members": [
+            "docs_authority_policy_ownership",
+            "docs_draft_superseded_window",
+            "docs_ops_wristband_replacement",
+            "docs_policy_access_window",
+            "docs_журнал_boundary_observations",
+            "docs_журнал_north_grant"
+          ],
+          "label": "Original grant validity across authority, history and observation",
+          "rationale": "The concepts join current source ownership and grant window to original-clock replacement, superseded proposals and the named grant boundary observations; each retains its source role."
+        },
+        "1": {
+          "members": [
+            "docs_ops",
+            "docs_ops_operator_notes",
+            "src_ledger",
+            "src_ledger_revoke"
+          ],
+          "label": "Operator revocation implementation",
+          "rationale": "The operator procedure connects to revoke(), which sets the flag; this is distinct from admission enforcement."
+        },
+        "2": {
+          "members": [
+            "docs_policy",
+            "docs_policy_current_pilot",
+            "docs_policy_маяк_доступ_к_архиву"
+          ],
+          "label": "Current policy source structure",
+          "rationale": "The policy file and headings locate the current pilot rules."
+        },
+        "3": {
+          "members": [
+            "src_gate",
+            "src_gate_admit",
+            "src_gate_usable"
+          ],
+          "label": "Admission code structure",
+          "rationale": "The gate module and admit()->usable() call chain locate elapsed-time/revocation checks."
+        },
+        "4": {
+          "members": [
+            "docs_authority",
+            "docs_authority_pilot_authority"
+          ],
+          "label": "Authority document structure",
+          "rationale": "The authority file/heading locate the source-precedence statements."
+        },
+        "5": {
+          "members": [
+            "docs_draft",
+            "docs_draft_archived_design_sketch"
+          ],
+          "label": "Archived proposal source structure",
+          "rationale": "The draft file and heading remain historical; grouping gives no current authority."
+        },
+        "6": {
+          "members": [
+            "docs_unrelated",
+            "docs_unrelated_kitchen_record"
+          ],
+          "label": "Unrelated kitchen source structure",
+          "rationale": "Kitchen-file/heading evidence remains structurally present but semantically unrelated."
+        },
+        "7": {
+          "members": [
+            "docs_журнал",
+            "docs_журнал_журнал_наблюдений"
+          ],
+          "label": "Journal document structure",
+          "rationale": "Native file and heading nodes provide source navigation separately from semantic observation concepts."
+        },
+        "8": {
+          "members": [
+            "docs_неясно",
+            "docs_неясно_неясная_запись"
+          ],
+          "label": "Unresolved note source structure",
+          "rationale": "The ambiguous note can be located without asserting a code identity."
+        },
+        "9": {
+          "members": [
+            "docs_неясно_unresolved_gate_note"
+          ],
+          "label": "Unresolved Gate referent",
+          "rationale": "The isolated semantic concept records a known gap, not a guessed twelve-hour controller setting."
+        }
+      }
+    }
+  },
+  "recording_note": "These are genuine trial outputs from active subscription models during Pass E. Replaying them tests accounting/native integration, not a new model extraction or an independent semantic benchmark. Parallel short-source workers were assigned gpt-6.1-terra; root read all sources including both journal ranges and produced journal+serial interpretations. Model usage was not exposed."
+}

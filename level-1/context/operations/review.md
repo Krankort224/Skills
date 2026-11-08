@@ -29,6 +29,8 @@ For each material claim sampled, inspect its cited owner and enough surrounding 
 
 A graph's absence is not automatically a defect in a map-based project. If graph-backed claims are part of the review, check available artifact identity, source/coverage status, direction, confidence/origin and correspondence to canonical sources. Missing, stale, incompatible, partial or corrupt artifacts reduce the relevant claim's support; they do not block direct-source review.
 
+For a mixed graph, sample semantic claims against exact supporting source ranges, source authority and confidence/rationale. Inspect the expected-shard/receipt ledger, including EOF, zero findings and unresolved questions; declared receipts and successful mechanical validation do not prove model understanding. Unknown usage must remain unknown. A supported native refresh preserving explicit semantic origin is a tier-retention check, not proof of fresh semantics after source changes.
+
 Do not equate three filenames, a build exit code, node count or a connected graph with a complete semantic read or a successful publication transaction. HTML generation is distinct from browser rendering; network/CDN requirements and aggregation affect what the view can show. The shared `.gitkeep` promises none of these capabilities.
 
 Use the technical guide only for a specifically needed audited limit/method. Review does not install optional tools, regenerate artifacts, invoke provider APIs or enable feedback/hook services. Unsupported/untested graph capabilities remain explicit findings or later gates.
