@@ -509,13 +509,16 @@ original 35-row benchmark and accepted A/B/C evidence retain their dated scope.
 
 | Historical gap | New local owner | Demonstrated result / explicit limit |
 | --- | --- | --- |
-| M3 regular-to-turning/end geometry | [Section transformations](../references/typologies/housing/section-variants.md) | Same two-household/two-bedroom program, actual room/wall/shaft deductions, fitted objects/actions, connected/external fronts, whole portals and common core through regular/turning/end variants. Original naive rotation fails by12 m² private and24 m² core overlap; corrected turn needs48 m² more common/footprint and a46 m² external ground approach. Inner-corner point-outlook tests and end-wall deductions expose further failures. Actual core/equipment, daylight/privacy/solar, structural and statutory performance remain separate. |
+| M3 regular-to-turning/end geometry | [Section transformations](../references/typologies/housing/section-variants.md) | Same two-household/two-bedroom program, actual room/wall/shaft deductions, fitted objects/actions, connected/external fronts, whole portals and common core through regular/turning/end variants. Naive rotation of the widened regular section fails by2.4 m² private and33.6 m² core overlap; corrected turn needs28.8 m² more common/footprint. Explicit R/E ground bypass and14.4 m² street approach are compared with T’s46 m² approach. Inner-corner point-outlook tests and end-wall deductions expose further failures. Actual core/equipment, daylight/privacy/solar, structural and statutory performance remain separate. |
 | D5/M6 natural-exhaust topology | [Natural-exhaust paths](../references/performance/comfort/natural-exhaust-topology.md) | Four owners across two floors, real supply/closed-door transfer/extract/branch/dedicated-channel/roof paths, shared-shaft versus shared-air distinctions, potential reverse connections, top-floor drive and maintainability. Broken transfer and unintended cross-dwelling join are diagnosed/corrected. More floors force a real shaft/door/bath revision. A graph, pressure diagnostic or outside duct envelope is not sized/proven ventilation or rated construction. |
 
 The housing example uses a common120 m² unit reservation with104.32 m² clear
 polygons before shaft deduction,8.64 perimeter and7.04 internal walls. Its1.1025
-m² shaft makes clear usable floor103.2175. Regular/end gross section area is288;
-the corrected turning arrangement is336 at the same household count. The end
+m² shaft makes clear usable floor103.2175. Regular/end gross section area is307.2;
+the corrected turning arrangement is336 at the same household count. The R/E
+core is67.2 m², including a lateral1.20 m ground bypass clear of the retained
+stair/lift reservations. R/E footprint+street approach321.6 compares with T382
+on the same basis, a60.4 m² total increase (28.8 footprint+31.6 approach). The end
 wall0.20→0.45 m changes clear polygons to101.52 and requires bed/action refit;
 at0.65 m the fixed living room falls below its supplied24 m² requirement until
 an authorized nonbearing partition/room/window arrangement changes. These are
@@ -523,7 +526,7 @@ original study metrics/inputs, not adopted area or space standards.
 
 Room solids/actions, entire shared portals, nonoverlap, core/equipment reservations,
 front normals and wet/channel coordinates are explicit. Moving an actual channel
-from(15.875,10.025) to(20.025,−1.875) reopens below-floor and roof continuity;
+from(17.475,10.025) to(20.025,−1.875) reopens below-floor and roof continuity;
 rotating a label or changing one floor is insufficient. The3 m±45° point-view
 fan is deliberately a project diagnostic, not whole-window daylight/insolation
 or privacy approval. Its nominal0.10 m gap is not a survey-robust margin.
@@ -541,9 +544,15 @@ need their technical evidence.
 
 ### Changed-input checks and routes
 
-`scripts/test_housing_air_interfaces.py` contains four focused geometric/graph
-tests alongside the39 retained regressions. A fresh condition increases the
-point-view depth3→3.5 m with the1.20 m opening unchanged. The fixed bedroom
+`scripts/test_housing_air_interfaces.py` contains five focused geometric/graph
+tests alongside the39 retained regressions. The added ground-route test checks
+connected clear reservations, whole portals, equipment/private exclusion,
+section budget and once-only footprint/approach accounting. Moving the stair
+reservation0.50 m east obstructs the bypass and is detected. An additional exact
+millimetre-cell construction covers continuous0.80 m square-probe sweeps to
+both apartment thresholds, stair/lift interfaces and the north court; that
+supplied probe is not an accessibility/evacuation requirement or approval.
+A fresh condition increases the point-view depth3→3.5 m with the1.20 m opening unchanged. The fixed bedroom
 frontage requires centre≥6.6 while a clear fan requires centre<6.5: conflict.
 A permitted0.25 m partition shift and centre6.4 recover that diagnostic while
 living24.61 and bedroom18.63 m² retain the supplied program and furniture/actions.

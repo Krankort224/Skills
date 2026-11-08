@@ -174,7 +174,7 @@ tool/component reach, cleaning method and compartment details remain checked inp
 
 Transform channels and branches with the whole unit in regular/turning/end
 variants, and repeat that chosen location across floors. For T's B the lower
-kitchen-channel centre moves from(15.875,10.025) to(20.025,−1.875); both roof
+kitchen-channel centre moves from(17.475,10.025) to(20.025,−1.875); both roof
 and below-floor continuity must follow. Its old terminal is not a new connection.
 
 For a deliberately simplified pressure diagnostic, supply ρ_out=1.25,

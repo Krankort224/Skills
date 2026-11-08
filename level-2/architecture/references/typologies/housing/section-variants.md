@@ -121,39 +121,85 @@ method; this case establishes the named fitted geometry, not every household use
 Living/bedroom1 have actual south fronts v0; bedroom2 and kitchen north fronts
 v12. Wet/utility functions are beside the shaft, not counted as occupied aspects.
 
-Regular section R places A by (x,y)=(u,v), B by (24−u,v), and common core
-C=[10,14]×[0,12]. Their interiors do not overlap; private240+core48=288 m².
-End faces x0/x24 connect to aligned neighboring sections; y0/y12 are exterior.
-Portals (10,6) and(14,6) open to the same landing. The repeated two-floor study
-uses FF0 and+3.00; all unit/core reservations repeat vertically.
+Regular section R places A by (x,y)=(u,v), B by (25.6−u,v), and common core
+C=[10,15.6]×[0,12]. Their interiors do not overlap; private240+core67.2=307.2 m².
+End faces x0/x25.6 connect to aligned neighboring sections; y0/y12 are exterior.
+Portals (10,6) and(15.6,6) open to the same landing. The repeated two-floor
+study uses FF0 and+3.00; unit/core reservations repeat vertically. Compared with
+the former4 m-wide core, the additional1.60×12=19.20 m² common strip displaces
+B and its connected neighbor1.60 m east. Retain both homes and their unchanged
+local room/shaft geometry; recount that footprint, support and adjoining section
+position rather than taking the extra strip from a dwelling or court silently.
+If that envelope/neighbor move is fixed out, this correction is unavailable:
+retain the former core's unresolved ground route and develop another actual
+arrangement. For the two repeated floors, R/E have480 m² private+134.4 common
+=614.4 floor area on this geometric basis; the added common strip costs38.4 m²
+across those floors, distinct from its19.2 m² footprint.
 
 Within C, selected stair reservation x10.3…13.7,y0.2…5.2, clear landing
-x10.2…13.8,y5.4…7.8, and selected lift enclosure x10.2…12.2,y8…10.2 do not
-overlap. North passage x12.4…13.8,y7.8…11.8 bypasses the lift; the north exit
-portal is x12.65…13.55 at y12. A trial return stair has18 equal rises over3m,
-two9-rise flights with eight0.28 m goings each,1.20 m end landings and1.20 m
-flight widths separated by0.20 m. Its3.0×4.64 m outer trial footprint fits the
-3.4×5.0 m reservation. Actual guards, support, headroom, accessible/fire strategy,
-lift pit/head and product evidence must pass their existing methods; these trial
-dimensions do not certify a core. Ground street/core and north court routes
-must remain public/common within the assigned core rather than cross a flat.
+x10.2…15.4,y5.4…7.8, and selected lift enclosure x10.2…12.2,y8…10.2 do not
+overlap. A threshold band x10.3…13.7,y5.2…5.4 connects the north stair face to
+the landing. North passage x12.4…13.8,y7.8…11.8 bypasses the lift; its0.90 m
+north portal is x12.65…13.55 at y12, through wall/threshold y11.8…12. A trial
+return stair has18 equal rises over3m, two9-rise flights with eight0.28 m goings
+each,1.20 m end landings and1.20 m flight widths separated by0.20 m. Its
+3.0×4.64 m outer trial footprint fits the3.4×5.0 m reservation. Actual guards,
+support, walking/headroom profile, accessible/fire strategy, lift pit/head and
+product evidence still require their existing methods; these dimensions do not
+certify a core.
+
+**Ground route, separate from the stair volume.** Keep a1.20 m clear bypass
+x14.1…15.3,y0.2…7.8, inside the core's east finished face x15.4 and outside
+the stair's x13.7 limit. Put the0.90 m south entrance at x14.25…15.15,y0
+(centre14.7,0), through threshold x14.1…15.3,y0…0.2. With explicitly assumed
+common land, the1.20 m approach x14.1…15.3,y−12…0 connects street y−12 to
+that threshold:14.40 m² outside the footprint. A sliding entrance leaf pockets
+in x13.35…14.25,y0…0.2; the north portal's sliding pocket is
+x11.75…12.65,y11.8…12. Actual assemblies/support and threshold levels remain
+project evidence; no hinged leaf is assigned across these clear study routes.
+Apartment thresholds x9.8…10.2 and x15.4…15.8,y5.55…6.45 bridge the
+unit/common wall strips to the landing. Leaves open into their own halls, clear
+of the common landing.
+
+Trace street→south threshold→bypass→landing: its centreline runs
+(14.7,−12)→(14.7,6). Across the landing at y6 it reaches both complete apartment
+portals, the stair threshold/north face and the lift's selected south interface
+at y8, x10.75…11.65 (threshold y7.8…8). From the same landing, the1.40 m north
+passage reaches its full portal and the immediately adjoining common court at
+y12. These connected clear reservations contain the paths and avoid all stair/
+lift/private interiors. Neither street arrival nor the street-to-court route
+passes under a flight or through a dwelling. R/E thus reserve307.20 m² footprint
+plus14.40 approach=321.60 m² before other court/site uses; do not credit the
+approach again as additional court area.
+
+For the bypass/landing/north-passage study section, reserve clear volume
+z=FF…FF+2.40 with level floors and no door equipment/support/services inside it.
+The3.00 m floor interval budgets0.30 m slab plus0.30 m separate ceiling/service
+reservation above that volume. Because the bypass is lateral to the stair's
+entire plan reservation, no under-stair headroom inference is needed. This is
+an explicit geometric reservation, not verified construction, statutory headroom
+or a complete accessible/fire route. If actual structure/doors/services intrude,
+refit the path and reconcile the footprint again.
 
 ## Failed rotation and corrected turning section
 
-Naively rotate R's right apartment clockwise90° around its entrance(14,6).
-Its new box is [8,20]×[−4,6]: overlap with A is12 m² and with C is24 m².
+Naively rotate R's right apartment clockwise90° around its entrance(15.6,6).
+Its new box is [9.6,21.6]×[−4,6]: overlap with A is2.4 m² and with C is33.6 m².
 The portal also rotates into a horizontal segment at y6; only half touches the
 old core instead of opening wholly onto its landing. Area and household count
 are unchanged, but the proposal fails nonoverlap and a real entrance interface.
 
 Corrected turning T retains A; place B by (x,y)=(10+v,−10+u), giving
 [10,22]×[−10,0]. Enlarge the **common landing/core reservation**, not the stair
-itself, to [10,18]×[0,12]. Keep R's actual stair/lift/passage inside it; provide
-an unobstructed2 m branch x15…17,y0…7.8 connected to the old landing across
-x14…17,y5.4…7.8. B's full portal is now x15.55…16.45 at y0. No private/core
-overlap remains. Private240+common96=336 m²: same two households,48 m² more
-footprint/common ground. This is a cost of the corrected turn, not greater
-dwelling area or a hidden gain in density.
+itself, to [10,18]×[0,12]. Keep R's stair/lift/north passage and threshold band
+inside it; provide an unobstructed2 m branch x15…17,y0…7.8 connected to R's widened landing
+across x15.4…17.8,y5.4…7.8, making T's full clear landing
+x10.2…17.8,y5.4…7.8. B's full portal is now x15.55…16.45 at y0. No private/core
+overlap remains. Private240+common96=336 m²: same two households,28.8 m² more
+footprint/common ground than the widened R. This is a cost of the corrected
+turn, not greater dwelling area or a hidden gain in density.
+Across the same two floors T has480 private+192 common=672 m²,57.6 more than
+R/E. Neither footprint nor floor area is a selected statutory metric here.
 
 Its inner corner is(10,0). A's south-facing bedroom1 window centre(8.4,0)
 and B's west-facing transformed centre(10,−1.6) look into that notch. For a
@@ -171,18 +217,24 @@ insolation. Retest actual receivers through the light/sun owners and propagate
 opening/support/enclosure changes. If openings are fixed, retain the failure
 and change the wing/court geometry or the authorized program instead.
 
-At ground, T's B blocks the former south core entry at(12,0). Move that entry
-to the exposed east core edge(18,6), connected through the new common band;
-retain the north passage to court. With explicitly assumed common land, a
+At ground, T's B blocks the former south core entry at(14.7,0). Move that entry
+and its sliding threshold to the exposed east core edge(18,6). Its0.90 m portal
+y5.55…6.45 crosses threshold x17.8…18, with leaf pocket x17.8…18,y4.65…5.55;
+it joins the widened landing directly. Retain the north passage to court and
+the same clear-height reservation. With explicitly assumed common land, a
 2 m walking strip x22…24,y−12…7 plus x18…22,y5…7 connects street y−12 to
 the east entry without crossing a home:38+8=46 m², counted once outside the
 footprint. Check rights, levels, actual door approach and crossings separately.
-Without this land or another real approach, T still fails ground access.
+The landing still connects to both homes, the stair/lift thresholds and north
+court passage without crossing a private or equipment reservation. T reserves
+336+46=382 m² footprint/approach,60.40 m² more than R/E on the same basis
+(28.80 footprint+31.60 approach). Without this land or another real approach,
+T still fails ground access.
 
 ## End variant and changed wall
 
 End E retains R's two apartment/core arrangement but terminates the east neighbor.
-The former connected face x24 becomes exterior; both north/south occupied fronts
+The former connected face x25.6 becomes exterior; both north/south occupied fronts
 remain. Specify the new end wall, weather/thermal/support functions, roof return,
 openings and maintenance rather than merely deleting the neighboring section.
 
@@ -192,7 +244,7 @@ keeping the outer envelope fixed. Living becomes5.35×4.6=24.61 m²; bedroom2
 Clear polygons total101.52 before shaft deduction, perimeter11.54 and internal
 partitions6.94:101.52+11.54+6.94=120. The0.10 m² reduction in internal
 partition strips is not charged twice as new end wall. Usable floor after shaft
-is100.4175. Gross private240+core48 remains288, with lower clear dwelling area.
+is100.4175. Gross private240+core67.2 remains307.2, with lower clear dwelling area.
 
 Bedroom2's original bed-side action u0.2…0.8 intersects the thicker wall.
 Shift the bed/actions0.40 m inward: bed u1.2…2.8 with left action u0.6…1.2,
@@ -215,7 +267,7 @@ program; do not quietly lower the supplied living-room requirement.
 
 Apply the same chosen unit transform to each room, shaft **channel** and branch,
 not just the bathroom label. For example, the first kitchen-channel centre
-(u8.125,v10.025) is(15.875,10.025) in R's B but(20.025,−1.875) in T's B.
+(u8.125,v10.025) is(17.475,10.025) in R's B but(20.025,−1.875) in T's B.
 Overlay the next floor's actual coordinates; the old roof terminal/base connection
 does not follow automatically. A one-floor rotation or moved wet room requires
 a real reroute/shaft opening, support and ceiling reservation, not an invisible

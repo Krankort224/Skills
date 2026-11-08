@@ -104,17 +104,17 @@ class HousingAirInterfacesTests(unittest.TestCase):
 
     def test_regular_turn_end_and_changed_view_requirement(self):
         unit = (0, 0, 10, 12)
-        regular_b = transformed(unit, lambda u, v: (24 - u, v))
-        core = (10, 0, 14, 12)
-        naive = transformed(regular_b, lambda x, y: (14 + y - 6, 6 - (x - 14)))
-        self.assertEqual(overlap(unit, naive), 12)
-        self.assertEqual(overlap(core, naive), 24)
+        regular_b = transformed(unit, lambda u, v: (25.6 - u, v))
+        core = (10, 0, 15.6, 12)
+        naive = transformed(regular_b, lambda x, y: (15.6 + y - 6, 6 - (x - 15.6)))
+        self.assertAlmostEqual(overlap(unit, naive), 2.4)
+        self.assertAlmostEqual(overlap(core, naive), 33.6)
         turn_b = transformed(unit, lambda u, v: (10 + v, -10 + u))
         turn_core = (10, 0, 18, 12)
         for first, second in [(unit, turn_b), (unit, turn_core), (turn_b, turn_core)]:
             self.assertEqual(overlap(first, second), 0)
         self.assertEqual(sum(map(area, [unit, turn_b, turn_core])), 336)
-        self.assertEqual(sum(map(area, [unit, regular_b, core])), 288)
+        self.assertAlmostEqual(sum(map(area, [unit, regular_b, core])), 307.2)
         self.assertTrue(15.55 >= turn_core[0] and 16.45 <= turn_core[2])
         self.assertEqual((10 + 6, -10 + 10), (16, 0))  # Entire 0.9 portal lies on shared edge.
         self.assertTrue(8.4 + 3 > 10)  # Initial fan hits the other wing.
@@ -131,8 +131,92 @@ class HousingAirInterfacesTests(unittest.TestCase):
         self.assertLess(6.4 + 3.5, 10)
         self.assertGreaterEqual((5.55 - .2) * 4.6, 24)
         self.assertGreaterEqual((9.8 - 5.75) * 4.6, 12)
-        self.assertEqual((24 - 8.125, 10.025), (15.875, 10.025))
+        self.assertEqual((25.6 - 8.125, 10.025), (17.475, 10.025))
         self.assertEqual((10 + 10.025, -10 + 8.125), (20.025, -1.875))
+
+    def test_ground_bypass_portals_section_and_changed_obstruction(self):
+        core = (10, 0, 15.6, 12)
+        stair, lift = (10.3, .2, 13.7, 5.2), (10.2, 8, 12.2, 10.2)
+        bypass = (14.1, .2, 15.3, 7.8)
+        landing = (10.2, 5.4, 15.4, 7.8)
+        north = (12.4, 7.8, 13.8, 11.8)
+        south_threshold = (14.25, 0, 15.15, .2)
+        stair_threshold = (10.3, 5.2, 13.7, 5.4)
+        lift_threshold = (10.75, 7.8, 11.65, 8)
+        north_threshold = (12.65, 11.8, 13.55, 12)
+        common = [south_threshold, bypass, landing, north, stair_threshold,
+                  lift_threshold, north_threshold]
+        for route in common:
+            self.assertTrue(contains(core, route))
+            for obstacle in [stair, lift, (0, 0, 10, 12), (15.6, 0, 25.6, 12)]:
+                self.assertEqual(overlap(route, obstacle), 0)
+        # Shared segments establish actual interfaces, not point contacts.
+        def joins(a, b):
+            dx = min(a[2], b[2]) - max(a[0], b[0])
+            dy = min(a[3], b[3]) - max(a[1], b[1])
+            return dx >= 0 and dy >= 0 and (dx > 0 or dy > 0)
+        for a, b in [(south_threshold, bypass), (bypass, landing),
+                     (landing, north), (north, north_threshold),
+                     (landing, stair_threshold), (stair_threshold, stair),
+                     (landing, lift_threshold), (lift_threshold, lift),
+                     (landing, (9.8, 5.55, 10.2, 6.45)),
+                     (landing, (15.4, 5.55, 15.8, 6.45))]:
+            self.assertTrue(joins(a, b))
+        self.assertGreaterEqual(15.3 - 14.1, 1.2)
+        self.assertTrue(14.1 <= 14.25 < 15.15 <= 15.3)
+        self.assertTrue(12.4 <= 12.65 < 13.55 <= 13.8)
+        approach = (14.1, -12, 15.3, 0)
+        self.assertTrue(joins(approach, south_threshold))
+        self.assertEqual(overlap(approach, core), 0)
+        self.assertAlmostEqual(area(approach), 14.4)
+        self.assertAlmostEqual(240 + area(core) + area(approach), 321.6)
+        self.assertAlmostEqual((336 + 46) - 321.6, 60.4)
+        self.assertAlmostEqual((240 + area(core)) * 2, 614.4)
+        self.assertAlmostEqual(336 * 2 - 614.4, 57.6)
+        self.assertAlmostEqual(3 - .3 - .3, 2.4)
+        # A different construction verifies continuous .8m square walking
+        # sweeps: subdivide each swept rectangle at every region boundary.
+        # Each resulting cell must be wholly inside a clear reservation.
+        # This is a supplied probe, not an access/evacuation dimension.
+        def covered(rect, regions):
+            xs = sorted({rect[0], rect[2]} |
+                        {x for r in regions for x in (r[0], r[2]) if rect[0] < x < rect[2]})
+            ys = sorted({rect[1], rect[3]} |
+                        {y for r in regions for y in (r[1], r[3]) if rect[1] < y < rect[3]})
+            return all(any(contains(r, (x0, y0, x1, y1)) for r in regions)
+                       for x0, x1 in zip(xs, xs[1:]) for y0, y1 in zip(ys, ys[1:]))
+        throats = [(9.8, 5.55, 10.2, 6.45), (15.4, 5.55, 15.8, 6.45)]
+        regions = common + throats + [approach, (12.4, 12, 13.8, 13)]
+        # These supplied decimal coordinates lie on an exact millimetre grid;
+        # use integers for cell coverage rather than binary boundary roundoff.
+        regions_mm = [tuple(round(v * 1000) for v in r) for r in regions]
+        paths = [[(14.7, -11.5), (14.7, 6), (10.2, 6)],
+                 [(14.7, -11.5), (14.7, 6), (15.4, 6)],
+                 [(14.7, -11.5), (14.7, 6), (13.1, 6), (13.1, 12.5)],
+                 [(14.7, -11.5), (14.7, 6), (11.2, 6), (11.2, 5.6)],
+                 [(14.7, -11.5), (14.7, 6), (11.2, 6), (11.2, 7.6)]]
+        for path in paths:
+            for (x0, y0), (x1, y1) in zip(path, path[1:]):
+                self.assertTrue(x0 == x1 or y0 == y1)
+                sweep = (min(x0, x1) - .4, min(y0, y1) - .4,
+                         max(x0, x1) + .4, max(y0, y1) + .4)
+                sweep_mm = tuple(round(v * 1000) for v in sweep)
+                self.assertTrue(covered(sweep_mm, regions_mm))
+                for obstacle in [stair, lift]:
+                    self.assertEqual(overlap(sweep_mm, tuple(round(v * 1000) for v in obstacle)), 0)
+        # The enlarged turning landing reaches its relocated east threshold;
+        # B's full south portal meets the retained two-metre branch.
+        turn_landing = (10.2, 5.4, 17.8, 7.8)
+        turn_branch = (15, 0, 17, 7.8)
+        self.assertTrue(joins(turn_landing, (17.8, 5.55, 18, 6.45)))
+        self.assertTrue(joins(turn_landing, turn_branch))
+        self.assertTrue(15 <= 15.55 < 16.45 <= 17)
+        for route in [turn_landing, turn_branch]:
+            for obstacle in [stair, lift, (0, 0, 10, 12), (10, -10, 22, 0)]:
+                self.assertEqual(overlap(route, obstacle), 0)
+        # A changed actual stair/support envelope invalidates this bypass.
+        moved_stair = (10.8, .2, 14.2, 5.2)
+        self.assertGreater(overlap(bypass, moved_stair), 0)
 
     def test_supply_transfer_roof_and_cross_dwelling_isolation(self):
         owners = ('A1', 'B1', 'A2', 'B2')
