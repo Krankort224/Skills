@@ -1,9 +1,10 @@
 # Architectural knowledge coverage and verification boundary
 
-Issue #13 Pass A status: navigation and historical benchmark candidate, pending
-independent review. The recovered 35-row report is transcribed below; its
-coverage judgments remain historical. No later pass is started or coverage status
-upgraded by these links.
+Issue #13 Pass A is accepted at `1c4157841155450aea705cbc296b80349b29b82d`;
+its [accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6727570803)
+records independent review and dot's reconciliation of the original report.
+The recovered 35-row report below remains historical; navigation does not upgrade
+its coverage judgments.
 The accepted Issue #10 result is
 [`39394ad06476952c17792022613648002a6000ee`](https://github.com/Krankort224/Skills/commit/39394ad06476952c17792022613648002a6000ee),
 as recorded in its [accepted F summary](https://github.com/Krankort224/Skills/issues/10#issuecomment-6716639914).
@@ -120,7 +121,7 @@ questions, and owner acceptance is required before Issue completion or main merg
 
 Maintenance evidence only; runtime questions select their subject/method directly.
 Contract: [Issue #13](https://github.com/Krankort224/Skills/issues/13) and its
-[Pass A dispatch](https://github.com/Krankort224/Skills/issues/13#issuecomment-6722315293).
+[Pass A accepted scope/evidence](https://github.com/Krankort224/Skills/issues/13#issuecomment-6727570803).
 Verified branch base: `e35b84d344359f7c4cd1f0c66b5486f9f0eea5ad`; its architecture
 tree is identical to accepted `39394ad`. Concurrent Level-0/1/context work is
 inherited from main, not edited. Instructions read at that base: root AGENTS,
