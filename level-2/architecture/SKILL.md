@@ -46,73 +46,11 @@ For a local revision, identify the accepted baseline, requested change and affec
 
 ## Load knowledge by question
 
-Use the direct common-question routes below when the method is known. If the
-request spans domains or its home is unclear, select only the relevant section
-of the [knowledge/coverage map](references/knowledge-map.md):
-[quarter/urban context](references/knowledge-map.md#quarter-and-urban-context),
-[site](references/knowledge-map.md#site), [building](references/knowledge-map.md#building),
-[spaces](references/knowledge-map.md#spaces), [systems/assemblies](references/knowledge-map.md#systems-and-assemblies)
-or [cross-cutting methods](references/knowledge-map.md#cross-cutting-methods).
-The map declares bounded methods, partial coverage and shared owners; it is not
-a required whole-file read or a second design entry point. Typologies and styles
-connect to those homes rather than duplicating their procedures. A route alone
-does not establish complete competency in its subject.
+Open a known local method or section directly. Otherwise select the relevant subject in the [knowledge and coverage overview](references/index.md), then read one complete method with its conditions, examples and checks. Follow only the dependencies material to this decision; reuse loaded material rather than recursively reading the graph. The overview distinguishes canonical owners, partial coverage and source-only material. A route is not proof of complete architectural competence.
 
-| Question | Reference |
-| --- | --- |
-| Activities, concurrent demand and room program | [Program demand](references/program-and-space.md#what-activities-and-capacity-must-the-program-accommodate) |
-| Conflicting brief statements, shared staff or changeover between bookings | [Conditional demand](references/program-and-space.md#turn-an-incomplete-brief-into-testable-demand), [resource timeline](references/program-and-space.md#test-shared-use-as-an-occupancy-and-resource-timeline) |
-| Room fit, plan families, floors and cores | [Planning and section](references/planning-and-section.md) |
-| Furnished family/compact dwelling, door use or gross-to-clear deductions | [Dwelling fit](references/dwelling-fit.md#test-a-dwelling-through-its-actual-use) |
-| Bearing walls, floor direction, stair/shaft voids or window operation | [Wall/floor organization](references/wall-floor-and-opening.md#make-wall-roles-and-floor-direction-agree), [floor openings](references/wall-floor-and-opening.md#place-a-floor-opening-without-erasing-its-support), [wall openings](references/wall-floor-and-opening.md#develop-a-wall-opening-as-support-and-use) |
-| Stair opening fits in plan but headroom or upper arrival is unresolved | [Walking profile and section](references/stair-section.md#build-and-test-the-walking-profile) |
-| Area boundary, allowances and double counting | [Area accounting](references/program-and-space.md#how-can-areas-be-counted-once-and-compared) |
-| Adjacency, access and people/goods routes | [Relationships](references/program-and-space.md#which-relationships-must-the-plan-satisfy), [movement](references/program-and-space.md#how-do-people-and-goods-move-through-access-zones) |
-| Spaces inside, overlapping, beside or linked to each other; a route that crosses an activity | [Spatial relationships](references/spatial-composition.md#choose-how-spaces-meet), [path relationship](references/spatial-composition.md#place-movement-beside-through-or-into-a-space) |
-| Floors, adaptability or a bounded layout change | [Vertical organization](references/program-and-space.md#how-should-the-program-occupy-floors-and-adapt-over-time), [local revision](references/program-and-space.md#how-should-a-bounded-revision-or-comparison-be-judged) |
-| Site, arrival and meaningfully different concepts | [Context](references/composition-and-style.md#how-should-the-design-respond-to-site-and-arrival), [partis](references/composition-and-style.md#how-can-different-partis-be-generated-and-compared) |
-| Urban edges, outdoor rooms, approach or sloping ground | [Site and context](references/site-and-context.md) |
-| Several plots/buildings, public-space hierarchy, independent phases or seasonal ground use | [Quarter and public space](references/quarter-and-public-space.md) |
-| Housing mix, apartment aspects, gallery/landing choice or home-to-court journeys | [Dwelling/access family](references/housing-and-court.md#choose-a-dwelling-and-access-family-together), [court and servicing](references/housing-and-court.md#connect-home-court-and-servicing) |
-| Learning clusters, public libraries, short-stay accommodation or mixed operators | [Use-family selection](references/building-use-families.md#select-a-family-by-its-operating-commitments), then the matching Contents method; [shared interface](references/building-use-families.md#combine-families-at-an-explicit-interface) when uses meet |
-| Existing fabric, incomplete survey or retain/repair/replace choices | [Conditional commitments](references/existing-building-adaptation.md#turn-partial-survey-into-conditional-commitments), [intervention choice](references/existing-building-adaptation.md#choose-retain-repair-or-replace-against-the-changed-use) |
-| Old/new substrate, control-layer transition or occupied work | [Retained-substrate interface](references/existing-building-adaptation.md#connect-replacement-work-to-the-actual-retained-substrate), [occupied states](references/existing-building-adaptation.md#test-occupied-work-as-a-succession-of-usable-states) |
-| Mass/void, hierarchy, style or material expression | [Massing](references/composition-and-style.md#how-should-mass-and-void-organize-the-site-and-rooms), then the matching composition Contents question |
-| Named style, architect or building; transfer to another brief | [Direction/case selector](references/style-directions.md#select-by-the-design-question), [evidence before classification](references/style-and-precedent-methods.md#read-an-object-before-classifying-it), [mechanism transfer](references/style-and-precedent-methods.md#transfer-a-mechanism-into-a-changed-brief) |
-| Light, view, noise and ventilation trade-offs | [Daylight](references/performance-and-coordination.md#daylight-view-and-occupied-comfort), [acoustic paths](references/performance-and-coordination.md#acoustic-paths-and-ventilation-choices) |
-| Simultaneous environmental demands, partial closure, usable controls or failed equipment | [Coexisting occupied states](references/environmental-operating-modes.md#develop-states-that-can-actually-coexist), [changeover and failure](references/environmental-operating-modes.md#make-changeover-usable-and-failure-explicit) |
-| Envelope junctions, durability or engineering space | [Continuity](references/performance-and-coordination.md#climate-exposure-and-envelope-continuity), [maintenance](references/performance-and-coordination.md#durability-and-maintenance-of-materials), [reservations](references/performance-and-coordination.md#structure-and-services-reservations) |
-| Envelope system selection and assembly/junction intent | [Envelope and assemblies](references/envelope-and-assemblies.md) |
-| Clear-span roof or arch/tie/ridge choices | [Spanning mechanism](references/roof-and-span.md#choose-a-spanning-mechanism-and-its-boundaries), [ridge support](references/roof-and-span.md#distinguish-a-ridge-board-from-a-supported-ridge) |
-| Roof insulation boundary or drainage conflicts | [Thermal boundary](references/roof-and-span.md#choose-where-the-thermal-boundary-follows-the-roof), [roof water](references/roof-and-span.md#resolve-roof-water-in-plan-and-at-the-junction) |
-| Basement, raised floor, buried interface or excavation beside existing support | [Underground program](references/ground-and-basement.md#decide-what-actually-needs-to-be-below-ground), [neighboring ground](references/ground-and-basement.md#map-neighboring-ground-and-construction-dependencies), [buried control functions](references/ground-and-basement.md#keep-support-soil-retention-and-water-control-distinct) |
-| Directional frame action, open ground story or grid/component/joint dimensions | [Frame and stability](references/frame-and-core.md#choose-frame-and-stability-action-with-the-plan), [physical coordination](references/frame-and-core.md#separate-coordination-pitch-component-and-occupied-clearance) |
-| Shaft versus cabin/landing, lift head/pit or machinery and independent core access | [Equipment envelope](references/frame-and-core.md#fit-vertical-equipment-and-maintenance-with-the-core), [continuous core journey](references/frame-and-core.md#carry-core-routes-and-support-through-every-level) |
-| Timber bearing, hanger, stacked/flush roof depth or visible joint | [Support topology](references/timber-and-joints.md#choose-support-topology-and-visible-expression-together), [assembly and replacement](references/timber-and-joints.md#reserve-assembly-and-replacement-access) |
-| Timber/glazing or masonry movement; exposed timber end/base | [Differential movement](references/timber-and-joints.md#coordinate-grain-and-differential-movement), [weathering and bases](references/timber-and-joints.md#keep-exposed-ends-and-bases-able-to-shed-water-and-dry) |
-| Maintenance journey, intervention quantities or equivalent-function cost over time | [Complete maintenance journey](references/operation-and-lifecycle.md#trace-a-complete-maintenance-journey), [architectural takeoff](references/operation-and-lifecycle.md#count-the-architectural-work), [dated event comparison](references/operation-and-lifecycle.md#compare-equivalent-function-over-time) |
-| Inclusive journeys and everyday/emergency spatial conflicts | [Spatial coordination](references/performance-and-coordination.md#inclusive-use-and-fire-spatial-coordination) |
-| Source applicability, accessibility, fire and jurisdiction selection | [Requirements](references/requirements.md) |
-| Normative source selection for the project's actual jurisdiction | [Jurisdiction modules](references/normative/index.md), selected through [requirements](references/requirements.md#select-a-jurisdiction-module); for confirmed Russia, [conditional design adaptations](references/normative/ru/applicability.md#choose-the-area-and-capacity-basis) |
-| Fixed/variable inputs, constraints and comparison | [Decision frame](references/computational-design.md#frame-the-question), [consistent comparison](references/computational-design.md#compare-options-consistently) |
-| Uncertainty, data or a misleading spatial proxy | [Sensitivity](references/computational-design.md#test-sensitivity-and-reproducibility), [data screening](references/computational-design.md#screen-data-before-translating-it-into-design), [access graph](references/computational-design.md#check-adjacency-and-access-as-separate-relationships) |
-| Reconcile a design decision across requested outputs | [Design issue coordination](operations/documentation.md#coordinate-a-design-issue) |
-| Sufficient evidence for the requested issue, schedule changes, precision or final readiness | [Requested-use adequacy](references/design-completion.md#derive-evidence-for-the-requested-use), [schedule meaning](references/design-completion.md#reconcile-schedule-membership-and-field-meaning), [precision](references/design-completion.md#match-precision-to-the-decision), [revision closure](references/design-completion.md#close-the-revision-and-state-remaining-conditions) |
-| Develop plan/section/elevation, diagnose and redesign a weak proposal | [Design development](references/design-development.md) |
-| Requested presentation, optional visual techniques, inspection and precision | [Visual delivery](references/visual-delivery.md) |
-| Supported calculators, exact schemas, units and all 14 adoption decisions | [Calculators](references/calculators.md) |
-| Pinned source-to-target map and exclusions | [Sources](references/sources.md) |
-| Borrowed-material permissions | [Third-party notices](THIRD_PARTY_NOTICES.md) |
+Operations select the requested activity; subject methods supply architectural knowledge. Typologies, styles and cases reuse those methods. Neither every ancestor nor the complete source ledger is a prerequisite. For a whole-design request, synthesize the relevant program, geometry, form, construction and occupied conditions; a local request stays bounded by its affected interfaces.
 
-For general methods, use the reference Contents or current heading inventory to
-select the question. Read the selected method through its next peer heading,
-including assumptions, procedure, checks, example and source limits; recover
-truncated output before relying on it. Do not load every method for a bounded
-change. Read calculator source only for debugging/modification; its contract and help own normal use. Do not load all source packs or references merely to become familiar with architecture.
-
-For normative source work, select the project's jurisdiction module through
-[requirements](references/requirements.md#select-a-jurisdiction-module), then use
-its matching task route to select individual record anchors. Apply [complete selective reading](references/requirements.md#complete-selective-reading): retrieve each selected record to its boundary and recover any truncated output before relying on it. Do not print entire thematic files as the default retrieval step.
+For normative work, establish the actual jurisdiction through [requirements](references/requirements.md#select-a-jurisdiction-module), then select individual record anchors. Apply [complete selective reading](references/requirements.md#complete-selective-reading): read each chosen record to its boundary and recover truncated output before relying on it. Do not default an unknown jurisdiction to Russia or print entire thematic files as the default retrieval step.
 
 ## Tools
 
@@ -126,8 +64,9 @@ python3 -m unittest discover -s scripts -p 'test_*.py'
 
 The standard-library Python 3 calculators provide explicit JSON-in/JSON-out preliminary area, solar-geometry, glazing-geometry and homogeneous-layer U-value calculations. Read [their contract](references/calculators.md) before selecting a method. No general daylight-factor prediction, thermal-bridge analysis, code compliance or full simulation is implied.
 
-The skill checker guards structure, links and bounded top-level table continuity;
-it is not a complete Markdown renderer or an architectural correctness check.
+The skill checker guards structure, links, ambiguous headings, runtime reachability
+and bounded top-level table continuity. Its graph output is derived diagnostics,
+not a reading order, complete Markdown renderer or architectural correctness check.
 Inspect a requested artifact in its actual delivered form through Presentation.
 
 ## Completion and integration
@@ -135,7 +74,7 @@ Inspect a requested artifact in its actual delivered form through Presentation.
 Deliver the design decision, its reason, requested artifacts, relevant checks and unresolved limits. For revisions, identify changed decisions and their consequences. For comparisons, expose hard-constraint failures before preference rankings.
 
 When sufficiency for an intended issue or a completed revision is the question,
-select the relevant [completion method](references/design-completion.md#derive-evidence-for-the-requested-use).
+select the relevant [completion method](references/methods/completion.md#derive-evidence-for-the-requested-use).
 Deliverability for that stated use does not establish construction readiness,
 regulatory approval or reliability for every project. Preserve conditional
 conclusions and the exact remaining evidence needed by dependent decisions.

@@ -7,7 +7,7 @@
 - [Computational Designers](#claude-skills-for-computational-designers)
 
 The architecture skill's newly written, selective adaptations draw on the
-following sources. See [source mapping](references/sources.md) for individual
+following sources. See [source mapping](sources/index.md) for individual
 paths, changes and exclusions.
 
 ## Selected Architecture library literature and course materials
@@ -23,7 +23,7 @@ Only independently written explanations of selected design ideas and an
 original hypothetical spatial example are included. No source scans,
 illustrations, extensive quotations or full texts are redistributed. Source
 identities, exact inspected pages and rejected prescriptions are recorded in
-[the library source map](references/sources.md#architecture-library-selected-content).
+[the library source map](sources/library.md#architecture-library-selected-content).
 The two upstream MIT licenses below do not license these books/course materials.
 
 Additional selected readings: Francis D. K. Ching, *Building Construction
@@ -51,7 +51,7 @@ SPbGASU individual-house coursework2026. No open redistribution license was
 established. The installed timber method and terrace study are original
 paraphrase/geometry; no atlas scheme, source drawing, scan, photograph or book
 text is redistributed. Exact inspected pages and source limits are in
-[the timber source map](references/sources.md#timber-joints-and-house-interfaces).
+[the timber source map](sources/library.md#timber-joints-and-house-interfaces).
 The temporary DjVu decoder and source rasters are not part of this skill.
 
 Additional selected course readings: Gurieva/SPbGASU ASK01 introduction and
@@ -61,12 +61,12 @@ license was established. Only original synthesis, source/page evidence and
 hypothetical worked geometry are installed; no source slide, photograph,
 historical detail, extensive quotation or full course text is redistributed.
 Exact inspected file pages and exclusions are in
-[the ground/frame/core source map](references/sources.md#ground-frame-and-core-selections).
+[the ground/frame/core source map](sources/library.md#ground-frame-and-core-selections).
 
 Additional style/precedent work uses selected pages of the same Ching composition
 book and primary building-operator, museum, architect/archive, heritage and
 professional-institution sources identified in the individual case analyses and
-[source map](references/sources.md). P14's Russian2016 title/copyright/contents
+[source map](sources/index.md). P14's Russian2016 title/copyright/contents
 were inspected to identify *European Building Construction Illustrated*, Francis
 D. K. Ching and Mark Mulville, Wiley2014/RIPOL2016; it is not used as a style-history
 survey. Its copyright leaf reserves reproduction rights.

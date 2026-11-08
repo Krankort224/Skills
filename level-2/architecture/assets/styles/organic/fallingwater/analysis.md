@@ -1,7 +1,7 @@
 # Fallingwater: anchoring rooms and extending their occupied edge
 
-Return to the [organic architecture profile](../../../../references/style-modern-organic-and-brutalist.md#organic-architecture-site-occupation-and-a-coherent-whole)
-or the general [precedent-reading method](../../../../references/style-and-precedent-methods.md#read-an-object-before-classifying-it).
+Return to the [organic architecture profile](../../../../references/composition/styles/modern-organic-brutalist.md#organic-architecture-site-occupation-and-a-coherent-whole)
+or the general [precedent-reading method](../../../../references/composition/styles/precedent-transfer.md#read-an-object-before-classifying-it).
 
 ## Contents
 
@@ -14,16 +14,16 @@ or the general [precedent-reading method](../../../../references/style-and-prece
 
 **Reported facts.** **Frank Lloyd Wright** designed Fallingwater in 1935 for
 the Kaufmann family at Bear Run, Mill Run, Pennsylvania, USA. The
-[operator's introduction](https://fallingwater.org/what-is-fallingwater/)
+[operator's introduction](../../../../sources/precedents.md#w-011)
 identifies the completed house/guest/service ensemble in 1939, donation to
 the Western Pennsylvania Conservancy in 1963, museum use and World Heritage
 inscription in 2019. Its
-[design account](https://fallingwater.org/history/the-kaufmanns-fallingwater/designing-fallingwater/)
+[design account](../../../../sources/precedents.md#w-009)
 distinguishes the main house's 1937 completion from the 1939 guest addition,
 and describes placing the vacation house over the falls instead of across
 from them. Thus “1935” identifies design, not completion of every part.
 
-The operator's [preservation history](https://fallingwater.org/preservation-history/)
+The operator's [preservation history](../../../../sources/precedents.md#w-010)
 records painted, stucco-covered concrete, masonry water-entry problems and
 strengthening of the living-room cantilevers in 2001–2002. This is important
 counterevidence to treating an organic composition as naturally durable or
@@ -37,7 +37,7 @@ were viewed with their footers. They provide an exterior drawing, a bedroom
 interior and plan/site-approach illustrations. The plan shows an offset
 approach beside a concentrated solid group toward a more open living/terrace
 edge. The exterior and the operator's inspected
-[southwest photograph](https://fallingwater.org/wp-content/themes/Fallingwater/images/FW_Page-Header_GENERAL_Southwest-Upshot-Spring_1600x600.jpg)
+[southwest photograph](../../../../sources/precedents.md#w-012)
 show layered horizontal projections against vertical stonework and recessed
 glazing. No measured section, reinforcement drawing or complete working set
 was inspected. P15 file 100/printed 85, also checked during selection, concerns
@@ -120,9 +120,9 @@ For a brief requiring frequent winter use, keep the main circulation inside
 and treat the veranda as optional; for intermittent warm-season use, compare
 a larger open shelter with a smaller enclosed room. Do not assign insulation,
 shade, thermal performance or a control-layer position from the word organic.
-Use [site and context](../../../../references/site-and-context.md),
-[envelope and assemblies](../../../../references/envelope-and-assemblies.md)
-and [operation and lifecycle](../../../../references/operation-and-lifecycle.md)
+Use [site and context](../../../../references/context/site/site-and-context.md),
+[envelope and assemblies](../../../../references/construction/envelope/assemblies.md)
+and [operation and lifecycle](../../../../references/performance/lifecycle/intervention-and-cost.md)
 to develop the selected physical interfaces. The transferred mechanism is a
 usable, sheltered relation to a particular landscape, with new plan/section
 and material consequences; the historical house's geometry is not copied.
@@ -130,7 +130,7 @@ and material consequences; the historical house's geometry is not copied.
 ## Provenance and rights
 
 The precise P15 identity and selected reading belong to
-[sources](../../../../references/sources.md). The operator's text and photograph
+[sources](../../../../sources/index.md). The operator's text and photograph
 remain linked to their original publication. No verified redistribution license
 was established for these sources or the book. No photograph, scan, complete
 plan or source text is included here. Observations concern the selected views;

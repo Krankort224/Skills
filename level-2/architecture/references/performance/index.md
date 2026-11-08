@@ -1,0 +1,27 @@
+# Performance: occupied conditions and lifecycle
+
+Test simultaneous occupied states, exposure and continued use. Geometric checks, product labels and nominal margins do not establish environmental performance or engineering capacity.
+
+Open a known method or section directly. Otherwise choose one question below and read its complete reasoning unit, conditions and correction. Follow a neighbor only when its input or consequence matters; do not load every sibling, source ledger or ancestor.
+
+| Decision | Complete local method | Coverage and connection |
+| --- | --- | --- |
+| Compare light/view/noise/ventilation and inclusive journeys | [Occupied daylight](comfort/daylight-view.md#daylight-view-and-occupied-comfort), [acoustic/ventilation paths](comfort/acoustics-and-air.md#acoustic-paths-and-ventilation-choices), [inclusive/safety coordination](../space/circulation/inclusive-and-emergency-interfaces.md#inclusive-use-and-fire-spatial-coordination) | Causal spatial methods; add the integrated-state method only when the selected provisions must work together. Calculated geometry is not tested environmental performance or compliance. |
+| Make simultaneous occupied conditions, controls and failure modes coherent | [Occupied dependencies](comfort/operating-states.md#define-the-occupied-condition-and-its-dependencies), [coexisting states](comfort/operating-states.md#develop-states-that-can-actually-coexist), [usable changeover/failure](comfort/operating-states.md#make-changeover-usable-and-failure-explicit) | Methods for deployment, closure, actual users, control authority/feedback and unavailable functions. Actual climate, air/acoustic/thermal properties, user trials and safety strategy remain project-specific evidence. |
+| Maintain, repair and replace without losing the continuing use | [Whole maintenance journey](lifecycle/intervention-and-cost.md#trace-a-complete-maintenance-journey), [intervention over time](lifecycle/intervention-and-cost.md#design-for-intervention-over-time) | Methods for worker/piece/waste journeys, disturbed neighbors, shared support and temporary operation. Exposure mechanisms remain in performance and removal sequence in envelope/material leaves. |
+| Quantify work and compare equivalent function over time | [Architectural takeoff](lifecycle/intervention-and-cost.md#count-the-architectural-work), [dated event comparison](lifecycle/intervention-and-cost.md#compare-equivalent-function-over-time) | Methods for area/length/piece/event scope, repeated access/disruption and uncertainty/break-even. Unknown prices, service lives, performance and carbon cannot become a ranking or generic material winner. Common eligibility/sensitivity remains with [comparison methods](../methods/comparison.md). |
+| Can acoustic separation and an actual air path coexist? | [acoustics and air](comfort/acoustics-and-air.md) | Trace source/path/receiver and open/closed operating states. |
+| What envelope functions must continue? | [assemblies](../construction/envelope/assemblies.md) | Choose a family and trace control functions, penetrations and junctions. |
+| What will degrade and how can it be maintained? | [durability](lifecycle/durability.md) | Compare actual exposure and functional assemblies, not material labels. |
+| Which support concept respects the room and route? | [support concepts](../construction/structure/support-concepts.md) | Compare support topology without treating provisional depths as sizing. |
+| Can actual reservations fit in section and along routes? | [section and services](../space/vertical/section-and-services.md) | Include all components once; inspect crossings and replacement access. |
+| Do ordinary, maintenance and emergency journeys work? | [inclusive and emergency interfaces](../space/circulation/inclusive-and-emergency-interfaces.md) | Keep strategy, control and physical occupation distinct. |
+| What must remain conditional in the decision? | [bounded revision](../methods/bounded-revision.md) | Communicate evidence, reservation meaning and remaining decisions. |
+| What will degrade under this exposure? | [durability](lifecycle/durability.md) | Distinguish patina, loss of function, generic removal and the complete work journey. |
+
+## Worked progressions
+
+- [street reading room](../../assets/studies/street-reading-room.md): complete hypothetical failure/revision study; retained unknowns are part of the result.
+- [hall services](../../assets/studies/hall-services.md): complete hypothetical failure/revision study; retained unknowns are part of the result.
+
+For another subject, use the [subject overview](../index.md). Source and normative links identify evidence/authority; they are not instructions to read the whole source pack.

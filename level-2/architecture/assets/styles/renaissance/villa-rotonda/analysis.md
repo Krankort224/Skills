@@ -12,21 +12,21 @@
 
 **Object:** Villa Almerico Capra, called La Rotonda, outside Vicenza, Italy;
 Andrea Palladio's Renaissance suburban house, continued by Vincenzo Scamozzi.
-The [Palladio Museum's Veneto inventory](https://www.palladiomuseum.org/en/veneto),
+The [Palladio Museum's Veneto inventory](../../../../sources/precedents.md#w-040),
 entry “villa Almerico Capra detta la Rotonda,” separates **design 1566–1567**
 from **construction 1567–1605**. The Met's [1570 plate record,
-41.100.126-(2.19)](https://www.metmuseum.org/art/collection/search/698054)
+41.100.126-(2.19)](../../../../sources/precedents.md#w-035)
 attributes the design to Palladio, identifies Scamozzi's completion and
 classifies the work as Renaissance. Its **1566–69** shorthand does not describe
 every later completion event. Use the museum inventory's phase distinction
 rather than a single supposedly exact completion year.
 
 **Actually inspected:** the Met record's introductory account and object
-metadata; its [1570 book II, printed page 19 plate](https://collectionapi.metmuseum.org/api/collection/v1/iiif/698054/1504311/main-image),
+metadata; its [1570 book II, printed page 19 plate](../../../../sources/precedents.md#w-001),
 showing plan and combined elevation/section; the monument site's
-[“The project,” “Structure” and “Floors” text](https://www.villalarotonda.it/en/villa/);
+[“The project,” “Structure” and “Floors” text](../../../../sources/precedents.md#w-052);
 its column-base detail and
-[oblique aerial photograph](https://www.villalarotonda.it/wp-content/uploads/2024/09/DJI_0029-scaled-e1765375662630-uai-1440x1440.jpg);
+[oblique aerial photograph](../../../../sources/precedents.md#w-053);
 and library P15 file **210 / printed 195** and **315 / 300**, La Rotonda plans
 and selected accompanying text. Printed numbers were visually checked.
 
@@ -117,6 +117,6 @@ The lesson is to coordinate center, room groups, thresholds and the actual
 ground. These new alternatives are not replicas of the source plan. No source
 plate, photo, dimensions or extensive text is installed; the Met's plate-specific
 public-domain label does not license unrelated book scans or monument photos.
-Use the [Renaissance profile](../../../../references/style-classical-gothic-renaissance.md#renaissance-related-rooms-articulated-fronts-and-a-measured-whole)
-and [common transfer method](../../../../references/style-and-precedent-methods.md#transfer-a-mechanism-into-a-changed-brief)
+Use the [Renaissance profile](../../../../references/composition/styles/classical-gothic-renaissance.md#renaissance-related-rooms-articulated-fronts-and-a-measured-whole)
+and [common transfer method](../../../../references/composition/styles/precedent-transfer.md#transfer-a-mechanism-into-a-changed-brief)
 for the actual changed brief.

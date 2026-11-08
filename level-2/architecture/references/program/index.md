@@ -1,0 +1,19 @@
+# Program: demand, resources and allocation
+
+Demand, shared resources and adjacency intent precede physical fit. Operational population, room reservations and formal measurement keep their distinct meanings.
+
+Open a known method or section directly. Otherwise choose one question below and read its complete reasoning unit, conditions and correction. Follow a neighbor only when its input or consequence matters; do not load every sibling, source ledger or ancestor.
+
+| Decision | Complete local method | Coverage and connection |
+| --- | --- | --- |
+| Distribute activities across levels and preserve future change | [Program by floor/adaptation](floors-and-change.md#how-should-the-program-occupy-floors-and-adapt-over-time), then [levels/cores/service depth](../space/planning/room-floor-and-section.md#organize-levels-cores-and-service-depth) | Program owns demand/distribution; planning owns physical floor/section fit. A room-area subtotal is not a packed building. |
+| Establish activities, concurrency and demand | [Activity and capacity program](demand.md#what-activities-and-capacity-must-the-program-accommodate), [conditional brief](demand.md#turn-an-incomplete-brief-into-testable-demand), [resource timeline](shared-use.md#test-shared-use-as-an-occupancy-and-resource-timeline) | Methods for source/status conflicts, people by location, shared room/staff/equipment availability, changeover/storage and support demand. Actual durations, demand, furniture and statutory population remain supplied/verified inputs; source benchmark areas are not project requirements. |
+| Define once-only area accounting | [Area boundary and ledger](area-ledger.md#how-can-areas-be-counted-once-and-compared) | Shared method for the metric/boundary. Planning adds explicit wall/door/clear-fit construction; a formal legal metric requires its actual governing source. |
+| Can rooms, staff and equipment actually be shared? | [shared use](shared-use.md) | Test occupancy, setup, changeover and displaced objects. |
+| What supporting functions are missing? | [support program](support-program.md) | Derive storage, staff and other support from actual use. |
+| What capacity and room envelope follow? | [capacity and room demand](capacity-and-room-demand.md) | Keep activity demand, object/action space and normative population distinct. |
+| Which relationships should organize the plan? | [relationships](relationships.md) | Turn adjacency, separation and shared support into alternatives. |
+| Can independent hours and support actually work? | [access and closure](../space/circulation/access-and-closure.md) | Trace every portal and complete visitor/service journey. |
+| How should a permitted local change be judged? | [bounded revision](../methods/bounded-revision.md) | Preserve the accepted baseline and propagate affected consequences. |
+
+For another subject, use the [subject overview](../index.md). Source and normative links identify evidence/authority; they are not instructions to read the whole source pack.

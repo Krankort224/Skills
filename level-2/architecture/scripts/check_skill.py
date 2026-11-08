@@ -11,29 +11,77 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 OPERATIONS = ('brief', 'concept', 'development', 'analysis', 'optimization',
               'presentation', 'documentation', 'review')
-REFERENCES = ('program-and-space', 'composition-and-style',
-              'performance-and-coordination', 'requirements',
-              'computational-design', 'visual-delivery', 'calculators', 'sources',
-              'planning-and-section', 'site-and-context',
-              'envelope-and-assemblies', 'design-development')
+SUBJECTS = ('context', 'program', 'space', 'composition', 'construction',
+            'performance', 'typologies', 'methods')
+REFERENCES = ('index', 'requirements', 'calculators') + tuple(
+    name + '/index' for name in SUBJECTS)
 NORMATIVE_GROUPS = ('federal-framework', 'territory-and-special-conditions',
                     'building-typologies', 'fire-and-accessibility',
                     'environment-and-interfaces')
 RECORD_FIELDS = ('Identity', 'Authority', 'Scope', 'Edition/status',
                  'Application basis', 'Related', 'Verification')
-LINK = re.compile(r'!?\[[^\]\n]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)')
+# Link labels may wrap across source lines; check their targets and fragments too.
+LINK = re.compile(r'!?\[[^\]]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)')
 DEFINITION = re.compile(r'^\s{0,3}\[[^\]\n]+\]:\s*<?([^\s>]+)>?', re.M)
+
+
+def prose(text):
+    """Exclude backtick/tilde fenced examples; this is not a complete renderer."""
+    lines, fence = [], None
+    for line in text.splitlines():
+        opening = re.match(r'^ {0,3}(`{3,}|~{3,})(.*)$', line)
+        if fence:
+            if re.fullmatch(r' {0,3}' + re.escape(fence[0]) +
+                            r'{' + str(len(fence)) + r',}\s*', line):
+                fence = None
+        elif opening and (opening[1][0] != '`' or '`' not in opening[2]):
+            fence = opening[1]
+        else:
+            lines.append(line)
+    return '\n'.join(lines)
+
+
+def heading_bases(text):
+    return [re.sub(r'[^\w\- ]', '', title.lower()).replace(' ', '-')
+            for title in re.findall(r'^#{1,6}\s+(.+?)\s*#*$', prose(text), re.M)]
 
 
 def anchors(text):
     result, seen = set(), {}
-    prose = re.sub(r'(?ms)^```.*?^```\s*$', '', text)
-    for title in re.findall(r'^#{1,6}\s+(.+?)\s*#*$', prose, re.M):
-        slug = re.sub(r'[^\w\- ]', '', title.lower()).replace(' ', '-')
+    for slug in heading_bases(text):
         count = seen.get(slug, 0)
         result.add(slug + ('-' + str(count) if count else ''))
         seen[slug] = count + 1
     return result
+
+
+def document_role(name):
+    path = Path(name)
+    if path.parts[0] == 'maintenance':
+        return 'maintenance'
+    if path.parts[0] == 'sources' or name == 'THIRD_PARTY_NOTICES.md':
+        return 'provenance'
+    if name == 'SKILL.md':
+        return 'entry'
+    if path.parts[0] == 'operations':
+        return 'operation'
+    if path.parts[:2] == ('references', 'normative'):
+        return 'normative'
+    if path.parts[0] == 'assets':
+        return 'case'
+    return 'navigation' if path.name == 'index.md' else 'method'
+
+
+def reachable(graph, starts, allowed=None):
+    """Derived graph diagnostic, not a runtime reading order or semantic loader."""
+    visited, pending = set(), list(starts)
+    while pending:
+        name = pending.pop()
+        if name in visited or (allowed is not None and name not in allowed):
+            continue
+        visited.add(name)
+        pending.extend(graph.get(name, set()) - visited)
+    return visited
 
 
 def orphan_table_rows(text):
@@ -112,6 +160,8 @@ def validate(root=ROOT):
 
     required = ['SKILL.md', 'agents/openai.yaml', 'THIRD_PARTY_NOTICES.md',
                 'scripts/calculators.py', 'scripts/test_calculators.py']
+    required += ['sources/' + name + '.md' for name in
+                 ('index', 'upstream-packs', 'library', 'precedents')]
     required += ['operations/' + name + '.md' for name in OPERATIONS]
     required += ['references/' + name + '.md' for name in REFERENCES]
     required += ['references/normative/index.md', 'references/normative/ru/index.md',
@@ -122,7 +172,10 @@ def validate(root=ROOT):
     for name in required:
         if not (root / name).is_file():
             error(name, 'required file missing')
+    graph, roles = {}, {}
     for path in sorted(root.rglob('*.md')):
+        name = str(path.relative_to(root))
+        graph[name], roles[name] = set(), document_role(name)
         text = path.read_text(encoding='utf-8')
         if not text.strip():
             error(path.relative_to(root), 'empty Markdown')
@@ -134,8 +187,12 @@ def validate(root=ROOT):
             error(path.relative_to(root),
                   f'line {line}: pipe row follows a blank-broken table; '
                   'restore continuity or add a table header and delimiter')
-        prose = re.sub(r'(?ms)^```.*?^```\s*$', '', text)
-        for target in LINK.findall(prose) + DEFINITION.findall(prose):
+        seen = set()
+        for slug in heading_bases(text):
+            if slug in seen:
+                error(path.relative_to(root), 'duplicate heading anchor base: ' + slug)
+            seen.add(slug)
+        for target in LINK.findall(prose(text)) + DEFINITION.findall(prose(text)):
             uri = urlsplit(target.strip('<>'))
             if uri.scheme or uri.netloc:
                 continue
@@ -145,9 +202,15 @@ def validate(root=ROOT):
                 error(path.relative_to(root), 'local link escapes skill: ' + target)
             elif not destination.exists():
                 error(path.relative_to(root), 'local link missing: ' + target)
-            elif uri.fragment and destination.suffix == '.md':
-                if unquote(uri.fragment) not in anchors(destination.read_text(encoding='utf-8')):
+            elif destination.suffix == '.md':
+                graph[name].add(str(destination.relative_to(root)))
+                if uri.fragment and unquote(uri.fragment) not in anchors(destination.read_text(encoding='utf-8')):
                     error(path.relative_to(root), 'anchor missing: ' + target)
+    runtime = {name for name, role in roles.items()
+               if role not in ('maintenance', 'provenance')}
+    if 'SKILL.md' in graph:
+        for name in sorted(runtime - reachable(graph, ['SKILL.md'], runtime)):
+            error(name, 'runtime document unreachable without provenance/maintenance')
     skill = root / 'SKILL.md'
     if skill.exists():
         text = skill.read_text(encoding='utf-8')
@@ -205,6 +268,9 @@ def validate(root=ROOT):
             error(path.relative_to(root), 'no populated normative records')
         record_count += records
     return {'valid': not errors, 'operation_count': len(OPERATIONS),
+            'document_roles': {role: list(roles.values()).count(role)
+                               for role in sorted(set(roles.values()))},
+            'runtime_document_count': len(runtime),
             'normative_record_count': record_count, 'errors': errors}
 
 

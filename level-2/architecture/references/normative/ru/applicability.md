@@ -89,8 +89,8 @@ their own selected basis; the catalog is not a complete cadastral method.
 
 Keep room, wall, core, circulation and exterior components visible so that a
 changed definition can be recomputed instead of multiplied by a presumed
-efficiency factor. Use [area accounting](../../program-and-space.md#how-can-areas-be-counted-once-and-compared)
-for the finished-face correction and [comparison](../../computational-design.md#frame-the-question)
+efficiency factor. Use [area accounting](../../program/area-ledger.md#how-can-areas-be-counted-once-and-compared)
+for the finished-face correction and [comparison](../../methods/comparison.md#frame-the-question)
 for its option-ranking consequence. Neither geometric result verifies a formal
 Russian area rule. Likewise, retain clear room height, floor spacing and the
 actual height datums separately; a geometric roof height does not establish a
@@ -120,7 +120,7 @@ questions independently. An unchanged envelope does not establish a legal
 exemption; neither “renovation” nor a furniture change alone determines all
 legal work categories. Read current operative definitions/procedure and the
 project's property facts before assigning approval, consent or exemption.
-Use the [changed-entrance correction](../../design-development.md#turn-critique-into-a-spatial-correction)
+Use the [changed-entrance correction](../../methods/design-development.md#turn-critique-into-a-spatial-correction)
 to preserve a functioning base plan while the distinct legal decision is open.
 
 ## Resolve entrances, routes and mixed uses
@@ -130,7 +130,7 @@ plan, including destinations above/below arrival and routes through common
 property. Reserve actual landing, door, waiting and vertical-connection space
 before freezing the core. Compare keeping an upper public destination with
 moving it to arrival level; recount the displaced use and section consequences.
-The [mixed-use method and worked correction](../../planning-and-section.md#resolve-a-russian-mixed-use-plan-before-fixing-the-core)
+The [mixed-use method and worked correction](../../space/planning/room-floor-and-section.md#resolve-a-russian-mixed-use-plan-before-fixing-the-core)
 develop these alternatives without declaring a prescribed entrance solution.
 
 Select [safety and access](routes.md#safety-and-access) for the affected use and
@@ -141,7 +141,7 @@ actual process/materials and the relevant classification provisions before
 fixing fire separation, connections, exit count or dimensions. The СП 59 scope
 trigger does not verify a route width, ramp slope, lift strategy or permission
 to share an exit. Room lighting, insolation, noise and sanitary questions also
-remain separate; use [room-condition alternatives](../../performance-and-coordination.md#fit-russian-room-conditions-without-merging-their-tests)
+remain separate; use [room-condition alternatives](../../performance/comfort/daylight-view.md#fit-russian-room-conditions-without-merging-their-tests)
 to change facade/use allocation while their particular targets are selected.
 
 ## Select climate, site and assembly inputs
@@ -155,7 +155,7 @@ technical use; coordinate structural, thermal, moisture and system calculations
 with their specialist owners. Architecture still owns the changed lobby, shade,
 roof/water path, service depth, junction intent and maintenance access.
 
-The [two-location study](../../composition-and-style.md#two-russian-reading-pavilions-climate-and-use-change-the-edge)
+The [two-location study](../../../assets/studies/reading-pavilions.md#two-russian-reading-pavilions-climate-and-use-change-the-edge)
 uses primary Hydrometcentre observations for [Yakutsk](https://meteoinfo.ru/categ-articles/15-climate-cat/klimaticheskie-normy/clim-towns/1782-1246618396)
 and [Krasnodar](https://meteoinfo.ru/categ-articles/15-climate-cat/klimaticheskie-normy/clim-towns/1699-1246618396),
 monthly tables and their **1961–1990** averaging-period field, checked
@@ -171,7 +171,7 @@ daily heated host is a different scope question. Reopen selection when use or
 schedule changes. An existing finish-only revision with no ground/foundation/
 load intervention supplies no trigger for foundation design for that bounded
 decision. Neither exclusion waives other requirements. Develop the affected
-[assembly and spatial reservations](../../envelope-and-assemblies.md#adapt-the-family-to-climate-use-and-works)
+[assembly and spatial reservations](../../construction/envelope/assemblies.md#adapt-the-family-to-climate-use-and-works)
 and record the missing alternative technical basis rather than inventing one.
 
 ## Evidence limits for these adaptations
@@ -206,7 +206,7 @@ justify loose chairs. Its balcony/box exception is not a blanket small-hall
 exemption, and splitting one hall's seats into blocks does not change its total.
 
 Establish the actual project basis before testing a layout. In the
-[worked transformable hall](../../planning-and-section.md#a-russian-transformable-hall-seating-rule-changes-the-layout),
+[worked transformable hall](../../space/planning/room-floor-and-section.md#a-russian-transformable-hall-seating-rule-changes-the-layout),
 the brief explicitly adopts that current fragment as a project technical
 requirement for a new Russian public assembly hall on 2026-11-02. **Applicable**
 there means selected for this bounded seating decision under that brief;
