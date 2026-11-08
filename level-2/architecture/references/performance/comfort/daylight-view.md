@@ -253,6 +253,7 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 ## Related decisions
 
 - Requires — [Planning and section](../../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): identify actual occupied positions and room/opening geometry.
+- Verified by — [Multi-building direct-sun intervals](multi-building-sun.md): when neighboring volumes determine a selected point's direct sun, test actual solids, receiver height, time basis and blocked-interval union. This geometric check does not verify illuminance, glare or statutory insolation.
 - Affects — [Acoustic paths and air modes](acoustics-and-air.md): opening/blind/shade states must coexist with noise and air needs.
 - Verified by — [Envelope and assemblies](../../construction/envelope/assemblies.md#develop-four-connected-junctions): test the head, shade/control and enclosure interfaces.
 - Illustrated by — [Street reading room](../../../assets/studies/street-reading-room.md): keep failed low-sun geometry, revised services and conditional margins.

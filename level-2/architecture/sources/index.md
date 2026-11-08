@@ -13,6 +13,7 @@ Use these records for provenance, source coverage, permissions or a specific mai
 | Four local calculator contracts and fourteen source adoption decisions | [Calculator audit](../references/calculators.md) | Supplied input definitions, formulas/limits and code remain local; static source inspection is not upstream execution |
 | Required attribution and permissions | [Third-party notices](../THIRD_PARTY_NOTICES.md) | Full MIT permissions remain installed; they do not license book/web imagery |
 | Selected vehicle, school-parcel and network-capacity mechanisms | [Applied site methods](applied-site-methods.md) | Dated primary design/technical guidance, inspected extents and exclusions; original local geometry/allocation, not universal dimensions or law |
+| Ray/solid occlusion and geometric direct-sun intervals | [Solar occlusion](solar-occlusion.md) and [NOAA](#noaa-solar-equations) | Selected primary mechanism/time evidence and original event/interval construction, not an annual engine or normative-insolation approval |
 
 ## Locality and necessary external evidence
 
@@ -30,10 +31,17 @@ The source-family/locator totals above describe the inherited inventory. The
 three selected primary publications in [applied site methods](applied-site-methods.md)
 are additional, separately recorded readings; their presence does not imply a
 rescan of the older collections or a new normative-source claim.
+The selected PBRT reading in [solar occlusion](solar-occlusion.md) is a further
+primary source; NOAA is a reinspection of the existing record, not a new
+calculator contract or additional normative module.
 
 ## NOAA solar equations
 
 Source: [NOAA Global Monitoring Laboratory solar equations](https://gml.noaa.gov/grad/solcalc/solareqns.PDF). Role: primary technical formula provenance, not law. The local [solar contract](../references/calculators.md#schemas-definitions-and-limitations) explicitly uses supplied declination and apparent solar time, with its geometric limits. Retrieval is useful for equation audit or an explicitly expanded method, not required to run the retained code. No new NOAA inspection is claimed by this consolidation.
+
+Pass C later reinspected both PDF pages; its exact byte hash, read extent and
+new method's fixed-declination/time limitations are in [solar occlusion](solar-occlusion.md#solar-geometry-and-time-basis).
+The preceding no-new-inspection statement describes the earlier consolidation.
 
 ## Original local synthesis
 

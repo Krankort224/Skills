@@ -4,6 +4,7 @@
 
 - [Selected library materials](#selected-architecture-library-literature-and-course-materials)
 - [Applied site guidance](#applied-site-guidance)
+- [Solar occlusion sources](#solar-occlusion-sources)
 - [Skills-Architects](#skills-architects)
 - [Computational Designers](#claude-skills-for-computational-designers)
 
@@ -96,6 +97,19 @@ material. No open redistribution permission for Esri media/software is establish
 Only original explanatory synthesis, original geometry/examples and bibliographic
 links are installed. No source drawing, diagram, screenshot, table of dimensions,
 full text, map or software is redistributed. Access does not expand those rights.
+
+## Solar occlusion sources
+
+Selected primary reading: *Physically Based Rendering: From Theory to
+Implementation*, Matt Pharr, Wenzel Jakob and Greg Humphreys, third-edition
+online text, section3.1. Its footer identifies copyright2004–2021 and CC
+BY-NC-ND4.0 for book text. NOAA's *General Solar Position Calculations* supplies
+technical time/solar provenance, not statutory criteria. Exact sources/read
+extents and limitations are retained in [solar occlusion](sources/solar-occlusion.md).
+Only original mathematics, prose, examples and verification code are installed;
+no renderer code, adapted book text, images, diagrams or PDF is redistributed.
+No general permission for source media is inferred, and existing MIT notices
+remain unchanged.
 
 ## Skills-Architects
 

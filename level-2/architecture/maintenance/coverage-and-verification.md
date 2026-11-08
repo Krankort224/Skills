@@ -34,6 +34,7 @@ the accepted organization and preservation plan. Task outputs belong in the issu
 - [Coursework follow-up baseline for Issue 13](#coursework-follow-up-baseline-for-issue-13)
 - [Six task-route probes](#six-task-route-probes)
 - [Pass A semantic-link audit](#pass-a-semantic-link-audit)
+- [Pass C multi-building sun evidence](#pass-c-multi-building-sun-evidence)
 - [Pass B vehicle and territorial service evidence](#pass-b-vehicle-and-territorial-service-evidence)
 
 ## Selected depth increments
@@ -399,3 +400,93 @@ Supplement with GFM/link/anchor checks and exact diff/preservation review.
 The final Issue handoff owns containing commit, actual command results and any
 remaining review findings. Authored/evaluated cases are not the independent
 reviewer's later unseen tests or Pass F's full 35-row re-evaluation.
+
+## Pass C multi-building sun evidence
+
+Accepted task baseline: `b3d323e76392c6b8e00337998726320082f753cd`.
+Acceptance-only housekeeping `1be7f6d` records dot's accepted B state and durable
+summary. B's dispatch/handoff were removed only after summary/body/reference
+readback; A/B accepted summaries remain. This evidence describes the containing
+Pass C candidate, pending independent review/acceptance, not an automatic
+upgrade of historical K7 or a replacement of the 35-row benchmark.
+
+### Owner and consequential mechanism
+
+[Multi-building shadows and direct-sun intervals](../references/performance/comfort/multi-building-sun.md)
+owns actual point/vertical-prism geometry, each prism's orientation, slab ray
+tests, receiver height/front-face eligibility, complete transition events for a
+supplied fixed-declination solar model, obstruction unions, continuous versus
+total direct-sun spans and explicit transition/geometry/time uncertainty.
+The event proof partitions the model where signs and face-parameter orders can
+change; two equal sampled states alone cannot establish interval completeness.
+
+The daylight owner retains occupied sky/view/lighting/control decisions. The
+existing solar calculator retains its supplied-declination/apparent-time inputs,
+four-command interface and actual geometric/accuracy limits. No runtime engine,
+calendar/clock converter or normative-insolation calculator is added. Root,
+operations, all accepted A/B methods, earlier examples, source records and
+normative evidence remain intact except necessary additive links/status records.
+
+### Worked and changed-input checks
+
+The original φ45°/δ0° case at P=(0,0,1)m has A blocked
+8.3509593122…10.3173732120 and B blocked9.6490406878…11.3316674759 apparent
+solar hours. Their overlap0.6683325241h is credited once: union2.9807081637h,
+direct sun9.0192918363h in the declared12h eligibility window. An independent
+special-case q/rise construction reproduces each single-body boundary, rather
+than deriving expected answers from the slab/event implementation itself.
+
+P_z=6m receives no blockage from either prism. Lowering B's top11→8m moves
+its end to11.2385497561; moving its footprint west instead produces a separate
+12.6683325241…14.3509593122 interval. The retained solar calculator agrees with
+the directional altitude, azimuth and simple shadow-length construction at five
+selected times. Parallel/missing/tangent rays and a back-facing receiver are
+checked separately from eligible blocked duration.
+
+The original B end is approximately11:19:54.003, close to an11:20 five-minute
+grid mark. One-second evaluations on either side of the analytic event change
+status. The complete event construction finds the model boundary; that numerical
+check does not establish one-second real-sun/survey accuracy. If only11:15/11:20
+samples are supplied, the transition remains in that5-minute band. Samples at
+08:00 and11:30 miss the whole intermediate obstruction, despite both being clear.
+
+A distinct changed-input check uses latitude37°, declination−8°, P=(0,0,1.5)m
+and three prisms with yaws25°,−20°,40°. Its blocked union is
+9.3031784349…11.3033154238 and13.1771470181…15.1783757730 apparent hours in
+the selected07…17 window. Full box/origin inputs and runnable checks live in
+[test_sun_intervals.py](../scripts/test_sun_intervals.py). At1001 times an
+independent construction projects each clipped solid's actual vertices onto
+the receiver plane and tests the convex silhouette. It agrees with the slab/
+event partition throughout. This alternate geometric evaluation is executor
+evidence, not the separate session's independent review or Pass F transfer test.
+
+### Integration, sources and remaining limits
+
+Context/Performance aliases now select the new owner; site/quarter/daylight
+methods conditionally request its direct-sun check. It propagates a moved body
+into actual ground, dwelling/population, service/vehicle and opening/control
+decisions only when those consequences exist. Reciprocal links do not require
+whole-corpus traversal or make source records part of runtime task routing.
+
+[Primary source evidence](../sources/solar-occlusion.md) records PBRT's selected
+slab/local-frame/numerical discussion, its book-text rights, NOAA reinspection,
+the PDF hash and exclusions. PBRT text was readable through web retrieval;
+raw HTTP access returned403, so no live HTML byte hash is claimed. Firecrawl's
+credit limit did not establish any source fact; the actual reading used the
+available primary web/PDF content. No source figure, adapted book prose, renderer
+code, formula table, PDF or new normative record is redistributed.
+
+Remaining dependencies: actual date/declination and clock conversion; survey/
+orientation/height uncertainty; complex/moving/porous solids, terrain and weather;
+solar disk/refraction; window/surface-wide exposure; illuminance/glare/annual
+performance; selected legal test date, receiver, exclusions and fragmented-credit
+rules. A point's fixed-δ geometric result establishes none of those automatically.
+Near-coincident events or uncertain geometry need a justified enclosure or an
+explicit nominal/borderline result, not a universal time/angle tolerance.
+Passes D–F remain unstarted.
+
+From the skill root run `PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_skill.py`
+and `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts -p 'test_*.py'`.
+The four new mathematical checks supplement the35 retained regressions. Use
+GFM/link/anchor, selected task-route and exact diff/preservation checks as well;
+the Issue handoff owns final revision and actual final command results.
