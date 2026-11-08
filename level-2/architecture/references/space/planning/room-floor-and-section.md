@@ -99,6 +99,11 @@ width. State which operating envelopes are supplied, assumed or still unknown.
 Architecture can reject an overlap or improve a route from this evidence while
 leaving source-dependent clearance requirements open.
 
+When the decision depends on irregular clear boundaries, simultaneous operation
+or moving a load through a reset, use [occupied-state fit](occupied-state-fit.md)
+for explicit containment, overlap, continuous-sweep and resource tests. Retain
+this method's actual furniture/action inputs and the complete receiving state.
+
 ### Construct a clear-area fit with explicit wall reservations
 
 When the brief gives finished room areas, build the dimensions outward from

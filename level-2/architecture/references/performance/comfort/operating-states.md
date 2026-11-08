@@ -100,6 +100,11 @@ ventilation path.
    permitted air path or necessary control is unavailable, the result is a
    relocation/closure condition, not an invented safe occupancy or duration.
 
+When a selected state relies on canopy interception with supplied geometric or
+direction bounds, use the [bounded canopy check](daylight-view.md#test-a-finite-canopy-with-bounded-input-uncertainty).
+Apply it only to shade faces actually deployed in that state; a bounded hit range
+does not establish the resulting occupied environment.
+
 The comparison should make a choice possible. For example, split blinds can
 retain some sky while sacrificing the lower view; a fixed screen avoids motor
 failure but may impose that sacrifice permanently; an offset bay can separate

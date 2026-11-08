@@ -1,6 +1,6 @@
 # Architecture migration map — Issue 10, Stage B
 
-Status: A+B map accepted at `4ad750b7733bd828fb1d99d753e48444387f17e3`; C accepted at `92018736fa4688d2f390d0bd308069f0a810d5cc`; D accepted at `d602ef835d3cc11a3e10343100a3cd85f859fb63`. E provenance migration and bounded local explanation are implemented, pending independent review; F remains unimplemented. This map accounts for the 67 files at `d260c6cb845734f9fe2e7a86bc1ca97cc1f46e72`. Acceptance of the map does not accept its implementation or authorize later passes automatically.
+Status: A+B map accepted at `4ad750b7733bd828fb1d99d753e48444387f17e3`; C accepted at `92018736fa4688d2f390d0bd308069f0a810d5cc`; D accepted at `d602ef835d3cc11a3e10343100a3cd85f859fb63`. E accepted at `e144f230165ac3b2668932a154542145327f1454`. F adds three prioritized depth mechanisms and integrated evaluation, pending independent review; see [current coverage](coverage-and-verification.md). This map accounts for the 67 files at `d260c6cb845734f9fe2e7a86bc1ca97cc1f46e72`. Acceptance of the map does not accept its implementation or authorize later passes automatically.
 
 All paths are relative to `level-2/architecture/`. Final D/E destinations in the complete-file disposition now exist; the pilot ledger records C's intermediate owners where a whole owner subsequently moves in D. Source ranges always refer to the pinned pre-migration files, not current destination line numbers. See [inventory](knowledge-inventory.md) and [target design](knowledge-design.md).
 

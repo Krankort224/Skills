@@ -33,6 +33,15 @@ Source: [NOAA Global Monitoring Laboratory solar equations](https://gml.noaa.gov
 
 The installed methods/corrections and hypothetical studies remain authored reasoning, not reproduced source projects or numeric prescriptions. The [finite-canopy ray construction](../references/performance/comfort/daylight-view.md#construct-a-finite-canopy-ray-check) is an original coordinate derivation with explicit supplied-angle/plane assumptions; it does not claim a source performance table, annual result or new book/PDF reading.
 
+The [changing-state room fit](../references/space/planning/occupied-state-fit.md),
+[bounded ray uncertainty](../references/performance/comfort/daylight-view.md#test-a-finite-canopy-with-bounded-input-uncertainty)
+and [panel/joint budget](../references/composition/facade/panel-and-joint-budget.md)
+extend the established local geometry/coordination methods through original
+interval, containment and dimensional-chain reasoning and hypothetical failures.
+Their input values are study assumptions or explicitly supplied project/supplier
+bounds, not new material defaults, code limits or source-derived benchmarks.
+No additional book, media, upstream body reading or product capability is claimed.
+
 ## Russian normative evidence
 
 The [jurisdiction index](../references/normative/index.md) exposes implemented modules only.

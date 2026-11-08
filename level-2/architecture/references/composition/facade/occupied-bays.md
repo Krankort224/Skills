@@ -58,6 +58,7 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 ## Related decisions
 
 - Requires — [Scale, hierarchy and rhythm](hierarchy-and-rhythm.md): when formal hierarchy/rhythm is unresolved: define its occupied and contextual inputs.
+- Verified by — [Panel and joint budget](panel-and-joint-budget.md): when actual component sizes, end conditions or movement compete with a fixed occupied opening, test the complete dimensional chain and its signed bounds.
 - Verified by — [Planning and section](../../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): retain furniture, action and privacy envelopes behind the opening.
 - Verified by — [Walls, floors and openings](../../construction/structure/walls-floors-openings.md#develop-a-wall-opening-as-support-and-use): test support, reveal, frame, control and service envelopes.
 - Verified by — [Envelope and assemblies](../../construction/envelope/assemblies.md#develop-four-connected-junctions): resolve corner/head/sill and movement consequences.

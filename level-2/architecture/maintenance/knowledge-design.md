@@ -1,6 +1,6 @@
 # Architecture knowledge design — Issue 10, Stage B
 
-Status: A+B design accepted at `4ad750b7733bd828fb1d99d753e48444387f17e3`; C accepted at `92018736fa4688d2f390d0bd308069f0a810d5cc`; D accepted at `d602ef835d3cc11a3e10343100a3cd85f859fb63`. E implements the source homes and bounded local-explanation repair in this tree, pending independent review. F further depth increments remain unimplemented. This document builds directly on [Stage A evidence](knowledge-inventory.md). The complete disposition and section maps are in [migration-map.md](migration-map.md).
+Status: A+B design accepted at `4ad750b7733bd828fb1d99d753e48444387f17e3`; C accepted at `92018736fa4688d2f390d0bd308069f0a810d5cc`; D accepted at `d602ef835d3cc11a3e10343100a3cd85f859fb63`. E accepted at `e144f230165ac3b2668932a154542145327f1454`. F implements three prioritized depth increments in this tree, pending independent review; the current [coverage and verification boundary](coverage-and-verification.md) distinguishes actual local mechanisms from remaining gaps. This document builds directly on [Stage A evidence](knowledge-inventory.md). The complete disposition and section maps are in [migration-map.md](migration-map.md).
 
 Scope remains `level-2/architecture/**`. A+B added maintenance evidence only. Runtime reading follows the actual skill links, never this maintenance proposal; the calculators and normative authority remain unchanged.
 

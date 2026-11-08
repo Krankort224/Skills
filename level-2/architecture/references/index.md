@@ -43,6 +43,12 @@ Documentation owns [issued-item reconciliation](../operations/documentation.md#c
 
 ## Coverage and open gaps
 
+The [changing-state room fit](space/planning/occupied-state-fit.md),
+[bounded shade uncertainty](performance/comfort/daylight-view.md#test-a-finite-canopy-with-bounded-input-uncertainty)
+and [panel/joint budget](composition/facade/panel-and-joint-budget.md) supply
+explicit local geometric mechanisms for those named questions. Their input and
+validity conditions survive traversal; a successful nominal example cannot
+establish simultaneous operation, robust fit or physical performance by itself.
 
 Use the selected bounded method, not its subject label as a completion claim. Quarter, program and the declared building families now have bounded
 operational methods; they do not establish every urban-design or building-type

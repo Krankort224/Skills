@@ -13,6 +13,7 @@ Open a known method or section directly. Otherwise choose one question below and
 | Can section generate the form? | [section form](massing/section-form.md) | Keep level, occupied height, light and support consequences. |
 | What should hierarchy and rhythm communicate? | [hierarchy and rhythm](facade/hierarchy-and-rhythm.md) | Relate person, building and context scales to actual use. |
 | How should real room bays organize an elevation? | [occupied bays](facade/occupied-bays.md) | Resolve openings, corners and module mismatches without inventing fabrication data. |
+| Can actual panels and joints fit around a fixed occupied opening? | [panel and joint budget](facade/panel-and-joint-budget.md) | Test component/end dimensions, cumulative installation bounds and supplied movement allowances without spending the protected aperture. |
 | What should material and joints express? | [material expression](material-expression.md) | Distinguish apparent/actual roles and tectonic consequences. |
 | Which named direction or case supplies a usable mechanism? | [index](styles/index.md) | Select the bounded profile and evidence; unrepresented traditions and uninspected drawings remain gaps. |
 
