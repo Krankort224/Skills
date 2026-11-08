@@ -126,6 +126,7 @@ import contextlib
 import copy
 import hashlib
 import importlib.metadata as metadata
+import importlib.util
 import io
 import json
 import os
@@ -278,6 +279,12 @@ G.graph["context"] = {
 stage.mkdir()
 assert to_json(G, communities, str(stage / "graph.json"), built_at_commit=commit, community_labels=labels)
 assert to_html(G, communities, str(stage / "graph.html"), community_labels=labels, node_limit=5000, learning_overlay={})
+# Static view annotation precedes all generation markers/sibling hashes.
+key_module = Path(os.environ["CONTEXT_TOOLS"]) / "view_legend.py"
+key_spec = importlib.util.spec_from_file_location("context_view_legend", key_module)
+view_key = importlib.util.module_from_spec(key_spec)
+key_spec.loader.exec_module(view_key)
+write_text_atomic(stage / "graph.html", view_key.html_key((stage / "graph.html").read_text(encoding="utf-8")))
 report_detection = dict(detection, total_files=len(paths), warning="STRUCTURAL ONLY: selected UTF-8 Python/Markdown inputs; semantic extraction was not performed.")
 report = generate(G, communities, score_all(G, communities), labels, god_nodes(G), surprising_connections(G, communities), report_detection, {"input": 0, "output": 0}, root.name)
 report = report.replace("- None detected - all connections are within the same source files.", "- No top-ranked surprising connection reported; this does not establish absence of cross-file relationships.")
@@ -514,6 +521,12 @@ assert not stage.exists() and not stage.is_relative_to(root) and not root.is_rel
 stage.mkdir(parents=True)
 assert to_json(G, communities, str(stage / "graph.json"), built_at_commit=structural["graph"]["context"].get("source_commit") or "", community_labels=labels)
 assert to_html(G, communities, str(stage / "graph.html"), community_labels=labels, node_limit=5000, learning_overlay={})
+# Static view annotation precedes all generation markers/sibling hashes.
+key_module = Path(os.environ["CONTEXT_TOOLS"]) / "view_legend.py"
+key_spec = importlib.util.spec_from_file_location("context_view_legend", key_module)
+view_key = importlib.util.module_from_spec(key_spec)
+key_spec.loader.exec_module(view_key)
+write_text_atomic(stage / "graph.html", view_key.html_key((stage / "graph.html").read_text(encoding="utf-8")))
 detection = {"total_files": len(ledger["sources"]), "total_words": sum(len((root / p).read_text(encoding="utf-8-sig").split()) for p in ledger["sources"]), "warning": "PLANNED-RANGE SEMANTIC: active-agent extraction was performed; coverage is limited to the explicit validated scope, not universal understanding."}
 report = generate(G, communities, score_all(G, communities), labels, god_nodes(G), surprising_connections(G, communities), detection, {"input": 0, "output": 0}, root.name)
 report = re.sub(r"^- Token cost:.*$", "- Subscription-agent token usage: unknown (host did not expose counters).", report, flags=re.M)
@@ -844,6 +857,12 @@ Validate full HTML embedded nodes/edges/counts and report input identity/coverag
 In an authorized browser test, open the exact local view through an allowed file/HTTP route, verify the graph actually draws, then test search, node/source panel, community hide/show and visible text/zoom. The pinned vis-network 9.1.6 script is loaded from unpkg with SRI; JavaScript, network, origin/CORS and browser policy matter. A shell showing counts with an empty canvas is a rendering failure. If CDN assets are unavailable, retain JSON/report/direct-source access and report that HTML is unrendered; do not disable browser security or silently replace the script pin. The browser may persist theme preference in localStorage; this is not a project-file read-only trace. Stop a temporary test server afterward.
 
 Default native visualization limit is 5000 nodes. Without an explicit override an oversized graph raises; with an explicit smaller `node_limit`, native HTML can aggregate to communities. This is an **undirected community summary**: it discards internal arcs and merges opposing/parallel cross-community arcs into a count, even if the drawn view shows an arrow. It cannot certify dependency direction or replace F's full-evidence trio. F full mixed staging instead refuses oversized graphs. Native aggregation with fewer than two communities returns false and may create no HTML; never accept a missing file because the exporter printed a message. Use a separate fresh directory: aggregation's recursive exporter can consult a sibling learning overlay even when the outer call passed `{}`. The tested small explicit-limit control exercises this code path, not large-corpus/browser performance.
+
+### Read the visual key
+
+New guide-built HTML views include a short sidebar key from [view_legend.py](view_legend.py), applied before trio sealing. Node size is normalized stored degree (in+out for these directed graphs), or member count in an aggregated community view; color identifies community. Base edge width is category styling (2 for EXTRACTED, 1 for other annotations); vis-network selection adds 3, so selecting a node can thicken adjacent arcs. Solid/dashed and opacity also distinguish categories. None is relationship count, measured strength or calibrated probability. Zoom and selection affect apparent size. These native settings are fixed by the pinned exporter and [vis-network edge option semantics](https://visjs.github.io/vis-network/docs/network/edges.html).
+
+For optional SVG, call `view_key.svg_key(native_svg_text)` after native `to_svg` into a fresh output and save the returned text there. The footer states relative node area 300-1500 by stored degree, community color, fixed 0.8 pt edge stroke, solid/dashed categories and opacity 0.6/0.3. SVG has no edge arrows/relation labels or hyperedge encoding. The pure annotation leaves native graph data/geometry unchanged above an added footer; it is not a renderer or pipeline. Import the same flat helper through `importlib` as in construction. Existing published views remain as produced; add a key only through authorized fresh export/sealing, never by patching a published trio sibling or blessing unknown hashes.
 
 ### Opt-in formats and ownership
 
