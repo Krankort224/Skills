@@ -109,6 +109,7 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
+- Affects — [Building volume](building-volume.md): when m³ are requested or a roof/base/void boundary changes, select the actual volume metric and reconcile disjoint solids separately from floor areas.
 - Verified by — [Planning and section](../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): check wall, door and finished-room geometry rather than treating a subtotal as a fitted plan.
 - Affects — [Capacity and room demand](capacity-and-room-demand.md): recheck actual capacity when the measured boundary changes.
 - Affects — [Facility parcel fit](../context/urban/service-capacity-allocation.md#fit-the-facility-parcel-and-recount-the-quarter): when a service needs a territorial reservation, distinguish usable outdoor shapes, footprint and access from gross parcel area; changed boundaries can invalidate credited capacity.

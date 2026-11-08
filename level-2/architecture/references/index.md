@@ -43,6 +43,12 @@ Documentation owns [issued-item reconciliation](../operations/documentation.md#c
 
 ## Coverage and open gaps
 
+The [volume boundary and solids](program/building-volume.md) and
+[exhibition object/view/control](typologies/exhibition.md) methods supply bounded
+local reasoning for those questions. A geometric m³ result is not a formal
+measurement rule; a viewing/exposure study is not a complete museum program,
+measured lighting or conservation/access approval.
+
 The [changing-state room fit](space/planning/occupied-state-fit.md),
 [bounded shade uncertainty](performance/comfort/daylight-view.md#test-a-finite-canopy-with-bounded-input-uncertainty)
 and [panel/joint budget](composition/facade/panel-and-joint-budget.md) supply

@@ -33,6 +33,10 @@ long narrow room and a compact room of equal area offer different useful space:
 the narrow room may support a linear bench or exhibition but fail face-to-face
 teaching; the compact room may support a group but waste a linear process route.
 
+For an actual collection, establish [exhibit/viewer and sensitivity commitments](../../typologies/exhibition.md#derive-the-exhibit-and-audience-commitments)
+before turning a generic display wall or object envelope into a gallery. That
+family supplies sequence/view/light decisions; the room method still owns fit.
+
 Start with the activity's demanding dimension: a bed plus access on its used
 sides, a meeting table plus occupied chairs and passage, an equipment line plus
 operating/maintenance access, or a display wall plus viewing distance. Place the
@@ -259,6 +263,12 @@ An exposed-services ceiling is a design choice with acoustic, visual and access
 consequences; it does not remove the physical service depth.
 
 ### Reconcile upper floors, tall rooms and roofs
+
+When m³ are requested or the roof/base/void boundary changes, use
+[volume boundary and solids](../../program/building-volume.md) to reconcile
+the selected three-dimensional metric. An internal floor void can remove floor
+area while retaining the enclosing volume; neither result substitutes for the
+actual occupied section below.
 
 Overlay the proposed floor footprints on the same plan coordinates, then test
 each overlap in section. A tall lower room and an upper occupied floor cannot

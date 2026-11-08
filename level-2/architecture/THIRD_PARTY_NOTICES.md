@@ -155,6 +155,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+## Volume and exhibition reading
+
+[Selected primary source records](sources/volume-and-exhibition.md) identify the
+OpenStax mathematics, Smithsonian access and Canadian Conservation Institute
+reading and their actual extents/rights. Their PDFs, figures, exercises, tables
+and extended prose are not redistributed. OpenStax's current NC-SA terms do not
+relicense independent elementary geometric facts or the original local examples;
+no source-specific textbook content is included. Institutional/third-party media
+rights and numeric prescriptions are not inferred from public access.
+
 ## Claude-skills-for-Computational-Designers
 
 Source: https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/tree/7a090c9ddc92e441b1419910673edbcfa7a962ed

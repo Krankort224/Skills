@@ -3,7 +3,8 @@
 Use these bounded methods when a use label hides the activities, support or
 operating boundaries that will determine the building. The perimeter is housing
 and shared domestic amenities, ordinary learning clusters, public libraries and
-short-stay accommodation, including interfaces between them. It does not cover
+short-stay accommodation and bounded exhibition/collection decisions, including
+interfaces between them. It does not cover
 every building type, specialist laboratory, childcare facility, archive, hospital,
 commercial kitchen or hotel classification.
 
@@ -42,6 +43,7 @@ operating evidence to choose; there is no universal best family.
 
 | Activity/support question | Complete method |
 | --- | --- |
+| Exhibition objects, viewing sequence, sensitive light and replacement (экспозиция, павильон, музей) | [Exhibition](exhibition.md): object-specific spatial/control decisions and changed-exhibit corrections; no complete museum/archive or conservation certification |
 | Housing and shared domestic support | [shared domestic](housing/shared-domestic.md) |
 | Learning clusters and preparation | [learning](learning.md) |
 | Libraries as reader and collection systems | [libraries](libraries.md) |

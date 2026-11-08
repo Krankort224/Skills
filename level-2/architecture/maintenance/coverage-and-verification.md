@@ -603,3 +603,108 @@ channels/free areas, pressure losses and flow, wind/thermal models, terminal
 geometry, fire/acoustic/combustion and statutory approval remain evidence gates.
 At the accepted D boundary, E/F are unstarted. Dot's explicit decision accepts D;
 graph or coordinate fit alone does not supply acceptance or engineering approval.
+
+## Pass E volume and independent exhibition evidence
+
+Accepted baseline: D `925166e93cad2b7e14d70496125a7f4c00ed2732`; acceptance-only
+housekeeping `c28245773f02946e49bcaf2430413112d674760a` records its
+[accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6728788548).
+The E candidate requires the first session's independent review and dot's
+explicit acceptance. Contracts were read from this repository's AGENTS, Level0
+coordination and Level1 context/workflow/delegation at the unchanged D boundary;
+architecture supplies the domain method. No new session or reviewer was spawned.
+
+### Canonical owners and concrete results
+
+| Historical question | Local owner | Demonstrated result and remaining boundary |
+| --- | --- | --- |
+| P10 building-volume depth | [Volume boundary/solids](../references/program/building-volume.md) | Distinct external, finished-space and formal metrics; explicit prisms, gable/single-slope wing, basement and open court; independent horizontal sections; changed ridge/base/enclosure/reporting plane. No unseen legal measurement rule or BIM quantity mapping. |
+| P7/P8 exhibition reasoning and independence | [Exhibition object/view/control](../references/typologies/exhibition.md) | Original brief from machine, sensitive drawing and outdoor replica; viewing/sequence, object-specific opaque controlled room, closed/handling exposure, replacement and changed-object/portal/overview/apron. No coursework appendix supplied the design or light answer; geometric fields and supplied light bounds are not a complete museum, actual photometry or conservation/access approval. |
+
+The volume study selects an external geometric envelope. Its prism is480m³;
+the separately specified finished clear space is401.28. Main body576+gable96
++wing240+basement288−court120=1080m³. The court is deducted through its
+actual sloping roof, not one storey height. Independent horizontal slice bands
+give792 above0 and288 below. Ridge8→9 gives1116 total, lower base−3→−3.5
+gives1128, enclosing the court gives1200; changing only the report plane to0.5
+gives728 above/352 below with total1080. All are original geometric study metrics.
+
+The new exhibit brief independently requires whole-machine and drawing comparison,
+a sensitive original and a touchable weather-approved new replica. The local
+method selects separate controllable G and open H/spine relationships, rather
+than accepting glazing as intrinsically suitable. Explicit seated/standing eye
+heights and task-specific angular diagnostics lead to actual stopping fields.
+Case rims, other audiences, support and real sensory access remain evidence.
+
+The original5.2×3.2m handling envelope passes a3.6m-wide/3.8m-high portal.
+Its continuous sweep crosses the east visitor connector, requiring real H
+closure and old-load dispatch before new arrival. A changed4×3.1×4m object with
+5.2×4.3m handling envelope/4.2m transit height fails that portal, despite hall
+volume. Permitted4.6m/4.5m opening and relocated body/overview recover geometric
+fit and the supplied60°/30° view intent. Apron24→30m² costs6m² real service
+land; the protected spine remains clear. Whole closure, opening/support, actual
+handlers/loads, levels and equipment still need project evidence.
+
+The hypothetical sensitive-original budget includes1200h display and960lux-hours
+of separately allowed handling/installation. All8h/day viewing fails at17,760;
+4.5h/day with40lux view/1lux closed gives10,935 against supplied12,000.
+An explicitly permitted45lux changed original fails at4.5h/day with12,060;
+4h/day gives10,960. Retaining the original40lux instantaneous cap would still
+reject45lux regardless of duration. Real bounds must be measured at the object,
+including label/facsimile spill and closed/fault states; no fading model is run.
+
+### Checks, fresh inputs and navigation
+
+Four focused standard-library tests supplement the44 retained regressions in
+`scripts/test_volume_exhibition.py`: independent section/solid reconciliation,
+changed overview/portal/handling, continuous1m square-probe paths to G/H/outside
+in both display arrangements, once-only outdoor land and exposure/instant caps.
+The public outside approach/band/display union is33m²; the1.6m² approach/band
+overlap is counted once. Probe widths are study inputs, not code values.
+
+Additional executor checks imported no authored test helpers: exact Fraction
+integration over plan cells instead of horizontal slices reproduced1080/1116/
+1128m³. A fresh equal-area court shift y2…6→0…4 changes volume to1088 because
+its roof exclusion changes. Edge-vector dot products reproduced58.109°/44.407°
+overview spans. Algebraically solved exposure limits retain closed/handling
+states; a fresh45lux/2lux closed case permits at most200.930h, so200h gives
+11,960. Authored fresh cases also reject3lux leakage at225h and a5.1m transit
+height through the enlarged4.5m portal. This is executor verification, not the
+first session's independent review or the later Pass F unseen benchmark.
+
+Task routes: Program's building-volume alias now reaches its actual owner;
+Typologies and Space reach exhibition viewing/replacement; Performance and
+daylight reach collection-specific light/exposure. General area, planning,
+closure and roof owners link only for their actual input/consequence. N1's
+access→object/handler→lift/core chain remains; no general method is cloned or
+dispatcher added. The historical35 rows and P8 independence caveat are preserved
+as historical judgments, not automatically upgraded by these authoring checks.
+
+### Sources and preservation
+
+[Primary source record](../sources/volume-and-exhibition.md) retains selected
+OpenStax slicing-text/footer, issuer-hosted Smithsonian PDF page/byte/hash
+identity and actual access/light reading, and CCI collection-light mechanisms.
+Institutional numbers/material tables, figures/PDFs and source-specific textbook
+content are excluded. Inaccessible IFC quantity definitions remain unadopted;
+formal authority is unresolved until a project selects and reads its provision.
+No new normative record, library scan or source-media redistribution.
+
+All eight operations, four runtime calculators/contracts, accepted A–D tests and
+methods, normative catalogue, existing assets and historical matrix retain their
+prior content. E adds two method owners, one source record and four tests;
+existing owners receive conditional links/coverage clarification. Use checker,
+all local tests, independent GFM/link/anchor and preservation audits. The Issue
+handoff owns final revision and actual command results. E remains unaccepted
+and F unstarted until dot's decisions; construction/statutory/model/photometric
+and collection approvals remain distinct from these local mathematical checks.
+
+Executor validation on the E candidate: checker PASS (8 operations,64 normative
+records,104 runtime documents); all48 unit tests PASS; independent Pandoc GFM
+PASS (117 Markdown files,2480 local links,157 tables, no warnings or invalid
+targets/anchors). All111 unchanged preexisting architecture files,138 files
+outside architecture and40 protected operations/scripts/calculator/normative/
+asset files are byte-identical to the acceptance-housekeeping baseline. The
+historical matrix and complete pre-D maintenance content are exactly preserved;
+the existing D acceptance/evidence content is also retained. No dependency,
+generated output or source PDF is installed. Independent review remains pending.

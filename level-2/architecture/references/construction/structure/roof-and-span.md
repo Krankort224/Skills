@@ -221,3 +221,4 @@ two books. Source classifications aid judgment but cannot prove engineering
 capacity or override the user's deliverable choice.
 
 - Affects — [Natural-exhaust roof interface](../../performance/comfort/natural-exhaust-topology.md#reserve-shafts-top-floor-and-roof-interfaces): when roof height/shape/outlets change, revisit top-floor column height, terminal exposure, intake/window relationships, penetrations and maintenance; a cowl symbol does not establish upward flow.
+- Affects — [Building-volume boundary](../../program/building-volume.md): when the outer roof or conditioned/occupied boundary changes, reconcile its actual solid and metric separately from floor area; equal geometric volume does not establish headroom, thermal performance or support.

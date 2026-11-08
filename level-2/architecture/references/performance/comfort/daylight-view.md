@@ -252,6 +252,7 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
+- Affects — [Exhibition light and enclosure](../../typologies/exhibition.md#choose-an-object-specific-light-and-enclosure-response): for real exhibits, establish collection sensitivity and viewing/route needs before choosing glazing; include closed/installation exposure and actual object-plane measurements rather than infer protection from shading alone.
 - Requires — [Planning and section](../../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): identify actual occupied positions and room/opening geometry.
 - Verified by — [Multi-building direct-sun intervals](multi-building-sun.md): when neighboring volumes determine a selected point's direct sun, test actual solids, receiver height, time basis and blocked-interval union. This geometric check does not verify illuminance, glare or statutory insolation.
 - Affects — [Acoustic paths and air modes](acoustics-and-air.md): opening/blind/shade states must coexist with noise and air needs.

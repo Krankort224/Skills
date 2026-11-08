@@ -75,6 +75,7 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
+- Affects — [Exhibition replacement and visitor sequence](../../typologies/exhibition.md#test-the-large-object-and-its-complete-replacement): when an exhibit move crosses a visitor band, test whole closure boundaries, actual holding/dispatch states and continuing public access; a closed display room does not close its open neighboring hall.
 - Requires — [Activity and concurrent demand](../../program/demand.md#what-activities-and-capacity-must-the-program-accommodate): when actors, loads, times or shared resources are unresolved, establish them before choosing access zones.
 - Requires — [Use-family operating commitments](../../typologies/index.md#select-a-family-by-its-operating-commitments): when a use label hides who staffs, resets or controls support, establish those inputs; a family selector does not verify a route.
 - Verified by — [Object-with-handler and occupied-state fit](../planning/room-floor-and-section.md#construct-a-room-that-can-be-used): for deliveries, exhibits or replacement loads, test solids, working envelopes, continuous turns/thresholds and the receiving state; follow its changing-state method when explicit sweeps are needed.

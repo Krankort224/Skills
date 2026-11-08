@@ -6,6 +6,7 @@ Use these records for provenance, source coverage, permissions or a specific mai
 
 | Evidence question | Canonical owner | Local-use consequence |
 | --- | --- | --- |
+| Volume geometry and exhibition access/conservation mechanisms | [Volume and exhibition](volume-and-exhibition.md) | Selected mathematical/institutional primary reading, unavailable formal-definition evidence, rights and original examples; no institutional numeric defaults or copied diagrams |
 | Pinned collections, exact files, inspected sections and adoption/exclusion | [Upstream packs](upstream-packs.md) | Original local methods contain the selected reasoning; reopen a file for a named audit or gap, not automatically |
 | Supplied books/coursework, bytes/hashes and file/printed pages | [Library](library.md) | Selected reading, identity-only, rendered-only, unread and excluded-video status stay distinct; no media redistribution |
 | Historical object/view evidence, interpretation, rights and hosted mirror limits | [Precedents](precedents.md) | Local analyses retain their actual observations; new factual/visual/image-use claims need their own evidence |
@@ -48,6 +49,11 @@ new method's fixed-declination/time limitations are in [solar occlusion](solar-o
 The preceding no-new-inspection statement describes the earlier consolidation.
 
 ## Original local synthesis
+
+The [volume/exhibition selections](volume-and-exhibition.md) add separately scoped
+OpenStax, Smithsonian and CCI reading. Inaccessible IFC definitions remain
+unadopted. These later readings do not change inherited inventory counts or
+establish new normative records, whole-book reading or media-reuse permission.
 
 The installed methods/corrections and hypothetical studies remain authored reasoning, not reproduced source projects or numeric prescriptions. The [finite-canopy ray construction](../references/performance/comfort/daylight-view.md#construct-a-finite-canopy-ray-check) is an original coordinate derivation with explicit supplied-angle/plane assumptions; it does not claim a source performance table, annual result or new book/PDF reading.
 
