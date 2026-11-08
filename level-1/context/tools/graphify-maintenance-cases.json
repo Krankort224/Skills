@@ -1,0 +1,1792 @@
+{
+  "recording_note": "Recorded active-subscription-agent source readings and evidence-backed interpretations/labels. The root read all source cases completely; the isolated-zero note was independently read and returned by assigned gpt-6-luna. Usage/runtime model identity not exposed remains null. Replaying is integration evidence, not fresh inference or a blind benchmark. Give fresh extraction agents only raw sources, scope and method, without these recorded answers.",
+  "cases": {
+    "baseline": {
+      "files": {
+        "docs/policy.md": "# Badge policy\nA current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it.\n",
+        "src/guard.py": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24\n",
+        "docs/note.md": "# Operator checklist\nAt each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window.\n"
+      },
+      "fragments": [
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "grant",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/policy.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "4057c001a725944c3808eb4162ae87341799d89b4708f406f21b0f0671efbc39",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            },
+            {
+              "source_file": "src/guard.py",
+              "start": 1,
+              "end": 2,
+              "sha256": "1b2c4eed4129b35b3345dd30156cc77701c1593f951bf7425040065a28903aaa",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/policy.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "id": "docs_policy_grant_window",
+              "entity_key": "grant_window",
+              "label": "Current 24-hour original-issue grant",
+              "file_type": "concept",
+              "claim_status": "current"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "src/guard.py",
+              "source_location": "L1-L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/guard.py",
+                  "start": 1,
+                  "end": 2,
+                  "quote": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "src_guard_accepts",
+              "target": "docs_policy_grant_window",
+              "relation": "implements_current_grant_window",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The predicate rejects future/revoked grants and permits elapsed hours through 24; the unlinked policy owns that same original-issuance window."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        },
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "note",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/note.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "08ddda5e6c02853a444aafd5b822d7f110eee9fcb2208b967bfc1ac28b22d2ea",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/note.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/note.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "At each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window."
+                }
+              ],
+              "id": "docs_note_shift_checklist",
+              "entity_key": "shift_checklist",
+              "label": "Original-clock operator checklist",
+              "file_type": "concept",
+              "claim_status": "operator procedure; not policy amendment"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "docs/note.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/note.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "At each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "docs_note_shift_checklist",
+              "target": "docs_policy_grant_window",
+              "relation": "preserves_original_issuance",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The replacement checklist retains original issuance and cannot extend the policy window; it does not grant a new approval."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        }
+      ],
+      "dependency_reviews": {
+        "grant": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/policy.md",
+            "src/guard.py"
+          ],
+          "reason": "This shard covers only the current positive window/predicate correspondence and explicitly scoped authority. It does not compare or infer facts from operator-note or added-source content."
+        },
+        "note": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/note.md",
+            "docs/policy.md"
+          ],
+          "reason": "The checklist meaning uses its own explicit original-time statements and the policy authority. Its referenced semantic owner must also remain valid; no code or global-negative comparison is inferred."
+        }
+      },
+      "authority_sources": [
+        "docs/policy.md"
+      ],
+      "scope": "Current archive admission rule and operator semantics; distinguish kitchen/unapproved material and do not invent approval.",
+      "exclusions": [
+        "skills/context/references/graphify/",
+        "graphify-out/"
+      ],
+      "community_interpretation": {
+        "0": {
+          "members": [
+            "docs_note_shift_checklist",
+            "docs_policy_grant_window",
+            "src_guard",
+            "src_guard_accepts"
+          ],
+          "label": "24-hour acceptance and original-clock checklist",
+          "rationale": "The predicate matches the current original-issuance rule; the checklist retains original time and cannot extend that rule."
+        },
+        "1": {
+          "members": [
+            "docs_note",
+            "docs_note_operator_checklist"
+          ],
+          "label": "Operator checklist source",
+          "rationale": "File and heading locate the operator procedure."
+        },
+        "2": {
+          "members": [
+            "docs_policy",
+            "docs_policy_badge_policy"
+          ],
+          "label": "Current policy source",
+          "rationale": "File and heading locate the authoritative grant policy."
+        }
+      }
+    },
+    "isolated-zero": {
+      "files": {
+        "docs/policy.md": "# Badge policy\nA current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it.\n",
+        "src/guard.py": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24\n",
+        "docs/note.md": "# Kitchen inventory\nCount flour bags at the start of each shift.\nThis record concerns food only and no archive admission rule.\n"
+      },
+      "fragments": [
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "grant",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/policy.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "4057c001a725944c3808eb4162ae87341799d89b4708f406f21b0f0671efbc39",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            },
+            {
+              "source_file": "src/guard.py",
+              "start": 1,
+              "end": 2,
+              "sha256": "1b2c4eed4129b35b3345dd30156cc77701c1593f951bf7425040065a28903aaa",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/policy.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "id": "docs_policy_grant_window",
+              "entity_key": "grant_window",
+              "label": "Current 24-hour original-issue grant",
+              "file_type": "concept",
+              "claim_status": "current"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "src/guard.py",
+              "source_location": "L1-L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/guard.py",
+                  "start": 1,
+                  "end": 2,
+                  "quote": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "src_guard_accepts",
+              "target": "docs_policy_grant_window",
+              "relation": "implements_current_grant_window",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The predicate rejects future/revoked grants and permits elapsed hours through 24; the unlinked policy owns that same original-issuance window."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        },
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "note",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex subscription subagent",
+            "model": "gpt-6-luna",
+            "model_identity_source": "coordinator assignment; runtime identity not separately verified",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/note.md",
+              "start": 1,
+              "end": 3,
+              "sha256": "85ace05f1e2be51f477ce284e866e84b4a9a66b6fa7cd3c3d30f0752460a9193",
+              "summary": "Read the complete three-line note. It instructs counting flour bags at each shift start and explicitly says the record concerns food only and contains no archive admission rule.",
+              "outcome": "zero-findings",
+              "reason": "The note contains no current archive admission or grant rules and no operator semantics; its explicit food-only scope excludes it from the archive semantic scope."
+            }
+          ],
+          "nodes": [],
+          "edges": [],
+          "hyperedges": [],
+          "open_questions": []
+        }
+      ],
+      "dependency_reviews": {
+        "grant": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/policy.md",
+            "src/guard.py"
+          ],
+          "reason": "This shard covers only the current positive window/predicate correspondence and explicitly scoped authority. It does not compare or infer facts from operator-note or added-source content."
+        }
+      },
+      "authority_sources": [
+        "docs/policy.md"
+      ],
+      "scope": "Current archive admission rule and operator semantics; distinguish kitchen/unapproved material and do not invent approval.",
+      "exclusions": [
+        "skills/context/references/graphify/",
+        "graphify-out/"
+      ],
+      "community_interpretation": {
+        "0": {
+          "members": [
+            "docs_policy_grant_window",
+            "src_guard",
+            "src_guard_accepts"
+          ],
+          "label": "24-hour grant acceptance",
+          "rationale": "Current policy and accepts() remain valid; no new note semantics are included."
+        },
+        "1": {
+          "members": [
+            "docs_note",
+            "docs_note_kitchen_inventory"
+          ],
+          "label": "Kitchen record, structural only",
+          "rationale": "These native file/heading nodes do not assert archive semantics; the new model reading returned zero findings."
+        },
+        "2": {
+          "members": [
+            "docs_policy",
+            "docs_policy_badge_policy"
+          ],
+          "label": "Current policy source",
+          "rationale": "File and heading locate the authoritative grant policy."
+        }
+      }
+    },
+    "mixed-edit": {
+      "files": {
+        "docs/policy.md": "# Badge policy\nA current archive grant lasts no more than 48 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it.\n",
+        "src/guard.py": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 48\n",
+        "docs/note.md": "# Operator checklist\nAt each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window.\n"
+      },
+      "fragments": [
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "grant",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/policy.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "764c8bf0c10c7e26b4c6fd652fb9ec9b78ea81205d1467d7300fcfe9f5a3af77",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            },
+            {
+              "source_file": "src/guard.py",
+              "start": 1,
+              "end": 2,
+              "sha256": "c2ad1fad5e7b2154762ca9a492676b3f1896e032501b82b386db44de5b5d3077",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/policy.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 48 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "id": "docs_policy_grant_window",
+              "entity_key": "grant_window",
+              "label": "Current 48-hour original-issue grant",
+              "file_type": "concept",
+              "claim_status": "current"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "src/guard.py",
+              "source_location": "L1-L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/guard.py",
+                  "start": 1,
+                  "end": 2,
+                  "quote": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 48"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 48 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "src_guard_accepts",
+              "target": "docs_policy_grant_window",
+              "relation": "implements_current_grant_window",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The predicate rejects future/revoked grants and permits elapsed hours through 48; the unlinked policy owns that same original-issuance window."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        },
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "note",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/note.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "08ddda5e6c02853a444aafd5b822d7f110eee9fcb2208b967bfc1ac28b22d2ea",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/note.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/note.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "At each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window."
+                }
+              ],
+              "id": "docs_note_shift_checklist",
+              "entity_key": "shift_checklist",
+              "label": "Original-clock operator checklist",
+              "file_type": "concept",
+              "claim_status": "operator procedure; not policy amendment"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "docs/note.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/note.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "At each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 48 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "docs_note_shift_checklist",
+              "target": "docs_policy_grant_window",
+              "relation": "preserves_original_issuance",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The replacement checklist retains original issuance and cannot extend the policy window; it does not grant a new approval."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        }
+      ],
+      "dependency_reviews": {
+        "grant": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/policy.md",
+            "src/guard.py"
+          ],
+          "reason": "This shard covers only the current positive window/predicate correspondence and explicitly scoped authority. It does not compare or infer facts from operator-note or added-source content."
+        },
+        "note": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/note.md",
+            "docs/policy.md"
+          ],
+          "reason": "The checklist meaning uses its own explicit original-time statements and the policy authority. Its referenced semantic owner must also remain valid; no code or global-negative comparison is inferred."
+        }
+      },
+      "authority_sources": [
+        "docs/policy.md"
+      ],
+      "scope": "Current archive admission rule and operator semantics; distinguish kitchen/unapproved material and do not invent approval.",
+      "exclusions": [
+        "skills/context/references/graphify/",
+        "graphify-out/"
+      ],
+      "community_interpretation": {
+        "0": {
+          "members": [
+            "docs_note_shift_checklist",
+            "docs_policy_grant_window",
+            "src_guard",
+            "src_guard_accepts"
+          ],
+          "label": "48-hour acceptance and original-clock checklist",
+          "rationale": "The predicate matches the current original-issuance rule; the checklist retains original time and cannot extend that rule."
+        },
+        "1": {
+          "members": [
+            "docs_note",
+            "docs_note_operator_checklist"
+          ],
+          "label": "Operator checklist source",
+          "rationale": "File and heading locate the operator procedure."
+        },
+        "2": {
+          "members": [
+            "docs_policy",
+            "docs_policy_badge_policy"
+          ],
+          "label": "Current policy source",
+          "rationale": "File and heading locate the authoritative grant policy."
+        }
+      }
+    },
+    "addition": {
+      "files": {
+        "docs/policy.md": "# Badge policy\nA current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it.\n",
+        "src/guard.py": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24\n",
+        "docs/note.md": "# Operator checklist\nAt each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window.\n",
+        "docs/extra.md": "# Unapproved suggestion\nA proposed manual override would require an owner signature.\nThis is an unapproved proposal and changes no current grant rule.\n"
+      },
+      "fragments": [
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "grant",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/policy.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "4057c001a725944c3808eb4162ae87341799d89b4708f406f21b0f0671efbc39",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            },
+            {
+              "source_file": "src/guard.py",
+              "start": 1,
+              "end": 2,
+              "sha256": "1b2c4eed4129b35b3345dd30156cc77701c1593f951bf7425040065a28903aaa",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/policy.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "id": "docs_policy_grant_window",
+              "entity_key": "grant_window",
+              "label": "Current 24-hour original-issue grant",
+              "file_type": "concept",
+              "claim_status": "current"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "src/guard.py",
+              "source_location": "L1-L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/guard.py",
+                  "start": 1,
+                  "end": 2,
+                  "quote": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "src_guard_accepts",
+              "target": "docs_policy_grant_window",
+              "relation": "implements_current_grant_window",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The predicate rejects future/revoked grants and permits elapsed hours through 24; the unlinked policy owns that same original-issuance window."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        },
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "note",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/note.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "08ddda5e6c02853a444aafd5b822d7f110eee9fcb2208b967bfc1ac28b22d2ea",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/note.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/note.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "At each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window."
+                }
+              ],
+              "id": "docs_note_shift_checklist",
+              "entity_key": "shift_checklist",
+              "label": "Original-clock operator checklist",
+              "file_type": "concept",
+              "claim_status": "operator procedure; not policy amendment"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "docs/note.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/note.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "At each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "docs_note_shift_checklist",
+              "target": "docs_policy_grant_window",
+              "relation": "preserves_original_issuance",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The replacement checklist retains original issuance and cannot extend the policy window; it does not grant a new approval."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        },
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "extra",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/extra.md",
+              "start": 1,
+              "end": 3,
+              "sha256": "178f23c14e4c5f448062fd54dbaf711e4771e4d74915a02c48a1c6d651b2a1af",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/extra.md",
+              "source_location": "L2-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/extra.md",
+                  "start": 2,
+                  "end": 3,
+                  "quote": "A proposed manual override would require an owner signature.\nThis is an unapproved proposal and changes no current grant rule."
+                }
+              ],
+              "id": "docs_extra_unapproved_override",
+              "entity_key": "unapproved_override",
+              "label": "Unapproved manual override suggestion",
+              "file_type": "concept",
+              "claim_status": "unapproved; no change to current rule"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "docs/extra.md",
+              "source_location": "L2-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/extra.md",
+                  "start": 2,
+                  "end": 3,
+                  "quote": "A proposed manual override would require an owner signature.\nThis is an unapproved proposal and changes no current grant rule."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 4,
+                  "end": 4,
+                  "quote": "This document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "docs_extra_unapproved_override",
+              "target": "docs_policy_grant_window",
+              "relation": "does_not_amend_current_rule",
+              "confidence": "EXTRACTED",
+              "confidence_score": 1.0,
+              "rationale": "The source explicitly says this proposal is unapproved and changes no current grant rule; policy remains the owner."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        }
+      ],
+      "dependency_reviews": {
+        "grant": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/policy.md",
+            "src/guard.py"
+          ],
+          "reason": "This shard covers only the current positive window/predicate correspondence and explicitly scoped authority. It does not compare or infer facts from operator-note or added-source content."
+        },
+        "note": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/note.md",
+            "docs/policy.md"
+          ],
+          "reason": "The checklist meaning uses its own explicit original-time statements and the policy authority. Its referenced semantic owner must also remain valid; no code or global-negative comparison is inferred."
+        },
+        "extra": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/extra.md",
+            "docs/policy.md"
+          ],
+          "reason": "This preserves the explicit source status of one named proposal against the declared owner; it is not a corpus-wide absence claim."
+        }
+      },
+      "authority_sources": [
+        "docs/policy.md"
+      ],
+      "scope": "Current archive admission rule and operator semantics; distinguish kitchen/unapproved material and do not invent approval.",
+      "exclusions": [
+        "skills/context/references/graphify/",
+        "graphify-out/"
+      ],
+      "community_interpretation": {
+        "0": {
+          "members": [
+            "docs_extra_unapproved_override",
+            "docs_note_shift_checklist",
+            "docs_policy_grant_window"
+          ],
+          "label": "Current grant and unapproved suggestion context",
+          "rationale": "The new proposal remains explicitly unapproved and does not amend the current rule."
+        },
+        "1": {
+          "members": [
+            "docs_extra",
+            "docs_extra_unapproved_suggestion"
+          ],
+          "label": "Unapproved suggestion source",
+          "rationale": "File/heading membership supplies source navigation, not approval."
+        },
+        "2": {
+          "members": [
+            "docs_note",
+            "docs_note_operator_checklist"
+          ],
+          "label": "Operator checklist source",
+          "rationale": "File and heading locate the operator procedure."
+        },
+        "3": {
+          "members": [
+            "docs_policy",
+            "docs_policy_badge_policy"
+          ],
+          "label": "Current policy source",
+          "rationale": "File and heading locate the authoritative grant policy."
+        },
+        "4": {
+          "members": [
+            "src_guard",
+            "src_guard_accepts"
+          ],
+          "label": "Acceptance code",
+          "rationale": "Module and function locate the implementation; semantic policy edges can cross presentation groups."
+        }
+      }
+    },
+    "rename": {
+      "files": {
+        "docs/policy.md": "# Badge policy\nA current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it.\n",
+        "src/guard.py": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24\n",
+        "docs/operator-note.md": "# Operator checklist\nAt each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window.\n"
+      },
+      "fragments": [
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "grant",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/policy.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "4057c001a725944c3808eb4162ae87341799d89b4708f406f21b0f0671efbc39",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            },
+            {
+              "source_file": "src/guard.py",
+              "start": 1,
+              "end": 2,
+              "sha256": "1b2c4eed4129b35b3345dd30156cc77701c1593f951bf7425040065a28903aaa",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/policy.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "id": "docs_policy_grant_window",
+              "entity_key": "grant_window",
+              "label": "Current 24-hour original-issue grant",
+              "file_type": "concept",
+              "claim_status": "current"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "src/guard.py",
+              "source_location": "L1-L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/guard.py",
+                  "start": 1,
+                  "end": 2,
+                  "quote": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "src_guard_accepts",
+              "target": "docs_policy_grant_window",
+              "relation": "implements_current_grant_window",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The predicate rejects future/revoked grants and permits elapsed hours through 24; the unlinked policy owns that same original-issuance window."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        },
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "note",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/operator-note.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "08ddda5e6c02853a444aafd5b822d7f110eee9fcb2208b967bfc1ac28b22d2ea",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/operator-note.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/operator-note.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "At each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window."
+                }
+              ],
+              "id": "docs_operator_note_shift_checklist",
+              "entity_key": "shift_checklist",
+              "label": "Original-clock operator checklist",
+              "file_type": "concept",
+              "claim_status": "operator procedure; not policy amendment"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "docs/operator-note.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/operator-note.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "At each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "docs_operator_note_shift_checklist",
+              "target": "docs_policy_grant_window",
+              "relation": "preserves_original_issuance",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The replacement checklist retains original issuance and cannot extend the policy window; it does not grant a new approval."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        }
+      ],
+      "dependency_reviews": {
+        "grant": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/policy.md",
+            "src/guard.py"
+          ],
+          "reason": "This shard covers only the current positive window/predicate correspondence and explicitly scoped authority. It does not compare or infer facts from operator-note or added-source content."
+        },
+        "note": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/operator-note.md",
+            "docs/policy.md"
+          ],
+          "reason": "The checklist meaning uses its own explicit original-time statements and the policy authority. Its referenced semantic owner must also remain valid; no code or global-negative comparison is inferred."
+        }
+      },
+      "authority_sources": [
+        "docs/policy.md"
+      ],
+      "scope": "Current archive admission rule and operator semantics; distinguish kitchen/unapproved material and do not invent approval.",
+      "exclusions": [
+        "skills/context/references/graphify/",
+        "graphify-out/"
+      ],
+      "community_interpretation": {
+        "0": {
+          "members": [
+            "docs_operator_note_shift_checklist",
+            "docs_policy_grant_window",
+            "src_guard",
+            "src_guard_accepts"
+          ],
+          "label": "24-hour acceptance and original-clock checklist",
+          "rationale": "The predicate matches the current original-issuance rule; the checklist retains original time and cannot extend that rule."
+        },
+        "1": {
+          "members": [
+            "docs_operator_note",
+            "docs_operator_note_operator_checklist"
+          ],
+          "label": "Renamed operator-note source",
+          "rationale": "File and heading locate the operator procedure."
+        },
+        "2": {
+          "members": [
+            "docs_policy",
+            "docs_policy_badge_policy"
+          ],
+          "label": "Current policy source",
+          "rationale": "File and heading locate the authoritative grant policy."
+        }
+      }
+    },
+    "deletion": {
+      "files": {
+        "docs/policy.md": "# Badge policy\nA current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it.\n",
+        "src/guard.py": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24\n"
+      },
+      "fragments": [
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "grant",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/policy.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "4057c001a725944c3808eb4162ae87341799d89b4708f406f21b0f0671efbc39",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            },
+            {
+              "source_file": "src/guard.py",
+              "start": 1,
+              "end": 2,
+              "sha256": "1b2c4eed4129b35b3345dd30156cc77701c1593f951bf7425040065a28903aaa",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/policy.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "id": "docs_policy_grant_window",
+              "entity_key": "grant_window",
+              "label": "Current 24-hour original-issue grant",
+              "file_type": "concept",
+              "claim_status": "current"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "src/guard.py",
+              "source_location": "L1-L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/guard.py",
+                  "start": 1,
+                  "end": 2,
+                  "quote": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "src_guard_accepts",
+              "target": "docs_policy_grant_window",
+              "relation": "implements_current_grant_window",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The predicate rejects future/revoked grants and permits elapsed hours through 24; the unlinked policy owns that same original-issuance window."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        }
+      ],
+      "dependency_reviews": {
+        "grant": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/policy.md",
+            "src/guard.py"
+          ],
+          "reason": "This shard covers only the current positive window/predicate correspondence and explicitly scoped authority. It does not compare or infer facts from operator-note or added-source content."
+        }
+      },
+      "authority_sources": [
+        "docs/policy.md"
+      ],
+      "scope": "Current archive admission rule and operator semantics; distinguish kitchen/unapproved material and do not invent approval.",
+      "exclusions": [
+        "skills/context/references/graphify/",
+        "graphify-out/"
+      ],
+      "community_interpretation": {
+        "0": {
+          "members": [
+            "docs_policy_grant_window",
+            "src_guard",
+            "src_guard_accepts"
+          ],
+          "label": "Current grant acceptance",
+          "rationale": "Only surviving selected policy/code semantic facts remain; excluded-existing and deleted note sources are distinguished."
+        },
+        "1": {
+          "members": [
+            "docs_policy",
+            "docs_policy_badge_policy"
+          ],
+          "label": "Current policy source",
+          "rationale": "File and heading locate the authoritative grant policy."
+        }
+      }
+    },
+    "exclusion": {
+      "files": {
+        "docs/policy.md": "# Badge policy\nA current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it.\n",
+        "src/guard.py": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24\n",
+        "docs/note.md": "# Operator checklist\nAt each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window.\n",
+        ".graphifyignore": "docs/note.md\n"
+      },
+      "fragments": [
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "grant",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/policy.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "4057c001a725944c3808eb4162ae87341799d89b4708f406f21b0f0671efbc39",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            },
+            {
+              "source_file": "src/guard.py",
+              "start": 1,
+              "end": 2,
+              "sha256": "1b2c4eed4129b35b3345dd30156cc77701c1593f951bf7425040065a28903aaa",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/policy.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "id": "docs_policy_grant_window",
+              "entity_key": "grant_window",
+              "label": "Current 24-hour original-issue grant",
+              "file_type": "concept",
+              "claim_status": "current"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "src/guard.py",
+              "source_location": "L1-L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/guard.py",
+                  "start": 1,
+                  "end": 2,
+                  "quote": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 24"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "src_guard_accepts",
+              "target": "docs_policy_grant_window",
+              "relation": "implements_current_grant_window",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The predicate rejects future/revoked grants and permits elapsed hours through 24; the unlinked policy owns that same original-issuance window."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        }
+      ],
+      "dependency_reviews": {
+        "grant": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/policy.md",
+            "src/guard.py"
+          ],
+          "reason": "This shard covers only the current positive window/predicate correspondence and explicitly scoped authority. It does not compare or infer facts from operator-note or added-source content."
+        }
+      },
+      "authority_sources": [
+        "docs/policy.md"
+      ],
+      "scope": "Current archive admission rule and operator semantics; distinguish kitchen/unapproved material and do not invent approval.",
+      "exclusions": [
+        "skills/context/references/graphify/",
+        "graphify-out/"
+      ],
+      "community_interpretation": {
+        "0": {
+          "members": [
+            "docs_policy_grant_window",
+            "src_guard",
+            "src_guard_accepts"
+          ],
+          "label": "Current grant acceptance",
+          "rationale": "Only surviving selected policy/code semantic facts remain; excluded-existing and deleted note sources are distinguished."
+        },
+        "1": {
+          "members": [
+            "docs_policy",
+            "docs_policy_badge_policy"
+          ],
+          "label": "Current policy source",
+          "rationale": "File and heading locate the authoritative grant policy."
+        }
+      }
+    },
+    "edge-only": {
+      "files": {
+        "docs/policy.md": "# Badge policy\nA current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it.\n",
+        "src/guard.py": "def accepts(issued, now, revoked):\n    elapsed = now - issued\n    return (not revoked) and 0 <= elapsed <= 24\n",
+        "docs/note.md": "# Operator checklist\nAt each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window.\n"
+      },
+      "fragments": [
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "grant",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/policy.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "4057c001a725944c3808eb4162ae87341799d89b4708f406f21b0f0671efbc39",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            },
+            {
+              "source_file": "src/guard.py",
+              "start": 1,
+              "end": 3,
+              "sha256": "8ad48955dadee02aa017bf526ed3e0450dcf0daee83a6c25e4e584fd635d328d",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [],
+          "edges": [
+            {
+              "source_file": "src/guard.py",
+              "source_location": "L1-L3",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/guard.py",
+                  "start": 1,
+                  "end": 3,
+                  "quote": "def accepts(issued, now, revoked):\n    elapsed = now - issued\n    return (not revoked) and 0 <= elapsed <= 24"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "src_guard_accepts",
+              "target": "docs_policy",
+              "relation": "implements_current_grant_window",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The predicate rejects future/revoked grants and permits elapsed hours through 24; the unlinked policy owns that same original-issuance window."
+            },
+            {
+              "source_file": "docs/policy.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                },
+                {
+                  "source_file": "src/guard.py",
+                  "start": 1,
+                  "end": 3,
+                  "quote": "def accepts(issued, now, revoked):\n    elapsed = now - issued\n    return (not revoked) and 0 <= elapsed <= 24"
+                }
+              ],
+              "source": "docs_policy",
+              "target": "src_guard_accepts",
+              "relation": "enforced_by_acceptance_predicate",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The policy and implementation correspond without needing a separately reified policy concept; this new edge-only result must clear the old concept."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        },
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "note",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; full serial source reading",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/note.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "08ddda5e6c02853a444aafd5b822d7f110eee9fcb2208b967bfc1ac28b22d2ea",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/note.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/note.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "At each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window."
+                }
+              ],
+              "id": "docs_note_shift_checklist",
+              "entity_key": "shift_checklist",
+              "label": "Original-clock operator checklist",
+              "file_type": "concept",
+              "claim_status": "operator procedure; not policy amendment"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "docs/note.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/note.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "At each shift, check grant status before opening the archive.\nReplacement paper badges carry the original issuance time.\nThe checklist does not extend the grant window."
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 24 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "docs_note_shift_checklist",
+              "target": "docs_policy",
+              "relation": "preserves_original_issuance",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The replacement checklist retains original issuance and cannot extend the policy window; it does not grant a new approval."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        }
+      ],
+      "dependency_reviews": {
+        "grant": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/policy.md",
+            "src/guard.py"
+          ],
+          "reason": "This shard covers only the current positive window/predicate correspondence and explicitly scoped authority. It does not compare or infer facts from operator-note or added-source content."
+        },
+        "note": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/note.md",
+            "docs/policy.md"
+          ],
+          "reason": "The checklist meaning uses its own explicit original-time statements and the policy authority. Its referenced semantic owner must also remain valid; no code or global-negative comparison is inferred."
+        }
+      },
+      "authority_sources": [
+        "docs/policy.md"
+      ],
+      "scope": "Current archive admission rule and operator semantics; distinguish kitchen/unapproved material and do not invent approval.",
+      "exclusions": [
+        "skills/context/references/graphify/",
+        "graphify-out/"
+      ],
+      "community_interpretation": {
+        "0": {
+          "members": [
+            "docs_note_shift_checklist",
+            "docs_policy",
+            "docs_policy_badge_policy"
+          ],
+          "label": "Policy and original-clock operator procedure",
+          "rationale": "Meaning links directly to structural policy identity; the old separately reified grant concept is absent."
+        },
+        "1": {
+          "members": [
+            "docs_note",
+            "docs_note_operator_checklist"
+          ],
+          "label": "Operator checklist source",
+          "rationale": "File and heading locate the operator procedure."
+        },
+        "2": {
+          "members": [
+            "src_guard",
+            "src_guard_accepts"
+          ],
+          "label": "Acceptance code",
+          "rationale": "Module and function locate the implementation; semantic policy edges can cross presentation groups."
+        }
+      }
+    },
+    "branch-48-zero": {
+      "files": {
+        "docs/policy.md": "# Badge policy\nA current archive grant lasts no more than 48 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it.\n",
+        "src/guard.py": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 48\n",
+        "docs/note.md": "# Kitchen inventory\nCount flour bags at the start of each shift.\nThis record concerns food only and no archive admission rule.\n"
+      },
+      "fragments": [
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "grant",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; complete branch48 combination read during restored F execution",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/policy.md",
+              "start": 1,
+              "end": 4,
+              "sha256": "764c8bf0c10c7e26b4c6fd652fb9ec9b78ea81205d1467d7300fcfe9f5a3af77",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            },
+            {
+              "source_file": "src/guard.py",
+              "start": 1,
+              "end": 2,
+              "sha256": "c2ad1fad5e7b2154762ca9a492676b3f1896e032501b82b386db44de5b5d3077",
+              "summary": "Read the complete source and its current grant/checklist role, not just its title.",
+              "outcome": "findings",
+              "reason": "Emitted source-owned semantic facts supported by the exact ranges and source role."
+            }
+          ],
+          "nodes": [
+            {
+              "source_file": "docs/policy.md",
+              "source_location": "L2-L4",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 48 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "id": "docs_policy_grant_window",
+              "entity_key": "grant_window",
+              "label": "Current 48-hour original-issue grant",
+              "file_type": "concept",
+              "claim_status": "current"
+            }
+          ],
+          "edges": [
+            {
+              "source_file": "src/guard.py",
+              "source_location": "L1-L2",
+              "_origin": "semantic",
+              "evidence": [
+                {
+                  "source_file": "src/guard.py",
+                  "start": 1,
+                  "end": 2,
+                  "quote": "def accepts(issued, now, revoked):\n    return not revoked and 0 <= now - issued <= 48"
+                },
+                {
+                  "source_file": "docs/policy.md",
+                  "start": 2,
+                  "end": 4,
+                  "quote": "A current archive grant lasts no more than 48 elapsed hours from original issuance.\nA future-issued or revoked grant is invalid.\nThis document owns the current grant window; operator notes do not extend it."
+                }
+              ],
+              "source": "src_guard_accepts",
+              "target": "docs_policy_grant_window",
+              "relation": "implements_current_grant_window",
+              "confidence": "INFERRED",
+              "confidence_score": 0.95,
+              "rationale": "The predicate rejects future/revoked grants and permits elapsed hours through 48; the unlinked policy owns that same original-issuance window."
+            }
+          ],
+          "hyperedges": [],
+          "open_questions": []
+        },
+        {
+          "schema": "context-semantic-v1",
+          "shard_id": "note",
+          "status": "complete",
+          "reader": {
+            "surface": "Codex active root subscription; complete branch48 combination read during restored F execution",
+            "model": null,
+            "model_identity_source": "runtime identity not exposed",
+            "usage": null
+          },
+          "receipts": [
+            {
+              "source_file": "docs/note.md",
+              "start": 1,
+              "end": 3,
+              "sha256": "85ace05f1e2be51f477ce284e866e84b4a9a66b6fa7cd3c3d30f0752460a9193",
+              "summary": "Read the complete food-only note alongside the current 48-hour policy and predicate; it introduces no archive-semantic relationship.",
+              "outcome": "zero-findings",
+              "reason": "The note contains no current archive admission or grant rules and no operator semantics; its explicit food-only scope excludes it from the archive semantic scope."
+            }
+          ],
+          "nodes": [],
+          "edges": [],
+          "hyperedges": [],
+          "open_questions": []
+        }
+      ],
+      "dependency_reviews": {
+        "grant": {
+          "mode": "local",
+          "reviewed": true,
+          "ownership_complete": true,
+          "negative_or_global_comparison": false,
+          "sources": [
+            "docs/policy.md",
+            "src/guard.py"
+          ],
+          "reason": "This shard covers only the current positive window/predicate correspondence and explicitly scoped authority. It does not compare or infer facts from operator-note or added-source content."
+        }
+      },
+      "authority_sources": [
+        "docs/policy.md"
+      ],
+      "scope": "Current archive admission rule and operator semantics; distinguish kitchen/unapproved material and do not invent approval.",
+      "exclusions": [
+        "skills/context/references/graphify/",
+        "graphify-out/"
+      ],
+      "community_interpretation": {
+        "0": {
+          "members": [
+            "docs_policy_grant_window",
+            "src_guard",
+            "src_guard_accepts"
+          ],
+          "label": "48-hour grant acceptance",
+          "rationale": "The predicate matches the current 48-hour original-issuance rule, while the food-only note remains a completed zero semantic result."
+        },
+        "1": {
+          "members": [
+            "docs_note",
+            "docs_note_kitchen_inventory"
+          ],
+          "label": "Kitchen record, structural only",
+          "rationale": "These native file/heading nodes do not assert archive semantics; the new model reading returned zero findings."
+        },
+        "2": {
+          "members": [
+            "docs_policy",
+            "docs_policy_badge_policy"
+          ],
+          "label": "Current policy source",
+          "rationale": "File and heading locate the authoritative grant policy."
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@
 - [Semantic evidence contract](#semantic-evidence-contract)
 - [Subscription fragments and mixed assembly](#plan-read-and-reconcile-subscription-fragments)
 - [Freshness, portability and publication](#freshness-portability-and-publication)
+- [Commit-level trio publication](#publish-a-validated-trio-from-an-isolated-clone)
 - [Verification corpus and oracles](#verification-corpus-and-oracles)
 - [Source ledger](#source-ledger)
 
@@ -18,7 +19,7 @@
 
 Project understanding starts with the task, applicable scope and authoritative sources. The populated `references/repository.md` explains project purpose, component roles and interactions, constraints, knowledge owners and routes to detail. Graphs supply derived relationship evidence; neither connectivity nor a model's confidence overrides the owner of a fact. Missing, stale, incompatible or incomplete graphs leave ordinary source investigation available. A narrow question needs only relevant sources and bounded graph results.
 
-This guide records the inspected native interfaces and the verified compatibility profile. The current shared `context/SKILL.md` routes to complete project-map read, maintain and review methods without graph prerequisites. The structural procedure below prepares and verifies a fresh staged trio for the tested Linux Python/Markdown lane. The semantic procedure below adds actual current-agent reading, strict range/evidence validation and fresh native mixed assembly in the same tested lane. Portable mixed maintenance/publication, broader investigation and the two-host pilot retain their separate implementation/validation gates. Issue execution, publication and acceptance remain with `workflow`; delegation remains with `delegation`.
+This guide records the inspected native interfaces and the verified compatibility profile. The current shared `context/SKILL.md` routes to complete project-map read, maintain and review methods without graph prerequisites. The structural procedure below prepares and verifies a fresh staged trio for the tested Linux Python/Markdown lane. The semantic procedure below adds actual current-agent reading, strict range/evidence validation and fresh native mixed assembly in the same tested lane. The maintenance method adds conservative semantic-shard reuse, cold-checkout recovery and coherent Git-commit trio publication in that same tested lane. Broader investigation and the actual two-host pilot retain their separate implementation/validation gates. Issue execution, publication and acceptance remain with `workflow`; delegation remains with `delegation`.
 
 ## Immutable source and dependencies
 
@@ -316,9 +317,9 @@ assert source_identity() == inputs, "Sources changed while exporting; discard th
 print(json.dumps({"stage": str(stage), "selected_files": len(paths), "nodes": G.number_of_nodes(), "edges": G.number_of_edges(), "raw_edges": len(extraction["edges"]), "dangling_raw_edges": diagnostics["dangling_endpoint_edges"], "input_identity": identity, "semantic_extraction": "not performed"}, ensure_ascii=False))
 ```
 
-Inspect the staged JSON against the corpus truth before publication: known caller→callee and document-reference endpoints, native source line locations, origin/confidence, unresolved-link diagnostics and edge folding (`also_seen`). Raw and built edge counts can differ because missing targets are omitted and same-endpoint evidence coalesces. A nonempty page node is not proof of every Markdown construct, parser syntax or model concept being represented. Native diagnostics are supporting evidence, not a replacement for source oracles. The block checks native inventory, selected bytes and in-scope native configuration before/after this build. This detects observed changes, not an atomic filesystem snapshot or change-and-revert race; use a quiescent source tree. Exported numeric confidence scores may be native category defaults (EXTRACTED=1, INFERRED=0.55, AMBIGUOUS=0.2), not measured probabilities. Full portable invalidation across dependency/schema/prompt changes remains F.
+Inspect the staged JSON against the corpus truth before publication: known caller→callee and document-reference endpoints, native source line locations, origin/confidence, unresolved-link diagnostics and edge folding (`also_seen`). Raw and built edge counts can differ because missing targets are omitted and same-endpoint evidence coalesces. A nonempty page node is not proof of every Markdown construct, parser syntax or model concept being represented. Native diagnostics are supporting evidence, not a replacement for source oracles. The block checks native inventory, selected bytes and in-scope native configuration before/after this build. This detects observed changes, not an atomic filesystem snapshot or change-and-revert race; use a quiescent source tree. Exported numeric confidence scores may be native category defaults (EXTRACTED=1, INFERRED=0.55, AMBIGUOUS=0.2), not measured probabilities. For portable mixed invalidation across dependency/schema/prompt changes, continue with the [freshness method](#freshness-portability-and-publication).
 
-Use the project’s workflow to publish a reviewed complete trio together only when authorized. This slice does not copy over an existing published target. Preparation, parsing, exporter or validation failure leaves the old published references untouched and invalidates the new stage; retain the diagnostics and either fix the cause in a new task-owned stage or report the gap. General mixed updates, no-op policy, competing writers and rollback/transactionality remain F.
+Use the project’s workflow to publish a reviewed complete trio together only when authorized. This slice does not copy over an existing published target. Preparation, parsing, exporter or validation failure leaves the old published references untouched and invalidates the new stage; retain the diagnostics and either fix the cause in a new task-owned stage or report the gap. Mixed updates, no-op policy, competing writers and compatible rollback use the bounded maintenance/publication method below.
 
 For a bounded inspection of a known staged symbol, set `CONTEXT_SEED` to its verified unique node ID and `CONTEXT_QUESTION` to the actual question, then run this with the verified interpreter. The native loader reads the full JSON into its process; keep the agent-facing result bounded and use this only within the verified small-graph limit. The stage has no learning sidecar. Loading arbitrary published sidecars needs the separate scope checks described earlier.
 
@@ -390,6 +391,8 @@ Reuse native commands/libraries unchanged for parsing, IDs, graph assembly, cach
 
 ## Semantic evidence contract
 
+<!-- context-semantic-contract:start -->
+
 Retain the useful upstream schema: nodes carry ID, short label, file type, source file/location and pertinent source metadata; edges carry source→target, relation, source evidence, origin and confidence; hyperedges identify their members and source. Native file types are `code`, `document`, `paper`, `image`, `rationale`, `concept`. Normalize IDs using native `ids` and full root-relative path identity, preserving Unicode; labels alone are not globally unique. Use exact symbol IDs from structural extraction for code references. Rationale belongs on the relevant semantic record as an attribute, not a sentence-shaped entity.
 
 Use EXTRACTED/1.0 for explicit evidence, INFERRED for a supported inference with a stated basis, and AMBIGUOUS for a real unresolved candidate. Upstream's inference rubric is 0.95/0.85/0.75/0.65/0.55 and ambiguity 0.1–0.3; scores are annotations, not calibrated probabilities. Do not invent a relation to make the corpus connected. A negative or unrelated example need not become an ambiguous edge. `calls` runs caller→callee and stays within the established language context.
@@ -423,7 +426,9 @@ Use [validate_context_fragments.py](validate_context_fragments.py) with the veri
 
 Native `validate_semantic_fragment` checks shape/security, not full coverage. Do not use `sanitize_semantic_fragment` in this route: the pinned implementation drops `concept`/`rationale` nodes and can filter cross-fragment hyperedges. Native `merge-chunks` skips invalid siblings, first-wins duplicate IDs, drops coverage and substitutes zero usage. This selected direct native assembly avoids that lossy boundary; a future command route must prove no partial/drop occurred rather than trust exit0.
 
-The pinned native graph is simple directed storage: same-endpoint evidence can coalesce or lose distinct relations/origin. This slice **refuses semantic pairs already occupied by another semantic or structural edge** instead of silently losing independent facts. Rephrase/reify only when source meaning justifies a distinct entity, or report the unsupported collision; do not alter truth to make validation pass. Full mixed update/empty-result replacement remains F: source ownership inferred solely from nodes is insufficient for edge-only or zero-finding replacement.
+The pinned native graph is simple directed storage: same-endpoint evidence can coalesce or lose distinct relations/origin. This slice **refuses semantic pairs already occupied by another semantic or structural edge** instead of silently losing independent facts. Rephrase/reify only when source meaning justifies a distinct entity, or report the unsupported collision; do not alter truth to make validation pass. Mixed updates use a fresh structural baseline under the maintenance method below: source ownership inferred solely from nodes is insufficient for edge-only or zero-finding replacement.
+
+<!-- context-semantic-contract:end -->
 
 ### Assemble, interpret and verify a fresh mixed trio
 
@@ -431,7 +436,7 @@ Selected Python/Markdown bytes, paths and scoped configuration are checked again
 
 Set `CONTEXT_PLAN`, `CONTEXT_STRUCTURAL` and `CONTEXT_FRAGMENTS` (a JSON array of explicit result paths) in a process with the same verified interpreter, root/tools and no-provider environment as D. `GRAPHIFY_OUT` must still point outside the source tree before imports. Set `CONTEXT_MIXED_STAGE` to a fresh external directory; do not select published output.
 
-Run this block once without `CONTEXT_LABELS`: it validates and builds the graph natively in memory, then prints exact community members and identity without writing artifacts. The current agent reads those members, relevant source evidence and uncertainties and authors a task-local labels JSON: `{input_identity, communities:{"<id>":{members:["<sorted IDs>"],label:"<short source-backed name>",rationale:"<why these members form this theme>"}}}`. Labels interpret the actual membership; they do not create project facts. Set `CONTEXT_LABELS` to that file and rerun the same block. Mismatched identity/membership forces inspection/relabeling, not guessed reuse.
+Run this block once without `CONTEXT_LABELS`: it validates and builds the graph natively in memory, then prints exact community members and identity without writing artifacts. The current agent reads those members, relevant source evidence and uncertainties and authors a task-local labels JSON: `{input_identity, evidence_identity, communities:{"<id>":{members:["<sorted IDs>"],label:"<short source-backed name>",rationale:"<why these members form this theme>"}}}`. Labels bind both current inputs and actual semantic payload evidence, in addition to exact members; changed claims/rationale can require new interpretation even with the same sources and IDs. Labels do not create project facts. Set `CONTEXT_LABELS` to that file and rerun the same block. Mismatched identity/membership forces inspection/relabeling, not guessed reuse.
 
 ```python
 # context-semantic-assemble
@@ -477,30 +482,50 @@ for edge in expected_edges:
 assert G.graph.get("hyperedges", []) == structural.get("graph", {}).get("hyperedges", []) + validated["hyperedges"], "Inspect native hyperedge normalization before claiming preservation"
 communities = cluster(G)
 ledger = validated["context_semantic"]
-identity = hashlib.sha256(json.dumps(ledger, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+plan_data = validator.strict_json(plan)
+current_profile = validator.profile(module.parent)
+if plan_data.get("expected_profile") is not None:
+    assert plan_data["expected_profile"] == current_profile, "Planned extraction profile changed; reassess/reprocess"
+current_snapshot = validator.snapshot(root, structural["graph"]["context"]["excludes"], plan_data.get("authority_sources", []), scope=ledger["scope"])
+originals = {}
+for path in fragments:
+    payload, consumed = validator.strict_json(path, with_identity=True)
+    originals[payload["shard_id"]] = {"payload": payload, "origin_sha256": consumed["sha256"]}
+portable = validator.make_state(current_snapshot, current_profile, originals, structural["nodes"], ledger, plan_data.get("dependency_reviews"))
+identity = validator._digest({"snapshot": portable["snapshot"], "profile": portable["profile"]})
+evidence_identity = validator._digest({"structural_sha256": ledger["structural_sha256"], "groups": portable["groups"]})
 members = {str(cid): sorted(nodes) for cid, nodes in communities.items()}
 if not os.environ.get("CONTEXT_LABELS"):
-    print(json.dumps({"input_identity": identity, "communities": {cid: [{"id": n, "label": G.nodes[n].get("label"), "source_file": G.nodes[n].get("source_file"), "origin": G.nodes[n].get("_origin")} for n in nodes] for cid, nodes in members.items()}}, ensure_ascii=False))
+    print(json.dumps({"input_identity": identity, "evidence_identity": evidence_identity, "communities": {cid: [{"id": n, "label": G.nodes[n].get("label"), "source_file": G.nodes[n].get("source_file"), "origin": G.nodes[n].get("_origin")} for n in nodes] for cid, nodes in members.items()}}, ensure_ascii=False))
     raise SystemExit(0)
 interpretation = validator.strict_json(os.environ["CONTEXT_LABELS"])
-assert interpretation["input_identity"] == identity and set(interpretation["communities"]) == set(members)
+assert interpretation["input_identity"] == identity and interpretation["evidence_identity"] == evidence_identity and set(interpretation["communities"]) == set(members), "Interpretation must match actual semantic evidence and membership"
 labels = {}
 for cid, nodes in members.items():
     item = interpretation["communities"][cid]
     assert item["members"] == nodes and item["label"].strip() and item["rationale"].strip()
     labels[int(cid)] = item["label"]
-G.graph["context"] = {**structural["graph"]["context"], "input_identity": identity, "structural_input_identity": structural["graph"]["context"]["input_identity"], "semantic_extraction": "performed by active subscription agents for explicitly planned ranges", "coverage": "structural baseline plus validated semantic planned ranges; omissions snapshot observed at D staging", "omissions_observed_at": structural["graph"]["context"]["input_identity"], "semantic": ledger, "community_interpretation": interpretation["communities"]}
+G.graph["context"] = {**structural["graph"]["context"], "input_identity": identity, "structural_input_identity": structural["graph"]["context"]["input_identity"], "semantic_extraction": "performed by active subscription agents for explicitly planned ranges", "coverage": "structural baseline plus validated semantic planned ranges; omissions snapshot observed at D staging", "omissions_observed_at": structural["graph"]["context"]["input_identity"], "maintenance": portable, "semantic": ledger, "community_evidence_identity": evidence_identity, "community_interpretation": interpretation["communities"]}
 stage = Path(os.environ["CONTEXT_MIXED_STAGE"]).resolve()
 assert not stage.exists() and not stage.is_relative_to(root) and not root.is_relative_to(stage), "Use a fresh external mixed stage"
 stage.mkdir(parents=True)
-assert to_json(G, communities, str(stage / "graph.json"), community_labels=labels)
+assert to_json(G, communities, str(stage / "graph.json"), built_at_commit=structural["graph"]["context"].get("source_commit") or "", community_labels=labels)
 assert to_html(G, communities, str(stage / "graph.html"), community_labels=labels, node_limit=5000, learning_overlay={})
 detection = {"total_files": len(ledger["sources"]), "total_words": sum(len((root / p).read_text(encoding="utf-8-sig").split()) for p in ledger["sources"]), "warning": "PLANNED-RANGE SEMANTIC: active-agent extraction was performed; coverage is limited to the explicit validated scope, not universal understanding."}
 report = generate(G, communities, score_all(G, communities), labels, god_nodes(G), surprising_connections(G, communities), detection, {"input": 0, "output": 0}, root.name)
 report = re.sub(r"^- Token cost:.*$", "- Subscription-agent token usage: unknown (host did not expose counters).", report, flags=re.M)
 report = report.replace("- None detected - all connections are within the same source files.", "- No top-ranked surprising connection reported; this does not establish absence of cross-file relationships.")
-report += "\n## Semantic scope, evidence and interpretation\n\nInput identity: `" + identity + "`. Unknown usage is not zero. Scores are annotations, not calibrated probabilities. Omitted/unsupported input inventory is the D-staging observation; this phase rechecks selected Python/Markdown sources and configuration, not every omitted-file change. Current policy, historical proposals, observations and unresolved claims retain their source roles.\n\n```json\n" + json.dumps({"semantic": ledger, "community_interpretation": interpretation["communities"], "structural_omissions_observed_at_D_staging": structural["graph"]["context"]["omissions"]}, ensure_ascii=False, indent=2) + "\n```\n\nHTML needs JavaScript and its pinned CDN; rendering was not verified by data export. No portable incremental update or publication transaction is claimed.\n"
+report += "\n## Semantic scope, evidence and interpretation\n\nInput identity: `" + identity + "`. Unknown usage is not zero. Scores are annotations, not calibrated probabilities. Omitted/unsupported input inventory is the D-staging observation; this phase rechecks selected Python/Markdown sources and configuration, not every omitted-file change. Current policy, historical proposals, observations and unresolved claims retain their source roles.\n\n```json\n" + json.dumps({"semantic": ledger, "community_interpretation": interpretation["communities"], "structural_omissions_observed_at_D_staging": structural["graph"]["context"]["omissions"]}, ensure_ascii=False, indent=2) + "\n```\n\nHTML needs JavaScript and its pinned CDN; rendering was not verified by data export. This is a staged result. Portable reuse requires the documented profile/dependency checks; publication requires the separate authorized commit step.\n"
 write_text_atomic(stage / "GRAPH_REPORT.md", report)
+# Seal final siblings before storing their hashes in JSON; JSON never hashes itself.
+generation = validator.generation_identity(validator.strict_json(stage / "graph.json"))
+marker = "<!-- context-generation:" + generation + " -->"
+write_text_atomic(stage / "graph.html", (stage / "graph.html").read_text(encoding="utf-8") + "\n" + marker + "\n")
+write_text_atomic(stage / "GRAPH_REPORT.md", report + "\n" + marker + "\n")
+G.graph["context"]["generation_identity"] = generation
+G.graph["context"]["artifacts"] = {name: hashlib.sha256((stage / name).read_bytes()).hexdigest() for name in ("graph.html", "GRAPH_REPORT.md")}
+assert to_json(G, communities, str(stage / "graph.json"), built_at_commit=structural["graph"]["context"].get("source_commit") or "", community_labels=labels)
+validator.validate_trio(stage, root=root, require_current=True)
 serialized = validator.strict_json(stage / "graph.json")
 reopened = load_node_link_graph(serialized)
 assert set(reopened) == set(G) and set(reopened.edges) == set(G.edges) and reopened.is_directed()
@@ -521,27 +546,232 @@ for path in stage.iterdir():
 print(json.dumps({"stage": str(stage), "nodes": G.number_of_nodes(), "edges": G.number_of_edges(), "semantic_nodes": len(validated["nodes"]), "semantic_edges": len(validated["edges"]), "input_identity": identity, "usage": None}, ensure_ascii=False))
 ```
 
-Run without Python optimization so assembly assertions remain enabled. On any validator/build/export/evidence failure, discard this new stage, retain diagnostics and leave prior references untouched. The validated coverage ledger and interpretation are embedded in JSON/report; transient plans/results/caches stay task-local. Review actual semantic answers against source truth and bounded native queries before any authorized publication. Replaying recorded model fragments tests integration/accounting; only a real current-agent read constitutes a new semantic pass. Fresh-model inference is not byte-deterministic, and this initial assembly does not establish F's invalidation, changed-only reuse or publication transaction.
+Run without Python optimization so assembly assertions remain enabled. On any validator/build/export/evidence failure, discard this new stage, retain diagnostics and leave prior references untouched. The validated coverage ledger and interpretation are embedded in JSON/report; transient plans/results/caches stay task-local. Review actual semantic answers against source truth and bounded native queries before any authorized publication. Replaying recorded model fragments tests integration/accounting; only a real current-agent read constitutes a new semantic pass. Fresh-model inference is not byte-deterministic. Initial assembly alone does not publish; use the maintenance/publication checks below.
 
 ## Freshness, portability and publication
 
-Input identity must combine sorted root-relative source paths and content hashes with scope/exclusion/configuration, immutable Graphify/dependency/schema identity, extraction prompt version and observable model/extraction mode. Exclude generated outputs and host-local paths from this identity. `built_at_commit` is provenance only: publishing derived output changes HEAD without changing inputs. Metadata under native graph attributes can survive JSON export/reload (probe); native merges need explicit metadata carry/recalculation, not an assumption that custom attributes propagate automatically.
+This lane supports validated **semantic-shard reuse** in the tested Linux Python/Markdown mixed profile. It does not rely on warm caches or infer freshness from HEAD. Unchanged input/policy/profile plus an intact trio is a no-op. Changes require a fresh FULL native D structural baseline and validated retained/new semantic fragments; changed-only structural parsing is not claimed. Native Markdown cache normalization and incomplete reference context make an unreviewed changed-file shortcut insufficient. Model inference is not byte-deterministic.
 
-Prefer storing portable input/coverage records inside `graph.json` and their readable status in the report, keeping the required trio sufficient for investigation. No fourth portable artifact is justified yet. Ignored caches, manifests, root/interpreter markers, logs and absolute paths remain host-local. A future changed-only route must prove reconstruction from the published trio in a fresh process/checkout; until then report a full semantic re-extraction requirement in a cold environment. A warm native cache hit is not that proof.
+### Inspect and assess a previous immutable generation
 
-`build_merge` replaces each source tier represented by incoming data and preserves the other. Preserve only **valid** unchanged semantics: content/config/prompt changes invalidate coverage even if native merge retains the nodes. Invalidate dependent semantic groups when code/document relationships change; where dependency ownership is incomplete, broaden re-extraction conservatively. Renames require delete+add handling with source identity remapping/re-extraction; excluded-but-existing and deleted sources have different evidence. Unexplained disappearance from a scan must not be treated as deletion.
+Read all three prior artifacts from ONE resolved immutable Git commit into a new task-owned view. `validate_trio(view)` checks bounded parsing, the complete set, noncircular generation, JSON's final sibling hashes, actual embedded HTML data and report correspondence; it returns the exact bytes consumed. Corrupt/incomplete output must be recovered from a verified last-good commit or replaced by full extraction. Missing/legacy portable state cannot support reuse; never repair hashes to bless an unexplained partial graph.
 
-Native `graphify update` is a protected code-refresh optimization, not a mixed semantic refresh or publication transaction. It can retain semantic-backed documents without refreshing their structural headings. A tool/schema/config mismatch may defeat its fast skip while still extracting only manifest-changed files. A reviewed full native `_rebuild_code(..., incremental=False, force=False, block_on_lock=True)` is a candidate for extraction-affecting invalidation; semantic sources still need explicit requeue. Private helpers are tied to this pinned revision and require retesting when upgraded. Do not bypass semantic-loss protection with automatic `--force`.
+The existing validator supplies read-only `profile(tools)`, `snapshot(root, exclusions, authority_sources, scope=...)`, `make_state(...)` and `assess_reuse(...)`. They inspect/return data, not inference, graph construction, caches, installation or publication. Native ignore/noise/sensitive facilities govern a bounded snapshot. Unreadable enumeration/source/type failures block refresh rather than becoming deletion. Source hashes/line counts, consumed configuration, scope/exclusions, authority inputs and visible unsupported paths are portable. Explicit native exclusion order is preserved (last matching rule wins); only earlier identical duplicates are removed. Known derived outputs are clamped at the end. Derived-tree/Git existence and local secret contents/presence are NOT inputs. Sensitive exclusion policy is recorded; a cold checkout need not contain `.env`. Pruned/excluded subtrees are policies, not exhaustive descendant listings.
 
-Native `_rebuild_lock(out_dir, blocking=True)` is advisory, platform-dependent, and used by update; direct merge/export must coordinate too. Its fallback can warn and yield without a real lock on unsupported filesystems. Each branch/worktree needs isolated writable state; one published target has one serialized writer. Stage and verify the complete trio before replacing any published artifact, keep last-good outputs recoverable and publish one coherent Git revision. Native exporters provide individual atomic writes, not an atomic three-file commit. Failure after one successful exporter must not publish a mixed set. Rollback/interruption/reader-consistency behavior remains a required implementation test; do not claim filesystem transactionality from `to_json` alone.
+The profile verifies installed pins and fingerprints the interpreter/platform, requirements, validator, schema/mode and explicitly marked extraction contract. Unknown native versions require compatibility work, not automatic upgrade. Observable reader assignment and unknown usage remain provenance. If the task selects another mode/model or additional extraction instructions, explicitly change scope/profile and requeue; unexposed runtime identity cannot be compared automatically.
 
-A valid trio has matching corpus/profile/coverage identity, sources/confidence/direction consistent with JSON, actual nonempty HTML and a report that discloses partiality/unsupported sources and unknown usage. HTML interactivity additionally needs JavaScript and the pinned vis-network CDN resource; the artifact is not inherently offline. Above the rendering limit, aggregation changes the view; a skipped one-community render cannot count as a complete trio. Structural no-op tests can compare normalized results; model inference must not be advertised as byte-deterministic.
+Select current root/branch/worktree, scope, exclusions and global authority sources from project owners. Previous policies are an inspected starting point, not authority. Put every material common rule owner in `authority_sources`; retain actual generated/output/cache/submodule exclusions. Prepare a task-local policy JSON with `scope`, `exclusions`, `authority_sources` and any verified `confirmed_removals`.
+
+```python
+# context-assess-refresh
+import importlib.util
+import json
+import os
+from pathlib import Path
+module = Path(os.environ["CONTEXT_TOOLS"]) / "validate_context_fragments.py"
+spec = importlib.util.spec_from_file_location("context_refresh_validator", module)
+validator = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(validator)
+previous = validator.validate_trio(Path(os.environ["CONTEXT_PREVIOUS_TRIO"]))
+state = previous["graph"]["graph"]["context"]["maintenance"]
+policy = validator.strict_json(os.environ["CONTEXT_REFRESH_POLICY"])
+current = validator.snapshot(Path(os.environ["CONTEXT_ROOT"]), policy["exclusions"], policy["authority_sources"], previous_sources=state["snapshot"]["sources"], scope=policy["scope"])
+assessment = validator.assess_reuse(state, current, validator.profile(module.parent), confirmed_removals=policy.get("confirmed_removals", {}))
+if assessment["status"] == "noop":
+    validator.validate_trio(Path(os.environ["CONTEXT_PREVIOUS_TRIO"]), root=Path(os.environ["CONTEXT_ROOT"]), require_current=True)
+print(json.dumps({"status": assessment["status"], "reasons": assessment["reasons"], "invalidated": assessment["invalidated"], "reusable_shard_ids": sorted(assessment["reusable"]), "required_removal_confirmations": assessment["required_removal_confirmations"]}, ensure_ascii=False))
+```
+
+A confirmation maps an old relative path to `{kind:"git"|"coordinator", previous_sha256:"<old source bytes>", evidence:"<verified deletion/rename evidence>"}`. Verify the evidence yourself: compare the old source commit and inspected current commit/path diff, including actual old/new rename paths. A string labeled git is not proof. A readable existing file excluded by a positive current rule is an exclusion, not deletion. Missing/unreadable/unsafe/unexplained disappearance blocks destructive completion; resolve it and preserve last-good data.
+
+| Assessment | Required action |
+|---|---|
+| `noop` | Coherent intact trio and unchanged inputs/profile: keep exact bytes, no new model/parser/export/commit just because HEAD/date/cache/root changed. |
+| `reuse_some` | Keep only returned original payloads/provenance; actually read/re-extract invalidated shards, then assemble against fresh D. |
+| `reextract_all` | Legacy/incomplete state, changed membership/policy/configuration/profile or conservative dependencies: independently plan every CURRENT source. Old shard IDs do not define newly added work. |
+| `blocked` | Resolve the reported access/removal/unknown gap; never fill failed fresh work with stale prior semantics. |
+
+### Reuse only complete, valid semantic ownership
+
+Portable state is inside `graph.context.maintenance`: version/snapshot/profile, original validated payloads and zero-result/reader/receipt provenance, raw-byte versus canonical-payload hashes, source dependencies and referenced semantic-owner shards. Existing JSON/report roles suffice; no fourth portable manifest or global store. State checksums detect corruption, not forged truth: use reviewed commit-pinned artifacts. Exported source names alone cannot reconstruct original fragment bytes or split ranges/edge-only/empty groups.
+
+Default dependency is ALL selected sources. Narrow local reviews in the plan's `dependency_reviews` require actual complete bounded ownership: `{mode:"local", reviewed:true, ownership_complete:true, negative_or_global_comparison:false, sources:[...], reason:"<source-backed review>"}`. Include owned/evidence/endpoint sources and common authorities. Zero-findings, unresolved/corpus-wide negative comparisons and incomplete ownership stay all-source. Explicit local negative statements are not proof of corpus-wide absence; booleans do not replace human review.
+
+Changed bytes invalidate every shard owning or depending on the WHOLE source, even if another assigned range changed. Propagate invalidation through referenced semantic owners to a fixed point. Added/deleted/excluded input or changed scope/config/schema/tool/prompt conservatively requeues all; rename is deletion+addition with source-based IDs re-read/re-keyed. Dependency evidence is a lower bound, not universal semantic dependency discovery.
+
+The API returns eligible payloads for programmatic copying; show bounded summaries first, then load only needed records. Save retained `payload` to explicit task-owned files; preserve original reader/receipts, not a fabricated new read. Add `reuse_provenance` naming the prior commit/input/generation, original raw-fragment hash and canonical-payload hash. Newly serialized bytes have a NEW fragment hash. Preserve that distinction. Revalidate all retained/new results against the NEW D baseline.
+
+Independently plan current full-source/range coverage before new extraction. Include `expected_profile` captured before dispatch, current `authority_sources` and reviewed dependency declarations. Keep old ranges only when whole sources are unchanged; changed long sources require all slices to EOF. Use current subscription agents or serial reading under E's method. Missing/failed/zero/edge-only results never borrow an old semantic layer to look complete. Reconsider community meaning after material changes; identical members do not prove unchanged labels.
+
+Assemble on a fresh STRUCTURAL-ONLY baseline with the complete validated fragment set. Never mutate a previous mixed graph as an invalidation shortcut: native semantic replacement ownership comes from nodes; edge-only/zero re-extraction can leave old semantics, while `prune_sources` removes both tiers. Fresh D plus selected retained/new fragments clears obsolete semantic nodes naturally and preserves current structure. Native `graphify update` retains semantics but does not certify freshness.
+
+### Seal complete artifacts and recover failures
+
+Assembly stages native JSON/HTML/report externally, computes a noncircular graph/evidence generation ID, places its marker in HTML/report, hashes their FINAL bytes and writes sibling hashes into JSON LAST. JSON never hashes itself. `validate_trio` checks exact consumed buffers, data/counts, generation and portable-state integrity before use. Current source/profile/config/inventory is rechecked. These are quiescent-input checks, not filesystem snapshots or change-and-revert protection.
+
+Export/interruption/corruption/truncation/partial model failures keep the prior published commit untouched. Retain diagnostics and build a NEW stage. Recover an intact last-good trio from one immutable commit and check compatibility with current intended sources/profile; otherwise label it stale and rebuild from sources. Do not silently promote an old graph to current truth.
+
+Publication below is commit-atomic, not an atomic live-directory replacement. Readers resolve one commit and obtain its three blobs together in a new view before validation. Export-in-progress/worktree files are not certified generations. Rollback is an explicitly authorized NEW fast-forward commit containing a previous validated trio only if current sources/profile still match; never hard-reset remote history or erase later work. Incompatible old output remains historical evidence until repaired from current sources.
+
+## Publish a validated trio from an isolated clone
+
+Use an explicitly authorized remote URL and existing full branch ref, a clean task-owned clone at the expected source commit, and a fresh external stage. Publication updates only the remote ref, never the source clone's branch, index or worktree. A local destination must be bare; remote-side policy must prevent a nonlocal destination from updating a checked-out working tree. Native `_rebuild_lock(out_dir: Path, *, blocking: bool = False)` is advisory and only coordinates callers using the same clone/common-directory and ref convention; it does not automatically coordinate Graphify watch/update or other clones. The explicit Git lease arbitrates the latter.
+
+The reviewed `validate_context_fragments.validate_trio(stage, root=root, require_current=True)` must return the final exact `blobs`, `digests`, `graph`, `input_identity`, `generation_identity`, `profile` and `snapshot` with `sources`, `configuration`, `exclusions` and `authority_sources`. It must validate current complete scoped source inventory, generation markers, source/profile identity, JSON sibling digests, provenance, embedded HTML/report counts, and all three files. The publisher consumes exactly those bytes, revalidates before push, and compares all tracked selected source/config bytes against the expected commit. This procedure requires every scoped source/config to be tracked. A failed validation, concurrent source change or failed lease refuses publication; unknown push outcome must be resolved by inspecting the remote before retry.
+
+Set `CONTEXT_ROOT` to the isolated clone, `CONTEXT_STAGE` to the fresh stage outside the clone, `CONTEXT_TOOLS` to the reviewed helper directory, `CONTEXT_EXPECTED` to the full source commit, and `CONTEXT_REMOTE` / `CONTEXT_REMOTE_REF` to the explicit authorized remote URL and full existing `refs/heads/...` ref. Remote aliases are unsupported. Do not use a user checkout as the task-owned clone.
+
+```python
+# context-publish-trio
+import fcntl
+import hashlib
+import importlib.util
+import json
+import os
+from pathlib import Path, PurePosixPath
+import subprocess
+import sys
+import tempfile
+from urllib.parse import unquote, urlsplit
+from graphify.watch import _rebuild_lock
+
+assert __debug__ and sys.platform.startswith("linux")
+assert not any(os.environ.get(k) for k in ("GIT_DIR", "GIT_WORK_TREE", "GIT_INDEX_FILE", "GIT_COMMON_DIR", "GIT_OBJECT_DIRECTORY", "GIT_ALTERNATE_OBJECT_DIRECTORIES", "GIT_REPLACE_REF_BASE"))
+os.environ["GIT_NO_REPLACE_OBJECTS"] = "1"
+os.environ["GIT_OPTIONAL_LOCKS"] = "0"
+root = Path(os.environ["CONTEXT_ROOT"]).resolve(strict=True)
+stage = Path(os.environ["CONTEXT_STAGE"]).resolve(strict=True)
+expected, remote, ref = (os.environ[k] for k in ("CONTEXT_EXPECTED", "CONTEXT_REMOTE", "CONTEXT_REMOTE_REF"))
+target = "skills/context/references/graphify"
+names = ("graph.json", "graph.html", "GRAPH_REPORT.md")
+assert root.is_dir() and stage.is_dir() and not stage.is_relative_to(root) and not root.is_relative_to(stage)
+assert remote and not remote.startswith("-") and ref.startswith("refs/heads/")
+
+def git(*args, data=None, env=None, check=True):
+    return subprocess.run(["git", "-C", str(root), *args], input=data, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=env, check=check, timeout=60)
+
+def text(*args):
+    return git(*args).stdout.decode().strip()
+
+git("check-ref-format", ref)
+assert text("rev-parse", "--show-toplevel") == str(root)
+assert expected == text("rev-parse", "--verify", expected + "^{commit}") == text("rev-parse", "HEAD")
+assert not git("status", "--porcelain=v1", "--untracked-files=all").stdout, "Task clone is not clean"
+parts = urlsplit(remote)
+if not parts.scheme and ":" not in remote:
+    local = (root / remote).resolve(strict=True)
+elif parts.scheme == "file":
+    assert parts.netloc in ("", "localhost") and not parts.query and not parts.fragment
+    local = Path(unquote(parts.path)).resolve(strict=True)
+else:
+    local = None
+if local is not None:
+    probe = subprocess.run(["git", "-C", str(local), "rev-parse", "--is-bare-repository"], capture_output=True, check=False, timeout=60)
+    assert probe.returncode == 0 and probe.stdout.strip() == b"true", "Local destination must be bare"
+    remote = str(local)
+common = Path(text("rev-parse", "--git-common-dir"))
+common = (root / common).resolve(strict=True) if not common.is_absolute() else common.resolve(strict=True)
+lock = common / "context-publish-locks" / hashlib.sha256(ref.encode()).hexdigest()
+module = Path(os.environ["CONTEXT_TOOLS"]) / "validate_context_fragments.py"
+spec = importlib.util.spec_from_file_location("context_publication_validator", module)
+validator = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(validator)
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+def validate():
+    result = validator.validate_trio(stage, root=root, require_current=True)
+    assert result["generation_identity"] and result["input_identity"] and result["profile"]
+    assert set(result["blobs"]) == set(result["digests"]) == set(names)
+    assert all(sha(result["blobs"][n]) == result["digests"][n] for n in names)
+    return result
+
+def tree_entry(path):
+    raw = git("ls-tree", "-z", expected, "--", path).stdout
+    if not raw:
+        return None
+    assert raw.count(b"\0") == 1
+    head, actual = raw[:-1].split(b"\t", 1)
+    mode, kind, oid = head.split(b" ")
+    assert actual.decode() == path
+    return mode, kind, oid.decode()
+
+def verify_sources(result):
+    for group in ("sources", "configuration"):
+        for path, digest in result["snapshot"][group].items():
+            p = PurePosixPath(path)
+            assert not p.is_absolute() and p.as_posix() == path and all(x not in ("", ".", "..") for x in p.parts)
+            item = tree_entry(path)
+            assert item is not None and item[0] in (b"100644", b"100755") and item[1] == b"blob"
+            assert sha(git("cat-file", "blob", item[2]).stdout) == digest, ("Source/config differs from commit", path)
+
+def remote_tip():
+    found = git("ls-remote", "--exit-code", "--refs", remote, ref).stdout.splitlines()
+    assert len(found) == 1
+    oid, name = found[0].split(b"\t")
+    assert name.decode() == ref
+    return oid.decode()
+
+with _rebuild_lock(lock, blocking=True) as acquired:
+    assert acquired, "Publication lock unavailable"
+    first = validate()
+    verify_sources(first)
+    assert remote_tip() == expected, "Remote moved; rebuild/review against new tip"
+    blobs = first["blobs"]
+    for i in range(1, len(PurePosixPath(target).parts) + 1):
+        prefix = str(PurePosixPath(*PurePosixPath(target).parts[:i]))
+        item = tree_entry(prefix)
+        assert item is None or item[:2] == (b"040000", b"tree"), ("Unsafe target ancestor", prefix)
+    entries = git("ls-tree", "-r", "-z", expected, "--", target + "/").stdout.split(b"\0")
+    placeholder = False
+    for entry in (e for e in entries if e):
+        head, path = entry.split(b"\t", 1)
+        mode, kind, oid = head.split(b" ")
+        name = path.decode().removeprefix(target + "/")
+        assert mode == b"100644" and kind == b"blob" and name in (*names, ".gitkeep"), "Unexpected target content"
+        if name == ".gitkeep":
+            assert git("cat-file", "blob", oid.decode()).stdout == b"", "Nonempty placeholder"
+            placeholder = True
+    with tempfile.TemporaryDirectory(prefix="context-index-") as tmp:
+        env = os.environ.copy()
+        env["GIT_INDEX_FILE"] = str(Path(tmp) / "index")
+        git("read-tree", expected, env=env)
+        if placeholder:
+            git("update-index", "--force-remove", "--", target + "/.gitkeep", env=env)
+        for name in names:
+            oid = git("hash-object", "-w", "--stdin", data=blobs[name]).stdout.decode().strip()
+            git("update-index", "--add", "--cacheinfo", f"100644,{oid},{target}/{name}", env=env)
+        tree = git("write-tree", env=env).stdout.decode().strip()
+        changed = {p.decode() for p in git("diff-tree", "--no-commit-id", "--name-only", "-r", "-z", expected, tree).stdout.split(b"\0") if p}
+        assert changed <= {target + "/" + n for n in (*names, ".gitkeep")}
+        if not changed:
+            assert validate() == first and not git("status", "--porcelain=v1", "--untracked-files=all").stdout, "Inputs changed; refuse no-op"
+            assert remote_tip() == expected, "Remote moved; refuse no-op"
+            print(json.dumps({"status": "unchanged", "commit": expected}))
+        else:
+            commit = git("commit-tree", tree, "-p", expected, data=b"Publish reviewed context graph trio\n").stdout.decode().strip()
+            assert text("rev-parse", commit + "^") == expected
+            for name in names:
+                assert git("show", f"{commit}:{target}/{name}").stdout == blobs[name]
+            assert validate() == first and not git("status", "--porcelain=v1", "--untracked-files=all").stdout, "Inputs changed; discard candidate"
+            pushed = git("push", "--porcelain", f"--force-with-lease={ref}:{expected}", remote, f"{commit}:{ref}", check=False)
+            if pushed.returncode:
+                raise RuntimeError("Push failed or outcome uncertain; inspect remote ref before retry")
+            print(json.dumps({"status": "published", "commit": commit, "parent": expected}))
+```
+
+Read all three blobs from one resolved immutable commit into a fresh view and verify JSON's generation and sibling digests. A checkout, mutable working directory or independently updated files are not an atomic trio. Pre-push errors can leave unreachable candidate objects, but cannot move the remote; a failed or timed-out push has uncertain outcome until the remote is inspected. Refusing a stale candidate is not a rollback; rollback is a separately reviewed compatible prior trio published as a new fast-forward commit.
 
 ## Verification corpus and oracles
 
 [probe_graphify.py](probe_graphify.py) uses temporary, authored fixtures. It verifies isolated package identity; code/Markdown inventory and explicit exclusions; exact directed calls; path-qualified code mentions; document links with collapsed anchor fragments; skipped ordinary code hyperlinks; a Cyrillic heading; the tail after 2100 body lines; native agent-fragment validation/merge; staged JSON/HTML/report generation; no temporary absolute paths in the trio; directed reload; explicit semantic L1 origin retained after same-source AST refresh; prompt/source invalidation; a bounded native read query with unchanged fixture files; and an empty cache in a fresh process. Network and provider extraction are forbidden in the native in-process route; the merge subprocess also blocks socket connections. This is an ingestion feasibility test with an authored semantic fragment, not evidence of a completed agent-powered semantic pass or end-user browser rendering.
 
 [probe_graphify_semantic.py](probe_graphify_semantic.py) replays explicitly recorded genuine active-model results from [graphify-semantic-cases.json](graphify-semantic-cases.json) through the strict validator and documented native assembly. It checks serial/parallel accounting, EOF/cross-range evidence, negative/uncertain/historical source roles, unknown usage, native tier retention, CLI failure and integrity controls. Replay is integration evidence, not a fresh model run or an independent semantic benchmark. For new extraction, give a current agent only the raw files, scope and method; keep recorded answers/truth controls outside its view.
+
+[probe_graphify_maintenance.py](probe_graphify_maintenance.py) replays the source/model cases in [graphify-maintenance-cases.json](graphify-maintenance-cases.json), using the actual guide blocks and validator. It exercises add/edit/rename/delete/exclude, mixed and edge-only/zero replacements, conservative dependency propagation, ordered exclusions, input/profile changes, unchanged bytes, cold moved clones, distinct branches and linked worktrees. Real local bare Git remotes exercise coherent trio commits, independent-clone lease races, stale/dirty/nonbare/corrupt/partial refusal, a mutation before push, lost acknowledgement checked without retry, compatible fast-forward rollback and interrupted native HTML export. No hosted remote or live directory atomicity is certified. Fixtures record actual agent readings; replay makes no new model calls or blind semantic benchmark claim.
+
+Run the three structural/semantic/maintenance probes with the verified environment's Python, without optimization. The maintenance probe uses fresh temporary repositories outside source by default. To retain inspectable evidence, set `CONTEXT_MAINTENANCE_EVIDENCE` to a new task-owned external directory; it refuses to overwrite an existing path. This is test evidence, not a fourth portable artifact or an installed orchestrator.
 
 The continuing truth set must cover at least:
 

@@ -66,7 +66,7 @@ def main():
                 assert not refused.stdout and probe.snapshot(base) == before_cli
             e = dict(env, CONTEXT_PLAN=str(plan_path), CONTEXT_FRAGMENTS=json.dumps(list(map(str, paths))), CONTEXT_MIXED_STAGE=str(base / f"{mode}-artifacts"))
             members = json.loads(probe.execute(code, e).stdout)
-            labels = {"input_identity": members["input_identity"], "communities": trial["community_interpretation"]}
+            labels = {"input_identity": members["input_identity"], "evidence_identity": members["evidence_identity"], "communities": trial["community_interpretation"]}
             label_path = base / mode / "labels.json"
             dump(label_path, labels)
             e["CONTEXT_LABELS"] = str(label_path)
