@@ -24,6 +24,10 @@
 
 ## Integration
 
+- Prefer reading universal methods/resources from this shared source through an available authorized connector or an identified local Skills checkout. Resolve one exact source revision for the task and keep dependent resources on that revision; record the revision actually used. A URL does not install a native skill or grant access on another host.
+- Keep project instructions, supported adaptations, the completed context map and graph in the target project. A short project context entry may link this shared method and its own references without copying the universal procedure. Preserve local activation and permission constraints.
+- Resolve shared relative links against the shared skill's source directory and selected revision; resolve project-reference paths under their declared target root. Tools execute from the verified shared tool directory with the target root supplied separately. If required access is unavailable, report that specific gap; do not invent access, install a new service or silently use a different revision.
+- The transfer rules below apply when an explicitly chosen local-copy installation is still needed; shared use does not require transferring skills or the source hierarchy.
 - Do not transfer the `level-0/`, `level-1/`, `level-2/`, or `level-3/` directory hierarchy to destination repositories. Place selected skills directly in the destination skills directory.
 - Transfer required reusable resources, preserving each skill's internal structure and updating relative links affected by relocation, subject to the template exception. Exclude the source project's completed context map and generated graph artifacts; initialize destination knowledge from its own sources through the context maintain operation. Preserve existing destination maps and graphs when updating skill resources.
 - Specify skill locations and level requirements in the destination `AGENTS.md`.

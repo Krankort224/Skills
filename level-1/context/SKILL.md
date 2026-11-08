@@ -23,6 +23,8 @@ For combined work, gather only the necessary read context, then perform the requ
 
 ## Project representation
 
+A project-local context entry may be a short adapter: identify the target root, link this shared method at the selected source revision, and locate the target's own map/adaptations. Load the shared method's operation/resources from that same source directory; load project references from the target. The adapter does not copy or replace the universal procedure. Project-owned rules and explicit user instructions remain applicable.
+
 Resolve the target project/root before selecting references. An adopted project normally uses `references/repository.md` in its local context skill; project instructions may identify another project-owned location. When using a shared skill outside the target root, locate the target's map rather than treating the skill source's adjacent map as target context. Verify the map's project identity and path convention; an absent target map uses the direct-source fallback. Read the map as a project overview and navigation map, not as the owner of every fact. It should explain:
 
 - what the project exists to do and its material scope;

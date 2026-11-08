@@ -2,7 +2,7 @@
 
 Reusable agent skills for repository work.
 
-This repository is the source of truth for shared skills. Repository-local copies may be adapted where a skill explicitly supports local specialization. The [Skills project map](level-1/context/references/repository.md) explains this repository's components, knowledge owners and reading routes; it is project knowledge, separate from the reusable [context template](level-1/context/references/repository.template.md).
+This repository is the source of truth for shared skills. Projects can read its universal methods and resources directly while keeping their context and valid adaptations locally. Existing repository-local copies remain supported where explicitly chosen. The [Skills project map](level-1/context/references/repository.md) explains this repository's components, knowledge owners and reading routes; it is project knowledge, separate from the reusable [context template](level-1/context/references/repository.template.md).
 
 ## Structure
 
@@ -179,9 +179,19 @@ Issue #9 Pass A migrated the source hierarchy from baseline `c11000bae812d9a87b3
 
 `architecture`, `research` and `restructure` remain Level 2. Level-0 arbitration and the three Level-1 skills retain their paths. Resources, scripts, examples and operation references move with their complete skill subtrees; source reclassification does not change their behavior.
 
-For adoption into another repository, install skills directly under its own `skills/` (without the source `level-*` hierarchy). Update active paths and Revit invocation names, preserve local customizations and original source revision/provenance, and keep already-published historical pins unchanged. Do not implicitly migrate downstream repositories. Original `*.template.*` files stay in this shared source; the adopted project keeps completed local versions.
+For an explicitly chosen local-copy installation, place skills directly under the destination `skills/` (without the source `level-*` hierarchy). Shared use instead follows the source and project-reference routes below. Update active paths and Revit invocation names, preserve local customizations and original source revision/provenance, and keep already-published historical pins unchanged. Do not implicitly migrate downstream repositories. Original `*.template.*` files stay in this shared source; the adopted project keeps completed local versions.
 
 Selection checks distinguish ordinary roots from assigned arbitration, workers from delegated operations, Level-2 domain work from established Level-3 software operations, combined architecture/Revit work, an incidental software mention from an actual software task, and Issue-free work from an Issue lifecycle. The reviewed examples and execution evidence remain in [Issue #9](https://github.com/Krankort224/Skills/issues/9); they are static contract checks, not model-behavior or native-host tests.
+
+## Shared use across projects
+
+A project's `AGENTS.md` identifies this repository, the applicable skill paths, its local context entry/map and any project-owned adaptations. Every agent reads the three Level-1 roots, then only applicable operations; Level 0 remains an assigned arbitration role. Selection and composition stay owned by [AGENTS.md](AGENTS.md#usage), and model choices stay in delegation. A project constraint or explicit user instruction is not erased by switching the source of a method.
+
+Read shared files with an already authorized GitHub connector or an identified local checkout. Resolve `main` to a commit for the current task, or use an explicitly adopted pin, and load all dependent resources at that revision. Record the actual revision in the task evidence and the project's existing provenance record when adopting it. Do not change the active task's revision merely because upstream moved. Shared changes can be read by subsequent tasks without distributing independent procedure copies.
+
+A remote skill's relative links refer to its source directory at that commit. The target map and its links remain target-owned. A local context `SKILL.md` can be a short router to the shared context method plus its own `references/repository.md`; it adds project facts/adaptations rather than another implementation of context. Keep other valid adaptations at existing project owners and explicitly route to them before using a generic procedure. Source templates remain here; adapt them to completed project files.
+
+For tools, identify a compatible shared tool directory and pass the target root separately. Reading a script via a connector does not prove it is executable on that host. Respect each project's access restrictions, including an established no-network route; report missing required access instead of claiming the transition works. No native skill registration, user-wide instruction installation, plugin, background update or new service is implied by these links.
 
 ## Repository-local adaptation
 
