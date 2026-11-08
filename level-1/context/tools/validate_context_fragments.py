@@ -290,8 +290,7 @@ def _relative(name):
 def profile(tools):
     """Fingerprint installed code/profile and explicitly marked extraction prose.
 
-    Requires exactly one marker pair in graphify.md. It intentionally fails until
-    the coordinator places those markers around the actual extraction contract.
+    Requires one marked contract in each of the operation and tool references.
     """
     tools = Path(tools)
     requirements = read_bounded(tools / "graphify-requirements.txt")
@@ -308,12 +307,15 @@ def profile(tools):
           "https://github.com/Graphify-Labs/graphify.git" and
           origin.get("vcs_info", {}).get("commit_id") == REVISION,
           "Graphify source profile mismatch")
-    guide = read_bounded(tools / "graphify.md").decode("utf-8")
-    require(guide.count(CONTRACT_START) == guide.count(CONTRACT_END) == 1,
-          "Extraction contract requires exactly one explicit marker pair")
-    start = guide.index(CONTRACT_START) + len(CONTRACT_START)
-    end = guide.index(CONTRACT_END)
-    require(end > start and guide[start:end].strip(), "Empty/reversed extraction contract")
+    contracts = []
+    for path in (tools.parent / "operations/graphify/build.md", tools / "graphify-build.md"):
+        guide = read_bounded(path).decode("utf-8")
+        require(guide.count(CONTRACT_START) == guide.count(CONTRACT_END) == 1,
+              "Extraction contract requires exactly one explicit marker pair: " + str(path))
+        start = guide.index(CONTRACT_START) + len(CONTRACT_START)
+        end = guide.index(CONTRACT_END)
+        require(end > start and guide[start:end].strip(), "Empty/reversed extraction contract: " + str(path))
+        contracts.append(guide[start:end])
     result = {
         "schema": MAINTENANCE_SCHEMA, "fragment_schema": SCHEMA,
         "prompt_schema": SCHEMA,
@@ -325,7 +327,7 @@ def profile(tools):
         "dependencies": dependencies,
         "requirements_sha256": sha(requirements),
         "validator_sha256": sha(read_bounded(tools / "validate_context_fragments.py")),
-        "extraction_contract_sha256": sha(guide[start:end].encode("utf-8")),
+        "extraction_contract_sha256": sha(_canonical(contracts)),
     }
     return result
 

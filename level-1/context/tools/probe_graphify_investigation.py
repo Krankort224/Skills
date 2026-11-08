@@ -37,9 +37,11 @@ def module(name, path):
     return result
 
 def block(name):
-    match=re.search(r'```python\n(# context-'+name+r'\n.*?)\n```',(TOOLS/'graphify.md').read_text(encoding="utf-8"),re.S)
-    assert match,name
-    return match.group(1)
+    filename = {'investigate': 'graphify-read.md', 'bind-cross-inputs': 'graphify-export.md',
+                'cross-repository-view': 'graphify-export.md'}[name]
+    matches=re.findall(r'```python\n(# context-'+name+r'\n.*?)\n```',(TOOLS/filename).read_text(encoding="utf-8"),re.S)
+    assert len(matches) == 1,name
+    return matches[0]
 
 def dump(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)

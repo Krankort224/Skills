@@ -1,7 +1,7 @@
 """Exercise the documented structural runbook on bounded raw fixtures.
 
 This is a test harness, not a project-build command. Production instructions
-remain in graphify.md and call the pinned native APIs directly.
+remain in the Graphify tool references and call the pinned native APIs directly.
 """
 from __future__ import annotations
 
@@ -17,12 +17,14 @@ import tempfile
 import textwrap
 
 TOOLS = Path(__file__).resolve().parent
-BOOK = (TOOLS / "graphify.md").read_text(encoding="utf-8")
 BLOCKS = {}
-for name in ("profile-check", "structural-build", "structural-query"):
-    match = re.search(r"```python\n(# context-" + name + r"\n.*?)\n```", BOOK, re.S)
-    assert match, name
-    BLOCKS[name] = match.group(1)
+for name, filename in (("profile-check", "graphify.md"),
+                       ("structural-build", "graphify-build.md"),
+                       ("structural-query", "graphify-build.md")):
+    text = (TOOLS / filename).read_text(encoding="utf-8")
+    matches = re.findall(r"```python\n(# context-" + name + r"\n.*?)\n```", text, re.S)
+    assert len(matches) == 1, name
+    BLOCKS[name] = matches[0]
 GUARD = '''import socket
 observed_attempts = []
 def forbidden(*args, **kwargs):

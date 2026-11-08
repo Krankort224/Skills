@@ -27,13 +27,13 @@ def module(name, path):
 
 d = module('structural_probe', TOOLS / 'probe_graphify_structure.py')
 v = module('context_validator', TOOLS / 'validate_context_fragments.py')
-book = (TOOLS / 'graphify.md').read_text(encoding='utf-8')
-def block(name):
-    found = re.search(r'```python\n(# context-' + name + r'\n.*?)\n```', book, re.S)
-    assert found, name
-    return found.group(1)
-ASSEMBLE = block('semantic-assemble')
-PUBLISH = block('publish-trio')
+def block(name, filename):
+    book = (TOOLS / filename).read_text(encoding='utf-8')
+    found = re.findall(r'```python\n(# context-' + name + r'\n.*?)\n```', book, re.S)
+    assert len(found) == 1, name
+    return found[0]
+ASSEMBLE = block('semantic-assemble', 'graphify-build.md')
+PUBLISH = block('publish-trio', 'graphify-maintenance.md')
 
 def clean_env():
     env = {k: val for k, val in os.environ.items() if not any(
@@ -195,7 +195,8 @@ def assess_cases(cases, results):
         if name == 'edge-only':
             assert 'note' in first['invalidated']
         assessments[name] = first['status']
-    for field in ('schema', 'prompt_schema', 'requirements_sha256', 'graphify_revision'):
+    for field in ('schema', 'prompt_schema', 'requirements_sha256', 'graphify_revision',
+                  'validator_sha256', 'extraction_contract_sha256'):
         changed = copy.deepcopy(current_profile)
         changed[field] = str(changed[field]) + '-changed'
         assert v.assess_reuse(state, old, changed)['status'] == 'reextract_all'

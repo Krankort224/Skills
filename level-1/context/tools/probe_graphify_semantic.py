@@ -1,7 +1,8 @@
 """Replay recorded genuine E model outputs through coverage/native boundaries.
 
 Replaying is not a new semantic extraction. Fresh semantic trials require an
-active subscription agent reading the raw files, as documented in graphify.md.
+active subscription agent reading the raw files, as documented in
+../operations/graphify/build.md; graphify-build.md owns the assembly recipe.
 """
 from __future__ import annotations
 import copy
@@ -18,7 +19,9 @@ TOOLS = Path(__file__).resolve().parent
 spec = importlib.util.spec_from_file_location("structural_probe", TOOLS / "probe_graphify_structure.py")
 probe = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(probe)
-code = re.search(r"```python\n(# context-semantic-assemble\n.*?)\n```", (TOOLS / "graphify.md").read_text(encoding="utf-8"), re.S).group(1)
+matches = re.findall(r"```python\n(# context-semantic-assemble\n.*?)\n```", (TOOLS / "graphify-build.md").read_text(encoding="utf-8"), re.S)
+assert len(matches) == 1
+code = matches[0]
 
 
 def dump(path, value):
