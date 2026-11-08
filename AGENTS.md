@@ -29,4 +29,4 @@
 - Specify skill locations and level requirements in the destination `AGENTS.md`.
 - Record the source and revision of transferred skills.
 - Place project-specific instructions in supported adaptation points or project instructions, preserving shared contracts.
-- Preserve local adaptations when updating. Use the [migration map](docs/level-migration.md) when adopting changed source paths; do not bulk-update other repositories implicitly.
+- Preserve local adaptations when updating. Use the [migration and adoption map](README.md#migration-and-adoption) when adopting changed source paths; do not bulk-update other repositories implicitly.

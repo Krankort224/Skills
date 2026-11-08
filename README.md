@@ -26,7 +26,7 @@ Skills/
 
 Each skill owns its `SKILL.md` and supporting resources. [AGENTS.md](AGENTS.md#usage) owns selection rules: Level 0 is for dot or an assigned equivalent; Level 1 applies to every agent; Level 2 supplies semantically selected general/domain expertise; Level 3 supplies expertise for an established software context and operation. `word/` retains the `style-transfer` skill identifier.
 
-Skill levels classify responsibility, not complexity, instruction priority or subagent depth. Level 2 and Level 3 may be used directly by root or workers and may compose. Operation-specific loading remains progressive. The [migration map](docs/level-migration.md) records changed paths, preserved identities and adoption checks. The prospective `mep` skill is not created by this migration.
+Skill levels classify responsibility, not complexity, instruction priority or subagent depth. Level 2 and Level 3 may be used directly by root or workers and may compose. Operation-specific loading remains progressive. The [migration and adoption map](#migration-and-adoption) records changed paths, preserved identities and adoption checks. The prospective `mep` skill is not created by this migration.
 
 ## Skills
 
@@ -58,7 +58,7 @@ based on `repository.template.md`.
 
 The local map defines repository scopes, knowledge ownership, source authority, canonical destinations, and reading routes. Ownership boundaries belong in one shared table; contracts remain at their canonical sources. The shared skill resolves these roles and reports material gaps without modifying project knowledge.
 
-Graph-aware context is planned in Issue #9 Pass B, after the Operations-hub pilot/publication contract is accepted; it is not implemented by the hierarchy migration.
+Project-reference maintenance and native Graphify CLI integration are planned in [Issue #9](https://github.com/Krankort224/Skills/issues/9) Pass B; they are not implemented by the hierarchy migration and have no Operations-hub dependency.
 
 #### workflow
 
@@ -166,6 +166,22 @@ Two standard-library Python 3 tools inspect `.dyn`/ZIP metadata, ports and wires
 - Prefer stable contracts and source-of-truth boundaries over duplicated prose.
 - Do not turn skills into copies of project documentation.
 - Add supporting references, scripts, or templates only when they materially improve repeated work.
+
+## Migration and adoption
+
+Issue #9 Pass A migrated the source hierarchy from baseline `c11000bae812d9a87b366f44fa6d5706a5915a4a`; the migration implementation is `bf4415eabbc9a9d7f3f8a129d9637a7af1cfffe6`. [AGENTS.md](AGENTS.md#usage) owns the active skill-selection policy; this map records path and identifier compatibility only.
+
+| Previous source | Current source | Skill identifier |
+| --- | --- | --- |
+| `level-2/revit-scripting/` | `level-3/revit/` | `revit-scripting` → `revit` |
+| `level-2/word/` | `level-3/word/` | `style-transfer` unchanged |
+| `level-2/project-space/` | `level-3/project-space/` | `project-space` unchanged |
+
+`architecture`, `research` and `restructure` remain Level 2. Level-0 arbitration and the three Level-1 skills retain their paths. Resources, scripts, examples and operation references move with their complete skill subtrees; source reclassification does not change their behavior.
+
+For adoption into another repository, install skills directly under its own `skills/` (without the source `level-*` hierarchy). Update active paths and Revit invocation names, preserve local customizations and original source revision/provenance, and keep already-published historical pins unchanged. Do not implicitly migrate downstream repositories. Original `*.template.*` files stay in this shared source; the adopted project keeps completed local versions.
+
+Selection checks distinguish ordinary roots from assigned arbitration, workers from delegated operations, Level-2 domain work from established Level-3 software operations, combined architecture/Revit work, an incidental software mention from an actual software task, and Issue-free work from an Issue lifecycle. The reviewed examples and execution evidence remain in [Issue #9](https://github.com/Krankort224/Skills/issues/9); they are static contract checks, not model-behavior or native-host tests.
 
 ## Repository-local adaptation
 
