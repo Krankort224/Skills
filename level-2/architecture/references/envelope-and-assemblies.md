@@ -4,13 +4,14 @@ Use this reference to choose an envelope family and develop a coherent conceptua
 section, including support, openings and replaceable parts. It supplies local
 architectural reasoning; it does not specify a tested assembly, engineer its
 fixings, predict moisture/thermal performance or establish fire compliance.
-Return to [performance and coordination](performance-and-coordination.md) for
+Return to [performance and coordination](performance/index.md) for
 room comfort, acoustic operation, structure/services and inclusive-use conflicts.
 
 ## Contents
 
 - [Choose a system family](#choose-a-system-family)
 - [Assign control functions before drawing layer order](#assign-control-functions-before-drawing-layer-order)
+- [Climate, exposure and envelope continuity](#climate-exposure-and-envelope-continuity)
 - [Adapt the family to climate, use and works](#adapt-the-family-to-climate-use-and-works)
 - [Develop four connected junctions](#develop-four-connected-junctions)
 - [Compatibility, movement and replaceability](#compatibility-movement-and-replaceability)
@@ -74,6 +75,36 @@ openings and geometry, not the label “ventilated.” Protect stored materials 
 close in only at suitable moisture conditions; an otherwise coherent assembly
 can trap rain or wet-trade moisture during construction. Consider temporary roof
 and opening protection and the sequence in which membranes become inaccessible.
+
+### Climate, exposure and envelope continuity
+
+Select a system family from [the family comparison](#choose-a-system-family)
+using exposure, support, construction and repair constraints. Identify roof,
+wall, opening, balcony and ground-contact transitions on a continuous section.
+A facade finish is not the whole wall; a rainscreen needs a drained backing
+assembly, and an opaque spandrel is not simply glass painted dark.
+
+Trace four functions independently: bulk-water shedding/drainage, airtightness,
+thermal continuity and vapor/moisture control. They may share a product, but their
+paths and joints still need to work. Trace water from roof to an intentional
+outlet; trace air control from roof to wall to frame to base; trace insulation
+around the same interfaces and supports. At every penetration decide how it is
+supported, sealed, drained and accessible. If a line ends at a slab or window,
+leave a real design decision, not an implied sealant solution.
+
+Use actual external climate and internal humidity, solar exposure, wind-driven
+rain, ground water, construction moisture and expected movement. Compare drying
+opportunities and drainage routes; no universal vapor-layer side or “breathable”
+material label establishes a safe moisture balance. Discuss cooling-season and
+heating-season reversals where relevant. Reserve material thickness and junction
+space architecturally; thermal bridges, condensation, water/air resistance and
+assembly fire behavior require project-specific verification.
+
+A projecting balcony connected through the wall may simplify gravity support
+but interrupt insulation and water control. Compare independent supports or a
+specialist connection with sufficient threshold/junction space. The revised
+choice still needs stability, movement, access and drainage resolution; keeping
+the insulation line visually continuous does not certify the connection.
 
 ## Adapt the family to climate, use and works
 

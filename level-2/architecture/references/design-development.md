@@ -100,7 +100,7 @@ A room-area total is a demand, not a packing solution. Remove or reserve the
 actual envelope build-up, support, core, shafts and shared movement from the
 same floor boundary used for comparison. Distinguish whole floor, internal
 planning envelope, finished room area and operational furniture envelope;
-formal metrics use their governing [area method](program-and-space.md#how-can-areas-be-counted-once-and-compared).
+formal metrics use their governing [area method](program/area-ledger.md#how-can-areas-be-counted-once-and-compared).
 
 Use the canonical [room-fit method](planning-and-section.md#construct-a-room-that-can-be-used),
 including its occupied-state checks and nested clear-area/wall-reservation
@@ -172,7 +172,7 @@ layers' roles, supporting substrate, attachment intent, movement/junction zones,
 water-shedding and drying paths where relevant, and the accessible face for
 installation and maintenance. Reserve real depth for these roles without
 pretending that an unverified build-up has achieved a performance rating. Use
-[envelope continuity](performance-and-coordination.md#climate-exposure-and-envelope-continuity)
+[envelope continuity](envelope-and-assemblies.md#climate-exposure-and-envelope-continuity)
 for the environmental paths.
 
 Think through installation order. Can the supporting frame be installed and

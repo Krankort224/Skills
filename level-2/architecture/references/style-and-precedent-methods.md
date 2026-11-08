@@ -3,7 +3,7 @@
 Use this reference when a named movement, architect or building must inform a
 new decision. The unit is an architectural relationship and its consequences,
 not a copied project or an image resemblance. For a requested character without
-a named reference, start with [style into decisions](composition-and-style.md#how-can-a-requested-style-become-design-decisions).
+a named reference, start with [style into decisions](composition/styles/character-to-decisions.md#how-can-a-requested-style-become-design-decisions).
 For the selected knowledge perimeter and individual cases, use the
 [direction selector](style-directions.md). Read only the relevant direction and
 case; the whole corpus is not an induction exercise.
@@ -48,8 +48,8 @@ where it changes the interpretation. A famous name does not fill an unknown.
    movement enters, crosses, turns or bypasses a room; and whether the apparent
    facade order corresponds to occupied bays or overlays different functions.
    For actual mechanisms use [spatial relationships](spatial-composition.md),
-   [section and form](composition-and-style.md#how-can-section-generate-form)
-   and [occupied elevation bays](composition-and-style.md#derive-an-elevation-from-occupied-bays).
+   [section and form](composition/massing/section-form.md#how-can-section-generate-form)
+   and [occupied elevation bays](composition/facade/occupied-bays.md#derive-an-elevation-from-occupied-bays).
 5. Distinguish visible expression from physical action. A heavy-looking wall
    need not carry the floor; an apparently continuous surface may hide joints;
    exposed concrete does not establish a frame's complete stability system.
@@ -131,7 +131,7 @@ edge gives a gradual public-to-private transition” is transferable; “repeat 
 roof and its dimensions” is a reproduction proposal. Then identify the mechanism's
 dependencies: depth and approach, repeated room access, support or fixing space,
 daylight/view, control of water and air, local craft and replacement access.
-Use [local revision](program-and-space.md#how-should-a-bounded-revision-or-comparison-be-judged)
+Use [local revision](methods/bounded-revision.md#how-should-a-bounded-revision-or-comparison-be-judged)
 to preserve unaffected decisions and bound the changes.
 
 Work through the changed condition that matters:

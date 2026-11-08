@@ -1,8 +1,8 @@
 # Architecture knowledge design — Issue 10, Stage B
 
-Status: proposed design for the combined A+B review; not yet migrated, activated or owner-accepted. This document builds directly on [Stage A evidence](knowledge-inventory.md). The complete disposition and pilot section map are in [migration-map.md](migration-map.md).
+Status: A+B design accepted at `4ad750b7733bd828fb1d99d753e48444387f17e3`; C implements only the mapped pilot, pending its own review. Remaining target paths and D–F work below are still design, not an already migrated corpus. This document builds directly on [Stage A evidence](knowledge-inventory.md). The complete disposition and pilot section map are in [migration-map.md](migration-map.md).
 
-Scope remains `level-2/architecture/**`. A+B adds maintenance evidence only. The existing skill, calculators, examples and normative records remain authoritative until an accepted implementation changes them.
+Scope remains `level-2/architecture/**`. A+B added maintenance evidence only. Runtime reading follows the actual skill links, never this maintenance proposal; the calculators and normative authority remain unchanged.
 
 ## Contents
 

@@ -1,8 +1,8 @@
 # Architecture migration map — Issue 10, Stage B
 
-Status: proposed, not executed or accepted. This map accounts for the 67 files at `d260c6cb845734f9fe2e7a86bc1ca97cc1f46e72`. It does not authorize an executor to skip the combined A+B review or to begin later passes automatically.
+Status: A+B map accepted at `4ad750b7733bd828fb1d99d753e48444387f17e3`; C pilot implemented in this tree, pending independent review. This map accounts for the 67 files at `d260c6cb845734f9fe2e7a86bc1ca97cc1f46e72`. Acceptance of the map does not accept its implementation or authorize later passes automatically.
 
-All paths are relative to `level-2/architecture/`. Future paths are code literals, not live links. Existing content remains at its baseline locations during A+B. See [inventory](knowledge-inventory.md) and [target design](knowledge-design.md).
+All paths are relative to `level-2/architecture/`. The C pilot destinations below now exist; other future paths remain code literals. Source ranges always refer to the pinned pre-migration files, not current destination line numbers. See [inventory](knowledge-inventory.md) and [target design](knowledge-design.md).
 
 ## Contents
 
@@ -13,6 +13,7 @@ All paths are relative to `level-2/architecture/`. Future paths are code literal
 - [Inbound references and atomic changes](#inbound-references-and-atomic-changes)
 - [Source and case migration](#source-and-case-migration)
 - [Execution order and acceptance evidence](#execution-order-and-acceptance-evidence)
+- [Pilot implementation and retained context](#pilot-implementation-and-retained-context)
 
 ## Actions and stage boundaries
 
@@ -285,3 +286,25 @@ The five study assets are `corner-community-building.md`, `sloping-library.md`, 
 5. Hand C off once with section-level evidence. Do not silently begin D. After D acceptance, perform source-localization E and selected depth increments F under their reviewed boundaries.
 
 A successful migration demonstrates content preservation and better question-to-method access. It does not establish improved architectural competence until the substantive tests show it. A successful A+B package supplies this implementable map and its evidence; it does not claim that these future paths, links or method tests already exist or have passed.
+
+## Pilot implementation and retained context
+
+C follows the section destinations above: 23 method files and five complete studies, with three populated selectors at `references/program/index.md`, `references/composition/index.md` and `references/performance/index.md`. All substantive source ranges remain at their declared destinations. The three superseded pilot bodies are removed; existing nonpilot owners stay in place. General compact-root/navigation migration belongs to D.
+
+The source-level exceptions are explicit:
+
+| Pinned source context | Current treatment |
+| --- | --- |
+| Program 1–12 | Every receiving method restores selective use, accepted facts, hypothetical values and actual-jurisdiction conditions; physical-fit dependencies are attached where material |
+| Program 13–21; Composition 9–20; Performance 16–28 | Rebuilt as the three populated subject selectors and local contents; obsolete self-TOCs are not duplicated as knowledge |
+| Composition 1–8 | Every receiving method/study starts from the actual demand and accepted brief; performance/physical checks are selected through the relevant local relations, with requirements retaining applicability ownership |
+| Composition 474–481 | Full common hypothetical-study and geometric-area qualification is repeated in each of the three extracted composition studies |
+| Composition 642–649 | Each receiving method/study retains local reasoning, pinned adaptation/reading limits, excluded upstream prescriptions and requirements distinction, pointing to the unchanged source-ledger section |
+| Performance 1–15; 223–224 | Receiving methods/studies retain conceptual-reservation and hypothetical-input limits; support concepts and section/services own the two substantive children of the former reservations heading |
+| Performance 157–186 | Complete tracing, climate/use qualification and balcony counterexample merge as a child of the existing enclosure control-function owner; only the family-selection link is reconciled to that owner's own comparison |
+| Performance 466–476 | Complete evidence/reservation reasoning is retained under `Communicate conditions and remaining decisions` in bounded revision, with both Program and Performance provenance pointers |
+| Performance 477–481 | Each receiving method/study retains local-method versus external-provenance distinctions and jurisdiction/source limits |
+
+Original substantive headings keep their fragments except the mapped uncertainty-communication child above. Extracted leading child headings are promoted one level where needed; their fragments are unchanged. The shared-use method's former “room-envelope method below” now links explicitly to capacity/room demand and the area ledger. The empty former structure/services parent now resolves to the section-budget method, whose conditional support-concept dependency supplies the other question; the source ledger identifies both owners where the inspected source supports both. Whole-file inbounds select a relevant method or the appropriate question selector rather than one global catch-all.
+
+The current links carry conditional prerequisite, consequence, check and study relations. They do not require recursive reading or source-pack loading. Source URLs, inspected ranges, exclusions, legal records and notices have not been rationalized or refreshed in C. Exact scenario outputs and execution evidence belong in the issue handoff, not this routing-independent preservation map.

@@ -82,7 +82,7 @@ about a spanning component's cut/bearing length. Reconcile the resulting finishe
 clear room, door/landing approach, facade module and actual product dimensions.
 Carry a late grid/component change into stair openings, shaft door positions,
 panel edges and service penetrations; do not preserve an obsolete room area by
-renaming its dimensional basis. Use [area accounting](program-and-space.md#how-can-areas-be-counted-once-and-compared)
+renaming its dimensional basis. Use [area accounting](program/area-ledger.md#how-can-areas-be-counted-once-and-compared)
 for the area definition and double-counting rules.
 
 ## Fit vertical equipment and maintenance with the core

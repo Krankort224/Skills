@@ -18,7 +18,7 @@ Apply the decision methods to the available architectural information, whether e
 
 **Decision and boundary.** Define what can change and what the comparison must
 decide. Entering a parameter in a table does not make it measured, legally binding
-or independently adjustable. Use [program and space](program-and-space.md) for the
+or independently adjustable. Use [program and space](program/demand.md) for the
 program and [requirements](requirements.md) for applicability.
 
 **Inputs.** Use the current brief, accepted baseline, site/program evidence and
@@ -68,7 +68,7 @@ that basis; it is not an independently adjustable efficiency variable.
 For example, option A's “24 m² room” measured before finishes and option B's
 23.5 m² finished room cannot establish that A supplies more finished activity
 space. Under the hypothetical finishes in the
-[boundary correction](program-and-space.md#how-can-areas-be-counted-once-and-compared),
+[boundary correction](program/area-ledger.md#how-can-areas-be-counted-once-and-compared),
 A supplies 23.01 m² and B supplies 23.5 m² on that particular finished-rectangle
 basis. The ranking reverses without changing either plan. This supports B only
 on the stated geometric criterion; current Russian inclusions/exclusions, room

@@ -72,7 +72,7 @@ boundary, gallery or landing can move its kitchen/shaft, door, facade and suppor
 line together. Compare the changed wall/floor organization through
 [walls and floors](wall-floor-and-opening.md#make-wall-roles-and-floor-direction-agree),
 and acoustic relationships through
-[performance](performance-and-coordination.md#acoustic-paths-and-ventilation-choices).
+[performance](performance/comfort/acoustics-and-air.md#acoustic-paths-and-ventilation-choices).
 Do not require every project to have the same room sequence or services layout.
 
 ## Connect home, court and servicing

@@ -7,10 +7,10 @@ comparisons, not a complete quarter design. Keep surveyed conditions, ownership,
 project decisions, assumptions and applicable restrictions distinct. Missing
 parcel or operating evidence permits conditional alternatives, not invented facts.
 
-Start with the question being decided. The [activity program](program-and-space.md#what-activities-and-capacity-must-the-program-accommodate)
-owns demand and sharing; the [area ledger](program-and-space.md#how-can-areas-be-counted-once-and-compared)
-owns metric definitions and single counting; [access zones](program-and-space.md#how-do-people-and-goods-move-through-access-zones)
-own journeys and [closure boundaries](program-and-space.md#make-a-closed-zone-a-complete-boundary).
+Start with the question being decided. The [activity program](program/demand.md#what-activities-and-capacity-must-the-program-accommodate)
+owns demand and sharing; the [area ledger](program/area-ledger.md#how-can-areas-be-counted-once-and-compared)
+owns metric definitions and single counting; [access zones](space/circulation/access-and-closure.md#how-do-people-and-goods-move-through-access-zones)
+own journeys and [closure boundaries](space/circulation/access-and-closure.md#make-a-closed-zone-a-complete-boundary).
 Here, connect those decisions across plots and common ground. Use
 [site and context](site-and-context.md) for an individual edge, threshold and
 building/ground strategy, and [housing and court](housing-and-court.md) for the
@@ -225,7 +225,7 @@ relevant. A colored line is route intent, not a transport or egress calculation.
 5. Reconcile corrections with open-space hierarchy and ground use. A bypass can
    consume a quiet court or split a gathering place; a relocated service entrance
    can produce a blank public edge. Retest those consequences and the continuous
-   inclusive journey using [spatial coordination](performance-and-coordination.md#inclusive-use-and-fire-spatial-coordination).
+   inclusive journey using [spatial coordination](space/circulation/inclusive-and-emergency-interfaces.md#inclusive-use-and-fire-spatial-coordination).
 
 **Bounded failure.** Assume buildings A and B must remain available while an
 intermediate managed garden is locked after 20:00. A direct path across it is

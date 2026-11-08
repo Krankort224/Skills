@@ -177,5 +177,5 @@ from establishing its application to the project.
 Separate confirmed requirements from aspirations, assumptions and potential
 checks. Assign the unresolved question, responsible party and next decision date.
 A conceptual drawing, area estimate, or checklist is not a regulatory approval.
-See [program and space](program-and-space.md) and
-[performance and coordination](performance-and-coordination.md).
+See [program and space](program/index.md) and
+[performance and coordination](performance/index.md).

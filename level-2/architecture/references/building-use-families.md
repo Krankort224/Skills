@@ -7,10 +7,10 @@ short-stay accommodation, including interfaces between them. It does not cover
 every building type, specialist laboratory, childcare facility, archive, hospital,
 commercial kitchen or hotel classification.
 
-General [demand and sharing](program-and-space.md#what-activities-and-capacity-must-the-program-accommodate),
-[area accounting](program-and-space.md#how-can-areas-be-counted-once-and-compared),
+General [demand and sharing](program/demand.md#what-activities-and-capacity-must-the-program-accommodate),
+[area accounting](program/area-ledger.md#how-can-areas-be-counted-once-and-compared),
 [room construction](planning-and-section.md#construct-a-room-that-can-be-used)
-and [access zones](program-and-space.md#how-do-people-and-goods-move-through-access-zones)
+and [access zones](space/circulation/access-and-closure.md#how-do-people-and-goods-move-through-access-zones)
 keep their existing owners. Here, decide **which operational relationships each
 family adds**, then use those methods to fit and count them. A family is a design
 hypothesis, not a regulatory classification or an instruction to copy a plan.
@@ -271,7 +271,7 @@ under homes, book stock above public space, short-stay rooms beside an event
 volume, or a teaching store replenished from another level. Mark the actual
 occupied floors, route/handling connection, service depth and boundary that must
 continue. Use [levels and cores](planning-and-section.md#organize-levels-cores-and-service-depth)
-for the general construction and [performance](performance-and-coordination.md)
+for the general construction and [performance](performance/comfort/acoustics-and-air.md)
 for physical paths. Neither a different floor nor a commercial label proves
 compatibility. The combination may need a changed room assignment, a genuine
 buffer/separation, reduced simultaneous use or independent support.

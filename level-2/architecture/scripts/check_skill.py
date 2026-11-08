@@ -11,8 +11,8 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 OPERATIONS = ('brief', 'concept', 'development', 'analysis', 'optimization',
               'presentation', 'documentation', 'review')
-REFERENCES = ('program-and-space', 'composition-and-style',
-              'performance-and-coordination', 'requirements',
+REFERENCES = ('program/index', 'composition/index',
+              'performance/index', 'requirements',
               'computational-design', 'visual-delivery', 'calculators', 'sources',
               'planning-and-section', 'site-and-context',
               'envelope-and-assemblies', 'design-development')

@@ -3,7 +3,7 @@
 Use these methods when an architectural choice changes operation, access,
 maintenance or replacement over time. They develop a bounded assembly or space,
 not a whole-building estimate or maintenance specification. The existing
-[maintenance and durability](performance-and-coordination.md#durability-and-maintenance-of-materials)
+[maintenance and durability](performance/lifecycle/durability.md#durability-and-maintenance-of-materials)
 method owns exposure and material selection; [compatibility and replaceability](envelope-and-assemblies.md#compatibility-movement-and-replaceability)
 owns the component removal sequence. Select them when exposure or removal is
 part of the current decision, then carry the affected operation and consequences

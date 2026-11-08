@@ -7,7 +7,7 @@ Use the design question, geometry/data, defined units/metrics, applicable source
 ## Procedure
 
 1. Define the comparison or acceptance question, outputs needed and useful accuracy. Choose a qualitative check, bounded calculator or justified external analysis rather than defaulting to the most complex method.
-2. Select the affected [environmental/interface method](../references/performance-and-coordination.md), [data screening](../references/computational-design.md#screen-data-before-translating-it-into-design) or [calculator contract](../references/calculators.md). Retrieve the chosen method section; distinguish a spatial proxy from a measured or modeled result.
+2. Select the affected [environmental/interface method](../references/performance/index.md), [data screening](../references/computational-design.md#screen-data-before-translating-it-into-design) or [calculator contract](../references/calculators.md). Retrieve the chosen method section; distinguish a spatial proxy from a measured or modeled result.
 3. Record input values, source/revision, unit and metric definitions, method assumptions and supported cases. Explicitly distinguish project targets from applicable normative requirements.
 4. Run only a method whose prerequisites are met. Validate nonfinite/impossible inputs and ambiguous units. Preserve failed runs as failures; do not replace unavailable external execution with fabricated numeric results.
 5. Check known bounds, independent identities or sensitivity appropriate to the question. Explain whether data/method uncertainty can change the design decision.

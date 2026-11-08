@@ -89,7 +89,7 @@ their own selected basis; the catalog is not a complete cadastral method.
 
 Keep room, wall, core, circulation and exterior components visible so that a
 changed definition can be recomputed instead of multiplied by a presumed
-efficiency factor. Use [area accounting](../../program-and-space.md#how-can-areas-be-counted-once-and-compared)
+efficiency factor. Use [area accounting](../../program/area-ledger.md#how-can-areas-be-counted-once-and-compared)
 for the finished-face correction and [comparison](../../computational-design.md#frame-the-question)
 for its option-ranking consequence. Neither geometric result verifies a formal
 Russian area rule. Likewise, retain clear room height, floor spacing and the
@@ -141,7 +141,7 @@ actual process/materials and the relevant classification provisions before
 fixing fire separation, connections, exit count or dimensions. The СП 59 scope
 trigger does not verify a route width, ramp slope, lift strategy or permission
 to share an exit. Room lighting, insolation, noise and sanitary questions also
-remain separate; use [room-condition alternatives](../../performance-and-coordination.md#fit-russian-room-conditions-without-merging-their-tests)
+remain separate; use [room-condition alternatives](../../performance/comfort/daylight-view.md#fit-russian-room-conditions-without-merging-their-tests)
 to change facade/use allocation while their particular targets are selected.
 
 ## Select climate, site and assembly inputs
@@ -155,7 +155,7 @@ technical use; coordinate structural, thermal, moisture and system calculations
 with their specialist owners. Architecture still owns the changed lobby, shade,
 roof/water path, service depth, junction intent and maintenance access.
 
-The [two-location study](../../composition-and-style.md#two-russian-reading-pavilions-climate-and-use-change-the-edge)
+The [two-location study](../../../assets/studies/reading-pavilions.md#two-russian-reading-pavilions-climate-and-use-change-the-edge)
 uses primary Hydrometcentre observations for [Yakutsk](https://meteoinfo.ru/categ-articles/15-climate-cat/klimaticheskie-normy/clim-towns/1782-1246618396)
 and [Krasnodar](https://meteoinfo.ru/categ-articles/15-climate-cat/klimaticheskie-normy/clim-towns/1699-1246618396),
 monthly tables and their **1961–1990** averaging-period field, checked

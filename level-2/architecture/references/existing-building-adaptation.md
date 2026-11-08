@@ -48,7 +48,7 @@ rather than give the whole building one confidence label.
 2. Translate the proposed use into its changed demands: occupation and hours,
    loads/vibration, moisture/temperature, separation, access, servicing and
    maintenance. Ask which existing component or interface each demand touches.
-   Use the established [program methods](program-and-space.md), rather than
+   Use the established [program methods](program/demand.md), rather than
    treating available floor area as evidence of suitability.
 3. For each consequential unknown, write a **decision → missing evidence →
    investigation → possible revision** chain. Ask a measured survey for the

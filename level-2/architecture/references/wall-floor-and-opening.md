@@ -5,7 +5,7 @@ walls, floor direction and openings. This reference develops architectural
 organization and reservations; it does not select reinforcement, member sizes,
 fasteners or a certified assembly. Use the existing
 [envelope functions](envelope-and-assemblies.md#assign-control-functions-before-drawing-layer-order)
-and [section budget](performance-and-coordination.md#budget-the-section-and-routes)
+and [section budget](space/vertical/section-and-services.md#budget-the-section-and-routes)
 rather than reconstructing their contracts here.
 
 ## Contents

@@ -5,6 +5,41 @@ from pathlib import Path
 import check_skill
 
 
+class PilotRouteTests(unittest.TestCase):
+    def test_migrated_selectors_replace_flat_requirements(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for branch in ('program', 'composition', 'performance'):
+                index = root / 'references' / branch / 'index.md'
+                index.parent.mkdir(parents=True)
+                index.write_text('# Subject\n\n[Method](method.md#complete-method)\n')
+                (index.parent / 'method.md').write_text('# Method\n\n## Complete method\n\nLocal reasoning.\n')
+            result = check_skill.validate(root)
+            relevant = [e for e in result['errors'] if any(
+                part in e['path'] for part in ('program', 'composition', 'performance'))]
+            self.assertEqual(relevant, [])
+            (root / 'references/performance/index.md').unlink()
+            self.assertIn({'path': 'references/performance/index.md',
+                           'error': 'required file missing'},
+                          check_skill.validate(root)['errors'])
+
+    def test_selector_checks_target_and_fragment_not_just_file_presence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            index = root / 'index.md'
+            index.write_text('# Subject\n\n[Method](method.md#complete-method)\n')
+            self.assertIn({'path': 'index.md',
+                           'error': 'local link missing: method.md#complete-method'},
+                          check_skill.validate(root)['errors'])
+            (root / 'method.md').write_text('# Method\n\n## A different question\n')
+            self.assertIn({'path': 'index.md',
+                           'error': 'anchor missing: method.md#complete-method'},
+                          check_skill.validate(root)['errors'])
+            (root / 'method.md').write_text('# Method\n\n## Complete method\n')
+            self.assertFalse(any('link missing' in e['error'] or 'anchor missing' in e['error']
+                                 for e in check_skill.validate(root)['errors']))
+
+
 class TableContinuityTests(unittest.TestCase):
     def test_blank_breaks_leave_provenance_rows_outside_table(self):
         text = '''| Source and extent | Adaptation |

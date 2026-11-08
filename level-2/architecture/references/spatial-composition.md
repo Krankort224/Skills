@@ -62,7 +62,7 @@ does not establish that their uses can coincide. If a clear route must remain
 available, remove its occupied envelope from the concurrent activity capacity.
 An event layout and everyday layout may share floor area at different times;
 identify who changes the arrangement and whether independent access survives.
-Use the existing [area ledger](program-and-space.md#how-can-areas-be-counted-once-and-compared)
+Use the existing [area ledger](program/area-ledger.md#how-can-areas-be-counted-once-and-compared)
 for walls, definitions and allowances rather than creating a second area basis.
 
 In section, test the mediator as a real volume. A lower linking ceiling can

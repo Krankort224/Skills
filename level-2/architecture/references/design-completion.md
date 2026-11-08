@@ -132,7 +132,7 @@ and meaning within the affected scheduled information.
    a different type according to the project's conventions; silently editing the
    shared type would also change every other recipient.
 4. Recompute dependent values from the selected geometry and original metric
-   basis. Use [area accounting](program-and-space.md#how-can-areas-be-counted-once-and-compared)
+   basis. Use [area accounting](program/area-ledger.md#how-can-areas-be-counted-once-and-compared)
    for floor/room allocations and
    [architectural takeoff](operation-and-lifecycle.md#count-the-architectural-work)
    for face/return/piece/installed/procurement scope. Check membership and totals

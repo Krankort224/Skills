@@ -68,7 +68,7 @@ its support and cleaning reach. If ground evidence puts the preferred terrace
 in a water route, move it or revise the levels/discharge concept before keeping
 its claimed use. Carry these physical changes into the room program, facade and
 section, rather than merely adding an exposure note to an unchanged plan. The
-[two-location study](composition-and-style.md#two-russian-reading-pavilions-climate-and-use-change-the-edge)
+[two-location study](../assets/studies/reading-pavilions.md#two-russian-reading-pavilions-climate-and-use-change-the-edge)
 shows this translation with explicit limits.
 
 ## Choose how the building meets its edges
@@ -107,7 +107,7 @@ can be expressed by narrowing, a porch, a lobby, material change or a controlled
 door. These cues supplement usable geometry and access arrangements. They do
 not themselves establish security or an accessible route. Compose the inclusive
 journey as a principal experience; check its actual levels and requirements with
-[performance and coordination](performance-and-coordination.md) and requirements.
+[performance and coordination](space/circulation/inclusive-and-emergency-interfaces.md) and requirements.
 
 Design an outdoor room by giving it an activity, an occupied edge, access and a
 degree of enclosure. A court can center shared life; a terrace can extend one
@@ -155,5 +155,5 @@ be honored without an operating decision.
 
 Return to the parti when resolving edge, entry or level conflicts changes the
 central relationship. Carry the selected site logic into
-[mass, section and facade decisions](composition-and-style.md), and record the
+[mass, section and facade decisions](composition/index.md), and record the
 survey, consultation or operating input that could reverse it.

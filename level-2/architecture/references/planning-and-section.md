@@ -1,7 +1,7 @@
 # Planning and section
 
 Use this knowledge to generate a spatial solution from the
-[program and relationships](program-and-space.md), or to repair a selected layout.
+[program and relationships](program/relationships.md), or to repair a selected layout.
 The schemes are conditional design tools, not prescribed building types.
 [Sources](sources.md) records the upstream basis and exclusions. Worked plan
 dimensions, product envelopes and heights are hypothetical design inputs,
@@ -359,7 +359,7 @@ where compatible. Door positions must preserve these intended connections.
 
 **Fit discovery.** A 12 × 7 m teaching reservation is provisionally tested as an
 11.6 × 6.6 m clear rectangle after assumed enclosing construction. The six-table
-setting in [program demand](program-and-space.md#derive-a-provisional-capacity-and-room-envelope)
+setting in [program demand](program/capacity-and-room-demand.md#derive-a-provisional-capacity-and-room-envelope)
 needs 10.5 × 6.5 m. It fits that assumed empty rectangle with little depth margin;
 an inward door, a column, a wider required route or different furniture could
 invalidate it. Place the entrance into the side circulation strip rather than
