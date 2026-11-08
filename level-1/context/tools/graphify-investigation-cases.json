@@ -1,0 +1,72 @@
+{
+  "schema": "context-investigation-cases-v1",
+  "fixture": "graphify-maintenance-cases.json:baseline",
+  "questions": [
+    {
+      "id": "predicate",
+      "question": "What exact conditions does accepts enforce, and are the elapsed-time boundaries included?"
+    },
+    {
+      "id": "replacement",
+      "question": "Does replacement paper documentation extend the current grant window or reset its clock?"
+    },
+    {
+      "id": "authority",
+      "question": "Which source owns the current grant window, and how should a contradictory operator-note claim be handled?"
+    },
+    {
+      "id": "impact",
+      "question": "If the current grant-window rule changes, which implementation should be reviewed? State the limits of that impact conclusion."
+    },
+    {
+      "id": "scope",
+      "question": "What is the supported archive-grant behavior shown here, and what cannot be concluded about runtime integration or test coverage?"
+    },
+    {
+      "id": "relationship",
+      "question": "How does the implementation relate to the grant policy, and is that cross-source relation explicit or inferred? Give source evidence."
+    }
+  ],
+  "source_oracles": {
+    "predicate": "src/guard.py:L1-L2; falsey revoked, inclusive 0<=now-issued<=24; code units unspecified",
+    "replacement": "docs/note.md:L3-L4 retains original issuance and no extension",
+    "authority": "docs/policy.md:L2-L4 owns current window; contradictory note cannot amend it",
+    "impact": "src/guard.py:L1-L2 is a candidate, no exhaustive integration/test coverage claim",
+    "scope": "docs/policy.md:L2-L3 and docs/note.md:L2-L4; no caller/time-unit binding or tests established",
+    "relationship": "policy and code correspond if numeric differences are hours; cross-source mapping INFERRED, no explicit source link"
+  },
+  "recorded_trials": {
+    "provenance": "Two separately assigned gpt-6.1-terra subscription readers received the same six questions without expected answers; one used raw files only, the other graph localization then raw sources. Root authored fixture and reviewed responses; this is not a blind benchmark. No fresh inference occurs in replay.",
+    "runtime_model_identity": null,
+    "usage": null,
+    "direct": {
+      "root_review": "six source-backed answers correct with limits",
+      "raw_sources": 3,
+      "raw_lines_shown": 10,
+      "raw_bytes_shown": 498,
+      "raw_content_retrieval_calls": 1,
+      "inventory_calls": 1
+    },
+    "graph_assisted": {
+      "root_review": "six source-backed answers correct with limits",
+      "raw_sources": 3,
+      "raw_lines_shown": 10,
+      "raw_bytes_shown": 498,
+      "raw_content_retrieval_calls": 1,
+      "hash_verification_calls": 1,
+      "native_neighbor_calls": 3,
+      "neighbor_lines_shown": 5,
+      "neighbor_content_bytes_shown": 476,
+      "metadata_candidate_output_bytes": 16630,
+      "metadata_candidate_output_lines": 9,
+      "failed_native_loader_import_attempts": 1,
+      "limitations": "Initial metadata output was excessive and included embedded fragments/excerpts, though not the complete node-link graph. A loader import attempt failed before fallback. No material false/missed suggestion in inspected neighborhood; not completeness. No effort advantage demonstrated."
+    }
+  },
+  "presentation_controls": {
+    "actual_browser": "Linux Chromium through CUA, F mixed 8 nodes/5 edges/3 communities, search/source panel and hide/show and theme verified",
+    "missing_asset": "Controlled missing vis script rendered empty canvas with vis/network ReferenceError despite visible counts",
+    "aggregation": "Actual F limit3->3 communities/0 cross edges; synthetic opposing2arcs->one undirected AGGREGATED count2; one community returns false/noHTML; not large-corpus performance",
+    "svg": "Separate plotting environment; native default-size SVG inspected in actual browser. Smaller12x8 clipped labels/overlapped legend. No direction/relation/hyperedge fidelity claim."
+  }
+}

@@ -35,6 +35,8 @@ For refreshed/published mixed evidence, resolve one immutable artifact commit an
 
 Do not equate three filenames, a build exit code, node count or a connected graph with a complete semantic read or a successful publication transaction. HTML generation is distinct from browser rendering; network/CDN requirements and aggregation affect what the view can show. The shared `.gitkeep` promises none of these capabilities.
 
+When presentation or an optional derived view is in scope, inspect actual [HTML/report/export behavior](../tools/graphify.md#inspect-presentation-and-select-optional-exports), not only file creation: source/count correspondence, render assets, filtering and aggregation loss. GraphML/SVG/wiki/Obsidian are optional and have distinct evidence/ownership limits; their presence is not a current trio or complete semantic summary. Cross-repository review checks [explicit input namespaces and versions](../tools/graphify.md#inspect-scoped-cross-repository-views), directed/parallel arc preservation, external identity joins and separate destinations. Compare representative answers with direct-source controls; record both missed/false suggestions and avoid unsupported effort-saving claims.
+
 Use the technical guide only for a specifically needed audited limit/method. Review does not install optional tools, regenerate artifacts, invoke provider APIs or enable feedback/hook services. Unsupported/untested graph capabilities remain explicit findings or later gates.
 
 ## 4. Return actionable findings

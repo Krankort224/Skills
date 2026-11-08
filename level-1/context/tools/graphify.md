@@ -12,6 +12,9 @@
 - [Subscription fragments and mixed assembly](#plan-read-and-reconcile-subscription-fragments)
 - [Freshness, portability and publication](#freshness-portability-and-publication)
 - [Commit-level trio publication](#publish-a-validated-trio-from-an-isolated-clone)
+- [Read-only investigation](#investigate-a-verified-graph-without-changing-it)
+- [Presentation and optional exports](#inspect-presentation-and-select-optional-exports)
+- [Cross-repository views](#inspect-scoped-cross-repository-views)
 - [Verification corpus and oracles](#verification-corpus-and-oracles)
 - [Source ledger](#source-ledger)
 
@@ -19,7 +22,7 @@
 
 Project understanding starts with the task, applicable scope and authoritative sources. The populated `references/repository.md` explains project purpose, component roles and interactions, constraints, knowledge owners and routes to detail. Graphs supply derived relationship evidence; neither connectivity nor a model's confidence overrides the owner of a fact. Missing, stale, incompatible or incomplete graphs leave ordinary source investigation available. A narrow question needs only relevant sources and bounded graph results.
 
-This guide records the inspected native interfaces and the verified compatibility profile. The current shared `context/SKILL.md` routes to complete project-map read, maintain and review methods without graph prerequisites. The structural procedure below prepares and verifies a fresh staged trio for the tested Linux Python/Markdown lane. The semantic procedure below adds actual current-agent reading, strict range/evidence validation and fresh native mixed assembly in the same tested lane. The maintenance method adds conservative semantic-shard reuse, cold-checkout recovery and coherent Git-commit trio publication in that same tested lane. Broader investigation and the actual two-host pilot retain their separate implementation/validation gates. Issue execution, publication and acceptance remain with `workflow`; delegation remains with `delegation`.
+This guide records the inspected native interfaces and the verified compatibility profile. The current shared `context/SKILL.md` routes to complete project-map read, maintain and review methods without graph prerequisites. The structural procedure below prepares and verifies a fresh staged trio for the tested Linux Python/Markdown lane. The semantic procedure below adds actual current-agent reading, strict range/evidence validation and fresh native mixed assembly in the same tested lane. The maintenance method adds conservative semantic-shard reuse, cold-checkout recovery and coherent Git-commit trio publication in that same tested lane. The investigation sections supply bounded native read methods, source controls and opt-in presentation/interchange/namespace views. Actual Windows/Work and independent end-to-end integration retain separate verification gates. Issue execution, publication and acceptance remain with `workflow`; delegation remains with `delegation`.
 
 ## Immutable source and dependencies
 
@@ -382,8 +385,8 @@ The selected route is CLI-first for supported commands, with direct native calls
 4. The active subscription agent reads the selected semantic material and produces complete source-owned fragments. Parallelize only when permitted by delegation and the actual host; otherwise serially process the same bounded chunks. Return JSON to the coordinator; do not require worker filesystem writes or invented tool names. Never infer concepts from names alone.
 5. Validate each expected chunk, source identity, source locations, coverage and confidence; reconcile cross-chunk endpoints against known IDs. Keep coverage separately before `graphify merge-chunks <explicit files> --out <staged semantic JSON>`. Do not glob stale results from an earlier run. Reuse native `build_from_json`/`build_merge(root=..., directed=True, dedup=False)` with structural `extracted_sources` and explicit semantic origin. Build merge returns a graph without writing; mutable input dictionaries need copies when reused.
 6. Native cluster/cohesion/analysis helpers produce structural evidence; the current agent may name communities from actual members. Use native `to_json`, `to_html` and report generation against the same graph/inventory/labels, at explicit staging paths. Check actual return values and all three artifacts. Native report expects numeric usage; preserve unknown subscription usage explicitly in the report/graph metadata instead of presenting default zero counters as measurement.
-7. For strict read-only investigation, use native loaders and traversal functions directly. CLI `query`, `path` and `explain` call `_touch_query_stamp` and attempt to create `cache/last_query_stamp` beside the queried graph; query logging is separately opt-in and can be disabled with process-local `GRAPHIFY_QUERY_LOG_DISABLE=1`. `serve._read_graph` plus `_query_graph_text` supplies bounded source-backed context without the CLI stamp (probe checks fixture bytes/inventory unchanged). The native loader also opportunistically reads a neighboring learning sidecar and may hash its referenced sources; that optional derived evidence is absent in this probe. Do not silently activate work-memory annotations: audit them within scope or use the native raw JSON/path loader and omit the in-memory learning overlay. Directional path/explain read alternatives and a present sidecar still need their own operation-specific no-write/scope checks; do not claim all CLI reads are inert.
-8. Publication uses the project's existing workflow and a checked input identity. No second Graphify skill, router, service or package-vendoring layer is selected. The procedures above implement bounded initial structural and active-agent mixed staging. General maintenance/publication, broader investigation and host adoption still require their remaining gates before downstream deployment.
+7. For strict read-only investigation, use native loaders and traversal functions directly. CLI `query`, `path` and `explain` call `_touch_query_stamp` and attempt to create `cache/last_query_stamp` beside the queried graph; query logging is separately opt-in and can be disabled with process-local `GRAPHIFY_QUERY_LOG_DISABLE=1`. `serve._read_graph` plus `_query_graph_text` supplies bounded source-backed context without the CLI stamp (probe checks fixture bytes/inventory unchanged). The native loader also opportunistically reads a neighboring learning sidecar and may hash its referenced sources; that optional derived evidence is absent in this probe. Do not silently activate work-memory annotations: audit them within scope or use the native raw JSON/path loader and omit the in-memory learning overlay. The strict directional path/explain alternatives below use the validated graph dict without sidecars or stamps. A present learning sidecar remains outside this route; do not claim all CLI reads are inert.
+8. Publication uses the project's existing workflow and a checked input identity. No second Graphify skill, router, service or package-vendoring layer is selected. The procedures above implement bounded initial structural and active-agent mixed staging. The bounded maintenance/publication and investigation methods share the verified profile; actual host adoption and independent end-to-end integration still require their own evidence before downstream deployment.
 
 ### Selected flat-helper boundary
 
@@ -763,6 +766,190 @@ with _rebuild_lock(lock, blocking=True) as acquired:
 
 Read all three blobs from one resolved immutable commit into a fresh view and verify JSON's generation and sibling digests. A checkout, mutable working directory or independently updated files are not an atomic trio. Pre-push errors can leave unreachable candidate objects, but cannot move the remote; a failed or timed-out push has uncertain outcome until the remote is inspected. Refusing a stale candidate is not a rollback; rollback is a separately reviewed compatible prior trio published as a new fast-forward commit.
 
+## Investigate a verified graph without changing it
+
+Start with the question, applicable project/branch and fact owner. For an intact published mixed trio, resolve one immutable commit and materialize its three blobs into a new view. Check current source/profile compatibility before calling it current. A missing, stale, incompatible, corrupt or oversized graph leaves direct sources available; it does not authorize a rebuild or establish absence. The validator reads bounded full artifact buffers and NetworkX loads the full graph in memory. Bounded output is a separate control, not streaming or bounded-load evidence.
+
+The CLI `query`, `path` and `explain` attempt query-stamp writes; the server loader can also consume learning sidecars. This pinned native-library route uses only the validator's exact consumed graph dict and explicit arguments. It neither creates a CLI stamp/log nor invokes a server, provider, installation or rebuild. Set `PYTHONDONTWRITEBYTECODE=1` before starting the verified Python process. Do not pass `graph_path` to the query or use `_read_graph`; that would reopen optional sidecar behavior. Arbitrary graph metadata/portable fragment payloads are not a useful candidate list: print only needed IDs, labels and source locators.
+
+### Select identity, traversal and evidence
+
+Choose the method from the question, rather than running every analysis:
+
+| Question | Native method and source follow-through |
+|---|---|
+| Locate a concept/symbol or gather context | Resolve an exact ID or unique qualified label; inspect a bounded candidate list when ambiguous. Query BFS with explicit seed/depth/budget, or DFS for a deeper chain. Verify retrieved facts at the owner. |
+| Explain one node / immediate neighborhood | Selected node attributes and `_neighbor_lines` show incoming/outgoing relation, confidence and sites. This is the strict-read equivalent of the useful CLI explain evidence; inspect source ranges for actual meaning. |
+| Is there a stored directional connection? | Resolve BOTH endpoints strictly, then `_shortest_path_text`; state direction and exceptions. Undirected exploration is separate. No path can mean missing coverage/filter/depth, not impossibility. |
+| What might need review after a change? | `affected_nodes` reverse-walks an explicit relation set and depth. Check candidate call sites and relevant canonical dependencies; broaden direct source search when relationships are unrepresented. |
+| What themes, hubs, bridges or isolated areas deserve reading? | Inspect actual community members, `god_nodes`, `surprising_connections`, degree-zero nodes and weak components. These are navigation heuristics, not architecture, authority, runtime reachability or test coverage. |
+
+Set `CONTEXT_ROOT`, `CONTEXT_TRIO`, `CONTEXT_TOOLS`, `CONTEXT_SEED` and `CONTEXT_QUESTION` explicitly. An optional `CONTEXT_TARGET` adds a directed path. The example caps displayed node details and native query output; it does not dump the coverage state/model fragments.
+
+```python
+# context-investigate
+import sys
+sys.dont_write_bytecode = True
+import importlib.util
+import os
+from pathlib import Path
+from graphify.paths import load_node_link_graph
+from graphify.serve import _resolve_single_node, _query_graph_text, _neighbor_lines, _cut_lines_to_budget, _shortest_path_text
+
+root = Path(os.environ["CONTEXT_ROOT"]).resolve(strict=True)
+view = Path(os.environ["CONTEXT_TRIO"]).resolve(strict=True)
+module = Path(os.environ["CONTEXT_TOOLS"]) / "validate_context_fragments.py"
+spec = importlib.util.spec_from_file_location("context_read_validator", module)
+validator = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(validator)
+checked = validator.validate_trio(view, root=root, require_current=True)
+G = load_node_link_graph(checked["graph"])
+assert G.is_directed()
+seed, refusal = _resolve_single_node(G, os.environ["CONTEXT_SEED"])
+if refusal:
+    raise ValueError(refusal)
+print("Input:", checked["input_identity"], "Generation:", checked["generation_identity"])
+print("Node:", {k: G.nodes[seed].get(k) for k in ("label", "source_file", "source_location", "_origin")})
+print(_query_graph_text(G, os.environ["CONTEXT_QUESTION"], seeds=[seed], seed_root=root, mode="bfs", depth=2, token_budget=1200))
+print(_cut_lines_to_budget(_neighbor_lines(G, seed), 1200, "Narrow the node or relationship"))
+if os.environ.get("CONTEXT_TARGET"):
+    target, refusal = _resolve_single_node(G, os.environ["CONTEXT_TARGET"])
+    if refusal:
+        raise ValueError(refusal)
+    print(_shortest_path_text(G, {"source": seed, "target": target, "max_hops": 8}))
+```
+
+BFS and DFS are **undirected context gathering**. They suppress expansion of nonseed hubs at or above `max(50, p99 degree)` and can omit evidence through filters, depth or output budgets. A native token budget is approximate: all-fits results may be printed over budget with a notice; truncation must be disclosed. `_cut_lines_to_budget` bounds formatting after a list is built. If the host has a hard output limit, check returned size and reduce the question/depth or split the result; never silently truncate and infer absence.
+
+The directed path method follows stored arcs and native legacy direction markers, but also permits an implied reverse `contains` hop from a symbol to its owning file. It prints the reverse arrow: do not call that a forward runtime dependency. `max_hops` limits the reported result after search; equal shortest routes are capped at 256, and confidence summarizes the weakest evidence. A path's text may lack source sites: inspect neighbor records and the underlying sources. Fuzzy CLI scoring/warnings do not replace strict endpoint disambiguation in this route. These private APIs are pinned interfaces and require regression checks on upgrades.
+
+For a candidate impact, inspect stored relation names first, select the relevant ones, and then use native `graphify.affected.resolve_seed_outcome(G, query, root)` and `affected_nodes(G, seed, relations=("calls", "implements_current_grant_window"), depth=2)`. Choose actual project relations; this tuple is illustrative. Report at most a justified number of hits with `node_id`, `depth`, `via_file`, `via_location` and matched relation, plus omitted count. Defaults cover known calls/imports/etc. and do not include arbitrary semantic relation names. Empty default impact for a custom semantic edge is not absence of impact. Class/member/override handling is native static evidence; no complete runtime or test-selection claim follows.
+
+Group existing `community` attributes and examine actual membership/interpretation from that input. Do not recluster or rename during read. `god_nodes(G, top_n=5)` ranks entities by degree and excludes native file/builtin/no-source-concept noise heuristics (source-backed semantic concepts may remain); absence from that list is not low importance. `surprising_connections(G, communities, top_n=5)` ranks cross-file connections for multi-source graphs, including within-community edges; single-source graphs use a cross-community/centrality fallback. It is not a cut-edge algorithm or exhaustive bridge list. A reason mentioning different repos/directories can be only a directory heuristic, not evidence of a repository boundary. Degree-zero nodes and weakly disconnected groups may be parser/coverage boundaries or separate source roles. A real source relationship can exist even where no graph arc joins its document page to a model concept.
+
+### Compare methods on matched questions
+
+Use direct-source answers prepared without graph hints as controls, then let a separate reader localize with the graph and follow sources. Keep questions, corpus revision/scope, candidate/seed choices, correctness, missed/false relations and actual observed retrieval effort. Distinguish full JSON loading in a process from bounded text shown to the agent. Record unnecessary metadata output and failed tool attempts rather than hiding overhead. Unexposed tokens/time/model identity remain unknown; author-created fixtures and shared model knowledge are not a blind benchmark.
+
+On a tiny corpus, direct reading can be cheaper and equally accurate. On either route verify implementation units, authority, temporal/scope distinctions and runtime integration: a numeric `24` can correspond to an hours policy without proving callers pass hours. Prefer the route that resolves this task with sufficient source evidence; no universal graph-first rule or promised percentage/token saving applies.
+
+## Inspect presentation and select optional exports
+
+The complete trio remains `graph.json`, `graph.html`, `GRAPH_REPORT.md`. Optional views use NEW dedicated task-owned directories outside source and outside that reserved trio directory. They are derived from one checked generation, not extra currentness evidence or automatic publication. Keep input commit/hash/generation and limitations in the task result or the optional view's existing metadata; no new mandatory artifact is introduced.
+
+### HTML and report
+
+Validate full HTML embedded nodes/edges/counts and report input identity/coverage against the exact JSON before visual use. Native JSON retains range evidence, rationale, origin and confidence fields that the HTML node panel omits; use JSON and source for detailed claims. The report's selected hubs/communities/surprising connections are navigation summaries, not a complete source or semantic account. Retain its unknown subscription usage and coverage qualifications; a count or a heading is not rendering evidence.
+
+In an authorized browser test, open the exact local view through an allowed file/HTTP route, verify the graph actually draws, then test search, node/source panel, community hide/show and visible text/zoom. The pinned vis-network 9.1.6 script is loaded from unpkg with SRI; JavaScript, network, origin/CORS and browser policy matter. A shell showing counts with an empty canvas is a rendering failure. If CDN assets are unavailable, retain JSON/report/direct-source access and report that HTML is unrendered; do not disable browser security or silently replace the script pin. The browser may persist theme preference in localStorage; this is not a project-file read-only trace. Stop a temporary test server afterward.
+
+Default native visualization limit is 5000 nodes. Without an explicit override an oversized graph raises; with an explicit smaller `node_limit`, native HTML can aggregate to communities. This is an **undirected community summary**: it discards internal arcs and merges opposing/parallel cross-community arcs into a count, even if the drawn view shows an arrow. It cannot certify dependency direction or replace F's full-evidence trio. F full mixed staging instead refuses oversized graphs. Native aggregation with fewer than two communities returns false and may create no HTML; never accept a missing file because the exporter printed a message. Use a separate fresh directory: aggregation's recursive exporter can consult a sibling learning overlay even when the outer call passed `{}`. The tested small explicit-limit control exercises this code path, not large-corpus/browser performance.
+
+### Opt-in formats and ownership
+
+Load `G` from the already validated dict as above, group its integer `community` values and take labels from that exact input's `community_interpretation`. Select only requested/useful formats. Use explicit fresh output paths and one writer; never run defaults against a user's general notes or source directory. Native exporters can modify multiple outputs independently, and GraphML uses one fixed sibling `.tmp`; these are not multi-file publication transactions. Fingerprint input files before/after when verifying an export.
+
+| View | Useful purpose | Verified boundaries |
+|---|---|---|
+| GraphML | Directed graph interchange for a chosen viewer | Native `to_graphml(G, communities, path)` followed by `nx.read_graphml(path)` preserves tested IDs and directed/parallel/opposing arcs. `_` node/edge attributes, including origin and fallback direction markers, are removed; load a directed graph first. Nested evidence/hyperedges are JSON strings, not native GraphML hyperedges. `None` becomes empty text; XML control characters are stripped. It is not a lossless maintenance-state import. |
+| Obsidian | Generated per-node relation/confidence notes and community navigation | `to_obsidian(G, communities, directory, community_labels=labels)` selects fields rather than full evidence. Foreign filename collisions can be skipped, yielding a partial count/warning. Owned notes and local edits within them are overwritten/pruned; without a manifest, tagged notes can be adopted/pruned. Use a dedicated generated child/vault; keep human notes elsewhere and inspect warning/count/link correspondence. |
+| Wiki | Generated community/source overview and selected hub articles | `to_wiki(G, communities, directory, community_labels=labels, god_nodes_data=god_nodes(G, top_n=5))` owns ALL top-level Markdown there and deletes unrelated `.md` files on refresh. It uses bounded concept/source/cross-community/hub selections, not whole-document summarization. Never point it at canonical references or human-authored prose. |
+| SVG | Static overview for an explicitly requested illustration | `to_svg(G, communities, path, community_labels=labels)` needs an isolated plotting environment. Native lines have no direction arrows/relation labels; parallel/opposing arcs overlap, hyperedges are not drawn. Inspect full SVG at intended size: short/small views can clip labels/overlap legends; the tested native default-size F overview was readable with zoom. Use HTML/GraphML for direction/detail. |
+
+For SVG only, prepare a separate task-owned venv with the accepted base requirements plus a reviewed plotting resolution. The exercised Linux profile adds matplotlib 3.11.2 (Pillow 13.0.0 and its resolved plotting dependencies) while retaining NumPy 2.5.4; do not replace the base with the upstream full lock's older NumPy resolution. Set `MPLCONFIGDIR` to a task-owned external cache **before** importing matplotlib. Record exact resolved packages for reproducibility; no global install or mandatory base dependency. The base-only native SVG call is expected to refuse a missing matplotlib, leaving no output. Parse and visually inspect the successful SVG; a file or XML parser alone does not certify readability.
+
+## Inspect scoped cross-repository views
+
+Select explicit stable repository tags, distinct from checkout basenames and excluding `::`. Pin each input to a reviewed immutable graph commit and its original source commit, exact graph hash, input/generation identity and Graphify revision. Verify compatible current sources at each root when currentness is claimed; historical inputs remain labeled historical. A cross-repository view has separate writable output and is not a per-repository maintenance state or a shared global writable graph.
+
+Use native `prefix_graph_for_global` with NetworkX `MultiDiGraph` composition to preserve directed/parallel arcs. CLI `merge-graphs` is an optional lossy overview: the pinned implementation converts inputs to undirected simple graphs and adds shared-type/member-call inferences. It collapses opposing/parallel evidence and is unsuitable for an exact merged snapshot. No global registration, database, watcher or MCP service is needed.
+
+First load the existing `validator` module as in `context-investigate` above, then bind each checked view to its real Git objects. `cross_records` contains explicit `tag`, canonical local `repository`, full `artifact_commit`, and `checked` returned by `validate_trio` for the materialized trio. The following reads objects without checkout, fetch, index or ref changes. It uses the tested Git 2.52.0 profile's [no-lazy-fetch option](https://git-scm.com/docs/git/2.52.0#Documentation/git.txt---no-lazy-fetch) and disables optional locks; missing promisor objects fail rather than triggering an implicit fetch. Older Git must support the same enforced boundary or refuse this recipe. Missing/unresolvable source provenance or a different commit/view pair refuses this version-pinned method; continue separate-source investigation instead of inventing a revision. The known adopted artifact path follows the F publication contract.
+
+```python
+# context-bind-cross-inputs
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+
+assert not any(os.environ.get(k) for k in ("GIT_DIR", "GIT_WORK_TREE", "GIT_INDEX_FILE", "GIT_COMMON_DIR", "GIT_OBJECT_DIRECTORY", "GIT_ALTERNATE_OBJECT_DIRECTORIES", "GIT_REPLACE_REF_BASE"))
+git_env = dict(os.environ, GIT_NO_REPLACE_OBJECTS="1", GIT_OPTIONAL_LOCKS="0")
+def object_read(repository, *args):
+    return subprocess.run(["git", "--no-lazy-fetch", "--no-optional-locks", "-C", str(repository), *args], capture_output=True, env=git_env, check=True, timeout=30).stdout
+def commit_id(value):
+    return isinstance(value, str) and len(value) == 40 and all(ch in "0123456789abcdef" for ch in value)
+checked_inputs = []
+for item in cross_records:
+    checked = item["checked"]
+    repository = Path(item["repository"]).resolve(strict=True)
+    artifact_commit = item["artifact_commit"]
+    source_commit = checked["graph"]["graph"]["context"].get("source_commit")
+    assert commit_id(artifact_commit) and commit_id(source_commit), "Missing/invalid version provenance"
+    assert object_read(repository, "rev-parse", "--show-toplevel").decode().strip() == str(repository)
+    for commit in (artifact_commit, source_commit):
+        assert object_read(repository, "cat-file", "-t", commit).strip() == b"commit"
+    object_read(repository, "merge-base", "--is-ancestor", source_commit, artifact_commit)
+    for name in ("graph.json", "graph.html", "GRAPH_REPORT.md"):
+        assert object_read(repository, "show", artifact_commit + ":skills/context/references/graphify/" + name) == checked["blobs"][name], "Artifact commit/view mismatch"
+    assert json.loads(checked["blobs"]["graph.json"]) == checked["graph"], "Checked graph/buffer mismatch"
+    for group in ("sources", "configuration"):
+        for path, digest in checked["snapshot"][group].items():
+            assert validator._relative(path) == path
+            assert hashlib.sha256(object_read(repository, "show", source_commit + ":" + path)).hexdigest() == digest, "Source commit/input mismatch"
+    checked_inputs.append((item["tag"], artifact_commit, checked))
+```
+
+
+Compose only the `checked_inputs` records produced by the binding block: `(stable_tag, verified_artifact_commit, checked_view)`. Materializing and validating input views is the existing read method; a manually paired commit and view is insufficient. Do not run it against unknown/unchecked JSON.
+
+```python
+# context-cross-repository-view
+import copy
+import networkx as nx
+from graphify.build import prefix_graph_for_global
+from graphify.export import attach_hyperedges
+from graphify.paths import load_node_link_graph
+
+assert 1 < len(checked_inputs) <= 4
+assert len({tag for tag, _, _ in checked_inputs}) == len(checked_inputs)
+assert all(isinstance(tag, str) and tag and "::" not in tag for tag, _, _ in checked_inputs)
+merged = nx.MultiDiGraph()
+hyperedges, inputs, external_attributes = [], [], {}
+offset = 0
+for tag, artifact_commit, checked in checked_inputs:
+    original = load_node_link_graph(checked["graph"])
+    assert original.is_directed() and not any(d.get("repo") for _, d in original.nodes(data=True))
+    G = nx.MultiDiGraph(original)
+    assert not any(G.nodes[u].get("external") and G.nodes[v].get("external") for u, v in G.edges()), "External-only arcs require separate provenance; unsupported in this view"
+    for node, attrs in G.nodes(data=True):
+        if attrs.get("external"):
+            assert node not in external_attributes or external_attributes[node] == dict(attrs), "Conflicting external identity"
+            external_attributes[node] = copy.deepcopy(dict(attrs))
+    H = prefix_graph_for_global(G, tag, community_offset=offset)
+    assert len(H) == len(G), "Local prefix/external ID collision"
+    assert all(merged.nodes[n].get("external") and H.nodes[n].get("external") for n in set(merged) & set(H))
+    assert not (set(merged.edges(keys=True)) & set(H.edges(keys=True))), "Shared external edge-key collision"
+    hyperedges.extend(copy.deepcopy(H.graph.get("hyperedges", [])))
+    offset = max([offset] + [d["community"] + 1 for _, d in H.nodes(data=True) if type(d.get("community")) is int])
+    merged = nx.compose(merged, H)
+    assert len(merged) <= 5000 and merged.number_of_edges() <= 10000
+    c = checked["graph"]["graph"]["context"]
+    assert isinstance(artifact_commit, str) and len(artifact_commit) == 40 and all(ch in "0123456789abcdef" for ch in artifact_commit)
+    inputs.append({"repo": tag, "artifact_commit": artifact_commit, "source_commit": c["source_commit"], "graph_sha256": checked["digests"]["graph.json"], "input_identity": checked["input_identity"], "generation_identity": checked["generation_identity"], "graphify_revision": c["graphify_revision"]})
+merged.graph.clear()  # The final input's context cannot identify the whole view.
+attach_hyperedges(merged, hyperedges)
+merged.graph["cross_repository_view"] = {"inputs": inputs, "limits": ["separate versioned navigation view; no inferred cross-repository links; shared external IDs do not prove compatible versions"]}
+```
+
+This bounded route refuses external-only arcs because neither endpoint carries a repository owner. Keep those inputs separate or review a different explicit provenance-preserving method; do not silently discard their arcs.
+
+Write native `nx.node_link_data(merged, edges="links")` to NEW separate output and reload with `load_node_link_graph`. Compare node IDs, complete directed arc rows/keys and hyperedge members, plus input manifests. Recheck input fingerprints before returning. Do not overwrite an input or pass the combined view to F as if it were one repository's current trio.
+
+Native prefixing rewrites local IDs, `_src`/`_tgt`, hyperedge IDs/members and community offsets; it retains labels and repo-relative `source_file` plus `repo`/`local_id`. Arbitrary nested references/evidence paths are not recursively namespaced. Resolve each source through its input repo+commit; common external IDs are navigation joins, not proof of matching dependency versions/interoperability. Conflicting external attributes, collisions or insufficient provenance require source review/refusal. No same-labeled local entities are joined and no cross-project semantic/runtime relationship is invented by this method.
+
+
 ## Verification corpus and oracles
 
 [probe_graphify.py](probe_graphify.py) uses temporary, authored fixtures. It verifies isolated package identity; code/Markdown inventory and explicit exclusions; exact directed calls; path-qualified code mentions; document links with collapsed anchor fragments; skipped ordinary code hyperlinks; a Cyrillic heading; the tail after 2100 body lines; native agent-fragment validation/merge; staged JSON/HTML/report generation; no temporary absolute paths in the trio; directed reload; explicit semantic L1 origin retained after same-source AST refresh; prompt/source invalidation; a bounded native read query with unchanged fixture files; and an empty cache in a fresh process. Network and provider extraction are forbidden in the native in-process route; the merge subprocess also blocks socket connections. This is an ingestion feasibility test with an authored semantic fragment, not evidence of a completed agent-powered semantic pass or end-user browser rendering.
@@ -772,6 +959,8 @@ Read all three blobs from one resolved immutable commit into a fresh view and ve
 [probe_graphify_maintenance.py](probe_graphify_maintenance.py) replays the source/model cases in [graphify-maintenance-cases.json](graphify-maintenance-cases.json), using the actual guide blocks and validator. It exercises add/edit/rename/delete/exclude, mixed and edge-only/zero replacements, conservative dependency propagation, ordered exclusions, input/profile changes, unchanged bytes, cold moved clones, distinct branches and linked worktrees. Real local bare Git remotes exercise coherent trio commits, independent-clone lease races, stale/dirty/nonbare/corrupt/partial refusal, a mutation before push, lost acknowledgement checked without retry, compatible fast-forward rollback and interrupted native HTML export. No hosted remote or live directory atomicity is certified. Fixtures record actual agent readings; replay makes no new model calls or blind semantic benchmark claim.
 
 Run the three structural/semantic/maintenance probes with the verified environment's Python, without optimization. The maintenance probe uses fresh temporary repositories outside source by default. To retain inspectable evidence, set `CONTEXT_MAINTENANCE_EVIDENCE` to a new task-owned external directory; it refuses to overwrite an existing path. This is test evidence, not a fourth portable artifact or an installed orchestrator.
+
+[probe_graphify_investigation.py](probe_graphify_investigation.py) builds fresh recorded F baseline/versioned fixtures, publishes them only to local bare repositories and exercises the actual strict-read, commit-binding and namespace guide blocks. It checks source-backed native query/path/neighborhood/impact/community/hub evidence, synthetic ambiguity/budget/conflict controls, full namespace round trips, real revision/view mismatch refusal and native export/ownership/HTML aggregation limits. [graphify-investigation-cases.json](graphify-investigation-cases.json) records the matched questions/source oracles, reader effort and presentation controls. Replay is not fresh inference or a performance benchmark. Run with the verified base Python and `PYTHONDONTWRITEBYTECODE=1`; optional `CONTEXT_INVESTIGATION_EVIDENCE` must name a NEW external directory to retain inspectable evidence. Browser rendering and optional SVG inspection remain separate observed checks; this probe cannot certify them from file creation.
 
 The continuing truth set must cover at least:
 
