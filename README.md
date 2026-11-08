@@ -17,7 +17,8 @@ Skills/
 ├── level-2/
 │   ├── architecture/
 │   ├── research/
-│   └── restructure/
+│   ├── restructure/
+│   └── ponytail/   # pinned upstream gitlink; reference only
 └── level-3/
     ├── revit/
     ├── word/
@@ -97,6 +98,10 @@ Tree depth, allowed model tiers at each level, and spawning rights are defined b
 
 ### Level 2
 
+#### ponytail — external reference
+
+[ponytail](level-2/ponytail) is a pinned Git submodule linking to [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail), not an adopted skill. Its source is available for deliberate inspection; no installation, hooks, agent policy or personality is enabled through this link.
+
 #### restructure
 
 Restructures an existing repository or file accumulation without imposing a universal directory layout.
@@ -153,7 +158,7 @@ Two standard-library Python 3 tools inspect `.dyn`/ZIP metadata, ports and wires
 
 ## External references
 
-[Ponytail](https://github.com/DietrichGebert/ponytail) is an external reference for reusing existing solutions and avoiding unnecessary implementation. This entry is a link, not an installed skill or plugin. It does not vendor upstream instructions, enable lifecycle hooks, import a personality, or change mandatory project rules.
+The [Ponytail gitlink](level-2/ponytail) on Level 2 points to the official upstream repository at the pinned revision `96608e078b2d5ea607c5c3b8b5a54d1c1fba6846`. It is a reference for deliberate consultation, not an installed skill or plugin; its instructions and hooks are not adopted automatically.
 
 ## Principles
 
