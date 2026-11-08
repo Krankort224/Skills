@@ -3,6 +3,7 @@
 ## Contents
 
 - [Selected library materials](#selected-architecture-library-literature-and-course-materials)
+- [Applied site guidance](#applied-site-guidance)
 - [Skills-Architects](#skills-architects)
 - [Computational Designers](#claude-skills-for-computational-designers)
 
@@ -79,6 +80,22 @@ was actually inspected and its rights disposition. A later requested image use
 requires checking that particular asset's permission and credit. Original
 hypothetical transfer fragments are not reproductions or proven performance of
 the source buildings.
+
+## Applied site guidance
+
+Selected reading: *Manual for Streets* (Department for Transport/Communities and
+Local Government, Thomas Telford Publishing, 2007), *Building Bulletin 103*
+(Department for Education, June 2014), and Esri ArcGIS Pro 3.6 location-allocation
+documentation. Exact URLs, PDF hashes, inspected sections and rights dispositions
+are retained in [applied site sources](sources/applied-site-methods.md).
+
+The Manual's copyright leaf reserves Queen's Printer/Controller of HMSO and
+typographic rights with limited reproduction purposes; BB103 states Crown
+copyright 2014 and OGL v2.0 excluding logos and separately identified third-party
+material. No open redistribution permission for Esri media/software is established.
+Only original explanatory synthesis, original geometry/examples and bibliographic
+links are installed. No source drawing, diagram, screenshot, table of dimensions,
+full text, map or software is redistributed. Access does not expand those rights.
 
 ## Skills-Architects
 

@@ -82,3 +82,4 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 - Affects — [Spatial relationships and movement](../planning/spatial-relationships.md#place-movement-beside-through-or-into-a-space): a legal-looking connection can still cross an occupied activity.
 - Verified by — [Inclusive and emergency interfaces](inclusive-and-emergency-interfaces.md): test ordinary access and emergency strategy separately.
 - Affects — [Area boundary and ledger](../../program/area-ledger.md): count independent/shared support on its original boundary.
+- Verified by — [Vehicle movement and standing geometry](../../context/urban/vehicle-and-parking-geometry.md#construct-and-verify-a-movement): when a goods/service chain includes a vehicle, test its actual body sweep, entry, parked/working state and departure; a walking-route check cannot establish vehicle fit.

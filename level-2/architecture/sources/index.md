@@ -12,6 +12,7 @@ Use these records for provenance, source coverage, permissions or a specific mai
 | Current jurisdiction/version authority | [Requirements](../references/requirements.md) and [normative module](../references/normative/index.md) | The actual primary provisions remain external and must be checked when selected; local architectural reasoning is not law |
 | Four local calculator contracts and fourteen source adoption decisions | [Calculator audit](../references/calculators.md) | Supplied input definitions, formulas/limits and code remain local; static source inspection is not upstream execution |
 | Required attribution and permissions | [Third-party notices](../THIRD_PARTY_NOTICES.md) | Full MIT permissions remain installed; they do not license book/web imagery |
+| Selected vehicle, school-parcel and network-capacity mechanisms | [Applied site methods](applied-site-methods.md) | Dated primary design/technical guidance, inspected extents and exclusions; original local geometry/allocation, not universal dimensions or law |
 
 ## Locality and necessary external evidence
 
@@ -24,6 +25,11 @@ Live requirements, actual site/survey/operating information, changeable product/
 Source-family counts here mean publishing collections/institutions, not a count of intellectual works: two pinned upstream collections, one supplied library collection and 21 named external publisher/institution groups. The CUNY-hosted CMN leaflet is grouped by CMN publication with its different hosting status explicit. A host count is reported separately and is not a source-family or reading count. Library file/page identities and individual external resources remain separately inspectable.
 
 The exact upstream registry includes 73 previously explicit pinned file locators and fourteen calculator paths formerly implicit in pin/prefix/filename (87 files total), plus the two collection roots. Making the latter explicit adds no source reading. There are 53 other retained external resource locators, including the NOAA technical reference below. Counts of URL occurrences, exact URLs, fragment-normalized document URLs and reconstructed file/fragment signatures have different meanings; consolidation does not reduce the number of cited works or establish autonomy by itself.
+
+The source-family/locator totals above describe the inherited inventory. The
+three selected primary publications in [applied site methods](applied-site-methods.md)
+are additional, separately recorded readings; their presence does not imply a
+rescan of the older collections or a new normative-source claim.
 
 ## NOAA solar equations
 

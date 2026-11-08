@@ -5,6 +5,9 @@ its [accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomm
 records independent review and dot's reconciliation of the original report.
 The recovered 35-row report below remains historical; navigation does not upgrade
 its coverage judgments.
+Pass B's bounded methods and verification candidate are recorded in
+[vehicle and territorial service evidence](#pass-b-vehicle-and-territorial-service-evidence);
+independent review is pending and the historical matrix is not rescored.
 The accepted Issue #10 result is
 [`39394ad06476952c17792022613648002a6000ee`](https://github.com/Krankort224/Skills/commit/39394ad06476952c17792022613648002a6000ee),
 as recorded in its [accepted F summary](https://github.com/Krankort224/Skills/issues/10#issuecomment-6716639914).
@@ -29,6 +32,7 @@ the accepted organization and preservation plan. Task outputs belong in the issu
 - [Coursework follow-up baseline for Issue 13](#coursework-follow-up-baseline-for-issue-13)
 - [Six task-route probes](#six-task-route-probes)
 - [Pass A semantic-link audit](#pass-a-semantic-link-audit)
+- [Pass B vehicle and territorial service evidence](#pass-b-vehicle-and-territorial-service-evidence)
 
 ## Selected depth increments
 
@@ -310,3 +314,86 @@ CAD/BIM/environmental simulations;
 engineering/product capacity; current detailed normative applicability/approval.
 Pass A navigation and structural success do not establish any of those claims
 or upgrade the inherited 35-row statuses.
+
+## Pass B vehicle and territorial service evidence
+
+Accepted task baseline: `1c4157841155450aea705cbc296b80349b29b82d`.
+Acceptance-link housekeeping `9ccc068` changes only the live maintenance status
+and link to the [Pass A accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6727570803).
+Historical P/D/K/M rows and Pass A before/after probes above retain their dated
+meaning. This section records bounded new mechanisms and demonstrated cases,
+not automatic pass acceptance or a replacement competence score.
+
+### Owners and evaluated decisions
+
+| Historical gap / rows | Canonical new local owner | Demonstrated mechanism and remaining boundary |
+| --- | --- | --- |
+| Vehicle/parking/service geometry: P3, K5, K6 | [Vehicle routes and parking geometry](../references/context/urban/vehicle-and-parking-geometry.md) | Bay-angle/module projections; rigid low-speed axle/body construction; steering, overhang and bounded continuous-sweep checks; obstruction/standing/handler, protected walking and ramp/section interfaces. Articulated/dynamic traffic, actual equipment/ground capacity, fire/accessible approval and engineering remain separate. K5's cycle/street-section breadth is not certified by these car tests. |
+| Territorial public-service distribution: K3 | [Service capacity and residential groups](../references/context/urban/service-capacity-allocation.md) | Per-service/cohort demand, outside reservations, actual eligible entrance chains, row/column allocations, constrained-subset cuts and reassignments, actual parcel shapes and once-only land/population consequences. Actual admissions, operator/phase availability, whole-group policy and service-specific program remain inputs. School/preschool examples do not certify all retail/service types. |
+
+Quarter/site, program demand/area and access link to these owners conditionally;
+their original methods remain intact. Subject indexes select these questions
+without a second dispatcher. New [primary design/technical source records](../sources/applied-site-methods.md)
+identify selected extents, PDF hashes, rights and excluded foreign dimensions.
+Existing source-only/media records, source licences and all normative records
+remain unchanged; no supplied coursework parameter becomes law.
+
+### Worked and changed-input verification
+
+The vehicle worked case has 20 counted boxes but a real front-corner collision
+with the adjacent occupied bay and a separate proposed canopy column across the
+straight aisle. Widening the row pitch and selecting the permitted unroofed option
+removes those causes. Reaching 20 places needs 108.24 m² more reserved ground;
+keeping the former row length leaves 16 candidate places. A longer operator
+vehicle fails both depth and former curvature; an offset gate approach also
+fails. Source-dependent clearance, operation and technical approval stay open.
+
+Independent corner-coordinate construction in `scripts/test_site_methods.py`
+checks 2,001 poses against neighbouring parked rectangles using convex-polygon
+intersection and segment distance. At 2.5 m pitch it finds overlap; at 3.3 m
+pitch sampled minimum separation is 0.37837245 m, with interval error bound
+0.00597992 m, giving a continuous lower bound over 0.37239 m > supplied c=0.20.
+The repeated paths fit the declared module/end reservations. This is a bounded
+mathematical check, not a driving simulation or field validation.
+
+A separate changed vehicle uses L=2.8, f=1.1, r=1.0, w=1.9, δ_max=34° and
+c=0.10 m, different from the authored changed-van case. A circular passage with
+inner/outer boundaries 3.0/6.6 m rejects R=4.6 by its outer body envelope;
+R=4.2 passes the radial/steering screen. End approaches are outside this radial
+test's conclusion. No universal turning radius or template accuracy is inferred.
+
+The service worked case has 180 school places and demand 180, but groups B+C
+need 110 at their only reachable 100-place facility. A verified bypass changes
+B's actual chain from 650 to 480 m under the supplied 500 m study condition;
+the valid allocation reserves S1 70+10 and S2 50+50. Preschool 30+30 is allocated
+separately, and changing B to an indivisible preschool group fails. The bypass
+consumes 120 m² from the quarter's planted reserve exactly once. A 30×160 m
+parcel cannot replace the supplied 80×60 m school parcel solely by equal area;
+the required 65×40 m clear outdoor rectangle fails its narrow dimension.
+
+An independent enumerated allocation varies demand to 48/37/35 with capacities
+55/70: the 48 group can use both facilities, 37 only the first, 35 only the second.
+Nearest/first allocation can strand the constrained group; assigning 13…18 of
+the flexible group's seats to the first facility serves everyone. Removing its
+second route leaves a 30-place subset deficit despite aggregate supply 125≥120.
+This verifies a changed network/capacity case rather than copying the worked
+70/60/50 allocation. Whole-group and simultaneous-resource restrictions still
+need their declared independent checks.
+
+### Routes and preservation boundary
+
+N3 now follows Program or Context → demand → service allocation/parking → the
+actual quarter journeys and ground ledger when their conditions apply. From
+Access a vehicle leg directly selects motion/standing verification; an indoor
+object leg retains the accepted room/lift route. N1/N2/N4/N5/N6 routes remain
+available; section transformation, multi-building shadows, exhaust topology,
+volume and independent exhibition reasoning are not implemented in Pass B.
+
+Run `PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_skill.py` and
+`PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts -p 'test_*.py'`
+from the skill root. The added four tests check actual geometry, changed inputs,
+capacity enumeration and nonoverlapping land; they do not add a runtime calculator.
+Supplement with GFM/link/anchor checks and exact diff/preservation review.
+The final Issue handoff owns containing commit, actual command results and any
+remaining review findings. Authored/evaluated cases are not the independent
+reviewer's later unseen tests or Pass F's full 35-row re-evaluation.
