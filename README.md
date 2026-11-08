@@ -28,6 +28,23 @@ Each skill owns its `SKILL.md` and supporting resources. [AGENTS.md](AGENTS.md#u
 
 Skill levels classify responsibility, not complexity, instruction priority or subagent depth. Level 2 and Level 3 may be used directly by root or workers and may compose. Operation-specific loading remains progressive. The [migration and adoption map](#migration-and-adoption) records changed paths, preserved identities and adoption checks. The prospective `mep` skill is not created by this migration.
 
+## GitHub creation hook for Codex
+
+The [project hook](.codex/hooks.json) checks new issues and pull requests before Codex calls GitHub MCP or runs a standard `gh issue create` / `gh pr create` command. It asks the agent to verify the requested action and shows the detected repository. It requires a direct user command for the same object type and repository in the active turn. In the shell, use a standalone command with `--repo OWNER/REPO` immediately after `create`.
+
+Give the drafting instructions first. When ready to create the object, send one of these as a separate message:
+
+- `Создай issue в OWNER/REPO`
+- `Создай PR в OWNER/REPO`
+- `Создай черновой PR в OWNER/REPO`
+- `Создай issue и PR в OWNER/REPO`
+
+Open a trusted checkout in local Codex with Python 3 available. Review and trust both entries via `/hooks` in the CLI or **Settings → Hooks** in the desktop app. For multiple repositories, put the two entries into your user-level hooks file and point both commands to the absolute path of the same script. The [Codex hooks documentation](https://developers.openai.com/codex/hooks) describes trust and supported surfaces.
+
+This guard applies to the configured Codex tool paths. Use the checked GitHub MCP or CLI route for creation. Browser actions, arbitrary scripts that call the GitHub API, and cloud-orchestrated Work sessions outside local hook support require separate controls.
+
+Run the local decision checks with `python3 -B .codex/hooks/test_github_create.py`.
+
 ## Repository skills
 
 ### Level 0

@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/.codex/hooks/github_create.py\"",
+            "commandWindows": "py -3 (Join-Path (git rev-parse --show-toplevel) '.codex/hooks/github_create.py')"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|mcp__.*(?:__|github_)(?:create_issue|create_pull_request|issue_write|pull_request_write))$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/.codex/hooks/github_create.py\"",
+            "commandWindows": "py -3 (Join-Path (git rev-parse --show-toplevel) '.codex/hooks/github_create.py')",
+            "statusMessage": "Checking GitHub creation authorization"
+          }
+        ]
+      }
+    ]
+  }
+}
