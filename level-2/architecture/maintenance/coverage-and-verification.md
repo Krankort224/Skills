@@ -407,7 +407,9 @@ Accepted task baseline: `b3d323e76392c6b8e00337998726320082f753cd`.
 Acceptance-only housekeeping `1be7f6d` records dot's accepted B state and durable
 summary. B's dispatch/handoff were removed only after summary/body/reference
 readback; A/B accepted summaries remain. This evidence describes the containing
-Pass C candidate, pending independent review/acceptance, not an automatic
+Pass C accepted result at `375e0b2e533c19ebf2a6c152ce02be493202d7f7`;
+its [accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6728150751)
+records independent verification and dot's decision. This is not an automatic
 upgrade of historical K7 or a replacement of the 35-row benchmark.
 
 ### Owner and consequential mechanism
