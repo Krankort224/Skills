@@ -43,7 +43,7 @@ and [calculators](../calculators.md) for their respective decisions and limits.
 
 ## Provenance and use limits
 
-The operative reasoning is local; external reading is not a runtime prerequisite. [Program readings and adaptations](../sources.md#program-and-space) and [performance/evidence readings](../sources.md#performance-and-coordination) retain the source identity, inspected extent and limitations. Use [requirements](../requirements.md) for jurisdiction-specific applicability.
+The operative reasoning is local; external reading is not a runtime prerequisite. [Program readings and adaptations](../../sources/upstream-packs.md#program-and-space) and [performance/evidence readings](../../sources/upstream-packs.md#performance-and-coordination) retain the source identity, inspected extent and limitations. Use [requirements](../requirements.md) for jurisdiction-specific applicability.
 
 ## Related decisions
 

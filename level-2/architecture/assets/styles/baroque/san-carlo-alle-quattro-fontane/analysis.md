@@ -5,8 +5,8 @@ Rome, Italy. **Architect:** Francesco Borromini; the facade was completed after
 his death by his nephew Bernardo Castelli. **Context:** Roman Baroque.
 The church operator verifies the commission and phased authorship, rather than
 a single undifferentiated completion date.
-[Operator chronology](https://sancarlino.org/historia-it/cronologia/),
-[facade account](https://sancarlino.org/espacios/la-facciata/).
+[Operator chronology](../../../../sources/precedents.md#w-019),
+[facade account](../../../../sources/precedents.md#w-018).
 
 ## Contents
 
@@ -23,9 +23,9 @@ from 1635, church construction from 1638 and completion of the complex in 1644.
 Its separate church account summarizes construction as 1634–1641; Rome's tourism
 authority summarizes an initial 1638–1642 period. These summaries have different
 boundaries and do not establish one exact completion date for every part.
-[Chronology](https://sancarlino.org/historia-it/cronologia/),
-[church account](https://sancarlino.org/espacios/la-chiesa/),
-[Rome tourism authority](https://www.turismoroma.it/en/places/church-san-carlo-alle-quattro-fontane).
+[Chronology](../../../../sources/precedents.md#w-019),
+[church account](../../../../sources/precedents.md#w-017),
+[Rome tourism authority](../../../../sources/precedents.md#w-044).
 
 The lower facade tier was erected by Francesco before his death in 1667;
 Bernardo completed the upper tier. The operator dates individual sculptures
@@ -34,8 +34,8 @@ under 1680. Consequently, neither “built in 1641” nor “entirely completed 
 Francesco in 1667” describes the present ensemble adequately. The later floor
 finish and photographed fittings also should not be assumed original merely
 because they appear in a present interior photograph.
-[Facade](https://sancarlino.org/espacios/la-facciata/),
-[chronology](https://sancarlino.org/historia-it/cronologia/).
+[Facade](../../../../sources/precedents.md#w-018),
+[chronology](../../../../sources/precedents.md#w-019).
 
 This history matters architecturally: the street elevation and the interior
 cannot be treated as one simultaneous operation, and a visible stylistic family
@@ -58,15 +58,15 @@ front. Side fields retreat while the entrance field advances; the upper central
 opening and large oval frame complicate a simple repetition of the lower tier.
 The photo is near-frontal and cannot establish the whole approach or hidden
 wall construction.
-[Inspected facade still](https://www.sancarlino.es/wp-content/uploads/2023/08/Facciata.jpg),
-linked from the [operator's account](https://sancarlino.org/espacios/la-facciata/).
+[Inspected facade still](../../../../sources/precedents.md#w-042),
+linked from the [operator's account](../../../../sources/precedents.md#w-018).
 
 **Interior observation — operator photograph.** The altar view shows a light,
 largely continuous wall surface, a strong cornice curving around the room,
 columns framing openings, and a layered arch/pendentive transition above.
 The image crops the upper dome and does not show the whole occupied floor.
 It verifies visible continuity and articulation, not a measured daylight effect.
-[Inspected altar/intermediate-zone still](https://sancarlino.org/wp-content/uploads/2025/01/ALTAR-SAN-CARLINO-DESPUES-DE-LA-REFORMA.jpg).
+[Inspected altar/intermediate-zone still](../../../../sources/precedents.md#w-020).
 
 **Source description, not independently reconstructed geometry.** The operator
 describes an elongated Greek-cross starting scheme reshaped by concave and
@@ -77,8 +77,8 @@ useful description of the dominant interior field, but is insufficient for the
 wall perimeter, dome support zone or complete complex. No exact circle centers,
 triangular construction, ellipse equation or governing proportional ratio was
 verified here.
-[Church](https://sancarlino.org/espacios/la-chiesa/),
-[Rome account](https://www.turismoroma.it/en/places/church-san-carlo-alle-quattro-fontane).
+[Church](../../../../sources/precedents.md#w-017),
+[Rome account](../../../../sources/precedents.md#w-044).
 
 ## Interpretation and competing explanations
 
@@ -100,7 +100,7 @@ concentrated interior. Borrowing one perimeter for every room would erase the
 distinction that makes the larger composition intelligible. Likewise, the
 transverse oval described at Bernini's Sant'Andrea al Quirinale shows why an
 oval does not itself determine the arrival direction.
-[Sant'Andrea, Rome tourism authority](https://turismoroma.it/en/places/church-santandrea-al-quirinale).
+[Sant'Andrea, Rome tourism authority](../../../../sources/precedents.md#w-021).
 
 ## A small changed brief
 
@@ -147,10 +147,10 @@ is installed; access does not imply redistribution permission.
 | Evidence | Actual inspected extent and limit |
 | --- | --- |
 | P15 / `ap9-p15`, Francis D. K. Ching, *Архитектура: форма, пространство, композиция*, Russian 2005 edition, English-source copyright 1996 | Library `literature/architecture/ap9-p15-form-space-order.pdf`, SHA-256 `d6f0d6f417409a862e859028a6d2402731f33bf83132cd7a95ca1de3fcb9ce1c`. Object index file404/printed389 located San Carlo; full-page visual reading file233/printed218 established the relative complex plan. Its broad 1634–1667 caption does not resolve phase dates. The book's drawing is secondary evidence, not a construction survey. No source drawing, dimensions or other projects on the leaf are reproduced. |
-| [Operator chronology](https://sancarlino.org/historia-it/cronologia/) | Entries 1634–1680, plus address and institutional context. Its compressed dates are retained with qualifications above. |
-| [Operator church](https://sancarlino.org/espacios/la-chiesa/) | Architectural text from identity through light/altar; linked altar still visually inspected in full. Symbolism is not adopted as proof of construction geometry. No complete section or upper-dome still inspected. |
-| [Operator facade](https://sancarlino.org/espacios/la-facciata/) | Lower-tier, inter-tier and upper-tier text; linked full-facade still inspected. Visible finish and form do not establish concealed support or present material condition. |
-| [Rome tourism authority](https://www.turismoroma.it/en/places/church-san-carlo-alle-quattro-fontane) and [Sant'Andrea account](https://turismoroma.it/en/places/church-santandrea-al-quirinale) | Textual corroboration and one orientation/material counterexample. No additional plan inspection is claimed. |
+| [Operator chronology](../../../../sources/precedents.md#w-019) | Entries 1634–1680, plus address and institutional context. Its compressed dates are retained with qualifications above. |
+| [Operator church](../../../../sources/precedents.md#w-017) | Architectural text from identity through light/altar; linked altar still visually inspected in full. Symbolism is not adopted as proof of construction geometry. No complete section or upper-dome still inspected. |
+| [Operator facade](../../../../sources/precedents.md#w-018) | Lower-tier, inter-tier and upper-tier text; linked full-facade still inspected. Visible finish and form do not establish concealed support or present material condition. |
+| [Rome tourism authority](../../../../sources/precedents.md#w-044) and [Sant'Andrea account](../../../../sources/precedents.md#w-021) | Textual corroboration and one orientation/material counterexample. No additional plan inspection is claimed. |
 
 The analysis establishes a bounded precedent reading. It does not establish
 an exact geometrical reconstruction, measured environmental performance,

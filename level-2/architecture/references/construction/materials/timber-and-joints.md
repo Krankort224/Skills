@@ -257,7 +257,7 @@ erection, access and roof evidence before accepting the terrace.
 
 Selected P05 pages, the glulam/plywood atlas schemes and their critical
 commentaries, and the Anikin house example are mapped with exact file/printed
-locators in [sources](../../sources.md#timber-joints-and-house-interfaces).
+locators in [sources](../../../sources/library.md#timber-joints-and-house-interfaces).
 Only original paraphrase, decision procedures and the hypothetical terrace enter
 this reference. No copied scheme, house drawing, fastener layout, fire rating,
 span table, foreign-code value or historical treatment recipe is supplied.

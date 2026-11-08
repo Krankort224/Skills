@@ -71,7 +71,7 @@ reading, reroute them further or revisit floor level/room height with the brief.
 
 ## Provenance and use limits
 
-The operative reasoning is local; external reading is not a runtime prerequisite. [Pinned readings, adaptations and exclusions](../../references/sources.md#performance-and-coordination) retain the source identity, inspected extent and limitations. Use [requirements](../../references/requirements.md) for jurisdiction-specific applicability.
+The operative reasoning is local; external reading is not a runtime prerequisite. [Pinned readings, adaptations and exclusions](../../sources/upstream-packs.md#performance-and-coordination) retain the source identity, inspected extent and limitations. Use [requirements](../../references/requirements.md) for jurisdiction-specific applicability.
 
 ## Methods used in this study
 

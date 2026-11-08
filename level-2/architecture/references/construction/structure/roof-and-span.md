@@ -213,7 +213,7 @@ Its bearing/rotation examples do not replace the complete restraint mechanism
 above.
 
 The selected P05, Engel and ASK material and exact file/printed-page mappings
-are recorded in [sources](../../sources.md#architecture-library-selected-content).
+are recorded in [sources](../../../sources/library.md#architecture-library-selected-content).
 Drawings, force diagrams, code values, product details and span tables were not
 copied into this reference. ASK's erroneous shear-based explanation of arch
 thrust is not adopted; compression/force-path reasoning was checked against the

@@ -25,7 +25,7 @@ all its buildings share one construction or plan. Here the selected branch is
 the framed, planar domestic vocabulary exemplified by
 [Villa Savoye](../../../assets/styles/modernism/villa-savoye/analysis.md).
 Its five-point manifesto should not stand for the entire movement.
-The [CMN account](https://www.monuments-nationaux.fr/conservation-et-recherche/patrimoine-bati/familles-de-monuments/les-villas-de-l-avant-garde-moderne/la-villa-savoye)
+The [CMN account](../../../sources/precedents.md#w-039)
 places industrial standardization among the interwar ambitions; the actual
 villa's fabrication history qualifies any assumption that an industrial image
 means factory production. “Modern,” “minimal” and “International Style” are
@@ -225,11 +225,11 @@ alone does not inherit the Barbican's urban mechanism or historical identity.
 
 ## Evidence and limits
 
-Definitions are bounded by the [V&A Modernism collection introduction](https://www.vam.ac.uk/collections/modernism),
-[Frank Lloyd Wright Trust's three-page organic architecture account](https://flwright.org/sites/default/files/ckfinder/userfiles/files/Wright-Organic-Architecture.pdf)
-and [RIBA Brutalism account](https://www.riba.org/explore/riba-collections/architectural-styles/brutalism-movement/).
+Definitions are bounded by the [V&A Modernism collection introduction](../../../sources/precedents.md#w-050),
+[Frank Lloyd Wright Trust's three-page organic architecture account](../../../sources/precedents.md#w-013)
+and [RIBA Brutalism account](../../../sources/precedents.md#w-041).
 Historical observations and inspected views are identified in each case, with
-the precise library reading and rights disposition in [sources](../../sources.md).
+the precise library reading and rights disposition in [sources](../../../sources/index.md).
 The interpretation, alternatives, design checks and hypothetical revisions
 above are original architectural reasoning. They are not source floor plans,
 engineering solutions, performance predictions or jurisdictional requirements.

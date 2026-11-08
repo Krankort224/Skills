@@ -14,10 +14,10 @@ These bundled tools make preliminary numeric comparisons for architectural desig
 
 All fourteen source scripts below were retrieved and inspected at these immutable revisions. Findings are static source-review findings; the upstream scripts were not executed. This table owns the per-calculator adoption decisions.
 
-- **A**: [Abhinavbwj/Skills-Architects](https://github.com/Abhinavbwj/Skills-Architects/tree/30a0845dddcaebd765fc396059573d02e99c5b63), pin `30a0845dddcaebd765fc396059573d02e99c5b63`. Script prefix `skills/architect-calculator/scripts/`.
-- **B**: [Abhinavbwj/Claude-skills-for-Computational-Designers](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/tree/7a090c9ddc92e441b1419910673edbcfa7a962ed), pin `7a090c9ddc92e441b1419910673edbcfa7a962ed`. Script prefix `skills/cd-calculator/scripts/`.
+- **A**: [Abhinavbwj/Skills-Architects](../sources/upstream-packs.md#pack-a), pin `30a0845dddcaebd765fc396059573d02e99c5b63`. Script prefix `skills/architect-calculator/scripts/`.
+- **B**: [Abhinavbwj/Claude-skills-for-Computational-Designers](../sources/upstream-packs.md#pack-c), pin `7a090c9ddc92e441b1419910673edbcfa7a962ed`. Script prefix `skills/cd-calculator/scripts/`.
 
-Both [A LICENSE](https://github.com/Abhinavbwj/Skills-Architects/blob/30a0845dddcaebd765fc396059573d02e99c5b63/LICENSE) and [B LICENSE](https://github.com/Abhinavbwj/Claude-skills-for-Computational-Designers/blob/7a090c9ddc92e441b1419910673edbcfa7a962ed/LICENSE) contain the MIT License and `Copyright (c) 2026 Abhinav Bhardwaj`. Revised subsets retain attribution in the script; redistribution must include the full copyright and permission notice in [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md). Do not replace the notices with only a hyperlink.
+Both [A LICENSE](../sources/upstream-packs.md#a-001) and [B LICENSE](../sources/upstream-packs.md#c-001) contain the MIT License and `Copyright (c) 2026 Abhinav Bhardwaj`. Revised subsets retain attribution in the script; redistribution must include the full copyright and permission notice in [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md). Do not replace the notices with only a hyperlink.
 
 ## Per-script decisions
 
@@ -82,7 +82,7 @@ Outputs: `floor_area_ratio = GFA/site`, `site_coverage_pct = footprint/site × 1
 
 Uses hour angle `15(time−12)` and spherical solar geometry. Output keys: `altitude_deg`, `azimuth_deg_clockwise_from_north` (north=0/east=90/south=180/west=270), `sun_above_geometric_horizon`, `shadow_length_m`, `shadow_azimuth_deg_clockwise_from_north`. Shadow length is height/tan(altitude). Shadows are null at/below the geometric horizon (numerical tolerance: sine altitude ≤1e−12). Azimuth is null at zenith/nadir (horizontal component ≤1e−12) and at geographic poles where local north is undefined. Zenith shadow length tends to zero and its direction is null.
 
-The corrected relations were checked against [NOAA General Solar Position Calculations](https://gml.noaa.gov/grad/solcalc/solareqns.PDF), especially its hour-angle, zenith and north-clockwise azimuth conventions. Solar time is required because clock conversion needs longitude, equation of time and UTC offset. This tool does not perform that conversion. It ignores refraction, solar disk size, terrain, nearby obstruction, sloped surfaces, receiver elevation, diffuse light and weather. It is geometric early-design comparison, not a surveyed solar-access finding or irradiance simulation.
+The corrected relations were checked against [NOAA General Solar Position Calculations](../sources/index.md#noaa-solar-equations), especially its hour-angle, zenith and north-clockwise azimuth conventions. Solar time is required because clock conversion needs longitude, equation of time and UTC offset. This tool does not perform that conversion. It ignores refraction, solar disk size, terrain, nearby obstruction, sloped surfaces, receiver elevation, diffuse light and weather. It is geometric early-design comparison, not a surveyed solar-access finding or irradiance simulation.
 
 ```json
 {"latitude_deg":45,"declination_deg":0,"solar_time_hours":12,"object_height_m":10}

@@ -185,7 +185,7 @@ local header would undo the intended nonbearing/movement strategy.
 ## Source boundary
 
 Selected P05 and ASK03/05/08 pages, identities and exclusions are recorded in
-[sources](../../sources.md#architecture-library-selected-content). Source diagrams,
+[sources](../../../sources/library.md#architecture-library-selected-content). Source diagrams,
 numeric reinforcement/spacing/bearing recipes and generic cutting permission
 are not installed. Photos establish visible arrangements, not tested connection
 capacity or concealed construction. The worked revision is original, uses

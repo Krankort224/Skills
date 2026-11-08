@@ -5,7 +5,7 @@ brief. A site boundary is not a verified buildable envelope. Keep observed
 conditions, project preferences and statutory restrictions distinct; select
 applicable sources through [requirements](../../requirements.md). Missing evidence
 allows provisional alternatives, not invented site facts. Methods are adapted
-locally; provenance is in [sources](../../sources.md).
+locally; provenance is in [sources](../../../sources/index.md).
 
 ## Contents
 

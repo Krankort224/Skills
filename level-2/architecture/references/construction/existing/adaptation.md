@@ -380,7 +380,7 @@ affected activity; a fictional detailed schedule cannot substitute for them.
 ## Source boundary
 
 Selected Neufert and Ching fragments, exact identities and page extents belong
-in [sources](../../sources.md). The local methods are original synthesis: Neufert
+in [sources](../../../sources/index.md). The local methods are original synthesis: Neufert
 informs differentiated interventions, condition/history/survey evidence and the
 structural and building-physics consequences of reuse; Ching informs the
 retained-substrate, drainage, old/new movement and separately designed support

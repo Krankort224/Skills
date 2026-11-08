@@ -14,9 +14,9 @@ or the general [precedent-reading method](../../../../references/composition/sty
 
 **Reported facts.** Villa Savoye and its gardener's lodge are at Poissy,
 France, dated 1928–1931 by the
-[Fondation Le Corbusier](https://www.fondationlecorbusier.fr/oeuvre-architecture/realisations-villa-savoye-et-loge-du-jardinier-poissy-france-1928-1931/).
+[Fondation Le Corbusier](../../../../sources/precedents.md#w-034).
 Attribute the villa to **Le Corbusier and Pierre Jeanneret**: the
-[CMN history](https://www.villa-savoye.fr/decouvrir/histoire-de-la-villa-savoye)
+[CMN history](../../../../sources/precedents.md#w-051)
 identifies Jeanneret's assistance. The foundation identifies a weekend-house
 commission, its purist/five-point character, the automobile-related ground-floor
 curve, a ramp alongside a stair, later restoration and 2016 World Heritage
@@ -30,7 +30,7 @@ conservation history, not a proven contemporary construction system.
 its footer. Its small plan/diagram is used only for the central inclined route
 within an outer order. The **April 2008 CMN visitor leaflet**, full file pages
 1–2, was also visually inspected through its
-[CUNY-hosted copy](https://openlab.citytech.cuny.edu/bt2resources/files/2020/01/docvisite_fichier_12B.villa_.savoye.EN_.pdf).
+[CUNY-hosted copy](../../../../sources/precedents.md#w-016).
 Page 2 labels ground, first and second-floor plans; first-floor rooms lie beside
 the terrace, with ramp and stair occupying distinct positions. The FLC page's
 Marc Tulane exterior photograph was inspected: a raised horizontal volume,
@@ -110,7 +110,7 @@ geometry, room dimensions or accessibility claim is transferred.
 ## Provenance and rights
 
 P15 source identity and selected reading are recorded in
-[sources](../../../../references/sources.md). The FLC photograph is credited
+[sources](../../../../sources/index.md). The FLC photograph is credited
 © FLC/ADAGP / Marc Tulane / Dist. Centre des monuments nationaux (Base Regards);
 the leaflet credits its illustration and production separately. No redistribution
 license was verified for these views or P15. Only original paraphrase, analysis

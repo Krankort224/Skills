@@ -192,7 +192,7 @@ or move a fixed door to hide the failure.
 The locally written mechanisms and example adapt selected, actually inspected
 P15 pages and composition-course PDF material. Exact identities, page conventions,
 reading limits and rejected prescriptions are in
-[the library source map](../../sources.md#architecture-library-selected-content).
+[the library source map](../../../sources/library.md#architecture-library-selected-content).
 Ordinary design use needs this method and relevant local interfaces, not the
 external books. No source illustration, long quotation, source dimension or
 historical/person-centered account is imported.

@@ -198,7 +198,7 @@ or indicator conflicts and do not infer requirements from another student's work
 Reconstruct a relevant count/area boundary when reported indicators conflict
 with the drawings; do not silently repair their figures or calculate a new
 density from incompatible values. Exact example observations belong in
-[sources](../../sources.md#architecture-library-selected-content), not as runtime
+[sources](../../../sources/library.md#architecture-library-selected-content), not as runtime
 instructions to imitate a named project.
 
 ## Source boundary

@@ -81,6 +81,6 @@ Each case identifies its inspected text/views and absent evidence. A precise
 pointer to a drawing is useful provenance but is not a claim that its geometry
 was read. Missing or later-altered material limits the corresponding analysis.
 Uncertain attribution or disagreement remains visible, not repaired by a style
-label. See [sources](../../sources.md) for identity, reading scope and adaptation, and
+label. See [sources](../../../sources/index.md) for identity, reading scope and adaptation, and
 the [rights boundary](../../../THIRD_PARTY_NOTICES.md) before including an external
 image in a later requested deliverable.

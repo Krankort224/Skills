@@ -127,10 +127,10 @@ class GraphIntegrityTests(unittest.TestCase):
     def test_provenance_or_maintenance_cannot_be_the_only_runtime_route(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            (root / 'references').mkdir()
+            (root / 'sources').mkdir()
             (root / 'maintenance').mkdir()
-            (root / 'SKILL.md').write_text('# Entry\n\n[Sources](references/sources.md)\n[Plan](maintenance/plan.md)\n')
-            (root / 'references/sources.md').write_text('# Sources\n\n[Recipient](../method.md)\n')
+            (root / 'SKILL.md').write_text('# Entry\n\n[Sources](sources/index.md)\n[Plan](maintenance/plan.md)\n')
+            (root / 'sources/index.md').write_text('# Sources\n\n[Recipient](../method.md)\n')
             (root / 'maintenance/plan.md').write_text('# Plan\n\n[Future owner](../method.md)\n')
             (root / 'method.md').write_text('# Method\n\nComplete local reasoning.\n')
             expected = {'path': 'method.md',

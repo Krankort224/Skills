@@ -10,10 +10,10 @@
 ## Identity and evidence
 
 **Object:** Notre-Dame de Chartres, Chartres, France. UNESCO's [description and
-Outstanding Universal Value](https://whc.unesco.org/en/list/81)
+Outstanding Universal Value](../../../../sources/precedents.md#w-022)
 identify the cathedral with French Gothic architecture, a Marian pilgrimage
 destination and rebuilding after the **1194** fire. The rectorate's [visit
-account](https://www.cathedrale-chartres.org/en/visite/discover/the-cathedral/),
+account](../../../../sources/precedents.md#w-027),
 sections “The Interior” and “Visit the Exterior,” gives **1194–1220** for the main
 building and distinguishes the earlier south spire from the **1506–1513**
 Flamboyant north spire. “High Gothic main body with earlier and later fabric”
@@ -21,10 +21,10 @@ is this study's bounded classification; it does not assign one date or phase
 to the whole monument.
 
 **Attribution:** the Centre International du Vitrail's [transept-sculpture
-account](https://www.centre-vitrail.org/fr/ressources/la-cathedrale-de-chartres/les-sculptures-de-la-cathedrale/)
+account](../../../../sources/precedents.md#w-028)
 describes the architects, sculptors and glaziers as anonymous. This supports
 withholding a named architect for the main medieval campaign. The CMN's
-[history, north-tower section](https://www.chartres-cathedrale.fr/decouvrir/histoire-du-monument)
+[history, north-tower section](../../../../sources/precedents.md#w-029)
 names **Jehan le Texier** for the later spire; that attribution must not be
 transferred to the thirteenth-century building.
 

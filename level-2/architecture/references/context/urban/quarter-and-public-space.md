@@ -367,7 +367,7 @@ seasonal water interfaces); Ching P15 file203/printed188,205/190,213/198,
 229/214,235/220 and353/338 (organizational families and hierarchy); and observed
 layering of boundary, proposal, use and movement in coursework P23 file3–7,
 sheets2–6. Each selected printed locator was checked visually. Exact identities,
-hashes, reading scope and exclusions belong in the maintained [source map](../../sources.md).
+hashes, reading scope and exclusions belong in the maintained [source map](../../../sources/index.md).
 
 The operational, phasing and ledger procedures are original bounded synthesis,
 not verbatim book prescriptions or proof from the student proposal. Illustrative

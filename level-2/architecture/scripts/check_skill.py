@@ -13,7 +13,7 @@ OPERATIONS = ('brief', 'concept', 'development', 'analysis', 'optimization',
               'presentation', 'documentation', 'review')
 SUBJECTS = ('context', 'program', 'space', 'composition', 'construction',
             'performance', 'typologies', 'methods')
-REFERENCES = ('index', 'requirements', 'calculators', 'sources') + tuple(
+REFERENCES = ('index', 'requirements', 'calculators') + tuple(
     name + '/index' for name in SUBJECTS)
 NORMATIVE_GROUPS = ('federal-framework', 'territory-and-special-conditions',
                     'building-typologies', 'fire-and-accessibility',
@@ -59,7 +59,7 @@ def document_role(name):
     path = Path(name)
     if path.parts[0] == 'maintenance':
         return 'maintenance'
-    if name in ('references/sources.md', 'THIRD_PARTY_NOTICES.md'):
+    if path.parts[0] == 'sources' or name == 'THIRD_PARTY_NOTICES.md':
         return 'provenance'
     if name == 'SKILL.md':
         return 'entry'
@@ -160,6 +160,8 @@ def validate(root=ROOT):
 
     required = ['SKILL.md', 'agents/openai.yaml', 'THIRD_PARTY_NOTICES.md',
                 'scripts/calculators.py', 'scripts/test_calculators.py']
+    required += ['sources/' + name + '.md' for name in
+                 ('index', 'upstream-packs', 'library', 'precedents')]
     required += ['operations/' + name + '.md' for name in OPERATIONS]
     required += ['references/' + name + '.md' for name in REFERENCES]
     required += ['references/normative/index.md', 'references/normative/ru/index.md',

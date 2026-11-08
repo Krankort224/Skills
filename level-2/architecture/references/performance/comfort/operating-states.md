@@ -335,7 +335,7 @@ project register, simulation suite or engineering calculator is required.
 Selected Neufert mechanisms inform distinguishing light/view, changing sun and
 obstruction, adjustable shade/ventilation interaction, and occupied approach,
 reach and maneuvering. Exact identities, individual file/printed locators,
-reading extents, adoption and exclusions belong in [sources](../../sources.md).
+reading extents, adoption and exclusions belong in [sources](../../../sources/index.md).
 The integrated state procedure, room alternatives, coordinate geometry,
 changeover/failure reasoning and control trial are original bounded synthesis.
 No source room, image, schedule or dimensional table is reproduced.

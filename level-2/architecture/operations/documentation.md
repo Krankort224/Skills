@@ -66,4 +66,4 @@ evacuation question before claiming the new arrangement works. Do not resize
 the opening or regenerate the entire drawing set to conceal the mismatch.
 
 
-Use [design development](../references/methods/design-development.md) for the spatial content of the issue and [sources](../references/sources.md#documentation-coordination) only for provenance.
+Use [design development](../references/methods/design-development.md) for the spatial content of the issue and [sources](../sources/upstream-packs.md#documentation-coordination) only for provenance.

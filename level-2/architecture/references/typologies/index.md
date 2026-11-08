@@ -50,7 +50,7 @@ operating evidence to choose; there is no universal best family.
 
 ## Source and applicability boundary
 
-The source map in [sources](../sources.md#architecture-library-selected-content)
+The source map in [sources](../../sources/library.md#architecture-library-selected-content)
 records the identified scans, actual read pages and adoption limits. Selected
 Neufert hotel, school and library pages inform the activity/support relationships
 and spatial alternatives. Housing uses the established local dwelling/access

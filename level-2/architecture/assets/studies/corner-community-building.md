@@ -58,7 +58,7 @@ feasibility or a selected building model.
 
 ## Provenance and use limits
 
-The operative reasoning is local; external reading is not a runtime prerequisite. [Pinned readings, adaptations and exclusions](../../references/sources.md#composition-and-style) retain the source identity, inspected extent and limitations. These sources are not project requirements. Foreign codes, certification credits, thresholds, numeric benchmarks, modeling workflows and prescribed scoring weights are not adopted. Use [requirements](../../references/requirements.md) for jurisdiction-specific applicability.
+The operative reasoning is local; external reading is not a runtime prerequisite. [Pinned readings, adaptations and exclusions](../../sources/upstream-packs.md#composition-and-style) retain the source identity, inspected extent and limitations. These sources are not project requirements. Foreign codes, certification credits, thresholds, numeric benchmarks, modeling workflows and prescribed scoring weights are not adopted. Use [requirements](../../references/requirements.md) for jurisdiction-specific applicability.
 
 ## Methods used in this study
 

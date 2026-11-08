@@ -14,30 +14,30 @@ or the general [precedent-reading method](../../../../references/composition/sty
 
 **Reported facts.** The Barbican Estate, City of London, UK, was designed by
 **Chamberlin, Powell and Bon** for the City of London Corporation. The City's
-[management-guidelines landing page](https://www.cityoflondon.gov.uk/services/planning/historic-environment/listed-buildings/barbican-estate-listed-building-management-guidelines)
+[management-guidelines landing page](../../../../sources/precedents.md#w-033)
 dates the mixed-use development 1963–1982 and identifies its Grade II listing
-in 2001. Its [2019 anniversary account](https://news.cityoflondon.gov.uk/barbican-estate-celebrates-50th-anniversary/)
+in 2001. Its [2019 anniversary account](../../../../sources/precedents.md#w-015)
 distinguishes first residential occupation in 1969, residential completion
 in 1976 and the arts centre opening in 1982, on a site heavily damaged during
 the Blitz. Do not turn the different dates for ensemble, housing and centre
 into a single unexplained completion year.
 
 **Actually inspected.** The City's single-page
-[Barbican Estate Map](https://www.cityoflondon.gov.uk/assets/Services-DCCS/barbican-estate/barbican-estate-map.pdf)
+[Barbican Estate Map](../../../../sources/precedents.md#w-030)
 was rendered and viewed in full. It distinguishes street and podium levels,
 highwalks, private gardens, civic destinations and water; bridges connect
 parts of the pedestrian network. It is an explanatory map, not a measured
 dwelling plan or a live confirmation of accessible routes.
 
 Selected text was read from official
-[Volume II, Residential Buildings](https://www.cityoflondon.gov.uk/assets/Services-Environment/spd-barbican-estate-listed-building-management-guidelines-volume-II.pdf),
+[Volume II, Residential Buildings](../../../../sources/precedents.md#w-031),
 §2.3 and §§2.6.4–2.6.7, and
-[Volume IV, Landscape](https://www.cityoflondon.gov.uk/assets/Services-Environment/spd-barbican-estate-listed-building-management-guidelines-volume-IV.pdf),
+[Volume IV, Landscape](../../../../sources/precedents.md#w-032),
 §§1.3.1–1.3.6. Full leaves II file/printed 12 and 16 and IV file/printed 13 and 14
 were visually checked, including footers. II describes towers, raised slabs
 and plinth dwellings; IV explains the raised pedestrian realm and its limited
 continuation beyond the estate. The
-[operator's building page](https://www.barbican.org.uk/our-story/architecture/our-building)
+[operator's building page](../../../../sources/precedents.md#w-023)
 and its tower photograph were inspected: repeated balcony bands, vertical
 elements and contrasting tiled lower surfaces are visible. RIBA identifies
 the worked aggregate treatment. No measured building section, dwelling plan,
@@ -134,7 +134,7 @@ Barbican replica or a completed learning-building design.
 ## Provenance and rights
 
 Precise source identities, selected views and reading extents are retained in
-[sources](../../../../references/sources.md). The map carries City of London
+[sources](../../../../sources/index.md). The map carries City of London
 and Ordnance Survey notices; the operator's image is hosted with its building
 account. No verified redistribution license was established for the map,
 photograph or management documents. Only original paraphrase, analysis and

@@ -3,7 +3,7 @@
 Use this knowledge to generate a spatial solution from the
 [program and relationships](../../program/relationships.md), or to repair a selected layout.
 The schemes are conditional design tools, not prescribed building types.
-[Sources](../../sources.md) records the upstream basis and exclusions. Worked plan
+[Sources](../../../sources/index.md) records the upstream basis and exclusions. Worked plan
 dimensions, product envelopes and heights are hypothetical design inputs,
 not normative minima, engineering sizes or evidence of local compliance.
 A source-backed constraint is explicitly identified with its selected record

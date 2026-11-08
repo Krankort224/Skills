@@ -199,7 +199,7 @@ interfaces. No unsupported below-ground solution is presented as completed.
 ## Source boundary
 
 Selected ASK01/ASK02 diagrams and exact page locators are recorded in
-[sources](../../sources.md#ground-frame-and-core-selections). The procedures above are
+[sources](../../../sources/library.md#ground-frame-and-core-selections). The procedures above are
 original architectural inferences, not execution instructions for excavation or
 foundation engineering. Historical normative references, influence-angle rules,
 frost depths, soil capacities, drain dimensions and source drawings are not

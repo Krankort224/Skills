@@ -219,7 +219,7 @@ This procedure is original synthesis extending the existing composition method.
 Selected P15 preface/introduction distinguishes learning architectural
 relationships from reproducing projects and connects spatial order with movement,
 technology, program and context. Exact identity, file/printed-page reading extent
-and exclusions are in [sources](../../sources.md). It does not establish historical
+and exclusions are in [sources](../../../sources/index.md). It does not establish historical
 classifications or verify every case in this corpus. Direction profiles and
 individual cases own their actual case-specific evidence.
 

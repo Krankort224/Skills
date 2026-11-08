@@ -49,4 +49,4 @@ classification, food hygiene, fire/access, acoustic and engineering conclusions.
 
 ## Evidence and applicability
 
-Housing/shared-amenity and mixed-use tests are original synthesis using the established local dwelling/access methods; selected source-library pages inform learning, library and short-stay activity/support relationships. No published plan, image, table or numeric benchmark is reproduced. [Exact source reading and adoption limits](../sources.md#architecture-library-selected-content) retain the inspected/uninspected distinction. [Requirements](../requirements.md) select actual jurisdiction and source applicability.
+Housing/shared-amenity and mixed-use tests are original synthesis using the established local dwelling/access methods; selected source-library pages inform learning, library and short-stay activity/support relationships. No published plan, image, table or numeric benchmark is reproduced. [Exact source reading and adoption limits](../../sources/library.md#architecture-library-selected-content) retain the inspected/uninspected distinction. [Requirements](../requirements.md) select actual jurisdiction and source applicability.

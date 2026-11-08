@@ -1,8 +1,8 @@
 # Architecture migration map — Issue 10, Stage B
 
-Status: A+B map accepted at `4ad750b7733bd828fb1d99d753e48444387f17e3`; C accepted at `92018736fa4688d2f390d0bd308069f0a810d5cc`; D remaining migration/navigation implemented in this tree, pending independent review. This map accounts for the 67 files at `d260c6cb845734f9fe2e7a86bc1ca97cc1f46e72`. E/F remain unimplemented. Acceptance of the map does not accept its implementation or authorize later passes automatically.
+Status: A+B map accepted at `4ad750b7733bd828fb1d99d753e48444387f17e3`; C accepted at `92018736fa4688d2f390d0bd308069f0a810d5cc`; D accepted at `d602ef835d3cc11a3e10343100a3cd85f859fb63`. E provenance migration and bounded local explanation are implemented, pending independent review; F remains unimplemented. This map accounts for the 67 files at `d260c6cb845734f9fe2e7a86bc1ca97cc1f46e72`. Acceptance of the map does not accept its implementation or authorize later passes automatically.
 
-All paths are relative to `level-2/architecture/`. Final D destinations in the complete-file disposition now exist; the pilot ledger records C's intermediate owners where a whole owner subsequently moves in D. E source paths remain proposed code literals. Source ranges always refer to the pinned pre-migration files, not current destination line numbers. See [inventory](knowledge-inventory.md) and [target design](knowledge-design.md).
+All paths are relative to `level-2/architecture/`. Final D/E destinations in the complete-file disposition now exist; the pilot ledger records C's intermediate owners where a whole owner subsequently moves in D. Source ranges always refer to the pinned pre-migration files, not current destination line numbers. See [inventory](knowledge-inventory.md) and [target design](knowledge-design.md).
 
 ## Contents
 
@@ -15,6 +15,7 @@ All paths are relative to `level-2/architecture/`. Final D destinations in the c
 - [Execution order and acceptance evidence](#execution-order-and-acceptance-evidence)
 - [Pilot implementation and retained context](#pilot-implementation-and-retained-context)
 - [Remaining migration and family-section preservation](#remaining-migration-and-family-section-preservation)
+- [Source migration and locator preservation](#source-migration-and-locator-preservation)
 
 ## Actions and stage boundaries
 
@@ -331,3 +332,19 @@ The use-family split refers to the 344-line `references/building-use-families.md
 `references/index.md` replaces the superseded knowledge map as the single subject overview. Its eight subject homes distribute the old question/coverage rows; the overview retains common ownership distinctions, evidence roles and admitted gaps. Root operation selection and the shared design contract remain separate from subject selection. Existing style and identified-object selectors retain their substantive perimeter and evidence limits at the mapped paths. No new case media or second graph registry is introduced.
 
 Integrity diagnostics derive roles and links from the current Markdown: runtime reachability excludes provenance and maintenance as intermediary routers, while their links are still validated. Duplicate heading bases are reported as ambiguous authored targets. Reference definitions, wrapped labels and fenced examples have explicit fixtures. Reciprocal graph edges are allowed; a visited set and a selected allowed subgraph bound diagnostic traversal without a hop quota. This diagnostic is not a semantic reading engine: actual prerequisite conditions and the sufficiency of loaded methods still require task reasoning and review.
+
+## Source migration and locator preservation
+
+E moves the accepted 483-line source ledger into the four planned source homes without discarding its original reading/adaptation/exclusion records:
+
+| Source lines at accepted D | Current owner and treatment |
+| --- | --- |
+| 1–20 | General source-use policy and regenerated navigation at `sources/index.md`; obsolete whole-ledger self-TOC replaced |
+| 21–188 | `sources/upstream-packs.md`: full pin/reading boundary, five adaptation sections and excluded/unresolved material; file URLs consolidated to explicit pinned IDs with exact usage fragments retained |
+| 189–425 | `sources/library.md`: complete catalog identity, byte/hash/page records, all seven continuations and historical reading/unread/excluded-video limits; no new source-file reading inferred |
+| 426–467 | `sources/precedents.md`: complete style/object reading and rights map plus explicit publisher/role/necessity records for its primary/interpretive/visual resources |
+| 468–483 | `sources/index.md#russian-normative-evidence`: preserved separate primary-source/jurisdiction authority; normative record text, URLs, dates and selection semantics stay unchanged |
+
+Each former external usage URL resolves through its local source ID to an explicit original document URL; a former `#fragment` is retained as a named source-fragment locator beside that usage. Together they reconstruct the exact original target. The two full MIT notices and their pinned source declarations remain installed, not replaced by links. The fourteen source-script locators made explicit were already identified by pin/prefix/filename in the calculator audit; this does not add retrieval, inspection or execution claims. A/B labels in that audit and A/C labels in the method ledger keep their documented alias relationship.
+
+All retained method/case explanations survive the provenance rewrite. The added finite-canopy subsection is a bounded original geometric derivation inside the existing daylight/control question: supplied angles and a thin rectangle expose the finite-side-edge conflict that a facade-normal section alone cannot decide. It is not a new calculator, source performance table, annual result or F-scale domain expansion. Reasons, numerical task outputs and before/after metrics belong to the issue; sources retain identities, actual extents and evidence limits.

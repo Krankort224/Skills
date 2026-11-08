@@ -39,7 +39,7 @@ Documentation owns [issued-item reconciliation](../operations/documentation.md#c
 | Select jurisdiction and normative evidence | [Requirements](requirements.md#select-a-jurisdiction-module), then the selected [module](normative/index.md) and individual records | Method plus current Russian discovery profile. Unknown/unsupported jurisdiction never defaults to Russia. Records are source navigators, not full-text law or compliance findings. |
 | Use a supported calculator | [Exact calculator contracts](calculators.md) | Method only for the four supported preliminary calculations and stated schemas; 14 source adoption decisions stay there. No full simulation or engineering sizing. Read source only for debugging/modification. |
 | Present the requested result | [Presentation operation](../operations/presentation.md), [representation/inspection](methods/visual-delivery.md#choose-a-useful-representation) | Method for user-selected text/artifact and honest precision. Export does not validate the design, and no preset format/drawing suite is required. |
-| Verify source identity or permissions | [Source/adaptation map](sources.md), [notices](../THIRD_PARTY_NOTICES.md) | Provenance owners, not substitute runtime methods. Moving an existing method does not imply a new chapter/figure review. |
+| Verify source identity or permissions | [Source/adaptation map](../sources/index.md), [notices](../THIRD_PARTY_NOTICES.md) | Provenance owners, not substitute runtime methods. Moving an existing method does not imply a new chapter/figure review. |
 
 ## Coverage and open gaps
 

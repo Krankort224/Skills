@@ -12,7 +12,7 @@
 
 **Object:** Pantheon, Piazza della Rotonda, Rome, Italy; ancient Roman monumental
 architecture within the classical family, subsequently used as a Christian
-church. Rome's municipal [monument account](https://www.turismoroma.it/en/places/pantheon)
+church. Rome's municipal [monument account](../../../../sources/precedents.md#w-045)
 dates Hadrian's reconstruction to **118–125 CE**, distinguishes it from
 Agrippa's earlier commission and records conversion in **609**. These dates
 describe the selected public account, not a resolved archaeological chronology
@@ -22,7 +22,7 @@ named designer. Do not promote Agrippa, Hadrian or Apollodorus to a verified
 architect on that basis.
 
 **Actually inspected:** the municipal page's historical and architectural
-paragraphs and [close exterior photograph](https://www.turismoroma.it/sites/default/files/Pantheon.jpg)
+paragraphs and [close exterior photograph](../../../../sources/precedents.md#w-046)
 of the portico; library P15 file **108 / printed 93**, cutaway; **211 / 196**,
 plan/section; **305 / 290**, regulating-line plan. The printed numbers were
 visually checked. These book views establish a represented arrangement, not a

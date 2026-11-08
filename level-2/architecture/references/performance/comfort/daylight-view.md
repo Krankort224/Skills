@@ -1,5 +1,15 @@
 # Occupied daylight, view and control
 
+## Contents
+
+- [Daylight, view and occupied comfort](#daylight-view-and-occupied-comfort)
+- [Generate room and section schemes](#generate-room-and-section-schemes)
+- [Separate sun, sky, view and control](#separate-sun-sky-view-and-control)
+- [Construct a finite-canopy ray check](#construct-a-finite-canopy-ray-check)
+- [Fit Russian room conditions without merging their tests](#fit-russian-room-conditions-without-merging-their-tests)
+- [Provenance and use limits](#provenance-and-use-limits)
+- [Related decisions](#related-decisions)
+
 Use this method to generate, test and revise the spatial solution. Proposed architectural reservations do not establish loads, member/equipment sizes, physical performance, technical safety or compliance; obtain the project-specific evidence needed for those claims. Select [requirements](../../requirements.md) for the actual jurisdiction. Example dimensions are hypothetical inputs, not standard sizes or certified performance; no environmental simulation is claimed.
 
 ## Daylight, view and occupied comfort
@@ -56,6 +66,51 @@ serve. Specify the next question precisely: for example, annual glare at the
 western reading desks with the chosen shade states, rather than “check daylight.”
 Use [calculators](../../calculators.md) only within their documented scope.
 
+### Construct a finite-canopy ray check
+
+A facade-normal section alone cannot decide whether an oblique ray misses a
+finite side edge. This original coordinate construction checks one supplied
+direction and one point on the glazing, without requiring an external source
+pack or claiming annual daylight/glare performance.
+
+Place the facade at `x = 0`, exterior at positive x, lateral position along y
+and height along z. Model a thin horizontal rectangular canopy at `z = h`,
+spanning `0 ≤ x ≤ D` and `y_left ≤ y ≤ y_right`. The tested facade point is
+`(0, y_p, z_p)`, below the canopy. Use consistent metres for all lengths.
+Supply solar altitude `alpha` above the horizon and signed horizontal angle
+`gamma` from the outward facade normal, positive toward increasing y; use degrees consistently when evaluating
+trigonometry. This front-face construction assumes `0 < alpha < 90°` and
+`abs(gamma) < 90°`. It does not infer sun position from a city, civil time or date.
+
+Trace from the point toward the sun. A vertical rise `h − z_p` intersects the
+canopy plane at:
+
+- `x_hit = (h − z_p) × cos(gamma) / tan(alpha)`;
+- `y_hit = y_p + (h − z_p) × sin(gamma) / tan(alpha)`.
+
+The idealized canopy blocks that ray only if both coordinates lie inside its
+actual rectangle. This follows from the ray's vertical, facade-normal and
+lateral components; it is not a device efficacy factor. For infinite width the
+vertical shadow drop at the outer edge is `D × tan(alpha) / cos(gamma)`, reducing
+to `D × tan(alpha)` for a facade-normal ray. Finite width must still be checked.
+
+**Failure and correction.** With hypothetical `h = 3.00`, `D = 0.70`, canopy
+width `y = −0.60…+0.60`, tested point `(0, 0, 2.60)`, altitude `20°` and
+horizontal angle `60°`, the hit is approximately `(0.549, 0.952, 3.00)`.
+It lies within the depth but beyond the side edge. An infinitely wide/profile
+section predicts shading at that height, while the supplied finite canopy does
+not block this ray. Widening the rectangle to `y = −1.00…+1.00` blocks this one
+point/direction in the model; adding projection depth alone does not repair the
+side miss. Retest other glazing points, direction signs and occupied periods.
+
+A moved/lowered/widened shade changes views, sky access, privacy, support and
+maintenance. For sloping, thick, perforated or irregular devices, test the real
+faces/openings rather than treating the rectangle as their equivalent. A blocked
+glazing-point ray is not a room illuminance, glare, thermal, safety or legal
+result; an occupant claim also needs the actual opening, inside/neighboring
+obstructions and deployed control state. Keep uncertainty in the supplied angles
+and geometry explicit.
+
 ### Fit Russian room conditions without merging their tests
 
 For a confirmed Russian project, select the actual room activity and occupation
@@ -85,7 +140,7 @@ resolved, and replace only the affected alternative when the evidence changes.
 
 ## Provenance and use limits
 
-The operative reasoning is local; external reading is not a runtime prerequisite. [Pinned readings, adaptations and exclusions](../../sources.md#performance-and-coordination) retain the source identity, inspected extent and limitations. Use [requirements](../../requirements.md) for jurisdiction-specific applicability.
+The operative reasoning is local; external reading is not a runtime prerequisite. [Pinned readings, adaptations and exclusions](../../../sources/upstream-packs.md#performance-and-coordination) retain the source identity, inspected extent and limitations. Use [requirements](../../requirements.md) for jurisdiction-specific applicability.
 
 ## Related decisions
 

@@ -4,8 +4,8 @@
 **Architect:** Antoni Gaudí, remodelling **1904–1906** of an **1877** building
 by Emili Sala Cortés. This is an extensive transformation of inherited fabric,
 not a new freestanding house.
-[Operator history](https://www.casabatllo.es/en/antoni-gaudi/casa-batllo/history/),
-[Gaudí Council](https://consellantonigaudi.cat/en/buildings/casa-batllo/).
+[Operator history](../../../../sources/precedents.md#w-025),
+[Gaudí Council](../../../../sources/precedents.md#w-002).
 
 ## Contents
 
@@ -21,8 +21,8 @@ Use **Catalan Modernisme** as the specific context, following the Gaudí Council
 Spain's tourism authority also calls Casa Batlló Art Nouveau. These are compatible
 levels of description; the international umbrella does not make Gaudí's work a
 French example, nor does “Modernisme” here mean later architectural Modernism.
-[Council](https://consellantonigaudi.cat/en/buildings/casa-batllo/),
-[Spain tourism authority](https://www.spain.info/en/places-of-interest/casa-batllo/).
+[Council](../../../../sources/precedents.md#w-002),
+[Spain tourism authority](../../../../sources/precedents.md#w-043).
 
 The operator records Josep Batlló's purchase in 1903 and the 1904–1906 renovation,
 which changed the facade, partitions and lightwell. It places the house among
@@ -30,13 +30,13 @@ neighboring, separately designed Modernista renovations on the “Block of
 Discord.” The useful historical relationship is therefore an existing urban
 building competing for identity along a shared street, not an isolated organic
 object with an unconstrained new plan.
-[Operator history](https://www.casabatllo.es/en/antoni-gaudi/casa-batllo/history/).
+[Operator history](../../../../sources/precedents.md#w-025).
 
 The facade's dragon and marine readings are interpretive associations, not
 verified generative rules. The operator itself presents multiple interpretations.
 They cannot demonstrate the shape of a hidden room, a structural load path or
 an environmental benefit.
-[Operator facade](https://www.casabatllo.es/en/antoni-gaudi/casa-batllo/facade/).
+[Operator facade](../../../../sources/precedents.md#w-024).
 
 ## What was inspected
 
@@ -47,10 +47,10 @@ surface. The noble-floor view shows street-facing glazing and glazed internal
 doors sharing curved outlines and circular colored inserts. The attic view
 shows repeated pale arches and low side zones. These are local views, not a
 verified route or complete floor plan.
-[Facade](https://consellantonigaudi.cat/wp-content/uploads/2015/07/casa-batlloo.facade-detail-min.webp),
-[lobby](https://consellantonigaudi.cat/wp-content/uploads/2025/10/940x643_batllo_img_2.jpg),
-[noble floor](https://consellantonigaudi.cat/wp-content/uploads/2015/07/Casa-Batllo-Noble-Floor-min.webp),
-[attic](https://consellantonigaudi.cat/wp-content/uploads/2025/10/940x643_batllo_img_3.jpg).
+[Facade](../../../../sources/precedents.md#w-004),
+[lobby](../../../../sources/precedents.md#w-005),
+[noble floor](../../../../sources/precedents.md#w-003),
+[attic](../../../../sources/precedents.md#w-006).
 
 The Council's fireplace still was also inspected; it shows a small recessed
 seating/fireplace territory beside a door. An image named
@@ -58,7 +58,7 @@ seating/fireplace territory beside a door. An image named
 installation. It was rejected as evidence of Gaudí's original enclosure.
 Neither file names nor inclusion on a heritage webpage establish historical
 date or authorship for every visible element.
-[Fireplace view](https://consellantonigaudi.cat/wp-content/uploads/2025/10/940x643_batllo_img_4.jpg).
+[Fireplace view](../../../../sources/precedents.md#w-007).
 
 **Source descriptions — operator interior account:** A communal entrance leads
 to the family's private lobby; the principal salon faces the street and the
@@ -67,7 +67,7 @@ its upper tiles are darker and upper windows smaller than those below, with
 adjustable wooden ventilation slats. The attic served building residents and
 has repeated catenary arches. These statements are textual evidence; no complete
 plan, section, lightwell still or opening-operation inspection was obtained.
-[Operator interior](https://www.casabatllo.es/en/antoni-gaudi/casa-batllo/inside/).
+[Operator interior](../../../../sources/precedents.md#w-026).
 
 ## Read the mechanisms and their limits
 
@@ -90,7 +90,7 @@ maintenance roles even when they form one visual composition. A modeled surface
 cannot establish whether it is a support, lining or finish without additional
 evidence. The house's symbolism also does not establish a literal skeletal
 structural system.
-[Operator facade](https://www.casabatllo.es/en/antoni-gaudi/casa-batllo/facade/).
+[Operator facade](../../../../sources/precedents.md#w-024).
 
 **Sequence limit:** The textual progression from shared lobby to private lobby,
 street salon and rear court suggests a useful contrast between public display,
@@ -152,11 +152,11 @@ commission are authored synthesis.
 
 | Source | Inspected extent and disposition |
 | --- | --- |
-| [Casa Batlló history](https://www.casabatllo.es/en/antoni-gaudi/casa-batllo/history/) | Building origin, purchase, renovation and neighboring renovations. Recent tourist numbers and promotional performance claims are not adopted. |
-| [Casa Batlló interior](https://www.casabatllo.es/en/antoni-gaudi/casa-batllo/inside/) | Text from total-work/lobby through rooftop, selectively used for territories, lightwell changes and attic. Direct retrieval of selected operator stills returned HTTP 403; their captions are not counted as visual inspection. Claims that spaces automatically need no artificial light or have sufficient ventilation are not established. |
-| [Casa Batlló facade](https://www.casabatllo.es/en/antoni-gaudi/casa-batllo/facade/) | Material, gallery and interpretive-symbolism text. No precise projection distance, fixing detail or performance value adopted. |
-| [Gaudí Council](https://consellantonigaudi.cat/en/buildings/casa-batllo/) | Textual identity, remodelling and Catalan Modernisme context; linked facade, lobby, fireplace, attic and noble-floor stills visually inspected in full. The contemporary installation still was inspected and rejected for historical-form inference. Photographs show present visible relationships, not verified original finishes throughout. |
-| [Spain tourism authority](https://www.spain.info/en/places-of-interest/casa-batllo/) | Art Nouveau umbrella and address corroboration; no plan or section supplied by this reading. |
+| [Casa Batlló history](../../../../sources/precedents.md#w-025) | Building origin, purchase, renovation and neighboring renovations. Recent tourist numbers and promotional performance claims are not adopted. |
+| [Casa Batlló interior](../../../../sources/precedents.md#w-026) | Text from total-work/lobby through rooftop, selectively used for territories, lightwell changes and attic. Direct retrieval of selected operator stills returned HTTP 403; their captions are not counted as visual inspection. Claims that spaces automatically need no artificial light or have sufficient ventilation are not established. |
+| [Casa Batlló facade](../../../../sources/precedents.md#w-024) | Material, gallery and interpretive-symbolism text. No precise projection distance, fixing detail or performance value adopted. |
+| [Gaudí Council](../../../../sources/precedents.md#w-002) | Textual identity, remodelling and Catalan Modernisme context; linked facade, lobby, fireplace, attic and noble-floor stills visually inspected in full. The contemporary installation still was inspected and rejected for historical-form inference. Photographs show present visible relationships, not verified original finishes throughout. |
+| [Spain tourism authority](../../../../sources/precedents.md#w-043) | Art Nouveau umbrella and address corroboration; no plan or section supplied by this reading. |
 
 No complete floor plan, measured section, lightwell photograph or documentary
 construction detail was inspected. Consequently the resource does not establish

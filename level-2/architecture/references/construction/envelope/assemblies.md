@@ -310,6 +310,6 @@ retains the geometry and reservations and revises them when evidence changes.
 ## Method sources
 
 Selected pinned readings, adaptations and exclusions are recorded in
-[sources](../../sources.md). External sources supply provenance; this local reference
+[sources](../../../sources/index.md). External sources supply provenance; this local reference
 is usable without fetching them. Numerical source tables and foreign-code
 assembly claims are not adopted as requirements or verified performance.

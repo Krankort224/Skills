@@ -26,15 +26,15 @@ political patrons. Its international spread also involved colonial networks;
 local materials and contexts changed its expression. A contemporary brief
 therefore needs to decide whose identity and experience its composition serves,
 rather than treating historical authority as an automatic design benefit.
-See [V&A, The Baroque style](https://www.vam.ac.uk/articles/the-baroque-style).
+See [V&A, The Baroque style](../../../sources/precedents.md#w-048).
 
 Keep at least these readings distinct:
 
 | Reading and verified reference | Consequential distinction |
 | --- | --- |
 | Roman, continuous sculptural enclosure: Francesco Borromini's [San Carlo](../../../assets/styles/baroque/san-carlo-alle-quattro-fontane/analysis.md) | A restricted complex can contain a strongly differentiated interior. Its perimeter, upper transition and street front require separate readings; an ellipse is insufficient as a whole-building diagram. |
-| Roman, integrated polychrome interior: Gian Lorenzo Bernini's Sant'Andrea al Quirinale | The major axis of its oval crosses the entrance axis; recessed chapels preserve the interior rhythm. This is a counterexample to assuming that a Baroque oval always elongates the route ahead. Marble, stucco and gilding also counter a universal white-interior recipe. [Rome tourism authority](https://turismoroma.it/en/places/church-santandrea-al-quirinale). |
-| French palace context and mixed historical layers: Versailles | The operator describes a combination of Baroque, Classical, Neoclassical and Gothic architecture. Treating the entire present palace as a pure style specimen would erase different campaigns. Its political history also differs from a small religious community's commission. [Château de Versailles](https://en.chateauversailles.fr/node/35077). |
+| Roman, integrated polychrome interior: Gian Lorenzo Bernini's Sant'Andrea al Quirinale | The major axis of its oval crosses the entrance axis; recessed chapels preserve the interior rhythm. This is a counterexample to assuming that a Baroque oval always elongates the route ahead. Marble, stucco and gilding also counter a universal white-interior recipe. [Rome tourism authority](../../../sources/precedents.md#w-021). |
+| French palace context and mixed historical layers: Versailles | The operator describes a combination of Baroque, Classical, Neoclassical and Gothic architecture. Treating the entire present palace as a pure style specimen would erase different campaigns. Its political history also differs from a small religious community's commission. [Château de Versailles](../../../sources/precedents.md#w-008). |
 
 These are bounded comparisons, not a survey of every region or period. Curvature,
 symmetry, a dome, gold or monumental scale alone cannot establish a Baroque
@@ -99,8 +99,8 @@ and relationships between structure and decoration. Belgian work by Victor
 Horta and Henry van de Velde coordinates building and fittings; Austrian
 Secession work includes a more geometric vocabulary. These distinctions prevent
 the sinuous line from becoming a universal rule.
-[V&A collection overview](https://www.vam.ac.uk/collections/art-nouveau),
-[international variants](https://www.vam.ac.uk/articles/art-nouveau-an-international-style).
+[V&A collection overview](../../../sources/precedents.md#w-049),
+[international variants](../../../sources/precedents.md#w-047).
 
 For Antoni Gaudí's [Casa Batlló](../../../assets/styles/art-nouveau/casa-batllo/analysis.md),
 use **Catalan Modernisme** as the specific context. The Gaudí Council identifies
@@ -109,8 +109,8 @@ Art Nouveau. The broader umbrella is useful for comparison, but does not make
 the house an example of the French branch or its forms a template for all
 Modernisme. **Modernisme** here is also distinct from the later, much broader
 term **Modernism**.
-[Gaudí Council](https://consellantonigaudi.cat/en/buildings/casa-batllo/),
-[Spain tourism authority](https://www.spain.info/en/places-of-interest/casa-batllo/).
+[Gaudí Council](../../../sources/precedents.md#w-002),
+[Spain tourism authority](../../../sources/precedents.md#w-043).
 
 This profile develops an integrated craft-and-space direction through one
 Gaudí case. It does not establish a complete Belgian, French, Austrian or

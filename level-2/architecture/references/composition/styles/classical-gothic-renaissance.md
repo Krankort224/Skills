@@ -26,7 +26,7 @@ already represent variation. Temple construction also involved civic or
 religious patrons, costly material supply and skilled labor. These are relevant
 conditions behind the apparent ease of a regular frontage, not evidence that
 such a frontage is inexpensive today. See the Met's [Greek architecture essay,
-orders and temple construction](https://www.metmuseum.org/essays/architecture-in-ancient-greece).
+orders and temple construction](../../../sources/precedents.md#w-036).
 
 The Roman [Pantheon case](../../../assets/styles/classical/pantheon/analysis.md)
 provides a different emphasis: a columned threshold leads to a dominant interior
@@ -66,7 +66,7 @@ sixteenth. Pointed arches, ribbed vaults and external buttressing can act
 together to organize a masonry building; a pointed opening by itself establishes
 little. Religious meaning, patronage, skilled workshops and the pursuit of
 larger, higher church interiors belong to this historical condition. The Met's
-[Gothic Art essay, architectural development](https://www.metmuseum.org/essays/gothic-art)
+[Gothic Art essay, architectural development](../../../sources/precedents.md#w-038)
 connects these mechanisms to colored light and sculpted thresholds. Its broad
 structural account is a starting explanation, not a calculation or permission
 to remove wall support.
@@ -125,7 +125,7 @@ heating or roof cost defeats the taller volume.
 including its sixteenth-century Palladian domestic strand. Architects studied
 ancient Roman buildings and texts and reworked orders, arches, domes and
 proportion for contemporary commissions. The Met's [Renaissance architecture
-essay, introduction and Palladio sections](https://www.metmuseum.org/essays/architecture-in-renaissance-italy)
+essay, introduction and Palladio sections](../../../sources/precedents.md#w-037)
 distinguishes a working estate from an aristocratic retreat. A villa, urban
 palace and church need different spatial organizations despite shared elements.
 Renaissance and classical are therefore overlapping historical descriptions,
@@ -176,7 +176,7 @@ regulating-line diagram; **315 / 300**, Renaissance proportional discussion and
 La Rotonda plan. The last leaf's historical proportional ideal is not a
 universal prescription or proof of functional fit. Library captions conflicting
 with monument scholarship are identified in the cases; historical and
-structural assertions were not silently imported. See [library provenance](../../sources.md#architecture-library-selected-content).
+structural assertions were not silently imported. See [library provenance](../../../sources/library.md#architecture-library-selected-content).
 
 No complete history book, complete P15 reading, measured survey, environmental
 simulation or structural verification is claimed. P14 is a construction book

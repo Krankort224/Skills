@@ -241,7 +241,7 @@ and structural checks from unresolved changed geometry and actual acceptance.
 
 The ASK01 coordination diagrams, ASK04 directional frame/wall/bracing figures
 and ASK06 core/equipment figures are mapped in
-[sources](../../sources.md#ground-frame-and-core-selections). Procedures, alternatives,
+[sources](../../../sources/library.md#ground-frame-and-core-selections). Procedures, alternatives,
 numeric trials and worked revisions here are original synthesis. A photograph
 does not establish joint rigidity; ASK04's facade-wall support figures are not
 core details. Historical upper-machine drawings do not provide current pit/head,

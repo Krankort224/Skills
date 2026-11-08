@@ -279,4 +279,4 @@ regulatory compliance; those claims require appropriate inputs and validation.
 Distinguish a prepared method, an attempted execution and a verified result.
 
 
-Provenance and selective reading extents are recorded in [sources](../sources.md#comparison-and-data); use the methods here without opening upstream collections.
+Provenance and selective reading extents are recorded in [sources](../../sources/upstream-packs.md#comparison-and-data); use the methods here without opening upstream collections.

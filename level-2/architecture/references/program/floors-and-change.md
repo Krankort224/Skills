@@ -46,7 +46,7 @@ in section or at a fixed facade.
 
 ## Provenance and use limits
 
-The operative reasoning is local; external reading is not a runtime prerequisite. [Pinned readings, adaptations and exclusions](../sources.md#program-and-space) retain the source identity, inspected extent and limitations. Use [requirements](../requirements.md) for jurisdiction-specific applicability.
+The operative reasoning is local; external reading is not a runtime prerequisite. [Pinned readings, adaptations and exclusions](../../sources/upstream-packs.md#program-and-space) retain the source identity, inspected extent and limitations. Use [requirements](../requirements.md) for jurisdiction-specific applicability.
 
 ## Related decisions
 
