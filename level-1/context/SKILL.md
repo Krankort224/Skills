@@ -47,7 +47,7 @@ Preserve local adaptations and the project's established knowledge structure. No
 
 ## Supported boundary and technical evidence
 
-The supplied operations implement useful project-map read, maintain and review methods without requiring Graphify. They support meaningful overview creation, targeted investigation, source conflicts and scoped reference refresh. Graph construction, subscription semantic extraction, portable incremental graph maintenance and coherent graph publication have separate implementation/verification gates; do not advertise them as completed merely because the technical profile exists.
+The supplied operations implement useful project-map read, maintain and review methods without requiring Graphify. They support meaningful overview creation, targeted investigation, source conflicts and scoped reference refresh. For explicitly requested structural construction, the technical guide provides a verified Linux CPython 3.12 route for UTF-8 Python/Markdown to a fresh staged JSON/HTML/report trio, with source inventory, omissions and bounded query evidence. Subscription semantic extraction, portable incremental graph maintenance and coherent graph publication retain separate implementation/verification gates. Other formats and hosts require their own evidence.
 
 Load [tools/graphify.md](tools/graphify.md) only when a task needs the audited Graphify capabilities, limits or preparation evidence. It is a technical reference within this skill, not a second entry point. Ordinary reading/review neither installs the CLI nor rebuilds/publishes graphs. Missing/stale/incompatible graph material does not block direct source investigation.
 

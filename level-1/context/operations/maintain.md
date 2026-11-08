@@ -1,6 +1,6 @@
 # Maintain project references
 
-Use when the task explicitly requests initialization, refresh, reconciliation or fixes to project context references. The supported slice maintains the meaningful project map; it does not implement a Graphify build/update/publication lifecycle.
+Use when the task explicitly requests initialization, refresh, reconciliation or fixes to project context references. The supported slice maintains the meaningful project map and, when explicitly requested, prepares a bounded structural graph in fresh staging. Semantic processing, incremental updates and coherent publication remain separate gates.
 
 ## 1. Establish the authorized change
 
@@ -56,8 +56,8 @@ Use ordinary existing publication/versioning instructions when publication is pa
 
 ## 5. Keep graph evidence honest
 
-The shared `references/graphify/.gitkeep` is an empty location reservation, not a generated graph or a maintenance result. Never replace it with dummy JSON/HTML/report data. Real graph artifacts belong together in this directory after the separately supported construction and publication procedures are implemented and authorized; tools/procedures remain outside it.
+The shared `references/graphify/.gitkeep` is an empty location reservation, not a generated graph or a maintenance result. Never replace it with dummy JSON/HTML/report data. Reviewed real graph artifacts belong together in this directory after construction and coherent publication are implemented and authorized; tools/procedures remain outside it.
 
-For map-only work, keep existing graph artifacts untouched. If source changes make a graph claim known stale, disclose that limit in the map/result where useful; do not pretend a map refresh updated the graph. A missing graph does not prevent completing a useful map. Graph-dependent work outside the supplied operational slice must retain its implementation/verification gap; B's technical probe does not satisfy it.
+For map-only work, keep existing graph artifacts untouched. If source changes make a graph claim known stale, disclose that limit in the map/result where useful; do not pretend a map refresh updated the graph. A missing graph does not prevent completing a useful map. For explicitly requested initial structural construction, use the technical guide's [environment check](../tools/graphify.md#prepare-and-verify-the-structural-environment) and [native build procedure](../tools/graphify.md#build-and-inspect-structural-evidence). Resolve source/output roots and explicit exclusions first. Reuse the verified candidate environment; prepare an isolated one only when needed. Inventory selected/omitted material, validate a fresh complete trio and known source relations, and return staged evidence for the project's normal review/publication process. Preserve the last good references on failure. This supports the guide's tested Linux Python/Markdown structural lane; it does not turn staging into published, semantic or incrementally maintained references.
 
 Report what reference material changed, why, which source evidence and representative checks support it, and what remains unresolved or out of scope. Distinguish a completed map update from graph construction/semantic extraction/tool preparation that did not run.

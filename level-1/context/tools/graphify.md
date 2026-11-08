@@ -4,6 +4,8 @@
 
 - [Authority and supported boundary](#authority-and-supported-boundary)
 - [Immutable source and dependencies](#immutable-source-and-dependencies)
+- [Prepare and verify the structural environment](#prepare-and-verify-the-structural-environment)
+- [Build and inspect structural evidence](#build-and-inspect-structural-evidence)
 - [Capability and reuse decisions](#capability-and-reuse-decisions)
 - [Construction route](#construction-route)
 - [Semantic evidence contract](#semantic-evidence-contract)
@@ -15,7 +17,7 @@
 
 Project understanding starts with the task, applicable scope and authoritative sources. The populated `references/repository.md` explains project purpose, component roles and interactions, constraints, knowledge owners and routes to detail. Graphs supply derived relationship evidence; neither connectivity nor a model's confidence overrides the owner of a fact. Missing, stale, incompatible or incomplete graphs leave ordinary source investigation available. A narrow question needs only relevant sources and bounded graph results.
 
-This guide records the inspected native interfaces and the verified compatibility profile. The current shared `context/SKILL.md` routes to complete project-map read, maintain and review methods without graph prerequisites. Adopted-project graph construction, subscription semantic extraction, the mixed-graph maintenance transaction and two-host pilot require their own implementation and validation; interface probes do not establish those capabilities. Issue execution, publication and acceptance remain with `workflow`; delegation remains with `delegation`.
+This guide records the inspected native interfaces and the verified compatibility profile. The current shared `context/SKILL.md` routes to complete project-map read, maintain and review methods without graph prerequisites. The structural procedure below prepares and verifies a fresh staged trio for the tested Linux Python/Markdown lane. Subscription semantic extraction, the mixed-graph maintenance/publication transaction, broader investigation and two-host pilot require their own implementation and validation; structural evidence does not establish those capabilities. Issue execution, publication and acceptance remain with `workflow`; delegation remains with `delegation`.
 
 ## Immutable source and dependencies
 
@@ -39,6 +41,298 @@ uv pip install --python /absolute/task-directory/graphify-venv/bin/python \
 Use `Scripts/python.exe` and `Scripts/graphify.exe` in a Windows venv; that path is source-reviewed, not runtime-verified here. Reuse an existing environment only after checking interpreter, distribution source/revision and dependency compatibility. A version string alone cannot distinguish a locally modified package. An installation needs filesystem access, package/source retrieval and appropriate wheels/build tools. Offline or denied setup leaves direct source reading available and tool-dependent maintenance unperformed. Do not invoke `graphify install`, upgrade a global environment, change agent instructions/hooks or reuse ambient provider credentials.
 
 The source is pinned by commit and runtime dependencies by versions; build-isolation dependencies remain selected by upstream's build-system requirement (`setuptools>=83.0.0`). This profile is not a hash-locked wheel supply chain or a promise of identical binaries on other hosts.
+
+## Prepare and verify the structural environment
+
+This supported construction slice is **Linux CPython 3.12, exercised at 3.12.14**, using the immutable base requirements above. The verified source formats are UTF-8 `.py` and `.md` with no NUL bytes, parsed by native Graphify. Other formats/languages remain explicitly unselected or uncertified; the package's larger grammar list is not a test result for them. Real Windows/second Work-host execution remains unverified.
+
+Use an authorized task-owned venv outside the project. Locate an existing candidate by its explicit interpreter path first; run the check below. If it passes, reuse it without installing/upgrading anything. If absent or incompatible, create a new isolated environment using the exact requirements; leave the candidate/global installations untouched. If Python/uv/Git/network or write access is unavailable, report that specific preparation gap and retain direct source reading/map work. Do not silently select a different revision, extras or provider backend. Offline reuse of a verified installation does not require package retrieval; offline creation needs previously available compatible artifacts.
+
+```sh
+# Replace these values with actual absolute paths; do not paste source text into shell code.
+CONTEXT_PY=/absolute/task/graphify-venv/bin/python
+export CONTEXT_TOOLS=/absolute/skills/context/tools
+export CONTEXT_ROOT=/absolute/project
+export CONTEXT_STAGE=/absolute/task/fresh-structural-stage
+export GRAPHIFY_OUT="$CONTEXT_STAGE/native-cache"
+export GRAPHIFY_BACKEND=none
+export GRAPHIFY_QUERY_LOG_DISABLE=1
+export PYTHONDONTWRITEBYTECODE=1
+# Only if no verified candidate is available:
+uv venv /absolute/task/graphify-venv --python 3.12
+uv pip install --python "$CONTEXT_PY" -r "$CONTEXT_TOOLS/graphify-requirements.txt"
+```
+
+Run this block with that interpreter (`"$CONTEXT_PY" - <<'PY'`, paste the Python, then `PY`). Checks execute no installer and create no project references. The profile records a VCS install; a same-version package without that provenance needs separate verification.
+
+```python
+# context-profile-check
+if not __debug__:
+    raise RuntimeError("Run without Python optimization: validation must remain enabled")
+import importlib.metadata as metadata
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+
+if sys.implementation.name != "cpython" or sys.version_info[:2] != (3, 12) or sys.platform != "linux":
+    raise RuntimeError("This recorded profile requires Linux CPython 3.12; verify another lane separately")
+assert metadata.version("graphifyy") == "0.9.103", "Graphify version mismatch"
+origin = json.loads(metadata.distribution("graphifyy").read_text("direct_url.json") or "{}")
+assert origin.get("url") == "https://github.com/Graphify-Labs/graphify.git", "Unknown package source"
+assert origin.get("vcs_info", {}).get("commit_id") == "16218bfc80d4ca2799734d045039f7ed1a5fa9fb", "Source revision mismatch"
+requirements = Path(os.environ["CONTEXT_TOOLS"]) / "graphify-requirements.txt"
+for line in requirements.read_text(encoding="utf-8").splitlines():
+    if "==" in line and not line.startswith("#"):
+        name, expected = line.split("==", 1)
+        assert metadata.version(name) == expected, f"Dependency mismatch: {name}"
+import graphify
+assert Path(graphify.__file__).resolve().is_relative_to(Path(sys.prefix).resolve()), "Import escaped candidate environment"
+cli = Path(sys.executable).parent / "graphify"
+assert cli.is_file(), "Candidate CLI is missing; do not fall through to a global executable"
+assert cli.resolve().is_relative_to(Path(sys.prefix).resolve()), "CLI escaped candidate environment"
+assert cli.read_text(encoding="utf-8").splitlines()[0] == "#!" + sys.executable, "Verify a nonstandard CLI launcher separately"
+assert any(e.name == "graphify" and e.value == "graphify.__main__:main" for e in metadata.distribution("graphifyy").entry_points), "Unexpected CLI entry point"
+version = subprocess.run([str(cli), "--version"], check=True, capture_output=True, text=True, timeout=30)
+assert version.stdout.strip() == "graphify 0.9.103", version.stdout
+print(json.dumps({"profile": "verified", "python": sys.version.split()[0], "graphify": metadata.version("graphifyy"), "commit": origin["vcs_info"]["commit_id"]}))
+```
+
+Version checks establish the recorded source/dependency profile, not integrity against local tampering. On an upgraded/different environment repeat the bounded probes, including exact source/direction oracles; do not infer compatibility from successful imports alone. The source is external; no upstream helper/specification is copied by this slice.
+
+## Build and inspect structural evidence
+
+Use only for explicitly authorized graph construction, after selecting the source root/scopes and their authoritative sources. This procedure prepares **fresh staged artifacts**, not an automatic replacement of published references. It has no provider/model step or semantic coverage. The current agent's reading elsewhere in the task is not measured by its zero model-token counters.
+
+Choose explicit exclusions for generated outputs (including the installed skill's actual graph directory and any native `memory/` output), staging/cache locations and unselected third-party inputs. The example below excludes the conventional installed output, vendor/generated paths and Office/PDF/Google shortcuts before detection, so detection cannot convert/export those inputs. Adapt these paths to the actual project; an omitted path is not automatically excluded. Use trailing-slash directory exclusions so native detection prunes fixed subtrees before reading their local rules. Case-insensitive Office/PDF/Google-shortcut exclusions are appended by the block; preflight refuses a nested rule that re-includes a conversion-capable file. Declared submodule paths are added without initialization/fetch; unusual ignore-metacharacter spellings require separate handling and are rejected here. Ignored/noise directories and directory symlinks may be pruned without a complete descendant listing; the inventory must state this limit.
+
+```sh
+export CONTEXT_EXCLUDES='["skills/context/references/graphify/","graphify-out/","generated/","vendor/","third_party/","**/*.docx","**/*.xlsx","**/*.xlsm","**/*.pdf","**/*.gdoc","**/*.gsheet","**/*.gslides"]'
+```
+
+Run the following block with the **same verified interpreter**, `GRAPHIFY_OUT` set before importing, and a new `CONTEXT_STAGE` outside the source tree for every build. It uses the reviewed native library at the Markdown/CLI gap; there is no standalone build wrapper or replacement parser. Do not use `graphify extract --code-only` to claim documentary coverage or a headless semantic command with ambient keys.
+
+```python
+# context-structural-build
+if not __debug__:
+    raise RuntimeError("Run without Python optimization: validation must remain enabled")
+import contextlib
+import copy
+import hashlib
+import importlib.metadata as metadata
+import io
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+
+root = Path(os.environ["CONTEXT_ROOT"]).resolve(strict=True)
+work = Path(os.environ["CONTEXT_STAGE"]).resolve()
+cache = work / "native-cache"
+stage = work / "artifacts"
+assert root.is_dir() and not work.is_relative_to(root) and not root.is_relative_to(work), "Stage/cache must be outside source"
+assert not cache.exists() and not stage.exists(), "Use fresh staging/cache; do not overwrite or reuse a prior build here"
+assert Path(os.environ["GRAPHIFY_OUT"]).resolve() == cache, "Set GRAPHIFY_OUT before imports"
+assert os.environ.get("GRAPHIFY_BACKEND") == "none", "No model backend is permitted"
+assert metadata.version("graphifyy") == "0.9.103"
+if shutil.which("git"):
+    vcs_root = subprocess.run(["git", "-C", str(root), "rev-parse", "--show-toplevel"], capture_output=True, text=True, timeout=30)
+    assert vcs_root.returncode != 0 or Path(vcs_root.stdout.strip()).resolve() == root, "Select the canonical repository root; ancestor ignore rules need separate review"
+excludes = json.loads(os.environ["CONTEXT_EXCLUDES"])
+assert isinstance(excludes, list) and all(isinstance(x, str) for x in excludes)
+# Native detection can convert Office inputs; exclude every casing before it runs.
+for extension in ("pdf", "docx", "xlsx", "xlsm", "gdoc", "gsheet", "gslides"):
+    excludes.append("**/*." + "".join("[" + c.lower() + c.upper() + "]" for c in extension))
+# Record declared, unselected submodules; a native scan does not exclude them automatically.
+modules = root / ".gitmodules"
+if modules.exists():
+    assert modules.resolve().is_relative_to(root)
+    listing = subprocess.run(["git", "config", "--file", str(modules), "--get-regexp", r"^submodule\..*\.path$"], capture_output=True, text=True, timeout=30)
+    assert listing.returncode in (0, 1), listing.stderr
+    for line in listing.stdout.splitlines():
+        path = line.split(None, 1)[1]
+        assert path and path == path.strip() and not Path(path).is_absolute() and ".." not in Path(path).parts
+        assert not any(c in path for c in "!*?[]#\\\n\r\t"), "Unsupported submodule spelling; do not reinterpret it as an ignore pattern"
+        path = Path(path).as_posix()
+        assert path != ".", "Submodule path must identify a strict subtree"
+        excludes.append(path.rstrip("/") + "/")
+from graphify.detect import detect, ignored_predicate, _is_noise_dir
+from graphify.extract import extract, _get_extractor
+from graphify.cache import load_cached
+from graphify.rcfile import cache_salt, load_graphifyrc
+from graphify.build import build_from_json
+from graphify.cluster import cluster, label_communities_by_hub, score_all
+from graphify.analyze import god_nodes, surprising_connections
+from graphify.diagnostics import diagnose_extraction
+from graphify.export import to_json
+from graphify.exporters.html import to_html
+from graphify.report import generate
+from graphify.paths import load_node_link_graph, write_text_atomic
+from graphify.validate import validate_extraction
+
+def scan():
+    result = detect(root, follow_symlinks=False, google_workspace=False, extra_excludes=excludes, cache_root=cache, gitignore=False)
+    assert not result["walk_errors"], "Incomplete filesystem walk"
+    return result
+
+def config_identity():
+    # Hash only configuration native detection/extraction can consume in this scope.
+    ignored = ignored_predicate(root, extra_excludes=excludes, gitignore=False)
+    configs = {}
+    def walk_failure(error):
+        raise error
+    for directory, dirs, names in os.walk(root, followlinks=False, onerror=walk_failure):
+        directory = Path(directory)
+        dirs[:] = [name for name in dirs if not (directory / name).is_symlink() and not _is_noise_dir(name, directory) and not ignored(directory / name)]
+        for name in names:
+            path = directory / name
+            if path.suffix.lower() in {".pdf", ".docx", ".xlsx", ".xlsm", ".gdoc", ".gsheet", ".gslides"}:
+                assert ignored(path), "Conversion-capable input was re-included; correct exclusions before native detection"
+        for name in (".graphifyignore", ".graphifyrc", ".gitmodules"):
+            path = directory / name
+            if name in names and (name == ".graphifyignore" or directory == root):
+                assert not path.is_symlink(), "Symlinked configuration needs separate review"
+                configs[path.relative_to(root).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
+    return configs
+
+config_hashes = config_identity()
+# A nested ignore file must not override a literal required subtree exclusion.
+ignored = ignored_predicate(root, extra_excludes=excludes, gitignore=False)
+for pattern in excludes:
+    if pattern.endswith("/") and not any(c in pattern for c in "!*?[]#\\"):
+        boundary = root / pattern.rstrip("/")
+        assert boundary.resolve().is_relative_to(root), "Excluded directory escaped the source root"
+        assert not boundary.exists() or ignored(boundary), "Required subtree exclusion was overridden"
+configuration = load_graphifyrc(root)
+assert all(configuration.get("languages", {}).get(ext, ext) == ext for ext in (".py", ".md")), "Language remapping needs separate coverage verification"
+detection = scan()
+# Include resolution candidates and omissions: adding a file can change Markdown resolution.
+def inventory_identity(result):
+    return {key: result[key] for key in ("files", "unclassified", "skipped_sensitive", "ignored", "pruned_noise_dirs", "resolution_inputs")}
+inventory = inventory_identity(detection)
+assert not detection["walk_errors"], "Incomplete filesystem walk; inspect diagnostics and do not export a complete result"
+all_detected = {Path(p) for bucket in detection["files"].values() for p in bucket}
+# Markdown may be classified as paper; select by verified suffix from ALL buckets.
+paths = sorted(p for p in all_detected if p.suffix.lower() in {".py", ".md"})
+assert paths and all(p.resolve().is_relative_to(root) and _get_extractor(p) is not None for p in paths)
+def relative(path):
+    return Path(path).relative_to(root).as_posix()
+def source_identity():
+    result = {}
+    for path in paths:
+        body = path.read_bytes()
+        assert b"\x00" not in body, f"Uncertified binary/NUL source: {relative(path)}"
+        body.decode("utf-8-sig", errors="strict")
+        result[relative(path)] = hashlib.sha256(body).hexdigest()
+    return result
+inputs = source_identity()
+messages = io.StringIO()
+with contextlib.redirect_stderr(messages):
+    extraction = extract(paths, root=root, cache_root=cache, parallel=False)
+work.mkdir(parents=True, exist_ok=True)
+(work / "native-diagnostics.txt").write_text(messages.getvalue(), encoding="utf-8")
+assert not messages.getvalue().strip(), "Inspect native diagnostic log before claiming complete selected-source extraction"
+assert not extraction["failed_sources"] and not extraction["skipped_sources"], "Failed/skipped sources are not complete coverage"
+assert source_identity() == inputs, "Sources changed during extraction"
+for path in paths:
+    fragment = load_cached(path, root=root, cache_root=cache, salt=cache_salt(path))
+    assert fragment and fragment.get("nodes") and not fragment.get("error") and not fragment.get("skipped"), relative(path)
+    assert not fragment.get("parse_errors"), f"Parser recovery is not clean coverage: {relative(path)}"
+errors = validate_extraction(extraction)
+assert all("does not match any node id" in error for error in errors), errors
+# Unresolved links are recorded diagnostics, not silently repaired or semantic claims.
+diagnostics = diagnose_extraction(copy.deepcopy(extraction), root=root, directed=True)
+G = build_from_json(copy.deepcopy(extraction), root=root, directed=True, dedup=False)
+assert G.number_of_nodes() and G.number_of_nodes() <= 5000, "Narrow this node-level build; aggregation needs separate validation"
+communities = cluster(G)
+labels = label_communities_by_hub(G, communities)
+assert sorted(n for members in communities.values() for n in members) == sorted(G.nodes)
+commit = ""
+if shutil.which("git"):
+    observed = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True, timeout=30)
+    if observed.returncode == 0:
+        commit = observed.stdout.strip()
+omissions = {
+    "uncertified_detected": sorted(relative(p) for p in all_detected - set(paths)),
+    "unclassified": [relative(p) for p in detection["unclassified"]],
+    "sensitive_or_unsafe": [relative(p) for p in detection["skipped_sensitive"]],
+    "ignored": [relative(p) for p in detection["ignored"]],
+    "pruned_noise_dirs": [relative(p) for p in detection["pruned_noise_dirs"]],
+}
+identity_material = {"sources": inputs, "configuration_hashes": config_hashes, "excludes": sorted(set(excludes)), "gitignore": False, "graphify_revision": "16218bfc80d4ca2799734d045039f7ed1a5fa9fb", "mode": "utf8-python-markdown-structural-v1"}
+identity = hashlib.sha256(json.dumps(identity_material, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+G.graph["context"] = {
+    "input_identity": identity, **identity_material, "source_commit": commit or None,
+    "semantic_extraction": "not performed", "coverage": "native structural extraction of selected inputs only",
+    "omissions": omissions, "raw_nodes": len(extraction["nodes"]), "raw_edges": len(extraction["edges"]),
+    "dangling_raw_edges": diagnostics["dangling_endpoint_edges"],
+    "limits": ["Fragments/anchors are not validated", "Bare symbol ambiguity can omit references", "Wikilink collisions use native deterministic resolution", "No complete filesystem/semantic/portable-maintenance claim"],
+}
+stage.mkdir()
+assert to_json(G, communities, str(stage / "graph.json"), built_at_commit=commit, community_labels=labels)
+assert to_html(G, communities, str(stage / "graph.html"), community_labels=labels, node_limit=5000, learning_overlay={})
+report_detection = dict(detection, total_files=len(paths), warning="STRUCTURAL ONLY: selected UTF-8 Python/Markdown inputs; semantic extraction was not performed.")
+report = generate(G, communities, score_all(G, communities), labels, god_nodes(G), surprising_connections(G, communities), report_detection, {"input": 0, "output": 0}, root.name)
+report = report.replace("- None detected - all connections are within the same source files.", "- No top-ranked surprising connection reported; this does not establish absence of cross-file relationships.")
+report = report.replace("- Token cost: 0 input · 0 output", "- Model/API tokens used by this structural build: 0 (no model/semantic step)")
+report += "\n## Structural scope and provenance\n\nInput identity: `" + identity + "`. Source commit (provenance only): `" + (commit or "unversioned") + "`.\n\n"
+report += "Selected source hashes and omissions (paths relative to the source root; pruned subtrees are not exhaustive file listings):\n\n```json\n" + json.dumps({"sources": inputs, "omissions": omissions, "raw_nodes": len(extraction["nodes"]), "raw_edges": len(extraction["edges"]), "dangling_raw_edges": diagnostics["dangling_endpoint_edges"]}, ensure_ascii=False, indent=2) + "\n```\n"
+report += "\nMarkdown fragments are not validated; ordinary code hyperlinks may be skipped, ambiguous bare mentions may be omitted, unused reference definitions may create edges and native wikilink collisions are not semantic disambiguation. JSON retains source locations/confidence; HTML is a view, not all evidence fields. Rendering needs JavaScript and the vis-network CDN. No browser rendering, semantic extraction, portable update or publication transaction is claimed.\n"
+write_text_atomic(stage / "GRAPH_REPORT.md", report)
+serialized = json.loads((stage / "graph.json").read_text(encoding="utf-8"))
+reopened = load_node_link_graph(serialized)
+assert reopened.is_directed() and set(reopened.nodes) == set(G.nodes)
+assert serialized["graph"]["context"]["input_identity"] == identity
+ids = [n["id"] for n in serialized["nodes"]]
+assert len(ids) == len(set(ids))
+assert all(e["source"] in G and e["target"] in G for e in serialized["links"])
+assert all(n.get("external") or n.get("source_file") in inputs for n in serialized["nodes"])
+assert all(n.get("external") or n.get("_origin") == "ast" for n in serialized["nodes"])
+for path in stage.iterdir():
+    text = path.read_text(encoding="utf-8")
+    assert text and str(root) not in text and str(work) not in text, path.name
+assert {p.name for p in stage.iterdir()} == {"graph.json", "graph.html", "GRAPH_REPORT.md"}
+# Validate evidence after JSON reload, including edge direction and folded evidence.
+assert set(reopened.edges) == set(G.edges)
+for source, target, evidence in G.edges(data=True):
+    restored = reopened.edges[source, target]
+    for field in ("relation", "confidence", "source_file", "source_location", "_origin", "also_seen"):
+        assert restored.get(field) == evidence.get(field), (source, target, field)
+    expected_score = evidence.get("confidence_score", {"EXTRACTED": 1.0, "INFERRED": 0.55, "AMBIGUOUS": 0.2}.get(evidence.get("confidence", "EXTRACTED"), 1.0))
+    assert restored["confidence_score"] == expected_score
+html = (stage / "graph.html").read_text(encoding="utf-8")
+def embedded(name):
+    return json.JSONDecoder().raw_decode(html.split("const " + name + " = ", 1)[1])[0]
+assert {n["id"]: n["source_file"] for n in embedded("RAW_NODES")} == {n["id"]: n.get("source_file", "") for n in serialized["nodes"]}
+assert sorted((e["from"], e["to"], e["label"], e["confidence"]) for e in embedded("RAW_EDGES")) == sorted((e["source"], e["target"], e.get("relation", ""), e.get("confidence", "EXTRACTED")) for e in serialized["links"])
+assert f'{G.number_of_nodes()} nodes · {G.number_of_edges()} edges' in report
+assert f'{G.number_of_nodes()} nodes &middot; {G.number_of_edges()} edges' in html
+assert config_identity() == config_hashes, "Configuration changed during build; discard this stage"
+assert inventory_identity(scan()) == inventory, "Inventory changed during build; discard this stage"
+assert source_identity() == inputs, "Sources changed while exporting; discard this stage"
+print(json.dumps({"stage": str(stage), "selected_files": len(paths), "nodes": G.number_of_nodes(), "edges": G.number_of_edges(), "raw_edges": len(extraction["edges"]), "dangling_raw_edges": diagnostics["dangling_endpoint_edges"], "input_identity": identity, "semantic_extraction": "not performed"}, ensure_ascii=False))
+```
+
+Inspect the staged JSON against the corpus truth before publication: known caller→callee and document-reference endpoints, native source line locations, origin/confidence, unresolved-link diagnostics and edge folding (`also_seen`). Raw and built edge counts can differ because missing targets are omitted and same-endpoint evidence coalesces. A nonempty page node is not proof of every Markdown construct, parser syntax or model concept being represented. Native diagnostics are supporting evidence, not a replacement for source oracles. The block checks native inventory, selected bytes and in-scope native configuration before/after this build. This detects observed changes, not an atomic filesystem snapshot or change-and-revert race; use a quiescent source tree. Exported numeric confidence scores may be native category defaults (EXTRACTED=1, INFERRED=0.55, AMBIGUOUS=0.2), not measured probabilities. Full portable invalidation across dependency/schema/prompt changes remains F.
+
+Use the project’s workflow to publish a reviewed complete trio together only when authorized. This slice does not copy over an existing published target. Preparation, parsing, exporter or validation failure leaves the old published references untouched and invalidates the new stage; retain the diagnostics and either fix the cause in a new task-owned stage or report the gap. General mixed updates, no-op policy, competing writers and rollback/transactionality remain F.
+
+For a bounded inspection of a known staged symbol, set `CONTEXT_SEED` to its verified unique node ID and `CONTEXT_QUESTION` to the actual question, then run this with the verified interpreter. The native loader reads the full JSON into its process; keep the agent-facing result bounded and use this only within the verified small-graph limit. The stage has no learning sidecar. Loading arbitrary published sidecars needs the separate scope checks described earlier.
+
+```python
+# context-structural-query
+import os
+from pathlib import Path
+from graphify.serve import _read_graph, _query_graph_text
+path = Path(os.environ["CONTEXT_STAGE"]) / "artifacts" / "graph.json"
+G = _read_graph(str(path))
+G.graph["_learning_overlay"] = {}
+print(_query_graph_text(G, os.environ["CONTEXT_QUESTION"], seeds=[os.environ["CONTEXT_SEED"]], seed_root=Path(os.environ["CONTEXT_ROOT"]), depth=1, token_budget=1200))
+```
+
+Do not treat the query as a directional dependency path: native BFS/DFS gathers undirected context and may truncate to budget. Follow the displayed source locations to verify the fact. JSON/HTML/report file presence and this query do not prove browser rendering or a genuine agent-powered semantic pass.
 
 ## Capability and reuse decisions
 
