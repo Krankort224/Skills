@@ -89,7 +89,7 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
-- Requires — [Planning and section](../../planning-and-section.md#construct-a-room-that-can-be-used): identify actual occupied positions and room/opening geometry.
+- Requires — [Planning and section](../../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): identify actual occupied positions and room/opening geometry.
 - Affects — [Acoustic paths and air modes](acoustics-and-air.md): opening/blind/shade states must coexist with noise and air needs.
-- Verified by — [Envelope and assemblies](../../envelope-and-assemblies.md#develop-four-connected-junctions): test the head, shade/control and enclosure interfaces.
+- Verified by — [Envelope and assemblies](../../construction/envelope/assemblies.md#develop-four-connected-junctions): test the head, shade/control and enclosure interfaces.
 - Illustrated by — [Street reading room](../../../assets/studies/street-reading-room.md): keep failed low-sun geometry, revised services and conditional margins.

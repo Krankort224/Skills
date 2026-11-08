@@ -19,13 +19,13 @@ member depths, movement, vibration, foundation and stability design remain with
 the engineer. Do not import generic span tables as project sizing.
 
 For a directional rigid/braced/core choice or an open ground story, develop
-the [actual action and continuous recipients](../../frame-and-core.md#choose-frame-and-stability-action-with-the-plan).
-For physical products on a nominal grid, reconcile [pitch, component and clearance](../../frame-and-core.md#separate-coordination-pitch-component-and-occupied-clearance).
+the [actual action and continuous recipients](frame-and-core.md#choose-frame-and-stability-action-with-the-plan).
+For physical products on a nominal grid, reconcile [pitch, component and clearance](frame-and-core.md#separate-coordination-pitch-component-and-occupied-clearance).
 
 For a clear-span roof or an unclear arch/tie/ridge mechanism, use
-[roof and span](../../roof-and-span.md#choose-a-spanning-mechanism-and-its-boundaries).
+[roof and span](roof-and-span.md#choose-a-spanning-mechanism-and-its-boundaries).
 It develops reaction/support alternatives, the distinction between a ridge board
-and a supported ridge, and the [three-dimensional restraint paths](../../roof-and-span.md#keep-the-support-system-connected-in-three-dimensions)
+and a supported ridge, and the [three-dimensional restraint paths](roof-and-span.md#keep-the-support-system-connected-in-three-dimensions)
 that can conflict with glazing and openings. Use those mechanisms to revise the
 architecture rather than assign capacities from this provisional family table.
 
@@ -36,6 +36,6 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 ## Related decisions
 
 - Requires — [Program relationships](../../program/relationships.md): let room/activity and route constraints shape support alternatives.
-- Verified by — [Frame action, component coordination and vertical cores](../../frame-and-core.md): when frame/core topology is selected: trace actual support, stability and interfaces.
+- Verified by — [Frame action, component coordination and vertical cores](frame-and-core.md): when frame/core topology is selected: trace actual support, stability and interfaces.
 - Affects — [Section and services reservations](../../space/vertical/section-and-services.md): a column-free alternative can consume the clear-height budget.
 - Illustrated by — [Hall with services](../../../assets/studies/hall-services.md): preserve the column-versus-depth conflict and conditional side-band correction.

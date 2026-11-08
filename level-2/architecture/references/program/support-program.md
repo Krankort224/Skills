@@ -31,5 +31,5 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 ## Related decisions
 
 - Requires — [Activity and concurrent demand](demand.md): derive support from the actual activities, not only a building label.
-- Verified by — [Planning and section](../planning-and-section.md#construct-a-room-that-can-be-used): place stored objects and their handling envelope.
+- Verified by — [Planning and section](../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): place stored objects and their handling envelope.
 - Verified by — [Access and complete closure](../space/circulation/access-and-closure.md): test replenishment and handling while other rooms operate.

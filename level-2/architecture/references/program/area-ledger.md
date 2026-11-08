@@ -44,7 +44,7 @@ Cross-check the total independently by use and by assigned floor. Those two
 sums must agree before the remainder is used for a decision. Correct an arithmetic
 discrepancy rather than carrying one total in the introduction and another in
 the floor ledger. For required clear room areas use
-[clear-area construction](../planning-and-section.md#construct-a-clear-area-fit-with-explicit-wall-reservations)
+[clear-area construction](../space/planning/room-floor-and-section.md#construct-a-clear-area-fit-with-explicit-wall-reservations)
 to test walls and shared movement explicitly.
 
 For Russia, choose the measurement **purpose** before translating the ledger.
@@ -101,7 +101,7 @@ If a schedule is larger than the available plate, no rearrangement can fix that
 arithmetic. If it is smaller but still does not fit, look for deficient frontage,
 wrong proportions, disconnected remnants, excessive route depth or fixed
 obstructions. Revise the responsible variable rather than shrinking all rooms
-uniformly. See the [worked ledgers](../planning-and-section.md#worked-design-progressions).
+uniformly. See the [worked ledgers](../space/planning/room-floor-and-section.md#worked-design-progressions).
 
 ## Provenance and use limits
 
@@ -109,5 +109,5 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
-- Verified by — [Planning and section](../planning-and-section.md#construct-a-room-that-can-be-used): check wall, door and finished-room geometry rather than treating a subtotal as a fitted plan.
+- Verified by — [Planning and section](../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): check wall, door and finished-room geometry rather than treating a subtotal as a fitted plan.
 - Affects — [Capacity and room demand](capacity-and-room-demand.md): recheck actual capacity when the measured boundary changes.

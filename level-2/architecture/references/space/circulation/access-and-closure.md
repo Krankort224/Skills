@@ -76,7 +76,7 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 ## Related decisions
 
 - Requires — [Activity and concurrent demand](../../program/demand.md): identify each actor, activity, operating time and shared resource.
-- Affects — [Spatial relationships and movement](../../spatial-composition.md#place-movement-beside-through-or-into-a-space): a legal-looking connection can still cross an occupied activity.
-- Verified by — [Building use families](../../building-use-families.md#select-a-family-by-its-operating-commitments): when a use-family creates specific staffing/support commitments.
+- Affects — [Spatial relationships and movement](../planning/spatial-relationships.md#place-movement-beside-through-or-into-a-space): a legal-looking connection can still cross an occupied activity.
+- Verified by — [Building use families](../../typologies/index.md#select-a-family-by-its-operating-commitments): when a use-family creates specific staffing/support commitments.
 - Verified by — [Inclusive and emergency interfaces](inclusive-and-emergency-interfaces.md): test ordinary access and emergency strategy separately.
 - Affects — [Area boundary and ledger](../../program/area-ledger.md): count independent/shared support on its original boundary.

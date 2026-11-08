@@ -49,5 +49,5 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 ## Related decisions
 
 - Requires — [Access and complete closure](access-and-closure.md): identify actual origins, portals, support destinations, hours and closures.
-- Verified by — [Spatial relationships and movement](../../spatial-composition.md#place-movement-beside-through-or-into-a-space): keep actual occupied activity fields and movement independent where needed.
+- Verified by — [Spatial relationships and movement](../planning/spatial-relationships.md#place-movement-beside-through-or-into-a-space): keep actual occupied activity fields and movement independent where needed.
 - Affects — [Section and services reservations](../vertical/section-and-services.md): coordinate levels, service/cabinet access and unobstructed journeys.

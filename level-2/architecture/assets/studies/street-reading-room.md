@@ -80,5 +80,5 @@ Read the selected method when its input or consequence is unresolved; this study
 - [Section and services reservations](../../references/space/vertical/section-and-services.md)
 - [Daylight, view and occupied comfort](../../references/performance/comfort/daylight-view.md)
 - [Acoustic paths and air modes](../../references/performance/comfort/acoustics-and-air.md)
-- [Envelope and assemblies](../../references/envelope-and-assemblies.md)
-- [Operation and lifecycle](../../references/operation-and-lifecycle.md)
+- [Envelope and assemblies](../../references/construction/envelope/assemblies.md)
+- [Operation and lifecycle](../../references/performance/lifecycle/intervention-and-cost.md)

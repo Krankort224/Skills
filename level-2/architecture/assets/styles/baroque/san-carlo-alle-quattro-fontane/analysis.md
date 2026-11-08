@@ -156,4 +156,4 @@ The analysis establishes a bounded precedent reading. It does not establish
 an exact geometrical reconstruction, measured environmental performance,
 structural capacities, original visitor behavior or a complete conservation
 history. For the direction-level choices, return to the
-[Baroque profile](../../../../references/style-baroque-and-art-nouveau.md#baroque).
+[Baroque profile](../../../../references/composition/styles/baroque-art-nouveau.md#baroque).

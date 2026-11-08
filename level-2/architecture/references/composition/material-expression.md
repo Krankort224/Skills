@@ -7,7 +7,7 @@ Start from the brief, [actual demand](../program/demand.md) and accepted decisio
 **Decision:** Select a provisional material expression for each visible or
 consequential location, balancing character, use, durability and plausible
 construction. Enclosure layers and their continuity are owned by
-[performance and coordination](../envelope-and-assemblies.md#climate-exposure-and-envelope-continuity);
+[performance and coordination](../construction/envelope/assemblies.md#climate-exposure-and-envelope-continuity);
 a cladding appearance is not a complete wall assembly or engineering design.
 
 **Inputs:** Intended appearance and sensory character, exposure, use and wear,
@@ -94,6 +94,6 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
-- Verified by — [Envelope and assemblies](../envelope-and-assemblies.md#compatibility-movement-and-replaceability): check actual support, joints and component removal.
+- Verified by — [Envelope and assemblies](../construction/envelope/assemblies.md#compatibility-movement-and-replaceability): check actual support, joints and component removal.
 - Affects — [Exposure, durability and maintenance](../performance/lifecycle/durability.md): relate intended weathering to exposure and loss of function.
-- Verified by — [Operation and lifecycle](../operation-and-lifecycle.md#trace-a-complete-maintenance-journey): test piece, worker, tools and waste access during occupied use.
+- Verified by — [Operation and lifecycle](../performance/lifecycle/intervention-and-cost.md#trace-a-complete-maintenance-journey): test piece, worker, tools and waste access during occupied use.

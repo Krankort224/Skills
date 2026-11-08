@@ -1,7 +1,7 @@
 # Barbican: a common pedestrian landscape with inhabited edges
 
-Return to the [Brutalism profile](../../../../references/style-modern-organic-and-brutalist.md#brutalism-articulated-mass-construction-and-collective-space)
-or the general [precedent-reading method](../../../../references/style-and-precedent-methods.md#read-an-object-before-classifying-it).
+Return to the [Brutalism profile](../../../../references/composition/styles/modern-organic-brutalist.md#brutalism-articulated-mass-construction-and-collective-space)
+or the general [precedent-reading method](../../../../references/composition/styles/precedent-transfer.md#read-an-object-before-classifying-it).
 
 ## Contents
 
@@ -125,9 +125,9 @@ the through-path. If a new bridge is later proposed to a neighboring plot,
 test the hub with that bridge unavailable and confirm the connection's actual
 rights before treating it as a second entrance. A dramatic common level that
 depends on an unconfirmed neighboring connection repeats the network-boundary
-problem. Use [quarter and public space](../../../../references/quarter-and-public-space.md),
-[building use families](../../../../references/building-use-families.md) and
-[operation and lifecycle](../../../../references/operation-and-lifecycle.md)
+problem. Use [quarter and public space](../../../../references/context/urban/quarter-and-public-space.md),
+[building use families](../../../../references/typologies/index.md) and
+[operation and lifecycle](../../../../references/performance/lifecycle/intervention-and-cost.md)
 for the affected decisions. This is an original small spatial test, not a
 Barbican replica or a completed learning-building design.
 

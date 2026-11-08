@@ -107,6 +107,6 @@ three different kinds of evidence.
 
 The transfer is independently authored. No plan, dimensions, image or book text
 is reproduced. Source access does not establish redistribution permission.
-Use the [classical profile](../../../../references/style-classical-gothic-renaissance.md#classical-order-depth-and-a-legible-whole)
-for other choices and the [common transfer method](../../../../references/style-and-precedent-methods.md#transfer-a-mechanism-into-a-changed-brief)
+Use the [classical profile](../../../../references/composition/styles/classical-gothic-renaissance.md#classical-order-depth-and-a-legible-whole)
+for other choices and the [common transfer method](../../../../references/composition/styles/precedent-transfer.md#transfer-a-mechanism-into-a-changed-brief)
 when the actual brief changes.

@@ -18,7 +18,7 @@ cost figures from a material name.
 | Glass/frame/seal | Seals, gaskets and insulating-glass units may need replacement before the frame/support | Reserve bead/pressure-plate access, lifting/removal route and suitable working space; an exterior-only repair may require site access unavailable after completion |
 | Roof membrane and concealed drain | Debris, puncture, seam or outlet failure can wet concealed construction | Make inspection, safe access, overflow and outlet cleaning possible; do not hide a critical outlet solely to simplify the elevation |
 
-Use [compatibility, movement and replaceability](../../envelope-and-assemblies.md#compatibility-movement-and-replaceability)
+Use [compatibility, movement and replaceability](../../construction/envelope/assemblies.md#compatibility-movement-and-replaceability)
 for the shared component-interface and removal sequence. The exposure mechanisms
 above choose what must be protected; the assembly method tests whether its
 components and repair access actually work together. Material-specific tool,
@@ -32,9 +32,9 @@ material is automatically lower impact. Expression and composition belong to
 [material expression](../../composition/material-expression.md).
 
 For the complete work/handling and temporary-use journey, select [maintenance
-operation](../../operation-and-lifecycle.md#trace-a-complete-maintenance-journey).
-For takeoff or cost decisions, use the relevant [quantity](../../operation-and-lifecycle.md#count-the-architectural-work)
-or [dated event](../../operation-and-lifecycle.md#compare-equivalent-function-over-time)
+operation](intervention-and-cost.md#trace-a-complete-maintenance-journey).
+For takeoff or cost decisions, use the relevant [quantity](intervention-and-cost.md#count-the-architectural-work)
+or [dated event](intervention-and-cost.md#compare-equivalent-function-over-time)
 method; exposure mechanisms remain here and generic component removal remains
 with the assembly owner.
 
@@ -44,6 +44,6 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
-- Requires — [Envelope and assemblies](../../envelope-and-assemblies.md#assign-control-functions-before-drawing-layer-order): for enclosure exposure: distinguish face appearance from water/air/thermal/moisture functions.
+- Requires — [Envelope and assemblies](../../construction/envelope/assemblies.md#assign-control-functions-before-drawing-layer-order): for enclosure exposure: distinguish face appearance from water/air/thermal/moisture functions.
 - Affects — [Material expression and tectonics](../../composition/material-expression.md): separate desired patina from premature loss of function.
-- Verified by — [Operation and lifecycle](../../operation-and-lifecycle.md#trace-a-complete-maintenance-journey): trace replacement through the occupied building, not merely removal from a bracket.
+- Verified by — [Operation and lifecycle](intervention-and-cost.md#trace-a-complete-maintenance-journey): trace replacement through the occupied building, not merely removal from a bracket.

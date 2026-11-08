@@ -164,5 +164,5 @@ whole-building geometry, original daily movement, measured environmental
 performance or structural capacities. No relevant Casa Batlló book case was
 established in the selected library reading; it is not invented to fill that
 gap. The P15 reading used for the companion San Carlo case does not authenticate
-this house. Return to the [Art Nouveau profile](../../../../references/style-baroque-and-art-nouveau.md#art-nouveau)
+this house. Return to the [Art Nouveau profile](../../../../references/composition/styles/baroque-art-nouveau.md#art-nouveau)
 for direction-level alternatives and regional limits.

@@ -48,5 +48,5 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 ## Related decisions
 
 - Requires — [Activity and concurrent demand](../program/demand.md#turn-an-incomplete-brief-into-testable-demand): when the change depends on uncertain brief inputs: retain their status.
-- Verified by — [Design development and architectural correction](../design-development.md#propagate-a-changed-client-constraint): coordinate the affected plan, section and elevation interfaces.
-- Verified by — [Completion for the requested architectural use](../design-completion.md#derive-evidence-for-the-requested-use): test sufficiency for the requested recipient/use rather than claiming universal completion.
+- Verified by — [Design development and architectural correction](design-development.md#propagate-a-changed-client-constraint): coordinate the affected plan, section and elevation interfaces.
+- Verified by — [Completion for the requested architectural use](completion.md#derive-evidence-for-the-requested-use): test sufficiency for the requested recipient/use rather than claiming universal completion.

@@ -40,7 +40,7 @@ visible; coordinating an interface does not size an engineering system.
 
 For the actual construction of levels, occupied heights, deep and shallow service
 bands, core discharge and future divisions, use
-[section and core logic](../planning-and-section.md#organize-levels-cores-and-service-depth).
+[section and core logic](../space/planning/room-floor-and-section.md#organize-levels-cores-and-service-depth).
 The worked progressions there show why a satisfactory floor total can still fail
 in section or at a fixed facade.
 
@@ -50,6 +50,6 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
-- Verified by — [Planning and section](../planning-and-section.md#organize-levels-cores-and-service-depth): fit occupied levels, core and actual service reservation.
+- Verified by — [Planning and section](../space/planning/room-floor-and-section.md#organize-levels-cores-and-service-depth): fit occupied levels, core and actual service reservation.
 - Affects — [Access and complete closure](../space/circulation/access-and-closure.md): retest independent hours and support across levels or phases.
 - Affects — [Bounded revision and uncertainty](../methods/bounded-revision.md): propagate a changed assignment without resetting accepted facts.

@@ -50,7 +50,7 @@ on different branches or across a real buffer, and connect clusters to arrival.
 Draw doors and movement through the proposed blocks before calling them a plan.
 Touching rectangles do not prove a direct connection: the shared wall may be
 occupied by storage or the only door may open into the wrong access zone. Compare
-[plan families](../planning-and-section.md#choose-a-plan-family-from-the-relationships)
+[plan families](../space/planning/room-floor-and-section.md#choose-a-plan-family-from-the-relationships)
 when the same graph can be realized in different ways.
 
 ## Provenance and use limits
@@ -60,6 +60,6 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 ## Related decisions
 
 - Requires — [Activity and concurrent demand](demand.md): name actual activities and concurrent users before specifying their relationship.
-- Verified by — [Planning and section](../planning-and-section.md#choose-a-plan-family-from-the-relationships): construct alternatives rather than equating adjacency intent with a physical connection.
+- Verified by — [Planning and section](../space/planning/room-floor-and-section.md#choose-a-plan-family-from-the-relationships): construct alternatives rather than equating adjacency intent with a physical connection.
 - Verified by — [Access and complete closure](../space/circulation/access-and-closure.md): test controlled boundaries, crossings and usable support journeys.
 - Affects — [Generate and compare partis](../composition/massing/parti.md): compare spatial organizing concepts against the relationships.

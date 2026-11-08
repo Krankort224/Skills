@@ -52,6 +52,6 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 - Requires — [Activity and concurrent demand](demand.md#turn-an-incomplete-brief-into-testable-demand): when timing or demand is disputed: retain sources and conditional consequences.
 - Affects — [Supporting program](support-program.md): allow waiting, changeover, displaced objects and supporting staff.
-- Verified by — [Planning and section](../planning-and-section.md#construct-a-room-that-can-be-used): fit the use and displaced objects in their actual states.
+- Verified by — [Planning and section](../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): fit the use and displaced objects in their actual states.
 - Verified by — [Access and complete closure](../space/circulation/access-and-closure.md): trace setup, storage and after-hours journeys.
 - Verified by — [Area boundary and ledger](area-ledger.md): count the same support and shared floor extent once.

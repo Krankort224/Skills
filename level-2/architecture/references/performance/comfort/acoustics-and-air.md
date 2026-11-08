@@ -45,7 +45,7 @@ between rooms or provide little wind-driven flow. Test that alternative as a
 whole spatial system.
 
 When opening, shade, privacy, noise and air assumptions must hold simultaneously,
-use [coexisting occupied states](../../environmental-operating-modes.md#develop-states-that-can-actually-coexist).
+use [coexisting occupied states](operating-states.md#develop-states-that-can-actually-coexist).
 That method adds actual control/changeover/failure conditions to these causal
 paths; the table alone does not establish an operable combined state.
 
@@ -57,5 +57,5 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 - Requires — [Activity and concurrent demand](../../program/demand.md): identify simultaneous sources, receivers, times and operating states.
 - Affects — [Daylight, view and occupied comfort](daylight-view.md): closing windows or deploying controls changes the occupied condition.
-- Verified by — [Environmental operating states and inclusive control](../../environmental-operating-modes.md): when selecting coupled seasonal/open/closed states: test actual air paths and changeover.
+- Verified by — [Environmental operating states and inclusive control](operating-states.md): when selecting coupled seasonal/open/closed states: test actual air paths and changeover.
 - Affects — [Section and services reservations](../../space/vertical/section-and-services.md): reserve the actual transfer/supply/return paths and service access.

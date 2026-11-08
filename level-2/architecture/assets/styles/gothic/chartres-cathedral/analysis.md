@@ -112,6 +112,6 @@ The useful counterexample is broader: a luminous, apparently continuous room
 can depend on a carefully differentiated section and boundary. Preserve those
 relationships only where the changed program benefits. No source drawing,
 photo, dimension set or full text is reproduced; no redistribution license is
-assumed. Use the [Gothic profile](../../../../references/style-classical-gothic-renaissance.md#gothic-repeated-bays-sectional-hierarchy-and-filtered-light)
-and [common transfer method](../../../../references/style-and-precedent-methods.md#transfer-a-mechanism-into-a-changed-brief)
+assumed. Use the [Gothic profile](../../../../references/composition/styles/classical-gothic-renaissance.md#gothic-repeated-bays-sectional-hierarchy-and-filtered-light)
+and [common transfer method](../../../../references/composition/styles/precedent-transfer.md#transfer-a-mechanism-into-a-changed-brief)
 to develop the actual project.

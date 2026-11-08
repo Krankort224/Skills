@@ -117,6 +117,6 @@ The lesson is to coordinate center, room groups, thresholds and the actual
 ground. These new alternatives are not replicas of the source plan. No source
 plate, photo, dimensions or extensive text is installed; the Met's plate-specific
 public-domain label does not license unrelated book scans or monument photos.
-Use the [Renaissance profile](../../../../references/style-classical-gothic-renaissance.md#renaissance-related-rooms-articulated-fronts-and-a-measured-whole)
-and [common transfer method](../../../../references/style-and-precedent-methods.md#transfer-a-mechanism-into-a-changed-brief)
+Use the [Renaissance profile](../../../../references/composition/styles/classical-gothic-renaissance.md#renaissance-related-rooms-articulated-fronts-and-a-measured-whole)
+and [common transfer method](../../../../references/composition/styles/precedent-transfer.md#transfer-a-mechanism-into-a-changed-brief)
 for the actual changed brief.

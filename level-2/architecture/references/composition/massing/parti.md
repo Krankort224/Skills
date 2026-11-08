@@ -41,13 +41,13 @@ opening hours suggest separable wings and a common threshold; repeated private
 rooms suggest a repeatable band. A school, library or house can use several of
 these mechanisms. Program names alone cannot select one.
 
-For the relationship *within* a type, use [how spaces meet](../../spatial-composition.md#choose-how-spaces-meet):
+For the relationship *within* a type, use [how spaces meet](../../space/planning/spatial-relationships.md#choose-how-spaces-meet):
 containment, an actual shared field, adjacency or an intermediate place. Choose
-[movement beside, through or into it](../../spatial-composition.md#place-movement-beside-through-or-into-a-space)
+[movement beside, through or into it](../../space/planning/spatial-relationships.md#place-movement-beside-through-or-into-a-space)
 separately; naming a central hall does not decide whether it can be occupied or
 closed while other rooms remain accessible. For a composition experienced along
 an approach rather than from a single facade view, use
-[approach and sequence](../../spatial-composition.md#compose-for-the-actual-approach-and-sequence).
+[approach and sequence](../../space/planning/spatial-relationships.md#compose-for-the-actual-approach-and-sequence).
 
 | Organization | Spatial mechanism and useful conditions | Conflicts, failures and a discriminating test |
 | --- | --- | --- |
@@ -82,4 +82,4 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 - Requires — [Program relationships](../../program/relationships.md): test organization against actual activity relationships.
 - Affects — [Mass, void and massing operations](mass-and-void.md): construct comparable occupied solids and outdoor rooms.
-- Verified by — [Planning and section](../../planning-and-section.md#choose-a-plan-family-from-the-relationships): fit a working plan rather than retaining a symbolic diagram.
+- Verified by — [Planning and section](../../space/planning/room-floor-and-section.md#choose-a-plan-family-from-the-relationships): fit a working plan rather than retaining a symbolic diagram.

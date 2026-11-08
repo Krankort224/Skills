@@ -81,6 +81,74 @@ link](absent.md)
                                  for error in check_skill.validate(root)['errors']))
 
 
+class GraphIntegrityTests(unittest.TestCase):
+    def test_reference_links_and_fenced_examples(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'method.md').write_text('# Method\n\n## Verified\n')
+            (root / 'index.md').write_text('''# Index
+
+[The selected method][method]
+
+[method]: method.md#verified
+
+~~~markdown
+[Fenced example](absent.md)
+[unused]: absent-too.md
+~~~
+````markdown
+```nested example
+[Another fenced example](also-absent.md)
+```
+````
+''')
+            def errors():
+                return [e for e in check_skill.validate(root)['errors']
+                        if e['path'] == 'index.md']
+            self.assertEqual(errors(), [])
+            (root / 'method.md').write_text('# Method\n\n## Other\n')
+            self.assertEqual(errors(), [{'path': 'index.md',
+                                        'error': 'anchor missing: method.md#verified'}])
+            (root / 'method.md').unlink()
+            self.assertEqual(errors(), [{'path': 'index.md',
+                                        'error': 'local link missing: method.md#verified'}])
+
+    def test_duplicate_heading_bases_are_reported_without_rejecting_fenced_titles(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            path = root / 'method.md'
+            path.write_text('# Method\n\n## Repeated?\n\n## Repeated!\n')
+            self.assertIn({'path': 'method.md', 'error': 'duplicate heading anchor base: repeated'},
+                          check_skill.validate(root)['errors'])
+            path.write_text('# Method\n\n## Repeated?\n\n~~~\n## Repeated!\n~~~\n')
+            self.assertFalse(any('duplicate heading' in e['error']
+                                 for e in check_skill.validate(root)['errors']))
+
+    def test_provenance_or_maintenance_cannot_be_the_only_runtime_route(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'references').mkdir()
+            (root / 'maintenance').mkdir()
+            (root / 'SKILL.md').write_text('# Entry\n\n[Sources](references/sources.md)\n[Plan](maintenance/plan.md)\n')
+            (root / 'references/sources.md').write_text('# Sources\n\n[Recipient](../method.md)\n')
+            (root / 'maintenance/plan.md').write_text('# Plan\n\n[Future owner](../method.md)\n')
+            (root / 'method.md').write_text('# Method\n\nComplete local reasoning.\n')
+            expected = {'path': 'method.md',
+                        'error': 'runtime document unreachable without provenance/maintenance'}
+            self.assertIn(expected, check_skill.validate(root)['errors'])
+            with (root / 'SKILL.md').open('a') as stream:
+                stream.write('[Known method](method.md)\n')
+            self.assertNotIn(expected, check_skill.validate(root)['errors'])
+
+    def test_reciprocal_graph_and_selected_loading_have_no_hop_quota(self):
+        graph = {'a': {'b', 'unselected'}, 'b': {'a', 'c'},
+                 'c': {'b', 'd'}, 'd': set(), 'unselected': {'a'}}
+        self.assertEqual(check_skill.reachable(graph, ['a']), set(graph))
+        self.assertEqual(check_skill.reachable(graph, ['a'], {'a', 'b', 'c', 'd'}),
+                         {'a', 'b', 'c', 'd'})
+        self.assertEqual(check_skill.reachable(graph, ['a'], {'a', 'b'}), {'a', 'b'})
+
+
 class TableContinuityTests(unittest.TestCase):
     def test_blank_breaks_leave_provenance_rows_outside_table(self):
         text = '''| Source and extent | Adaptation |

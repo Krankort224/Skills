@@ -59,4 +59,4 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 - Requires — [Shared use and resource timelines](shared-use.md): when rooms, staff or equipment are shared: test actual occupied and changeover intervals.
 - Affects — [Capacity and room demand](capacity-and-room-demand.md): translate concurrent activity into actual room objects and support.
-- Verified by — [Planning and section](../planning-and-section.md#construct-a-room-that-can-be-used): test the proposed room physically; demand alone is not fit.
+- Verified by — [Planning and section](../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): test the proposed room physically; demand alone is not fit.

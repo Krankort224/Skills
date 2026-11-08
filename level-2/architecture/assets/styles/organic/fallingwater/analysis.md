@@ -1,7 +1,7 @@
 # Fallingwater: anchoring rooms and extending their occupied edge
 
-Return to the [organic architecture profile](../../../../references/style-modern-organic-and-brutalist.md#organic-architecture-site-occupation-and-a-coherent-whole)
-or the general [precedent-reading method](../../../../references/style-and-precedent-methods.md#read-an-object-before-classifying-it).
+Return to the [organic architecture profile](../../../../references/composition/styles/modern-organic-brutalist.md#organic-architecture-site-occupation-and-a-coherent-whole)
+or the general [precedent-reading method](../../../../references/composition/styles/precedent-transfer.md#read-an-object-before-classifying-it).
 
 ## Contents
 
@@ -120,9 +120,9 @@ For a brief requiring frequent winter use, keep the main circulation inside
 and treat the veranda as optional; for intermittent warm-season use, compare
 a larger open shelter with a smaller enclosed room. Do not assign insulation,
 shade, thermal performance or a control-layer position from the word organic.
-Use [site and context](../../../../references/site-and-context.md),
-[envelope and assemblies](../../../../references/envelope-and-assemblies.md)
-and [operation and lifecycle](../../../../references/operation-and-lifecycle.md)
+Use [site and context](../../../../references/context/site/site-and-context.md),
+[envelope and assemblies](../../../../references/construction/envelope/assemblies.md)
+and [operation and lifecycle](../../../../references/performance/lifecycle/intervention-and-cost.md)
 to develop the selected physical interfaces. The transferred mechanism is a
 usable, sheltered relation to a particular landscape, with new plan/section
 and material consequences; the historical house's geometry is not copied.

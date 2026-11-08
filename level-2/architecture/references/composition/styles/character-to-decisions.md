@@ -38,10 +38,10 @@ from verified source observations. Name what plan, section, image or text was
 actually inspected and what mechanism it supports; leave uncertain attribution
 or classification open. Relevant history can explain a spatial/material choice,
 but a name or resemblance does not establish its performance or transferability.
-For an identified direction or object, select its [profile and authored case](../../style-directions.md#select-a-direction-and-object)
-and use [evidence before classification](../../style-and-precedent-methods.md#read-an-object-before-classifying-it).
+For an identified direction or object, select its [profile and authored case](index.md#select-a-direction-and-object)
+and use [evidence before classification](precedent-transfer.md#read-an-object-before-classifying-it).
 For a changed program, site, climate, scale or making, use the selected
-[mechanism-transfer method](../../style-and-precedent-methods.md#transfer-a-mechanism-into-a-changed-brief).
+[mechanism-transfer method](precedent-transfer.md#transfer-a-mechanism-into-a-changed-brief).
 This trait method retains general composition; the profiles own the declared
 direction knowledge and cases own their inspected object evidence.
 
@@ -71,6 +71,6 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
-- Requires — [Style, precedent and adaptation](../../style-and-precedent-methods.md): when deriving traits from a named precedent: separate evidence from interpretation.
+- Requires — [Style, precedent and adaptation](precedent-transfer.md): when deriving traits from a named precedent: separate evidence from interpretation.
 - Verified by — [Generate and compare partis](../massing/parti.md): test that the chosen traits survive the actual program and setting.
 - Affects — [Material expression and tectonics](../material-expression.md): translate sensory/tectonic intent into buildable choices.

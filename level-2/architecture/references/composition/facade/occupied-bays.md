@@ -58,8 +58,8 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 ## Related decisions
 
 - Requires — [Scale, hierarchy and rhythm](hierarchy-and-rhythm.md): when formal hierarchy/rhythm is unresolved: define its occupied and contextual inputs.
-- Verified by — [Planning and section](../../planning-and-section.md#construct-a-room-that-can-be-used): retain furniture, action and privacy envelopes behind the opening.
-- Verified by — [Walls, floors and openings](../../wall-floor-and-opening.md#develop-a-wall-opening-as-support-and-use): test support, reveal, frame, control and service envelopes.
-- Verified by — [Envelope and assemblies](../../envelope-and-assemblies.md#develop-four-connected-junctions): resolve corner/head/sill and movement consequences.
+- Verified by — [Planning and section](../../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): retain furniture, action and privacy envelopes behind the opening.
+- Verified by — [Walls, floors and openings](../../construction/structure/walls-floors-openings.md#develop-a-wall-opening-as-support-and-use): test support, reveal, frame, control and service envelopes.
+- Verified by — [Envelope and assemblies](../../construction/envelope/assemblies.md#develop-four-connected-junctions): resolve corner/head/sill and movement consequences.
 - Affects — [Daylight, view and occupied comfort](../../performance/comfort/daylight-view.md): a grid-driven opening revision changes light, view and control.
 - Affects — [Material expression and tectonics](../material-expression.md): directional grain and real joints can prevent nominal repeats from being interchangeable.

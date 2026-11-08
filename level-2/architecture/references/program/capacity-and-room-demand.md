@@ -28,7 +28,7 @@ chairs. Six tables in three columns and two rows need a 9.0 × 4.4 m field for
 study dimensions, not clearances established for accessibility or safety. Test
 actual furniture, door approaches, sightlines and the users' actions before
 fixing them. Simply multiplying 24 by a per-person area would not establish the
-same fit. See [room geometry](../planning-and-section.md#construct-a-room-that-can-be-used).
+same fit. See [room geometry](../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used).
 
 **Small check.** Two groups of 20 people use a room at different times; a third
 of 10 overlaps each group. The observed peak is 30, not 50, if those time and
@@ -72,6 +72,6 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 ## Related decisions
 
 - Requires — [Shared use and resource timelines](shared-use.md): when resources are shared: include real occupancy and changeover.
-- Verified by — [Planning and section](../planning-and-section.md#construct-a-room-that-can-be-used): construct the room around objects, actions and an uninterrupted route.
+- Verified by — [Planning and section](../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): construct the room around objects, actions and an uninterrupted route.
 - Affects — [Access and complete closure](../space/circulation/access-and-closure.md): test arrival, support and concurrent routes.
 - Verified by — [Area boundary and ledger](area-ledger.md): keep net room, circulation and total area bases distinct.

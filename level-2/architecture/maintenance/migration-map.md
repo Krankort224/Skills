@@ -1,8 +1,8 @@
 # Architecture migration map — Issue 10, Stage B
 
-Status: A+B map accepted at `4ad750b7733bd828fb1d99d753e48444387f17e3`; C pilot implemented in this tree, pending independent review. This map accounts for the 67 files at `d260c6cb845734f9fe2e7a86bc1ca97cc1f46e72`. Acceptance of the map does not accept its implementation or authorize later passes automatically.
+Status: A+B map accepted at `4ad750b7733bd828fb1d99d753e48444387f17e3`; C accepted at `92018736fa4688d2f390d0bd308069f0a810d5cc`; D remaining migration/navigation implemented in this tree, pending independent review. This map accounts for the 67 files at `d260c6cb845734f9fe2e7a86bc1ca97cc1f46e72`. E/F remain unimplemented. Acceptance of the map does not accept its implementation or authorize later passes automatically.
 
-All paths are relative to `level-2/architecture/`. The C pilot destinations below now exist; other future paths remain code literals. Source ranges always refer to the pinned pre-migration files, not current destination line numbers. See [inventory](knowledge-inventory.md) and [target design](knowledge-design.md).
+All paths are relative to `level-2/architecture/`. Final D destinations in the complete-file disposition now exist; the pilot ledger records C's intermediate owners where a whole owner subsequently moves in D. E source paths remain proposed code literals. Source ranges always refer to the pinned pre-migration files, not current destination line numbers. See [inventory](knowledge-inventory.md) and [target design](knowledge-design.md).
 
 ## Contents
 
@@ -14,6 +14,7 @@ All paths are relative to `level-2/architecture/`. The C pilot destinations belo
 - [Source and case migration](#source-and-case-migration)
 - [Execution order and acceptance evidence](#execution-order-and-acceptance-evidence)
 - [Pilot implementation and retained context](#pilot-implementation-and-retained-context)
+- [Remaining migration and family-section preservation](#remaining-migration-and-family-section-preservation)
 
 ## Actions and stage boundaries
 
@@ -308,3 +309,25 @@ The source-level exceptions are explicit:
 Original substantive headings keep their fragments except the mapped uncertainty-communication child above. Extracted leading child headings are promoted one level where needed; their fragments are unchanged. The shared-use method's former “room-envelope method below” now links explicitly to capacity/room demand and the area ledger. The empty former structure/services parent now resolves to the section-budget method, whose conditional support-concept dependency supplies the other question; the source ledger identifies both owners where the inspected source supports both. Whole-file inbounds select a relevant method or the appropriate question selector rather than one global catch-all.
 
 The current links carry conditional prerequisite, consequence, check and study relations. They do not require recursive reading or source-pack loading. Source URLs, inspected ranges, exclusions, legal records and notices have not been rationalized or refreshed in C. Exact scenario outputs and execution evidence belong in the issue handoff, not this routing-independent preservation map.
+
+## Remaining migration and family-section preservation
+
+D applies all 25 complete-file moves in the disposition table without further splitting their coherent methods, examples or source conditions. Only relative/internal targets and explicit source-recipient filename labels change. Additional conditional links surface the site-to-ground/access, retained-fabric-to-occupied-work and timber-replacement-to-whole-journey dependencies; they do not replace those methods or add engineering conclusions.
+
+The use-family split refers to the 344-line `references/building-use-families.md` at the accepted C revision:
+
+| Source lines | Current owner and treatment |
+| --- | --- |
+| 1–17 | `references/typologies/index.md`: complete bounded perimeter and separation from general methods; each family retains an essential local reminder of these conditions |
+| 18–28 | Rebuilt family question links; obsolete self-TOC removed as navigation |
+| 29–51 | `references/typologies/index.md#select-a-family-by-its-operating-commitments`: complete constructive selection method |
+| 52–93 | `references/typologies/housing/shared-domestic.md`: full domestic/shared-support decision, procedure and conditional example |
+| 94–145 | `references/typologies/learning.md`: full learning/preparation/changeover method and example |
+| 146–209 | `references/typologies/libraries.md`: complete reader/collection/return-support method, including shelf-length failure and correction |
+| 210–252 | `references/typologies/short-stay.md`: full guest/service/recurring-reset method and conditional example |
+| 253–327 | `references/typologies/mixed-use.md`: complete shared-interface method plus both failed/revised after-hours alternatives and their capacity/frontage conditions |
+| 328–344 | Full source/applicability boundary at the selector; every leaf retains actual-input, foreign-code/number, hypothetical-example and source-reading limits, with provenance at the existing source ledger |
+
+`references/index.md` replaces the superseded knowledge map as the single subject overview. Its eight subject homes distribute the old question/coverage rows; the overview retains common ownership distinctions, evidence roles and admitted gaps. Root operation selection and the shared design contract remain separate from subject selection. Existing style and identified-object selectors retain their substantive perimeter and evidence limits at the mapped paths. No new case media or second graph registry is introduced.
+
+Integrity diagnostics derive roles and links from the current Markdown: runtime reachability excludes provenance and maintenance as intermediary routers, while their links are still validated. Duplicate heading bases are reported as ambiguous authored targets. Reference definitions, wrapped labels and fenced examples have explicit fixtures. Reciprocal graph edges are allowed; a visited set and a selected allowed subgraph bound diagnostic traversal without a hop quota. This diagnostic is not a semantic reading engine: actual prerequisite conditions and the sufficiency of loaded methods still require task reasoning and review.

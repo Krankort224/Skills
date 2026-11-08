@@ -1,7 +1,7 @@
 # Villa Savoye: support order and an inhabited promenade
 
-Return to the [Modernism profile](../../../../references/style-modern-organic-and-brutalist.md#modernism-frame-planes-and-a-composed-route)
-or the general [precedent-reading method](../../../../references/style-and-precedent-methods.md#read-an-object-before-classifying-it).
+Return to the [Modernism profile](../../../../references/composition/styles/modern-organic-brutalist.md#modernism-frame-planes-and-a-composed-route)
+or the general [precedent-reading method](../../../../references/composition/styles/precedent-transfer.md#read-an-object-before-classifying-it).
 
 ## Contents
 
@@ -102,8 +102,8 @@ room would restore the closure failure even with the revised elevation. Trace
 entrance → each quiet room with the making room locked, then deliveries to
 storage during making-room use. If either fails, change the route or support
 spaces and recount area. Coordinate an actually nonbearing partition change
-through [planning and section](../../../../references/planning-and-section.md)
-and [frame and core](../../../../references/frame-and-core.md); use the actual
+through [planning and section](../../../../references/space/planning/room-floor-and-section.md)
+and [frame and core](../../../../references/construction/structure/frame-and-core.md); use the actual
 new brief for structure, access, fire and enclosure decisions. No historical
 geometry, room dimensions or accessibility claim is transferred.
 

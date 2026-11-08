@@ -38,7 +38,7 @@ site facts. Establish applicable restrictions separately through requirements.
 
 For mechanisms, suitability and failure modes of street walls, forecourts,
 courts, passages, pavilions, thresholds and sloping-ground strategies, use
-[site and context](../../site-and-context.md). Carry its selected edge, arrival and
+[site and context](site-and-context.md). Carry its selected edge, arrival and
 level relationships into the parti rather than treating site reading as a
 separate descriptive exercise.
 
@@ -53,6 +53,6 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
-- Requires — [Site and context](../../site-and-context.md): when physical edges, terrain or boundary evidence controls the concept.
+- Requires — [Site and context](site-and-context.md): when physical edges, terrain or boundary evidence controls the concept.
 - Affects — [Generate and compare partis](../../composition/massing/parti.md): translate selected site cues into alternatives rather than copying context.
 - Verified by — [Access and complete closure](../../space/circulation/access-and-closure.md): walk the actual arrival and after-hours support route.
