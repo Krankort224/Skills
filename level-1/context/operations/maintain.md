@@ -4,7 +4,7 @@ Use when the task explicitly requests initialization, refresh, reconciliation or
 
 ## 1. Establish the authorized change
 
-Identify the target project/root and applicable branch/worktree/scopes. Locate the installed context references and any existing map. Read enough task-relevant sources to resolve facts, owners, authority and uncertainty using the shared read method; do not repeat already verified unchanged material.
+Identify the target project/root and applicable branch/worktree/scopes. Locate its project-owned context references and any existing map, checking declared identity and path conventions. A shared skill's source-project map is not the destination map; resolve the destination independently before editing. Read enough task-relevant sources to resolve facts, owners, authority and uncertainty using the shared read method; do not repeat already verified unchanged material.
 
 Determine which references the task authorizes changing. A request to update the context map authorizes routine edits to that map, not edits to every canonical owner it cites. If the broader task separately authorizes a canonical correction, make that change at its established owner through the applicable task/skill; then reconcile the map with the result. Do not create an Issue, branch, new document taxonomy or downstream installation merely to maintain the map.
 
@@ -12,17 +12,19 @@ Resolve material destination or authority gaps before the dependent edit. Contin
 
 ## 2. Initialize a meaningful map
 
-If `references/repository.md` does not exist:
+If the target project's map does not exist:
 
 1. Identify the project's purpose and material scope from its authoritative instructions/current sources. Inspect the main entry points and enough of each relevant component to establish roles and actual interactions.
 2. Sketch its system/component hierarchy. Explain what each major part does, what it consumes/produces, and how the parts cooperate. Include meaningful boundaries (for example, experiment versus supported product) only when sources establish them.
 3. Identify current knowledge owners, authority rules by subject, material constraints, immutable inputs and authorized destinations. Support important overview claims with source paths/sections or other verifiable locators.
 4. Add stable routes for the project's real recurring questions, including when direct implementation/data/tests are necessary and when history is relevant. Retain only categories that help this project.
-5. Use the shared `repository.template.md` as an adaptation starting point when available. If it is absent from an installed skill, the criteria above are sufficient: do not block, fetch/install a template or copy placeholders into project knowledge. Source templates stay in Skills; the adopted project gets the completed `repository.md` without the `.template.` marker.
+5. Use the shared `repository.template.md` as an adaptation starting point when available, filling it from the target project's verified sources rather than copying the Skills map. During adoption, transfer reusable skill resources without the source project's completed map or generated graph trio; create only the destination-owned references authorized by the task. If the template is absent from an installed skill, the criteria above are sufficient: do not block, fetch/install a template or copy placeholders into project knowledge. Source templates stay in Skills; the adopted project gets the completed `repository.md` without the `.template.` marker.
 
 A useful opening tells a new agent what the project is and how it works. A tree/list of files, a table of source links or copied canonical prose alone is insufficient. Keep the overview compact enough to route reading while explaining the relationships that would otherwise have to be rediscovered.
 
 ## 3. Refresh without erasing local knowledge
+
+Updating reusable skill resources does not authorize replacing the destination's map or graph with source-project artifacts. Preserve those files and assess any requested refresh against destination sources and the current profile.
 
 For an existing map, compare task-relevant claims and routes with current owners and actual paths. Preserve project-specific sections, language, valid annotations and local adaptations. Patch obsolete material at the smallest coherent scope; do not regenerate the whole map from a generic template.
 

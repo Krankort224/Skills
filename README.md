@@ -2,7 +2,7 @@
 
 Reusable agent skills for repository work.
 
-This repository is the source of truth for shared skills. Repository-local copies may be adapted where a skill explicitly supports local specialization.
+This repository is the source of truth for shared skills. Repository-local copies may be adapted where a skill explicitly supports local specialization. The [Skills project map](level-1/context/references/repository.md) explains this repository's components, knowledge owners and reading routes; it is project knowledge, separate from the reusable [context template](level-1/context/references/repository.template.md).
 
 ## Structure
 
@@ -187,7 +187,7 @@ Selection checks distinguish ordinary roots from assigned arbitration, workers f
 
 Shared skills may be copied into a repository-local skill directory when project-specific adaptation is useful. Keep them directly under the destination `skills/`, without the source level hierarchy; retain provenance and local adaptations.
 
-For `context`, preserve the shared `SKILL.md` where possible and create a repository-specific `references/repository.md` from the provided template.
+For `context`, preserve the shared `SKILL.md` where possible. Use the source `references/repository.template.md` to create the destination's `references/repository.md` from that project's authoritative sources. Keep the template in Skills; exclude the populated Skills map and generated `references/graphify/` artifacts from transfer. Existing destination maps and graphs are project-owned: preserve them during skill updates, then refresh only when requested through context maintain. Each requested graph build selects that repository's own sources and scope; copying the Skills graph does not initialize a destination graph. A shared skill used from outside the target repository must locate the target's map rather than defaulting to its own adjacent map.
 
 For `workflow`, the intent is to keep one common workflow across repositories rather than maintain project-specific variants.
 

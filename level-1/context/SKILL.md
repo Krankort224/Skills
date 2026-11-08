@@ -23,7 +23,7 @@ For combined work, gather only the necessary read context, then perform the requ
 
 ## Project representation
 
-An adopted project uses `references/repository.md` beside this skill's other references. Read it as a project overview and navigation map, not as the owner of every fact. It should explain:
+Resolve the target project/root before selecting references. An adopted project normally uses `references/repository.md` in its local context skill; project instructions may identify another project-owned location. When using a shared skill outside the target root, locate the target's map rather than treating the skill source's adjacent map as target context. Verify the map's project identity and path convention; an absent target map uses the direct-source fallback. Read the map as a project overview and navigation map, not as the owner of every fact. It should explain:
 
 - what the project exists to do and its material scope;
 - the roles of its systems/components and how they interact;
@@ -31,7 +31,7 @@ An adopted project uses `references/repository.md` beside this skill's other ref
 - meaningful branch/component/platform boundaries and recurring routes to detail;
 - material uncertainties, missing owners or coverage limits.
 
-Preserve local adaptations and the project's established knowledge structure. No universal document taxonomy or set of empty headings is required. The shared source `references/repository.template.md` is an adaptation starting point in the Skills source; it is not factual project context. Destination installations keep the completed `repository.md`, not the source template. If a map or template is absent, follow the selected operation using direct project sources; do not invent the missing project facts.
+Preserve local adaptations and the project's established knowledge structure. No universal document taxonomy or set of empty headings is required. The shared source `references/repository.template.md` is an adaptation starting point in the Skills source; it is not factual project context. Destination installations keep their own completed `repository.md`, not the source template or the Skills map. On adoption, create it from the target's sources using the template; on skill updates, preserve the destination's existing map and graph artifacts. Each graph belongs to its source project and scope and is built or refreshed through the selected graph method, never transferred as another project's graph. If a map or template is absent, follow the selected operation using direct project sources; do not invent the missing project facts.
 
 `references/graphify/` is for derived `graph.json`, `graph.html` and `GRAPH_REPORT.md` only. Its shared `.gitkeep` reserves the artifact location; it proves no extraction. No procedures, tools or nested skill belong there. A graph can deepen the representation without becoming a prerequisite for understanding the project.
 

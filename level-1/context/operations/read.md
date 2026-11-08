@@ -6,7 +6,7 @@ Use for ordinary context gathering and project questions. This operation reads a
 
 Identify the project root, requested outcome and the branch/worktree/component/platform actually under discussion. Establish whether the question asks about intended design, actual behavior, a constraint, a decision or history. Different questions can have different owners.
 
-Use the installed `references/repository.md` when available. If using a shared skill against another project, locate that project's installed map; the shared source template does not describe the target project. Check path conventions rather than assuming that a map's paths are relative to the shell's working directory.
+Use the target project's `references/repository.md` or its explicitly configured project-owned map when available. Check its declared project/root and path convention against the actual target before relying on it. If using a shared skill against another project, locate that project's map; neither the source project's completed map nor the shared template describes the target. If the adjacent map belongs to another root, use the target's direct sources rather than silently switching scope. Do not assume map paths are relative to the shell's working directory.
 
 With no map, inspect project instructions, the stated entry point/README and a bounded inventory of relevant sources. Infer only a provisional reading route, verify it at those sources, and disclose any material missing overview/owner. Do not create a map during a read task. A missing template or CLI is irrelevant to this fallback.
 

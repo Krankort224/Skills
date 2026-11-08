@@ -1,0 +1,74 @@
+# Project context — Skills
+
+**Project/root:** `Krankort224/Skills`, the shared skill-source repository identified by its root [AGENTS.md](../../../AGENTS.md) and [README.md](../../../README.md). This map describes that repository, not projects adopting its skills.
+**Path convention:** plain paths are relative to the Skills root; Markdown links are relative to this map. Resolve the actual checkout and revision before following a scope-sensitive claim.
+
+## Purpose and project view
+
+Skills maintains reusable agent expertise: root contracts select an operation, supporting methods and references supply the necessary knowledge, and selected tools/assets support delivery and verification. A task combines applicable skills with its own sources and authorization. This repository is the source of shared methods; it does not contain the live business state, building models or documents of every project those methods can act on. [README](../../../README.md#principles) owns the repository principles; [AGENTS](../../../AGENTS.md#usage) owns selection and integration rules.
+
+Four source levels distinguish responsibility and context. They are not instruction priority, complexity or agent-tree depth. Level 0 supports explicitly assigned arbitration. Every agent reads the three Level-1 contracts; their procedures apply only to the selected operation. Level 2 supplies general/domain expertise selected by task meaning. Level 3 supplies methods for an established software/format operation. An ordinary root agent does not acquire arbitration merely from its tree position. See [selection](../../../AGENTS.md#usage) and [composition](../../../AGENTS.md#skill-composition).
+
+A typical task uses context to establish relevant owners and facts, domain/software methods to perform the requested work, and delegation when assignments benefit the task. Workflow applies when the task concerns an Issue or explicitly requests creating one. These skills exchange evidence, requirements, assignments and results; they do not require a fixed invocation chain. Graphify is optional evidence within context, not the controller of this process. The [Level-1 overview](../../../README.md#level-1) and the contracts below establish these relationships.
+
+## Components and relationships
+
+| Component | Responsibility and relationship | Owning entry/evidence |
+| --- | --- | --- |
+| Level 0: arbitration | Coordinates the user's objective, execution and independent review when that role is assigned; preserves the Level-1 owners rather than duplicating their rules. | [arbitration](../../../level-0/arbitration/SKILL.md) |
+| Level 1: context | Resolves project scope, authoritative sources and uncertainty; reads, maintains or reviews project-local references. Optional Graphify methods turn selected sources into derived evidence. | [context](../SKILL.md), [graph methods/profile](../SKILL.md#graph-evidence-and-technical-references) |
+| Level 1: workflow | Defines Issue contracts, execution/review cycles and acceptance. Stable bodies, working comments, accepted summaries and Git history have different roles. | [workflow](../../workflow/SKILL.md) |
+| Level 1: delegation | Plans assignments and agent trees, selects models, manages recovery and integrates results. Passes are acceptance units; agents distribute work within them. | [delegation](../../delegation/SKILL.md) |
+| Level 2: research and restructure | Research connects a question, checks and conclusions; restructure inventories, designs and migrates an agreed organization. Both preserve source ownership and leave lifecycle/assignments to Level 1. | [research](../../../level-2/research/SKILL.md), [restructure](../../../level-2/restructure/SKILL.md) |
+| Level 2: architecture | Connects brief, program, spatial/material decisions, analysis and chosen deliverables. References supply reusable design knowledge; calculators provide bounded quantitative checks. Its methods can compose with Revit or document skills. | [architecture](../../../level-2/architecture/SKILL.md) |
+| Level 3: Revit | Creates/adapts/diagnoses Revit and Dynamo scripts and borrows reusable blocks. Block Markdown owns implementation and provenance; tools inspect graphs and check contracts offline, while native execution needs its actual host. | [revit](../../../level-3/revit/SKILL.md), [block catalog](../../../level-3/revit/assets/blocks/catalog.md) |
+| Level 3: Word | Borrows formatting, adapts documents and creates editable Word output. The skill identifier remains `style-transfer`; a Markdown preset supplies parameters and narrative rules to the tools, followed by package and visual verification. | [Word](../../../level-3/word/SKILL.md), [toolkit](../../../level-3/word/references/toolkit.md) |
+| Level 3: Project-space | Acts on an explicitly identified external shared store through validated file operations. The bundled transport supports publication primitives; application contracts own business semantics and permissions. | [Project-space](../../../level-3/project-space/SKILL.md) |
+| External toolset: Ponytail | Connected separately as a plugin; it is not a maintained subtree or Git submodule. Cloning Skills does not install or activate it. | [connection and coverage](../../../README.md#third-party-skills) |
+
+Each skill's root routes to progressively loaded resources. A reference, example or test supports its owning component; directory proximity does not establish a runtime dependency. Source levels are flattened when adopting selected skills into a destination's skill directory, while each adopted skill retains its internal reusable resources and provenance.
+
+## Knowledge ownership and material boundaries
+
+| Subject | Owner and evidence | Correction destination / boundary |
+| --- | --- | --- |
+| Skill selection, composition and adoption | Root [AGENTS](../../../AGENTS.md); README provides inventory and migration navigation. | Change the relevant root rule when authorized; do not turn this map into a competing contract. |
+| A skill's methods and supported operations | Its `SKILL.md` and selected procedures/references. Implementation and tests establish particular observed behavior, not universal capability. | Correct the owning skill/source under the relevant task; retain any method-versus-behavior discrepancy explicitly. |
+| Issue scope, active work and acceptance | The live Issue body/comments and accepted summary under [workflow](../../workflow/SKILL.md#artifact-roles); exact code changes in Git. | Update the authorized Issue surface or source file, not a permanent map diary. A closed Issue is not proof that every historical gate passed. |
+| Model selection and agent recovery | [delegation](../../delegation/SKILL.md#models) owns the model registry and assignment rules. | Keep registry changes at that owner; this map does not duplicate model versions. |
+| Graphify source, interfaces and compatibility | [technical profile](../tools/graphify.md), linked technical references, validator and probes; methods own interpretation and source reading. | Preserve the distinction between mechanical validation, fresh semantics, browser observation and host qualification. |
+| Templates and completed project knowledge | [template rules](../../../AGENTS.md#templates), [context representation](../SKILL.md#project-representation) and the target project's actual sources. | The template stays reusable; a completed map and graph belong to the identified target. Source templates and example facts are not destination knowledge. |
+| External products, projects and standards | Their applicable canonical sources, selected through the owning skill. Project-space requires actual application/store contracts; architecture requires jurisdiction/source applicability; Revit requires an actual runtime profile. | Do not edit external owners or import live project/private data into Skills merely to reconcile this overview. |
+| Provenance and preserved identities | Skill-local source/license records and [migration/adoption](../../../README.md#migration-and-adoption). | Preserve historical pins, notices and local adaptations; changes here do not implicitly migrate other repositories. |
+
+Instructions and Issue artifacts use English under their respective contracts. Human-facing source knowledge retains its assigned language; the architecture Russian normative catalog is scoped knowledge, not evidence that every project uses Russian jurisdiction. See [context language](../SKILL.md#shared-principles) and [architecture applicability](../../../level-2/architecture/references/requirements.md#select-a-jurisdiction-module).
+
+## Reading routes
+
+### Select and combine skills for a task
+
+Start at [AGENTS usage/composition](../../../AGENTS.md#usage), then the applicable root contracts. Read the selected operation and only needed supporting resources. Use [README inventory](../../../README.md#repository-skills) to locate a capability; verify its boundary at the owning skill. A software mention alone does not select a software operation.
+
+### Adopt or update context in another project
+
+Read [integration rules](../../../AGENTS.md#integration) and [local adaptation](../../../README.md#repository-local-adaptation). Identify the destination root, instructions and existing reference location. Use [repository.template.md](repository.template.md) to initialize its map through [maintain](../operations/maintain.md), grounded in that project's sources. Keep the template here; exclude this Skills map and Skills graph artifacts from transfer. Preserve destination maps, graphs and valid adaptations during resource updates. Build or refresh a requested destination graph from its own corpus through the selected graph method. A missing map permits [direct-source reading](../operations/read.md), not adoption of this map as destination truth.
+
+### Change a shared method or investigate a tool failure
+
+Locate the owning skill/operation first; compare its promised behavior with the relevant implementation and tests. Read technical source when needed to resolve the discrepancy, then run checks suited to the changed behavior and actual runtime. Examples and mock tests do not certify native Revit, Word rendering or external Project-space operations. Use Git/history only for a concrete provenance or regression question. Preserve unrelated resource content and downstream installations.
+
+### Understand or maintain a project graph
+
+Start at [context](../SKILL.md) to select read, maintain or review. Graph work then selects [build](../operations/graphify/build.md), [maintenance](../operations/graphify/maintain.md), [reading](../operations/graphify/read.md) or [export](../operations/graphify/export.md), with the [technical profile](../tools/graphify.md) for exact interfaces/runtime. Verify returned claims at sources; corpus omissions and absent edges are not proof of absent relationships. Ordinary questions do not require installing or rebuilding Graphify.
+
+### Establish current work or accepted behavior
+
+Use the live task's Issue and [workflow](../../workflow/SKILL.md), not this overview, for active status and acceptance. For context's historical foundation, [#9](https://github.com/Krankort224/Skills/issues/9) records the accepted passes and remaining H boundary; [#11's accepted summary](https://github.com/Krankort224/Skills/issues/11#issuecomment-6722361831) records method/tool separation, exclusion-policy correction and the bounded Work retest. Consult those records only when their provenance or verification limits matter to the current question.
+
+## Reference evidence and material gaps
+
+This map provides an overview and source routes, not an audit of every implementation, normative record, example or host. Resolve detailed behavior and current task state at the owners above. The source repository contains no live downstream deployment registry from which this map could establish installed versions, available plugins or project/store permissions.
+
+The current `references/graphify/` contains only `.gitkeep`; there is no Skills graph extraction to rely on yet. The accepted #11 Work pilot is evidence for its own corpus and revision, not a Skills graph. When actual artifacts are added, review their exact corpus, generation, profile and presentation evidence before reconciling this statement. Generated references remain navigation/evidence rather than fact owners.
+
+The Graphify profile's tested Python/Markdown lane does not cover every repository asset format or every execution host. Native Revit, Word visual fidelity, external store writes and architectural regulatory conclusions retain their owning methods' specific checks. A source-level overview or passing offline probe cannot settle those questions.
