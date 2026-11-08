@@ -502,8 +502,12 @@ the Issue handoff owns final revision and actual final command results.
 Accepted baseline: `375e0b2e533c19ebf2a6c152ce02be493202d7f7`.
 Acceptance-only housekeeping `426e045` records C's accepted status and
 [durable summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6728150751).
-The D candidate below requires independent review and dot's acceptance; the
-original 35-row benchmark and accepted A/B/C evidence retain their dated scope.
+Dot accepted final D `925166e93cad2b7e14d70496125a7f4c00ed2732` after independent
+review of its ground-access correction. The [accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6728788548)
+owns the mandatory finding, correction, final44/44 regression result and independent
+R/E/T route checks. The former core did not prove its south ground route; do not
+restore it without another actual arrangement. The original35-row benchmark and
+accepted A/B/C evidence retain their dated scope.
 
 ### Canonical owners and demonstrations
 
@@ -597,4 +601,5 @@ checks. The final Issue handoff owns exact revision, actual command results and
 review limits. Actual household/door/fixture/vehicle/site conditions, sized
 channels/free areas, pressure losses and flow, wind/thermal models, terminal
 geometry, fire/acoustic/combustion and statutory approval remain evidence gates.
-Passes E/F are unstarted; graph or coordinate fit does not accept this pass.
+At the accepted D boundary, E/F are unstarted. Dot's explicit decision accepts D;
+graph or coordinate fit alone does not supply acceptance or engineering approval.
