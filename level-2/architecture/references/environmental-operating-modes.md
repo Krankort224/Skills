@@ -7,11 +7,11 @@ strategy. It develops the simultaneous condition, a physical correction and a
 credible fallback. A state diagram does not establish environmental performance.
 
 The causal mechanisms remain with [daylight, view and occupied
-comfort](performance-and-coordination.md#daylight-view-and-occupied-comfort),
+comfort](performance/comfort/daylight-view.md#daylight-view-and-occupied-comfort),
 [acoustic paths and ventilation
-choices](performance-and-coordination.md#acoustic-paths-and-ventilation-choices)
+choices](performance/comfort/acoustics-and-air.md#acoustic-paths-and-ventilation-choices)
 and [inclusive/fire spatial
-coordination](performance-and-coordination.md#inclusive-use-and-fire-spatial-coordination).
+coordination](space/circulation/inclusive-and-emergency-interfaces.md#inclusive-use-and-fire-spatial-coordination).
 Use those methods for the relevant light or sound path; use this one to determine
 whether the resulting provisions can be used together. Opening geometry and
 support remain with [walls, floors and

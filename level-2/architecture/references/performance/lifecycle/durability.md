@@ -32,7 +32,7 @@ material is automatically lower impact. Expression and composition belong to
 [material expression](../../composition/material-expression.md).
 
 For the complete work/handling and temporary-use journey, select [maintenance
-operation](operation-and-lifecycle.md#trace-a-complete-maintenance-journey).
+operation](../../operation-and-lifecycle.md#trace-a-complete-maintenance-journey).
 For takeoff or cost decisions, use the relevant [quantity](../../operation-and-lifecycle.md#count-the-architectural-work)
 or [dated event](../../operation-and-lifecycle.md#compare-equivalent-function-over-time)
 method; exposure mechanisms remain here and generic component removal remains

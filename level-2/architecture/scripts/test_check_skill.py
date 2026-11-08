@@ -40,6 +40,47 @@ class PilotRouteTests(unittest.TestCase):
                                  for e in check_skill.validate(root)['errors']))
 
 
+class MultilineLinkTests(unittest.TestCase):
+    def test_missing_target_or_fragment_in_multiline_links(self):
+        cases = (
+            ('[Missing\nmethod](missing.md)', 'local link missing: missing.md'),
+            ('[Existing\nmethod](method.md#missing)',
+             'anchor missing: method.md#missing'),
+            ('![Missing\nimage](missing.svg)', 'local link missing: missing.svg'),
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'method.md').write_text('# Method\n\n## Complete method\n', encoding='utf-8')
+            for text, error in cases:
+                with self.subTest(text=text):
+                    (root / 'index.md').write_text(text + '\n', encoding='utf-8')
+                    self.assertIn({'path': 'index.md', 'error': error},
+                                  [e for e in check_skill.validate(root)['errors']
+                                   if e['path'] == 'index.md'])
+
+    def test_valid_multiline_links_and_fenced_examples(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'method.md').write_text('# Method\n\n## Complete method\n', encoding='utf-8')
+            (root / 'diagram.svg').write_text('<svg/>', encoding='utf-8')
+            (root / 'index.md').write_text('''# Index
+
+[Local
+method](method.md#complete-method)
+![Local
+image](diagram.svg)
+[External
+source](https://example.com/source)
+
+```markdown
+[Illustrative
+link](absent.md)
+```
+''', encoding='utf-8')
+            self.assertFalse(any('local link' in error['error'] or 'anchor missing' in error['error']
+                                 for error in check_skill.validate(root)['errors']))
+
+
 class TableContinuityTests(unittest.TestCase):
     def test_blank_breaks_leave_provenance_rows_outside_table(self):
         text = '''| Source and extent | Adaptation |

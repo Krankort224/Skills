@@ -21,7 +21,8 @@ NORMATIVE_GROUPS = ('federal-framework', 'territory-and-special-conditions',
                     'environment-and-interfaces')
 RECORD_FIELDS = ('Identity', 'Authority', 'Scope', 'Edition/status',
                  'Application basis', 'Related', 'Verification')
-LINK = re.compile(r'!?\[[^\]\n]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)')
+# Link labels may wrap across source lines; check their targets and fragments too.
+LINK = re.compile(r'!?\[[^\]]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)')
 DEFINITION = re.compile(r'^\s{0,3}\[[^\]\n]+\]:\s*<?([^\s>]+)>?', re.M)
 
 
