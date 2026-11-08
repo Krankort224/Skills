@@ -12,9 +12,17 @@ and project application basis, as in the transformable-hall study below.
 ## Contents
 
 - [Construct a room that can be used](#construct-a-room-that-can-be-used)
+- [Check occupied states before retaining the room](#check-occupied-states-before-retaining-the-room)
+- [Construct a clear-area fit with explicit wall reservations](#construct-a-clear-area-fit-with-explicit-wall-reservations)
 - [Choose a plan family from the relationships](#choose-a-plan-family-from-the-relationships)
 - [Organize levels, cores and service depth](#organize-levels-cores-and-service-depth)
+- [Reconcile upper floors, tall rooms and roofs](#reconcile-upper-floors-tall-rooms-and-roofs)
+- [Resolve a Russian mixed-use plan before fixing the core](#resolve-a-russian-mixed-use-plan-before-fixing-the-core)
 - [Worked design progressions](#worked-design-progressions)
+- [Public learning house: quiet upper floor](#a-public-learning-house-with-a-quiet-upper-floor)
+- [Fixed shell: housing above quiet work](#a-fixed-shell-housing-above-quiet-work-revised-by-frontage-and-section)
+- [Russian production host and public consultation](#a-russian-production-host-with-a-public-consultation-room)
+- [Russian transformable hall: seating changes the layout](#a-russian-transformable-hall-seating-rule-changes-the-layout)
 - [Repair a bounded proposal without losing its logic](#repair-a-bounded-proposal-without-losing-its-logic)
 
 ## Construct a room that can be used

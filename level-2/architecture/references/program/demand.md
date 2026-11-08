@@ -59,4 +59,6 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 - Requires — [Shared use and resource timelines](shared-use.md): when rooms, staff or equipment are shared: test actual occupied and changeover intervals.
 - Affects — [Capacity and room demand](capacity-and-room-demand.md): translate concurrent activity into actual room objects and support.
+- Affects — [Quarter ground allocation](../context/urban/quarter-and-public-space.md#reconcile-ground-use-without-double-counting): when population or public-service/parking demand changes site reservations, recount actual land pieces and displaced uses once; a room-area total is not a site allocation.
+- Verified by — [Continuous facility journeys](../context/urban/quarter-and-public-space.md#keep-public-private-and-service-journeys-continuous): when demand relies on a school, preschool or other destination across plots, trace actual entrances, controls, crossings and levels. Connectivity alone does not prove available seats, service allocation or catchment compliance.
 - Verified by — [Planning and section](../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): test the proposed room physically; demand alone is not fit.

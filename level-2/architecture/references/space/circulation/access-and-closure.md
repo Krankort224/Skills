@@ -75,8 +75,10 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
-- Requires — [Activity and concurrent demand](../../program/demand.md): identify each actor, activity, operating time and shared resource.
+- Requires — [Activity and concurrent demand](../../program/demand.md#what-activities-and-capacity-must-the-program-accommodate): when actors, loads, times or shared resources are unresolved, establish them before choosing access zones.
+- Requires — [Use-family operating commitments](../../typologies/index.md#select-a-family-by-its-operating-commitments): when a use label hides who staffs, resets or controls support, establish those inputs; a family selector does not verify a route.
+- Verified by — [Object-with-handler and occupied-state fit](../planning/room-floor-and-section.md#construct-a-room-that-can-be-used): for deliveries, exhibits or replacement loads, test solids, working envelopes, continuous turns/thresholds and the receiving state; follow its changing-state method when explicit sweeps are needed.
+- Verified by — [Lift, shaft and landing geometry](../../construction/structure/frame-and-core.md#fit-vertical-equipment-and-maintenance-with-the-core): when the journey changes level by equipment, check distinct cabin/door/approach/shaft and pit/overhead reservations with actual product inputs; [continue through every served level](../../construction/structure/frame-and-core.md#carry-core-routes-and-support-through-every-level). This verifies spatial interfaces, not equipment capacity or approval.
 - Affects — [Spatial relationships and movement](../planning/spatial-relationships.md#place-movement-beside-through-or-into-a-space): a legal-looking connection can still cross an occupied activity.
-- Verified by — [Building use families](../../typologies/index.md#select-a-family-by-its-operating-commitments): when a use-family creates specific staffing/support commitments.
 - Verified by — [Inclusive and emergency interfaces](inclusive-and-emergency-interfaces.md): test ordinary access and emergency strategy separately.
 - Affects — [Area boundary and ledger](../../program/area-ledger.md): count independent/shared support on its original boundary.
