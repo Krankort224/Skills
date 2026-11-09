@@ -609,8 +609,9 @@ graph or coordinate fit alone does not supply acceptance or engineering approval
 Accepted baseline: D `925166e93cad2b7e14d70496125a7f4c00ed2732`; acceptance-only
 housekeeping `c28245773f02946e49bcaf2430413112d674760a` records its
 [accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6728788548).
-The E candidate requires the first session's independent review and dot's
-explicit acceptance. Contracts were read from this repository's AGENTS, Level0
+Dot accepted E at `2e5515ad960da98bdafefe72f52ade2efc24d580` after the first
+session's independent review; its [accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6729101605)
+retains verification and limits. Contracts were read from this repository's AGENTS, Level0
 coordination and Level1 context/workflow/delegation at the unchanged D boundary;
 architecture supplies the domain method. No new session or reviewer was spawned.
 
@@ -695,8 +696,8 @@ methods, normative catalogue, existing assets and historical matrix retain their
 prior content. E adds two method owners, one source record and four tests;
 existing owners receive conditional links/coverage clarification. Use checker,
 all local tests, independent GFM/link/anchor and preservation audits. The Issue
-handoff owns final revision and actual command results. E remains unaccepted
-and F unstarted until dot's decisions; construction/statutory/model/photometric
+handoff owns final revision and actual command results. At the accepted E
+boundary F was unstarted; construction/statutory/model/photometric
 and collection approvals remain distinct from these local mathematical checks.
 
 Executor validation on the E candidate: checker PASS (8 operations,64 normative
@@ -707,4 +708,6 @@ outside architecture and40 protected operations/scripts/calculator/normative/
 asset files are byte-identical to the acceptance-housekeeping baseline. The
 historical matrix and complete pre-D maintenance content are exactly preserved;
 the existing D acceptance/evidence content is also retained. No dependency,
-generated output or source PDF is installed. Independent review remains pending.
+generated output or source PDF is installed. Independent review confirmed the
+declared boundaries with no blocking finding; dot's acceptance does not supply
+the separate project approvals listed above.
