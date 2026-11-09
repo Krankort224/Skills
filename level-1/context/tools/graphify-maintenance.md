@@ -80,7 +80,7 @@ Native `_rebuild_lock(out_dir: Path, *, blocking: bool=False)` is advisory among
 
 `validate_trio(stage, root=root, require_current=True)` returns `blobs`, `digests`, `graph`, `input_identity`, `generation_identity`, `profile` and `snapshot` with `sources`, `configuration`, `exclusions` and `authority_sources`. The publisher consumes precisely those buffers, checks every selected source/config file is tracked and agrees with the expected commit, and revalidates before push. A validation error, source change or failed lease refuses publication. Unknown push outcome requires remote inspection before retry.
 
-Environment: `CONTEXT_ROOT` = isolated clone; `CONTEXT_STAGE` = fresh external stage; `CONTEXT_TOOLS` = reviewed helpers; `CONTEXT_EXPECTED` = full source commit; `CONTEXT_REMOTE` = explicit remote URL; `CONTEXT_REMOTE_REF` = existing `refs/heads/...` ref. A user's checkout is not the task-owned clone.
+Environment: `CONTEXT_ROOT` = isolated clone; `CONTEXT_STAGE` = fresh external stage; `CONTEXT_TOOLS` = reviewed helpers; `CONTEXT_EXPECTED` = full source commit; `CONTEXT_REMOTE` = explicit remote URL; `CONTEXT_REMOTE_REF` = existing `refs/heads/...` ref. `CONTEXT_GRAPH_TARGET` = required normalized repository-relative POSIX directory, verified from the destination project context (for example, `skills/context/references/graphify`, `level-1/context/references/graphify` or a custom project-owned directory). No default is inferred from the helper location. A user's checkout is not the task-owned clone.
 
 ```python
 # context-publish-trio
@@ -113,7 +113,11 @@ os.environ["GIT_OPTIONAL_LOCKS"] = "0"
 root = Path(os.environ["CONTEXT_ROOT"]).resolve(strict=True)
 stage = Path(os.environ["CONTEXT_STAGE"]).resolve(strict=True)
 expected, remote, ref = (os.environ[k] for k in ("CONTEXT_EXPECTED", "CONTEXT_REMOTE", "CONTEXT_REMOTE_REF"))
-target = "skills/context/references/graphify"
+target = os.environ["CONTEXT_GRAPH_TARGET"]
+target_parts = target.split("/")
+assert target and not PurePosixPath(target).is_absolute() and PurePosixPath(target).as_posix() == target, "Invalid CONTEXT_GRAPH_TARGET"
+assert all(part not in ("", ".", "..") and part.casefold() != ".git" and part == part.strip() and not part.endswith(".") for part in target_parts), "Invalid CONTEXT_GRAPH_TARGET"
+assert not any(ord(ch) < 32 or ord(ch) == 127 or ch in '\\:<>"|?*[]' for ch in target), "Invalid CONTEXT_GRAPH_TARGET"
 names = ("graph.json", "graph.html", "GRAPH_REPORT.md")
 assert root.is_dir() and stage.is_dir() and not stage.is_relative_to(root) and not root.is_relative_to(stage)
 assert remote and not remote.startswith("-") and ref.startswith("refs/heads/")
@@ -185,6 +189,15 @@ def remote_tip():
     assert name.decode() == ref
     return oid.decode()
 
+# Reject unsafe target ancestors before creating locks, objects or an index.
+for i in range(1, len(target_parts) + 1):
+    prefix = "/".join(target_parts[:i])
+    ancestor = root.joinpath(*target_parts[:i])
+    assert not ancestor.is_symlink() and (not ancestor.exists() or ancestor.is_dir()), ("Unsafe target ancestor", prefix)
+    assert not ancestor.exists() or not getattr(ancestor.lstat(), "st_file_attributes", 0) & 0x400, ("Unsafe target ancestor", prefix)
+    item = tree_entry(prefix)
+    assert item is None or item[:2] == (b"040000", b"tree"), ("Unsafe target ancestor", prefix)
+
 with contextlib.ExitStack() as locks:
     # Native Windows locking can deliberately continue unlocked on unsupported
     # filesystems. Refuse its diagnostic before any publication work instead.
@@ -195,10 +208,6 @@ with contextlib.ExitStack() as locks:
     verify_sources(first)
     assert remote_tip() == expected, "Remote moved; rebuild/review against new tip"
     blobs = first["blobs"]
-    for i in range(1, len(PurePosixPath(target).parts) + 1):
-        prefix = str(PurePosixPath(*PurePosixPath(target).parts[:i]))
-        item = tree_entry(prefix)
-        assert item is None or item[:2] == (b"040000", b"tree"), ("Unsafe target ancestor", prefix)
     entries = git("ls-tree", "-r", "-z", expected, "--", target + "/").stdout.split(b"\0")
     placeholder = False
     for entry in (e for e in entries if e):
@@ -234,7 +243,11 @@ with contextlib.ExitStack() as locks:
             pushed = git("push", "--porcelain", f"--force-with-lease={ref}:{expected}", remote, f"{commit}:{ref}", check=False)
             if pushed.returncode:
                 raise RuntimeError("Push failed or outcome uncertain; inspect remote ref before retry")
-            print(json.dumps({"status": "published", "commit": commit, "parent": expected}))
+            published = remote_tip()
+            assert published == commit, "Published remote tip differs; inspect before retry"
+            for name in names:
+                assert git("show", f"{published}:{target}/{name}").stdout == blobs[name]
+            print(json.dumps({"status": "published", "commit": published, "parent": expected}))
 ```
 
 Postcondition: read the three published blobs from one resolved immutable commit and verify generation/sibling digests. Pre-push failure can leave unreachable candidate objects without moving the remote; failed/timed-out push has unknown outcome until inspection. Refusal of a stale candidate is not rollback. The graph-specific decisions and task authorization remain with [maintain](../operations/graphify/maintain.md) and the applicable project/workflow contract.

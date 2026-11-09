@@ -6,13 +6,16 @@ Use the current Project-space owning contracts and implementation to validate th
 
 | Location | Role and edit boundary |
 | --- | --- |
-| `metadata/store.json` | Store identity/protocol. Read and match it; do not rotate the ID or recreate it during a configuration edit. |
+| `metadata/store.json` | Store identity/protocol 1 pre-numbering or protocol 2 after one-time coordinated activation. Read and match it; do not rotate the ID or recreate it during an ordinary configuration edit. |
 | `metadata/access.json` | Mutable employee/access authority; the target for an explicitly requested supported registry change. |
+| `metadata/task-number-registry-<UUIDv7>.json` | When activated by protocol-2 `store.json`, the mandatory shared numbering authority with exact creation-event bindings and unfinished reservations; not an access setting or disposable local index. |
 | `metadata/access.lock` | Persistent OS-handle-owned lock for registry changes and command publication. Keep the file; acquire its Windows exclusion semantics. |
 | `metadata/access-migrated.json` | Fail-closed cutover marker, bound to the store. Preserve it; it is not a toggle for restoring old permissions. |
 | `.project-space-deployment*`, `metadata/deployment-*.json` | First-deployment plans, locks and receipts. Historical recovery inputs, not current user settings. |
 | `events/`, `material-events/`, `material-blobs/`, legacy `artifacts/` | Published workflow/material history and managed contents. Inspect only as needed; no routine configuration writes. |
 | Local `cache.db`, `pending/`, `material-pending/`, `task-creation/` | Disposable projections or unpublished operation recovery state, not authority for editing business state. Do not clear them as an access/configuration fix. |
+
+Activation of `store.json` protocol 2 and its task-number registry is **not** a routine access-profile edit. Follow `docs/storage-protocol.md` §1.1 and [Publication and replay](publication.md#task-number-authority-and-creation): coordinated all-client upgrade, healthy full-store backfill, existing access gate and complete backup. Do not write or reconstruct task numbers in the schema-2 employee registry. A missing/invalid active number registry requires operator recovery from a full-store backup, not a regenerated local cache.
 
 ## Employee/access registry
 

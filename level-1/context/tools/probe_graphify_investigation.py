@@ -445,7 +445,7 @@ def main():
             published=json.loads(f.publish(root,stage,remote).stdout)
             view=BASE/(tag+'-view');f.materialize(root,published['commit'],view)
             verified=f.v.validate_trio(view,root=root,require_current=True)
-            checked_inputs.append((tag,published['commit'],verified));cross_records.append({'tag':tag,'repository':str(root),'artifact_commit':published['commit'],'checked':verified});built.append((root,stage))
+            checked_inputs.append((tag,published['commit'],verified));cross_records.append({'tag':tag,'repository':str(root),'artifact_commit':published['commit'],'artifact_target':f.TARGET,'checked':verified});built.append((root,stage))
         SOURCE=built[0][1]/'graph.json'
         query=check_investigation(*built[0])
         native_env=dict(f.env_for(built[0][0],built[0][1]),CONTEXT_TRIO=str(built[0][1]),CONTEXT_SEED='src_guard_accepts',CONTEXT_QUESTION='archive grant',CONTEXT_TARGET='docs_policy_grant_window')

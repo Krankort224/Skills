@@ -34,7 +34,7 @@ All payloads below also include the stable `task_id`. Use the task stream, accep
 
 | User intent | Type and other payload fields | Required state / actor |
 | --- | --- | --- |
-| Assign a new task | `task.created`: `topic_id,assignee_sid,title,description,deadline,initial_artifacts: []` | New task ID/null own base; creator is actual participating actor. Other assignee → `proposed`; self → `in_progress` |
+| Assign a new task | `task.created`: `topic_id,assignee_sid,title,description,deadline,initial_artifacts: []` | New task UUID/null own base; creator is actual participating actor. Other assignee → `proposed`; self → `in_progress`. The permanent `#n` is reserved separately during final publication, not included in the event payload. |
 | Accept a proposal | `task.proposal_accepted`: `proposal_event_id` | `proposed`, current recipient |
 | Reject a proposal | `task.proposal_rejected`: `proposal_event_id` | `proposed`, current recipient; becomes `rejected` |
 | Propose changed wording/deadline | `task.proposal_revised`: `proposal_event_id,title,description,deadline` | `proposed`, current recipient; at least one content/deadline value changes; other party becomes recipient |
@@ -44,6 +44,7 @@ All payloads below also include the stable `task_id`. Use the task stream, accep
 | Accept the submitted result | `task.result_accepted`: `submission_event_id` | `in_review`, creator; becomes `completed` |
 | Return work for revision | `task.rework_requested`: `submission_event_id,deadline` | `in_review`, creator; becomes `in_progress`; preserve deadline unless changed |
 | Edit a self-task | `task.self_updated`: `title,description,deadline` | `in_progress`, creator=assignee=actor; actual content change |
+| Delegate an active self-task | `task.delegated`: `assignee_sid,title,description,deadline` | `in_progress`, creator=assignee=actual actor; different registered current participant of the same project; full content/deadline snapshot must equal the current task; same task becomes `proposed` to the recipient |
 | Complete a self-task | `task.self_completed`: `result_artifact_ids: []` | `in_progress`, creator=assignee=actor; becomes `completed` |
 
 Normal participants can create tasks without a special creation privilege. Both current actor and assignee must satisfy current membership/domain checks for the command. Management/Root does not replace the creator/assignee/recipient relationships. Removing an assignee does not authorize silently reassigning or impersonating them.
@@ -51,6 +52,8 @@ Normal participants can create tasks without a special creation privilege. Both 
 Do not convert an ordinary request to change an accepted non-self task into `self_updated`, rewrite its creation event, invent a message event or silently create a different task. Explain the supported workflow boundary if no accepted transition expresses the request. Reassignment after rejection preserves creation time and history; reassignment to the creator becomes an in-progress self-task.
 
 Materials remain the topic library plus task links. No result-file selection, intermediate/final container movement or required attachment is part of submission/completion. An accepted non-self obligation cannot be silently rewritten during review.
+
+Delegation is a distinct current-only protocol-2 event; never use `task.reassigned` from an active self-task. Preserve its UUID, creator, creation time, all decisions and material identities/origins/links. Only the recipient changes; edit a self-task separately before delegation if requested. Capture the task/access expectations when selecting the recipient; reject stale intent rather than rebasing it. After delegation the existing accept/reject/refine workflow applies, and executor-only material rights follow the new assignee. Management/Root does not authorize delegating another user's self-task. Upgrade all clients before publishing this vocabulary; workflow validator marker 4 rebuilds disposable projections from retained immutable records without migrating shared history.
 
 ## Combined task and material operations
 
@@ -62,4 +65,19 @@ Read the [material coordinated-draft procedure](materials.md#coordinated-task-dr
 
 ## Workspace reporting
 
-Build project/topic/task views from accepted state, then overlay current registry membership and applicable view rights. Filter my tasks by actual creator/assignee relationships; show a self-task once under executing, not twice. Distinguish proposals awaiting me, proposals awaiting someone else, executing work, review, rejection and terminal states. Show the current proposal version/recipient and pending recovery/conflict separately. For deadline/workload reports use stored precision and the user's timezone; timestamps do not set causality.
+Build all views from one accepted workflow/access cut, reusing the persistent incremental immutable-record inventory and normalized projections. One material snapshot per visible topic supplies its library and task action rights; do not replay/synchronize each task or reread all historical payload bytes per row. On a normal unchanged healthy warm read, historical payload reads, full replays and SQL writes are unnecessary. Explicit integrity audit/rebuild is separate; missing verified finals or a failed incremental discovery are errors, not permission to invent an up-to-date view.
+
+| View | Scope and columns |
+| --- | --- |
+| «Реестр задач» (top-level between «Проекты» and «Мои задачи») | All unique tasks across currently accessible projects/topics, **including completed and cancelled**. Columns: **ID, Задача, Статус, Исполнитель, Постановщик, От, До**. |
+| Topic task register | The topic's unique accepted tasks; permanent **ID first**, **Статус after Задача**. Follow current `docs/ui-flows.md` for the remaining columns. |
+| «Мои задачи → Исполняю» | Current actor is assignee, including own self-tasks; no duplicate self-task in «Поручил». |
+| «Мои задачи → Поручил» | Current actor is creator while assignee differs. Both personal views exclude completed tasks; preserve other accepted visibility rules in `docs/ui-flows.md`. Columns: **ID, Задача, Статус, Постановщик** (executing) **or Исполнитель** (delegated), **От, До**. |
+
+Global/personal «Задача» cells expose the topic and project as secondary lines. Combine text/title/description/project/topic search with project/topic selection and supported ID, status, participant, creation-date and deadline filters. Exact `#n` search resolves one task, not every ID sharing its prefix; sort display IDs numerically. «От» is creation date; «До» preserves date-only or exact-instant deadline precision and the viewer's timezone. Show compact «Показано: N из M» and **only nonzero statuses in the filtered unique rows**; the counts sum to N. Preserve register filters, sort order, column widths, scroll position and the selected personal view through ordinary navigation. Do not invent a new copy button: `#n` remains selectable text in registers and the existing task card.
+
+Distinguish proposals awaiting me, proposals awaiting someone else, executing work, review, rejection and terminal states. Show the current proposal version/recipient and pending recovery/conflict separately. Self-task delegation changes the current assignee and moves the same task from the actor's «Исполняю» to «Поручил», while the recipient sees it in «Исполняю» as a proposal; task identity and material links are unchanged. Root/management rights do not extend the actor-specific delegation action.
+
+Human task numbers are store-wide permanent `#n`, separate from canonical task UUIDs. Resolve a number through the one activated authoritative shared registry (see `docs/storage-protocol.md` §1.1), never by local list order, UUID truncation or reconstructing order from events. Read and validate the registry once per workspace cut; missing/ambiguous/corrupt authority or an accepted creation without a valid mapping is a fail-closed condition, not a fallback to cache or a guessed number.
+
+Task-number reservation happens under the existing final access gate after command validation and exact local pending persistence, bound to the sealed creation event. A direct writer must implement the current protocol-2 store/registry transaction or use the current core; copying only `task.created` without its authoritative reservation is unsupported. Preserve existing allocations and incomplete reservations, report uncertain outcomes and retry exact bytes. Coordinate client upgrades before the one-time healthy old-task backfill and metadata activation; never activate a corporate store implicitly as an agent verification step.

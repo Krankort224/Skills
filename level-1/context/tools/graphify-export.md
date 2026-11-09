@@ -46,14 +46,14 @@ Inputs have stable explicit repository tags excluding `::`, distinct from checko
 
 Native `prefix_graph_for_global` with NetworkX `MultiDiGraph` preserves directed/parallel arcs. CLI `merge-graphs` instead converts to undirected simple graphs and adds shared-type/member-call inferences, collapsing opposing/parallel evidence; it is a lossy overview, not an exact merged snapshot.
 
-First load the `validator` module as in [the read recipe](graphify-read.md#validated-graph-recipe). `cross_records` contains `tag`, canonical local `repository`, full `artifact_commit`, and `checked` returned by `validate_trio` for a materialized trio. This block binds it to real Git objects without checkout/fetch/index/ref changes. The tested Git 2.52.0 [no-lazy-fetch option](https://git-scm.com/docs/git/2.52.0#Documentation/git.txt---no-lazy-fetch) prevents missing promisor objects triggering retrieval; optional locks are disabled. Other Git versions must enforce the same boundary or refuse. The adopted artifact path is the maintenance publication contract.
+First load the `validator` module as in [the read recipe](graphify-read.md#validated-graph-recipe). `cross_records` contains `tag`, canonical local `repository`, full `artifact_commit`, its explicit normalized repository-relative POSIX `artifact_target`, and `checked` returned by `validate_trio` for a materialized trio. This block binds it to real Git objects without checkout/fetch/index/ref changes. The tested Git 2.52.0 [no-lazy-fetch option](https://git-scm.com/docs/git/2.52.0#Documentation/git.txt---no-lazy-fetch) prevents missing promisor objects triggering retrieval; optional locks are disabled. Other Git versions must enforce the same boundary or refuse. Each record identifies its own verified publication target; do not infer it from the shared helper directory.
 
 ```python
 # context-bind-cross-inputs
 import hashlib
 import json
 import os
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import subprocess
 
 assert not any(os.environ.get(k) for k in ("GIT_DIR", "GIT_WORK_TREE", "GIT_INDEX_FILE", "GIT_COMMON_DIR", "GIT_OBJECT_DIRECTORY", "GIT_ALTERNATE_OBJECT_DIRECTORIES", "GIT_REPLACE_REF_BASE"))
@@ -67,6 +67,11 @@ for item in cross_records:
     checked = item["checked"]
     repository = Path(item["repository"]).resolve(strict=True)
     artifact_commit = item["artifact_commit"]
+    target = item["artifact_target"]
+    target_parts = target.split("/")
+    assert target and not PurePosixPath(target).is_absolute() and PurePosixPath(target).as_posix() == target, "Invalid artifact_target"
+    assert all(part not in ("", ".", "..") and part.casefold() != ".git" and part == part.strip() and not part.endswith(".") for part in target_parts), "Invalid artifact_target"
+    assert not any(ord(ch) < 32 or ord(ch) == 127 or ch in '\\:<>"|?*[]' for ch in target), "Invalid artifact_target"
     source_commit = checked["graph"]["graph"]["context"].get("source_commit")
     assert commit_id(artifact_commit) and commit_id(source_commit), "Missing/invalid version provenance"
     assert Path(object_read(repository, "rev-parse", "--show-toplevel").decode("utf-8").strip()).resolve(strict=True) == repository
@@ -74,7 +79,7 @@ for item in cross_records:
         assert object_read(repository, "cat-file", "-t", commit).strip() == b"commit"
     object_read(repository, "merge-base", "--is-ancestor", source_commit, artifact_commit)
     for name in ("graph.json", "graph.html", "GRAPH_REPORT.md"):
-        assert object_read(repository, "show", artifact_commit + ":skills/context/references/graphify/" + name) == checked["blobs"][name], "Artifact commit/view mismatch"
+        assert object_read(repository, "show", artifact_commit + ":" + target + "/" + name) == checked["blobs"][name], "Artifact commit/view mismatch"
     assert json.loads(checked["blobs"]["graph.json"]) == checked["graph"], "Checked graph/buffer mismatch"
     for group in ("sources", "configuration"):
         for path, digest in checked["snapshot"][group].items():

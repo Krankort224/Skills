@@ -73,9 +73,9 @@ def env_for(root, stage):
     return dict(clean_env(), CONTEXT_ROOT=str(root), CONTEXT_TOOLS=str(TOOLS),
                 CONTEXT_STAGE=str(stage), CONTEXT_EXCLUDES='[]', GRAPHIFY_OUT=str(stage / 'native-cache'))
 
-def publish(root, stage, remote, *, expected=None, ref='refs/heads/main', before='', success=True, reason=None):
+def publish(root, stage, remote, *, expected=None, ref='refs/heads/main', target=TARGET, before='', success=True, reason=None):
     env = dict(env_for(root, stage), CONTEXT_EXPECTED=expected or gt(root, 'rev-parse', 'HEAD'),
-               CONTEXT_REMOTE=str(remote), CONTEXT_REMOTE_REF=ref)
+               CONTEXT_REMOTE=str(remote), CONTEXT_REMOTE_REF=ref, CONTEXT_GRAPH_TARGET=target)
     return d.execute(PUBLISH, env, before=before, success=success, reason=reason)
 
 def bind_labels(members, interpretation):
@@ -148,7 +148,7 @@ def build(root, case, work, *, assignments_override=None, dependency_reviews_ove
     assert d.snapshot(root) == original
     return output, validated, plan, paths
 
-def init_repo(root, files):
+def init_repo(root, files, *, target=TARGET):
     root.mkdir()
     subprocess.run(['git', 'init', '-q', '-b', 'main', str(root)], env=clean_env(), check=True)
     for name, contents in files.items():
@@ -157,7 +157,7 @@ def init_repo(root, files):
         path.write_text(contents, encoding='utf-8', newline="\n")
     (root / '.gitignore').write_text('.env\ngraphify-out/\n', encoding='utf-8', newline="\n")
     (root / '.env').write_text('SECRET=fixture-only-never-publish\n', encoding='utf-8', newline="\n")
-    placeholder = root / TARGET / '.gitkeep'
+    placeholder = root / target / '.gitkeep'
     placeholder.parent.mkdir(parents=True, exist_ok=True)
     placeholder.write_bytes(b'')
     git(root, 'add', '.')
@@ -497,6 +497,120 @@ def run_more(base, remote, current_commit, stage, api):
             "rollback_fast_forward": True, "real_validator": True}
 
 
+
+def check_publication_targets(base, case):
+    """Exercise the real recipe against local bare remotes at explicit targets."""
+    work = base / 'explicit-publication-targets'
+    work.mkdir()
+    results = {}
+    for index, target in enumerate((TARGET, 'level-1/context/references/graphify',
+                                    'project-knowledge/derived graph')):
+        current = copy.deepcopy(case)
+        current['exclusions'] = [*current['exclusions'], target + '/']
+        root = work / f'repo-{index}'
+        expected = init_repo(root, current['files'], target=target)
+        stage, checked, _, _ = build(root, current, work / f'build-{index}')
+        remote = work / f'remote-{index}.git'
+        git(work, 'init', '--bare', '-q', str(remote))
+        git(root, 'push', '-q', str(remote), 'HEAD:refs/heads/main')
+        # A malformed or missing target must fail before ANY Git mutation.
+        mutation_guard = '''import subprocess
+_real_run = subprocess.run
+def _guard(*args, **kwargs):
+    argv = args[0]
+    if isinstance(argv, (list, tuple)) and argv and argv[0] == "git":
+        assert not set(argv) & {"hash-object", "read-tree", "update-index", "write-tree", "commit-tree", "push", "update-ref"}, "Unexpected Git mutation"
+    return _real_run(*args, **kwargs)
+subprocess.run = _guard
+'''
+        if index == 0:
+            before = d.snapshot(root), d.snapshot(remote)
+            environment = dict(env_for(root, stage), CONTEXT_EXPECTED=expected,
+                               CONTEXT_REMOTE=str(remote), CONTEXT_REMOTE_REF='refs/heads/main')
+            environment.pop('CONTEXT_GRAPH_TARGET', None)
+            environment.pop('CONTEXT_TARGET', None)
+            d.execute(PUBLISH, environment, before=mutation_guard, success=False, reason='CONTEXT_GRAPH_TARGET')
+            # A stale graph-query node ID is not an explicit publication path.
+            environment['CONTEXT_TARGET'] = 'docs_policy_grant_window'
+            d.execute(PUBLISH, environment, before=mutation_guard, success=False, reason='CONTEXT_GRAPH_TARGET')
+            invalid = ('', '/', '/tmp/graph', 'C:/graph', 'C:graph', r'\\server\graph',
+                       '../graph', 'a/../graph', '.', './graph', 'a/./graph', 'a//graph',
+                       'a/graph/', '.git/graph', 'a/.GIT/graph', 'a/.git./graph',
+                       'a/.git /graph', 'a /graph', 'a/graph.', 'a/*/graph',
+                       'a/[x]/graph', 'a/graph\nx', 'a/graph\tx', ':(literal)graph')
+            for bad in invalid:
+                publish(root, stage, remote, target=bad, before=mutation_guard,
+                        success=False, reason='Invalid CONTEXT_GRAPH_TARGET')
+            assert before == (d.snapshot(root), d.snapshot(remote))
+        original = {k: val for k, val in d.snapshot(root).items() if not k.startswith('.git/')}
+        original_index = (root / '.git/index').read_bytes()
+        published = json.loads(publish(root, stage, remote, target=target).stdout)
+        commit = published['commit']
+        assert published['status'] == 'published' and published['parent'] == expected
+        assert gt(remote, 'rev-parse', 'refs/heads/main') == commit
+        changed = set(gt(remote, 'diff-tree', '--no-commit-id', '--name-only', '-r', expected, commit).splitlines())
+        assert changed == {target + '/' + name for name in (*NAMES, '.gitkeep')}
+        assert set(gt(remote, 'ls-tree', '--name-only', commit + ':' + target).splitlines()) == set(NAMES)
+        # Inspect bytes from the BARE DESTINATION, not the source index or strings.
+        for name in NAMES:
+            assert git(remote, 'show', f'{commit}:{target}/{name}') == checked['blobs'][name]
+        assert original_index == (root / '.git/index').read_bytes() and gt(root, 'rev-parse', 'HEAD') == expected
+        assert original == {k: val for k, val in d.snapshot(root).items() if not k.startswith('.git/')}
+        records = [{'tag': 'fixture', 'repository': str(root), 'artifact_commit': commit,
+                    'artifact_target': target, 'checked': checked}]
+        binding = {'cross_records': records, 'validator': v}
+        exec(compile(block('bind-cross-inputs', 'graphify-export.md'), 'explicit-target-binding', 'exec'), binding)
+        assert binding['checked_inputs'] == [('fixture', commit, checked)]
+        results[target] = {'commit': commit, 'bare_destination_blobs': True,
+                           'allowlist_only': True, 'explicit_export_binding': True}
+        if index == 0:
+            # Committed filesystem and Git-tree ancestors are independent gates.
+            for kind in ('file', 'symlink', 'dangling-symlink', 'gitlink'):
+                unsafe = work / ('unsafe-' + kind)
+                init_repo(unsafe, case['files'])
+                prefix = unsafe / 'unsafe'
+                if kind == 'file':
+                    prefix.write_text('not a directory', encoding='utf-8')
+                elif kind in ('symlink', 'dangling-symlink'):
+                    outside = work / ('outside-' + kind)
+                    if kind == 'symlink':
+                        outside.mkdir()
+                    prefix.symlink_to(outside, target_is_directory=True)
+                else:
+                    # A real gitlink with an uninitialized working-tree directory.
+                    prefix.mkdir()
+                    git(unsafe, 'update-index', '--add', '--cacheinfo',
+                        f"160000,{gt(unsafe, 'rev-parse', 'HEAD')},unsafe")
+                if kind != 'gitlink':
+                    git(unsafe, 'add', 'unsafe')
+                git(unsafe, 'commit', '-qm', 'Unsafe target ancestor fixture')
+                unsafe_remote = work / ('unsafe-' + kind + '.git')
+                git(work, 'init', '--bare', '-q', str(unsafe_remote))
+                git(unsafe, 'push', '-q', str(unsafe_remote), 'HEAD:refs/heads/main')
+                assert not gt(unsafe, 'status', '--porcelain=v1', '--untracked-files=all')
+                before = d.snapshot(unsafe), d.snapshot(unsafe_remote)
+                publish(unsafe, stage, unsafe_remote, target='unsafe/graph', before=mutation_guard,
+                        success=False, reason='Unsafe target ancestor')
+                assert before == (d.snapshot(unsafe), d.snapshot(unsafe_remote))
+            for kind in ('extra-file', 'nonempty-placeholder'):
+                unsafe = work / kind
+                init_repo(unsafe, case['files'])
+                (unsafe / TARGET / ('extra.txt' if kind == 'extra-file' else '.gitkeep')).write_bytes(b'unapproved')
+                git(unsafe, 'add', TARGET)
+                git(unsafe, 'commit', '-qm', 'Unexpected target content fixture')
+                unsafe_remote = work / (kind + '.git')
+                git(work, 'init', '--bare', '-q', str(unsafe_remote))
+                git(unsafe, 'push', '-q', str(unsafe_remote), 'HEAD:refs/heads/main')
+                before_objects = d.snapshot(unsafe / '.git/objects'), d.snapshot(unsafe_remote)
+                publish(unsafe, stage, unsafe_remote, before=mutation_guard, success=False,
+                        reason='Unexpected target content' if kind == 'extra-file' else 'Nonempty placeholder')
+                assert before_objects == (d.snapshot(unsafe / '.git/objects'), d.snapshot(unsafe_remote))
+    return {'targets': results, 'missing_and_invalid_targets_refused_before_git_mutation': True,
+            'legacy_query_target_alone_refused_before_git_mutation': True,
+            'unsafe_file_symlink_dangling_symlink_gitlink_refused_before_git_mutation': True,
+            'strict_target_content_allowlist_preserved': True}
+
+
 def check_native_lock(base):
     """Real subprocess exclusion/recovery on the actual host/filesystem."""
     lock = base / 'native-lock-control'
@@ -578,6 +692,7 @@ def main():
             if name == 'mixed-edit':
                 assert any('48' in str(n) for n in graph['nodes'] if n.get('_origin') == 'semantic')
             results[name] = (root, checked, stage, plan, paths)
+        target_controls = check_publication_targets(base, cases['baseline'])
         assessments = assess_cases(cases, results)
         controls = check_order_and_labels(base, results, cases)
         seed, baseline, stage, _, _ = results['baseline']
@@ -681,7 +796,7 @@ subprocess.run = _intercept
         isolation = check_worktrees_and_export(base, remote, fresh, cases, results["baseline"])
         assert not d.ATTEMPTS
         print(json.dumps({'status':'PASS','recorded_model_replay_only':True,'cases':assessments,
-                          'publication':True,'native_locking':locking,'unsupported_lock_refused':True,'no_op_mutation_refused':True,'cold_changed_only_reuse':True,'race':more,'controls':controls,'isolation':isolation,
+                          'publication':True,'publication_targets':target_controls,'native_locking':locking,'unsupported_lock_refused':True,'no_op_mutation_refused':True,'cold_changed_only_reuse':True,'race':more,'controls':controls,'isolation':isolation,
                           'network_or_provider_attempts':len(d.ATTEMPTS)}, ensure_ascii=False))
 
 if __name__ == '__main__':
