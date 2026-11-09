@@ -10,9 +10,14 @@ Pass B is accepted at `b3d323e76392c6b8e00337998726320082f753cd`; its
 records independent review and dot's acceptance. The bounded method evidence
 remains in [vehicle and territorial service evidence](#pass-b-vehicle-and-territorial-service-evidence);
 the historical matrix is not rescored.
-Pass D's section/air-interface candidate is recorded in
+Pass D is accepted at `925166e93cad2b7e14d70496125a7f4c00ed2732`; its
 [housing and natural-exhaust evidence](#pass-d-housing-and-natural-exhaust-evidence),
-pending independent review; this does not rescore historical M3/D5/M6.
+including the ground-route correction, retains its limits rather than rescoring
+historical M3/D5/M6 automatically. E is accepted at
+`2e5515ad960da98bdafefe72f52ade2efc24d580`; its [accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6729101605)
+records independent review. [Pass F transfer evidence and matrix worklist](pass-f-verification.md)
+are in progress; the second session's [raw tasks](pass-f-session-2-tasks.md)
+remain outstanding. There is no final F coverage score or acceptance yet.
 The accepted Issue #10 result is
 [`39394ad06476952c17792022613648002a6000ee`](https://github.com/Krankort224/Skills/commit/39394ad06476952c17792022613648002a6000ee),
 as recorded in its [accepted F summary](https://github.com/Krankort224/Skills/issues/10#issuecomment-6716639914).
@@ -40,6 +45,8 @@ the accepted organization and preservation plan. Task outputs belong in the issu
 - [Pass C multi-building sun evidence](#pass-c-multi-building-sun-evidence)
 - [Pass D housing and natural-exhaust evidence](#pass-d-housing-and-natural-exhaust-evidence)
 - [Pass B vehicle and territorial service evidence](#pass-b-vehicle-and-territorial-service-evidence)
+- [Pass E volume and independent exhibition evidence](#pass-e-volume-and-independent-exhibition-evidence)
+- [Pass F cross-author transfer and current worklist](pass-f-verification.md)
 
 ## Selected depth increments
 
