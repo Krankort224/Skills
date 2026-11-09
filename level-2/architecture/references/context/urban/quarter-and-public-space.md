@@ -27,6 +27,7 @@ ratio, density, catchment, route dimension or technical approval.
 - [Make each phase an operable place](#make-each-phase-an-operable-place)
 - [Test the whole site in season and section](#test-the-whole-site-in-season-and-section)
 - [Source boundary](#source-boundary)
+- [Related bounded site methods](#related-bounded-site-methods)
 
 ## Organize several plots around an open-space hierarchy
 
@@ -377,3 +378,10 @@ service radius or road/engineering dimension is reproduced. Books and coursework
 have no established redistribution permission; keep source scans outside the
 skill and retain the [third-party notices](../../../THIRD_PARTY_NOTICES.md). These
 methods require no source files at runtime.
+
+## Related bounded site methods
+
+- Verified by — [Vehicle routes and parking](vehicle-and-parking-geometry.md): when the ground balance or journey assumes parking, delivery or collection, construct actual modules, body sweeps and standing/handler states. This supplies bounded geometric evidence, not fire/traffic/technical approval.
+- Verified by — [Territorial service allocation](service-capacity-allocation.md): when residents rely on finite school, preschool or public-service provision, test group eligibility/capacity reservations and usable parcels; a connected path or total seats alone cannot verify service.
+- Verified by — [Multi-building shadows/direct sun](../../performance/comfort/multi-building-sun.md): when court or window use relies on solar access, combine actual obstruction intervals at each selected receiver and report transition uncertainty; a ground shadow or total hours cannot substitute for its height, continuous spans or applicable test rules.
+- Affects — [Program demand](../../program/demand.md): when facility/route land displaces housing or a stage fails, reopen the actual population, cohort and operating assumptions before keeping the former land balance.

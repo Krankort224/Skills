@@ -59,3 +59,4 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 - Affects — [Daylight, view and occupied comfort](daylight-view.md): closing windows or deploying controls changes the occupied condition.
 - Verified by — [Environmental operating states and inclusive control](operating-states.md): when selecting coupled seasonal/open/closed states: test actual air paths and changeover.
 - Affects — [Section and services reservations](../../space/vertical/section-and-services.md): reserve the actual transfer/supply/return paths and service access.
+- Verified by — [Natural-exhaust topology](natural-exhaust-topology.md): when a dwelling strategy relies on vertical passive extraction, test supplied outdoor air, closed-door transfer, extract/channel/roof continuity and possible cross-dwelling reverse connections. The resulting graph is not a flow, acoustic or fire result.

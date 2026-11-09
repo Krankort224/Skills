@@ -12,9 +12,17 @@ and project application basis, as in the transformable-hall study below.
 ## Contents
 
 - [Construct a room that can be used](#construct-a-room-that-can-be-used)
+- [Check occupied states before retaining the room](#check-occupied-states-before-retaining-the-room)
+- [Construct a clear-area fit with explicit wall reservations](#construct-a-clear-area-fit-with-explicit-wall-reservations)
 - [Choose a plan family from the relationships](#choose-a-plan-family-from-the-relationships)
 - [Organize levels, cores and service depth](#organize-levels-cores-and-service-depth)
+- [Reconcile upper floors, tall rooms and roofs](#reconcile-upper-floors-tall-rooms-and-roofs)
+- [Resolve a Russian mixed-use plan before fixing the core](#resolve-a-russian-mixed-use-plan-before-fixing-the-core)
 - [Worked design progressions](#worked-design-progressions)
+- [Public learning house: quiet upper floor](#a-public-learning-house-with-a-quiet-upper-floor)
+- [Fixed shell: housing above quiet work](#a-fixed-shell-housing-above-quiet-work-revised-by-frontage-and-section)
+- [Russian production host and public consultation](#a-russian-production-host-with-a-public-consultation-room)
+- [Russian transformable hall: seating changes the layout](#a-russian-transformable-hall-seating-rule-changes-the-layout)
 - [Repair a bounded proposal without losing its logic](#repair-a-bounded-proposal-without-losing-its-logic)
 
 ## Construct a room that can be used
@@ -24,6 +32,10 @@ Generate at least one furniture/action setting before fixing the room area. A
 long narrow room and a compact room of equal area offer different useful space:
 the narrow room may support a linear bench or exhibition but fail face-to-face
 teaching; the compact room may support a group but waste a linear process route.
+
+For an actual collection, establish [exhibit/viewer and sensitivity commitments](../../typologies/exhibition.md#derive-the-exhibit-and-audience-commitments)
+before turning a generic display wall or object envelope into a gallery. That
+family supplies sequence/view/light decisions; the room method still owns fit.
 
 Start with the activity's demanding dimension: a bed plus access on its used
 sides, a meeting table plus occupied chairs and passage, an equipment line plus
@@ -251,6 +263,12 @@ An exposed-services ceiling is a design choice with acoustic, visual and access
 consequences; it does not remove the physical service depth.
 
 ### Reconcile upper floors, tall rooms and roofs
+
+When m³ are requested or the roof/base/void boundary changes, use
+[volume boundary and solids](../../program/building-volume.md) to reconcile
+the selected three-dimensional metric. An internal floor void can remove floor
+area while retaining the enclosing volume; neither result substitutes for the
+actual occupied section below.
 
 Overlay the proposed floor footprints on the same plan coordinates, then test
 each overlap in section. A tall lower room and an upper occupied floor cannot

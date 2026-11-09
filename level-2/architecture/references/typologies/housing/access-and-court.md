@@ -16,6 +16,7 @@ establish how the homes are actually reached.
 - [Worked revision of a housing wing and court edge](#worked-revision-of-a-housing-wing-and-court-edge)
 - [Read project examples as evidence](#read-project-examples-as-evidence)
 - [Source boundary](#source-boundary)
+- [Related section and air decisions](#related-section-and-air-decisions)
 
 ## Choose a dwelling and access family together
 
@@ -209,3 +210,8 @@ source plan, numerical norm, service radius or climate prescription is reproduce
 The worked zones are original trial geometry and include reservations rather
 than claimed net room areas. Actual furniture, support, access/fire, acoustic,
 environmental and landscape/garage evidence can change the selected family.
+
+## Related section and air decisions
+
+- Verified by — [Regular/turning/end transformations](section-variants.md): when repeating or bending a housing group, test actual ownership, whole portals, occupied fronts, inner corners, end build-up and all-level wet/core/ground consequences; an outline rotation does not preserve those interfaces.
+- Verified by — [Natural-exhaust topology](../../performance/comfort/natural-exhaust-topology.md): when a wet/service band assumes passive extraction, trace actual outdoor supply, closed-door transfers, owned channels and roof paths; this does not verify flow or rated construction.

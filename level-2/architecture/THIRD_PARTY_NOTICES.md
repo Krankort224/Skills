@@ -3,6 +3,9 @@
 ## Contents
 
 - [Selected library materials](#selected-architecture-library-literature-and-course-materials)
+- [Applied site guidance](#applied-site-guidance)
+- [Solar occlusion sources](#solar-occlusion-sources)
+- [Housing and exhaust sources](#housing-and-exhaust-sources)
 - [Skills-Architects](#skills-architects)
 - [Computational Designers](#claude-skills-for-computational-designers)
 
@@ -80,6 +83,48 @@ requires checking that particular asset's permission and credit. Original
 hypothetical transfer fragments are not reproductions or proven performance of
 the source buildings.
 
+## Applied site guidance
+
+Selected reading: *Manual for Streets* (Department for Transport/Communities and
+Local Government, Thomas Telford Publishing, 2007), *Building Bulletin 103*
+(Department for Education, June 2014), and Esri ArcGIS Pro 3.6 location-allocation
+documentation. Exact URLs, PDF hashes, inspected sections and rights dispositions
+are retained in [applied site sources](sources/applied-site-methods.md).
+
+The Manual's copyright leaf reserves Queen's Printer/Controller of HMSO and
+typographic rights with limited reproduction purposes; BB103 states Crown
+copyright 2014 and OGL v2.0 excluding logos and separately identified third-party
+material. No open redistribution permission for Esri media/software is established.
+Only original explanatory synthesis, original geometry/examples and bibliographic
+links are installed. No source drawing, diagram, screenshot, table of dimensions,
+full text, map or software is redistributed. Access does not expand those rights.
+
+## Solar occlusion sources
+
+Selected primary reading: *Physically Based Rendering: From Theory to
+Implementation*, Matt Pharr, Wenzel Jakob and Greg Humphreys, third-edition
+online text, section3.1. Its footer identifies copyright2004–2021 and CC
+BY-NC-ND4.0 for book text. NOAA's *General Solar Position Calculations* supplies
+technical time/solar provenance, not statutory criteria. Exact sources/read
+extents and limitations are retained in [solar occlusion](sources/solar-occlusion.md).
+Only original mathematics, prose, examples and verification code are installed;
+no renderer code, adapted book text, images, diagrams or PDF is redistributed.
+No general permission for source media is inferred, and existing MIT notices
+remain unchanged.
+
+## Housing and exhaust sources
+
+Selected primary reading: Greater London Authority's *Housing Design* web text
+(explicitly Draft; edition date unestablished); MHCLG *Approved Document F*,
+Volume1,2026 edition for England; and Volume2,2021 edition, selected PSV definition
+only. [Exact sources, hashes and inspected extents](sources/housing-and-exhaust.md)
+retain draft/territorial status, exclusions and rights. No licence for GLA media
+was established. The PDFs retain Crown copyright and their stated Open Government
+Licence terms excluding logos/other identified rights. Only original explanatory
+synthesis, geometry/topology, study values and bibliographic links are installed;
+no source plan, diagram, scan, code-value table or extensive text is redistributed.
+The new examples do not claim to be prescribed compliant English systems.
+
 ## Skills-Architects
 
 Source: https://github.com/Abhinavbwj/Skills-Architects/tree/30a0845dddcaebd765fc396059573d02e99c5b63
@@ -109,6 +154,16 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+## Volume and exhibition reading
+
+[Selected primary source records](sources/volume-and-exhibition.md) identify the
+OpenStax mathematics, Smithsonian access and Canadian Conservation Institute
+reading and their actual extents/rights. Their PDFs, figures, exercises, tables
+and extended prose are not redistributed. OpenStax's current NC-SA terms do not
+relicense independent elementary geometric facts or the original local examples;
+no source-specific textbook content is included. Institutional/third-party media
+rights and numeric prescriptions are not inferred from public access.
 
 ## Claude-skills-for-Computational-Designers
 

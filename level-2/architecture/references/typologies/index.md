@@ -3,7 +3,8 @@
 Use these bounded methods when a use label hides the activities, support or
 operating boundaries that will determine the building. The perimeter is housing
 and shared domestic amenities, ordinary learning clusters, public libraries and
-short-stay accommodation, including interfaces between them. It does not cover
+short-stay accommodation and bounded exhibition/collection decisions, including
+interfaces between them. It does not cover
 every building type, specialist laboratory, childcare facility, archive, hospital,
 commercial kitchen or hotel classification.
 
@@ -42,6 +43,7 @@ operating evidence to choose; there is no universal best family.
 
 | Activity/support question | Complete method |
 | --- | --- |
+| Exhibition objects, viewing sequence, sensitive light and replacement (экспозиция, павильон, музей) | [Exhibition](exhibition.md): object-specific spatial/control decisions and changed-exhibit corrections; no complete museum/archive or conservation certification |
 | Housing and shared domestic support | [shared domestic](housing/shared-domestic.md) |
 | Learning clusters and preparation | [learning](learning.md) |
 | Libraries as reader and collection systems | [libraries](libraries.md) |
@@ -70,6 +72,7 @@ bounded architectural reasoning, not complete competence in every listed use.
 
 | Decision | Complete local method | Coverage and connection |
 | --- | --- | --- |
+| Compare regular, turning/corner and end residential sections (рядовая, поворотная/угловая, торцевая секция) | [Section transformations](housing/section-variants.md), with [housing/access family](housing/access-and-court.md#choose-a-dwelling-and-access-family-together) when choosing the original family | Recoverable unit/core program, explicit transforms, nonoverlap/portal/front tests, inner-corner and end-wall corrections, wet/shaft/ground consequences and reconciled ledgers. Actual core/room/environmental/engineering and jurisdiction checks remain distinct; a rotated outline alone is not fit. |
 | Connect home, shared court and service movement | [Court and servicing](housing/access-and-court.md#connect-home-court-and-servicing) | Method for housing-edge journeys and conflicts. Housing is an overlay on the common movement method, not a general urban-engineering or all-quarter typology. |
 | Choose a housing access family and apartment aspects together | [Housing/access family](housing/access-and-court.md#choose-a-dwelling-and-access-family-together) | Method for the stated housing decisions; use furnished dwelling methods only when internal household use is affected. Partial typology breadth beyond the selected housing/public/mixed-use fragments. |
 | Develop learning, public-library and short-stay activity/support relationships | [Family selection](#select-a-family-by-its-operating-commitments), then [learning clusters](learning.md#learning-clusters-and-preparation), [reader/collection systems](libraries.md#libraries-as-reader-and-collection-systems) or [short-stay service](short-stay.md#short-stay-rooms-and-recurring-service) | Methods for the declared ordinary activity families, their support cycles, plan/section choices and failure corrections. Specialist laboratories, hospitals, all education ages and every hospitality model are not covered by those examples. |

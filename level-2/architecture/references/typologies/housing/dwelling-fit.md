@@ -202,3 +202,6 @@ corridor, fixture or foreign-code number was adopted. All case dimensions and
 furniture are original study inputs; source illustrations were not copied.
 Geometric passage of a declared scenario does not establish environmental,
 structural, legal or household acceptance of the whole dwelling.
+
+- Affects — [Section transformations](section-variants.md): when an end wall, corner opening or wet/shaft position changes this fitted unit, carry its actual clear dimensions, door/actions and area deductions into the repeated/core/ground variant rather than preserving a nominal count.
+- Verified by — [Natural-exhaust topology](../../performance/comfort/natural-exhaust-topology.md#construct-supply-transfer-and-extract-chains): when closed dwelling doors or moved wet rooms affect natural extraction, establish real transfer/branch/roof continuity separately from furniture fit and flow performance.
