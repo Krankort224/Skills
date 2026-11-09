@@ -1,12 +1,13 @@
 # Pass F: cross-author transfer and final verification
 
-Status: **execution complete, pending final review and dot acceptance**. Method target is accepted E
+Status: **accepted by dot after final fixed-revision review** at
+`5306677e7e7194d8643ca30a984585d521a9b412`. Method target is accepted E
 `2e5515ad960da98bdafefe72f52ade2efc24d580`; acceptance-only recording commit
 `6f6bde9e14ffcf4becbd920fe7026fcc7c136e1d` changes no method.
 [Issue13](https://github.com/Krankort224/Skills/issues/13) owns the contract;
 [E acceptance](https://github.com/Krankort224/Skills/issues/13#issuecomment-6729101605)
-and [F dispatch](https://github.com/Krankort224/Skills/issues/13#issuecomment-6729162661)
-own authorization/roles. Dot arbitrates. This maintenance evidence is not a
+and [F accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6733156869)
+retain authorization, roles, final review and boundaries. Dot arbitrates. This maintenance evidence is not a
 runtime index, whole-project design or automatic coverage score.
 
 ## Contents
@@ -42,8 +43,9 @@ Session1's one-off standard-library checker is outside the repository at
 `/tmp/issue13-F-session1.py`; command:
 `PYTHONDONTWRITEBYTECODE=1 python3 /tmp/issue13-F-session1.py`.
 It imports no authored skill test helpers. The inputs, calculations and limits
-below allow independent reconstruction; the Issue checkpoint records exact
-revision/command results. No one-off log/script is installed as a runtime tool.
+below allow independent reconstruction; the [fixed checkpoint](https://github.com/Krankort224/Skills/blob/739a40784bb2f0b1842a740a751bf66d4128c582/level-2/architecture/maintenance/pass-f-verification.md)
+and accepted summary retain exact revision/command results. No one-off log/script
+is installed as a runtime tool.
 
 ## Session1 vehicle and territorial allocation
 
@@ -409,7 +411,8 @@ The26 previously sufficient rows were reassessed by their primary-brief scope,
 preserved complete owners and relevant new task/route evidence; they were not
 rerun as26 new CAD/BIM projects or claimed as26 fresh blind trials. Changed rows
 below cite their new local mechanism and opposite-author tests explicitly.
-These are **executor assessments for review**, not dot's acceptance.
+These scoped assessments were checked in final review and accepted by dot;
+the accepted summary preserves that decision without claiming actual-project approval.
 
 | Row | Historical → current | Mechanism/evidence and exact boundary |
 | --- | --- | --- |
@@ -462,12 +465,13 @@ that does not erase limitations of their deliberately bounded models.
 Session1 integrated the other session's complete report, checked its interval/
 area/height arithmetic, inequalities, cited file identities and consistency with
 the task packet. No new runtime defect or mandatory method correction emerged.
-The required next action is final fixed-revision review and dot's explicit
-acceptance decision, not another self-acceptance or a new session.
+Final fixed-revision review verified faithful transfer, assessment boundaries,
+navigation, authorship and preservation without a blocking finding. Dot explicitly
+accepted F; no new session or executor self-acceptance supplied that decision.
 
 The checkpoint at739a407 already passed48 regressions, checker8 operations/
 64 normative records/104 runtime documents and GFM119 files/2504 local links/
-161 tables. Final handoff records fresh counts and actual commands at the final
+161 tables. The accepted summary records fresh counts and actual commands at the reviewed
 revision; historical numbers above retain their checkpoint identity. All runtime
 methods/calculators/tests/normative/source/asset content remains unchanged from E.
 Only maintenance evaluation/status/results change; no model, new dependency,
@@ -480,7 +484,7 @@ no warnings or invalid resources/anchors. All127 other preexisting architecture
 and138 outside files are byte-identical to E, including protected runtime,
 normative/source and asset resources. The original historical35 rows and frozen
 Session2 raw-task packet are unchanged; the new current matrix has35 unique IDs,
-34 scoped S/1 P(K5). The final Issue handoff pins these results to its commit.
+34 scoped S/1 P(K5). The accepted summary pins these results to the reviewed commit.
 
 Limits carried forward: familiar two-session cross-author checks, shared D and
 mixed-author navigation; remote raw evidence not re-executed in this executor;
@@ -489,4 +493,7 @@ rights/product and operation; real ephemeris/complex geometry/whole-surface ligh
 photometry/collection behaviour; MEP/structure/fire/access/measurement approval.
 K5's broader cycle/street-profile procedure remains partial. These are explicit
 limits, not silently completed designs or a reason to guess current code values.
-Pass F is pending review/acceptance; the Issue stays open. No PR, merge or closure.
+Pass F is accepted at the exact reviewed revision above. Later housekeeping
+records status/references only; it does not replace the reviewed method/result.
+Overall Issue acceptance/closure remains reserved; the Issue stays open.
+No PR, merge or closure follows from this pass acceptance.

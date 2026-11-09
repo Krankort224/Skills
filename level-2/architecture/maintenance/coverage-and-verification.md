@@ -18,7 +18,9 @@ historical M3/D5/M6 automatically. E is accepted at
 records independent review. [Pass F transfer evidence and current reassessment](pass-f-verification.md)
 integrate both sessions' completed work and six observed routes; the frozen
 [raw tasks](pass-f-session-2-tasks.md) preserve the second session's inputs.
-F execution is complete and pending final review/dot acceptance. Its34 sufficient/
+Dot accepted F at `5306677e7e7194d8643ca30a984585d521a9b412` after final fixed-revision
+review; the [accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6733156869)
+retains that decision and the reviewed evidence. Its34 sufficient/
 1 partial assessment retains the K5 cycle/street-profile breadth limit; it is not
 a completeness score, project approval or an acceptance threshold.
 The accepted Issue #10 result is
@@ -49,7 +51,7 @@ the accepted organization and preservation plan. Task outputs belong in the issu
 - [Pass D housing and natural-exhaust evidence](#pass-d-housing-and-natural-exhaust-evidence)
 - [Pass B vehicle and territorial service evidence](#pass-b-vehicle-and-territorial-service-evidence)
 - [Pass E volume and independent exhibition evidence](#pass-e-volume-and-independent-exhibition-evidence)
-- [Pass F cross-author transfer and current worklist](pass-f-verification.md)
+- [Pass F accepted cross-author transfer and current reassessment](pass-f-verification.md)
 
 ## Selected depth increments
 
