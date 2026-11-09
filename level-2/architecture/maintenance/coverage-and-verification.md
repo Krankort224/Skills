@@ -15,9 +15,12 @@ Pass D is accepted at `925166e93cad2b7e14d70496125a7f4c00ed2732`; its
 including the ground-route correction, retains its limits rather than rescoring
 historical M3/D5/M6 automatically. E is accepted at
 `2e5515ad960da98bdafefe72f52ade2efc24d580`; its [accepted summary](https://github.com/Krankort224/Skills/issues/13#issuecomment-6729101605)
-records independent review. [Pass F transfer evidence and matrix worklist](pass-f-verification.md)
-are in progress; the second session's [raw tasks](pass-f-session-2-tasks.md)
-remain outstanding. There is no final F coverage score or acceptance yet.
+records independent review. [Pass F transfer evidence and current reassessment](pass-f-verification.md)
+integrate both sessions' completed work and six observed routes; the frozen
+[raw tasks](pass-f-session-2-tasks.md) preserve the second session's inputs.
+F execution is complete and pending final review/dot acceptance. Its34 sufficient/
+1 partial assessment retains the K5 cycle/street-profile breadth limit; it is not
+a completeness score, project approval or an acceptance threshold.
 The accepted Issue #10 result is
 [`39394ad06476952c17792022613648002a6000ee`](https://github.com/Krankort224/Skills/commit/39394ad06476952c17792022613648002a6000ee),
 as recorded in its [accepted F summary](https://github.com/Krankort224/Skills/issues/10#issuecomment-6716639914).

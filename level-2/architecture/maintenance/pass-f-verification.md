@@ -1,6 +1,6 @@
 # Pass F: cross-author transfer and final verification
 
-Status: **in progress**, not accepted. Method target is accepted E
+Status: **execution complete, pending final review and dot acceptance**. Method target is accepted E
 `2e5515ad960da98bdafefe72f52ade2efc24d580`; acceptance-only recording commit
 `6f6bde9e14ffcf4becbd920fe7026fcc7c136e1d` changes no method.
 [Issue13](https://github.com/Krankort224/Skills/issues/13) owns the contract;
@@ -15,14 +15,16 @@ runtime index, whole-project design or automatic coverage score.
 - [Session1 vehicle and territorial allocation](#session1-vehicle-and-territorial-allocation)
 - [Session1 original D mechanisms](#session1-original-d-mechanisms)
 - [Session1 volume and exhibition](#session1-volume-and-exhibition)
-- [Coursework matrix worklist](#coursework-matrix-worklist)
-- [Remaining evaluation and checks](#remaining-evaluation-and-checks)
+- [Session2 sun and ground transfer](#session2-sun-and-ground-transfer)
+- [Six observed navigation routes](#six-observed-navigation-routes)
+- [Coursework matrix reassessment](#coursework-matrix-reassessment)
+- [Final verification and limits](#final-verification-and-limits)
 
 ## Authorship and actual independence
 
 | Method contribution | Substantive author | Permissible transfer evidence |
 | --- | --- | --- |
-| A navigation; C sun geometry | Session1 | Session2 checks raw new sun tasks and records six navigation walks. |
+| A navigation; C sun geometry | Session1 | Session2 checked raw new sun tasks and recorded six navigation walks. |
 | B vehicle/service allocation; E volume/exhibition | Session2 | Session1 new F-V/F-T/F-Q/F-X cases below. |
 | Original D air topology, rigid transforms and local end-unit refit | Session2 | Session1 F-A/F-S: only unchanged original mechanisms; its edited global R channel coordinate and ground/core are supplied context, not independently certified here. |
 | D widened ground/core correction, thresholds, section and its ledgers | Session1 | Session2 F-D-ground. Its original unit/air knowledge is fixed context, not independently certified by its author. |
@@ -30,8 +32,8 @@ runtime index, whole-project design or automatic coverage score.
 No new sessions/agents were created. The two existing sessions have already
 read/reviewed much of the corpus. These are cross-author changed-input tests,
 not a cold-context or blinded user study. Session1 selected its new inputs;
-Session2 receives only [raw tasks](pass-f-session-2-tasks.md), not expected
-results. Both must disclose inherited familiarity and any authored interface.
+Session2 received only [raw tasks](pass-f-session-2-tasks.md), not expected
+results, and returned its complete report through dot. Both must disclose inherited familiarity and any authored interface.
 Current B/D/E navigation additions have shared authorship: actual route walks
 are usability observations; do not label an observer's own selector independent.
 The complete D document has no wholly uninvolved third reviewer in this mode.
@@ -113,6 +115,18 @@ not a facility capacity or complete servicing approval. In a20000m² quarter,
 new bypass leaves2650 remaining. Applying F-V's additional52.36 in the same
 ledger makes parking4252.36/remaining2597.64; sum stays20000. No seat capacity
 is inferred from these areas.
+
+At final consolidation Session1 additionally tested a different supplied service
+metric: **planning retail floor-credit m²**, with group demands120/80/60,
+R1 gross200 minus50 outside commitments=150 available and R2 available120.
+A may use R1/R2, B only R1, C only R2; splitting credits is expressly allowed.
+A70/50, B80/0, C0/60 closes260 demand against270 available. Removing B's gate
+leaves80 unserved despite unchanged aggregate capacity. This is a second
+cross-author test of the service-indexed procedure, not part of the earlier
+checkpoint freeze. Its assumed planning metric is not statutory retail provision,
+operator-confirmed shop capacity or visits/persons: spare school seats cannot
+repair a floor-credit deficit. Actual project rates, hours, service metric,
+parcel/room fit and authority must be supplied on their own basis.
 
 ## Session1 original D mechanisms
 
@@ -235,76 +249,244 @@ paths avoid the changed machine body. H replacement closure remains a separate
 operating state from these display-time paths; the spine/G approach stays outside
 the handling sweep. Probe size is a supplied diagnostic, not an access standard.
 
-## Coursework matrix worklist
+## Session2 sun and ground transfer
+
+Dot delivered the full unfiltered second-session report after its completion.
+Its method target was E `2e5515ad960da98bdafefe72f52ade2efc24d580`, task packet
+`739a40784bb2f0b1842a740a751bf66d4128c582`. Session2 reports freezing its own
+results at2026-11-09 05:10:56 UTC **before** reading the dated matrix; it did not
+open Session1 F answers or authored test outputs. It independently tested C and
+Session1's D ground correction, while disclosing earlier review familiarity and
+authorship of B/E/original D. No mandatory method correction was found.
+
+Reported working evidence, retained on that executor at
+`/tmp/issue13-passf-session2/`: `sun_transfer.py`, `sun_results.json`,
+`ground_transfer.py`, `navigation.jsonl`, `raw-freeze.md`. The report identifies
+56 read events and freeze SHA256
+`a93003a2fcc18f13eb4e84812dfec9177d7c9f9ce68b1146a4ca0219676e425a`.
+Those working files were not transferred to this executor. The integrated tables
+below preserve the complete material results/constructions and their attribution;
+Session1 checked arithmetic, interfaces and consistency but does **not** claim to
+have re-executed the remote scripts or independently certified its own C/ground.
+
+### F-C: complete events, alternative check and uncertainty
+
+Use the [raw inputs](pass-f-session-2-tasks.md#f-c-sun-task): ENU, latitude52,
+declination8, apparent solar time08…16, receivers P/Q and two rotated prisms.
+Session2 expressed each local ray component as `a sinH+b cosH+c`, generated all
+sign/face-parameter equality events, solved both trigonometric branches and
+classified every open event cell by complete slab intersection. Original P had
+13/11 cell boundaries for A/B, Q12/12, including window ends. Completeness follows
+from this event partition, not a sampling claim.
+
+Its independent geometric construction projects vertices of the portions above
+the receiver onto that receiver's horizontal plane and tests the point against
+their convex hull. It agreed in every event cell and on1001 additional moments
+per combination. Throughout08…16 the sun is in front and above: minimum
+s_U0.414505 and n·s0.304487. Contacts block; isolated contacts have zero duration.
+All table times are **decimal apparent-solar hours**, rounded to six places,
+not HH:MM, civil time or legal insolation credit. Durations used unrounded roots.
+
+| Receiver / option | A blocks | B blocks | Blocked union | Unblocked h | Longest h |
+| --- | --- | --- | --- | ---: | ---: |
+| P original | 11.552837…13.640734 | 10.254780…11.625363 | 10.254780…13.640734 | 4.614046 | 2.359266 |
+| P A lower | none | 10.254780…11.625363 | 10.254780…11.625363 | 6.629416 | 4.374637 |
+| P B east | 11.552837…13.640734 | 9.951231…11.241419 | 9.951231…11.241419 + 11.552837…13.640734 | 4.621915 | 2.359266 |
+| P both | none | 9.951231…11.241419 | 9.951231…11.241419 | 6.709812 | 4.758581 |
+| Q original | 12.718953…14.686324 | 10.807505…12.428175 | 10.807505…12.428175 + 12.718953…14.686324 | 4.411958 | 2.807505 |
+| Q A lower | none | 10.807505…12.428175 | 10.807505…12.428175 | 6.379329 | 3.571825 |
+| Q B east | 12.718953…14.686324 | 10.416110…12.025023 | 10.416110…12.025023 + 12.718953…14.686324 | 4.423716 | 2.416110 |
+| Q both | none | 10.416110…12.025023 | 10.416110…12.025023 | 6.391087 | 3.974977 |
+
+Unblocked intervals are the complement in[8,16]. Original Q has three:
+[8,10.807505), (12.428175,12.718953), (14.686324,16]. Active A transitions are
+u_max/v_min corner and v_max/z_top edge; B uses u_max/v_max corner and
+u_min/z_top edge. Lowering A to4.2 removes its blockage of both points. Moving B
+1.2m east adds only28.33s total sun at P/42.33s at Q while **reducing** Q's longest
+continuous period by23.48min. It is not an improvement under every criterion.
+Height changes reopen program/roof; translation reopens land/neighbours/receivers.
+
+For receiver x±0.08 and B rotation±1 degree, conservative inner/outer prisms use
+A half-sizes±0.08 and B±0.14: rotation moves each local coordinate less than
+(2+1.4)pi/180<0.06m, plus at most0.08 from relative receiver translation.
+Inner prisms are inside every admitted relative solid; outer prisms enclose all.
+Original P/B's nominal start10.254780 lies inside the justified transition band
+10.190752…10.318587. Before the outer start B definitely does not block; after
+the inner start it definitely blocks in this selected neighbourhood. Conservative
+unblocked-time enclosures are P4.487265…4.762943h, Q4.180345…4.644360h.
+These are enclosures, not exact joint parameter extrema or a global time tolerance.
+
+### F-D-ground: entire paths and changed section
+
+The target is Session1's corrected ground/core, not Session2's original unit/air
+method. Exact rational rectangle sweeps of the0.85m square/2.20m-high probe
+confirm the five original street-to-apartment/stair/lift/court interface paths.
+A changed south opening is0.78m wide, a0.07m deficit. The new support intersects
+1.84m² of the old bypass; east remainder0.90m cannot preserve its1.20m width.
+Each change and their combined state therefore fail their respective conditions.
+
+Session2 found this permitted correction, without deleting the0.60×4.60 support:
+
+| Element | Corrected coordinates |
+| --- | --- |
+| South opening | x14.25…15.15, threshold y0…0.2 |
+| Support | x14.6…15.2,y7.2…11.8 |
+| 1.20m bypass | x14.1…15.3,y0.2…6.6 |
+| 2.40m-deep landing | x10.2…14.4,y5.4…7.8 |
+| 1.20m-wide B branch | x14.4…15.4,y5.4…6.6 |
+
+All five whole sweeps pass, retaining north passage1.40, equipment interfaces,
+private boundaries and thresholds. Support avoids these routes and equipment.
+The restored sliding door/pocket x13.35…14.25 and its reserved wall/frame support
+remain; new support occupies neither that node nor the north door. Product,
+attachment and bearing capacity are unverified project evidence.
+
+Section3−0.30−0.42=2.28m gives0.08 above the probe; services0.52 leave2.18,
+a0.02 deficit. Plan rearrangement cannot repair that fixed vertical condition.
+Footprint307.2, approach14.4, combined321.6 and two-floor614.4=480+134.4 stay
+unchanged. Support occupies2.76m² of existing common reserve (5.52 if repeated),
+reducing clear common area without increasing gross. A neighbour fixed at the
+former x24 conflicts with the25.6-wide candidate by1.6×12=19.2m²; those fixed
+boundaries, both homes and the enlarged core cannot all be retained together.
+These checks end at thresholds/equipment interfaces, not movement on the stair,
+lift operation or actual street/court levels, rights and external geometry.
+
+## Six observed navigation routes
+
+Session2 started each at `SKILL.md`, choosing operation and subject again.
+`overview` means `references/index.md`; subsequent names are the actual reference
+files/sections in opening order, not an ideal route reconstructed afterwards.
+The reported56 events include selective rereading; they are not a usability score.
+First substantive method below means the first subject method after operation/
+index selection, not the operation procedure itself.
+Session1 checked the named targets and ownership against the fixed corpus. The
+complete remote JSONL was not independently read here.
+
+| Task | Actual opening order after SKILL | First substantive method / outcome | Friction and qualification |
+| --- | --- | --- | --- |
+| N1 upper exhibit | operations/analysis → overview → space/index → space/circulation/access-and-closure → space/planning/room-floor-and-section → construction/structure/frame-and-core | Access/closure; receiving/holding/control/portals/lift/upper landing/hall and independent closed-tenancy access. | No area-ledger detour.3.2×1.8×2.4 is not a complete handler/carrier envelope; mass/orientation/allowances/cabin/door/pit/head/landing and operation remain inputs. |
+| N2 moved bathroom | operations/development → overview → space/index → space/planning/room-floor-and-section (levels/core) → space/vertical/stair-section → space/vertical/section-and-services (reuse after F-D) → performance/comfort/natural-exhaust-topology → construction/structure/roof-and-span (thermal boundary/water) | Levels/core; walking profile, branches/shafts through floors, closed doors and roof interfaces. | Re-read the beginning after starting the levels range too late. Air owner is Session2's own D: navigation observation, not its independent air test. |
+| N3 population/gate | operations/analysis → overview → program/index → program/demand → context/urban/service-capacity-allocation → context/urban/vehicle-and-parking-geometry → context/urban/quarter-and-public-space (ground/journeys) | Demand; separate units, available places, removed gate edge, reassignment and land. | Returned to actual-journey dependency after vehicle/ground. No actual allocation numbers supplied in this navigation question. B owners are the observer's own. |
+| N4 section variants | operations/development → overview → typologies/index → typologies/housing/section-variants → typologies/housing/dwelling-fit → construction/structure/frame-and-core and performance/comfort/natural-exhaust-topology (reuse) | Transformations; whole portals/fronts/wall fit/ledgers/wet/roof consequences. | Original transform/air owners are observer-authored. Independent numeric finding is limited to F-D-ground; F-S is the opposite author's local test. |
+| N5 Art Nouveau transfer | operations/concept → overview → composition/index → composition/styles/index → composition/styles/baroque-art-nouveau → composition/styles/precedent-transfer → assets/styles/art-nouveau/casa-batllo/analysis; selective rereads → composition/styles/character-to-decisions → composition/facade/hierarchy-and-rhythm → composition/facade/occupied-bays → composition/massing/section-form | Art Nouveau/Modernisme profile, then real spatial/facade transfer for a changed use. | Extra Baroque reading, recovery of truncated output and two failed guessed filenames rhythm-and-openings.md/character-and-reference.md; correct index links resolved them. These are search/read errors, not broken skill links. |
+| N6 brief/provision | operations/brief → requirements → normative/index → program/demand (reuse) → methods/comparison#frame-the-question | Requirements; jurisdiction/version/applicability and decision ownership remain unresolved. | No Russian-module default or current numeric prescription. Preserve both sources/conflict; source access and geometric reasoning do not establish legal applicability. |
+
+N5's concrete contemporary-clinic exploration compared a legible shared entrance
+with simple repeated consulting rooms against a flatter facade/deep local waiting
+zone. Transfer relates threshold, occupied depth, detail families and real rooms;
+a historical image does not prove privacy/light/support. The Casa Batllo case is
+selected Catalan Modernisme evidence, not a complete measured plan.
+The clinic alternatives establish no healthcare-specific planning or approval.
+
+Comparison with [dated A probes](coverage-and-verification.md#six-task-route-probes),
+read only after freezing current results: N1 avoided the former area detour;
+N2 reached connected owners directly, with a selective-reading retry; N3/N4 now
+reach substantive allocation/vehicle/transform methods where A recorded gaps.
+N3 still needed a dependency reread. N5/N6 retain working paths with N5's search
+errors explicitly recorded. This is an observed qualitative comparison: no new
+global7.6-style score, reconstructed historical transcript or causal speed claim.
+Current mixed-author selectors and prior review familiarity preclude a wholly
+uninvolved or cold-context navigation test under this two-session arrangement.
+
+## Coursework matrix reassessment
 
 The [historical35 rows](coverage-and-verification.md#historical-35-row-benchmark)
-remain immutable dated judgments. Actual brief identities and selective reading
-remain at [source identity](coverage-and-verification.md#source-identity-and-inspected-extent).
-All seven cached files were SHA256-recomputed and matched the primary pinned
-migration manifest again; F re-read principal KP1–KP4 requirement text, including
-KP4's roof/ground/3–4-flat/natural-duct clauses. Graphic-only source pages were
-not newly inspected. No coursework or normative source is edited or imported.
+remain immutable dated judgments. Brief identities/read extents are at
+[source identity](coverage-and-verification.md#source-identity-and-inspected-extent),
+Architecture snapshot `5a0282b0d49792e7688dc2c1f26aca0a8bbcf54d`.
+All seven cached files were SHA256/byte-count matched against the freshly fetched
+primary manifest in F. Principal KP1–KP4 requirements were re-read, including
+KP4's roof/street/court/basement,3–4 flats/core,natural ducts and car-free court.
+Graphic-only pages, the differing house-site versions and current legal force
+remain unresolved exactly as recorded. KP5 is excluded.
 
-This is a worklist, **not the final current-coverage matrix**. Proposed changes
-need the other session's sun/ground/navigation report, the original whole-row
-scope and final regression consolidation. Unknown project inputs and unrun
-models remain separate from local-method coverage. KP5 remains excluded.
+**S** means a sufficient local architectural mechanism in the stated brief-level
+scope, with normal project inputs/authority/product evidence still to be supplied;
+**P** means a substantive local procedural breadth gap remains. Lack of a selected
+site, family, vehicle/product or current governing value is not by itself a skill
+gap. No status certifies an actual coursework design or statutory readiness.
+The26 previously sufficient rows were reassessed by their primary-brief scope,
+preserved complete owners and relevant new task/route evidence; they were not
+rerun as26 new CAD/BIM projects or claimed as26 fresh blind trials. Changed rows
+below cite their new local mechanism and opposite-author tests explicitly.
+These are **executor assessments for review**, not dot's acceptance.
 
-| Row | Historical | Actual F evidence available / remaining consolidation |
+| Row | Historical → current | Mechanism/evidence and exact boundary |
 | --- | --- | --- |
-| P1 | Sufficient | Original demand/area owner preserved; retain its supplied-input scope in final audit. |
-| P2 | Sufficient | Site/approach/seasonal owners preserved; actual park/site remains an input. |
-| P3 | Partial | F-V new vehicle/entry/row/land evidence; separate real fire/operation inputs and broader route scope. |
-| P4 | Sufficient | F-X replacement and closure supplement the preserved object/handler/access chain; whole project logistics unbuilt. |
-| P5 | Sufficient | Lift/core/section owners preserved; N1 route pending, actual supplier/egress evidence still separate. |
-| P6 | Sufficient | Massing/roof/support owners preserved; no member-sizing claim. |
-| P7 | Sufficient | F-X new model ray, overview, alternative representation and changed layout; inspect original viewing scope. |
-| P8 | Sufficient with independence caveat | F-X independently selects collection control from new inputs without the appendix; historic caveat remains historical. Actual lighting unmeasured. |
-| P9 | Sufficient | Documentation/view/issue owners preserved; no new coursework album rendered. |
-| P10 | Partial | F-Q new metric/roof/court/basement changes; formal measurement authority remains an actual project input. |
-| D1 | Sufficient | Household/site/demand owners preserved; actual household and chosen site still needed. |
-| D2 | Sufficient | Occupied-use owners preserved; F-S furniture actions are supplemental, not a full new house. |
-| D3 | Sufficient | Stair/section/attic owners preserved; N2 pending, actual headroom/model not tested here. |
-| D4 | Sufficient | Wet/service/shaft owners preserved; F-A adds air-interface consequences. |
-| D5 | Partial | F-A real supply/closed-door/extract/roof chains, fault and changed channels; no flow approval. |
-| D6 | Sufficient | Wall/roof/function-junction owners preserved, no new thermal/assembly performance. |
-| D7 | Sufficient | Bounded revision mechanisms preserved; cross-domain consequences recorded in new probes. |
-| D8 | Sufficient | Metrics/documentation/completion preserved; legal area definition unresolved if not selected. |
-| K1 | Sufficient | Site/constraints methods preserved; original location/base drawings not issued here. |
-| K2 | Sufficient with supplied indicators | F-T separate demand/capacity and once-only land; actual demographic and denominators stay explicit. |
-| K3 | Partial | F-T constrained subset, real-gate scenario, integer allocation, whole-group refusal and parcel shape; non-educational service breadth must not be silently inferred. |
-| K4 | Sufficient | Quarter/public network/massing alternatives preserved; no new entire quarter model. |
-| K5 | Partial | F-V car/entry/55-degree bay geometry improves its vehicle part; full cycle links/street cross-sections/ramp breadth not demonstrated by this car test. |
-| K6 | Partial | Vehicle and separate journey mechanisms preserved; actual appliance/deployment/fire strategy not established. Reassess whole-row architectural scope explicitly. |
-| K7 | Partial | Session2 F-C and actual N3 routes pending; first session must not self-certify its own C. |
-| K8 | Sufficient | Quarter documentation/visual/indicator methods preserved; no full coursework issue generated. |
-| M1 | Sufficient with chosen mix | Dwelling/mix/furniture methods preserved; no full chosen3–4-flat program is completed here. |
-| M2 | Sufficient | Existing actual regular-unit/core mechanisms preserved; correction inputs remain conditional. |
-| M3 | Partial | F-S original transform/end-unit evidence available; Session2 corrected-ground transfer pending. Shared D authorship disclosed. |
-| M4 | Sufficient as coordination | Session2 ground/interface test pending; original roof/basement/stair/product requirements remain separate. |
-| M5 | Sufficient architecturally | Structural topology/section methods preserved; member/connection capacity remains engineering evidence. |
-| M6 | Partial | F-A multi-home/channel/roof/functional separation checks; actual natural flow/fire/acoustic approval excluded. |
-| M7 | Sufficient in reviewed scope | Facade/room/enclosure preserved; sun-dependent claims wait for F-C. |
-| M8 | Sufficient for links | F-T land and F-V movements supplement court/ground owners; complete servicing/rights not established. |
-| M9 | Sufficient as issue method | Documentation/metrics/mix/completion preserved; final whole-row audit still pending. |
+| P1 | S → S | Demand/area owners preserved; actual simultaneous activities, support and unknown quantities stay explicit. No chosen pavilion program completed. |
+| P2 | S → S | Site/approach/seasonal owners preserved; actual park, retained trees/levels and rights remain inputs. |
+| P3 | P → S | Vehicle method and F-V resolve body sweep, entry/column/row/land versus mere counts; site/access owners trace full journeys. Appliance/deployment/authority must be selected separately; the car is not a fire-approval surrogate. |
+| P4 | S → S | Object/handler/access owners plus F-X complete wall throats, old-load dispatch and whole-H closure while spine remains. Actual operation/load/support remains unbuilt. |
+| P5 | S → S | Core/stair/lift profile owners plus observed N1 provide receiving/landing/pit/head/all-level checks; actual supplier capacity and evacuation evidence remain separate. |
+| P6 | S → S | Massing/roof/support and height-budget mechanisms preserved; no member sizing or verified structural capacity. |
+| P7 | S → S | F-X new horizontal-model occlusion, alternative interpretation, overview and changed layout; actual crowds/reflection/material visibility still need tests. |
+| P8 | S with appendix caveat → S with new independence evidence | Collection-specific exhibition owner and F-X select enclosure/control from a new brief without appendix answers. Historic caveat retained in the dated matrix; actual illumination/fading is unverified. |
+| P9 | S → S | Documentation/view/issue and visual-delivery owners preserved; no actual new coursework album rendered. |
+| P10 | P → S | Volume owner and F-Q explicit metric, signed solids, varying court exclusion, independent surfaces and changed boundaries. Formal measurement still needs its actual provision, not a hidden universal formula. |
+| D1 | S → S | Household/scenario/site/demand mechanisms preserved; no actual family/site chosen here. |
+| D2 | S → S | Complete room/actions/use owners preserved; F-S reinforces actual furnishing/door consequences, not a whole new house. |
+| D3 | S → S | Stair walking/headroom and floor/attic/roof owners plus observed N2; actual surveyed section/product not executed. |
+| D4 | S as coordination → S as coordination | Wet/service/shaft routes and maintainability preserved; F-A adds physical supply/branch/roof effects, separate from MEP sizing. |
+| D5 | P → S as architectural topology | Air owner/F-A trace actual inlet, closed-door transfer, extract, channel and roof with missing-supply/reverse/pressure failures. Graph and static drive do not prove flow. |
+| D6 | S → S | Wall/roof/functions and junction-continuity methods preserved; no new tested assembly/thermal performance. |
+| D7 | S → S | Bounded revision owners preserved; F cases propagate changed geometry to section, program/land and operation rather than rename it. |
+| D8 | S as issue method → S as issue method | Area/documentation/completion retained; actual legal area definition and issued project remain dependencies. |
+| K1 | S → S | Site/constraints/relationship/requirements owners preserved; no new surveyed base plan or actual site selection. |
+| K2 | S with supplied indicators → S with supplied indicators | Demand/metric/ground owners and F-T distinct seats, people, floor and land, once-only reservations; actual rates/denominators remain explicit. |
+| K3 | P → S for territorial allocation | General service-indexed allocation owner/F-T give available capacity, eligible entrance chains, cuts/reassignments, indivisible-policy refusal and usable parcels. Additional planning retail m²-credit transfer keeps a separately supplied metric and gate deficit; no seat/area/occupancy conversion or complete retail typology is inferred. |
+| K4 | S → S | Quarter hierarchy/mixed addresses/alternatives and massing owners preserved; F-T/C demonstrate consequential ground/height changes, not a whole new quarter. |
+| K5 | P → P, vehicle part substantially deepened | F-V and B give actual car/entry/bay/sweep/land mechanisms. A complete cycle-network/street transverse-profile construction and its level/operation checks are not supplied by that car method or demonstrated by these probes. This is residual procedural breadth, not merely absent normative widths. |
+| K6 | P → S for architectural journey/vehicle reservation | Quarter whole-journey, inclusive/emergency interfaces and vehicle/service-envelope methods now connect actual paths, crossing/control/standing/working and ground. F-V/T/N3 support the former vehicle gap; selected real appliance, deployment/load/assistance/fire/access approval remains unverified, as required by those owners. |
+| K7 | P → S in bounded geometric/architectural scope | Opposite-author F-C proves rotated multi-body point intervals, unions, independent geometry and bounded uncertainty; preserved daylight/court owners address occupied consequences. Fixed-declination prisms/points do not establish actual ephemeris, surface-wide daylight or legal insolation. |
+| K8 | S as issue method → S as issue method | Quarter documentation/presentation/indicator mechanisms preserved; no actual full masterplan issue produced. |
+| M1 | S with chosen mix → S with chosen mix | Household/mix/dwelling/furniture mechanisms preserved; actual3–4-flat mix still must be supplied and fitted, not certified by the two-home example. |
+| M2 | S → S | Existing real regular-unit/core and fitted-room mechanisms preserved; widened-envelope/neighbor inputs remain conditional. |
+| M3 | P → S as a transformation mechanism | Original transform/end owner and opposite-author F-S plus the other session's F-D-ground prove nonoverlap/whole portals, refit and ground/section/ledger corrections. Shared D authorship is split and disclosed, not a wholly independent reapproval of all D or a completed actual3–4-flat section. |
+| M4 | S as coordination → S as coordination | Core/support/program/ground owners plus F-D-ground and N1/N4 establish interface continuity and section refusal. Basement/roof/concierge/stroller/vestibule and actual equipment requirements still need their real project fit; this probe does not newly certify them. |
+| M5 | S architecturally → S architecturally | Structural topology/section/wall-floor owners preserved; no connection/member engineering capacity inferred. |
+| M6 | P → S as architectural topology | F-A multi-home channels/roof/functional isolation and changed shaft/utility accounting; actual natural flow, fire/acoustic construction and terminal performance are not proved. |
+| M7 | S in reviewed scope → S in reviewed scope | Facade/occupied bay/enclosure owners preserved; F-C supplies selected-point shading and N5 actual precedent/facade lookup. Full daylight/enclosure/current insolation compliance remains separate. |
+| M8 | S for planning/operation links → S for those links | Home/court/service owners, F-T land and F-V routes retained; rights, actual servicing and approvals remain project evidence. |
+| M9 | S as issue method → S as issue method | Plans/sections/facades/mix/metrics/documentation/completion owners preserved; no actual project issue or new normative approval asserted. |
 
-## Remaining evaluation and checks
+Bookkeeping only: KP1 now10S/0P, KP2 8/0, KP3 7/1, KP4 9/0; total34S/1P
+against historical26S/9P. This is neither an acceptance threshold nor universal
+competence. Eight partial rows gain bounded mechanisms; K5 retains the stated
+cycle/street-profile breadth gap. P8's separate independence boundary improves
+without inventing a tenth historical partial. The six confirmed core topics and
+appendix-independent exhibition selection have concrete new-condition evidence;
+that does not erase limitations of their deliberately bounded models.
 
-Await dot's delivery of the complete second-session report from the
-[solution-withheld packet](pass-f-session-2-tasks.md). Then resolve verified
-findings, finalize all35 current statuses with exact evidence/limits, record the
-six **actual** navigation walks and comparison, and perform final fixed-revision
-checks. Do not mechanically upgrade all historical partial rows or invent an
-aggregate completeness score.
+## Final verification and limits
 
-Session1's checkpoint checks PASS: skill checker8 operations/64 normative records/
-104 runtime documents; all48 unchanged unit regressions; independent Pandoc GFM
-119 Markdown files/2504 local links/161 tables, no warnings or missing/escaping
-targets/anchors. All127 other preexisting architecture and138 outside files are
-byte-identical to accepted E, including every method, operation, calculator,
-test, normative/source record and asset. The original35 historical rows are
-exactly preserved; the new worklist has35 distinct matching IDs. Only maintenance
-evidence and raw tasks change. The separate one-off checker and seven pinned
-brief-identity checks also PASS. The Issue checkpoint identifies the actual
-commit and command results; these checks do not replace the outstanding tasks.
-Pass F and the overall Issue remain open; no self-acceptance, PR or merge.
+Session1 integrated the other session's complete report, checked its interval/
+area/height arithmetic, inequalities, cited file identities and consistency with
+the task packet. No new runtime defect or mandatory method correction emerged.
+The required next action is final fixed-revision review and dot's explicit
+acceptance decision, not another self-acceptance or a new session.
+
+The checkpoint at739a407 already passed48 regressions, checker8 operations/
+64 normative records/104 runtime documents and GFM119 files/2504 local links/
+161 tables. Final handoff records fresh counts and actual commands at the final
+revision; historical numbers above retain their checkpoint identity. All runtime
+methods/calculators/tests/normative/source/asset content remains unchanged from E.
+Only maintenance evaluation/status/results change; no model, new dependency,
+source media or generated graph is installed.
+
+Final integration checks PASS: all48 unit regressions and the targeted19
+calculator-contract tests; checker8 operations/64 normative records/104 runtime
+documents; independent Pandoc GFM119 Markdown files/2507 local links/164 tables,
+no warnings or invalid resources/anchors. All127 other preexisting architecture
+and138 outside files are byte-identical to E, including protected runtime,
+normative/source and asset resources. The original historical35 rows and frozen
+Session2 raw-task packet are unchanged; the new current matrix has35 unique IDs,
+34 scoped S/1 P(K5). The final Issue handoff pins these results to its commit.
+
+Limits carried forward: familiar two-session cross-author checks, shared D and
+mixed-author navigation; remote raw evidence not re-executed in this executor;
+graphic-only brief pages and house-site version conflict; actual site/program/
+rights/product and operation; real ephemeris/complex geometry/whole-surface light;
+photometry/collection behaviour; MEP/structure/fire/access/measurement approval.
+K5's broader cycle/street-profile procedure remains partial. These are explicit
+limits, not silently completed designs or a reason to guess current code values.
+Pass F is pending review/acceptance; the Issue stays open. No PR, merge or closure.
