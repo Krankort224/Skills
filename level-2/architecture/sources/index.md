@@ -2,6 +2,16 @@
 
 Use these records for provenance, source coverage, permissions or a specific maintenance question. Architectural reasoning lives in the local methods and authored cases; the source ledger is not their mandatory runtime prerequisite. A citation does not override the skill, project facts or actual applicable requirements.
 
+## Contents
+
+- [Source homes](#source-homes)
+- [Locality and necessary external evidence](#locality-and-necessary-external-evidence)
+- [Source families and resource identities](#source-families-and-resource-identities)
+- [NOAA solar equations](#noaa-solar-equations)
+- [Original local synthesis](#original-local-synthesis)
+- [Recovered local methods](#recovered-local-methods)
+- [Russian normative evidence](#russian-normative-evidence)
+
 ## Source homes
 
 | Evidence question | Canonical owner | Local-use consequence |
@@ -16,6 +26,7 @@ Use these records for provenance, source coverage, permissions or a specific mai
 | Selected vehicle, school-parcel and network-capacity mechanisms | [Applied site methods](applied-site-methods.md) | Dated primary design/technical guidance, inspected extents and exclusions; original local geometry/allocation, not universal dimensions or law |
 | Ray/solid occlusion and geometric direct-sun intervals | [Solar occlusion](solar-occlusion.md) and [NOAA](#noaa-solar-equations) | Selected primary mechanism/time evidence and original event/interval construction, not an annual engine or normative-insolation approval |
 | Housing fronts/core interfaces and natural-exhaust paths | [Housing and exhaust](housing-and-exhaust.md) | Selected primary design/technical reading and original geometry/topology; draft/territorial status, rights and exclusions remain explicit |
+| Area/massing feedback, quarter comparison and outdoor-program examples recovered from local drafts | [Recovered local methods](#recovered-local-methods) | Authored arithmetic and conditional examples adapted to current owners; no additional book/media reading or project facts imported |
 
 ## Locality and necessary external evidence
 
@@ -65,6 +76,29 @@ interval, containment and dimensional-chain reasoning and hypothetical failures.
 Their input values are study assumptions or explicitly supplied project/supplier
 bounds, not new material defaults, code limits or source-derived benchmarks.
 No additional book, media, upstream body reading or product capability is claimed.
+
+## Recovered local methods
+
+The following uncommitted UTF-8 drafts were preserved in the owner's local
+Skills checkout based on `2752467bd7c4171cd8b9beed9fc9228307f9091b` and compared
+with published `b6f0803b6e2494418e0e52ee92bfc441289ca306` before this transfer.
+The SHA-256 values identify the input bytes, not published Git blobs or a claim
+that their earlier source-review records were independently verified.
+
+| Local draft name and SHA-256 | Retained knowledge and current owner |
+| --- | --- |
+| `area-to-massing.md`; `963b0b589a5faa70f8dca81bc30f891a21a73eb4da28efb9fbdd060a5d6dab79` | [Area-to-massing identities](../references/program/area-to-massing.md), explicit area denominators and mixed-height allocation |
+| `housing-section-assembly.md`; `d11bcdc6d36f8c672654f6de2886015b2b916c313250a0b60683458769a24b12` | [Housing-yield recount](../assets/studies/housing-yield-recount.md); clarified balcony boundary and projecting-end identity. Existing section geometry remains authoritative. |
+| `quarter-composition.md`; `98d9e1375c187245ed477d49983747bf1ad5a933e3fc529de08cdb9cbf27f490` | [Equal-area quarter alternatives](../assets/studies/quarter-massing-comparison.md); both public and intermediate-ground consequences of the shift are counted |
+| `site-capacity-and-layout.md`; `08f7d78350ddd3ff2d1b7077345b2d2b21f363ca59736febc353d69ca7398a42` | [Facility program to footprint](../references/context/urban/service-capacity-allocation.md#derive-a-floor-and-site-reservation-for-education) and [game/play envelopes](../references/context/urban/quarter-and-public-space.md#fit-outdoor-play-and-sport), using explicit hypothetical demand and spatial inputs |
+
+Only the additional mechanisms and worked reasoning are retained. General
+quarter, section, parking and ground-ledger procedures use their existing
+owners. The examples are not approved coursework, statutory numbers or
+evidence of complete project performance. No unavailable Architecture audit note
+is a runtime dependency. The drafts' additional book/page inspection claims are
+not promoted into the [library record](library.md): this transfer checks local
+reasoning and arithmetic, with no new original-book or media inspection.
 
 ## Russian normative evidence
 

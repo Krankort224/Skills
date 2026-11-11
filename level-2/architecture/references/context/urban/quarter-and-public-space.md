@@ -23,6 +23,7 @@ ratio, density, catchment, route dimension or technical approval.
 - [Organize several plots around an open-space hierarchy](#organize-several-plots-around-an-open-space-hierarchy)
 - [Give mixed activities usable addresses](#give-mixed-activities-usable-addresses)
 - [Reconcile ground use without double counting](#reconcile-ground-use-without-double-counting)
+- [Fit outdoor play and sport](#fit-outdoor-play-and-sport)
 - [Keep public, private and service journeys continuous](#keep-public-private-and-service-journeys-continuous)
 - [Make each phase an operable place](#make-each-phase-an-operable-place)
 - [Test the whole site in season and section](#test-the-whole-site-in-season-and-section)
@@ -196,6 +197,43 @@ factor. Mixed heights require actual per-building floor assumptions and a
 separate floor ledger. Territorial percentages, service provision and density
 require their own project/jurisdiction basis, not imported coursework indicators.
 
+## Fit outdoor play and sport
+
+Identify the game or activity, age groups, intended level of play and busiest
+operating period. Draw the playing rectangle or equipment, orientation and
+markings to scale. Show run-off or equipment movement and fall zones on the
+same plan. Record the basis for each dimension and whether a supplied size
+already includes clearance. Select the applicable activity and equipment
+requirements for the actual proposal. Keep dimensions assumed for a study
+visible.
+
+Draw gates, approaches, waiting and adult supervision or assistance. Check
+both clear dimensions of each activity and the journey from the actual entrance.
+Give access and waiting their own space outside active and required clear
+zones, and locate vehicle crossings. Check supervision from the adult's actual
+position. Lay out incompatible simultaneous uses in separate space. Reuse a
+piece of ground across periods only when the operator, staffing, access and
+changeover support the schedule. Carry each ground piece into the ledger once.
+
+**Illustrative field and yard.** A 40 × 20 m playing rectangle has a 44.72 m
+diagonal and cannot fit in a 30 × 30 m square with a 42.43 m diagonal. An
+alternative 44 × 24 m rectangle provides 1,056 m², comprising 800 m² for
+play and 256 m² of trial run-off with a 2 m strip along each edge. The gate,
+waiting and approach need space clear of the run-off. Verify orientation,
+glare, boundary and applicable clearance before relying on this arrangement.
+
+For the [120-place center](service-capacity-allocation.md#derive-a-floor-and-site-reservation-for-education),
+test a schedule with one of four 30-child groups outside at a time. Split the
+outdoor group into two 15-child subgroups and assign adults to supervise each.
+The other 90 children remain in their three indoor group settings with separate
+staff. Stagger transitions to maintain that peak. In the 30 × 20 m yard, two
+trial 12 × 12 m envelopes fit at opposite ends of the 30 m side, leaving a
+6 m band between them and an 8 m band behind for access and support. Check actual
+equipment, fall zones, adult sightlines and gates within these reservations.
+If two groups must be outdoors at once, the same assumption calls for four
+envelopes. The two-envelope plan then needs a changed layout or a confirmed
+different schedule.
+
 ## Keep public, private and service journeys continuous
 
 **Decision and inputs.** Resolve connections across buildings, plots, common
@@ -333,7 +371,9 @@ from an attractive site image or another project's climate.
    replacement access. Temporary screening may be needed if privacy depends on
    growth; required access/security boundaries cannot depend on assumed foliage.
    A planted bank or pond has its own access and maintenance interface, not just
-   a decorative color in the ground balance.
+   a decorative color in the ground balance. Plot mature crowns and the
+   required root/soil reservations separately. Test encroachment on clear paths
+   and views above ground and on services or the basement/roof edge below.
 6. Change geometry or operation where a scenario fails: relocate a pause off an
    exposed path, move a seasonal attraction beside an enduring route, alter
    entrance levels, keep a maintenance strip, split a platform or revise the
@@ -377,11 +417,16 @@ project geometry, benchmark, plant prescription, soil table, foreign norm,
 service radius or road/engineering dimension is reproduced. Books and coursework
 have no established redistribution permission; keep source scans outside the
 skill and retain the [third-party notices](../../../THIRD_PARTY_NOTICES.md). These
-methods require no source files at runtime.
+methods require no source files at runtime. The field and play-yard studies
+use original hypothetical dimensions and schedules. See
+[recovered local methods](../../../sources/index.md#recovered-local-methods).
 
 ## Related bounded site methods
 
 - Verified by — [Vehicle routes and parking](vehicle-and-parking-geometry.md): when the ground balance or journey assumes parking, delivery or collection, construct actual modules, body sweeps and standing/handler states. This supplies bounded geometric evidence, not fire/traffic/technical approval.
 - Verified by — [Territorial service allocation](service-capacity-allocation.md): when residents rely on finite school, preschool or public-service provision, test group eligibility/capacity reservations and usable parcels; a connected path or total seats alone cannot verify service.
 - Verified by — [Multi-building shadows/direct sun](../../performance/comfort/multi-building-sun.md): when court or window use relies on solar access, combine actual obstruction intervals at each selected receiver and report transition uncertainty; a ground shadow or total hours cannot substitute for its height, continuous spans or applicable test rules.
+- Verified by — [Facility floor and site reservation](service-capacity-allocation.md#derive-a-floor-and-site-reservation-for-education): when yard demand comes from an education program, relate the outdoor schedule and access to the actual indoor groups, staffing and footprint.
+- Affects — [Housing area to massing](../../program/area-to-massing.md): when ground reservations change the housing footprint or floor target, recount floor area and section yield on the same housing basis.
+- Illustrated by — [Quarter massing comparison](../../../assets/studies/quarter-massing-comparison.md): compare housing footprint, court and access consequences across alternatives on one boundary.
 - Affects — [Program demand](../../program/demand.md): when facility/route land displaces housing or a stage fails, reopen the actual population, cohort and operating assumptions before keeping the former land balance.

@@ -13,6 +13,7 @@ not evidence that each group is served.
 - [Build actual route eligibility](#build-actual-route-eligibility)
 - [Allocate without double credit](#allocate-without-double-credit)
 - [Fit the facility parcel and recount the quarter](#fit-the-facility-parcel-and-recount-the-quarter)
+- [Derive a floor and site reservation for education](#derive-a-floor-and-site-reservation-for-education)
 - [Worked seat surplus with an unserved group](#worked-seat-surplus-with-an-unserved-group)
 - [Changed access, parcel or population](#changed-access-parcel-or-population)
 - [Source boundary and related decisions](#source-boundary-and-related-decisions)
@@ -123,6 +124,9 @@ service/fire interfaces and retained land. Record which input owns each size
 or capacity claim. Gross parcel area minus footprint is not automatically usable
 play area; slopes, easements, fragments, safety separation and incompatible
 simultaneous use can remove it. Check shapes and clear dimensions, not just sums.
+If the brief supplies places or population only, [derive the floor and site
+reservation](#derive-a-floor-and-site-reservation-for-education) before crediting
+a footprint.
 
 Reuse [vehicle geometry](vehicle-and-parking-geometry.md) for actual parking,
 delivery/turning and operating zones. A school's loading bay cannot also supply
@@ -138,6 +142,34 @@ facility may displace housing or a court; a path can consume planted ground;
 retaining the old population can then require another site. Conversely a lower
 population changes service and parking demand and the actual housing program,
 not just an indicator printed in a table. Test each occupied phase independently.
+
+## Derive a floor and site reservation for education
+
+Translate the offered places into groups present at the same time and the rooms
+and staff that serve them. In addition to classrooms or group rooms, identify
+shared activity and specialist spaces and the staff, storage, dining, rest,
+sanitary or service provision the actual brief calls for. Use the
+[activity program](../../program/demand.md) and [learning clusters](../../typologies/learning.md)
+for those relationships, and [shared-use timelines](../../program/shared-use.md)
+to check whether the same rooms, equipment and staff can serve the proposed
+schedule.
+
+Use the [area ledger](../../program/area-ledger.md) to assign spaces, support,
+circulation, cores and walls to actual levels on a stated boundary. Establish
+the footprint from the arrangement of those levels. Check usable room depth
+and frontage, core fit and links to arrival, service and outdoor use. Reserve
+the outdoor activity and its support separately in the ground ledger and test
+them through [outdoor play and sport](quarter-and-public-space.md#fit-outdoor-play-and-sport).
+
+**Illustrative allocation.** A hypothetical center offers 120 places in four
+groups of 30. Four 60 m² group rooms, 80 m² of shared activity and staff/service
+support, and 100 m² of shared circulation, cores and walls total 420 m² on the
+study's enclosed floor-area basis. Assign two rooms, 40 m² of support and
+50 m² of circulation, cores and walls to each level. Two stacked 21 × 10 m
+plates give 210 m² per level and a single 210 m² footprint. A separate 30 × 20 m
+yard reserves 600 m² of ground. These inputs illustrate a provisional
+allocation. Confirm the support inventory, rooms and entrances, and fit the
+actual teaching and outdoor schedules before relying on this capacity.
 
 ## Worked seat surplus with an unserved group
 
@@ -235,10 +267,13 @@ cut/reassignment procedure, parcel construction and examples are original
 synthesis. The split-seat flow here is explicitly different from Esri's documented
 whole-demand-point capacitated option. No GIS execution, dataset or admissions
 policy is inferred. No source formula, school-area standard or catchment number
-is imported; normative selection remains separate.
+is imported; normative selection remains separate. The educational floor and
+site example uses original study inputs. Its local provenance is recorded under
+[recovered local methods](../../../sources/index.md#recovered-local-methods).
 
 - Requires — [Demand](../../program/demand.md): when demographic/type/period inputs are unresolved, retain scenarios rather than inventing a service rate.
 - Verified by — [Actual quarter journeys](quarter-and-public-space.md#keep-public-private-and-service-journeys-continuous): check every relied-on entrance, closure, crossing, level and right, separately from reserved places.
+- Verified by — [Outdoor play and sport](quarter-and-public-space.md#fit-outdoor-play-and-sport): when a facility relies on play or sport provision, fit each operating zone and actual access under the stated timetable.
 - Verified by — [Vehicle/parking geometry](vehicle-and-parking-geometry.md): when a facility parcel includes delivery, collection or parking, test actual motion and standing/handler space.
 - Affects — [Quarter ground](quarter-and-public-space.md#reconcile-ground-use-without-double-counting): changes to facilities or routes displace named physical reservations once and may reopen the housing/population balance.
 - Requires — [Shared-use timeline](../../program/shared-use.md): when capacity depends on shared rooms, staff or outdoor operation, test concurrency and changeover before claiming availability.

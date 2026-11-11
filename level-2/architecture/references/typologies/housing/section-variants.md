@@ -289,6 +289,8 @@ All plans, coordinates, diagnostic fans, dimensions and failures here are origin
 hypothetical synthesis, not source drawings or generally applicable requirements.
 
 - Requires — [Housing/access family](access-and-court.md): when household/aspect/core commitments are unresolved, establish them before choosing the variant.
+- Affects — [Area/massing feedback](../../program/area-to-massing.md#replace-assumptions-with-section-evidence): replace preliminary yield with actual occurrences of section and floor variants, keeping residential and nonresidential denominators separate.
+- Illustrated by — [Housing-yield recount](../../../assets/studies/housing-yield-recount.md): exceptional ground/top floors change the achieved apartment area and count even with an unchanged footprint.
 - Verified by — [Dwelling fit](dwelling-fit.md): after wall/opening changes, test actual furnishing, actions, doors and deductions rather than gross area alone.
 - Verified by — [Core across levels](../../construction/structure/frame-and-core.md#carry-core-routes-and-support-through-every-level): changed entrances, stair/lift/roof routes require actual reservations and independent ground continuity.
 - Affects — [Natural exhaust topology](../../performance/comfort/natural-exhaust-topology.md): moved wet rooms/channels reopen supply, transfer, separation, stack and roof paths.

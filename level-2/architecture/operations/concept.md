@@ -6,6 +6,10 @@ Use the available brief, site/context, accepted decisions, requested result and 
 
 ## Select the concept scope
 
+- For an early housing-group or quarter capacity study, use [area to massing](../references/program/area-to-massing.md)
+  to allocate the target using declared depth/yield hypotheses. Develop section
+  plans when needed to test those hypotheses; a preliminary allocation need not
+  wait for every apartment plan, and does not establish their later fit.
 - For a local spatial relationship, compare only that occupied field, boundary,
   access/closure and immediate interface. Use the selected spatial/room methods;
   do not design a whole building, site or drawing set to answer the fragment.

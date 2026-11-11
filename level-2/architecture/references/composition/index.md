@@ -19,6 +19,7 @@ Open a known method or section directly. Otherwise choose one question below and
 
 ## Worked progressions
 
+- [quarter massing comparison](../../assets/studies/quarter-massing-comparison.md): equal-area L groups and paired bars, with corrected ground and height-change consequences.
 - [corner community building](../../assets/studies/corner-community-building.md): complete hypothetical failure/revision study; retained unknowns are part of the result.
 - [sloping library](../../assets/studies/sloping-library.md): complete hypothetical failure/revision study; retained unknowns are part of the result.
 - [reading pavilions](../../assets/studies/reading-pavilions.md): complete hypothetical failure/revision study; retained unknowns are part of the result.

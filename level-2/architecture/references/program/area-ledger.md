@@ -109,6 +109,7 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
+- Affects — [Area to massing](area-to-massing.md): when a housing-area target must be allocated to building lengths and storeys, retain the same gross/net definitions and replace assumed yield with section/floor counts.
 - Affects — [Building volume](building-volume.md): when m³ are requested or a roof/base/void boundary changes, select the actual volume metric and reconcile disjoint solids separately from floor areas.
 - Verified by — [Planning and section](../space/planning/room-floor-and-section.md#construct-a-room-that-can-be-used): check wall, door and finished-room geometry rather than treating a subtotal as a fitted plan.
 - Affects — [Capacity and room demand](capacity-and-room-demand.md): recheck actual capacity when the measured boundary changes.

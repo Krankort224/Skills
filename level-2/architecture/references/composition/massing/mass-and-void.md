@@ -85,7 +85,9 @@ The operative reasoning is local; external reading is not a runtime prerequisite
 
 ## Related decisions
 
+- Requires — [Area to massing](../../program/area-to-massing.md): when the comparison starts from a housing-area target, allocate it to lengths and contributing floors without silently changing the program.
 - Requires — [Area boundary and ledger](../../program/area-ledger.md): compare the same amount and boundary of program.
 - Affects — [Daylight, view and occupied comfort](../../performance/comfort/daylight-view.md): courts, depth, steps and neighboring masses change sky/view paths.
 - Affects — [Acoustic paths and air modes](../../performance/comfort/acoustics-and-air.md): openings and external voids can connect sound and air paths.
 - Illustrated by — [Corner community building](../../../assets/studies/corner-community-building.md): compare the L and compact alternatives without losing gallery/access consequences.
+- Illustrated by — [Quarter massing comparison](../../../assets/studies/quarter-massing-comparison.md): equal floor area and footprint yield different court shapes; a shift or storey exchange reopens ground and section decisions.

@@ -23,6 +23,10 @@ existing fabric, distinguish [observed evidence and conditional commitments](../
 These are bounded spatial/evidence checks, not environmental simulation or a
 condition/capacity diagnosis.
 
+For housing-area allocation, select [area to massing](../references/program/area-to-massing.md)
+and its section/floor feedback. The area-ratio calculator accepts totals; it does
+not derive this population, gross allowance or distribution among buildings.
+
 ## Result
 
 Report question, method, inputs/units/assumptions, execution status, usable results, interpretation and limitations. If execution is unavailable, provide a prepared bounded check and exact missing capability/data.
