@@ -76,7 +76,7 @@ Publication is atomic at the Git commit/ref boundary, not a live-directory repla
 
 The recipe takes an authorized explicit remote URL, an EXISTING full branch ref, a clean task-owned clone at an expected source commit, and a fresh external stage. It updates only the remote ref, not the source clone's branch/index/worktree. A local destination must be bare; remote policy must prevent updating a nonlocal checked-out working tree. Remote aliases are unsupported.
 
-Native `_rebuild_lock(out_dir: Path, *, blocking: bool=False)` is advisory among cooperating callers sharing the same clone/common-directory and ref convention; it does not automatically coordinate watch/update or independent clones. An explicit Git lease arbitrates competing ref writers. The recipe requires actual native locks and refuses lock diagnostics; Windows qualification covers a local filesystem with byte-range locks, not network/WSL shares.
+Native `_rebuild_lock(out_dir: Path, *, blocking: bool=False)` is advisory among cooperating callers sharing the same clone/common-directory and ref convention; it does not automatically coordinate watch/update or independent clones. An explicit Git lease arbitrates competing ref writers. The recipe requires actual native locks and refuses lock diagnostics. On Windows use a local filesystem with byte-range locking.
 
 `validate_trio(stage, root=root, require_current=True)` returns `blobs`, `digests`, `graph`, `input_identity`, `generation_identity`, `profile` and `snapshot` with `sources`, `configuration`, `exclusions` and `authority_sources`. The publisher consumes precisely those buffers, checks every selected source/config file is tracked and agrees with the expected commit, and revalidates before push. A validation error, source change or failed lease refuses publication. Unknown push outcome requires remote inspection before retry.
 
@@ -99,13 +99,13 @@ from urllib.request import url2pathname
 from graphify.watch import _rebuild_lock
 
 assert __debug__
-qualification = os.environ.get("CONTEXT_QUALIFY_HOST", "")
-if qualification:
-    assert qualification == "windows-cpython-3.13" and sys.platform == "win32" and sys.implementation.name == "cpython" and sys.version_info[:2] == (3, 13), "Qualification requires actual Windows CPython 3.13"
-    assert sys.flags.utf8_mode, "Windows qualification requires PYTHONUTF8=1"
+assert sys.implementation.name == "cpython", "Expected CPython"
+runtime = (sys.platform, sys.version_info[:2])
+assert runtime in {("linux", (3, 12)), ("win32", (3, 13))}, "Expected Linux CPython 3.12 or Windows CPython 3.13"
+if sys.platform == "win32":
+    assert sys.flags.utf8_mode, "Windows requires UTF-8 mode before interpreter startup"
     import msvcrt  # Fail closed if the actual host has no native locking API.
 else:
-    assert sys.platform == "linux" and sys.implementation.name == "cpython" and sys.version_info[:2] == (3, 12), "Publication requires the verified Linux lane or explicit Windows qualification"
     import fcntl
 assert not any(os.environ.get(k) for k in ("GIT_DIR", "GIT_WORK_TREE", "GIT_INDEX_FILE", "GIT_COMMON_DIR", "GIT_OBJECT_DIRECTORY", "GIT_ALTERNATE_OBJECT_DIRECTORIES", "GIT_REPLACE_REF_BASE"))
 os.environ["GIT_NO_REPLACE_OBJECTS"] = "1"

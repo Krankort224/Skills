@@ -1,10 +1,10 @@
 # Build graph evidence
 
-Use when the task explicitly requests initial structural or semantic graph construction. This operation prepares fresh staged evidence in the verified profile; publication follows the project's existing authorized workflow. A missing graph does not require construction for ordinary project understanding.
+Use when the task explicitly requests initial structural or semantic graph construction. This operation prepares fresh staged evidence from the selected sources. Publication follows the project's existing authorized workflow. A missing graph does not require construction for ordinary project understanding.
 
 ## Select and prepare the corpus
 
-Resolve the canonical source root, branch/worktree, scope, authoritative sources and task-owned staging destination. Select formats explicitly. The supported profile is UTF-8 Python/Markdown on Linux CPython 3.12; other formats and actual Windows/Work hosts retain the qualification boundaries in the [technical profile](../../tools/graphify.md).
+Resolve the canonical source root, branch/worktree, scope, authoritative sources and task-owned staging destination. Select formats explicitly within the [runtime and format scope](../../tools/graphify.md#source-and-supported-profile).
 
 Choose explicit exclusions for generated references/graphs, native memory output, staging/cache, secrets and unselected third-party/submodule inputs. Adapt actual paths to the project. Account for unsupported, sensitive, unreadable, ignored and pruned material without claiming an exhaustive descendant inventory for excluded trees. Do not initialize submodules, convert unselected inputs or follow symlinks implicitly.
 

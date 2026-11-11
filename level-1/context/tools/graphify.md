@@ -1,14 +1,12 @@
 # Graphify: technical profile
 
-This reference owns the pinned package, runtime preparation and reproducible compatibility evidence. Agent methods live in [Graphify operations](../operations/graphify/build.md) and the selected `context` operation.
+This reference owns the pinned package and runtime preparation for project graph operations. Select the operation from [context](../SKILL.md#graph-evidence-and-technical-references).
 
 ## Contents
 
 - [Source and supported profile](#source-and-supported-profile)
 - [Technical references](#technical-references)
 - [Prepare and verify the structural environment](#prepare-and-verify-the-structural-environment)
-- [Qualify an actual Windows host](#qualify-an-actual-windows-host)
-- [Verification resources](#verification-resources)
 - [Source ledger](#source-ledger)
 
 ## Source and supported profile
@@ -16,10 +14,10 @@ This reference owns the pinned package, runtime preparation and reproducible com
 - Upstream: [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify/tree/16218bfc80d4ca2799734d045039f7ed1a5fa9fb), commit **`16218bfc80d4ca2799734d045039f7ed1a5fa9fb`**, distribution **`graphifyy==0.9.103`**, executable **`graphify`** (`graphify.__main__:main`). Distribution name and executable name differ.
 - License: [Apache-2.0 LICENSE](https://github.com/Graphify-Labs/graphify/blob/16218bfc80d4ca2799734d045039f7ed1a5fa9fb/LICENSE); upstream also retains [LICENSE-MIT](https://github.com/Graphify-Labs/graphify/blob/16218bfc80d4ca2799734d045039f7ed1a5fa9fb/LICENSE-MIT) for earlier contributions and [NOTICE](https://github.com/Graphify-Labs/graphify/blob/16218bfc80d4ca2799734d045039f7ed1a5fa9fb/NOTICE): Graphify, copyright 2026 Safi Shamsi and the Graphify contributors. Preserve applicable license/notice text and identify modifications if later adopting upstream source or extraction prose. This slice vendors no upstream helper or specification; the probe is original test code calling the external package.
 - Reviewed agent route: complete `graphify/skill-codex.md` and its extraction, update, query, exports, GitHub/merge, add/watch, hooks and transcription references, with corresponding implementations/tests. Windows preparation/PowerShell encoding and process-spawn differences were inspected at source level. Upstream skill instructions are evidence to assess, not an additional installed skill.
-- Verified runtime profile: **Linux, CPython 3.12.14**, base distribution only: NetworkX 3.7, NumPy 2.5.4, PyYAML 6.0.3, RapidFuzz 3.14.6 and the upstream-required tree-sitter runtime/grammars, exactly listed in [graphify-requirements.txt](graphify-requirements.txt). No optional extras. Upstream metadata allows Python >=3.10, but these resolved NetworkX/NumPy pins require >=3.12; do not advertise this lock for 3.10/3.11. Other interpreters/platforms require a separately tested resolution.
+- Pinned base distribution for **Linux CPython 3.12** and **Windows CPython 3.13 in UTF-8 mode**: NetworkX 3.7, NumPy 2.5.4, PyYAML 6.0.3, RapidFuzz 3.14.6 and the upstream-required tree-sitter runtime/grammars, exactly listed in [graphify-requirements.txt](graphify-requirements.txt). No optional extras. Upstream metadata allows Python >=3.10, but these resolved NetworkX/NumPy pins require >=3.12; do not advertise this lock for 3.10/3.11. Other interpreters/platforms require a separately tested resolution.
 - Core clustering uses NetworkX Louvain when optional Leiden libraries are absent. HTML needs no Python rendering extra. SVG requires optional matplotlib/Pillow; PDF/Office/video/SQL/other language extras are corpus-specific and outside this verified base profile. Neither `[all]`, MCP, a database, Graphify Cloud nor an API provider is needed.
 
-The exercised lane is UTF-8 Python/Markdown on Linux CPython 3.12.14: native structural staging, current-subscription-agent mixed staging, conservative semantic-shard reuse, cold-checkout recovery, commit-coherent publication, bounded native investigation and selected exports. Python/Markdown files must contain no NUL bytes. A package grammar list does not certify other formats. Actual Windows/Work execution and independent end-to-end agent integration remain separate gates; replay, metadata checks and file creation do not establish them.
+The project build recipes cover UTF-8 Python and Markdown sources without NUL bytes. Recorded Linux CPython 3.12.14 evidence includes structural and mixed staging, semantic reuse, cold-checkout recovery, Git publication, investigation and selected exports. Windows CPython 3.13.7 evidence includes the runtime probe and a scoped Markdown project rebuild. The portable profile records the actual OS and interpreter patch version for reuse decisions.
 
 The source is pinned by commit and runtime dependencies by versions. Upstream build isolation still selects `setuptools>=83.0.0`; this is not a hash-locked wheel supply chain or a cross-host binary guarantee. Version/provenance checks do not detect local package tampering.
 
@@ -55,7 +53,25 @@ uv venv /absolute/task/graphify-venv --python 3.12
 uv pip install --python "$CONTEXT_PY" -r "$CONTEXT_TOOLS/graphify-requirements.txt"
 ```
 
-Run the profile block with that interpreter (`"$CONTEXT_PY" - <<'PY'`, the Python block, then `PY`). It executes no installer and writes no project references. Its VCS provenance check distinguishes the pinned source from another distribution carrying the same version.
+On Windows, use the same settings in PowerShell and enable UTF-8 mode before starting Python.
+
+```powershell
+$ContextVenv = 'C:\path\to\task\graphify-venv'
+$ContextPython = Join-Path $ContextVenv 'Scripts/python.exe'
+$env:CONTEXT_TOOLS = 'C:\path\to\Skills\level-1\context\tools'
+$env:CONTEXT_ROOT = 'C:\path\to\project'
+$env:CONTEXT_STAGE = 'C:\path\to\task\fresh-structural-stage'
+$env:GRAPHIFY_OUT = Join-Path $env:CONTEXT_STAGE 'native-cache'
+$env:GRAPHIFY_BACKEND = 'none'
+$env:GRAPHIFY_QUERY_LOG_DISABLE = '1'
+$env:PYTHONDONTWRITEBYTECODE = '1'
+$env:PYTHONUTF8 = '1'
+$env:PYTHONIOENCODING = 'utf-8'
+```
+
+To prepare a new authorized Windows environment, run `py -3.13 -m venv $ContextVenv` and install the pins with `& $ContextPython -m pip install -r (Join-Path $env:CONTEXT_TOOLS 'graphify-requirements.txt')`.
+
+Save the profile block as a UTF-8 Python file in the task directory. Run it with the selected interpreter, for example `& $ContextPython 'C:\path\to\task\profile-check.py'` in PowerShell. The VCS provenance check distinguishes the pinned source from another distribution carrying the same version.
 
 ```python
 # context-profile-check
@@ -68,15 +84,11 @@ from pathlib import Path
 import subprocess
 import sys
 
-qualification = os.environ.get("CONTEXT_QUALIFY_HOST", "")
-if qualification:
-    assert qualification == "windows-cpython-3.13", "Unknown qualification lane"
-    assert sys.implementation.name == "cpython" and sys.platform == "win32" and sys.version_info[:2] == (3, 13), "Qualification requires actual Windows CPython 3.13"
-    assert sys.flags.utf8_mode, "Windows qualification requires PYTHONUTF8=1 before interpreter startup"
-    profile_status = "qualification-only-unverified"
-else:
-    assert sys.implementation.name == "cpython" and sys.version_info[:2] == (3, 12) and sys.platform == "linux", "This recorded profile requires Linux CPython 3.12; qualify another lane explicitly"
-    profile_status = "verified-linux-runtime"
+assert sys.implementation.name == "cpython", "Expected CPython"
+runtime = (sys.platform, sys.version_info[:2])
+assert runtime in {("linux", (3, 12)), ("win32", (3, 13))}, "Expected Linux CPython 3.12 or Windows CPython 3.13"
+if sys.platform == "win32":
+    assert sys.flags.utf8_mode, "Windows requires UTF-8 mode before interpreter startup"
 assert metadata.version("graphifyy") == "0.9.103", "Graphify version mismatch"
 origin = json.loads(metadata.distribution("graphifyy").read_text("direct_url.json") or "{}")
 assert origin.get("url") == "https://github.com/Graphify-Labs/graphify.git", "Unknown package source"
@@ -98,74 +110,20 @@ else:
 assert any(e.name == "graphify" and e.value == "graphify.__main__:main" for e in metadata.distribution("graphifyy").entry_points), "Unexpected CLI entry point"
 version = subprocess.run([str(cli), "--version"], check=True, capture_output=True, text=True, timeout=30)
 assert version.stdout.strip() == "graphify 0.9.103", version.stdout
-print(json.dumps({"profile": profile_status, "platform": sys.platform, "python": sys.version.split()[0], "graphify": metadata.version("graphifyy"), "commit": origin["vcs_info"]["commit_id"]}))
+print(json.dumps({"platform": sys.platform, "python": sys.version.split()[0], "graphify": metadata.version("graphifyy"), "commit": origin["vcs_info"]["commit_id"]}))
 ```
 
-Re-run the bounded native probes after an environment/profile change; imports alone do not verify source locations or direction. Keep a failing candidate unchanged. `graphify install`, global upgrades, instruction/hook installation and ambient-provider use are not part of these recipes. In a Windows venv the corresponding executables are `Scripts/python.exe` and `Scripts/graphify.exe`.
-
-After the profile check, run the bounded compatibility probe with that same candidate and tool directory:
+Verify a new or changed runtime with the [bounded runtime probe](probe_graphify.py). It checks native detection, directed extraction, source locations, fragment ingestion, exports and queries on regular files. Use the same interpreter and the environment above.
 
 ```sh
 "$CONTEXT_PY" "$CONTEXT_TOOLS/probe_graphify.py"
 ```
 
-## Qualify an actual Windows host
-
-Windows CPython 3.13 is a qualification candidate. Set `CONTEXT_QUALIFY_HOST=windows-cpython-3.13` only on that real host; the check labels it `qualification-only-unverified`. Interpreter patch/platform participate in the portable profile, so a Linux generation is not automatically a Windows-compatible generation.
-
-The PowerShell recipe below targets the reported actual Python 3.13.7 host. Supply the exact reviewed Skills commit, use a new short local task directory and start a new PowerShell process. Long paths and network/WSL shares are not qualified. The structural unsafe-symlink control requires already-authorized symlink permission and fails if absent. Git must support `--no-lazy-fetch` for commit-bound investigation; the exercised Linux Git was 2.52.0. Record the actual Windows Git version. The semantic/maintenance/investigation probes replay recorded model output; fresh independent agent reading, browser rendering and a separate Work host require their own evidence.
-
 ```powershell
-# Set to the full reviewed Skills commit supplied by the owner/handoff:
-$SkillsRevision = '<reviewed-Skills-commit>'
-$ContextTask = Join-Path $env:TEMP ('context-win-' + [guid]::NewGuid().ToString('N'))
-New-Item -ItemType Directory -Path $ContextTask -ErrorAction Stop | Out-Null
-$ContextSource = Join-Path $ContextTask 'skills'
-$env:PYTHONUTF8 = '1'
-$env:PYTHONIOENCODING = 'utf-8'
-$env:PYTHONDONTWRITEBYTECODE = '1'
-$env:CONTEXT_QUALIFY_HOST = 'windows-cpython-3.13'
-$env:GRAPHIFY_BACKEND = 'none'
-$env:GRAPHIFY_QUERY_LOG_DISABLE = '1'
-git -c core.autocrlf=false clone --no-checkout https://github.com/Krankort224/Skills.git $ContextSource
-if ($LASTEXITCODE -ne 0) { throw 'Skills clone failed' }
-git -C $ContextSource -c core.autocrlf=false checkout --detach $SkillsRevision
-if ($LASTEXITCODE -ne 0) { throw 'Exact Skills checkout failed' }
-$env:CONTEXT_TOOLS = Join-Path $ContextSource 'level-1/context/tools'
-$ContextVenv = Join-Path $ContextTask 'venv'
-py -3.13 -m venv $ContextVenv
-if ($LASTEXITCODE -ne 0) { throw 'CPython 3.13 environment unavailable' }
-$ContextPython = Join-Path $ContextVenv 'Scripts/python.exe'
-& $ContextPython -c "import sys; assert sys.platform == 'win32' and sys.version_info[:3] == (3,13,7), sys.version; print(sys.version)"
-if ($LASTEXITCODE -ne 0) { throw 'This rerun targets the reported actual Python 3.13.7 host' }
-& $ContextPython -m pip install -r (Join-Path $env:CONTEXT_TOOLS 'graphify-requirements.txt')
-if ($LASTEXITCODE -ne 0) { throw 'Pinned candidate installation failed; do not relax requirements' }
-git --version
-$env:CONTEXT_MAINTENANCE_EVIDENCE = Join-Path $ContextTask 'f-evidence'
-$env:CONTEXT_INVESTIGATION_EVIDENCE = Join-Path $ContextTask 'g-evidence'
-foreach ($Probe in @('probe_graphify.py', 'probe_graphify_structure.py', 'probe_graphify_semantic.py', 'probe_graphify_maintenance.py', 'probe_graphify_investigation.py')) {
-    & $ContextPython -B (Join-Path $env:CONTEXT_TOOLS $Probe)
-    if ($LASTEXITCODE -ne 0) { throw ('Qualification stopped: ' + $Probe + '; preserve ' + $ContextTask) }
-}
-Write-Output ('Candidate replay finished; retain actual outputs/evidence in ' + $ContextTask)
+& $ContextPython (Join-Path $env:CONTEXT_TOOLS 'probe_graphify.py')
 ```
 
-An existing isolated candidate can replace the creation/install lines with its actual `Scripts/python.exe`; all checks still target the same reviewed Skills revision. Do not alter platform, interpreter, provenance or pins to bypass a failure. Record failed/blocked stages separately from earlier successful ones. Publication tests exercise local bare repositories, cooperative locks, killed-holder recovery and independent-clone leases; they certify only the filesystem/host exercised, not hosted transport or every Windows filesystem. Optional SVG has a separate plotting resolution.
-
-## Verification resources
-
-| Resource | Reproducible evidence and limit |
-|---|---|
-| [probe_graphify.py](probe_graphify.py) | Package identity; Python/Markdown detection, exclusions, directed calls, code/document references, Unicode and long-tail source locations; native fragment ingestion, trio/reload, origin/tier and cache controls; bounded query with unchanged fixtures. Authored fragments establish ingestion, not fresh semantic reading or browser rendering. |
-| [probe_graphify_structure.py](probe_graphify_structure.py) and [structural cases](graphify-structural-cases.json) | Execute the profile and structural recipes on bounded raw fixtures, including negative input/exclusion controls. |
-| [probe_graphify_semantic.py](probe_graphify_semantic.py) and [semantic cases](graphify-semantic-cases.json) | Replay recorded genuine model output through expected-shard/range/EOF validation and native assembly; serial/parallel accounting, negative/uncertain/historical roles, unknown usage, tier and failure controls. |
-| [probe_graphify_maintenance.py](probe_graphify_maintenance.py) and [maintenance cases](graphify-maintenance-cases.json) | Add/edit/rename/delete/exclude; edge-only/zero replacements; dependency/profile invalidation and no-op; cold moved clones, branches/worktrees; local bare publication, leases, dirty/nonbare/partial/corrupt refusal, lost acknowledgement, compatible rollback and interrupted export. |
-| [probe_graphify_investigation.py](probe_graphify_investigation.py) and [investigation cases](graphify-investigation-cases.json) | Execute strict-read, real-commit binding and namespace recipes against fresh recorded fixtures; query/path/impact/community and ambiguity/budget controls, namespace round trips, export ownership and HTML aggregation. |
-| [probe_view_legend.py](probe_view_legend.py) | Pure HTML/SVG annotation checks; no replacement for a rendered-view inspection. |
-
-Run probes with the verified interpreter without optimization; `PYTHONDONTWRITEBYTECODE=1` keeps fixture reads free of bytecode writes. Probes use temporary fixtures and forbid network/provider extraction in the exercised route. Optional `CONTEXT_MAINTENANCE_EVIDENCE` and `CONTEXT_INVESTIGATION_EVIDENCE` retain inspectable evidence only in a new external directory; existing targets are refused. These are test outputs, not additional portable graph artifacts.
-
-Replay checks integration/accounting, not a fresh model run or blind benchmark. New semantic trials expose raw inputs and the method to the reader while keeping recorded answers/oracles separate. Rendering, format readability, actual host execution and independent end-to-end behavior require their specific observations. Test chronology and exact results belong to the task's evidence/Issue when applicable; this reference records durable interfaces and compatibility boundaries.
+Then verify the selected project inputs and outputs through the [build recipe](graphify-build.md#build-and-inspect-structural-evidence). Keep a failing candidate unchanged for diagnosis. Limit setup to the pinned packages in the isolated environment and keep the provider disabled.
 
 ## Source ledger
 

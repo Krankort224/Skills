@@ -87,7 +87,7 @@ def main():
         try:
             (root / "escaped.py").symlink_to(outside)
         except OSError as error:
-            raise RuntimeError("The unsafe-symlink control requires host symlink permission; Windows Developer Mode or an authorized privileged test host is needed") from error
+            raise RuntimeError("The structural compatibility probe could not create its out-of-root symlink fixture") from error
         environment = {k: v for k, v in os.environ.items()
                        if not any(word in k.upper() for word in ("API_KEY", "TOKEN", "SECRET", "PASSWORD", "PROVIDER", "AWS_", "GOOGLE_", "GEMINI_", "OPENAI_", "ANTHROPIC_"))}
         environment.update(CONTEXT_ROOT=str(root), CONTEXT_TOOLS=str(TOOLS),
@@ -102,10 +102,10 @@ def main():
         env = stage_environment("first")
         original = snapshot(root)
         profile = run("profile-check", env)
-        # Explicit qualification must never relabel this actual host as another.
-        run("profile-check", dict(env, CONTEXT_QUALIFY_HOST="unknown"), success=False, reason="Unknown qualification lane")
-        if sys.platform != "win32":
-            run("profile-check", dict(env, CONTEXT_QUALIFY_HOST="windows-cpython-3.13"), success=False, reason="Qualification requires actual Windows CPython 3.13")
+        observed = json.loads(profile.stdout)
+        assert (observed["platform"], observed["python"]) == (sys.platform, sys.version.split()[0])
+        if sys.platform == "win32":
+            run("profile-check", dict(env, PYTHONUTF8="0"), success=False, reason="Windows requires UTF-8 mode")
         # The same check is used to reuse a compatible installation, with no installer.
         reused = run("profile-check", env)
         assert profile.stdout == reused.stdout
