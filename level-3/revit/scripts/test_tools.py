@@ -150,8 +150,11 @@ class LibraryTests(unittest.TestCase):
     def test_valid_library_and_catalog(self):
         result = library.validate(self.root)
         self.assertTrue(result['valid'], result['errors'])
+        self.assertEqual('python', result['blocks'][0]['language'])
         catalog = library.catalog(result['blocks'])
         self.assertIn('[sample](core/sample.md)', catalog)
+        self.assertIn('| Block | Language |', catalog)
+        self.assertIn('| python |', catalog)
         self.assertIn('Python 2.7 or 3', catalog)
         (self.root / 'assets/blocks/catalog.md').unlink()
         output = io.StringIO()
@@ -200,6 +203,34 @@ class LibraryTests(unittest.TestCase):
         self.assertTrue(any('exactly one' in e for e in self.errors()))
         self.path.write_text(block().replace('Syntax inspected offline; no runtime claim.', 'TODO verify'))
         self.assertIn('Verification contains an unfinished placeholder', self.errors())
+
+    def test_mixed_languages_and_offline_limit(self):
+        csharp = self.write_block('native', group='mep')
+        csharp.write_text(csharp.read_text().replace('```python\nOUT = IN[0]',
+                                                   '```csharp\npublic class Example { }'))
+        result = library.validate(self.root)
+        self.assertTrue(result['valid'], result['errors'])
+        self.assertEqual({'python', 'csharp'}, {b['language'] for b in result['blocks']})
+        self.assertIn('not compiled', result['limitations'][0])
+        self.assertIn('| csharp |', library.catalog(result['blocks']))
+        csharp.write_text(csharp.read_text().replace('| id | native |',
+                                                   '| id | native |\n| language | csharp |'))
+        self.assertEqual([], self.errors())
+
+    def test_language_rejections(self):
+        original = block()
+        for declared in ('csharp', 'javascript', ''):
+            with self.subTest(declared=declared):
+                self.path.write_text(original.replace('| id | sample |',
+                    '| id | sample |\n| language | {} |'.format(declared)))
+                expected = 'language must match' if declared == 'csharp' else 'language must be one of'
+                self.assertTrue(any(expected in e for e in self.errors()))
+        self.path.write_text(original.replace('```python', '```javascript'))
+        self.assertTrue(any('exactly one nonempty' in e for e in self.errors()))
+        self.path.write_text(original.replace('OUT = IN[0]', ''))
+        self.assertTrue(any('exactly one nonempty' in e for e in self.errors()))
+        self.path.write_text(original.replace('## Adaptation', '~~~csharp\nclass Extra {}\n~~~\n\n## Adaptation'))
+        self.assertTrue(any('exactly one nonempty' in e for e in self.errors()))
 
     def test_links_containment_existence_and_anchors(self):
         target = self.root / 'references/runtime.md'

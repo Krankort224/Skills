@@ -139,11 +139,11 @@ Markdown content interpretation is retained inside the creation operation. Tools
 
 #### revit
 
-[revit](level-3/revit/SKILL.md) creates, adapts and diagnoses Revit/Dynamo scripts, and extracts reusable logical blocks from source examples. The root routes to four adjacent procedures in `operations/`; runtime, Dynamo, transactions, parameters/units, geometry/connectors, annotations/references and error patterns load from `references/` as needed. The rename preserves current coverage; it does not claim newly implemented Revit capabilities.
+[revit](level-3/revit/SKILL.md) inspects and modifies models, creates/adapts/diagnoses automation and extracts reusable logical blocks. Five task-based procedures load only relevant knowledge. [Execution](level-3/revit/references/execution.md) distinguishes language, runtime, host and invocation through MCP, Dynamo or add-ins. [API contracts](level-3/revit/references/api.md) routes exact versioned questions to target documentation/SDK and assemblies. Engineering requirements can come from project sources or complementary domain skills.
 
-Each logical block has one canonical Markdown file containing its contract, Python implementation, limits, verification and pinned provenance. The derived catalog navigates core, MEP and view helpers. Offline tests load those implementation fences directly. The initial library is reviewed with offline checks; native Revit behavior remains a separate verification requirement.
+Each logical block has one canonical Markdown file containing its contract, Python or C# implementation, limits, verification and provenance. The derived catalog navigates core, MEP and view helpers by language and runtime. Python tests load canonical fences. Five C# blocks retain imported native evidence for Revit 2022.1 / rvt-mcp 1.2.1, with source hashes and an accompanying smoke harness. Other hosts and changed implementations require their own verification.
 
-Two standard-library Python 3 tools inspect `.dyn`/ZIP metadata, ports and wires without executing embedded code, and validate block contracts, dependencies, syntax and local links. Script/graph creation and native document writes still require the documented runtime, transaction ownership and readback contract.
+Standard-library Python 3 tools inspect `.dyn`/ZIP metadata, validate block contracts/dependencies/links and Python syntax, and verify or compose C# smoke sources. The library validator does not compile C#. Native runs require the documented host, transaction ownership, fixtures and readback. The skill's methods remain usable beyond the current block inventory.
 
 ## Third-party skills
 
@@ -176,6 +176,8 @@ Issue #9 Pass A migrated the source hierarchy from baseline `c11000bae812d9a87b3
 | `level-2/revit-scripting/` | `level-3/revit/` | `revit-scripting` → `revit` |
 | `level-2/word/` | `level-3/word/` | `style-transfer` unchanged |
 | `level-2/project-space/` | `level-3/project-space/` | `project-space` unchanged |
+
+The 2026-11-12 Revit consolidation starts from shared revision `9ff140d622f93f2a7b23356cbc4ebab878259467` and the local `revit-mcp` skill. Shared Revit owns the merged methods. MCP session guidance moves to `revit/references/mcp-operations.md`; modeling, connection boundaries and promotion rules move to the corresponding operation/subject owners. Five C# block paths remain relative to the skill root and their old `mcp-` IDs become filename-based IDs, recorded in each block's provenance with the original Markdown hash. Implementation hashes and native evidence are preserved. Full project field logs remain local. A local `revit-mcp` entry may route to this shared source at an identified revision; preserve existing inbound links during adoption.
 
 `architecture`, `research` and `restructure` remain Level 2. Level-0 arbitration and the three Level-1 skills retain their paths. Resources, scripts, examples and operation references move with their complete skill subtrees; source reclassification does not change their behavior.
 

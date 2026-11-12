@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "executed_date": "2026-11-12",
+  "profile": {
+    "revit": "2022",
+    "build": "22.1.70.9",
+    "mcp_gateway": "v1.2.1",
+    "execution": "rvt-mcp send_code_to_revit",
+    "fixture": "disposable mechanical template projects and disposable RVT with two preloaded rectangular accessory types"
+  },
+  "operation_id": "4e608042b8a143bcb7a9017562a50b80",
+  "active_document_changed": false,
+  "source_sha256": {
+    "assets/blocks/core/checked-model-edit.md": "c7a4fe4cae4cbbbf8606636c3b23a2e463cd51e4e6d643c633f8a697f98cd645",
+    "assets/blocks/core/physical-hvac.md": "04bd1ddd035fb06641e33396be70ed98ab00a9216eadfb177ff8664b6ea892b9",
+    "assets/blocks/mep/rectangular-elbow-run.md": "71d02f48602411800200ff80e5bcf43b2ae7995ea2c95c6041fd1d6a3f8c076c",
+    "assets/blocks/mep/retarget-rectangular-accessory.md": "fef7514abff6026ae5606ecfa3f4070fdf5f0e83714574fa98ffbda8f99d72aa",
+    "assets/blocks/mep/rectangular-takeoff-to-round-riser.md": "db65d8a6621dce66cca658852025319b535742c41b5a66579b7933b41959d731",
+    "tests/native-smoke.cs": "ff18a5fca2ed1ac818b5593f1c9176a58300f0920d0e10163587a105b86ed13b"
+  },
+  "result": {
+    "duct": {
+      "status": "NATIVE_OK",
+      "revit": "2022",
+      "build": "22.1.70.9",
+      "dry_child": "Committed",
+      "dry_group": "RolledBack",
+      "write_group": "Committed",
+      "dry_section_mm": [
+        400,
+        250
+      ],
+      "write_section_mm": [
+        500,
+        300
+      ],
+      "added": 3,
+      "forced_failure_rolled_back": true,
+      "cancellation_rolled_back": true,
+      "routing": "Закругленные отводы / врезки",
+      "active_unchanged": true
+    },
+    "accessory": {
+      "status": "NATIVE_OK",
+      "revit": "2022",
+      "build": "22.1.70.9",
+      "dry_group": "RolledBack",
+      "write_group": "Committed",
+      "same_instance": true,
+      "type": "800-300",
+      "section_mm": [
+        800,
+        300
+      ],
+      "original_links": 2,
+      "inventory_unchanged": true,
+      "swapped_dimensions_rejected": true,
+      "active_unchanged": true
+    },
+    "takeoff": {
+      "status": "NATIVE_OK",
+      "revit": "2022",
+      "build": "22.1.70.9",
+      "dry_child": "Committed",
+      "dry_group": "RolledBack",
+      "write_group": "Committed",
+      "branch_mm": [
+        250,
+        180
+      ],
+      "riser_mm": 400,
+      "existing_curve_link_preserved": true,
+      "far_end_preserved": true,
+      "connected_port_rejected": true,
+      "forced_failure_rolled_back": true,
+      "added": 1,
+      "fitting": "Врезка прямоугольного сечения",
+      "expected_type_selected": true,
+      "active_unchanged": true
+    }
+  },
+  "coverage_limits": [
+    "One Revit build and one stock MEP template",
+    "Right-angle rectangular duct runs",
+    "One accessory family and explicit temporary disconnection",
+    "One rectangular takeoff family, one 250 x 180 mm branch and 400 mm round riser; an existing Curve connection was preserved",
+    "The project-specific correction of an off-axis existing takeoff is documented separately"
+  ],
+  "assembled_native_sha256": "778cf6b8de13c6be52e8f7743cde6fab5ac90c1d1832b0bcf6d6c326b345fda4"
+}

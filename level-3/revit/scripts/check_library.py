@@ -2,6 +2,7 @@
 """Validate blocks offline, without running snippets or accessing Revit.
 Runtime evidence may be a contained local file or an explicit HTTPS artifact URL.
 Remote evidence content and authenticity are not fetched or attested.
+C# snippets are not compiled or syntax-checked offline.
 """
 import argparse
 import ast
@@ -17,10 +18,11 @@ HEADINGS = ('Contract', 'Purpose', 'Inputs and outputs', 'Implementation',
 GROUPS = ('core', 'mep', 'views')
 REQUIRED = ['SKILL.md', 'assets/blocks/catalog.md', 'assets/examples/graph-contract.dyn'] + [
     'operations/' + name + '.md' for name in
-    ('creation', 'adaptation', 'diagnostics', 'borrowing')] + [
+    ('creation', 'adaptation', 'diagnostics', 'borrowing', 'modeling')] + [
     'references/' + name + '.md' for name in
     ('runtime', 'dynamo', 'transactions', 'parameters-and-units',
-     'geometry-and-connectors', 'annotations-and-references', 'error-patterns')]
+     'geometry-and-connectors', 'annotations-and-references', 'error-patterns',
+     'execution', 'api', 'mcp-operations', 'native-smoke')]
 PLACEHOLDER = re.compile(r'\b(TODO|TBD|FIXME)\b|\[placeholder\]', re.I)
 DEFINITION = re.compile(r'^\s{0,3}\[[^\]\n]+\]:\s*<?([^\s>]+)>?', re.M)
 LINK = re.compile(r'!?\[[^\]\n]*\]\(([^\s)]+)(?:\s+"[^"]*")?\)')
@@ -64,7 +66,7 @@ def metadata(text):
         if not data.get(key):
             errors.append('missing or empty Contract field: ' + key)
     for key in data:
-        if key not in FIELDS:
+        if key not in FIELDS and key != 'language':
             errors.append('unknown Contract field: ' + key)
     return data, errors
 
@@ -158,9 +160,19 @@ def check_block(path, root):
         errors.append('duplicate dependency')
     implementation = '\n'.join(sec.get('Implementation', []))
     fences = re.findall(r'(?ms)^```([^\n]*)\n(.*?)^```\s*$', implementation)
-    if len(fences) != 1 or fences[0][0].strip() != 'python' or not fences[0][1].strip():
-        errors.append('Implementation requires exactly one nonempty ```python fence')
+    declared = data.get('language')
+    if declared is not None and declared not in ('python', 'csharp'):
+        errors.append('language must be one of: python, csharp')
+    markers = re.findall(r'(?m)^\s*(?:```|~~~)', implementation)
+    if len(markers) != 2 or len(fences) != 1 or fences[0][0].strip() not in ('python', 'csharp') or not fences[0][1].strip():
+        errors.append('Implementation requires exactly one nonempty ```python or ```csharp fence')
     else:
+        language = fences[0][0].strip()
+        if declared is not None and declared != language:
+            errors.append('language must match Implementation fence')
+        if declared is None:
+            data['language'] = language
+    if len(fences) == 1 and fences[0][0].strip() == 'python' and fences[0][1].strip():
         try:
             tree = ast.parse(fences[0][1], filename=str(path))
             compile(fences[0][1], str(path), 'exec')
@@ -239,16 +251,20 @@ def validate(root, catalog_mode=False):
         if path not in paths and not (catalog_mode and path == block_root / 'catalog.md'):
             errors.extend({'path': path.relative_to(root).as_posix(), 'error': e}
                           for e in link_errors(path, path.read_text(encoding='utf-8-sig'), root))
-    return {'valid': not errors, 'blocks': blocks, 'errors': errors}
+    result = {'valid': not errors, 'blocks': blocks, 'errors': errors}
+    if any(b.get('language') == 'csharp' for b in blocks):
+        result['limitations'] = ['C# snippets are not compiled or syntax-checked offline']
+    return result
 
 
 def catalog(blocks):
-    lines = ['# Block catalog', '', 'Derived from block contracts by `scripts/check_library.py --catalog`.', '']
+    lines = ['# Block catalog', '', 'Derived from block contracts by `scripts/check_library.py --catalog`.',
+             'C# snippets are not compiled or syntax-checked offline.', '']
     for group in GROUPS:
-        lines += ['## ' + group, '', '| Block | Status | Runtime | Verification | Dependencies | Mutation |',
-                  '| --- | --- | --- | --- | --- | --- |']
+        lines += ['## ' + group, '', '| Block | Language | Status | Runtime | Verification | Dependencies | Mutation |',
+                  '| --- | --- | --- | --- | --- | --- | --- |']
         for b in sorted((b for b in blocks if b['group'] == group), key=lambda b: b['id']):
-            values = ['[{}]({}/{})'.format(b['id'], group, b['id'] + '.md'), b['status'], b['runtime'],
+            values = ['[{}]({}/{})'.format(b['id'], group, b['id'] + '.md'), b['language'], b['status'], b['runtime'],
                       b['verification'], ', '.join(b['dependencies']) or 'none', b['mutation']]
             lines.append('| ' + ' | '.join(v.replace('|', '\\|') for v in values) + ' |')
         lines.append('')

@@ -2,9 +2,9 @@
 
 ## Execution profile
 
-Record Revit major/build, Dynamo version, Python engine/version, host, document kind, view and editability/worksharing state. Record packages/assemblies and how document/selection inputs arrive. Scope evidence to that profile.
+Record Revit major/build, host, document kind, view and editability/worksharing state. For Python record the engine/version and CLR bridge; for C# record the compiler and target .NET where available. Record Dynamo/gateway versions when used, packages/assemblies and how document/selection inputs arrive. Scope evidence to that profile. [Execution](execution.md) selects the route; [API contracts](api.md) resolves exact members.
 
-Legacy graph sources use Dynamo 2.12.1.8246 with `IronPython2` in Revit 2022 workflows. Python 3 scripts in this skill run offline. Engine labels and Python 3 compilation do not validate IronPython/.NET overloads.
+Legacy graph sources use Dynamo 2.12.1.8246 with `IronPython2` in Revit 2022 workflows. Python 3 tooling in this skill runs offline. Imported C# block evidence covers Revit build 22.1.70.9 and rvt-mcp 1.2.1. Engine labels, compilation and imported evidence do not establish behavior in another profile.
 
 ## Host adapters
 

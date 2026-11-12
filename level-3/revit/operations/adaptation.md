@@ -2,11 +2,11 @@
 
 ## Inputs
 
-Use the authoritative script/graph revision, requested change, runtime and representative input/output or log. Preserve immutable examples; edit the intended project copy.
+Use the authoritative script/graph/add-in revision, requested change, runtime and representative input/output or log. Preserve immutable examples; edit the intended project copy. Host or language changes follow [execution](../references/execution.md#transfer-between-hosts) and require their own compatibility evidence.
 
 ## Procedure
 
-1. Identify entry point, collaborators, schemas and transaction owner. Inspect graph wiring and embedded code. Establish requested behavior and interfaces callers rely on.
+1. Identify entry point, collaborators, schemas and transaction owner. Inspect graph wiring when present, or the host wrapper, project references and manifest for a code/add-in task. Establish requested behavior and interfaces callers rely on.
 2. Capture the smallest baseline distinguishing current from requested behavior. Read the relevant [error pattern](../references/error-patterns.md) if a failure motivates the patch.
 3. Locate [blocks](../assets/blocks/catalog.md) and read complete selected contracts. Check runtime, scopes, conversions and exceptions before replacement; a generalized helper is not automatically a drop-in substitute.
 4. Patch the owning layer. Update affected consumers for an agreed schema change; otherwise preserve the interface. Synchronize schema/version markers and use an explicit legacy adapter rather than guessed indices or parameter scopes.
