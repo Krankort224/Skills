@@ -24,6 +24,7 @@ This skill owns Revit representation, API use, execution and verification. Proje
 - Establish the target document, Revit version/build, available capabilities and selected execution profile. Record language, engine/compiler, host and dependencies when relevant. Follow [execution](references/execution.md) when choosing a route and [API contracts](references/api.md) when resolving an unfamiliar or version-sensitive member.
 - Define inputs, units, outputs, missing/ambiguous cases, ownership and mutation scope before implementation. Keep project family names, parameter maps, paths and tolerances in explicit task/project configuration.
 - Separate read-only discovery, planning and document writes. A preview must not invoke a write callback. Use the task's concrete mutation scope and existing authorization; resolve only genuinely missing decisions needed for execution.
+- Partition writes by operation kind and workload. Execute each bounded independent batch in a separate host invocation, finish its transaction and verify the committed state before the next batch. Keep coupled node edits atomic. Size batches from observed regeneration/commit cost, dependencies and model load. Follow [invocation boundaries](references/mcp-operations.md#границы-вызовов) and [connector-size grouping](references/geometry-and-connectors.md#size-groups-for-connector-based-operations) where applicable.
 - Use supported Revit API context and a declared transaction owner. Record native statuses, readback, rollback and unexpected effects. An attempted write, setter return or subtransaction commit does not prove a verified document commit.
 - Preserve identity and provenance through matching/traversal. Report boundaries, caps, exclusions and shared ownership. Reject unresolved ambiguity rather than silently broadening a selection.
 - Separate logic tests, mocked API checks and actual Revit runs. State the tested profile and evidence for each claim. Legacy runtime success does not validate a generalized replacement.
@@ -36,10 +37,10 @@ This skill owns Revit representation, API use, execution and verification. Proje
 | Choosing typed tools, scripts, graphs or add-ins | [Execution](references/execution.md) |
 | Exact API members, SDK and version evidence | [API contracts](references/api.md) |
 | Host, compatibility, offline boundary | [Runtime](references/runtime.md) |
-| MCP target binding, call boundaries and unresolved operations | [MCP operations](references/mcp-operations.md) |
+| MCP target binding, operation kinds, batch volume and recovery | [MCP operations](references/mcp-operations.md) |
 | Python ports, wires, payloads, graph inspection | [Dynamo](references/dynamo.md) |
 | Transaction ownership, readback, regeneration | [Transactions](references/transactions.md) |
-| Parameter identity, scope, data types, units | [Parameters and units](references/parameters-and-units.md) |
+| Built-in identifiers, shared parameters, definition files and units | [Parameters and units](references/parameters-and-units.md) |
 | Frames, link transforms, physical topology | [Geometry and connectors](references/geometry-and-connectors.md) |
 | View domains, overrides, native references | [Annotations and references](references/annotations-and-references.md) |
 | Symptom-led checks | [Error patterns](references/error-patterns.md) |
