@@ -37,8 +37,12 @@ Start at the current action; reuse sufficient existing evidence rather than requ
 | Capture the meaningful episode and decide whether more investigation is warranted | [observe](operations/observe.md) |
 | Diagnose the mechanism, cause and transfer boundary | [generalize](operations/generalize.md) |
 | Locate and prepare the smallest authorized candidate change | [refine](operations/refine.md) |
+| Check candidate behavior and the evidence supporting its claims | [verify](operations/verify.md) |
+| Decide correction, rollback, acceptance or deferral | [consolidate](operations/consolidate.md) |
 
 Use [placement](references/placement.md) for owner/resource selection and the optional [improvement form](templates/improvement.template.md) when the current task format is insufficient. They supply no new authority or mandatory artifact.
+
+Select [evaluation](references/evaluation.md) for check design or material version comparisons; the optional [scenario form](templates/scenario.template.md) helps specify a check without creating a new evaluation system.
 
 ## Preserve owners and load selectively
 
@@ -46,4 +50,4 @@ Use `context` for source authority, project understanding and knowledge destinat
 
 Keep transient candidates and evidence in the existing task's work surface. Integrate accepted reusable knowledge at its canonical method owner; keep local facts in project-owned knowledge. Do not create a central observation archive, copy private transcripts, or duplicate accepted Issue summaries.
 
-Load the [decision cases](tests/scenarios.md) or [refinement cases](tests/refinement-cases.md) for the corresponding checks, and the [source/adaptation record](references/sources.md) for provenance questions. None is required for uneventful use. This skill implies no hooks, background observer, confidence database or automatic mutation/promotion.
+Load the [decision cases](tests/scenarios.md), [refinement cases](tests/refinement-cases.md) or [evaluation cases](tests/evaluation-cases.md) for the corresponding checks, and the [source/adaptation record](references/sources.md) for provenance questions. None is required for uneventful use. This skill implies no hooks, background observer, confidence database or automatic mutation/promotion.
