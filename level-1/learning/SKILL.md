@@ -28,10 +28,22 @@ Plan checks of behavior produced by the method: the original case, a transfer or
 
 Use the applicable task process to correct and recheck, roll back only candidate changes while preserving unrelated work, accept under existing authority, or defer with named missing evidence. Readiness, publication and a successful check do not supply user acceptance; do not add a new approval ceremony where the task already authorizes the action.
 
+## Select the operation
+
+Start at the current action; reuse sufficient existing evidence rather than requiring a fixed sequence or loading every procedure:
+
+| Current need | Operation |
+| --- | --- |
+| Capture the meaningful episode and decide whether more investigation is warranted | [observe](operations/observe.md) |
+| Diagnose the mechanism, cause and transfer boundary | [generalize](operations/generalize.md) |
+| Locate and prepare the smallest authorized candidate change | [refine](operations/refine.md) |
+
+Use [placement](references/placement.md) for owner/resource selection and the optional [improvement form](templates/improvement.template.md) when the current task format is insufficient. They supply no new authority or mandatory artifact.
+
 ## Preserve owners and load selectively
 
 Use `context` for source authority, project understanding and knowledge destinations; `workflow` for an applicable Issue lifecycle and acceptance; `delegation` for agent allocation and recovery; assigned `arbitration` for coordination and adjudication. Supply evidence to these owners without duplicating their procedures or changing their permissions. Learning does not create an Issue, spawn an agent, install a tool or broaden a task.
 
 Keep transient candidates and evidence in the existing task's work surface. Integrate accepted reusable knowledge at its canonical method owner; keep local facts in project-owned knowledge. Do not create a central observation archive, copy private transcripts, or duplicate accepted Issue summaries.
 
-Load the [decision cases](tests/scenarios.md) for contract checks and the [source/adaptation record](references/sources.md) for provenance questions. Neither is required for uneventful use. This skill implies no hooks, background observer, confidence database or automatic mutation/promotion.
+Load the [decision cases](tests/scenarios.md) or [refinement cases](tests/refinement-cases.md) for the corresponding checks, and the [source/adaptation record](references/sources.md) for provenance questions. None is required for uneventful use. This skill implies no hooks, background observer, confidence database or automatic mutation/promotion.
