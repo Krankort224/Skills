@@ -13,7 +13,8 @@ Skills/
 ├── level-1/
 │   ├── context/
 │   ├── workflow/
-│   └── delegation/
+│   ├── delegation/
+│   └── learning/
 ├── level-2/
 │   ├── architecture/
 │   ├── research/
@@ -40,7 +41,8 @@ Every agent reads these root contracts. They complement one another without requ
 
 - [context](level-1/context/SKILL.md) owns source authority and sufficient repository understanding;
 - [workflow](level-1/workflow/SKILL.md) owns the Issue contract, cycle lifecycle, and acceptance;
-- [delegation](level-1/delegation/SKILL.md) owns execution decomposition, agent assignments, recovery, and integration.
+- [delegation](level-1/delegation/SKILL.md) owns execution decomposition, agent assignments, recovery, and integration;
+- [learning](level-1/learning/SKILL.md) owns evidence-driven improvement of methods when meaningful use reveals a gap or transferable solution.
 
 They compose through data: source-backed inputs, task requirements and acceptance criteria, assignments, and results with evidence. The cycle owner turns participant results into the overall handoff. Pass plans define acceptance units; agent trees distribute work within the current task. No fixed skill-call sequence is required.
 
@@ -88,6 +90,12 @@ The model contract has one canonical home in [level-1/delegation/SKILL.md](level
 Root establishes sufficient inputs for decomposition; missing inputs may be gathered directly or through bounded exploration before dependent execution. Assignments carry requirements, decisions, source pointers/revision, and unresolved questions. Workers retrieve missing inputs under applicable project rules; fully specified mechanical work needs no separate context-loading cycle.
 
 Tree depth, allowed model tiers at each level, and spawning rights are defined by the skill. It also defines failure diagnosis, stalled-work recovery, and a compact report contract.
+
+#### learning
+
+[learning](level-1/learning/SKILL.md) supplies the activation and evidence contract for improving skills through use. The root distinguishes execution, context/access and navigation problems, project-owned facts, reusable method gaps and insufficient evidence. It loads the evidence model only for meaningful signals; ordinary success requires no reflection report, evaluator or file change. Candidates retain their source evidence, scope, protected behavior, authority and planned behavioral checks. Testing and publication do not supply acceptance, and local facts stay with their project owner.
+
+The selectively loaded [source/adaptation record](level-1/learning/references/sources.md) documents the inspected ECC sources, MIT notice and excluded automation assumptions. [Decision fixtures](level-1/learning/tests/scenarios.md) exercise the contract; they do not certify native execution or the complete later refinement/verification process. Learning adds no observer, automatic promotion, Issue lifecycle or orchestration policy.
 
 ### Level 2
 
@@ -187,7 +195,7 @@ Selection checks distinguish ordinary roots from assigned arbitration, workers f
 
 ## Shared use across projects
 
-A project's `AGENTS.md` identifies this repository, the applicable skill paths, its local context entry/map and any project-owned adaptations. Every agent reads the three Level-1 roots, then only applicable operations; Level 0 remains an assigned arbitration role. Selection and composition stay owned by [AGENTS.md](AGENTS.md#usage), and model choices stay in delegation. A project constraint or explicit user instruction is not erased by switching the source of a method.
+A project's `AGENTS.md` identifies this repository, the applicable skill paths, its local context entry/map and any project-owned adaptations. Every agent reads the Level-1 roots, then only applicable operations; Level 0 remains an assigned arbitration role. Selection and composition stay owned by [AGENTS.md](AGENTS.md#usage), and model choices stay in delegation. A project constraint or explicit user instruction is not erased by switching the source of a method.
 
 Read shared files with an already authorized GitHub connector or an identified local checkout. Resolve `main` to a commit for the current task, or use an explicitly adopted pin, and load all dependent resources at that revision. Record the actual revision in the task evidence and the project's existing provenance record when adopting it. Do not change the active task's revision merely because upstream moved. Shared changes can be read by subsequent tasks without distributing independent procedure copies.
 
