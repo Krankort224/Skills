@@ -41,6 +41,7 @@ This skill owns Revit representation, API use, execution and verification. Proje
 | Python ports, wires, payloads, graph inspection | [Dynamo](references/dynamo.md) |
 | Transaction ownership, readback, regeneration | [Transactions](references/transactions.md) |
 | Built-in identifiers, shared parameters, definition files and units | [Parameters and units](references/parameters-and-units.md) |
+| Embedded lookup tables, configuration coverage and calculated values | [Lookup tables](references/lookup-tables.md) |
 | Frames, link transforms, physical topology | [Geometry and connectors](references/geometry-and-connectors.md) |
 | View domains, overrides, native references | [Annotations and references](references/annotations-and-references.md) |
 | Symptom-led checks | [Error patterns](references/error-patterns.md) |
