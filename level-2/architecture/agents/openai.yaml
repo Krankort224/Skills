@@ -1,6 +1,0 @@
-interface:
-  display_name: "Architecture"
-  short_description: "Develop, compare and review architectural design decisions"
-  default_prompt: "Use $architecture to develop or review my architectural design."
-policy:
-  allow_implicit_invocation: true

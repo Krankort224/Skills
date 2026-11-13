@@ -158,7 +158,7 @@ def validate(root=ROOT):
     def error(path, message):
         errors.append({'path': str(path), 'error': message})
 
-    required = ['SKILL.md', 'agents/openai.yaml', 'THIRD_PARTY_NOTICES.md',
+    required = ['SKILL.md', 'THIRD_PARTY_NOTICES.md',
                 'scripts/calculators.py', 'scripts/test_calculators.py']
     required += ['sources/' + name + '.md' for name in
                  ('index', 'upstream-packs', 'library', 'precedents')]
@@ -224,11 +224,6 @@ def validate(root=ROOT):
         for operation in OPERATIONS:
             if 'operations/' + operation + '.md' not in text:
                 error('SKILL.md', 'operation route missing: ' + operation)
-    interface = root / 'agents/openai.yaml'
-    if interface.exists() and not re.search(
-            r'^\s+allow_implicit_invocation:\s+true\s*$',
-            interface.read_text(encoding='utf-8'), re.M):
-        error('agents/openai.yaml', 'semantic invocation policy missing')
     for path in sorted((root / 'scripts').glob('*.py')):
         try:
             compile(ast.parse(path.read_text(encoding='utf-8')), str(path), 'exec')
