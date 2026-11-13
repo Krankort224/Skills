@@ -159,9 +159,12 @@ def extract_graphs(records, destination):
             if 'Code' in node and ('Python' in str(node.get('ConcreteType', '')) or
                                    'Python' in str(node.get('NodeType', ''))):
                 nid = str(node.get('Id', index))
+                code = node['Code']
+                if not isinstance(code, str):
+                    raise InspectionError('{}: Python node {} Code must be a string for extraction'.format(name, nid))
                 node_tag = hashlib.sha256(nid.encode('utf-8')).hexdigest()[:16]
                 files.append((prefix + '-{}-{}.py'.format(index, node_tag),
-                              node['Code'].encode('utf-8')))
+                              code.encode('utf-8')))
         for filename, content in files:
             target = dest / filename
             if target.is_symlink():

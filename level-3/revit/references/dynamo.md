@@ -6,6 +6,8 @@ Run `scripts/inspect_dyn.py` on a graph or ZIP. It distinguishes Python from Des
 
 Use `--code NODE_ID` for relevant Python and `--extract DIR` for explicit extraction. Embedded code never executes. Preserve the immutable source. Extraction rejects unsafe ZIP paths and separates colliding filenames.
 
+Extraction requires a present Python `Code` value to be text; non-text values produce a structured source/node error rather than being stringified into a script. Empty text remains empty; an absent field produces no Python file. Structural inspection alone does not validate/extract that code. Diagnose this source-data boundary before attributing the failure to a Dynamo/Revit host. An error in a later graph does not undo files already extracted from earlier graphs; this is not an archive-wide atomic operation.
+
 ## Ports and payloads
 
 A Dynamo Python node has one output port carrying `OUT`. `OUT[4]` in a schema identifies a list member, not a fifth graph port. The inspector resolves native port-ID and legacy node-ID/index endpoints; compare them with actual `IN[n]` usage.

@@ -123,6 +123,51 @@ class InspectorTests(unittest.TestCase):
         with self.assertRaises(inspector.InspectionError):
             inspector.read_graphs(archive)
 
+    def test_extraction_rejects_nontext_code_with_source_diagnostic(self):
+        for index, value in enumerate((None, 42, ['OUT = 1'])):
+            with self.subTest(code=value):
+                self.graph['Nodes'][2]['Code'] = value
+                self.path.write_text(json.dumps(self.graph))
+                before = self.path.read_bytes()
+                output, error = io.StringIO(), io.StringIO()
+                with redirect_stdout(output), redirect_stderr(error):
+                    self.assertEqual(0, inspector.main([str(self.path)]))
+                self.assertIn('graphs', json.loads(output.getvalue()))
+                output, error = io.StringIO(), io.StringIO()
+                destination = self.root / ('invalid-' + str(index))
+                with redirect_stdout(output), redirect_stderr(error):
+                    self.assertEqual(1, inspector.main([str(self.path), '--extract', str(destination)]))
+                message = json.loads(error.getvalue())['error']
+                self.assertIn('sample.dyn', message)
+                self.assertIn('python-contract', message)
+                self.assertIn('Code must be a string', message)
+                self.assertEqual('', output.getvalue())
+                self.assertEqual([], list(destination.iterdir()))
+                self.assertEqual(before, self.path.read_bytes())
+        archive = self.root / 'invalid-code.zip'
+        with zipfile.ZipFile(archive, 'w') as z:
+            z.writestr('nested/invalid.dyn', json.dumps(self.graph))
+        before = archive.read_bytes()
+        with self.assertRaisesRegex(inspector.InspectionError, 'nested/invalid.dyn: Python node python-contract'):
+            inspector.extract_graphs(inspector.read_graphs(archive), self.root / 'zip-output')
+        self.assertEqual(before, archive.read_bytes())
+
+    def test_extraction_preserves_empty_unicode_and_absent_code(self):
+        for index, value in enumerate(('', "OUT = 'Пример'\n")):
+            with self.subTest(code=value):
+                self.graph['Nodes'][2]['Code'] = value
+                self.path.write_text(json.dumps(self.graph))
+                before = self.path.read_bytes()
+                files = inspector.extract_graphs(inspector.read_graphs(self.path), self.root / ('text-' + str(index)))
+                scripts = [Path(p) for p in files if p.endswith('.py')]
+                self.assertEqual(1, len(scripts))
+                self.assertEqual(value.encode('utf-8'), scripts[0].read_bytes())
+                self.assertEqual(before, self.path.read_bytes())
+        del self.graph['Nodes'][2]['Code']
+        self.path.write_text(json.dumps(self.graph))
+        files = inspector.extract_graphs(inspector.read_graphs(self.path), self.root / 'absent')
+        self.assertEqual(['.dyn'], [Path(p).suffix for p in files])
+
 
 class LibraryTests(unittest.TestCase):
     def setUp(self):

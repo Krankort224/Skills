@@ -29,6 +29,8 @@ Apply the smallest verified inverse edit within authority. A whole-file restore,
 
 Re-read the result and inspect its diff. Verify candidate additions/changes are withdrawn as intended, unrelated content is preserved, and restored routes/behavior remain coherent through affected checks. Record the withdrawn candidate, resulting revision/artifact, actual preservation checks and remaining original gap. Rollback can restore a known deficient baseline; it does not by itself resolve that gap or complete the task. Keep useful failure evidence at the task owner, not as a new universal rule.
 
+For an added resource, later unrelated content and route dependencies, select the [worked withdrawal example](../references/withdrawal-example.md); ordinary consolidation does not require it.
+
 ## Accept or defer through existing owners
 
 For an accepted improvement, place the reusable method, examples/tests and necessary provenance/limits at the canonical owner established through placement/context. Keep project facts and adaptations at their project owners. Update only authorized navigation/adoption references; publication of shared knowledge does not update downstream pins or installations automatically.

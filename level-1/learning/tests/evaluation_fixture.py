@@ -1,4 +1,4 @@
-"""Fixed synthetic C fixture; no arbitrary runner, native host or acceptance gate."""
+"""Fixed synthetic C/D fixtures; no arbitrary runner, native host or acceptance gate."""
 
 from hashlib import sha256
 import json
@@ -28,6 +28,47 @@ def withdraw_fixture_step(current, baseline_step, candidate_step):
     if current.count(candidate_step) != 1:
         raise ValueError("candidate step changed; preserve current file and resolve overlap")
     return current.replace(candidate_step, baseline_step, 1)
+
+
+def withdrawal_files_example():
+    """Exercise the worked added-file/route example, with no external inputs."""
+    before, candidate = 'Require original check.\n', 'Require original and boundary checks.\n'
+    note = '\nLocal note: retain project units.\n'
+    original_route = '- operation: operation.md\n'
+    new_route, retained_route = '- boundary: boundary.md\n', '- retained: retained.md\n'
+    resource = '# Boundary\nCandidate-only explanation.\n'
+    with TemporaryDirectory(prefix='learning-d-') as directory:
+        root = Path(directory)
+        operation, index, added, retained = [root / name for name in
+                                            ('operation.md', 'index.md', 'boundary.md', 'retained.md')]
+        operation.write_text(candidate + note, encoding='utf-8')
+        index.write_text(original_route + new_route + retained_route, encoding='utf-8')
+        added.write_text(resource, encoding='utf-8')
+        retained.write_text('Existing reference.\n', encoding='utf-8')
+        retained_bytes = retained.read_bytes()
+        assert index.read_text(encoding='utf-8').count(new_route) == 1
+        assert added.read_text(encoding='utf-8') == resource
+        operation.write_text(withdraw_fixture_step(operation.read_text(encoding='utf-8'), before, candidate),
+                             encoding='utf-8')
+        index.write_text(index.read_text(encoding='utf-8').replace(new_route, '', 1), encoding='utf-8')
+        assert all('boundary.md' not in p.read_text(encoding='utf-8') for p in (operation, index, retained))
+        added.unlink()
+        assert operation.read_text(encoding='utf-8') == before + note
+        assert index.read_text(encoding='utf-8') == original_route + retained_route
+        assert retained.read_bytes() == retained_bytes
+        for line in index.read_text(encoding='utf-8').splitlines():
+            assert (root / line.split(': ', 1)[1]).is_file()
+        print('multi-file withdrawal: exact operation, note, retained bytes and routes preserved')
+
+        operation.write_text(candidate + note, encoding='utf-8')
+        index.write_text(original_route + new_route + retained_route, encoding='utf-8')
+        added.write_text(resource + '\nContributor-owned note.\n', encoding='utf-8')
+        current = {p: p.read_bytes() for p in (operation, index, added, retained)}
+        if added.read_text(encoding='utf-8') != resource:
+            print('added-file conflict: deletion deferred; current content/routes retained')
+        else:
+            raise AssertionError('changed resource was treated as disposable')
+        assert all(p.read_bytes() == content for p, content in current.items())
 
 
 def main():
@@ -90,6 +131,7 @@ def main():
         assert path.read_bytes() == before
         print("overlap: current bytes preserved; sha256=" + sha256(before).hexdigest())
 
+    withdrawal_files_example()
     print("Fixture assertions completed; expected regressions above remain failures, not accepted changes.")
 
 
