@@ -4,6 +4,14 @@
 
 <Concrete work for this execution cycle>
 
+<!-- When arbitration is assigned, identify the current stage/result boundary and its executor/reviewer here. -->
+
+### Required skills
+
+Read and apply the following skills for this assignment; load supporting resources as the selected operations require.
+
+- <skill> — <source/path>@<revision>; <selected operation/resources and assignment-specific requirements>.
+
 ### Boundary
 
 May change:

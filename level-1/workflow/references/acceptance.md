@@ -82,7 +82,7 @@ Do not turn the summary into a chronological replay of active comments.
 For both simple and multi-pass Issues, complete consolidation in this order:
 
 1. Identify the completed unit's intermediate comments, including execution instructions, handoffs, review findings, and correction cycles.
-2. Publish the accepted summary, carrying forward all decisions, constraints, unresolved items, and verification evidence needed after consolidation. Use durable evidence references rather than links to comments scheduled for deletion.
+2. Publish the accepted summary, carrying forward all decisions, constraints, unresolved items, and verification evidence needed after consolidation. Preserve required-skill/read-use instructions and source revisions that still apply to continuing work. Use durable evidence references rather than links to comments scheduled for deletion.
 3. Read back the published summary and updated Issue body. Verify their coverage against the comments to be removed and repair references to those comments.
 4. Delete the intermediate comments replaced by the verified summary. Preserve accepted summaries from other units and comments still needed for active or future work; first carry forward any necessary information from mixed-purpose comments.
 5. Fetch the remaining comments and verify that the intended comments were deleted and retained summaries and active-work context remain intact.

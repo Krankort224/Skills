@@ -53,6 +53,7 @@ Before dispatching execution:
 - identify the current execution unit: the whole Issue for a simple Issue, or the first unaccepted major pass for a multi-pass Issue;
 - read the Issue body and relevant active comments;
 - determine the concrete instruction for the next execution cycle;
+- enumerate the required skills, source revisions and selected operations, with the instruction to read and apply them, under delegation's assignment contract;
 - preserve the current boundary and inherited baseline;
 - do not silently introduce a new architectural or product decision;
 - define what evidence will be sufficient for review.
@@ -63,7 +64,7 @@ When a preceding accepted pass has pending cleanup because its environment lacke
 
 If the task is contradictory, materially underspecified, or requires a new decision outside the accepted contract, resolve that with the user before dispatch rather than asking the executor to improvise.
 
-For correction cycles, use the latest review findings to specify concrete corrections. Keep the contract body unchanged and preserve accepted parts unless they need correction.
+For correction cycles, use the latest review findings to specify concrete corrections. Retain the required-skill instructions and material constraints. Keep the contract body unchanged and preserve accepted parts unless they need correction. Where arbitration is assigned, continue the current stage and participant roles; a new correction cycle does not itself permit a role exchange.
 
 When the execution or correction instruction is ready, publish it and set the Issue to `codex-ready`. Do not dispatch the next major pass before the current one is accepted.
 

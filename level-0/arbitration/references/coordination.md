@@ -29,27 +29,34 @@ Before launching the second session, present the failed quality criterion, suppo
 
 Verify that separate-session launch, access, and reporting are actually available. Disclose missing capabilities and their effect instead of claiming a transition. While agreement is pending, continue useful authorized work in the current arrangement where possible, without launching the second session. If independent review is unavailable, disclose the gap; do not present self-review as independent review.
 
-## Exchange roles at handoff boundaries
+## Keep roles within a stage
 
-Dot remains arbiter. Session A implements; session B reviews the fixed result. If dot directs a correction and an exchange is useful, B becomes executor and A reviews B's new revision. Announce the new roles before editing; do not exchange them after every message or automatically on successful review.
+Identify the stage by its agreed result, scope/boundary and completion criteria. It includes the corrections and rechecks needed to meet those criteria. A new revision, correction cycle, handoff, numbered operation step, participant replacement or restored context does not by itself create a new stage. Do not relabel unfinished correction work to permit a role exchange.
 
-Carry the following in the existing task handoff, using source pointers rather than duplicating the contract:
+Dot remains arbiter. Minion A implements and corrects the stage's result; minion B independently reviews and rechecks fixed revisions. Keep B read-only for that result throughout the stage, including its code, tests, documentation and settings. B may run checks and create isolated diagnostic examples without changing the result. Small fixes and corrections to B's own findings still belong to A.
 
-- execution unit/cycle and operation owner;
+If an unavailable participant must be replaced under existing recovery authority, preserve the role and transfer its assignment and progress. Replacing A does not promote B to implement B's findings; appoint a replacement executor while B remains reviewer. Preserve the stage, open findings and correction history when replacing either participant.
+
+Exchange roles only after the current stage is complete under the task's existing process and a genuinely different stage begins. Announce the new assignments before editing. A stage is not automatically an Issue major pass; preserve the applicable pass-acceptance rules without adding a separate user-approval gate for every internal stage. A correction cycle within the same stage retains its roles regardless of workflow status changes.
+
+Serialize shared-artifact edits. No session independently signs off its own new changes. Dot receives the complete reviewer report without executor filtering. Between-stage exchanges do not reset findings, history, authority, or acceptance criteria. Earlier authorship can still influence judgment: check against the agreed criteria and source evidence, disclose material independence limits, and arrange a bounded fresh check when justified and authorized.
+
+## Carry the assignment through handoffs
+
+Carry the following in the existing task handoff, using source pointers for the contract and stating critical requirements directly:
+
+- execution unit/cycle, current stage result/boundary and completion criteria, and operation owner;
 - current writer, reviewer, and authorized mode scope;
+- explicit required-skill list, source paths/revisions, selected operations/resources, and the instruction to read and apply them;
 - baseline and exact result revision/access;
 - concrete correction and preserved boundaries;
 - all open findings, evidence and closure conditions;
 - material decisions/permissions, correction history, and next checkpoint.
 
-Serialize shared-artifact edits. Keep the reviewer read-only for that review; no session independently signs off its own new changes. A role exchange continues the task rather than resetting findings, history, authority, or acceptance criteria. Dot receives the complete reviewer report without executor filtering.
-
-Alternating roles is not a guarantee of independent judgment: the earlier author retains assumptions when reviewing a correction. Check the correction and its effects against original criteria and source evidence. Disclose a material remaining limitation; where justified and authorized, arrange a bounded fresh check rather than claiming independence from a role label alone.
-
-Stop exchanging roles when readiness is reached or the remaining blocker needs another remedy. Do not use alternation to sustain an unproductive loop. Reuse the authorized scope for further exchanges; propose any material change to the arrangement or any return outside its agreed conditions.
+Preserve these instructions through correction dispatch, further delegation, replacement and continuation. Supplement newly applicable skills under the same source-revision and authority constraints; load their resources progressively. Record sources actually read, task-relevant application/check evidence and gaps separately from the requirements that the recipient must follow. A predecessor's claim of skill use does not replace the next participant's assignment.
 
 ## Continue after context loss or transfer
 
-Read the required skill and task sources and record the skill revision actually used. Recover live task/Issue state, the current unit/cycle, agreed mode/roles, baseline/result revisions, open findings, decisions/permissions, correction history, and next action from established records. Check for newer task instructions and changed artifacts before resuming.
+Recover the required-skill assignment and material constraints, read the necessary skill/task sources at their recorded revisions, and record what the receiving participant actually read. Recover live task/Issue state, the current unit/cycle and stage, agreed mode/roles, baseline/result revisions, open findings, decisions/permissions, correction history, and next action from established records. Check for newer task instructions and changed artifacts before resuming; do not silently change the skill revision.
 
 Do not equate a skill's publication with its automatic loading, or a handoff with evidence that another participant read it. If the procedure or task state is unavailable, identify the gap and continue only supported independent work. Do not reconstruct authority or acceptance from silence, cached memory, or an old summary when the necessary live state is missing.

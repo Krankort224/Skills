@@ -24,9 +24,9 @@ A serious possible defect with incomplete evidence calls for investigation or a 
 
 ## Dispatch and resolve corrections
 
-Combine compatible corrections into one actionable package. Preserve accepted behavior and unrelated work. Specify closure conditions by behavior or evidence, leaving implementation choices free where the contract permits.
+Combine compatible corrections into one actionable package and return it to the executor assigned to the current stage. Preserve accepted behavior, unrelated work, required-skill instructions and material constraints. Specify closure conditions by behavior or evidence, leaving implementation choices free where the contract permits. The reviewer does not implement these corrections.
 
-At the new revision, inspect the corrected behavior and affected dependencies. A fix can create a regression elsewhere; a finding is not closed merely because a line changed or an executor marked it done. Identify what prior verification remains applicable and rerun checks invalidated by the changes.
+After the executor supplies a new fixed revision, have the stage's reviewer independently inspect the corrected behavior and affected dependencies. A fix can create a regression elsewhere; a finding is not closed merely because a line changed or an executor marked it done. Identify what prior verification remains applicable and rerun checks invalidated by the changes. Further required corrections return to the executor within the same stage.
 
 Keep materially unresolved findings open. Record a reasoned rejection or verified correction as a disposition rather than silently dropping it. Only propose a new goal, weaker criterion, or material compromise to the user; do not redefine success to match the existing implementation.
 

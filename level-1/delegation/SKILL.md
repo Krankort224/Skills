@@ -39,9 +39,13 @@ Check actual tree composition/depth; enforce runtime restrictions where availabl
 
 Each assignment includes goal/scope, decisions, inputs/source pointers, relevant revision, unresolved questions, permissions/write scope, constraints, expected result, verification, and any spawning rights. Include critical requirements directly.
 
+Explicitly enumerate the required skills with source paths and exact revisions, selected operations and necessary supporting resources. One shared source pin may cover several listed skills. Include every contract required by the project and the skills applicable to the assigned task and role. Direct the worker to read and apply them; a parent's reading or a bare instruction to follow applicable skills is insufficient. Load supporting resources progressively, and supplement newly applicable skills within the same source-revision and authority constraints. Skill selection does not grant an unassigned role or start unrelated operations.
+
+Preserve the required-skill list, read/use instruction, source revisions, selected operations, material constraints and assigned role boundaries in subsequent assignments, handoffs, replacements and descendant dispatch. Keep the task package accessible to the recipient; state critical constraints directly rather than relying on inherited history or an unavailable earlier message.
+
 Default to task-specific context and `fork_turns=none` where supported. Inherit history only when needed and compatible with the model contract.
 
-Workers use supplied context as their entry point and retrieve missing inputs under applicable project rules; parents need not pre-read every source. Fully specified mechanical work needs no separate context-loading cycle.
+Workers use supplied context as their entry point and retrieve missing inputs under applicable project rules; parents need not pre-read every source. Fully specified mechanical work needs no extra exploration cycle, but still requires reading and applying its assigned skills. If a required source is unavailable, report the gap and its effect; continue supported independent work without claiming the missing method was applied.
 
 Keep concurrent writes disjoint; serialize shared-file edits. Do useful work while children run; avoid duplication/frequent polling. Reuse agents with matching context.
 
@@ -56,7 +60,7 @@ Recover within assignment scope and permissions. Return unresolved requirement c
 - Failed light/medium at level ≥2: parent awaits all other direct-child reports, then attempts completion itself; escalate upward if unsuccessful.
 - Failed high: parent replans or completes the work.
 
-Transfer requirements, context, usable progress, checks, and failure cause to any replacement. Choose recovery by the diagnosed cause; do not require a light → medium → high progression.
+Transfer requirements, including explicit skill instructions and assigned role boundaries, context, usable progress, checks, and failure cause to any replacement. Choose recovery by the diagnosed cause; do not require a light → medium → high progression.
 
 Replacements must obey depth/model rules; tree changes require root approval.
 
@@ -67,9 +71,9 @@ Do not wait indefinitely. Track expected duration, new results, and repetitive n
 Return:
 `status: done|partial|blocked|error|cancelled; result; files; sources/revision; evidence; checks/results; remaining; cause; next_action`.
 
-Report conclusions, evidence pointers, and actual checks, not full transcripts.
+Report conclusions, evidence pointers, and actual checks, not full transcripts. Identify skill sources/revisions actually read, assignment-relevant application/check evidence, and missing sources or unperformed required steps. A skill name or reading acknowledgement alone does not establish compliance with its material requirements.
 
-Parents validate direct-child outputs against assignments and supporting evidence. Root checks combined coverage and integration before overall delivery. Do not automatically repeat all child research.
+Parents validate direct-child outputs against assignments, including material skill requirements, and supporting evidence. Root checks combined coverage and integration before overall delivery. Do not automatically repeat all child research.
 
 Checkpoint tree state, accepted results, and pending work for context-loss recovery; do not duplicate canonical project sources.
 

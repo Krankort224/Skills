@@ -12,6 +12,7 @@
 
 - <Correction or accepted task decision>
 - <Retained decision / constraint — canonical source for project-wide knowledge>
+- <Required-skill/read-use instructions and source revisions that still apply to continuing work; preserve material constraints before deleting intermediate comments>
 
 ### Rejected approaches
 

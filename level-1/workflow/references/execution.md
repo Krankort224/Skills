@@ -16,7 +16,10 @@ Read:
 - the stable Issue body;
 - the current execution unit;
 - the latest execution or correction instruction relevant to it;
+- the explicit required-skill assignment, including source revisions and selected operations;
 - repository context required for the task.
+
+Read and apply the assigned skills under delegation's assignment contract, loading their supporting resources as required for the current work. Preserve these instructions and material constraints when passing work to another participant.
 
 Treat the Issue body as the stable contract and active comments as the working surface.
 
@@ -117,6 +120,8 @@ Report:
 - what changed;
 - commits;
 - tests/checks performed and results;
+- required skills and their source revisions/operations for continuation, with actual application/check evidence or gaps;
+- material constraints, decisions and assigned stage/roles that must survive the handoff when applicable;
 - limitations or unverified parts;
 - blockers or risks relevant to review.
 

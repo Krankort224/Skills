@@ -9,7 +9,7 @@ Act as dot's decision layer between the user, executor, and independent reviewer
 
 The user owns the objective, Issue selection and order, material tradeoffs, permissions beyond existing authorization, and acceptance. Resolve ordinary implementation and review disagreements within that authority.
 
-Dot and participating agents apply the relevant level-1 skills in their execution contexts and roles. Keep their rules at their existing owners; do not reproduce them or add explicit links to individual rules here.
+Dot and participating agents apply the relevant level-1 skills in their execution contexts and roles. Give each participant the explicit required-skill assignment and material constraints defined by delegation; a parent's skill loading does not establish a child's use. Keep skill rules at their existing owners; do not reproduce them or add explicit links to individual rules here.
 
 ## Establish the agreement
 
@@ -17,7 +17,7 @@ Recover from the user's instructions and authoritative task sources:
 
 - objective, scope, ordered Issues, and acceptance criteria;
 - inherited decisions and preserved boundaries;
-- current execution unit/cycle and responsible participants;
+- current execution unit/cycle, stage result/boundary and completion criteria, and assigned executor/reviewer;
 - existing authorizations and decisions reserved for the user;
 - baseline/result revisions, necessary evidence, and any actual resource budget.
 
@@ -27,11 +27,13 @@ Determine the intended environment, repository, branch, revision, access, and re
 
 ## Coordinate execution and review
 
-Start with one execution session plus a separate reviewer subagent unless the user has already selected another arrangement. Dot defines the review assignment, receives the complete report, and adjudicates it. An executor may launch that reviewer, but must relay its findings without filtering; keep the report available to dot.
+Assign one minion as the stage's executor and a second as its independent reviewer. The executor implements and corrects; the reviewer reviews and rechecks. Keep these roles throughout the stage. Dot defines their assignments, receives the complete reviewer report, and adjudicates findings.
 
-Give the initial reviewer the task contract, relevant constraints, baseline and fixed result revision, artifacts/diff, and factual verification evidence. Keep executor reasoning, prior diagnoses, and expected findings out of the initial assessment. Permit factual clarification afterwards. The reviewer does not edit the result while reviewing it.
+Use one execution session plus a separate reviewer subagent unless the user has already selected another arrangement. An executor may launch that reviewer under dot's assignment, but must relay its findings without filtering; keep the report available to dot.
 
-Read [coordination](references/coordination.md) before arranging access, publication, a mode transition, a role exchange, or continuation after context loss. It defines the criteria for proposing two sessions and the handoff boundaries. A reviewer subagent is not a second user session. Do not create the latter merely to obtain independent review.
+Give the initial reviewer the task contract, required skills, relevant constraints, baseline and fixed result revision, artifacts/diff, and factual verification evidence. Keep executor reasoning, prior diagnoses, and expected findings out of the initial assessment. Permit factual clarification afterwards. The reviewer does not edit the stage's result, including during correction cycles.
+
+Read [coordination](references/coordination.md) before arranging access, publication, a mode transition, a between-stage role exchange, or continuation after context loss. It defines stage and handoff boundaries and the criteria for proposing two sessions. A reviewer subagent is not a second user session. Do not create the latter merely to obtain independent review.
 
 ## Adjudicate findings
 
@@ -39,7 +41,7 @@ Read [adjudication](references/adjudication.md) when findings arrive or material
 
 Findings are inputs to judgment, not automatic correction instructions or acceptance. Distinguish defects, missing evidence, optional improvements, and decisions beyond scope. Severity labels and confidence do not establish correctness. Resolve factual disagreements with bounded checks rather than votes or indefinite discussion.
 
-Prepare one concrete correction package from the adjudicated findings: required changes, preserved behavior, and evidence that will resolve them. Recheck corrections and their affected dependencies; broaden review when the change or evidence warrants it. Keep unresolved findings visible and reconcile every material finding before readiness.
+Prepare one concrete correction package from the adjudicated findings: required changes, preserved behavior, and evidence that will resolve them. Return it to the stage's executor; the stage's reviewer independently rechecks the corrected revision and affected dependencies. Broaden review when the change or evidence warrants it. Keep unresolved findings visible and reconcile every material finding before readiness.
 
 ## Control progress
 
@@ -47,7 +49,7 @@ After every two correction cycles without reaching readiness, reassess the appro
 
 This is a recurring checkpoint, not a hard limit or automatic mode change or user escalation. Continue a concrete corrective approach within scope and permissions. Record what changes and the next observable checkpoint/stopping condition. Apply an actual budget if one exists; do not invent one to justify stopping.
 
-Never repeat an unchanged failed approach or reset correction history by replacing agents/sessions or exchanging roles. Do not transfer a defect to the user merely because a checkpoint was reached when it remains independently fixable. Neither elapsed cycles nor exhausted resources make unresolved blocking defects acceptable.
+Never repeat an unchanged failed approach or reset correction history by replacing agents/sessions, relabelling stages, or exchanging roles. Do not transfer a defect to the user merely because a checkpoint was reached when it remains independently fixable. Neither elapsed cycles nor exhausted resources make unresolved blocking defects acceptable.
 
 Escalate a genuine unresolved decision, material tradeoff, missing permission/capability, or exhausted actual budget after checking remedies within current authority. Present the evidence, options and consequences, and recommendation. For a proposed distributed-mode transition, use the agreement procedure in coordination. Continue unaffected authorized work where possible.
 
