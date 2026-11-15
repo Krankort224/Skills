@@ -20,11 +20,12 @@ Actually used:
 
 Carry forward:
 
-- <material constraints, decisions/permissions and next action; current stage/roles and open findings when applicable>.
+- <material constraints, decisions/permissions and next action; current category, stage, area writers/checkers, operation owners and open findings when applicable>.
 
 ### Verification
 
 - <check> — PASS / FAIL / NOT RUN
+- <when arbitration applies: area + author + fixed revision + independent checker + result/pending check; cover accompaniment/navigation and identify the final combined revision>.
 
 ### Limitations
 

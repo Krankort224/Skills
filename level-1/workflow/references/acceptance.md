@@ -17,8 +17,11 @@ Check:
 5. project contracts and accepted decisions;
 6. unintended or out-of-scope changes;
 7. limitations, risks, and unverified claims.
+8. when arbitration applies, the final combined revision and non-author verification of every changed area, including reviewer/secretary-owned documentation, navigation and authored acceptance records; category Б/А for a multi-pass Issue.
 
 Inspect evidence needed to verify material claims rather than relying only on the handoff summary.
+
+The subject reviewer publishes the complete review. Other assigned area checks remain independently attributable; do not let an author approve their own contribution. A subject review does not cover accompanying changes made later. Verify the new area revision and affected dependencies; route corrections to its assigned writer through definition/execution, preserving stage roles and one cycle owner.
 
 Review defects-first: identify incorrect behavior, missing acceptance criteria, regressions, unsupported claims, or scope violations before stylistic improvements.
 
@@ -33,6 +36,8 @@ If review passes, report that result. Without explicit acceptance authorization,
 ## 3. Accept the current execution unit
 
 After the required review succeeds and acceptance is authorized, use `../templates/accepted-summary.md` for the durable accepted summary.
+
+Reuse prior explicit authorization for its stated execution unit or intermediate acceptance; do not request it again merely because roles, interfaces or internal stages changed. Do not extend it to final acceptance or closure outside its scope. Under arbitration А the secretary records acceptance based on the review and authorization; in Б/В appoint one acceptance owner. That owner records rather than supplies user authority.
 
 ### Simple Issue
 
@@ -83,7 +88,7 @@ For both simple and multi-pass Issues, complete consolidation in this order:
 
 1. Identify the completed unit's intermediate comments, including execution instructions, handoffs, review findings, and correction cycles.
 2. Publish the accepted summary, carrying forward all decisions, constraints, unresolved items, and verification evidence needed after consolidation. Preserve required-skill/read-use instructions and source revisions that still apply to continuing work. Use durable evidence references rather than links to comments scheduled for deletion.
-3. Read back the published summary and updated Issue body. Verify their coverage against the comments to be removed and repair references to those comments.
+3. Read back the published summary and updated Issue body. Verify their coverage against the comments to be removed and repair references to those comments. When arbitration applies, a non-author checks the authored summary/record against the actual reviewed result, authorization and retained evidence before deletion; corrections go to its writer. Preparing or reviewing this record does not itself authorize acceptance.
 4. Delete the intermediate comments replaced by the verified summary. Preserve accepted summaries from other units and comments still needed for active or future work; first carry forward any necessary information from mixed-purpose comments.
 5. Fetch the remaining comments and verify that the intended comments were deleted and retained summaries and active-work context remain intact.
 

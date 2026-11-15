@@ -4,7 +4,7 @@
 
 <Concrete work for this execution cycle>
 
-<!-- When arbitration is assigned, identify the current stage/result boundary and its executor/reviewer here. -->
+<!-- When arbitration is assigned, identify category, current stage/result boundary, each area's writer/checker and workflow operation owners here. A multi-pass Issue requires category Б or А, never В. Subject documentation remains executor-owned; accompaniment/navigation follow the assigned category. -->
 
 ### Required skills
 

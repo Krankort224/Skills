@@ -15,7 +15,7 @@ A typical task uses context to establish relevant owners and facts, domain/softw
 
 | Component | Responsibility and relationship | Owning entry/evidence |
 | --- | --- | --- |
-| Level 0: arbitration | Coordinates the user's objective, execution and independent review when that role is assigned; preserves the Level-1 owners rather than duplicating their rules. | [arbitration](../../../level-0/arbitration/SKILL.md) |
+| Level 0: arbitration | Coordinates the user's objective, category В/Б/А, area ownership, execution and independent review when that role is assigned; preserves the Level-1 owners rather than duplicating their rules. | [arbitration](../../../level-0/arbitration/SKILL.md), [coordination](../../../level-0/arbitration/references/coordination.md) |
 | Level 1: context | Resolves project scope, authoritative sources and uncertainty; reads, maintains or reviews project-local references. Optional Graphify methods turn selected sources into derived evidence. | [context](../SKILL.md), [graph methods/profile](../SKILL.md#graph-evidence-and-technical-references) |
 | Level 1: workflow | Defines Issue contracts, execution/review cycles and acceptance. Stable bodies, working comments, accepted summaries and Git history have different roles. | [workflow](../../workflow/SKILL.md) |
 | Level 1: delegation | Plans assignments and agent trees, selects models, manages recovery and integrates results. Passes are acceptance units; agents distribute work within them. | [delegation](../../delegation/SKILL.md) |
@@ -38,6 +38,7 @@ Each skill's root routes to progressively loaded resources. A reference, example
 | Evidence-driven improvement method | [learning](../../learning/SKILL.md) owns the improvement process; the affected skill/project retains its actual knowledge and update destination. | Keep candidates/checks on the existing task surface, accepted reusable knowledge at its method owner and local facts/adaptations at project owners. No general observation journal or automatic downstream adoption. |
 | Issue scope, active work and acceptance | The live Issue body/comments and accepted summary under [workflow](../../workflow/SKILL.md#artifact-roles); exact code changes in Git. | Update the authorized Issue surface or source file, not a permanent map diary. A closed Issue is not proof that every historical gate passed. |
 | Model selection and agent recovery | [delegation](../../delegation/SKILL.md#models) owns the model registry and assignment rules. | Keep registry changes at that owner; this map does not duplicate model versions. |
+| Coordination categories and changed-area ownership | [arbitration](../../../level-0/arbitration/SKILL.md) and [coordination](../../../level-0/arbitration/references/coordination.md) distinguish subject results, accompaniment, navigation and protocol. | Assign one writer and a non-author checker per changed area. Documentation can itself be the subject deliverable; do not infer ownership from its Markdown format or from its location in this map. |
 | Graphify source, interfaces and compatibility | [technical profile](../tools/graphify.md), linked technical references, validator and probes; methods own interpretation and source reading. | Preserve the distinction between mechanical validation, fresh semantics, browser observation and host qualification. |
 | Templates and completed project knowledge | [template rules](../../../AGENTS.md#templates), [context representation](../SKILL.md#project-representation) and the target project's actual sources. | The template stays reusable; a completed map and graph belong to the identified target. Source templates and example facts are not destination knowledge. |
 | External products, projects and standards | Their applicable canonical sources, selected through the owning skill. Project-space requires actual application/store contracts; architecture requires jurisdiction/source applicability; Revit requires an actual runtime profile. | Do not edit external owners or import live project/private data into Skills merely to reconcile this overview. |
@@ -50,6 +51,10 @@ Instructions and Issue artifacts use English under their respective contracts. H
 ### Select and combine skills for a task
 
 Start at [AGENTS usage/composition](../../../AGENTS.md#usage), then the applicable root contracts. Read the selected operation and only needed supporting resources. Use [README inventory](../../../README.md#repository-skills) to locate a capability; verify its boundary at the owning skill. A software mention alone does not select a software operation.
+
+### Coordinate execution and independent review
+
+Start at [arbitration](../../../level-0/arbitration/SKILL.md) only when coordination is assigned. Follow [coordination](../../../level-0/arbitration/references/coordination.md) for category choice, role/write boundaries and transitions; multi-pass Issues require Б or А. Category Б assigns accompaniment and navigation to the reviewer; А adds a secretary for protocol and navigation. Every authored area still needs independent verification. Use [workflow](../../workflow/SKILL.md) for operation/cycle publication and authorized acceptance, and [delegation](../../delegation/SKILL.md#context-and-execution) for explicit read-and-apply skill assignments, source pins and constraints through handoffs. These categories add no Issue lifecycle or user-session authorization.
 
 ### Adopt or update context in another project
 

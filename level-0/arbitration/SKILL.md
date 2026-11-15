@@ -5,7 +5,7 @@ description: Preserve user intent while dot coordinates execution and independen
 
 # Arbitration
 
-Act as dot's decision layer between the user, executor, and independent reviewer. Level 0 denotes responsibility, not instruction priority or agent-tree depth.
+Act as dot's decision layer between the user and assigned execution, review and secretary roles. An explicitly assigned equivalent coordinator may perform this role. Level 0 denotes responsibility, not instruction priority or agent-tree depth.
 
 The user owns the objective, Issue selection and order, material tradeoffs, permissions beyond existing authorization, and acceptance. Resolve ordinary implementation and review disagreements within that authority.
 
@@ -17,7 +17,7 @@ Recover from the user's instructions and authoritative task sources:
 
 - objective, scope, ordered Issues, and acceptance criteria;
 - inherited decisions and preserved boundaries;
-- current execution unit/cycle, stage result/boundary and completion criteria, and assigned executor/reviewer;
+- current execution unit/cycle, stage result/boundary and completion criteria, category and assigned roles/area owners;
 - existing authorizations and decisions reserved for the user;
 - baseline/result revisions, necessary evidence, and any actual resource budget.
 
@@ -27,13 +27,21 @@ Determine the intended environment, repository, branch, revision, access, and re
 
 ## Coordinate execution and review
 
-Assign one minion as the stage's executor and a second as its independent reviewer. The executor implements and corrects; the reviewer reviews and rechecks. Keep these roles throughout the stage. Dot defines their assignments, receives the complete reviewer report, and adjudicates findings.
+Choose an arrangement proportionate to the task:
 
-Use one execution session plus a separate reviewer subagent unless the user has already selected another arrangement. An executor may launch that reviewer under dot's assignment, but must relay its findings without filtering; keep the report available to dot.
+| Category | Arrangement |
+|---|---|
+| В | One lead agent with subagents for bounded assignments and independent checks; no standing reviewer or secretary is required. |
+| Б | Executor implements the subject result, publishes handoff and corrects; reviewer independently checks, publishes review and owns accompanying documentation and navigation. Executor reads accompaniment without editing it. |
+| А | Category Б plus a secretary who controls workflow protocol compliance, records authorized acceptance after successful verification, owns navigation and may restructure knowledge sources within the agreed scope. Reviewer retains accompanying content. |
 
-Give the initial reviewer the task contract, required skills, relevant constraints, baseline and fixed result revision, artifacts/diff, and factual verification evidence. Keep executor reasoning, prior diagnoses, and expected findings out of the initial assessment. Permit factual clarification afterwards. The reviewer does not edit the stage's result, including during correction cycles.
+A multi-pass Issue requires category Б or А; category В is not permitted. Categories are not major passes, model tiers, tree depths or counts of user sessions. In В, a non-author still performs each required independent check. Once assigned, executor/checker roles remain stable for their result area throughout its stage, in every category.
 
-Read [coordination](references/coordination.md) before arranging access, publication, a mode transition, a between-stage role exchange, or continuation after context loss. It defines stage and handoff boundaries and the criteria for proposing two sessions. A reviewer subagent is not a second user session. Do not create the latter merely to obtain independent review.
+The coordinator assigns category, roles, one writer and an independent checker per changed area, and workflow operation owners; controls evidence/authorization gates, skill use and transitions; and receives complete review reports without executor filtering. Category Б or А can use one execution session and subagents. Reading this skill does not assign arbitration authority or authorize another user session.
+
+Give the initial reviewer the task contract, required skills, relevant constraints, baseline and fixed result revision, artifacts/diff, and factual verification evidence. Keep executor reasoning, prior diagnoses, and expected findings out of the initial assessment. Permit factual clarification afterwards. The reviewer does not edit the result area they review, including during correction cycles. Their separately assigned accompanying changes require another checker.
+
+Read [coordination](references/coordination.md) before assigning areas/roles, arranging access or publication, changing category/session arrangement, exchanging roles between stages, or restoring context. It defines documentation ownership, combined-result gates and transition boundaries. A reviewer subagent is not a second user session. Do not create the latter merely to obtain independent review.
 
 ## Adjudicate findings
 
@@ -41,7 +49,7 @@ Read [adjudication](references/adjudication.md) when findings arrive or material
 
 Findings are inputs to judgment, not automatic correction instructions or acceptance. Distinguish defects, missing evidence, optional improvements, and decisions beyond scope. Severity labels and confidence do not establish correctness. Resolve factual disagreements with bounded checks rather than votes or indefinite discussion.
 
-Prepare one concrete correction package from the adjudicated findings: required changes, preserved behavior, and evidence that will resolve them. Return it to the stage's executor; the stage's reviewer independently rechecks the corrected revision and affected dependencies. Broaden review when the change or evidence warrants it. Keep unresolved findings visible and reconcile every material finding before readiness.
+Prepare one concrete correction package from the adjudicated findings: required changes, preserved behavior, and evidence that will resolve them. Route each correction to the assigned writer of that area; its independent checker rechecks the corrected revision and affected dependencies. Subject corrections stay with the executor, never its reviewer. Broaden review when the change or evidence warrants it. Keep unresolved findings visible and reconcile every material finding before readiness.
 
 ## Control progress
 
@@ -55,12 +63,16 @@ Escalate a genuine unresolved decision, material tradeoff, missing permission/ca
 
 ## Prepare the result for the user
 
-Stop correction when agreed criteria are met, material findings have evidence-based dispositions, verification covers the final revision, and limitations are disclosed. Optional improvements do not trigger another cycle. If a required check remains unavailable, describe the gap and its effect instead of claiming the criterion passed.
+Stop correction when agreed criteria are met, material findings have evidence-based dispositions, independent verification covers every changed area of the final combined revision, and limitations are disclosed. This includes reviewer/secretary changes; no author signs off their own work. Optional improvements do not trigger another cycle. If a required check remains unavailable, describe the gap and its effect instead of claiming the criterion passed.
 
 Present the result, exact revision, actual verification, dispositions of material findings, and remaining limitations for user acceptance. Readiness is not acceptance. Preserve the user's Issue order and prior authorizations; surface proposed goal/order changes and material compromises as concrete decisions rather than silently changing the agreement.
+
+Use the existing workflow acceptance/consolidation operation. In А the secretary records acceptance; in Б/В appoint one acceptance owner. Reuse prior explicit intermediate-acceptance authorization within its scope; neither new roles nor internal stages require it again. Acceptance recording does not grant authority to accept or close the Issue.
 
 ## Loading and continuity
 
 Distinguish reading this procedure from accessing the result being reviewed. Record the skill source/path and revision actually read. Published repository files can supply the procedure; automatic loading and persistent memory are not guaranteed.
 
 If a required source is unavailable, report it and its effect. Do not claim to have applied an unread skill or manufacture missing state. Continue only the portions supported by available instructions and evidence. Restore task state using coordination before dependent work; a memory pointer is not the sole record of decisions, permissions, or progress.
+
+When validating changes to this method, use the bounded [decision scenarios](tests/scenarios.md). Distinguish static inspection from observed agent behavior and live workflow evidence.

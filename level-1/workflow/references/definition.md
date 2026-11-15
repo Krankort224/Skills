@@ -44,6 +44,8 @@ The top-level checklist contains only major passes. A checked item means the who
 
 The first unchecked major pass is the current execution unit.
 
+Before multi-pass dispatch, assign arbitration category Б or А and a coordinator with the required participant roles. Category В is not eligible, including for individually small passes. On continuation, correct an invalid arrangement within existing authorization before dependent work; preserve the current pass, active cycle, history and prior permissions. This does not authorize new user sessions or restart dispatch.
+
 Planned sub-passes are forecasts, not promises. Do not continuously rewrite the Issue body when they split, merge, disappear, or change during execution.
 
 ## 2. Prepare execution
@@ -54,6 +56,7 @@ Before dispatching execution:
 - read the Issue body and relevant active comments;
 - determine the concrete instruction for the next execution cycle;
 - enumerate the required skills, source revisions and selected operations, with the instruction to read and apply them, under delegation's assignment contract;
+- where arbitration applies, record category, stage, area writers/checkers and operation owners; distinguish subject documentation from accompaniment/navigation and establish independent checks for reviewer/secretary-authored areas;
 - preserve the current boundary and inherited baseline;
 - do not silently introduce a new architectural or product decision;
 - define what evidence will be sufficient for review.

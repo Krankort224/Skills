@@ -30,9 +30,13 @@ An Issue may be either:
 
 Do not introduce passes unless they materially improve control of a larger task.
 
+A multi-pass Issue requires arbitration category Б or А; category В is not permitted. Establish an assigned coordinator and the required roles before dispatch or dependent continuation. Categories describe participant organization, not passes or additional workflow statuses; their ownership and transition contract stays in arbitration. An ordinary root is not automatically the coordinator.
+
 Status flow: `codex-ready → codex-active → codex-review`.
 
 Designate one responsible owner per operation and cycle. Apply dispatch, Issue-status, and cycle-level publication instructions only to that owner. Supporting participants execute assignments within the owner's dispatched cycle and return results to the owner.
+
+Where arbitration is assigned, preserve its per-area writer/checker boundaries: the execution owner gathers contributions and publishes the combined handoff, the reviewer publishes review, and the acceptance owner records authorized acceptance. Category А assigns that recording/protocol-control role to the secretary. Neither publication ownership nor a role name grants write access to another participant's area or authority to accept/close.
 
 While the current execution unit is active, keep its contract stable. Implementation instructions, handoffs, review findings, and correction cycles belong in comments. Rewrite accepted contract material only after acceptance.
 

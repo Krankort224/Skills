@@ -35,6 +35,8 @@ Skill levels classify responsibility, not complexity, instruction priority or su
 
 [arbitration](level-0/arbitration/SKILL.md) supports dot's arbitration role, or an explicitly assigned equivalent, between the user, execution, and independent review. Supporting references cover adjudication and coordination; published availability does not guarantee automatic loading. An ordinary root agent does not acquire this role from its tree position.
 
+Its [coordination contract](level-0/arbitration/references/coordination.md) defines categories В (one lead with subagents), Б (executor and independent reviewer), and А (Б plus secretary), with one writer and an independent checker for each changed area. Categories organize participants; workflow still owns the Issue lifecycle and major-pass acceptance. Multi-pass Issues require Б or А. Documentation requested as the deliverable belongs to the subject executor; accompanying content and navigation have separately assigned owners. Read the coordination contract before assigning those areas or changing category.
+
 ### Level 1
 
 Every agent reads these root contracts. They complement one another without requiring or invoking each other; load their supporting procedures only for applicable operations:

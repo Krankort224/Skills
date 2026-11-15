@@ -10,9 +10,11 @@ Review a fixed revision rather than a moving working tree. Unrelated work may co
 
 For a denied, pending, or uncertain action, record the exact action/target, reason, completed work, and outcome state. Check an uncertain outcome before retrying. Never route a denied operation through another agent or tool to bypass the restriction; retry only when the governing authorization/retry conditions permit it. Continue unaffected work and report the actual remaining blocker.
 
-## Select the working mode
+## Select category and session arrangement
 
-Keep one execution session plus a reviewer subagent while evidence shows progress toward the agreed criteria, credible checks, and resolution of material findings without recurring regressions. An ordinary repairable defect or a correction checkpoint alone does not justify switching modes.
+Use В when one lead can manage bounded assignments and non-author checks. Use Б when persistent implementation/review separation and accompaniment ownership are useful; use А when protocol, navigation and source-management work justify a secretary. A multi-pass Issue must use Б or А, even when each pass is small. Before dispatch or resuming dependent work, replace an invalid В arrangement with Б/А while retaining the current pass, cycle, findings and authorizations. This does not create a new pass or grant permission for new sessions.
+
+Keep the selected arrangement while evidence shows progress toward the agreed criteria, credible checks, and resolution of material findings without recurring regressions. An ordinary repairable defect or a correction checkpoint alone does not justify switching categories or sessions. Model/tree decisions remain with delegation. Categories Б/А need not use multiple user sessions; a reviewer subagent can provide a distinct role in the same execution session.
 
 Consider proposing two independent sessions when a diagnosed limitation of the arrangement compromises quality:
 
@@ -25,28 +27,59 @@ A severe demonstrated independence failure or essential environment/access limit
 
 ## Agree a transition
 
+For a category change, state its task-related cause, expected benefit/cost, scope, owners and next checkpoint. The coordinator can make an ordinary assignment change within existing authority; escalate a material tradeoff or additional permission. Do not use a category change to exchange the writer/checker of unfinished result areas. Preserve the multi-pass minimum category and all stage history.
+
 Before launching the second session, present the failed quality criterion, supporting evidence, attempted remedies, expected benefit, coordination cost, and proposed scope and stopping conditions. Obtain user agreement unless prior explicit authorization already covers that transition. Keep the agreement for its stated scope; do not seek it again at each role exchange.
 
 Verify that separate-session launch, access, and reporting are actually available. Disclose missing capabilities and their effect instead of claiming a transition. While agreement is pending, continue useful authorized work in the current arrangement where possible, without launching the second session. If independent review is unavailable, disclose the gap; do not present self-review as independent review.
+
+## Assign areas before editing
+
+Classify by the requested result, not extension or directory:
+
+| Area | Writer in Б | Writer in А | Independent check |
+|---|---|---|---|
+| Subject result, including requested documentation, skill contracts, tests and settings | Executor | Executor | Subject reviewer |
+| Accompanying content: usage explanation, durable limitations and supporting knowledge | Reviewer | Reviewer | Executor read-only or another non-author |
+| Navigation: maps, indexes and reading routes | Reviewer | Secretary | Assigned non-author; reviewer may check secretary changes only if uninvolved |
+| Protocol records | Named workflow operation owner | Named workflow operation owner; secretary records authorized acceptance and monitors protocol | Non-author checks authored acceptance summaries/records before destructive consolidation |
+
+In В the lead explicitly assigns needed areas and non-author checks without inventing standing roles. In all categories, an author cannot independently approve their changes. A coordinator-authored artifact also needs a non-author check where independent verification is required.
+
+Accompanying documentation is separate from the deliverable. If the task requests a manual or skill adaptation, its normative Markdown is the subject result: the executor writes it. Do not reclassify a reviewed file as accompaniment to let the reviewer fix their own finding. In Б/А the executor may read accompaniment, verify it and supply facts/findings but does not edit it; its owner makes corrections.
+
+For mixed-purpose files, choose one writer before work and route other contributions to that writer. Prefer a file-level boundary. If sequential ownership transfer is necessary, record scope, fixed revision and new writer; serialize edits and preserve independent checking. Splitting a file or transferring custody does not erase authorship or permit a reviewer to implement their own finding in the same stage.
+
+Secretary authority covers navigation/protocol within the assignment, not arbitrary subject content. A knowledge-source restructuring uses context and the applicable restructure operations: establish inventory, agreed map/scope, preserve sources/provenance and verify the migration independently. A role name grants no deletion, download, publication or scope expansion authority.
 
 ## Keep roles within a stage
 
 Identify the stage by its agreed result, scope/boundary and completion criteria. It includes the corrections and rechecks needed to meet those criteria. A new revision, correction cycle, handoff, numbered operation step, participant replacement or restored context does not by itself create a new stage. Do not relabel unfinished correction work to permit a role exchange.
 
-Dot remains arbiter. Minion A implements and corrects the stage's result; minion B independently reviews and rechecks fixed revisions. Keep B read-only for that result throughout the stage, including its code, tests, documentation and settings. B may run checks and create isolated diagnostic examples without changing the result. Small fixes and corrections to B's own findings still belong to A.
+Dot remains arbiter. The executor implements and corrects the subject result; the reviewer independently reviews and rechecks fixed revisions. Keep the reviewer read-only for that area throughout the stage, including its code, tests, subject documentation and settings. They may run checks and create isolated diagnostic examples without changing it. Small fixes and corrections to their own findings still belong to its executor. A separately assigned accompanying area can have the reviewer as writer and another participant as checker; this is not a subject-role exchange.
 
-If an unavailable participant must be replaced under existing recovery authority, preserve the role and transfer its assignment and progress. Replacing A does not promote B to implement B's findings; appoint a replacement executor while B remains reviewer. Preserve the stage, open findings and correction history when replacing either participant.
+If an unavailable participant must be replaced under existing recovery authority, preserve the role and transfer its assignment and progress. Replacing the executor does not promote the reviewer to implement their findings; appoint a replacement executor while the reviewer remains reviewer. Apply the same writer/checker separation to accompanying and secretary-owned areas. Preserve the stage, open findings and correction history when replacing any participant.
 
 Exchange roles only after the current stage is complete under the task's existing process and a genuinely different stage begins. Announce the new assignments before editing. A stage is not automatically an Issue major pass; preserve the applicable pass-acceptance rules without adding a separate user-approval gate for every internal stage. A correction cycle within the same stage retains its roles regardless of workflow status changes.
 
 Serialize shared-artifact edits. No session independently signs off its own new changes. Dot receives the complete reviewer report without executor filtering. Between-stage exchanges do not reset findings, history, authority, or acceptance criteria. Earlier authorship can still influence judgment: check against the agreed criteria and source evidence, disclose material independence limits, and arrange a bounded fresh check when justified and authorized.
+
+## Check the combined result
+
+Collect assigned contributions before the workflow execution owner publishes the combined handoff. Identify each area's writer, checker and fixed revision, including accompaniment and navigation. The subject reviewer publishes the complete subject review; other area checks remain separately attributable. Supporting participants do not independently change cycle status or publish competing cycle handoffs.
+
+The coordinator gates readiness on the final combined result: all required areas independently checked, material findings reconciled, required skills applied, permissions in scope and limitations disclosed. A reviewer or secretary's contribution is not accepted merely because that role authored it. Check documentation against primary evidence, not only executor assurances. If the proposed checker would just repeat their own unsupported conclusions, use a bounded fresh source-based check by another non-author.
+
+After a reviewed area changes, fix the new revision and refresh its check and affected dependencies. Preserve still-valid evidence explicitly; do not label an old review as verification of the new combined revision. Route corrections through the existing workflow cycle to the area's writer. In Б/А the subject executor remains read-only for accompanying corrections.
+
+Keep workflow's distinction between readiness, authorized acceptance and closure. The secretary records rather than grants acceptance; independently check the authored summary/record against the actual review, result and authorization before consolidation removes supporting comments. Reuse prior explicit intermediate-acceptance permission for its stated scope without a new prompt at each internal stage. It does not automatically cover final acceptance or Issue closure. Use the existing acceptance/consolidation procedure and its capability-gap handling, not another protocol journal.
 
 ## Carry the assignment through handoffs
 
 Carry the following in the existing task handoff, using source pointers for the contract and stating critical requirements directly:
 
 - execution unit/cycle, current stage result/boundary and completion criteria, and operation owner;
-- current writer, reviewer, and authorized mode scope;
+- category, each area's writer/checker, workflow operation owners, and authorized session/mode scope;
 - explicit required-skill list, source paths/revisions, selected operations/resources, and the instruction to read and apply them;
 - baseline and exact result revision/access;
 - concrete correction and preserved boundaries;
@@ -57,6 +90,6 @@ Preserve these instructions through correction dispatch, further delegation, rep
 
 ## Continue after context loss or transfer
 
-Recover the required-skill assignment and material constraints, read the necessary skill/task sources at their recorded revisions, and record what the receiving participant actually read. Recover live task/Issue state, the current unit/cycle and stage, agreed mode/roles, baseline/result revisions, open findings, decisions/permissions, correction history, and next action from established records. Check for newer task instructions and changed artifacts before resuming; do not silently change the skill revision.
+Recover the required-skill assignment and material constraints, read the necessary skill/task sources at their recorded revisions, and record what the receiving participant actually read. Recover live task/Issue state, the current unit/cycle and stage, category and area/operation owners, agreed session scope, baseline/result revisions, open findings, decisions/permissions, correction history, and next action from established records. Check for newer task instructions and changed artifacts before resuming; do not silently change the skill revision. Recheck the multi-pass category constraint without restarting the current cycle.
 
 Do not equate a skill's publication with its automatic loading, or a handoff with evidence that another participant read it. If the procedure or task state is unavailable, identify the gap and continue only supported independent work. Do not reconstruct authority or acceptance from silence, cached memory, or an old summary when the necessary live state is missing.

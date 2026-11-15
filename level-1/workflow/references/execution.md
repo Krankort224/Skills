@@ -21,6 +21,8 @@ Read:
 
 Read and apply the assigned skills under delegation's assignment contract, loading their supporting resources as required for the current work. Preserve these instructions and material constraints when passing work to another participant.
 
+For a multi-pass Issue, verify category Б or А and assigned coordinator/roles before dependent execution. If the current arrangement is В, return that assignment gap to the coordinator for a compliant arrangement within existing authority. Do not continue under В, invent a new pass/cycle or repeat a completed dispatch. Other independently supported work may continue.
+
 Treat the Issue body as the stable contract and active comments as the working surface.
 
 Do not redesign the Issue structure, add passes, change the pass plan, or silently broaden the task.
@@ -90,7 +92,7 @@ If a required check cannot be performed in the current environment, state that e
 
 ## 4. Record durable knowledge when required
 
-If the implementation establishes or changes a durable project-wide fact, contract, accepted decision, or stable limitation, update its canonical repository location when the current task owns that change.
+If the implementation establishes or changes a durable project-wide fact, contract, accepted decision, or stable limitation, ensure its assigned writer updates the canonical repository location when the current task owns that change. The execution owner collects this contribution rather than acquiring every area's write scope. Under arbitration Б/А, the executor writes subject documentation but only reads accompanying documentation; its reviewer-owned content and assigned navigation are updated by their owners and independently checked. Authoritative knowledge destinations remain governed by context.
 
 Use the destination established by the task and applicable repository rules, not a convenient file. If a required contract or update destination is materially unresolved, report the blocker before the affected change.
 
@@ -113,6 +115,7 @@ Before handoff:
 - inspect the final diff;
 - remove accidental or unrelated changes;
 - ensure required repository changes are committed;
+- collect all assigned area contributions and identify their authors, fixed revisions, independent checkers and completed or pending checks; include reviewer/secretary-owned accompaniment and navigation where applicable;
 - confirm reported verification matches what was actually run.
 
 Report:
@@ -121,13 +124,15 @@ Report:
 - commits;
 - tests/checks performed and results;
 - required skills and their source revisions/operations for continuation, with actual application/check evidence or gaps;
-- material constraints, decisions and assigned stage/roles that must survive the handoff when applicable;
+- material constraints, decisions, category, assigned stage/area roles and operation owners that must survive the handoff when applicable;
 - limitations or unverified parts;
 - blockers or risks relevant to review.
 
 Execution completion and handoff do not constitute acceptance.
 
 The cycle owner publishes the combined handoff and moves the Issue from `codex-active` to `codex-review`. Supporting participants return results to the owner.
+
+The combined handoff is a review target, not proof that every area already passed independent review. Pending checks remain explicit and must be resolved before readiness/acceptance. Later changes require a new fixed result revision and refreshed checks of changed areas and affected dependencies through the existing correction cycle.
 
 Then stop execution of this cycle.
 

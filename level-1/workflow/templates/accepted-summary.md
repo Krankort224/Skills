@@ -21,6 +21,7 @@
 ### Final verification
 
 - <Checks and results; durable evidence references that remain available after intermediate comments are deleted>
+- <When arbitration applies: independent checks of the combined result and reviewer/secretary-authored areas; non-author verification of this summary/record before deleting intermediate comments>
 
 ### Result
 
