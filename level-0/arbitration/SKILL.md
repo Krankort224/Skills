@@ -43,6 +43,14 @@ Give the initial reviewer the task contract, required skills, relevant constrain
 
 Read [coordination](references/coordination.md) before assigning areas/roles, arranging access or publication, changing category/session arrangement, exchanging roles between stages, or restoring context. It defines documentation ownership, combined-result gates and transition boundaries. A reviewer subagent is not a second user session. Do not create the latter merely to obtain independent review.
 
+## Keep project documentation current
+
+At stage planning, identify which project documents and reading routes the intended result may affect, their authoritative owners, authorized update destinations, and assigned writers/checkers. Reassess that impact after execution and corrections; a document omitted from the initial plan is not exempt when the result makes it materially stale.
+
+Coordinate required updates within the same stage through the area ownership in [coordination](references/coordination.md). This includes applicable design and technical documents, contracts, configuration, operating/process instructions, project knowledge and navigation. The subject executor does not take over reviewer- or secretary-owned accompaniment/navigation, and no author approves their own changes. Use context for source authority and permitted maintenance destinations; use workflow for applicable Issue records and acceptance. This duty adds no authorization to edit otherwise out-of-scope sources.
+
+Before readiness, require independent evidence that mandatory documentation matches the final combined revision. Outstanding required updates or missing verification prevent readiness even if implementation checks pass. Disclose blocked destinations, missing authority or evidence and their effects; pursue the authorized remedy while continuing unaffected work. Unrelated or optional documentation improvements are not automatic stage blockers.
+
 ## Adjudicate findings
 
 Read [adjudication](references/adjudication.md) when findings arrive or material disagreement appears. Match each finding to the agreed requirement and evidence for the reviewed revision. Choose: correct, investigate, reject with grounds, propose separately, or escalate.

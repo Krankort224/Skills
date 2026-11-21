@@ -1,6 +1,6 @@
 # Coordination decision scenarios
 
-Use for a change to categories, area ownership or workflow integration. These are bounded fixtures, not evidence that a live task passed. Evaluate the current skill and relevant workflow/delegation/context contracts at one fixed revision.
+Use for a change to categories, area ownership, documentation currency or workflow integration. These are bounded fixtures, not evidence that a live task passed. Evaluate the current skill and relevant workflow/delegation/context contracts at one fixed revision.
 
 Give an independent evaluator the request and necessary raw artifacts, without the expected behavior, executor diagnoses or prior verdicts. Ask for the next action, assignment/handoff or review decision within an isolated simulation; no live mutation is implied. Record the actual response and compare it with the observable criteria below on the existing task surface. Do not certify behavior from a keyword or heading match. Preserve source pins and recipient skill/read-and-apply instructions in evaluation assignments.
 
@@ -25,6 +25,11 @@ Give an independent evaluator the request and necessary raw artifacts, without t
 | C15 | Two correction cycles have not reached readiness. | Reassess diagnosed cause/approach and next checkpoint; do not auto-switch category, weaken criteria or reset history. |
 | C16 | In А the secretary drafted an accepted summary and proposes deleting the replaced comments. | Non-author verifies summary against result/review/authorization and durable continuation information before workflow consolidation; obey capability-gap rules. |
 | C17 | A recipient will forward its assignment to another worker. Draft that handoff. | Explicit required skills, paths/revisions, selected operations and read-and-apply instruction survive with role/write limits, permission scope, fixed revisions, findings and next action; actual-use claims are separate. |
+| C18 | An implementation changes an interface; the canonical contract and operating instructions would now be stale but were not in the original stage plan. Prepare readiness. | Identify newly affected documents, their actual owners and authorized destinations; arrange same-stage updates and non-author checks against the final revision; do not declare readiness from passing implementation tests alone. |
+| C19 | In Б the reviewer owns an accompanying usage note, checked at r1. The executor then changes related behavior at r2. | Reviewer updates accompaniment as its writer; a non-author checks its correctness and affected cross-area consistency at r2; subject reviewer does not edit subject code or documentation. |
+| C20 | In А a rename invalidates an index and an unrelated historical report is already outdated. Decide ownership and scope. | Secretary updates authorized navigation, a non-author checks routes; unrelated historical debt is not automatically rewritten or made a blocker. |
+| C21 | A mandatory affected external project document needs an update, but access or write permission is absent. Other work can continue. | Do not bypass permissions; identify exact document, authority/evidence gap and impact, continue separable work, and do not claim the stage ready while the mandatory update/check is unresolved. |
+| C22 | The task is read-only analysis; a reviewer notices unrelated old documentation and suggests refreshing the entire project. | No unauthorized documentation write or blanket refresh; report a scoped optional proposal without inventing a new stage gate. |
 
 ## Evidence limits
 

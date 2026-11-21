@@ -52,6 +52,16 @@ For mixed-purpose files, choose one writer before work and route other contribut
 
 Secretary authority covers navigation/protocol within the assignment, not arbitrary subject content. A knowledge-source restructuring uses context and the applicable restructure operations: establish inventory, agreed map/scope, preserve sources/provenance and verify the migration independently. A role name grants no deletion, download, publication or scope expansion authority.
 
+## Maintain documentation with the stage
+
+At stage dispatch, determine the documentation affected by the agreed result using the project's authoritative sources. Identify the canonical owner, actual update destination, permissions, baseline, stage writer and non-author checker. Consider, where relevant, architecture and technical design, interface/contract definitions, configuration, operating and project instructions, knowledge references, maps, indexes and reading routes. Select by material change, not a mandatory document checklist; record a source-based no-update conclusion when nothing is affected.
+
+During implementation, integration and correction, revisit the impact set when decisions, behavior, file locations or interfaces change. Route each required update to the writer established under [Assign areas before editing](#assign-areas-before-editing): requested/normative subject documentation belongs to the executor; accompaniment belongs to the reviewer in Б/А; navigation belongs to the reviewer in Б or secretary in А; В uses expressly assigned writers and non-author checks. For mixed-purpose sources, retain the agreed file-level owner. Do not let the subject reviewer edit subject documentation under the guise of keeping it current.
+
+Within the authorized scope, update the canonical sources during the same stage, not merely in the handoff or accepted summary. The assigned non-author checks the revised documentation against primary evidence and the final combined result, including material contracts, routes and dependencies. If the result changes after the documentation check, repeat affected documentation and integration checks; if documentation changes after subject review, recheck affected cross-area consistency. An author's assertion or a passing subject-only test does not prove documentation currency.
+
+When a mandatory affected source is inaccessible, outside the permitted write scope or lacks authoritative evidence, do not edit it by assumption. Record the document, mismatch or missing evidence, owner, effect and required authority/remedy; escalate the real decision through the existing process while progressing on separable work. The stage is not ready while a required update or independent check remains unresolved. Optional or unrelated pre-existing documentation debt may be reported separately without expanding the stage or blocking an otherwise sufficient result. Use context for source/update ownership and workflow for applicable Issue acceptance/consolidation; this coordination rule creates neither another documentation lifecycle nor blanket write permission.
+
 ## Keep roles within a stage
 
 Identify the stage by its agreed result, scope/boundary and completion criteria. It includes the corrections and rechecks needed to meet those criteria. A new revision, correction cycle, handoff, numbered operation step, participant replacement or restored context does not by itself create a new stage. Do not relabel unfinished correction work to permit a role exchange.
@@ -83,6 +93,7 @@ Carry the following in the existing task handoff, using source pointers for the 
 - explicit required-skill list, source paths/revisions, selected operations/resources, and the instruction to read and apply them;
 - baseline and exact result revision/access;
 - concrete correction and preserved boundaries;
+- documentation impact set, required updates, their canonical owners/writers/checkers, verification evidence, and any unresolved destination or access blocker;
 - all open findings, evidence and closure conditions;
 - material decisions/permissions, correction history, and next checkpoint.
 

@@ -28,6 +28,8 @@ Combine compatible corrections into one actionable package and route each item t
 
 After the writer supplies a new fixed revision, have that area's independent checker inspect the correction and affected dependencies. A fix can create a regression elsewhere; a finding is not closed merely because a line changed or its writer marked it done. Identify what prior verification remains applicable and rerun checks invalidated by the changes, including consistency between subject result, accompaniment and navigation. Further required corrections return to the same area writer within the stage. No author, including the reviewer, secretary or coordinator, independently approves their own change.
 
+Treat required documentation left stale by a stage change, and missing independent consistency evidence, as material findings. Return each correction to its assigned documentation-area writer and have a non-author verify it against the final result. If the required source cannot be updated within present authority, record the blocker and route the missing decision; do not declare the stage ready on the strength of a subject-only pass.
+
 Keep materially unresolved findings open. Record a reasoned rejection or verified correction as a disposition rather than silently dropping it. Only propose a new goal, weaker criterion, or material compromise to the user; do not redefine success to match the existing implementation.
 
 ## Examples of judgment
