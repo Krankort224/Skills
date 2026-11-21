@@ -85,13 +85,13 @@ Canonical Issue artifact schemas are kept in `level-1/workflow/templates/`; oper
 
 #### delegation
 
-Defines execution planning and subagent orchestration for Codex. It covers deciding whether to delegate, planning the agent tree, passing task-specific context, handling failures, and verifying results.
+Defines execution planning, assignments, recovery and integration across models and execution environments. The [shared contract](level-1/delegation/SKILL.md) applies to root and workers, including participants without spawning rights; the user's main-agent choice is preserved.
 
-The model contract has one canonical home in [level-1/delegation/SKILL.md](level-1/delegation/SKILL.md). Root is selected by the user; subagent selection follows that contract's task-complexity criteria.
+Load the current operation: [plan](level-1/delegation/operations/plan.md), [dispatch and follow work](level-1/delegation/operations/dispatch.md), [recover](level-1/delegation/operations/recover.md), or [integrate](level-1/delegation/operations/integrate.md). Assignments explicitly carry required skills, source pins, constraints and check evidence through continuation and replacement.
 
-Root establishes sufficient inputs for decomposition; missing inputs may be gathered directly or through bounded exploration before dependent execution. Assignments carry requirements, decisions, source pointers/revision, and unresolved questions. Workers retrieve missing inputs under applicable project rules; fully specified mechanical work needs no separate context-loading cycle.
+Concrete model mappings and selection/fallback policy live in the scoped [OpenAI pool](level-1/delegation/references/models/openai.md). Runtime profiles describe the [observed OpenAI collaboration interface](level-1/delegation/references/runtimes/openai-collaboration.md), [Kimi Code CLI](level-1/delegation/references/runtimes/kimi-code.md) and [Hermes Agent](level-1/delegation/references/runtimes/hermes.md), with separate evidence limits. Profiles supply interface knowledge, not access or installation; current tools, configuration and permissions govern actual use. Other authorized environments can use the shared method without a prewritten profile.
 
-Tree depth, allowed model tiers at each level, and spawning rights are defined by the skill. It also defines failure diagnosis, stalled-work recovery, and a compact report contract.
+Model fit, runtime capability, assignment role and permission are separate decisions. Tree planning bounds depth/concurrency and grants spawning rights explicitly; a model tier does not grant those rights or exclude a capable leaf. [Decision scenarios](level-1/delegation/tests/scenarios.md) cover selection, continuity, recovery and evidence boundaries without mandating a test cycle for ordinary work.
 
 #### learning
 
