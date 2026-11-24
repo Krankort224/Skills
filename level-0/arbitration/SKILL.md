@@ -1,86 +1,44 @@
 ---
 name: arbitration
-description: Preserve user intent while dot coordinates execution and independent review, adjudicates findings, controls correction progress, and prepares results for user acceptance. Use when explicitly invoked or when dot is assigned the arbitration role; do not impose this role on unrelated tasks.
+description: Coordinate bounded assignments between independently addressable participants, resolve review findings and assess readiness. Use for an assigned coordination or contribution role, including direct intake by Codex dot or a Hermes specialist.
 ---
 
 # Arbitration
 
-Act as dot's decision layer between the user and assigned execution, review and secretary roles. An explicitly assigned equivalent coordinator may perform this role. Level 0 denotes responsibility, not instruction priority or agent-tree depth.
+Start from the user's actual task and the authority already granted. The user retains the objective, ordering, material tradeoffs, additional permissions and acceptance unless a specific decision was explicitly assigned. Reading this method grants no coordination mandate, write authority or access. A person or agent receiving a direct task may own that task without acquiring authority over a wider project.
 
-The user owns the objective, Issue selection and order, material tradeoffs, permissions beyond existing authorization, and acceptance. Resolve ordinary implementation and review disagreements within that authority.
+## Select the route
 
-Dot and participating agents apply the relevant level-1 skills in their execution contexts and roles. Give each participant the explicit required-skill assignment and material constraints defined by delegation; a parent's skill loading does not establish a child's use. Keep skill rules at their existing owners; do not reproduce them or add explicit links to individual rules here.
+| Current need | Route |
+| --- | --- |
+| Receive, assign, continue or collect a bounded contribution | Apply the assignment and continuation contract below. |
+| Organize work as Codex dot | [Codex dot](references/codex-dot.md), including category, stage roles and session decisions when relevant. |
+| Receive or coordinate work as a Hermes specialist | [Hermes](references/hermes.md), including peer consultation within existing grants. |
+| Resolve a finding or a material disagreement | [Adjudicate](operations/adjudicate.md). |
+| Decide whether an agreed result is ready or identify its unmet gate | [Assess readiness](operations/assess-readiness.md). |
 
-## Establish the agreement
+Select by the participant arrangement actually in use. An independently addressable participant has a usable request and return route of its own. A child managed inside someone else's execution context is an implementation detail of that participant's contribution. Its owner supplies the result and remains accountable for its effects. A permitted internal child may supply independent checking when its authorship, inputs, access and evidence support that check.
 
-Recover from the user's instructions and authoritative task sources:
+## Make and receive a bounded assignment
 
-- objective, scope, ordered Issues, and acceptance criteria;
-- inherited decisions and preserved boundaries;
-- current execution unit/cycle, stage result/boundary and completion criteria, category and assigned roles/area owners;
-- existing authorizations and decisions reserved for the user;
-- baseline/result revisions, necessary evidence, and any actual resource budget.
+Confirm the objective, authoritative task sources, live state, permissions, preserved decisions and any actual budget relevant to the request. Do simple work directly when one recipient can produce the result and required evidence. Add a participant for a distinct contribution, required access or genuine independence. Prefer a direct authorized route over an extra relay.
 
-Keep a compact working record with source pointers in the task's existing work surface. Do not create a second Issue contract or permanent journal. Reuse established decisions rather than asking for them again.
+Supply the recipient with what they need for the work:
 
-Determine the intended environment, repository, branch, revision, access, and relevant existing changes from prior context and available evidence. Clarify material ambiguity before dependent execution; continue independent authorized work where possible. Preserve work outside the assignment, published or unpublished. For overlapping edits, establish ownership and permission before changing them; unpublished status alone does not prohibit explicitly assigned work.
+- Requester, accountable owner of the overall result, contribution owner and named owner of any reserved decision.
+- Outcome and sufficiency criteria, current boundary and dependencies, material constraints and decisions to preserve.
+- Relevant context, accessible authoritative inputs and their exact revisions, expected artifact or fixed result revision and who needs access. State any task-required method, its pinned source and selected resources with an explicit instruction to read and apply them. Preserve those instructions when handing work onward.
+- Permitted effects such as reading, editing a named area, contacting a particular party, publishing or spending. Verify both access and authority. Technical reachability, a role label or the ability to ask someone does not add a grant.
+- Checker when required, evidence to return, and the return point or checkpoint. Give an independent checker the agreed criteria, raw artifacts and factual observations. Keep author diagnoses and expected findings out of the initial request. Clarify facts after the independent assessment when needed.
 
-## Coordinate execution and review
+An assignment transfers responsibility for its contribution. The overall owner retains integration, the promise to the requester, and actions reserved to that owner. Keep one active writer per changed area and serialize shared writes. Respect source and effect restrictions when forwarding. If authority or capabilities are missing, identify the affected action and pursue separable authorized work.
 
-Choose an arrangement proportionate to the task:
+Return the usable result or partial result, its fixed identity and source pointers, actual checks and limitations, any outstanding writer or decision, and the next action. Distinguish what a recipient was instructed to use from what they actually read, applied and verified. Capture the compact record on the existing task surface when others need it to continue.
 
-| Category | Arrangement |
-|---|---|
-| В | One lead agent with subagents for bounded assignments and independent checks; no standing reviewer or secretary is required. |
-| Б | Executor implements the subject result, publishes handoff and corrects; reviewer independently checks, publishes review and owns accompanying documentation and navigation. Executor reads accompaniment without editing it. |
-| А | Category Б plus a secretary who controls workflow protocol compliance, records authorized acceptance after successful verification, owns navigation and may restructure knowledge sources within the agreed scope. Reviewer retains accompanying content. |
+## Recover an interrupted assignment
 
-A multi-pass Issue requires category Б or А; category В is not permitted. Categories are not major passes, model tiers, tree depths or counts of user sessions. In В, a non-author still performs each required independent check. Once assigned, executor/checker roles remain stable for their result area throughout its stage, in every category.
+Recover the live task, latest applicable instructions and exact method/source revisions from accessible authoritative records. Check for newer decisions or changed artifacts before dependent work. Recover the current unit and scope, owners, open findings and correction history, prior grants, active or queued work, and next checkpoint. Confirm what is readable in the receiving context. Publication, an old summary and a memory pointer alone cannot establish live state, method use or authority. Preserve the current unit, history and scope. Report missing state and continue supported independent work.
 
-The coordinator assigns category, roles, one writer and an independent checker per changed area, and workflow operation owners; controls evidence/authorization gates, skill use and transitions; and receives complete review reports without executor filtering. Category Б or А can use one execution session and subagents. Reading this skill does not assign arbitration authority or authorize another user session.
+Before retrying an interrupted or uncertain action, determine what landed and what may still run. Preserve useful partial work. A timed-out, disconnected or paused writer may still write through a queued retry, background work or automatic resumption. Before transferring overlapping write scope or relying on that area as settled, obtain evidence that the previous writer completed, was stopped with confirmation or can no longer affect the area through an authorized arrangement. For a denied action, record the affected target and reason. Retry only within its authorization and through a permitted route. Keep an unresolved writer visible as a blocker for dependent work. Replace an unavailable participant only within existing authority and keep the writer and checker responsibilities separate.
 
-Give the initial reviewer the task contract, required skills, relevant constraints, baseline and fixed result revision, artifacts/diff, and factual verification evidence. Keep executor reasoning, prior diagnoses, and expected findings out of the initial assessment. Permit factual clarification afterwards. The reviewer does not edit the result area they review, including during correction cycles. Their separately assigned accompanying changes require another checker.
-
-Read [coordination](references/coordination.md) before assigning areas/roles, arranging access or publication, changing category/session arrangement, exchanging roles between stages, or restoring context. It defines documentation ownership, combined-result gates and transition boundaries. A reviewer subagent is not a second user session. Do not create the latter merely to obtain independent review.
-
-## Keep project documentation current
-
-At stage planning, identify which project documents and reading routes the intended result may affect, their authoritative owners, authorized update destinations, and assigned writers/checkers. Reassess that impact after execution and corrections; a document omitted from the initial plan is not exempt when the result makes it materially stale.
-
-Coordinate required updates within the same stage through the area ownership in [coordination](references/coordination.md). This includes applicable design and technical documents, contracts, configuration, operating/process instructions, project knowledge and navigation. The subject executor does not take over reviewer- or secretary-owned accompaniment/navigation, and no author approves their own changes. Use context for source authority and permitted maintenance destinations; use workflow for applicable Issue records and acceptance. This duty adds no authorization to edit otherwise out-of-scope sources.
-
-Before readiness, require independent evidence that mandatory documentation matches the final combined revision. Outstanding required updates or missing verification prevent readiness even if implementation checks pass. Disclose blocked destinations, missing authority or evidence and their effects; pursue the authorized remedy while continuing unaffected work. Unrelated or optional documentation improvements are not automatic stage blockers.
-
-## Adjudicate findings
-
-Read [adjudication](references/adjudication.md) when findings arrive or material disagreement appears. Match each finding to the agreed requirement and evidence for the reviewed revision. Choose: correct, investigate, reject with grounds, propose separately, or escalate.
-
-Findings are inputs to judgment, not automatic correction instructions or acceptance. Distinguish defects, missing evidence, optional improvements, and decisions beyond scope. Severity labels and confidence do not establish correctness. Resolve factual disagreements with bounded checks rather than votes or indefinite discussion.
-
-Prepare one concrete correction package from the adjudicated findings: required changes, preserved behavior, and evidence that will resolve them. Route each correction to the assigned writer of that area; its independent checker rechecks the corrected revision and affected dependencies. Subject corrections stay with the executor, never its reviewer. Broaden review when the change or evidence warrants it. Keep unresolved findings visible and reconcile every material finding before readiness.
-
-## Control progress
-
-After every two correction cycles without reaching readiness, reassess the approach, progress, repeated causes, verification strategy, and remaining work. Reassess earlier on repeated non-progress, regressions, contradictory requirements, or missing critical evidence.
-
-This is a recurring checkpoint, not a hard limit or automatic mode change or user escalation. Continue a concrete corrective approach within scope and permissions. Record what changes and the next observable checkpoint/stopping condition. Apply an actual budget if one exists; do not invent one to justify stopping.
-
-Never repeat an unchanged failed approach or reset correction history by replacing agents/sessions, relabelling stages, or exchanging roles. Do not transfer a defect to the user merely because a checkpoint was reached when it remains independently fixable. Neither elapsed cycles nor exhausted resources make unresolved blocking defects acceptable.
-
-Escalate a genuine unresolved decision, material tradeoff, missing permission/capability, or exhausted actual budget after checking remedies within current authority. Present the evidence, options and consequences, and recommendation. For a proposed distributed-mode transition, use the agreement procedure in coordination. Continue unaffected authorized work where possible.
-
-## Prepare the result for the user
-
-Stop correction when agreed criteria are met, material findings have evidence-based dispositions, independent verification covers every changed area of the final combined revision, and limitations are disclosed. This includes reviewer/secretary changes; no author signs off their own work. Optional improvements do not trigger another cycle. If a required check remains unavailable, describe the gap and its effect instead of claiming the criterion passed.
-
-Present the result, exact revision, actual verification, dispositions of material findings, and remaining limitations for user acceptance. Readiness is not acceptance. Preserve the user's Issue order and prior authorizations; surface proposed goal/order changes and material compromises as concrete decisions rather than silently changing the agreement.
-
-Use the existing workflow acceptance/consolidation operation. In А the secretary records acceptance; in Б/В appoint one acceptance owner. Reuse prior explicit intermediate-acceptance authorization within its scope; neither new roles nor internal stages require it again. Acceptance recording does not grant authority to accept or close the Issue.
-
-## Loading and continuity
-
-Distinguish reading this procedure from accessing the result being reviewed. Record the skill source/path and revision actually read. Published repository files can supply the procedure; automatic loading and persistent memory are not guaranteed.
-
-If a required source is unavailable, report it and its effect. Do not claim to have applied an unread skill or manufacture missing state. Continue only the portions supported by available instructions and evidence. Restore task state using coordination before dependent work; a memory pointer is not the sole record of decisions, permissions, or progress.
-
-When validating changes to this method, use the bounded [decision scenarios](tests/scenarios.md). Distinguish static inspection from observed agent behavior and live workflow evidence.
+For a change to this method, use the [common](tests/common.md), [Codex dot](tests/codex-dot.md) and [Hermes](tests/hermes.md) decision cases as applicable.

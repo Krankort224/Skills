@@ -33,9 +33,9 @@ Skill levels classify responsibility, not complexity, instruction priority or su
 
 ### Level 0
 
-[arbitration](level-0/arbitration/SKILL.md) supports dot's arbitration role, or an explicitly assigned equivalent, between the user, execution, and independent review. Supporting references cover adjudication and coordination; published availability does not guarantee automatic loading. An ordinary root agent does not acquire this role from its tree position.
+[Arbitration](level-0/arbitration/SKILL.md) covers responsibility for a result, a bounded contribution from another participant, [adjudication](level-0/arbitration/operations/adjudicate.md) and [readiness](level-0/arbitration/operations/assess-readiness.md). The recipient of a direct user task remains accountable for the full result. Each contribution has an owner, a return point, permitted effects and evidence of sufficiency.
 
-Its [coordination contract](level-0/arbitration/references/coordination.md) defines categories В (one lead with subagents), Б (executor and independent reviewer), and А (Б plus secretary), with one writer and an independent checker for each changed area. Categories organize participants; workflow still owns the Issue lifecycle and major-pass acceptance. Multi-pass Issues require Б or А. Documentation requested as the deliverable belongs to the subject executor; accompanying content and navigation have separately assigned owners. Read the coordination contract before assigning those areas or changing category.
+The [Codex dot arrangement](level-0/arbitration/references/codex-dot.md) defines В/Б/А, area writers and checkers, and changes of session or role. A permitted internal reviewer can check a fixed revision in the same user session. The [Hermes arrangement](level-0/arbitration/references/hermes.md) describes direct specialist intake and factual consultations between independently addressable participants under their existing grants.
 
 ### Level 1
 
@@ -43,7 +43,7 @@ Every agent reads these root contracts. They complement one another without requ
 
 - [context](level-1/context/SKILL.md) owns source authority and sufficient repository understanding;
 - [workflow](level-1/workflow/SKILL.md) owns the Issue contract, cycle lifecycle, and acceptance;
-- [delegation](level-1/delegation/SKILL.md) owns execution decomposition, agent assignments, recovery, and integration;
+- [delegation](level-1/delegation/SKILL.md) owns selection, assignment, recovery and verification of internal subagents;
 - [learning](level-1/learning/SKILL.md) owns evidence-driven improvement of methods when meaningful use reveals a gap or transferable solution.
 
 They compose through data: source-backed inputs, task requirements and acceptance criteria, assignments, and results with evidence. The cycle owner turns participant results into the overall handoff. Pass plans define acceptance units; agent trees distribute work within the current task. No fixed skill-call sequence is required.
@@ -85,13 +85,9 @@ Canonical Issue artifact schemas are kept in `level-1/workflow/templates/`; oper
 
 #### delegation
 
-Defines execution planning, assignments, recovery and integration across models and execution environments. The [shared contract](level-1/delegation/SKILL.md) applies to root and workers, including participants without spawning rights; the user's main-agent choice is preserved.
+[Delegation](level-1/delegation/SKILL.md) helps a parent decide whether to do the work directly, use deterministic code or assign a bounded contribution to an internal child. The parent owns the promised result. [Dispatch](level-1/delegation/operations/dispatch.md#prepare-an-accessible-task-package) packages the inputs, authority and expected evidence. [Collect](level-1/delegation/operations/collect.md) checks the returned work, resolves failures and settles outstanding writers.
 
-Load the current operation: [plan](level-1/delegation/operations/plan.md), [dispatch and follow work](level-1/delegation/operations/dispatch.md), [recover](level-1/delegation/operations/recover.md), or [integrate](level-1/delegation/operations/integrate.md). Assignments explicitly carry required skills, source pins, constraints and check evidence through continuation and replacement.
-
-Concrete model mappings and selection/fallback policy live in the scoped [OpenAI pool](level-1/delegation/references/models/openai.md). Runtime profiles describe the [observed OpenAI collaboration interface](level-1/delegation/references/runtimes/openai-collaboration.md), [Kimi Code CLI](level-1/delegation/references/runtimes/kimi-code.md) and [Hermes Agent](level-1/delegation/references/runtimes/hermes.md), with separate evidence limits. Profiles supply interface knowledge, not access or installation; current tools, configuration and permissions govern actual use. Other authorized environments can use the shared method without a prewritten profile.
-
-Model fit, runtime capability, assignment role and permission are separate decisions. Tree planning bounds depth/concurrency and grants spawning rights explicitly; a model tier does not grant those rights or exclude a capable leaf. [Decision scenarios](level-1/delegation/tests/scenarios.md) cover selection, continuity, recovery and evidence boundaries without mandating a test cycle for ordinary work.
+[Model selection](level-1/delegation/references/model-selection.md) starts from the reasoning and access required. A task or project can select a map such as the [OpenAI pool](level-1/delegation/references/models/openai.md). Otherwise the agent assesses the permitted choices on the available evidence. The maintained [Codex](level-1/delegation/references/runtimes/codex.md) and [Hermes](level-1/delegation/references/runtimes/hermes.md) references describe their own controls. An unfamiliar host can use its exposed schema. [Decision scenarios](level-1/delegation/tests/scenarios.md) cover the portable behavior.
 
 #### learning
 
@@ -186,6 +182,18 @@ Issue #9 Pass A migrated the source hierarchy from baseline `c11000bae812d9a87b3
 | `level-2/revit-scripting/` | `level-3/revit/` | `revit-scripting` → `revit` |
 | `level-2/word/` | `level-3/word/` | `style-transfer` unchanged |
 | `level-2/project-space/` | `level-3/project-space/` | `project-space` unchanged |
+
+The arbitration and delegation reorganization starts at `e43d96842c1a11e134d1b77da92d78f595d2bbb6`. Apply the following paths relative to the named skill in either the source hierarchy or a flattened installation. Preserve the original pin for historical observations.
+
+| Skill | Previous entry | Current destination |
+| --- | --- | --- |
+| Arbitration | `references/coordination.md` | [Shared assignments and return](level-0/arbitration/SKILL.md), [Codex dot organization](level-0/arbitration/references/codex-dot.md), [readiness checks](level-0/arbitration/operations/assess-readiness.md) |
+| Arbitration | `references/adjudication.md` | [Adjudicate](level-0/arbitration/operations/adjudicate.md) |
+| Arbitration | `tests/scenarios.md` | [Common cases](level-0/arbitration/tests/common.md), [Codex dot](level-0/arbitration/tests/codex-dot.md), [Hermes](level-0/arbitration/tests/hermes.md) |
+| Delegation | `operations/plan.md` | [Direct work or child](level-1/delegation/SKILL.md), [selection](level-1/delegation/references/model-selection.md), [assignment and tree limits](level-1/delegation/operations/dispatch.md) |
+| Delegation | `operations/recover.md`, `operations/integrate.md` | [Collect, recover and verify](level-1/delegation/operations/collect.md). The [dispatch package anchor](level-1/delegation/operations/dispatch.md#prepare-an-accessible-task-package) remains available. |
+| Delegation | `references/runtimes/openai-collaboration.md` | [Historical evidence at its original revision](https://github.com/Krankort224/Skills/blob/e43d96842c1a11e134d1b77da92d78f595d2bbb6/level-1/delegation/references/runtimes/openai-collaboration.md). Select the current [Codex reference](level-1/delegation/references/runtimes/codex.md) when its documented surface applies. |
+| Delegation | `references/runtimes/kimi-code.md` | [Retained Kimi source](level-1/delegation/references/runtimes/kimi-code.md). The current portable contract also covers hosts outside its maintained Codex and Hermes routes. |
 
 The 2026-11-12 Revit consolidation starts from shared revision `9ff140d622f93f2a7b23356cbc4ebab878259467` and the local `revit-mcp` skill. Shared Revit owns the merged methods. MCP session guidance moves to `revit/references/mcp-operations.md`; modeling, connection boundaries and promotion rules move to the corresponding operation/subject owners. Five C# block paths remain relative to the skill root and their old `mcp-` IDs become filename-based IDs, recorded in each block's provenance with the original Markdown hash. Implementation hashes and native evidence are preserved. Full project field logs remain local. A local `revit-mcp` entry may route to this shared source at an identified revision; preserve existing inbound links during adoption.
 

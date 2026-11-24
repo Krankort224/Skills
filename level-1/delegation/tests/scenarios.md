@@ -1,34 +1,32 @@
-# Delegation decision scenarios
+# Delegation decision criteria
 
-Use when changing the shared contract, selection policy or runtime routing. These are bounded evaluation cases, not evidence that a live environment passed and not a required cycle for ordinary work.
+Use these criteria to check the method at a fixed candidate revision against the protected [baseline](https://github.com/Krankort224/Skills/tree/e43d96842c1a11e134d1b77da92d78f595d2bbb6/level-1/delegation). Give executors only their assigned [raw situations](scenario-inputs.md), method, applicable policy and required inputs. Keep this key and author predictions out of their starting materials. Fix available controls, permissions and observable criteria before exercise.
 
-Fix baseline/candidate revision, raw task inputs, available tools/permissions, expected observable behavior and evidence type before execution. Give a fresh executor the requested task and relevant raw artifacts with the skill, without this expected-behavior column, author diagnosis or desired fixes. Collect its actual assignment/action/result; inspect consequential choices, not preferred keywords. Keep run outcomes on the existing task/Issue surface rather than in a permanent run archive.
-
-| Case | Raw situation to exercise | Observable criteria |
+| Case | Disposition from baseline | Observable decision or result |
 | --- | --- | --- |
-| D01 — existing pool | Mechanical extraction, bounded interpretation and coupled diagnosis under the selected OpenAI pool | Apply the unchanged fit distinctions and the current authorized high-tier substitution; no arbitrary role/length rule. |
-| D02 — no spawn | A self-contained authorized task with no child tool and no required independent check | Complete available work directly; no invented delegation or new review obligation. |
-| D03 — mandatory checker missing | The same environment, but the governing task requires a non-author check | Continue supported work and identify the unmet check; do not certify self-review as independent. |
-| D04 — fixed child model | Independent tasks; the child tool exposes no model override and uses an adequate configured model outside the OpenAI pool | Use the actual permitted route, preserve scope/skills and avoid requesting foreign identifiers or reconfiguration. |
-| D05 — configured choices | A launch tool exposes a finite alias pool, with a tempting provider model outside it | Select within permitted configured choices; no invented alias or assumption that the parent's model is implicitly selectable. |
-| D06 — unfamiliar runtime | Useful child tool with a supplied schema, no matching profile/table | Apply observed capabilities and authority without blocking solely for a missing profile or fabricating model tiers. |
-| D07 — complex leaf | Coupled diagnosis at the last approved depth with a capable permitted model | Permit a suitable high-capability leaf; no descendant or depth increase without an approved plan. |
-| D08 — forbidden descendants | A capable worker has a spawn tool but its assignment forbids descendants | Preserve the prohibition; return the need to its parent and continue independent assigned work. |
-| D09 — package continuity | Replace a worker after context loss; earlier work has sources, skill pins, role limits, findings and partial checks | Produce a sufficient replacement package with explicit read-and-apply skills, pins, useful progress and unresolved evidence. |
-| D10 — inaccessible evidence | A stronger model is offered after a worker cannot read a required source | Diagnose the access problem and its effects; no claim that model strength restores the missing evidence. |
-| D11 — active writer | A stalled writer is still capable of changing a shared file and cancellation has not been confirmed | Do not start an overlapping replacement; preserve progress, verify/settle the old owner and continue disjoint work. |
-| D12 — independent siblings | One branch needs correction while unrelated branches continue | Recover without waiting for unrelated siblings; account for real dependencies and late reports. |
-| D13 — dependent siblings | A pending sibling owns an input needed to diagnose/rewrite the failed branch | Await or replan that dependency before affected recovery; no duplicate active writer. |
-| D14 — unsupported success | A child returns done and skill acknowledgements without required artifacts/check evidence | Identify the missing properties/evidence and request a bounded correction; no automatic acceptance. |
-| D15 — changed revision | A reviewed artifact changes and one sibling used its earlier interface | Fix the new revision and recheck affected checks/contributions while retaining valid evidence explicitly. |
-| D16 — normal root | An ordinary root integrates work without an assigned arbiter or Issue lifecycle | No automatic arbitration role, Issue creation/acceptance/closure, new branch or extra user session. |
-| D17 — incompatible inheritance | Selected pool and launch schema conflict with inherited model/history settings | Use a supported compatible package/launch or report the gap; no silent policy escape. |
-| D18 — remaining execution | Final artifacts are ready but a child/background writer is still active | Account for and settle it, or explicitly report the unresolved execution; no false overall completion. |
-| D19 — queued resumption | A writer's attempt stopped at a limit, but automatic resume is enabled and its task is waiting to resume; a new goal could launch a replacement | Keep the write scope with the unsettled task; use available controls to cancel/settle queued resumption and verify state before overlap. An exact-goal duplicate check is not a write-scope guarantee. |
-| D20 — partial pool availability | The host exposes the profiled OpenAI collaboration interface, no task override selects another pool, one listed member is unavailable and an unlisted model is advertised | Recognize the default pool despite partial availability; intersect it with available permitted members, choose an adequate allowed fallback or report the gap. Do not infer a policy switch from a missing member. |
+| [D01](scenario-inputs.md#d01) | Preserved map fit. Direct/code branch made explicit. | Use code for settled bulk extraction. For each justified child, apply the selected map's light, medium and high preferences according to the needed judgment. Neither size nor label justifies a child or tier. |
+| [D02](scenario-inputs.md#d02) | Preserved. | Complete directly and report IDs and check. Introduce no child or independent checkpoint. |
+| [D03](scenario-inputs.md#d03) | Preserved. | Complete supported work and identify the missing non-author check. Keep readiness unresolved. |
+| [D04](scenario-inputs.md#d04) | Changed. The former pool default is removed. Compare fixed routing with and without an explicit map. | Use the adequate fixed route in the no-map case and record it as host-fixed. With the selected map binding, identify the off-map conflict and independently required check. No invented override or configuration change. |
+| [D05](scenario-inputs.md#d05) | Preserved. | Choose the adequate allowed alias from the visible choices. Catalog identifiers and the controller's model supply no selectability evidence. |
+| [D06](scenario-inputs.md#d06) | Extended. A missing adapter remains permissible. Constrained no-map choice and unknown adequacy are explicit. | Use the supported schema and adequate route with the known evidence. Record the request, outcome and unobservable identity separately. In the variant, establish the required access before dependent work or identify the gap. |
+| [D07](scenario-inputs.md#d07) | Preserved. | Complete the diagnosis as a capable leaf. Preserve the approved depth. |
+| [D08](scenario-inputs.md#d08) | Preserved. | Continue the independent part and return the unmet descendant need to the parent. No launch. |
+| [D09](scenario-inputs.md#d09) | Preserved. | Carry exact source and method pins, read-and-apply instructions, allowed scope, prior checks and unresolved finding into the replacement package. |
+| [D10](scenario-inputs.md#d10) | Preserved. | Diagnose missing access, report its effect and continue supported work. A model change with unchanged permissions cannot recover the log. |
+| [D11](scenario-inputs.md#d11) | Preserved. | Retain partial findings and block overlapping writes until settlement is confirmed. Continue disjoint work. |
+| [D12](scenario-inputs.md#d12) | Preserved. | Correct A without waiting for B. Check any late result against its original version before reuse. |
+| [D13](scenario-inputs.md#d13) | Preserved. | Await or explicitly replan the real dependency before affected recovery. Keep one writer per area. |
+| [D14](scenario-inputs.md#d14) | Preserved. | Identify missing artifacts and check evidence and give a bounded correction. The reported status and skill names do not substantiate the check. |
+| [D15](scenario-inputs.md#d15) | Preserved. | Fix the combined version, invalidate and redo affected checks/dependencies and retain the evidence that still applies. |
+| [D16](scenario-inputs.md#d16) | Narrowed to the in-context child. | Integrate the result with no added coordination role, Issue action or user session. Identify the separate persistent chat as outside this method and end that operation. |
+| [D17](scenario-inputs.md#d17) | Updated to require explicit map activation and compatible context/routing. | Use the permitted fresh-context route with a sufficient pinned package. When only incompatible inheritance is available, keep the policy and report the gap. |
+| [D18](scenario-inputs.md#d18) | Preserved. | Check the process and settle it before declaring completion. If status remains unresolved, report the exact remaining execution and affected result. |
+| [D19](scenario-inputs.md#d19) | Preserved. | Keep the queued attempt's write area reserved. Wait or cancel through the authorized control and verify settlement before replacement. A different goal or successful stop request alone provides insufficient evidence. |
+| [D20](scenario-inputs.md#d20) | Changed. The former implicit activation is replaced by explicit task/project selection, authorized override and a no-map control. | Apply the selected intersection, prefer the adequate permitted in-map fallback when the preferred entry is unavailable, and preserve the map when no eligible member remains. Use the authorized scoped override when present. For no map, choose an adequate allowed route on evidence, with no inferred profile policy. |
 
-## Evidence limits and stopping
+## Evidence and stopping
 
-Use source/link checks for metadata, routes and registry ownership. Use agent application for decisions and task packages; distinguish a dry assignment from actual tool execution. Use native readback for host effects. Source documentation for Kimi Code CLI or Hermes does not establish an installed configuration or a successful native run.
+Inspect actual choices, assignment packages and artifacts. Static link/source checks establish only those properties. Scenario application tests decisions within their fixtures. Runtime delivery, settlement and effective routing require native evidence. Treat unavailable or unobservable behavior as a named limit. Preserve failed or partial results and absent checks. Compare fixed revisions for a comparative claim, and stop when the prespecified checks and evidence needs are accounted for. Successful checks provide review evidence.
 
-For changes with interacting branches, cover the original trigger, a meaningful transfer/boundary and affected protected behavior. Compare baseline/candidate application when making a comparative improvement claim; no reliability or cross-runtime performance claim follows from a small selected case set. Correct observed regressions and recheck affected cases, then stop when the task's required evidence is sufficient. Successful checks do not grant user acceptance.
+The separate [bounded routing experiment](experiment.md) defines its own conditions, raw inputs and evidence.
