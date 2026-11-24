@@ -14,6 +14,12 @@ Choose repetitions for the uncertainty. Stochastic checks need consideration of 
 
 Define compute/time budget and stopping conditions. For adaptive series, specify next-point selection and inference limits; never repeat until a desired result appears.
 
+### Comparing revisions of a working method
+
+Identify the baseline and candidate revisions and the behavior the change should preserve. Compare them on the episode that motivated the proposal, a different input that tests transfer or an applicability boundary, and any previously correct behavior the edit could affect. Reuse adequate existing evidence and identify checks that remain planned.
+
+For instructions, give executors comparable inputs, permissions and starting context. Keep expected answers out of their task materials. Inspect the actions and resulting work. If testing whether agents select a skill, give the natural request in a fresh session without naming the expected skill. Record direct evidence of selection when available. A correct answer alone establishes only the observed result.
+
 ## Prepare reproducible execution
 
 Record applicable code/environment versions, inputs, parameters, initial/boundary conditions, seed/random-draw order, solver settings, precise execution procedure, and metric extraction.

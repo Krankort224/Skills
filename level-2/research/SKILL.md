@@ -1,11 +1,13 @@
 ---
 name: research
-description: Investigate scientific, engineering, numerical-model, and software-behavior questions; connect framing, related work, models, checks, and interpretation, starting at the current phase. Use when the task calls for evidence-producing investigation, hypothesis testing, or interpretation of research results.
+description: Investigate scientific and engineering questions, numerical models, software behavior, and evidence for changing a working method. Use when the task calls for a discriminating check or an interpretation of evidence, including whether a proposed revision would improve a shared skill.
 ---
 
 # Research
 
 Connect question, check, and conclusion. Establish scope, materials, current phase, and outcome. Preserve prior definitions and results; resolve only material gaps. Do not repeat completed phases without reason or require a full cycle for a local check.
+
+An investigation can start during another task when a decision depends on explaining an outcome or testing a change. A proposal, memory entry, or direct observation can supply evidence. Listing or summarizing those records requires only the requested description.
 
 ## Operation routing
 
@@ -54,3 +56,5 @@ When integrating elsewhere, adapt forms to existing documents. Original `*.templ
 ## Completion
 
 Report outcome, evidence limitations, question status, and justified next step or stopping grounds. Stop when the answer suffices or the agreed budget expires. New series require assigned scope and available budget. Evaluate and report research results; project workflow owns acceptance.
+
+For a review of this skill's method-evaluation behavior, see the [review scenarios](tests/method-review.md). The [source record](references/method-evaluation-sources.md) identifies the adapted material and its license.

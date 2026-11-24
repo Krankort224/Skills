@@ -37,6 +37,14 @@ Identify material rivals: applicable measurement/implementation errors, numerica
 
 Prefer discriminating outcomes; a result predicted by every rival cannot select among them.
 
+### When the question concerns a working method
+
+Recover the applicable instruction at the revision the executor used, the action actually taken, and the observed result. A proposed edit identifies a possible remedy. A memory may report an outcome while omitting the inputs, revision, or intervening actions. Trace only the facts that would change the decision.
+
+If the executor skipped an adequate step, identify that step. If the documented route made the step undiscoverable, check the route itself. A missing permission or input may explain a failure even when the route is sound. A constraint set by one project belongs with that project's sources. These explanations can coexist.
+
+When following the method still exposes a gap, or an unusual success suggests a transferable technique, state which change should help, under what conditions, and what outcome would distinguish it from plausible alternatives. A well-documented exceptional case can justify trying a narrow change. For an unexplained success, identify the smallest comparison that would distinguish the proposed cause.
+
 ## Bound the nearest cycle
 
 Define sufficient answer, resources, stopping grounds, and excluded questions. If observations are unavailable, prepare a definition or data requirements.

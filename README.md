@@ -13,8 +13,7 @@ Skills/
 ├── level-1/
 │   ├── context/
 │   ├── workflow/
-│   ├── delegation/
-│   └── learning/
+│   └── delegation/
 ├── level-2/
 │   ├── architecture/
 │   ├── research/
@@ -43,8 +42,7 @@ Every agent reads these root contracts. They complement one another without requ
 
 - [context](level-1/context/SKILL.md) owns source authority and sufficient repository understanding;
 - [workflow](level-1/workflow/SKILL.md) owns the Issue contract, cycle lifecycle, and acceptance;
-- [delegation](level-1/delegation/SKILL.md) owns selection, assignment, recovery and verification of internal subagents;
-- [learning](level-1/learning/SKILL.md) owns evidence-driven improvement of methods when meaningful use reveals a gap or transferable solution.
+- [delegation](level-1/delegation/SKILL.md) owns selection, assignment, recovery and verification of internal subagents.
 
 They compose through data: source-backed inputs, task requirements and acceptance criteria, assignments, and results with evidence. The cycle owner turns participant results into the overall handoff. Pass plans define acceptance units; agent trees distribute work within the current task. No fixed skill-call sequence is required.
 
@@ -89,12 +87,6 @@ Canonical Issue artifact schemas are kept in `level-1/workflow/templates/`; oper
 
 [Model selection](level-1/delegation/references/model-selection.md) starts from the reasoning and access required. A task or project can select a map such as the [OpenAI pool](level-1/delegation/references/models/openai.md). Otherwise the agent assesses the permitted choices on the available evidence. The maintained [Codex](level-1/delegation/references/runtimes/codex.md) and [Hermes](level-1/delegation/references/runtimes/hermes.md) references describe their own controls. An unfamiliar host can use its exposed schema. [Decision scenarios](level-1/delegation/tests/scenarios.md) cover the portable behavior.
 
-#### learning
-
-[learning](level-1/learning/SKILL.md) improves methods through meaningful evidence from actual use. Its compact root selects observe, generalize, refine, verify or consolidate at the current operation, without a fixed sequence. It distinguishes execution, context/access and navigation problems, project-owned facts, reusable gaps and insufficient evidence. Ordinary success requires no reflection report, evaluator or file change. Candidates retain source evidence, conditions/exclusions, owner, protected behavior, authority and planned behavioral checks; original, transfer/boundary and affected regressions establish only their tested scope. Readiness/publication does not supply acceptance, and local facts stay with their project owner.
-
-Selectively loaded placement/evaluation methods, optional forms and a [worked withdrawal example](level-1/learning/references/withdrawal-example.md) support owned refinement, proportionate checks, correction, candidate-only rollback and named deferral. The [source/adaptation record](level-1/learning/references/sources.md) preserves ECC pins, MIT notice and excluded automation assumptions. [Decision](level-1/learning/tests/scenarios.md), [refinement](level-1/learning/tests/refinement-cases.md), [evaluation](level-1/learning/tests/evaluation-cases.md) and [existing-skill pilot](level-1/learning/tests/pilot-cases.md) fixtures distinguish agent applications, mechanical temporary-file checks and unavailable native evidence. They do not qualify live projects or establish reliability. Learning adds no general journal, observer, automatic promotion, Issue lifecycle or orchestration policy.
-
 ### Level 2
 
 #### restructure
@@ -109,7 +101,7 @@ Cloud-hosted file contents must not be downloaded, materialized, synchronized, e
 
 #### research
 
-[research](level-2/research/SKILL.md) connects a research question, evidence-producing checks, interpretation, and the next iteration. Use it when the task calls for scientific and engineering investigations, numerical models, or testable investigations of software behavior.
+[research](level-2/research/SKILL.md) connects a research question, evidence-producing checks, interpretation, and the next iteration. Use it for scientific and engineering investigations, numerical models, software behavior, or a question about changing a working method. A pending proposal, a memory entry, or a direct observation can supply evidence for that question. Listing or summarizing the same records requires no investigation.
 
 The lightweight root routes to adjacent procedures in `operations/`: question framing, literature and prior art, model formalization, experiment design/execution, and interpretation. Start at the current phase and load only the required procedures/forms. Root definitions own the independent `execution_status`, `evidence_quality` and `claim_status` vocabularies. Responsibilities follow operations and available capabilities across Chat, Work, and Codex.
 
@@ -183,6 +175,8 @@ Issue #9 Pass A migrated the source hierarchy from baseline `c11000bae812d9a87b3
 | `level-2/word/` | `level-3/word/` | `style-transfer` unchanged |
 | `level-2/project-space/` | `level-3/project-space/` | `project-space` unchanged |
 
+The former `level-1/learning` skill was retired. Its [last Level-1 contract](https://github.com/Krankort224/Skills/blob/dc835ea066f8907df62ca6e519dc31231f2778b4/level-1/learning/SKILL.md) remains available for historical pins. When the task calls for evaluating a method change, use [Level-2 research](level-2/research/SKILL.md) at the applicable operation.
+
 The arbitration and delegation reorganization starts at `e43d96842c1a11e134d1b77da92d78f595d2bbb6`. Apply the following paths relative to the named skill in either the source hierarchy or a flattened installation. Preserve the original pin for historical observations.
 
 | Skill | Previous entry | Current destination |
@@ -220,8 +214,6 @@ Shared skills may be copied into a repository-local skill directory when project
 For `context`, preserve the shared `SKILL.md` where possible. Use the source `references/repository.template.md` to create the destination's `references/repository.md` from that project's authoritative sources. Keep the template in Skills; exclude the populated Skills map and generated `references/graphify/` artifacts from transfer. Existing destination maps and graphs are project-owned: preserve them during skill updates, then refresh only when requested through context maintain. Each requested graph build selects that repository's own sources and scope; copying the Skills graph does not initialize a destination graph. A shared skill used from outside the target repository must locate the target's map rather than defaulting to its own adjacent map.
 
 For `workflow`, the intent is to keep one common workflow across repositories rather than maintain project-specific variants.
-
-For `learning`, read the shared source at the task's identified revision and keep transient candidates/check results on that task's existing surface. An accepted shared improvement does not update downstream pins or local copies implicitly. Retain project facts, permissions and valid adaptations at their existing owners; adopt a supported method change only within the authorized target scope. Optional forms remain source templates here and become completed local records only when needed. Learning does not require a separate observation store, installation or post-task report.
 
 For `restructure`, keep the shared process generic and express project-specific structure decisions in the task itself rather than creating a permanent project-specific fork unless repeated local rules justify one.
 

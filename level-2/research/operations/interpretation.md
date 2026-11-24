@@ -12,6 +12,8 @@ Record `execution_status`, `evidence_quality`, and `claim_status` independently,
 
 Bound each claim to tested conditions, not the entire theory or every regime. For a universal-claim counterexample, verify assumptions and state scope.
 
+For a proposed method change, report two conclusions separately. What did the evidence establish about the original instruction? What happened with the proposed replacement? One in-scope counterexample can disprove a universal guarantee even while the cause remains open. Success on the motivating case can coexist with a regression on previously correct inputs. Keep both outcomes visible.
+
 ## Separate observation from explanation
 
 Cite specific data, table, plot, log, or proof. Separate effect from proposed mechanism; list material remaining alternatives.
@@ -32,6 +34,8 @@ Propose the next step based on the remaining unknown:
 - stop/defer the direction if the nearest check is not justified by resources.
 
 Explain the uncertainty resolved. A negative result need not change direction.
+
+For a supported revision, name the smallest coherent edit, its owner, conditions of use, and behavior to preserve. A broken route may need an index fix, a local convention belongs in project guidance, and a missing reusable branch belongs in the operation that should handle it. If the existing instruction suffices, explain why. If evidence is inconclusive, name the missing observation. An analysis-only task ends with that finding or proposal. Implementation, correction, withdrawal and acceptance follow the existing task authority.
 
 ## Preserve the conclusion within its scope
 
