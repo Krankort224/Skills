@@ -8,6 +8,8 @@ The task contract requests a revised operating manual as the primary deliverable
 
 The new instruction and its reading-route index live in the same editable file at r1. The instruction author and the navigation owner both have access and want to edit the file this afternoon. Decide how to get their changes into r2 and check the file.
 
+In a variant, the reviewer has an open finding on the instruction. They propose classifying the instruction section as navigation, taking over its write assignment and fixing the finding before the current stage ends. Decide how to handle the proposal.
+
 ## C10
 
 Shay's subject result passed an independent review at r1. Jules, the reviewer, then changed the related usage note at r2. The handoff for r2 cites only the r1 review. Assess the handoff and say what evidence it needs.
