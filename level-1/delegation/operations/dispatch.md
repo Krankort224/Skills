@@ -28,7 +28,9 @@ Check the relevant environment facts before launch.
 - **Ownership and capacity.** Keep one active writer per area. Check the tree, depth, live and queued work, available capacity and tighter limits. Grant descendants only when explicitly assigned and supported. A child without a grant returns the need to its parent. Verify any authorized filesystem isolation before relying on it.
 - **Delivery and effects.** Check how the tool identifies a launch, delivers results and permits continuation or cancellation. Account for synchronous blocking before scheduling. Check current restrictions on configuration, providers and spending before considering any route.
 
-Use the matching reference only for controls it describes and confirm against the live schema. Keep assignment updates concise. Identify the chosen route and rationale when relevant, and announce material tree or limit changes. A rejected launch starts no work. If the outcome of the launch is ambiguous, establish its state before issuing an overlapping request.
+Use the matching reference only for controls it describes and confirm against the live schema. Keep assignment updates concise. Identify the chosen route and rationale when relevant, and announce material tree or limit changes.
+
+A whole-call refusal establishes that no child started only when the response and tool contract confirm it. An error for one batch item can coexist with active or queued siblings. Before retrying or transferring writes, reconcile every item's launch result, returned identity and current status, including possible background and queued writers. If an item's state is ambiguous, verify it before issuing an overlapping request. Continue disjoint work.
 
 On launch record the returned identity, input revision, write scope, route evidence and completion channel. While work is running, use [collect](collect.md).
 

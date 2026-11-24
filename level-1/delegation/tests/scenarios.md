@@ -14,7 +14,7 @@ Use these criteria to check the method at a fixed candidate revision against the
 | [D08](scenario-inputs.md#d08) | Preserved. | Continue the independent part and return the unmet descendant need to the parent. No launch. |
 | [D09](scenario-inputs.md#d09) | Preserved. | Carry exact source and method pins, read-and-apply instructions, allowed scope, prior checks and unresolved finding into the replacement package. |
 | [D10](scenario-inputs.md#d10) | Preserved. | Diagnose missing access, report its effect and continue supported work. A model change with unchanged permissions cannot recover the log. |
-| [D11](scenario-inputs.md#d11) | Preserved. | Retain partial findings and block overlapping writes until settlement is confirmed. Continue disjoint work. |
+| [D11](scenario-inputs.md#d11) | Preserved writer protection with a partial-launch variant. | Retain partial findings and block overlapping writes until settlement is confirmed. Continue disjoint work. For the batch, reconcile each item's result, identity and state. Preserve the running child's assignment and investigate the missing state. Retry only the confirmed unstarted item after correcting the cause and checking its write scope. |
 | [D12](scenario-inputs.md#d12) | Preserved. | Correct A without waiting for B. Check any late result against its original version before reuse. |
 | [D13](scenario-inputs.md#d13) | Preserved. | Await or explicitly replan the real dependency before affected recovery. Keep one writer per area. |
 | [D14](scenario-inputs.md#d14) | Preserved. | Identify missing artifacts and check evidence and give a bounded correction. The reported status and skill names do not substantiate the check. |

@@ -68,6 +68,8 @@ A worker could not open a source log required to decide between two causes. The 
 
 A stalled child owns writes to `results.md`. Its last tool state was running. A cancellation request was sent but has no response. The partial report already contains two findings. You can update an independent file or launch another capable child.
 
+In a second situation, a three-item launch reports that the `results.md` item was refused before it started, the `archive.md` child `task-31` is running, and the `index.md` item's ID and status are missing. You can query live state, and the refusal's cause can be corrected within current permissions. Specify what to do for each item before retrying the batch or reassigning writes.
+
 ## D12
 
 Branch A's author must correct an erroneous calibration value. Branch B is still building an unrelated document with distinct inputs and files. Both branches are in scope. An older answer to branch A might arrive after the correction starts. Specify your sequence.
