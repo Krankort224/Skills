@@ -31,8 +31,9 @@ These are maintainer checks. Use [trial requests](requests.md), the unchanged fi
 | 3 | Duplicate H and missing G | Hold for corrected quantities |
 | 4 | G=9, H=12 | Ready. Only the schedule order changed from case 1. |
 | 5 | The H,G schedule can be prepared. Current quantities are pending. | Hold for the current procurement issue. Previous quantities cannot authorize release. |
+| 6 | G=9, H=12, as in case 4 | Hold for the required QA signature. The preparer can finish reconciliation now. |
 
-Score rows and release separately. A fixed descending sort passes the first three fixtures and fails case 4. Filling a missing sheet from a previous issue fails case 5.
+Score rows and release separately. For cases 1, 2 and 4, distinguish a present decision backed by the executor’s checks from a conditional answer that leaves an unspecified check or record outstanding. Compare case 4 with case 6 to test whether an explicit project control changes only the release decision. A fixed descending sort passes the first three fixtures and fails case 4. Filling a missing sheet from a previous issue fails case 5.
 
 **Numerical and physical evidence.** For the mesh example the successive differences halve from 8 to 4 Pa. First-order extrapolation gives 108 Pa only under a sustained asymptotic trend. Credit diagnosis that scopes the observed mesh dependence and suggests a relevant convergence check, including a finer mesh or verification of solver tolerances. The physical pressure loss requires independent system evidence. For the swapped probes the two pressure differences are 40 and 32 Pa. Swapping reverses the relative offset, giving 36 Pa pressure loss and A-minus-B bias of 4 Pa. Neither absolute bias is identifiable. An engineering answer can finish here.
 

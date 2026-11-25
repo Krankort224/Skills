@@ -1,6 +1,6 @@
 ---
 name: methodology
-description: Investigate unexplained results, find prior work and assess whether its findings transfer to new conditions, validate models and experiments, and design, compare or revise a working method. Use also to inventory existing files or repositories, design their organization, execute an agreed migration, or review its outcome.
+description: Design procedures, investigate results or organize files. Develop a reusable operating procedure for another executor, compare working methods or evaluate a proposed revision. Find prior work and assess which findings transfer, or validate models and experiments. Inventory existing material, design its organization, execute an agreed migration or review its outcome.
 ---
 
 # Methodology

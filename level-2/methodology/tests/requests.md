@@ -18,13 +18,14 @@ Each quoted block is a separate assignment. Give an executor only its block and 
 
 Supply the previous executor's procedure verbatim with this request to a fresh executor.
 
-> Use the supplied procedure. For each delivery, show the rows in delivery order and say whether you can release the schedule now. If release must wait, say what can be prepared and what is outstanding. Quantities are counts. The preparer is authorized to release a reconciled schedule. Cases 1–4 contain the complete current sheets for their deliveries.
+> Use the supplied procedure. For each delivery, show the rows in delivery order and say whether you can release the schedule now. If release must wait, say what can be prepared and what is outstanding. Quantities are counts. The preparer is authorized to release a reconciled schedule. Each case gives the applicable release conditions. Cases 1–4 and 6 contain the complete current sheets for their deliveries.
 >
 > 1. Schedule H,G. Quantities G=9,H=12.
 > 2. Schedule H,G. Quantities H=6,G=4.
 > 3. Schedule H,G. Quantities H=6,H=4.
 > 4. Schedule G,H. Quantities G=9,H=12.
 > 5. Schedule H,G has been issued. This delivery's procurement sheet is still pending. The previous delivery listed H=6,G=4.
+> 6. Schedule G,H. Quantities G=9,H=12. This delivery's release plan requires a QA signature. It is still outstanding.
 
 ## Step-size calculation
 

@@ -11,7 +11,7 @@ def prepare(root, case):
     def write(relative_path, content):
         path = root / relative_path
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(content, encoding="utf-8")
+        path.write_bytes(content.encode("utf-8"))
 
     def git(*args):
         subprocess.run(["git", "-C", str(root), *args], check=True, capture_output=True)
@@ -22,6 +22,7 @@ def prepare(root, case):
             "-c", "commit.gpgsign=false", "commit", "-m", message)
 
     git("init", "--quiet")
+    git("config", "--local", "core.autocrlf", "false")
     write("incoming/r7.md", "Drawing P-04 / revision 7 / transmittal T-34\n")
     write("incoming/r6.md", "Drawing P-04 / revision 6 / transmittal T-29\n")
     write("incoming/loose.md", "P-04 excerpt. Origin and approval status unknown.\n")
