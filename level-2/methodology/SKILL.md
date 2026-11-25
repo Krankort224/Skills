@@ -10,7 +10,7 @@ Start at the requested result. Use an existing observation, experiment, inventor
 | The user needs to… | Start here |
 | --- | --- |
 | Explain a discrepancy or choose a check that separates possible causes | Investigate · [Diagnose a discrepancy](operations/investigate.md#diagnose-a-discrepancy) |
-| Find comparable work, decide what transfers, or give a colleague the date and route of a search to repeat | Investigate · [Compare prior work](operations/investigate.md#compare-prior-work) |
+| Find comparable work and decide what transfers | Investigate · [Compare prior work](operations/investigate.md#compare-prior-work) |
 | Develop a procedure from scratch, compare ways of working, or decide whether a proposal warrants a change | Investigate · [Design or evaluate a working method](operations/investigate.md#design-or-evaluate-a-working-method) |
 | Draw a conclusion from measurements, calculations or completed trials | Investigate · [Interpret existing evidence](operations/investigate.md#interpret-existing-evidence) |
 | Establish what is present or identify competing versions | Organize · [Inventory existing material](operations/organize.md#inventory-existing-material) |
