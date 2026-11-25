@@ -22,11 +22,21 @@ These are maintainer checks. Use [trial requests](requests.md), the unchanged fi
 | E | Following v2 exposes an in-scope mismatch. Tag lookup fixes it on reordered input and preserves schedule order on the transfer and previously correct cases. Retain validation and locate the edit in the shared merge operation. Invalid inputs were outside the reported trials. |
 | F | The fix corrects quantities yet changes the required order on the second and previously correct third inputs. Withhold this candidate and retain the separately demonstrated gap in v2. |
 
-**Design and handoff.** Check whether the procedure explains what each source owns, how to identify compatible deliveries, the order to emit, validation of key uniqueness and missing/unmatched rows, and what to do while an input is pending. A second executor should return (1) H=12, G=9, (2) H=6, G=4, and (3) an unresolved duplicate H and missing G with final release held. Score row reconciliation and the release decision separately. The first two pairs provide the required source status and release authority. Record any extra prerequisite that would hold them. Preserve omissions in the supplied procedure and any repairs the executor introduced.
+**Design and handoff.** Grade the supplied procedure and the second executor’s work separately. Look for ownership of each input and release, compatible deliveries, tag uniqueness, missing or unmatched rows, and a way to prepare work while an input is pending. Inspect the procedure for a new mandatory approval even if the executor bypassed it. Record any repair the executor supplied.
+
+| Delivery | Rows or unresolved inputs | Release decision |
+| --- | --- | --- |
+| 1 | H=12, G=9 | Ready for the authorized preparer to release |
+| 2 | H=6, G=4 | Ready |
+| 3 | Duplicate H and missing G | Hold for corrected quantities |
+| 4 | G=9, H=12 | Ready. Only the schedule order changed from case 1. |
+| 5 | The H,G schedule can be prepared. Current quantities are pending. | Hold for the current procurement issue. Previous quantities cannot authorize release. |
+
+Score rows and release separately. A fixed descending sort passes the first three fixtures and fails case 4. Filling a missing sheet from a previous issue fails case 5.
 
 **Numerical and physical evidence.** For the mesh example the successive differences halve from 8 to 4 Pa. First-order extrapolation gives 108 Pa only under a sustained asymptotic trend. Credit diagnosis that scopes the observed mesh dependence and suggests a relevant convergence check, including a finer mesh or verification of solver tolerances. The physical pressure loss requires independent system evidence. For the swapped probes the two pressure differences are 40 and 32 Pa. Swapping reverses the relative offset, giving 36 Pa pressure loss and A-minus-B bias of 4 Pa. Neither absolute bias is identifiable. An engineering answer can finish here.
 
-**Prior work.** Check the [NIST/SEMATECH handbook, section 2.3.3.1.2](https://itl.nist.gov/div898/handbook/mpc/section3/mpc3312.htm). It gives a test–reference–reference–test sequence and a linear combination cancelling a common linear drift for equally spaced observations. The design alone cannot guarantee cancellation of an arbitrary zero step. Record the source actually inspected and the limit on transfer. If a source cannot be accessed, record that gap.
+**Prior work.** Check the [NIST/SEMATECH handbook, section 2.3.3.1.2](https://itl.nist.gov/div898/handbook/mpc/section3/mpc3312.htm). Its test–reference–reference–test sequence cancels common linear drift for equally spaced observations. An arbitrary zero step can leave a bias. Grade the transfer conclusion separately from the search record. Can a colleague locate the decisive passage and identify when and how it was found? Where actions are visible, compare the reported query or direct lookup with the actual one. A suggested query is useful for a future search but does not document the completed lookup. Record any access gap.
 
 **Authorized move.** Compare `release/p04.md` and `history/p04-r6.md` byte-for-byte with the original r7 and r6 Git blobs. Verify the original paths are gone, the two labels in `index.md` resolve to their mapped files, and P-04 and the transmittal IDs survive. Compare `incoming/loose.md`, the existing working edit to `desk.txt`, and the rest of the working tree with their starting states. A request for a plan alone would have a different success condition.
 
