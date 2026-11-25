@@ -1,6 +1,6 @@
 # Result <check_id>: <name>
 
-> Adaptation form. Fill from actual evidence; use root status definitions for absent evidence. A result does not imply acceptance of a project decision. After adaptation, remove guidance and `.template.` from the name of a new file.
+> Adaptation form. Fill from actual evidence; use the status definitions in the experiments reference for absent evidence. A result does not imply acceptance of a project decision. After adaptation, remove guidance and `.template.` from the name of a new file.
 
 ## Basis
 
@@ -17,7 +17,7 @@
 
 ## Credibility
 
-- `evidence_quality` (root definitions):
+- `evidence_quality` (see the evidence record in the experiments reference):
 
 - Verified comparability conditions, implementation correctness, and numerical/statistical credibility:
 - Execution failures, unreliable data, and exclusion reasons:
@@ -27,7 +27,7 @@
 
 | Claim ID, claim and conditions | `claim_status` | Evidence / check and run IDs | Limitation and remaining alternatives |
 | --- | --- | --- | --- |
-| <claim_id; claim> | <root value> | <IDs; specific location> | <bounds> |
+| <claim_id; claim> | <evidence-record value> | <IDs; specific location> | <bounds> |
 
 - Observed effect separately from its proposed explanation:
 - What this result does and does not permit claiming:

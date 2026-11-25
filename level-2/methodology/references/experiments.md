@@ -49,6 +49,18 @@ Establish:
 - whether an execution failure or numerical artifact explains the effect;
 - whether derived numbers and plots can be reproduced from the stated evidence.
 
-Record `execution_status`, `evidence_quality`, and `claim_status` using root definitions. Missing metrics after failure are not zero effects; do not pool incomparable configurations.
+Record `execution_status`, `evidence_quality`, and `claim_status` using the [evidence record](#evidence-record). Missing metrics after failure are not zero effects; do not pool incomparable configurations.
 
-Record data and limitations in the adopted document; route substantive conclusions to [interpretation](interpretation.md). Use optional root forms only as needed.
+Record data and limitations in the adopted document; route substantive conclusions to [interpretation](../operations/investigate.md#interpret-existing-evidence). Use the project’s adopted form when reproduction or handoff needs one.
+
+## Evidence record
+
+Use stable `claim_id`, `check_id`, and `run_id` to connect definitions, configurations, evidence, and conclusions. Report independent fields using these canonical values; procedures and forms reference them:
+
+| Field | Values and meaning |
+| --- | --- |
+| `execution_status` | `planned`: defined, unperformed; `handed_off`: assigned externally, results pending; `completed`: planned execution finished; `partial`: only part executed; `failed`: execution unsuccessful; `stopped`: deliberately ended before completion |
+| `evidence_quality` | `usable`: adequate for the scoped inference; `limited`: usable only with stated restrictions; `unusable`: cannot support inference; `not_obtained`: required evidence absent |
+| `claim_status` | `untested`: not yet evaluated; `supported`: prediction supported under tested conditions; `partial`: only part or some conditions supported; `contradicts`: credible evidence incompatible with the specified implication; `inconclusive`: insufficient evidence or indistinguishable alternatives |
+
+Execution failure is not contradiction; numerical unreliability limits evidence. Completed execution does not imply usable evidence or support.

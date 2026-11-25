@@ -12,7 +12,7 @@
 
 | Claim ID | Claim and conditions | Source / check and run IDs; precise location | Evidence type | `claim_status`; relationship / gap | Transfer limitation |
 | --- | --- | --- | --- | --- | --- |
-| <claim_id> | <claim> | <link, IDs, version, section/key> | <proof, calculation, measurement, documentation> | <root value; assessment> | <bounds> |
+| <claim_id> | <claim> | <link, IDs, version, section/key> | <proof, calculation, measurement, documentation> | <evidence-record value; assessment> | <bounds> |
 
 ## Implications for the investigation
 

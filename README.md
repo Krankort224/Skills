@@ -16,8 +16,7 @@ Skills/
 │   └── delegation/
 ├── level-2/
 │   ├── architecture/
-│   ├── research/
-│   └── restructure/
+│   └── methodology/
 └── level-3/
     ├── revit/
     ├── word/
@@ -89,25 +88,11 @@ Canonical Issue artifact schemas are kept in `level-1/workflow/templates/`; oper
 
 ### Level 2
 
-#### restructure
+#### methodology
 
-Restructures an existing repository or file accumulation without imposing a universal directory layout.
+[Methodology](level-2/methodology/SKILL.md) has two entries. [Investigate](level-2/methodology/operations/investigate.md) helps explain a discrepancy, assess prior work, design or evaluate a working procedure, or interpret existing observations. [Organize](level-2/methodology/operations/organize.md) helps inventory existing material, design its organization, execute an agreed map, or review the outcome. Select the operation by the requested result. A completed experiment or an agreed migration map can be the starting point.
 
-The root routes to four adjacent procedures in `operations/`: inventory, design and migration planning, migration, and review. Start at the requested operation and load only the procedure and missing prerequisites. Common principles and capability/access boundaries stay in `SKILL.md`.
-
-Assign operations by available capabilities and access, independently of Chat, Work, Codex or model. One executor may perform several operations; handoffs preserve evidence, the agreed migration map and prior authorizations. Migration follows the agreed map; review checks both mechanical preservation and whether the structure resolves the stated problems.
-
-Cloud-hosted file contents must not be downloaded, materialized, synchronized, exported, or copied into the local environment without separate, explicit, and unambiguous user authorization.
-
-#### research
-
-[research](level-2/research/SKILL.md) connects a research question, evidence-producing checks, interpretation, and the next iteration. Use it for scientific and engineering investigations, numerical models, software behavior, or a question about changing a working method. A pending proposal, a memory entry, or a direct observation can supply evidence for that question. Listing or summarizing the same records requires no investigation.
-
-The lightweight root routes to adjacent procedures in `operations/`: question framing, literature and prior art, model formalization, experiment design/execution, and interpretation. Start at the current phase and load only the required procedures/forms. Root definitions own the independent `execution_status`, `evidence_quality` and `claim_status` vocabularies. Responsibilities follow operations and available capabilities across Chat, Work, and Codex.
-
-Keep exploratory and confirmatory work distinct. Separate implementation correctness, numerical credibility, and correspondence to the investigated system. Preserve negative/inconclusive results and plan deviations; distinguish execution failure from evidence against a hypothesis. Checks and run counts are proportional to the question and uncertainty, with explicit budget and stopping conditions.
-
-Three optional adaptation forms cover evidence mapping, experiment definition, and results. Reuse project documents and storage conventions rather than introducing another directory layout. Source authority, Issue lifecycle, and agent orchestration remain with Level 1 contracts.
+For detailed investigations, the [model](level-2/methodology/references/models.md) and [experiment](level-2/methodology/references/experiments.md) references cover verification and reproducible evidence. Method evaluation can use observations from ordinary work, including a pending proposal or memory. A request to list those records needs only the list. Maintainers can use the [discovery and execution checks](level-2/methodology/tests/method-review.md) to compare revisions.
 
 #### architecture
 
@@ -175,7 +160,27 @@ Issue #9 Pass A migrated the source hierarchy from baseline `c11000bae812d9a87b3
 | `level-2/word/` | `level-3/word/` | `style-transfer` unchanged |
 | `level-2/project-space/` | `level-3/project-space/` | `project-space` unchanged |
 
-The former `level-1/learning` skill was retired. Its [last Level-1 contract](https://github.com/Krankort224/Skills/blob/dc835ea066f8907df62ca6e519dc31231f2778b4/level-1/learning/SKILL.md) remains available for historical pins. When the task calls for evaluating a method change, use [Level-2 research](level-2/research/SKILL.md) at the applicable operation.
+The former `level-1/learning` was retired. Its [last Level-1 contract](https://github.com/Krankort224/Skills/blob/dc835ea066f8907df62ca6e519dc31231f2778b4/level-1/learning/SKILL.md) remains available for historical pins. Method evaluation now has a [direct entry in methodology](level-2/methodology/operations/investigate.md#design-or-evaluate-a-working-method).
+
+#### Adopting methodology
+
+The Level-2 `research` and `restructure` identifiers are retired. Their last separate [research](https://github.com/Krankort224/Skills/tree/ad1c823f1611319a6b17b2758a5f85630da6472c/level-2/research) and [restructure](https://github.com/Krankort224/Skills/tree/ad1c823f1611319a6b17b2758a5f85630da6472c/level-2/restructure) trees remain available at that revision. When adopting the newer shared source, replace those two active entries with `level-2/methodology/SKILL.md` and update operation references as follows.
+
+| Former operation under `level-2/` | Current destination |
+| --- | --- |
+| `research/operations/question.md` | [Diagnose a discrepancy](level-2/methodology/operations/investigate.md#diagnose-a-discrepancy) or [design or evaluate a working method](level-2/methodology/operations/investigate.md#design-or-evaluate-a-working-method) |
+| `research/operations/literature.md` | [Compare prior work](level-2/methodology/operations/investigate.md#compare-prior-work) |
+| `research/operations/model.md` | [Models](level-2/methodology/references/models.md) |
+| `research/operations/experiment.md` | [Experiments](level-2/methodology/references/experiments.md) |
+| `research/operations/interpretation.md` | [Interpret existing evidence](level-2/methodology/operations/investigate.md#interpret-existing-evidence) |
+| `restructure/operations/inventory.md` | [Inventory existing material](level-2/methodology/operations/organize.md#inventory-existing-material) |
+| `restructure/operations/design.md` | [Design the structure](level-2/methodology/operations/organize.md#design-the-structure) |
+| `restructure/operations/migration.md` | [Execute an agreed migration](level-2/methodology/operations/organize.md#execute-an-agreed-migration) |
+| `restructure/operations/review.md` | [Review an existing result](level-2/methodology/operations/organize.md#review-an-existing-result) |
+
+The three optional forms retain their names under `methodology/templates/`. The [evidence record](level-2/methodology/references/experiments.md#evidence-record) now owns the status vocabulary. Preserve existing records, completed forms, local adaptations and revision provenance during adoption.
+
+#### Other source migrations
 
 The arbitration and delegation reorganization starts at `e43d96842c1a11e134d1b77da92d78f595d2bbb6`. Apply the following paths relative to the named skill in either the source hierarchy or a flattened installation. Preserve the original pin for historical observations.
 
@@ -191,7 +196,7 @@ The arbitration and delegation reorganization starts at `e43d96842c1a11e134d1b77
 
 The 2026-11-12 Revit consolidation starts from shared revision `9ff140d622f93f2a7b23356cbc4ebab878259467` and the local `revit-mcp` skill. Shared Revit owns the merged methods. MCP session guidance moves to `revit/references/mcp-operations.md`; modeling, connection boundaries and promotion rules move to the corresponding operation/subject owners. Five C# block paths remain relative to the skill root and their old `mcp-` IDs become filename-based IDs, recorded in each block's provenance with the original Markdown hash. Implementation hashes and native evidence are preserved. Full project field logs remain local. A local `revit-mcp` entry may route to this shared source at an identified revision; preserve existing inbound links during adoption.
 
-`architecture`, `research` and `restructure` remain Level 2. Level-0 arbitration and the three Level-1 skills retain their paths. Resources, scripts, examples and operation references move with their complete skill subtrees; source reclassification does not change their behavior.
+At the time of the source-level migration, `architecture`, `research` and `restructure` stayed at Level 2. See [Adopting methodology](#adopting-methodology) for their subsequent catalog change. Level-0 arbitration and the three Level-1 skills retain their paths. Resources, scripts, examples and operation references move with their complete skill subtrees; source reclassification does not change their behavior.
 
 For an explicitly chosen local-copy installation, place skills directly under the destination `skills/` (without the source `level-*` hierarchy). Shared use instead follows the source and project-reference routes below. Update active paths and Revit invocation names, preserve local customizations and original source revision/provenance, and keep already-published historical pins unchanged. Do not implicitly migrate downstream repositories. Original `*.template.*` files stay in this shared source; the adopted project keeps completed local versions.
 
@@ -215,9 +220,7 @@ For `context`, preserve the shared `SKILL.md` where possible. Use the source `re
 
 For `workflow`, the intent is to keep one common workflow across repositories rather than maintain project-specific variants.
 
-For `restructure`, keep the shared process generic and express project-specific structure decisions in the task itself rather than creating a permanent project-specific fork unless repeated local rules justify one.
-
-For `research`, preserve shared principles and operation procedures, and use the project's existing methodology and artifact locations. Adapt optional forms into completed project documents; source `*.template.*` files stay in Skills. Replace the local skill's adopted-artifacts subsection with links to those documents or a description of the local forms, so integration does not leave broken template links.
+For `methodology`, keep project-specific conventions, agreed directory structures and evidence at their project owners. When adopting a local copy, preserve the shared procedures, adapt optional forms into completed project documents, and update the skill's optional-form links to those documents or describe the local evidence location.
 
 For `revit`, keep runtime profiles, project parameter/family bindings, paths, tolerances and native evidence locations in the project's existing configuration/instructions. Preserve shared block contracts and record the adopted source revision; project-specific pipeline state remains with its owner.
 

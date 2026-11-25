@@ -33,7 +33,7 @@
 
 ## Execution and changes
 
-- `execution_status` (root definitions):
+- `execution_status` (see the evidence record in the experiments reference):
 - Run IDs and links to configurations and results:
 - Deviations, definition changes and reasons; relationship to the previous version:
 - Link to the result/conclusion in the adopted project document:

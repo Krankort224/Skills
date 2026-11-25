@@ -5,7 +5,13 @@ The selective adaptation recorded in [Skills Issue #16](https://github.com/Krank
 - [Continuous learning v2](https://github.com/affaan-m/ECC/blob/d2ef2680594f9a17526a6e1a2e18b3d242c5d17b/skills/continuous-learning-v2/SKILL.md) informed the use of concrete corrections and successful techniques as evidence, and the distinction between project-specific knowledge and transferable methods.
 - [Eval harness](https://github.com/affaan-m/ECC/blob/d2ef2680594f9a17526a6e1a2e18b3d242c5d17b/skills/eval-harness/SKILL.md) informed defining desired behavior before a revision and checking both newly supported and previously correct behavior.
 
-The research operations adapt those ideas as instructions. The [upstream license](https://github.com/affaan-m/ECC/blob/d2ef2680594f9a17526a6e1a2e18b3d242c5d17b/LICENSE) notice is reproduced below.
+The investigation operation retains these adaptations. The [upstream license](https://github.com/affaan-m/ECC/blob/d2ef2680594f9a17526a6e1a2e18b3d242c5d17b/LICENSE) notice is reproduced below.
+
+## Further design sources
+
+- The [Agent Skills specification](https://agentskills.io/specification) informed the description and direct routes. Its [discovery](https://agentskills.io/skill-creation/optimizing-descriptions) and [output evaluation](https://agentskills.io/skill-creation/evaluating-skills) guidance informed separate checks for selection and execution.
+- [Systematic Debugging](https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md) illustrates the comparison between a failing example and a working one. [MADR](https://adr.github.io/madr/examples.html) shows how briefly a decision can record the alternatives and the basis for choosing one.
+- [US National Archives guidance on shared drives](https://www.archives.gov/records-mgmt/bulletins/2012/2012-02.html) illustrates how to distinguish the record copy from other versions. Apply the project's own authority and retention rules.
 
 ## Retained upstream MIT notice
 
