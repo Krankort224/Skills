@@ -31,7 +31,7 @@ Skill levels classify responsibility, not complexity, instruction priority or su
 
 ### Level 0
 
-[Arbitration](level-0/arbitration/SKILL.md) covers responsibility for a result, a bounded contribution from another participant, [adjudication](level-0/arbitration/operations/adjudicate.md) and [readiness](level-0/arbitration/operations/assess-readiness.md). The recipient of a direct user task remains accountable for the full result. Each contribution has an owner, a return point, permitted effects and evidence of sufficiency.
+[Arbitration](level-0/arbitration/SKILL.md) keeps the user's goal with the arbiter and routes subject work to a bounded internal worker or an independently addressable owner. Its [two tools](level-0/arbitration/references/tools.md) resolve the Skills revision at reading time and review each exact outgoing assignment at dispatch time. The arbiter [adjudicates findings](level-0/arbitration/references/adjudicate.md) and [assesses readiness](level-0/arbitration/references/assess-readiness.md). A specialist assigned a direct task may execute it.
 
 The [Codex dot arrangement](level-0/arbitration/references/codex-dot.md) defines В/Б/А, area writers and checkers, and changes of session or role. A permitted internal reviewer can check a fixed revision in the same user session. The [Hermes arrangement](level-0/arbitration/references/hermes.md) describes direct specialist intake and factual consultations between independently addressable participants under their existing grants.
 
@@ -186,8 +186,8 @@ The arbitration and delegation reorganization starts at `e43d96842c1a11e134d1b77
 
 | Skill | Previous entry | Current destination |
 | --- | --- | --- |
-| Arbitration | `references/coordination.md` | [Shared assignments and return](level-0/arbitration/SKILL.md), [Codex dot organization](level-0/arbitration/references/codex-dot.md), [readiness checks](level-0/arbitration/operations/assess-readiness.md) |
-| Arbitration | `references/adjudication.md` | [Adjudicate](level-0/arbitration/operations/adjudicate.md) |
+| Arbitration | `references/coordination.md` | [Shared assignments and return](level-0/arbitration/SKILL.md), [Codex dot organization](level-0/arbitration/references/codex-dot.md), [readiness checks](level-0/arbitration/references/assess-readiness.md) |
+| Arbitration | `references/adjudication.md` | [Adjudicate](level-0/arbitration/references/adjudicate.md) |
 | Arbitration | `tests/scenarios.md` | [Common cases](level-0/arbitration/tests/common.md), [Codex dot](level-0/arbitration/tests/codex-dot.md), [Hermes](level-0/arbitration/tests/hermes.md) |
 | Delegation | `operations/plan.md` | [Direct work or child](level-1/delegation/SKILL.md), [selection](level-1/delegation/references/model-selection.md), [assignment and tree limits](level-1/delegation/operations/dispatch.md) |
 | Delegation | `operations/recover.md`, `operations/integrate.md` | [Collect, recover and verify](level-1/delegation/operations/collect.md). The [dispatch package anchor](level-1/delegation/operations/dispatch.md#prepare-an-accessible-task-package) remains available. |

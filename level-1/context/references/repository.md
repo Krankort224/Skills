@@ -15,7 +15,7 @@ A typical task uses context to establish relevant owners and facts, domain/softw
 
 | Component | Responsibility and relationship | Owning entry/evidence |
 | --- | --- | --- |
-| Level 0: arbitration | Tracks responsibility between participants, adjudicates findings and assesses readiness within assigned authority. | [arbitration](../../../level-0/arbitration/SKILL.md), [Codex dot](../../../level-0/arbitration/references/codex-dot.md), [Hermes](../../../level-0/arbitration/references/hermes.md) |
+| Level 0: arbitration | Keeps the user's objective across sessions, chooses the subject owner, reviews each assignment, adjudicates findings and assesses readiness. | [arbitration](../../../level-0/arbitration/SKILL.md), [executable checks](../../../level-0/arbitration/references/tools.md), [Codex dot](../../../level-0/arbitration/references/codex-dot.md), [Hermes](../../../level-0/arbitration/references/hermes.md) |
 | Level 1: context | Resolves project scope, authoritative sources and uncertainty; reads, maintains or reviews project-local references. Optional Graphify methods turn selected sources into derived evidence. | [context](../SKILL.md), [graph methods/profile](../SKILL.md#graph-evidence-and-technical-references) |
 | Level 1: workflow | Defines Issue contracts, execution/review cycles and acceptance. Stable bodies, working comments, accepted summaries and Git history have different roles. | [workflow](../../workflow/SKILL.md) |
 | Level 1: delegation | Selects direct work, code or an internal child; packages the assignment, collects results and handles interrupted work. | [delegation](../../delegation/SKILL.md), [dispatch](../../delegation/operations/dispatch.md), [collect](../../delegation/operations/collect.md) |
@@ -53,7 +53,7 @@ Start at [AGENTS usage/composition](../../../AGENTS.md#usage), then the applicab
 
 ### Coordinate execution and independent review
 
-For an assigned coordination role, start at [arbitration](../../../level-0/arbitration/SKILL.md). Select the [Codex dot](../../../level-0/arbitration/references/codex-dot.md) or [Hermes](../../../level-0/arbitration/references/hermes.md) organization when applicable. Follow [adjudication](../../../level-0/arbitration/operations/adjudicate.md) for contested findings and [readiness](../../../level-0/arbitration/operations/assess-readiness.md) for the combined result. For an internal child's sources, grants and return, use the [dispatch package](../../delegation/operations/dispatch.md#prepare-an-accessible-task-package). For Issue status and authorized acceptance use [workflow](../../workflow/SKILL.md), whose current multi-pass Issue contract requires Б or А.
+For an assigned coordination role, start at [arbitration](../../../level-0/arbitration/SKILL.md). Select the [Codex dot](../../../level-0/arbitration/references/codex-dot.md) or [Hermes](../../../level-0/arbitration/references/hermes.md) organization when applicable. Follow [adjudication](../../../level-0/arbitration/references/adjudicate.md) for contested findings and [readiness](../../../level-0/arbitration/references/assess-readiness.md) for the combined result. For an internal child's sources, grants and return, use the [dispatch package](../../delegation/operations/dispatch.md#prepare-an-accessible-task-package). For Issue status and authorized acceptance use [workflow](../../workflow/SKILL.md), whose current multi-pass Issue contract requires Б or А.
 
 ### Adopt or update context in another project
 

@@ -1,12 +1,12 @@
 # Codex dot coordination
 
-Use when the user addresses dot directly or assigns it the coordinating role. Dot may receive and finish a simple task in one user session with no standing specialists. A requirement for independent checking can be met by a permitted internal reviewer with adequate source access and independence. That role needs neither a second persistent chat nor a separate child-management loop. An ordinary agent's position in a tree supplies no dot mandate.
+Use when the user addresses dot directly or assigns it the coordinating role. Dot retains the goal and returns the result. For a [small bounded result](../SKILL.md#choose-the-owner), commission an internal worker and use a separate permitted non-author when independent checking is required. Dot [reviews its outgoing work orders](../SKILL.md#review-each-outgoing-assignment) to either type of recipient. An ordinary agent's position in a tree supplies no dot mandate.
 
 ## Choose the category for this assignment
 
 | Category | Arrangement |
 | --- | --- |
-| В | One lead, with bounded contributors if useful and a non-author for each required independent check. No standing reviewer or secretary is required. |
+| В | One coordinator assigns the subject result to a worker and each required independent check to a non-author. The workers can be internal for bounded assignments. No standing reviewer or secretary is required. |
 | Б | Executor writes and corrects the subject result. Reviewer independently checks it, returns full findings to dot and owns accompanying content and navigation. |
 | А | Category Б plus a secretary for the assigned protocol, navigation and authorized record responsibilities. Reviewer retains accompanying content. |
 
@@ -51,4 +51,4 @@ Before adding a separate user session, establish its actual launch, access and r
 
 On a fresh or transferred session, apply the [interrupted assignment](../SKILL.md#recover-an-interrupted-assignment) contract. Recover the active unit/pass, cycle, stage boundary, category, area and record owners, and granted session scope as part of the live state. Keep the required method instructions with their exact pins through review and correction. Record actual checking separately from the assignments.
 
-Return the fixed result and full evidence to the responsible participant, with a [correction decision](../operations/adjudicate.md), [readiness conclusion](../operations/assess-readiness.md) or a named reserved decision. When asked about an acceptance record, establish the actual reviewed result, the scope of the user's authorization and the record's observed state. In А the assigned secretary is the record owner. In В/Б identify one responsible record owner if needed. Give the recorder the verified evidence and authorization for the specified decision. Arbitration concludes with that handoff.
+Return the fixed result and full evidence to the responsible participant, with a [correction decision](adjudicate.md), [readiness conclusion](assess-readiness.md) or a named reserved decision. When asked about an acceptance record, establish the actual reviewed result, the scope of the user's authorization and the record's observed state. In А the assigned secretary is the record owner. In В/Б identify one responsible record owner if needed. Give the recorder the verified evidence and authorization for the specified decision. Arbitration concludes with that handoff.

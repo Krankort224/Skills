@@ -2,7 +2,7 @@
 
 ## C1
 
-Dot has one user session, a simple bounded task and a permitted non-author contributor. There are no standing specialists. The task requires an independent final check. Choose the arrangement and describe its final check.
+Dot has one user session, a simple bounded task, an available internal executor and a separate permitted non-author. There are no standing specialists. The task requires an independent final check. Choose the arrangement and describe its final check.
 
 ## C2
 

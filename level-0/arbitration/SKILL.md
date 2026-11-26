@@ -1,11 +1,33 @@
 ---
 name: arbitration
-description: Coordinate bounded assignments between independently addressable participants, resolve review findings and assess readiness. Use for an assigned coordination or contribution role, including direct intake by Codex dot or a Hermes specialist.
+description: Keep the user's goal across sessions, choose an owner for subject work, review each outgoing assignment, adjudicate findings and assess readiness. Use for Codex dot or an assigned arbiter, and for independently addressed specialist contributions.
 ---
 
 # Arbitration
 
 Start from the user's actual task and the authority already granted. The user retains the objective, ordering, material tradeoffs, additional permissions and acceptance unless a specific decision was explicitly assigned. Reading this method grants no coordination mandate, write authority or access. A person or agent receiving a direct task may own that task without acquiring authority over a wider project.
+
+## Start an arbiter turn
+
+When the user requires this skill each turn, resolve the current commit of `Krankort224/Skills` immediately before reading it, even in a continuing session. Use an available equivalent system reader or the verified [bundled reader](scripts/read_skill.py). On first use without a known reader, resolve `refs/heads/main` through Git or an authorized GitHub connector, then read `level-0/arbitration/SKILL.md` at that exact commit. A preloaded manifest can locate the package. Verify the bytes used before applying it. Take dependent documents and scripts for the same reading from the same commit. At a later fresh reading, resolve again; preserve any version the user explicitly required.
+
+Keep the original user request and its source, later user amendments in order, allowed effects, promised result, acceptance criteria and outstanding owners recoverable. A worker's summary can report progress. Return to the user's words before assigning new work. Read only the evidence needed for a routing, correction or readiness decision.
+
+## Choose the owner
+
+The arbiter owns context across sessions, decisions within its grant and the return to the user. Give subject execution, tool-heavy investigation, authoring, subject checks and corrections to a worker. The arbiter can recover sources, check its assignments, contact owners, inspect compact evidence and report or stop work.
+
+An internal child suffices when a single bounded assignment can return a checkable result inside this session, the child has the inputs and access, and compact evidence lets the arbiter judge completion without taking over the execution history. For example, a child can identify the rows explaining a discrepancy even in a large table. Use an existing authorized, independently addressable specialist or minion when dependent stages, later intake, corrections or resumption need a continuing owner. A one-line fix in that owner's ongoing work stays with them. Preserve required non-author checks in either arrangement. If the necessary owner is unavailable, report the affected work and continue separable coordination within existing grants.
+
+## Review each outgoing assignment
+
+Before issuing work as arbiter to **either** a minion or an internal child, use the available equivalent system tool or the [bundled assignment reviewer](scripts/review_assignment.py). This also applies to review requests, corrections and instructions to resume or extend work. Reading status, collecting a finished result, replying to the user and stopping a writer do not assign work. Dispatch alone never triggers a skill freshness lookup.
+
+1. Present the original user text, subsequent user amendments, the intended recipient and the exact proposed instruction. Use the original source or a verified copy after a handoff. A missing source keeps dependent work pending.
+2. Inspect that packet. Explain which requested outcome the contribution serves, the result/evidence to return, and whether the proposed effects and criteria fit the user's grant. Decide `send` or `revise`. On drift, withhold the draft, correct it and repeat the review; involve the user only for a genuinely reserved decision.
+3. Send only the reviewed assignment to its reviewed recipient after confirmation. Keep the other material inside the arbiter's context unless the worker needs it and may receive it. Recheck a changed packet and each separate work order. The tool binds the comparison to its inputs; the arbiter owns semantic judgment and the actual send. If neither implementation is available, name the blocked assignment.
+
+See [tool invocation and availability](references/tools.md) for the standalone and system interfaces.
 
 ## Select the route
 
@@ -14,14 +36,14 @@ Start from the user's actual task and the authority already granted. The user re
 | Receive, assign, continue or collect a bounded contribution | Apply the assignment and continuation contract below. |
 | Organize work as Codex dot | [Codex dot](references/codex-dot.md), including category, stage roles and session decisions when relevant. |
 | Receive or coordinate work as a Hermes specialist | [Hermes](references/hermes.md), including peer consultation within existing grants. |
-| Resolve a finding or a material disagreement | [Adjudicate](operations/adjudicate.md). |
-| Decide whether an agreed result is ready or identify its unmet gate | [Assess readiness](operations/assess-readiness.md). |
+| Resolve a finding or a material disagreement | [Adjudicate](references/adjudicate.md). |
+| Decide whether an agreed result is ready or identify its unmet gate | [Assess readiness](references/assess-readiness.md). |
 
 Select by the participant arrangement actually in use. An independently addressable participant has a usable request and return route of its own. A child managed inside someone else's execution context is an implementation detail of that participant's contribution. Its owner supplies the result and remains accountable for its effects. A permitted internal child may supply independent checking when its authorship, inputs, access and evidence support that check.
 
 ## Make and receive a bounded assignment
 
-Confirm the objective, authoritative task sources, live state, permissions, preserved decisions and any actual budget relevant to the request. Do simple work directly when one recipient can produce the result and required evidence. Add a participant for a distinct contribution, required access or genuine independence. Prefer a direct authorized route over an extra relay.
+Confirm the objective, authoritative task sources, live state, permissions, preserved decisions and any actual budget relevant to the request. A recipient assigned execution may complete its own contribution directly. The arbiter chooses the owner as above. Prefer a direct authorized route over an extra relay.
 
 Supply the recipient with what they need for the work:
 
@@ -41,4 +63,4 @@ Recover the live task, latest applicable instructions and exact method/source re
 
 Before retrying an interrupted or uncertain action, determine what landed and what may still run. Preserve useful partial work. A timed-out, disconnected or paused writer may still write through a queued retry, background work or automatic resumption. Before transferring overlapping write scope or relying on that area as settled, obtain evidence that the previous writer completed, was stopped with confirmation or can no longer affect the area through an authorized arrangement. For a denied action, record the affected target and reason. Retry only within its authorization and through a permitted route. Keep an unresolved writer visible as a blocker for dependent work. Replace an unavailable participant only within existing authority and keep the writer and checker responsibilities separate.
 
-For a change to this method, use the [common](tests/common.md), [Codex dot](tests/codex-dot.md) and [Hermes](tests/hermes.md) decision cases as applicable.
+When maintaining the source checkout, use its [common](tests/common.md), [Codex dot](tests/codex-dot.md) and [Hermes](tests/hermes.md) decision cases as applicable.

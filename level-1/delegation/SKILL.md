@@ -9,6 +9,8 @@ Use this method for children launched and managed within the current execution c
 
 ## Decide whether a child helps
 
+Work inside the current session under the parent's assigned role. Direct execution and taking over a child's unfinished work are options only for a parent authorized to execute that subject work. A parent assigned coordination keeps ownership of the return and uses an authorized worker for execution.
+
 1. Identify the promised result, hard requirements, current sources and required checks. Complete proportionate work directly. Use deterministic code for enumeration or transformation under a known rule, even for large inputs. If the rule is ambiguous, isolate the judgment before applying the rule.
 2. Compare a useful child's distinct contribution, access, context savings or independent check with direct work and the cost of packaging, duplicated reading, coordination and verification. Keep tightly coupled decisions with an owner who can see the needed evidence. When direct work meets the requirements and a child adds no sufficient value, finish directly and stop.
 3. For a useful child, assess uncertainty, dependencies, judgment and verification needs. Use [model selection](references/model-selection.md) and the actual permitted runtime controls. Preserve required independent checks. If a child or mandatory independent check is unavailable, complete the supported work and name the remaining gap.
