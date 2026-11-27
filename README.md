@@ -4,6 +4,10 @@ Reusable agent skills for repository work.
 
 This repository is the source of truth for shared skills. Projects can read its universal methods and resources directly while keeping their context and valid adaptations locally. Existing repository-local copies remain supported where explicitly chosen. The [Skills project map](level-1/context/references/repository.md) explains this repository's components, knowledge owners and reading routes; it is project knowledge, separate from the reusable [context template](level-1/context/references/repository.template.md).
 
+## License
+
+Original repository materials, including skills, documentation, templates and code, are licensed under the [MIT License](LICENSE), to the extent that the repository's rights holders can grant those rights. Third-party materials remain subject to their respective licenses and notices, including the [architecture third-party notices](level-2/architecture/THIRD_PARTY_NOTICES.md). This license does not grant rights to external works merely referenced by the repository.
+
 ## Structure
 
 ```text
