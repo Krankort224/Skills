@@ -30,7 +30,7 @@ For size-dependent type assignment or resizing, build transaction batches from a
 
 For transitions, branches and equipment with multiple ports, include all significant ports and their roles in the signature. Establish port correspondence from topology or a verified family mapping. Preserve ordered rectangular dimensions when matching rotated connections through their coordinate frames. Equal dimensions at one port alone do not establish compatibility of complete elements.
 
-Within each size group, separate incompatible categories, families, target types and operation requirements. Apply the [workload limits](mcp-operations.md#объём-пакета-и-восстановление) to produce bounded calls while keeping connected-node edits atomic. Grouping selects elements through the API and does not require changing the UI selection.
+Within each size group, separate incompatible categories, families, target types and operation requirements. Apply the [workload limits](mcp-operations.md#batch-sizing-and-recovery) to produce bounded calls while keeping connected-node edits atomic. Grouping selects elements through the API and does not require changing the UI selection.
 
 Resolve driving family parameters through the actual family bindings and project configuration. The generic workflow uses connector geometry without prescribing user-defined parameter names. Verify resulting geometry after regeneration when writing a driving parameter or assigning a type.
 

@@ -1,4 +1,4 @@
-# Проверяемая запись и откат
+# Verified model edits and rollback
 
 [Contract](#contract) · [Purpose](#purpose) · [Inputs and outputs](#inputs-and-outputs) · [Implementation](#implementation) · [Adaptation and limits](#adaptation-and-limits) · [Verification](#verification) · [Provenance](#provenance)
 
@@ -17,11 +17,11 @@
 
 ## Purpose
 
-Выполняет одну операцию с дочерней транзакцией и проверкой внутри группы. При dry-run дочерняя транзакция проходит нативный commit, затем группа откатывается и вызывается отдельная сверка исходного состояния.
+Runs one operation in a child transaction and verifies it inside a transaction group. In a dry run, the child transaction commits natively, then the group rolls back and a separate check verifies the original state.
 
 ## Inputs and outputs
 
-Проверенный документ, имя операции, режим, действия для записи и проверки. Передай `verifyRollback` для dry-run. `checkCancellation` проверяет сигнал отмены и выбрасывает исключение. Для длинного действия вызывай его также между элементами.
+Supply a verified document, operation name, mode, and callbacks for writing and verification. Pass `verifyRollback` for a dry run. `checkCancellation` checks the cancellation signal and throws an exception when cancellation is requested. In a long operation, call it between elements as well.
 
 ## Implementation
 
@@ -106,7 +106,7 @@ public static class CheckedModelEdit
 
 ## Adaptation and limits
 
-Перед вызовом документ должен быть доступен для записи и вне транзакции. Колбэки относятся к одному документу. Для внешних файлов, сохранения и синхронизации нужен отдельный контракт. После успешной записи выполняй независимое чтение.
+Call with a writable document outside an open transaction. Keep all callbacks scoped to that document. External files, saving and synchronization require separate contracts. Read the document independently after a successful write.
 
 
 
@@ -114,9 +114,9 @@ The implementation requires `RvtMcp.Plugin.SafeFailuresPreprocessor`. Its record
 
 ## Verification
 
-Успешный коммит, откат dry-run, откат после сбоя проверки и отмена перед коммитом.
+The native run verified a successful commit, dry-run rollback, rollback after a failed check and cancellation before commit.
 
-[Свидетельство прогона](../../../evidence/revit-2022-mcp-smoke.json)
+[Native run evidence](../../../evidence/revit-2022-mcp-smoke.json)
 
 ## Provenance
 

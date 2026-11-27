@@ -24,6 +24,10 @@ Record graph revision, node ID/engine, producer/consumer port identities, raw sh
 
 When editing embedded code, preserve IDs, relevant port/view metadata and unrelated graph state. Reinspect the final graph and compare requested nodes/wires. Graph execution may trigger other active write nodes, even if the edited helper is read-only.
 
+## Native run coverage
+
+Before running a scenario, verify that the selected view and loaded links contain the inputs its contract requires. Identify the nodes that must run, their freeze state and the actual write-switch values. After evaluation, confirm that the relevant nodes ran and check a fresh `OUT` or an artifact from this run against an expected result, such as a row count, a known element or a baseline. If required input is missing or a branch is skipped, report the scope the run actually verified. When the contract calls for an empty result, verify that result explicitly.
+
 ## Example
 
 The synthetic [graph](../assets/examples/graph-contract.dyn) and [expected JSON](../assets/examples/graph-contract.expected.json) illustrate offline wiring inspection and one structured Python output. They contain no native execution evidence.

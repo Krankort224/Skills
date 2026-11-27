@@ -1,4 +1,4 @@
-# Смена типа подключённого прямоугольного клапана
+# Change the type of a connected rectangular damper
 
 [Contract](#contract) · [Purpose](#purpose) · [Inputs and outputs](#inputs-and-outputs) · [Implementation](#implementation) · [Adaptation and limits](#adaptation-and-limits) · [Verification](#verification) · [Provenance](#provenance)
 
@@ -17,11 +17,11 @@
 
 ## Purpose
 
-Меняет тип существующего экземпляра внутри одного семейства. Сохраняет исходное сечение и физические связи на обоих концах. Для семейства, которое меняет размер при подключении, есть режим временного разъединения с восстановлением тех же стыков.
+Changes the type of an existing instance within its family. It preserves the original cross-section and physical connections at both ends. For a family that resizes when connected, a temporary disconnection mode restores the same joints afterward.
 
 ## Inputs and outputs
 
-ID экземпляра и загруженного типа, ожидаемые ширина и высота, линейный и угловой допуски, точные имена двух параметров экземпляра. Ширина, высота и линейный допуск передаются во внутренних единицах Revit, угловой допуск в радианах. Исходный клапан и обе ответные стороны должны совпасть по порядку B×H.
+Supply the instance ID, the loaded type ID, the expected width and height, linear and angular tolerances, and the exact names of the two instance parameters. Width, height and linear tolerance use Revit internal units. Angular tolerance is in radians. The original damper and both mating ports must match in B×H order.
 
 ## Implementation
 
@@ -225,13 +225,13 @@ public sealed class RectangularAccessoryRetarget
 
 ## Adaptation and limits
 
-Сними план через `Capture`. Выполни `Apply` в транзакции и `Verify` после нативного коммита дочерней транзакции. Для dry-run проверь `VerifyRollback`. Проектные проверки владения, зависимых элементов, системных расходов и инвентаря соседней сети добавляет вызывающая операция.
+Build the plan with `Capture`. Run `Apply` in a transaction and `Verify` after the child transaction commits natively. In a dry run, use `VerifyRollback` to check the restored state. The caller adds project-specific checks for ownership, dependents, system flow rates and the inventory of the adjacent network.
 
 ## Verification
 
-Режим с временным разъединением в стенде 800×300, с одним экземпляром и двумя воздуховодами. Пройден отказ при перестановке B и H. Поведение без разъединения и другие семейства проверяются отдельной пробой.
+The native run covered temporary disconnection on an 800×300 fixture with one instance and two ducts. The block rejected swapped B and H values. Test the connected mode and other families separately.
 
-[Свидетельство прогона](../../../evidence/revit-2022-mcp-smoke.json)
+[Native run evidence](../../../evidence/revit-2022-mcp-smoke.json)
 
 ## Provenance
 

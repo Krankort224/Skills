@@ -1,4 +1,4 @@
-# Прямоугольная врезка в круглый стояк
+# Rectangular takeoff on a round riser
 
 [Contract](#contract) · [Purpose](#purpose) · [Inputs and outputs](#inputs-and-outputs) · [Implementation](#implementation) · [Adaptation and limits](#adaptation-and-limits) · [Verification](#verification) · [Provenance](#provenance)
 
@@ -17,11 +17,11 @@
 
 ## Purpose
 
-Создаёт прямоугольную врезку на круглом стояке через `NewTakeoffFitting`. Выбранный тип должен быть загружен. Если Revit создаёт другой тип того же семейства, блок назначает выбранный тип и проверяет результат.
+Creates a rectangular takeoff on a round riser with `NewTakeoffFitting`. The selected type must be loaded. If Revit creates another type from the same family, the block assigns the selected type and verifies the result.
 
 ## Inputs and outputs
 
-ID двух прямолинейных воздуховодов, ID свободного прямоугольного коннектора горизонтальной ветки, ID ожидаемого типа врезки, линейный допуск во внутренних единицах Revit и угловой допуск в радианах. Ось подхода должна попадать в ось вертикального стояка внутри его прямого участка. Воздуховоды должны иметь один тип системы. Принадлежность ветки и стояка к одной проектной системе проверь при составлении плана.
+Supply the IDs of two straight ducts, the free rectangular connector on the horizontal branch and the expected takeoff type. Supply the linear tolerance in Revit internal units and the angular tolerance in radians. The approach axis must intersect the vertical riser axis within its straight segment. The ducts must share a system type. When planning, verify that the branch and riser belong to the same project system.
 
 ## Implementation
 
@@ -248,15 +248,15 @@ public sealed class RectangularTakeoffToRoundRiser
 
 ## Adaptation and limits
 
-Сними план через `Capture`. В `CheckedModelEdit` передай `Apply`, `Verify` и для пробного прогона `VerifyRollback`. После записи повтори `Verify` отдельным чтением документа. Прямой участок ветки может удлиниться или укоротиться вдоль своей оси. При сохранённых связях блок сверяет ID обоих коннекторов, положение, направление и сечения. При стыковке с фитингом размеры сверяются по физическим осям портов. Границы по зависимым элементам и автоматические изменения Revit проверяет вызывающая операция.
+Build the plan with `Capture`. Pass `Apply` and `Verify` to `CheckedModelEdit`, along with `VerifyRollback` for a dry run. After the write, run `Verify` again in an independent document read. The straight branch segment can lengthen or shorten along its axis. For preserved connections, the block checks both connector IDs, positions, directions and cross-sections. At the fitting connection, it compares dimensions along the physical port axes. The caller checks scope for dependent elements and automatic Revit changes.
 
-**Диагностика.** Если нативный коммит выдаёт предупреждение о врезке, проверь элемент по ID предупреждения и геометрию его подхода. [Границы изменений](../../../references/geometry-and-connectors.md#edit-boundaries)
+**Diagnostics.** If native commit produces a takeoff warning, use the element ID in the warning to inspect the fitting and its approach geometry. [Edit boundaries](../../../references/geometry-and-connectors.md#edit-boundaries)
 
 ## Verification
 
-Revit 2022.1, ветка 250×180 и стояк Ø400. Сохранены существующая врезка и дальний стык. Пройдены выбор другого типа того же семейства, отказ для занятого коннектора, пробный коммит с откатом и откат после ошибки итоговой проверки.
+Revit 2022.1 with a 250×180 branch and a Ø400 riser. The native run verified that the existing takeoff and the far connection were preserved. It covered selection of another type from the same family, rejection of an occupied connector, a dry-run commit followed by rollback, and rollback after final verification failed.
 
-[Свидетельство прогона](../../../evidence/revit-2022-mcp-smoke.json)
+[Native run evidence](../../../evidence/revit-2022-mcp-smoke.json)
 
 ## Provenance
 

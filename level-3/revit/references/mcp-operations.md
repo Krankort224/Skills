@@ -1,65 +1,65 @@
-# Работа с сеансом MCP
+# MCP session operations
 
-## Документ и способ выполнения
+## Target document and execution
 
-- Для живого сеанса проверь доступные процессы через `revit_list_available_targets` и состояние подключения через `revit_health`. Закрепи конкретный процесс и документ. Перед записью используй `revit_switch_target` с `verify=true` и, когда известен, `expectedDocumentId`. В сценарии повтори проверку признаков целевого документа, достаточных для проекта. Переключение соединения учитывает незавершённые вызовы.
-- Используй типизированный инструмент, когда его фактический контракт покрывает операцию и необходимые постусловия. Для baked tool прочитай контракт. Пользовательский C# выполняется через `revit_send_code_to_revit` в поддерживаемом API-контексте. Проверяй доступный формат сценария, импорты и зависимости по текущему инструменту.
-- Сверяй единицы каждого инструмента. Размеры в типизированных MCP-командах могут задаваться в миллиметрах, а прямые вызовы Revit API используют внутренние единицы.
-- `revit_batch_execute` объединяет совместимые штатные команды. C# и baked tools вызываются отдельно. Проверь режим обработки ошибок, включая `continueOnError`, прежде чем рассчитывать на атомарность. Побочные изменения файлов учитывай отдельно от Undo модели.
-- Для C# используй поддерживаемую обработку ошибок текущего шлюза. Импортированный блок зависит от `RvtMcp.Plugin.SafeFailuresPreprocessor`. Проверяй нативные статусы и ограничения профиля по [транзакциям](transactions.md).
-- Действия через GUI требуют соответствующего разрешения пользователя. Коммит, сохранение и синхронизация имеют отдельные результаты.
+- For a live session, list available processes with `revit_list_available_targets` and check the connection with `revit_health`. Pin the intended process and document. Before a write, use `revit_switch_target` with `verify=true` and provide `expectedDocumentId` when known. In the script, recheck the document identifiers required by the project. Account for in-flight calls when switching the connection.
+- Use a typed tool when its actual contract covers the operation and required postconditions. Read the contract of any baked tool. Run custom C# through `revit_send_code_to_revit` in a supported API context. Check the script format, imports and dependencies supported by the current tool.
+- Check each tool's units. Typed MCP commands may take dimensions in millimeters, while direct Revit API calls use internal units.
+- `revit_batch_execute` groups compatible built-in commands. Invoke C# and baked tools separately. Check the failure policy, including `continueOnError`, before relying on atomic execution. Track file side effects separately from document Undo.
+- For C#, use the failure handling supported by the current gateway. The imported block depends on `RvtMcp.Plugin.SafeFailuresPreprocessor`. Check native statuses and profile restrictions against the [transaction guidance](transactions.md).
+- GUI actions require the applicable user authorization. Commit, save and synchronization each have their own outcomes.
 
-## Границы вызовов
+## Invocation boundaries
 
-Разделяй работу одновременно по характеру изменений, зависимостям и объёму. Для каждого пакета задай входные ID, действие, область воздействия и проверяемый результат. Каждый самостоятельный пакет выполняй отдельным вызовом с завершённой транзакцией. После возврата управления отдельным чтением проверь результат и актуальные входы следующего пакета.
+Group work by operation kind, dependencies and volume. Define the input IDs, action, scope and observable result for each batch. Run each independent batch in a separate invocation that completes its transaction. When control returns, verify the outcome and read the current inputs for the next batch separately.
 
-Последовательные транзакции внутри одного синхронного C#-вызова могут занимать Revit до завершения всего сценария. Граница транзакции задаёт коммит и откат. Граница вызова возвращает управление хосту и позволяет проверить состояние перед продолжением. Завершай вызов между независимыми пакетами. Связанные действия, которые должны примениться или откатиться вместе, например разъединение, замена и восстановление одного узла, сохраняй в общем транзакционном контуре.
+Successive transactions inside a synchronous C# call can keep Revit busy until the whole script returns. A transaction defines the commit and rollback boundary. An invocation returns control to the host so the caller can verify state before proceeding. End the invocation between independent batches. Keep coupled actions that must succeed or roll back together, such as disconnecting, replacing and reconnecting one component, in one atomic transaction scope.
 
-### Виды операций
+### Operation types
 
-Перечень расширяемый. Для нового вида определи его зависимости, область воздействия и способ проверки по тем же правилам.
+For other operation types, establish dependencies, impact and verification using the same principles.
 
-| Вид | Граница и проверка |
+| Operation | Boundary and verification |
 | --- | --- |
-| Загрузка семейства или типов, в том числе из каталога | Отдельный вызов. После коммита перечитай фактическое семейство, типы и параметры, проверь затронутые встроенные таблицы и существующие экземпляры. |
-| Создание или дублирование типов в проекте | Отдельный вызов от загрузки и назначения. Подтверди новые ID, параметры и влияние на существующие типы. |
-| Назначение типов экземплярам | Используй уже проверенные типы. Объединяй совместимые экземпляры с одинаковым целевым действием, для коннекторных категорий применяй размерные группы. |
-| Изменение параметров экземпляров или типов | Разделяй область записи. Для типа учитывай все затронутые экземпляры и зависимые значения. |
-| Создание элементов, изменение геометрии и соединений | Выделяй независимые узлы. Сохраняй атомарность действий внутри связанного узла, проверяй его внешние границы. |
-| Создание или изменение привязок параметров | Подготовь и проверь определения и привязки перед отдельным заполнением значений. |
-| Удаление элементов или освобождённых типов | После переназначения проверь использование и зависимости. Сверь фактический набор удаления с разрешённой областью внутри откатываемой транзакции. |
-| Виды, листы, аннотации, связи и рабочие наборы | Разделяй независимые документы, области воздействия и действия. Учитывай зависимые элементы и стоимость обновления. |
+| Load a family or types, including types from a catalog | Use a separate call. After commit, reread the family, types and parameters. Check affected embedded lookup tables and existing instances. |
+| Create or duplicate types in a project | Use a call separate from loading and assignment. Confirm new IDs, parameters and effects on existing types. |
+| Assign types to instances | Use previously verified types. Group compatible instances that need the same action. Group connector-based categories by size. |
+| Change instance or type parameters | Bound the scope of each write. For type parameters, account for all affected instances and dependent values. |
+| Create elements or modify geometry and connections | Identify independent components. Keep changes to each connected component atomic and verify its connections to surrounding elements. |
+| Create or change parameter bindings | Prepare and verify definitions and bindings before populating values in a separate call. |
+| Delete elements or types freed by reassignment | Check usage and dependencies after reassignment. Compare the actual deletion set with the authorized scope in a transaction that can be rolled back. |
+| Edit views, sheets, annotations, links or worksets | Separate independent documents, operations and areas of impact. Account for dependents and the cost of updating them. |
 
-Перенос между документами, экспорт, сохранение, синхронизация и изменение внешних файлов имеют собственные границы и квитанции. Файловые последствия проверяй отдельно от Undo документа. Детали общих параметров и ФОП смотри в [параметрах и единицах](parameters-and-units.md#shared-parameters-and-definition-files).
+Transfers between documents, exports, saves, synchronization and changes to external files each have their own boundaries and receipts. Verify file effects independently of document Undo. See [parameters and units](parameters-and-units.md#shared-parameters-and-definition-files) for shared parameter definitions and files.
 
-### Объём пакета и восстановление
+### Batch sizing and recovery
 
-Для массовой операции проверь характерный узел и небольшой пакет в текущей конфигурации модели. Успешный пилот может войти в итоговый результат. Учитывай число экземпляров и общих типов, зависимые элементы, загруженные связи, доступную память и отзывчивость Revit. Измеряй выполнение, регенерацию и коммит. По этим данным выбирай объём следующих пакетов и уменьшай его при росте стоимости. Общего числового лимита для всех моделей нет.
+For a large operation, test a representative component and a small batch in the current model configuration. A successful pilot can count toward the deliverable. Consider instance counts, shared types, dependencies, loaded links, available memory and Revit responsiveness. Measure execution, regeneration and commit time. Use those measurements to size subsequent batches and reduce their size when costs grow. Set the limit for the current model.
 
-Размерную группу при необходимости дели на несколько вызовов, сохраняя целостность связанных узлов. После каждого пакета возвращай краткую квитанцию с ID, количеством изменённых и пропущенных элементов, длительностью, статусом коммита/отката и результатом проверки. Проверяй изменённые элементы и их зависимости, а полную итоговую сверку выполняй после серии.
+Split a size group into multiple calls as needed while keeping connected components intact. Return a short receipt after each batch with IDs, counts of changed and skipped elements, duration, commit or rollback status and verification results. Check affected elements and their dependents after each batch, then reconcile the full result at the end.
 
-При сбое выполни предусмотренный откат пакета и заверши вызов с диагностикой. Подтверди восстановление отдельным чтением, затем сформируй меньший пакет или исправленный план для нового вызова. Рекурсивное дробление, повторные попытки и альтернативные способы исправления внутри того же длинного вызова скрывают длительность и промежуточные результаты. Выноси их в последующие вызовы. Уже подтверждённые пакеты учитывай при продолжении.
+On failure, apply the planned batch rollback and end the call with diagnostics. Confirm recovery with a separate read, then prepare a smaller batch or a corrected plan for a new call. Move recursive splitting, retry attempts and alternative fixes into subsequent calls so their duration and intermediate results remain visible. Carry verified batches forward when resuming.
 
-При существенной задержке сообщай время начала, прошедшее время и последний подтверждённый этап. До разрешения незавершённой операции следуй таблице ниже. После её завершения с неопределённым или частичным результатом перечитай модель и восстанови перечень выполненных и оставшихся изменений.
+For a significant delay, report the start time, elapsed time and last verified step. Use the operation status table below while the call is unresolved. If it finishes with a partial or indeterminate outcome, reread the model to establish which changes took effect and which are still outstanding.
 
-## Перезагрузка семейства
+## Family reload
 
-Перед загрузкой сохрани снимок простых данных с точными именем и категорией семейства, составом типов, их параметрами, назначениями экземплярам, ID и `UniqueId`, а также геометрией и физическими связями затрагиваемых экземпляров. Зафиксируй ожидаемые изменения и правила сохранения значений при `IFamilyLoadOptions`. Выбери перегрузку `LoadFamily` и владельца транзакции по контракту целевой версии API. Для встроенных таблиц выбора используй [профильную процедуру](lookup-tables.md).
+Before loading, capture simple data with the exact family name and category, its types and parameters, instance assignments, IDs and `UniqueId` values, geometry and physical connections of the affected instances. Record expected changes and the value preservation policy for `IFamilyLoadOptions`. Choose the `LoadFamily` overload and transaction owner for the target API version. Use the [lookup table guidance](lookup-tables.md) for embedded tables.
 
-Загрузка может сделать прежний объект `Family` недействительным и изменить его ID. Сохраняй идентификаторы и значения до вызова, а после него заново получай объекты из документа. При изменении ID найди единственного кандидата по точным имени и категории и подтверди его соответствие исходному составу типов и экземпляров. Неоднозначное сопоставление требует диагностики. Совпадение имени само по себе недостаточно для принятия результата.
+Loading can invalidate the previous `Family` object and change its ID. Save identifiers and values before the call and reacquire objects from the document afterward. If the ID changes, find a unique candidate by exact name and category, then check it against the original types and instances. Diagnose ambiguous matches. Require the full match before accepting the reload.
 
-Проверяй ID типов отдельно от ID семейства, назначения типов, `UniqueId` экземпляров, значения параметров и пары коннекторов. Каждое изменение идентичности сверяй с допустимыми эффектами операции. При ошибке проверки выполни предусмотренный откат и проверь его статус. После завершения вызова с ошибкой или частичным результатом отдельным чтением установи, что фактически применилось и что восстановлено, прежде чем выбирать повтор или восстановление. Сохраняй в отчёте как нативную квитанцию, так и результат чтения модели.
+Verify type IDs separately from the family ID, along with instance type assignments, instance `UniqueId` values, parameter values and connector pairs. Compare every identity change with the allowed effects of the operation. On verification failure, apply the planned rollback and check its status. After an error or partial result, reread the document independently to establish what applied and what was restored before choosing a retry or recovery. Record both the native receipt and the model readback.
 
-В рабочем случае Revit 2022.1 / rvt-mcp 1.2.1 от 2026-11-13 после перезагрузки изменился ID семейства, а ID типов и экземпляров, `UniqueId`, назначения, значения параметров и физические связи сохранились. Проверка по прежнему ID завершилась ошибкой, шлюз вернул частичный результат. Последующее чтение подтвердило новые таблицы и ожидаемые вычисленные значения в модели. Причина сохранения результата при этом ходе обработки ошибок осталась неустановленной. Этот случай требует проверки фактического состояния и не устанавливает общее поведение отката Revit.
+In a Revit 2022.1 / rvt-mcp 1.2.1 field case on 2026-11-13, reloading changed the family ID and preserved the type and instance IDs, `UniqueId` values, assignments, parameter values and physical connections. Verification by the original ID failed and the gateway returned a partial result. A subsequent read confirmed the new tables and expected calculated values in the model. Why the changes persisted through that error path remains unknown. This case supports verifying actual model state. Its rollback behavior is specific to the observed run.
 
-## Операция в работе
+## In-flight operations
 
-| Сигнал | Действие |
+| Signal | Action |
 | --- | --- |
-| `timed_out_running` | Сохрани `operationId`, проверь `revit_get_operation_status` и дождись результата уже отправленного вызова перед следующей записью. |
-| `waiting_for_user` | Сообщи точный запрос Revit и продолжай в пределах имеющихся разрешений. |
-| `completed` с неопределённым результатом | Проверь нативную квитанцию и перечитай документ перед решением о повторе. |
-| Запись операции отсутствует | Состояние выполнения остаётся неизвестным. Сопоставь доступные квитанции и состояние модели перед повтором. |
-| Команда остановки | Прекрати новые операции, передай поддерживаемый сигнал отмены и проверь фактическое завершение и откат. |
+| `timed_out_running` | Keep the `operationId`, check `revit_get_operation_status` and wait for the submitted call before the next write. |
+| `waiting_for_user` | Report the exact Revit prompt and proceed within current authorization. |
+| `completed` with an indeterminate outcome | Check the native receipt and reread the document before deciding whether to retry. |
+| Operation record unavailable | Execution state remains unknown. Reconcile available receipts with model state before attempting a retry. |
+| Stop requested | Stop submitting new work, send the supported cancellation signal and verify that execution ended and rollback took effect. |
 
-В длинном C# проверяй отмену между элементами, перед нативным коммитом и принятием группы. Передавай проверку в составные блоки. Нативный вызов может вернуть управление позже; сообщай момент возможной остановки по фактической стадии.
+In a long C# call, check cancellation between elements, before a native commit and before assimilating the transaction group. Pass the cancellation check into composed blocks. A native call may be slow to return. Report when it can stop based on the actual execution stage.

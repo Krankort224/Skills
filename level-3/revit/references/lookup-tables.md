@@ -17,7 +17,7 @@ When a common output pattern is demonstrated across existing sizes for a given o
 
 For reductions, apply the requested criteria to typed values with explicit units and inclusive/exclusive boundaries. Check every installed lookup key and its expected output, then account for intended future configurations. Report any installed keys removed by the proposed filter before dependent writes. Keep project-specific aspect ratios, option codes and cutoffs out of general defaults.
 
-Generate a reviewable change set with table assignment, sizes, option combinations, expected outputs and counts. Preserve table names used by formulas and verify routing at range boundaries. Estimate import and reload cost using the resulting data volume and the current model. Follow the existing [batch and recovery rules](mcp-operations.md#границы-вызовов).
+Generate a reviewable change set with table assignment, sizes, option combinations, expected outputs and counts. Preserve table names used by formulas and verify routing at range boundaries. Estimate import and reload cost using the resulting data volume and the current model. Follow the existing [batch and recovery rules](mcp-operations.md#invocation-boundaries).
 
 ## Import and verify
 
@@ -25,7 +25,7 @@ Generate a reviewable change set with table assignment, sizes, option combinatio
 2. Select a supported native route using the target-version [API contract](api.md). For family-copy editing, obtain the copy from the loaded family so existing project types and formulas are represented. Keep an identifiable original RFA and CSV baseline for recovery.
 3. Import one table per bounded invocation through `ImportSizeTable`, inspect its result and `FamilySizeTableErrorInfo`, and verify the transaction outcome. Reopen or reacquire the modified document in a separate read and export the table again. Compare every typed row and its multiplicity with the proposed data. Row counts alone cannot establish equality.
 4. If direct project import is used, verify calculated instance values after regeneration and commit. A successful import and matching table contents can coexist with stale formula results. When observed, resolve the completed attempt and use a verified alternative, such as import into a family copy followed by reload.
-5. Complete table preparation and readback before the separate family reload. Apply the [reload identity checks](mcp-operations.md#перезагрузка-семейства), then independently read the project. Check all affected lookup keys and calculated outputs, including former fallback cases, retained valid values and relevant schedule fields. Compare type parameters, instance assignments, geometry and physical connections against the baseline.
+5. Complete table preparation and readback before the separate family reload. Apply the [reload identity checks](mcp-operations.md#family-reload), then independently read the project. Check all affected lookup keys and calculated outputs, including former fallback cases, retained valid values and relevant schedule fields. Compare type parameters, instance assignments, geometry and physical connections against the baseline.
 6. Verify file persistence, project commit, project save and synchronization as separate outcomes. After an error or partial receipt, inspect actual state before retrying. Recover from the recorded original data only when the observed state calls for it, within the task's authorized scope.
 
 ## Observed behavior and limits

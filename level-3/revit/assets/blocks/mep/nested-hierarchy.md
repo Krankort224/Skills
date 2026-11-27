@@ -133,4 +133,4 @@ Executed `python scripts/test_mep_blocks.py`: 31 tests passed across the five ex
 
 [CFD-modeling graph](https://github.com/Krankort224/CFD-modeling/blob/6f6ff37416a4145313737cb9c23a311d3e8ebedb/tools/dyn/00_CFD_ModelSnapshot.dyn), pin `6f6ff37416a4145313737cb9c23a311d3e8ebedb`: embedded `collect_recursive_subcomponent_ids`, `split_top_level_family_instances`. Adapted into bounded iterative traversal with per-root and multiple-parent provenance; optional explicit SuperComponent scope replaces global scanning.
 
-Uploaded scripts archive SHA256 `6caa68eb49c6e9cec087eb4b280336d0d8300df9635c4ad719bea1240472b20e`: graph `KOV_Запись имени системы и группирование.dyn`, node `4dbd9fcaa3634fa3b5e8783dec06617b`, `walk_subcomponents_from`, `add_edge`. Removed global family scanning and project parameter writes; preserved edge provenance.
+Uploaded scripts archive SHA256 `6caa68eb49c6e9cec087eb4b280336d0d8300df9635c4ad719bea1240472b20e`: the “System name assignment and grouping” graph (translated title), node `4dbd9fcaa3634fa3b5e8783dec06617b`, `walk_subcomponents_from`, `add_edge`. Removed global family scanning and project parameter writes; preserved edge provenance.

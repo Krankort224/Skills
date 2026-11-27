@@ -153,7 +153,7 @@ class InspectorTests(unittest.TestCase):
         self.assertEqual(before, archive.read_bytes())
 
     def test_extraction_preserves_empty_unicode_and_absent_code(self):
-        for index, value in enumerate(('', "OUT = 'Пример'\n")):
+        for index, value in enumerate(('', "OUT = '\u041f\u0440\u0438\u043c\u0435\u0440'\n")):
             with self.subTest(code=value):
                 self.graph['Nodes'][2]['Code'] = value
                 self.path.write_text(json.dumps(self.graph))

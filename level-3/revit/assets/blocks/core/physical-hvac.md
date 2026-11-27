@@ -1,4 +1,4 @@
-# Физические HVAC-коннекторы
+# Physical HVAC connectors
 
 [Contract](#contract) · [Purpose](#purpose) · [Inputs and outputs](#inputs-and-outputs) · [Implementation](#implementation) · [Adaptation and limits](#adaptation-and-limits) · [Verification](#verification) · [Provenance](#provenance)
 
@@ -17,11 +17,11 @@
 
 ## Purpose
 
-Разрешает физические коннекторы воздуховодов и экземпляров, пары реальных соединений, конечный коннектор по точке и прямоугольное сечение.
+Resolves physical connectors on ducts and family instances, connected pairs, end connectors by point and rectangular cross-sections.
 
 ## Inputs and outputs
 
-Живой элемент или ID владельца и коннектора в проверенном документе. Координаты, размеры и линейный допуск задаются во внутренних единицах Revit. При поиске по точке требуется ровно один конец в допуске.
+Supply a live element or the owner and connector IDs in a verified document. Coordinates, dimensions and linear tolerance use Revit internal units. A point lookup requires exactly one end within tolerance.
 
 ## Implementation
 
@@ -81,13 +81,13 @@ public static class PhysicalHvac
 
 ## Adaptation and limits
 
-После `Regenerate`, смены типа или переподключения снова разрешай коннектор по владельцу и номеру. Для топологии фиксируй идентификаторы обоих концов. Вызов `Ports` допускает физические связи типа `Curve`, в свидетельстве проверены стыки `End` и сохранность существующего соединения `Curve` в сценарии врезки.
+After `Regenerate`, a type change or reconnection, resolve the connector again by owner and connector ID. Record both endpoint identities for topology. `Ports` accepts physical `Curve` connections. The evidence verifies `End` connections and preservation of an existing `Curve` connection in the takeoff scenario.
 
 ## Verification
 
-Применён при построении отвода и при восстановлении двух соединений клапана.
+Used when creating an elbow and restoring both connections of a damper.
 
-[Свидетельство прогона](../../../evidence/revit-2022-mcp-smoke.json)
+[Native run evidence](../../../evidence/revit-2022-mcp-smoke.json)
 
 ## Provenance
 

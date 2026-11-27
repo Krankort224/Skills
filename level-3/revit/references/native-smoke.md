@@ -1,17 +1,17 @@
-# Проверка C# в Revit
+# Native C# smoke checks in Revit
 
-`scripts/compose_smoke.py` сверяет исходники с хешами в свидетельстве. С локальным конфигом он собирает один C# для `revit_send_code_to_revit`.
+`scripts/compose_smoke.py` verifies the sources against the hashes in the evidence record. Given a local configuration, it builds one C# script for `revit_send_code_to_revit`.
 
-Исходники и [свидетельство](../evidence/revit-2022-mcp-smoke.json) перенесены из локального `revit-mcp` 12 ноября 2026 года. Свидетельство описывает прежний прогон Revit 2022, build 22.1.70.9, rvt-mcp 1.2.1. Совпадение хешей подтверждает сохранность проверенных исходников. При переносе новый нативный запуск не выполнялся. Проектные рабочие журналы хранятся отдельно у владельца проекта.
+The sources and [evidence record](../evidence/revit-2022-mcp-smoke.json) came from a local `revit-mcp` installation on 12 November 2026. The record covers a prior run with Revit 2022 build 22.1.70.9 and rvt-mcp 1.2.1. Matching hashes confirm that the tested source was preserved. Runtime evidence comes from that prior run. Project owners retain their working logs separately.
 
-Исходные рабочие случаи `evidence/kod-separate-calls-field-case.md` и `evidence/rectangular-takeoff-field-case.md` сохранены в локальном архиве исходного навыка. Их применимые методы перенесены в [границы вызовов](mcp-operations.md#границы-вызовов) и [границы изменений](geometry-and-connectors.md#edit-boundaries). Эти случаи дают происхождение методов; проверку обобщённых C#-блоков подтверждает отдельное свидетельство выше. Локальный адаптер содержит путь к архиву.
+The original field cases `evidence/kod-separate-calls-field-case.md` and `evidence/rectangular-takeoff-field-case.md` are in the local archive of the original skill. Their reusable methods are documented under [invocation boundaries](mcp-operations.md#invocation-boundaries) and [edit boundaries](geometry-and-connectors.md#edit-boundaries). The field cases establish the source of those methods. The separate evidence record above covers the generalized C# blocks. The local adapter records the archive location.
 
 ```powershell
 python scripts/compose_smoke.py
 python scripts/compose_smoke.py --config C:/temp/fixture.json --output C:/temp/revit-mcp-smoke.cs
 ```
 
-Конфиг задаёт абсолютный путь к MEP-шаблону с правилом для прямоугольного отвода и к отдельному тестовому RVT с двумя загруженными типами одного клапана. В RVT нужны уровень, прямоугольный тип воздуховода и тип приточной системы. В примере имена условные. Параметры клапана должны управлять размерами обоих коннекторов.
+The configuration specifies the absolute path to an MEP template with a rectangular elbow routing rule and the absolute path to a separate test RVT with two loaded types of the same damper. The RVT needs a level, a rectangular duct type and a supply air system type. The example uses illustrative names. The damper parameters must drive the sizes of both connectors.
 
 ```json
 {
@@ -27,18 +27,18 @@ python scripts/compose_smoke.py --config C:/temp/fixture.json --output C:/temp/r
 }
 ```
 
-Запускай собранный сценарий только с выделенными стендами. Он создаёт документ из шаблона и открывает тестовый RVT в фоне. Оба документа закрываются без сохранения. Для клапана проверяются исходные два стыка и сечение, а тест с переставленными B и H должен отказать до записи. Для трассы проверяются два разных сечения, независимое чтение после коммита, откат при ошибке проверки и отмена.
+Run the script only with dedicated fixtures. It creates a document from the template and opens the test RVT in the background. It closes both documents without saving. For the damper, it verifies the two original connections and the cross-section. Swapping B and H must cause rejection before any write. For the duct run, it checks two cross-sections, independent readback after commit, rollback following a verification failure and cancellation.
 
-Сохраняй версию Revit, версию MCP при наличии, данные стенда, итог команды и хеши блоков. После изменения кода выполни новый нативный прогон и обнови свидетельство по его результату. `--hashes` печатает текущие хеши для этой сверки.
+Record the Revit version, the MCP version when applicable, fixture details, command result and block hashes. After changing the code, run it in Revit again and record the new evidence. Use `--hashes` to print the current hashes.
 
-## Добавление сценария в нативный прогон
+## Add a native smoke scenario
 
-Для первого прогона новых исходников собери сценарий с явным параметром `--candidate`. Ему нужны `--config` и `--output`.
+For the first run of a new source revision, build the script with `--candidate`, `--config` and `--output`.
 
 ```powershell
 python scripts/compose_smoke.py --candidate --config C:/temp/fixture.json --output C:/temp/revit-mcp-candidate.cs
 ```
 
-Для теста врезки тот же MEP-шаблон должен содержать круглые и прямоугольные типы воздуховодов с предпочтительным соединением Tap. Первое правило группы Junctions у выбранного прямоугольного типа должно задавать прямоугольную врезку, пригодную для круглого стояка. Стенд создаёт отдельный документ из шаблона, добавляет исходную врезку и проверяет её сохранность, дальний стык ветки, выбор другого типа того же семейства, отказ для занятого коннектора, откат после нативного коммита и сквозную связь новой врезки после записи.
+For the takeoff test, the same MEP template must contain round and rectangular duct types with Tap as the preferred junction type. The first rule in the selected rectangular duct type's Junctions group must specify a rectangular takeoff suitable for a round riser. The test creates a separate document from the template, adds the original takeoff and checks that it is preserved. It also checks the branch's far connection, selection of a different type from the same family, rejection of an occupied connector, rollback after a native commit and connectivity through the new takeoff after the write.
 
-В свидетельство вноси результат именно отправленного сценария. После обновления свидетельства проверь штатную сборку без `--candidate`.
+Record the result of the exact script submitted to Revit. After updating the evidence, verify that the standard build succeeds without `--candidate`.

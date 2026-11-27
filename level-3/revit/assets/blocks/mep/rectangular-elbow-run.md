@@ -1,4 +1,4 @@
-# Два прямоугольных воздуховода с отводом
+# Two rectangular duct segments joined by an elbow
 
 [Contract](#contract) · [Purpose](#purpose) · [Inputs and outputs](#inputs-and-outputs) · [Implementation](#implementation) · [Adaptation and limits](#adaptation-and-limits) · [Verification](#verification) · [Provenance](#provenance)
 
@@ -17,11 +17,11 @@
 
 ## Purpose
 
-Строит два участка одинакового сечения по трём точкам и соединяет их штатным отводом. Возвращает ID двух воздуховодов и фитинга.
+Creates two duct segments with the same cross-section from three points and joins them with a native elbow. Returns the IDs of both ducts and the fitting.
 
 ## Inputs and outputs
 
-ID типа системы, прямоугольного типа воздуховода и уровня в проверенном документе. Тип воздуховода должен иметь подходящее правило трассировки для отвода. Точки, размеры и допуск передаются во внутренних единицах Revit.
+Supply the system type, rectangular duct type and level IDs in a verified document. The duct type must have a suitable elbow routing rule. Points, dimensions and tolerance use Revit internal units.
 
 ## Implementation
 
@@ -121,13 +121,13 @@ public sealed class RectangularElbowRun
 
 ## Adaptation and limits
 
-Вызови `Create` внутри транзакции и `Verify` после нативного коммита дочерней транзакции. `Verify` сверяет типы, уровень, сечение, свободные внешние концы и обе физические связи отвода. Длины сегментов могут измениться на величину подрезки при установке фитинга.
+Call `Create` in a transaction and `Verify` after the child transaction commits natively. `Verify` checks types, level, cross-section, free outer ends and both physical elbow connections. Fitting placement can trim the segments and change their lengths.
 
 ## Verification
 
-Два поворота на 90° с разными направлениями, высотами и сечениями 400×250 и 500×300. Для других углов и правил трассировки нужен отдельный прогон.
+The native run verified two 90° turns with different directions, elevations and cross-sections of 400×250 and 500×300. Test other angles and routing rules in separate runs.
 
-[Свидетельство прогона](../../../evidence/revit-2022-mcp-smoke.json)
+[Native run evidence](../../../evidence/revit-2022-mcp-smoke.json)
 
 ## Provenance
 
